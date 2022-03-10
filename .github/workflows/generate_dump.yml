@@ -1,0 +1,70 @@
+name: Create data dump
+on:
+  workflow_dispatch:
+    inputs:
+      new-release:
+        type: string
+        description: Name of the directory that the new release is located in
+      prev-release:
+        type: string
+        description: Name of the existing release zip file to base this data dump from
+
+jobs:
+  generate-dump:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo message
+        id: echo_message
+        run: echo "Github action triggered with inputs new release ${{github.event.inputs.new-release}} and previous release ${{github.event.inputs.prev-release}}"
+      - name: checkout ror records repo
+        uses: actions/checkout@v2
+        with:
+          path: ./ror-records
+      - name: checkout ror data repo
+        uses: actions/checkout@v2
+        with:
+          repository: ror-community/ror-data-test
+          token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+          path: ./ror-data-test
+      - name: copy previous data dump file
+        id: copyprevdump
+        run: |
+          cp -R ./ror-data-test/${{github.event.inputs.prev-release}}.zip ./ror-records
+      - name: Set up Python environment
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.8"
+      - name: execute script
+        id: gendumpscript
+        run: |
+          cd ./ror-records
+          curl https://raw.githubusercontent.com/ror-community/ror-api/staging/rorapi/management/commands/generate_dump.py -o generate_dump.py
+          python generate_dump.py -r ${{github.event.inputs.new-release}} -e ${{github.event.inputs.prev-release}}
+      - name: cat error file
+        if: ${{ steps.gendumpscript.outcome != 'success'}}
+        run: |
+          echo "ERRORS found:"
+          cat errors.log
+      - name: copy new data dump file
+        id: copynewdump
+        run: |
+          yes | cp -rf ./ror-records/${{github.event.inputs.new-release}}*.zip ./ror-data-test
+      - name: commit dump file
+        id: commitdumpfile
+        if: ${{ steps.copynewdump.outcome == 'success'}}
+        run: |
+          cd ./ror-data-test
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add *.zip
+          git commit -m "add new data dump file"
+          git push origin main
+      - name: Notify Slack
+        if: always()
+        uses: edge/simple-slack-notify@master
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.CURATOR_SLACK_WEBHOOK_URL }}
+        with:
+          channel: '#ror-curation-releases'
+          color: 'good'
+          text: 'Data dump ${{github.event.inputs.new-release}} generation status:  ${{ steps.commitdumpfile.outcome }} Please check: ${env.GITHUB_SERVER_URL}/${env.GITHUB_REPOSITORY}/actions/runs/${env.GITHUB_RUN_ID}'

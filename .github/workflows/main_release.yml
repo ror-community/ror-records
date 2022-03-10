@@ -1,0 +1,14 @@
+name: Deploy to Prod
+on:
+  push:
+    branches:
+      - 'main'
+    paths-ignore:
+      - '**/README.md'
+jobs:
+  test_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo message
+        id: echo_message
+        run: echo "Github action Deploy to Prod was triggered"

@@ -1,0 +1,18 @@
+name: PR to Main branch
+on:
+  pull_request:
+    types: [opened, reopened, synchronize]
+    branches:
+      - 'main'
+      - '!v.**-rc'
+      - '!staging'
+    paths-ignore:
+      - '**/README.md'
+
+jobs:
+  test_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo message
+        id: echo_message
+        run: echo "Github action PR to main was triggered"

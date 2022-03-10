@@ -1,0 +1,60 @@
+name: Create relationships
+on:
+  workflow_dispatch
+
+jobs:
+  generate-relationships:
+    runs-on: ubuntu-latest
+    if: github.event.ref != 'refs/heads/main'
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+        with:
+          ref: ${{ github.event.ref }}
+      - name: Set up Python environment
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.8"
+      - name: Extract branch name
+        id: extract_branch
+        shell: bash
+        run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
+      - name: Generate relationships
+        id: genrelshp
+        working-directory: ${{ steps.extract_branch.outputs.branch }}
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests==2.23.0
+          pip install git+https://github.com/ror-community/update_address.git
+          curl https://raw.githubusercontent.com/ror-community/ror-api/staging/rorapi/management/commands/generaterelationships.py -o generaterelationships.py
+          python generaterelationships.py relationships.csv
+        continue-on-error: true
+      - name: commit error file
+        if: ${{ steps.genrelshp.outcome != 'success'}}
+        working-directory: ${{ steps.extract_branch.outputs.branch }}
+        run: |
+          echo "ERRORS found:"
+          cat relationship_errors.log
+      - name: commit changed files
+        if: ${{ steps.genrelshp.outcome == 'success'}}
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          file_pattern: ${{ steps.extract_branch.outputs.branch }}/*.json
+          commit_message: Apply relationship changes to files
+      - name: Set env variable for notification
+        run: |
+          if [[ ${{ steps.genrelshp.outcome }} == 'success' ]]; then
+            echo "relationship_status=SUCCESS" >> $GITHUB_ENV
+          elif [[ ${{ steps.genrelshp.outcome }} == 'failure' ]]; then
+            echo "relationship_status=FAILED" >> $GITHUB_ENV
+          fi
+      - name: Notify Slack
+        if: always()
+        uses: edge/simple-slack-notify@master
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.CURATOR_SLACK_WEBHOOK_URL }}
+          VALIDATION_STATUS: ${{ env.relationship_status }}
+        with:
+          channel: '#ror-curation-releases'
+          color: 'good'
+          text: 'Relationship generation status: ${env.VALIDATION_STATUS}. Branch: ${env.GITHUB_SERVER_URL}/${env.GITHUB_REPOSITORY}/tree/${env.GITHUB_REF_NAME}. Directory: ${{ steps.extract_branch.outputs.branch }}. Please check: ${env.GITHUB_SERVER_URL}/${env.GITHUB_REPOSITORY}/actions/runs/${env.GITHUB_RUN_ID} for more details'

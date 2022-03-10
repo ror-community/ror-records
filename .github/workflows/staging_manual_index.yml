@@ -1,0 +1,120 @@
+name: Manual deploy to Staging
+on:
+  workflow_dispatch:
+    inputs:
+      directory-name:
+        type: string
+        required: true
+        description: Name of the directory you would like to deploy
+env:
+  MERGE_SHA: ${{ github.event.after }}
+  REPO_INFO: ${{ github.event.repository.full_name }}
+  AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+  AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+  AWS_DEFAULT_REGION: ${{ secrets.AWS_REGION }}
+
+jobs:
+  check_permission:
+    runs-on: ubuntu-latest
+    if: github.event.ref != 'refs/heads/main'
+    steps:
+      - name: Get Permission
+        uses: octokit/request-action@v2.x
+        id: get_permission
+        with:
+          route: GET /repos/${{ env.REPO_INFO }}/collaborators/${{ env.USER_INFO }}/permission
+        env:
+          GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+      - name: output
+        run:  |
+          export role_name=${{ fromJson(steps.get_permission.outputs.data).role_name }}
+          if [[ "$role_name" == "maintain"  || "$role_name" == "admin" ]]; then
+            exit 0
+          else
+            exit 1
+          fi
+  check_validation:
+    runs-on: ubuntu-latest
+    if: github.event.ref != 'refs/heads/main'
+    needs: check_permission
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+        with:
+          ref: ${{ github.event.ref }}
+      - name: Set up Python environment
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.8"
+      - name: Checkout validation suite
+        uses: actions/checkout@v2
+        with:
+          repository: ror-community/validation-suite
+          path: validation-suite
+      - name: Validate files
+        id: validatefiles
+        run: |
+          mkdir files
+          cp ./${{ github.event.inputs.directory-name }}/*.json files/
+          cd validation-suite
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          if [[ -f "../${{ github.event.inputs.directory-name }}/relationships.csv" ]]; then
+              python run_validations.py -i ../files -f ../${{ github.event.inputs.directory-name }}/relationships.csv -p ../files/
+            else
+              python run_validations.py -i ../files -p ../files/
+            fi
+      - name: Notify Slack
+        if: always()
+        uses: edge/simple-slack-notify@master
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.CURATOR_SLACK_WEBHOOK_URL }}
+        with:
+          channel: '#ror-curation-releases'
+          color: 'good'
+          text: 'Validation status during STAGING manual index:  ${{ steps.validatefiles.outcome }}. In directory: ${{ github.event.inputs.directory-name }}. Please check: ${env.GITHUB_SERVER_URL}/${env.GITHUB_REPOSITORY}/actions/runs/${env.GITHUB_RUN_ID}'
+  copy-files:
+    runs-on: ubuntu-latest
+    if: github.event.ref != 'refs/heads/main'
+    needs: check_validation
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+        with:
+          ref: ${{ github.event.ref }}
+      - name: Install aws cli
+        id: install-aws-cli
+        uses: unfor19/install-aws-cli-action@v1.0.2
+      - name: Zip and copy files
+        id: copyfiles
+        run: |
+          cd ./${{ github.event.inputs.directory-name }}
+          zip files.zip *.json
+          aws s3 cp files.zip s3://${{ secrets.ROR_DATA_S3_BUCKET_STAGING }}/${{ github.event.inputs.directory-name }}/files.zip
+          aws s3 ls s3://${{ secrets.ROR_DATA_S3_BUCKET_STAGING }}/${{ github.event.inputs.directory-name }}/files.zip
+      - name: Notify Slack
+        if: always()
+        uses: edge/simple-slack-notify@master
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.CURATOR_SLACK_WEBHOOK_URL }}
+        with:
+          channel: '#ror-curation-releases'
+          color: 'good'
+          text: 'Copy status to dev S3 Bucket:  ${{ steps.copyfiles.outcome }}.  From directory: ${{ github.event.inputs.directory-name }}. Please check: ${env.GITHUB_SERVER_URL}/${env.GITHUB_REPOSITORY}/actions/runs/${env.GITHUB_RUN_ID}'
+      - name: Index file
+        id: indexdata
+        run: |
+          cd .github/workflows
+          python -m pip install --upgrade pip
+          pip install requests==2.23.0
+          python index_files.py -u ${{ secrets.INDEX_STAGING_API_URL }} -d ${{ github.event.inputs.directory-name }} -he ${{ secrets.INDEX_STAGING_API_HEADERS }}
+      - name: Notify Slack
+        if: always()
+        uses: edge/simple-slack-notify@master
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.CURATOR_SLACK_WEBHOOK_URL }}
+        with:
+          channel: '#ror-curation-releases'
+          color: 'good'
+          text: 'Staging index status: ${{ steps.indexdata.outcome }}. From directory: ${{ github.event.inputs.directory-name }}. Please check: ${env.GITHUB_SERVER_URL}/${env.GITHUB_REPOSITORY}/actions/runs/${env.GITHUB_RUN_ID}'
+
