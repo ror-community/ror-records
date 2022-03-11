@@ -223,6 +223,12 @@ Choose several new, updated and unchanged records and, for each record:
 
         https://ror.org/search > Enter name in search box
 
+# Create data dump
+1. In the ror-records repository, go to [Actions > Create data dump](https://github.com/ror-community/ror-records/actions/workflows/generate_dump.yml)
+2. Click Run Workflow and enter the name of the release directory (ex, v1.0) and the name of the last production data dump from ror-data that the new dump should be built from, ex 2021-09-23-ror-data (without the .zip file extension)
+3. Click the Run workflow button
+4. If sucessful, a green checkbox will be shown in the pull request details, and a success messages will be posted to the #ror-curation-releases Slack channel. The new data dump should now be available in ror-data.
+
 # Publish data dump to Zenodo
 1. Download the vX.X-YYYY-MM-DD-ror-data.zip file from ror-data to your computer
 2. Log into [Zenodo](https://zenodo.org/) using the info@ror.org account
