@@ -138,6 +138,7 @@ If records needed to be added or changed after an initial Staging release, add t
 - Deleting record files from the release branch after they have been deployed to Staging will not remove them from the Staging index. At the moment, this will need to be done manually by a developer; in the future, we will add a mechanism to remove records from the Staging index that have been deleted from an release branch. This does not affect production, as the production index is completely separate.
 
 # Test Staging release
+*Note: There is currently no staging UI search app (https://staging.ror.org connects to production search app using api.ror.org). UI tests should be run against https://dev.ror.org.*
 
 ## New records
 Choose several new records from the Staging release and, for each record:
@@ -145,17 +146,9 @@ Choose several new records from the Staging release and, for each record:
 
         curl https://api.staging.ror.org/organizations/[RORID]
 
-2. Check that the record can be retrieved from the Staging UI
-
-        https://staging.ror.org/[RORID]
-
-3. Check that the record can be searched by name in the Staging API (make sure to [escape spaces and reserved characters](https://ror.readme.io/docs/rest-api#reserved-characters))
+2. Check that the record can be searched by name in the Staging API (make sure to [escape spaces and reserved characters](https://ror.readme.io/docs/rest-api#reserved-characters))
 
           curl https://api.staging.ror.org/organizations?query=[STAGING%20RECORD%20NAME]
-
-4. Check that the record can be searched by name in the Staging UI
-
-        https://staging.ror.org/search > Enter name in search box
 
 ## Updated records
 Choose several updated records from the Staging release and, for each record:
@@ -163,19 +156,11 @@ Choose several updated records from the Staging release and, for each record:
 
         curl https://api.staging.ror.org/organizations/[RORID]
 
-2. Check that the record can be retrieved from the Staging UI
-
-        https://staging.ror.org/[RORID]
-
-3. Check that the record can be searched by name in the Staging API (make sure to [escape spaces and reserved characters](https://ror.readme.io/docs/rest-api#reserved-characters))
+2. Check that the record can be searched by name in the Staging API (make sure to [escape spaces and reserved characters](https://ror.readme.io/docs/rest-api#reserved-characters))
 
           curl https://api.staging.ror.org/organizations?query=[RECORD%20NAME]
 
-4. Check that the record can be searched by name in the Staging UI
-
-        https://staging.ror.org/search > Enter name in search box
-
-5. Retrieve the record from the Staging API and the Production API and compare changes to verify that the expected changes where made.
+3. Retrieve the record from the Staging API and the Production API and compare changes to verify that the expected changes where made.
 
         curl https://api.staging.ror.org/organizations/[ROR ID] > staging_[RORID].json
         curl https://api.ror.org/organizations/[ROR ID] > prod_[RORID].json
