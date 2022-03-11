@@ -7,8 +7,6 @@ on:
         required: true
         description: Name of the directory you would like to deploy
 env:
-  MERGE_SHA: ${{ github.event.after }}
-  REPO_INFO: ${{ github.event.repository.full_name }}
   AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
   AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
   AWS_DEFAULT_REGION: ${{ secrets.AWS_REGION }}
@@ -22,7 +20,7 @@ jobs:
         uses: octokit/request-action@v2.x
         id: get_permission
         with:
-          route: GET /repos/${{ env.REPO_INFO }}/collaborators/${{ env.USER_INFO }}/permission
+          route: GET /repos/${{ github.repository }}/collaborators/${{ github.actor }}/permission
         env:
           GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
       - name: output
