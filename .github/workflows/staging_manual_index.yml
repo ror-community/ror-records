@@ -14,7 +14,7 @@ env:
 jobs:
   check_permission:
     runs-on: ubuntu-latest
-    if: github.event.ref != 'refs/heads/main'
+    if: github.event.ref == 'refs/heads/staging'
     steps:
       - name: Get Permission
         uses: octokit/request-action@v2.x
@@ -33,7 +33,7 @@ jobs:
           fi
   check_validation:
     runs-on: ubuntu-latest
-    if: github.event.ref != 'refs/heads/main'
+    if: github.event.ref == 'refs/heads/staging'
     needs: check_permission
     steps:
       - name: checkout
@@ -73,7 +73,7 @@ jobs:
           text: 'Validation status during STAGING manual index:  ${{ steps.validatefiles.outcome }}. In directory: ${{ github.event.inputs.directory-name }}. Please check: ${env.GITHUB_SERVER_URL}/${env.GITHUB_REPOSITORY}/actions/runs/${env.GITHUB_RUN_ID}'
   copy-files:
     runs-on: ubuntu-latest
-    if: github.event.ref != 'refs/heads/main'
+    if: github.event.ref == 'refs/heads/staging'
     needs: check_validation
     steps:
       - name: checkout
@@ -98,7 +98,7 @@ jobs:
         with:
           channel: '#ror-curation-releases'
           color: 'good'
-          text: 'Copy status to dev S3 Bucket:  ${{ steps.copyfiles.outcome }}.  From directory: ${{ github.event.inputs.directory-name }}. Please check: ${env.GITHUB_SERVER_URL}/${env.GITHUB_REPOSITORY}/actions/runs/${env.GITHUB_RUN_ID}'
+          text: 'Copy status to STAGING S3 Bucket:  ${{ steps.copyfiles.outcome }}.  From directory: ${{ github.event.inputs.directory-name }}. Please check: ${env.GITHUB_SERVER_URL}/${env.GITHUB_REPOSITORY}/actions/runs/${env.GITHUB_RUN_ID}'
       - name: Index file
         id: indexdata
         run: |
@@ -114,5 +114,5 @@ jobs:
         with:
           channel: '#ror-curation-releases'
           color: 'good'
-          text: 'Staging index status: ${{ steps.indexdata.outcome }}. From directory: ${{ github.event.inputs.directory-name }}. Please check: ${env.GITHUB_SERVER_URL}/${env.GITHUB_REPOSITORY}/actions/runs/${env.GITHUB_RUN_ID}'
+          text: 'STAGING index status: ${{ steps.indexdata.outcome }}. From directory: ${{ github.event.inputs.directory-name }}. Please check: ${env.GITHUB_SERVER_URL}/${env.GITHUB_REPOSITORY}/actions/runs/${env.GITHUB_RUN_ID}'
 

@@ -5,9 +5,11 @@ on:
       new-release:
         type: string
         description: Name of the directory that the new release is located in
+        required: true
       prev-release:
         type: string
         description: Name of the existing release zip file to base this data dump from
+        required: true
 
 jobs:
   generate-dump:
@@ -23,13 +25,13 @@ jobs:
       - name: checkout ror data repo
         uses: actions/checkout@v2
         with:
-          repository: ror-community/ror-data-test
+          repository: ror-community/ror-data
           token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
-          path: ./ror-data-test
+          path: ./ror-data
       - name: copy previous data dump file
         id: copyprevdump
         run: |
-          cp -R ./ror-data-test/${{github.event.inputs.prev-release}}.zip ./ror-records
+          cp -R ./ror-data/${{github.event.inputs.prev-release}}.zip ./ror-records
       - name: Set up Python environment
         uses: actions/setup-python@v2
         with:
@@ -38,7 +40,7 @@ jobs:
         id: gendumpscript
         run: |
           cd ./ror-records
-          curl https://raw.githubusercontent.com/ror-community/ror-api/staging/rorapi/management/commands/generate_dump.py -o generate_dump.py
+          curl https://raw.githubusercontent.com/ror-community/ror-api/master/rorapi/management/commands/generate_dump.py -o generate_dump.py
           python generate_dump.py -r ${{github.event.inputs.new-release}} -e ${{github.event.inputs.prev-release}}
       - name: cat error file
         if: ${{ steps.gendumpscript.outcome != 'success'}}
@@ -48,12 +50,12 @@ jobs:
       - name: copy new data dump file
         id: copynewdump
         run: |
-          yes | cp -rf ./ror-records/${{github.event.inputs.new-release}}*.zip ./ror-data-test
+          yes | cp -rf ./ror-records/${{github.event.inputs.new-release}}*.zip ./ror-data
       - name: commit dump file
         id: commitdumpfile
         if: ${{ steps.copynewdump.outcome == 'success'}}
         run: |
-          cd ./ror-data-test
+          cd ./ror-data
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add *.zip
