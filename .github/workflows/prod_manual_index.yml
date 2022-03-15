@@ -1,23 +1,20 @@
-name: Deploy to Prod
+name: Manual deploy to Prod
 on:
-  release:
-    types: [published]
-
+  workflow_dispatch:
+    inputs:
+      release-tag:
+        type: string
+        required: true
+        description: Name of the release tag that you would like to deploy to PROD
 env:
   AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
   AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
   AWS_DEFAULT_REGION: ${{ secrets.AWS_REGION }}
-  TAG: ${{ github.event.release.tag_name }}
 
 jobs:
-  echo_info:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Echo info
-        id: echo_message
-        run: echo "Github action Deploy to Prod was triggered with release tag ${{ github.event.release.tag_name }}"
   check_permission:
     runs-on: ubuntu-latest
+    if: github.event.ref == 'refs/heads/main'
     steps:
       - name: Get Permission
         uses: octokit/request-action@v2.x
@@ -34,24 +31,25 @@ jobs:
           else
             exit 1
           fi
-  copy_files:
+  copy-files:
     runs-on: ubuntu-latest
+    if: github.event.ref == 'refs/heads/main'
     needs: check_permission
     steps:
       - name: checkout
         uses: actions/checkout@v2
         with:
-          ref: ${{ github.event.ref }}
+          ref: refs/tags/${{ github.event.inputs.release-tag }}
       - name: Install aws cli
         id: install-aws-cli
         uses: unfor19/install-aws-cli-action@v1.0.2
       - name: Zip and copy files
         id: copyfiles
         run: |
-          cd ./${{ github.event.release.tag_name }}
+          cd ./${{ github.event.inputs.release-tag }}
           zip files.zip *.json
-          aws s3 cp files.zip s3://${{ secrets.ROR_DATA_S3_BUCKET_PROD }}/${{ github.event.release.tag_name }}/files.zip
-          aws s3 ls s3://${{ secrets.ROR_DATA_S3_BUCKET_PROD }}/${{ github.event.release.tag_name }}/files.zip
+          aws s3 cp files.zip s3://${{ secrets.ROR_DATA_S3_BUCKET_PROD }}/${{ github.event.inputs.release-tag }}/files.zip
+          aws s3 ls s3://${{ secrets.ROR_DATA_S3_BUCKET_PROD }}/${{ github.event.inputs.release-tag }}/files.zip
       - name: Notify Slack
         if: always()
         uses: edge/simple-slack-notify@master
@@ -60,14 +58,14 @@ jobs:
         with:
           channel: '#ror-curation-releases'
           color: 'good'
-          text: 'Copy status to PROD S3 Bucket:  ${{ steps.copyfiles.outcome }}.  From directory: ${{ github.event.release.tag_name }}. Please check: ${env.GITHUB_SERVER_URL}/${env.GITHUB_REPOSITORY}/actions/runs/${env.GITHUB_RUN_ID}'
-      - name: Index data
+          text: 'Copy status to PROD S3 Bucket:  ${{ steps.copyfiles.outcome }}.  From directory: ${{ github.event.inputs.release-tag }}. Please check: ${env.GITHUB_SERVER_URL}/${env.GITHUB_REPOSITORY}/actions/runs/${env.GITHUB_RUN_ID}'
+      - name: Index file
         id: indexdata
         run: |
           cd .github/workflows
           python -m pip install --upgrade pip
           pip install requests==2.23.0
-          python index_files.py -u ${{ secrets.INDEX_PROD_API_URL }} -d ${{ github.event.release.tag_name }} -he ${{ secrets.INDEX_PROD_API_HEADERS }}
+          python index_files.py -u ${{ secrets.INDEX_PROD_API_URL }} -d ${{ github.event.inputs.release-tag }} -he ${{ secrets.INDEX_PROD_API_HEADERS }}
       - name: Notify Slack
         if: always()
         uses: edge/simple-slack-notify@master
@@ -76,4 +74,5 @@ jobs:
         with:
           channel: '#ror-curation-releases'
           color: 'good'
-          text: 'PROD index status: ${{ steps.indexdata.outcome }}. From directory: ${{ github.event.release.tag_name }}. Please check: ${env.GITHUB_SERVER_URL}/${env.GITHUB_REPOSITORY}/actions/runs/${env.GITHUB_RUN_ID}'
+          text: 'PROD index status: ${{ steps.indexdata.outcome }}. From directory: ${{ github.event.inputs.release-tag }}. Please check: ${env.GITHUB_SERVER_URL}/${env.GITHUB_REPOSITORY}/actions/runs/${env.GITHUB_RUN_ID}'
+

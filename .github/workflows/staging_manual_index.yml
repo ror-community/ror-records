@@ -7,8 +7,6 @@ on:
         required: true
         description: Name of the directory you would like to deploy
 env:
-  MERGE_SHA: ${{ github.event.after }}
-  REPO_INFO: ${{ github.event.repository.full_name }}
   AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
   AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
   AWS_DEFAULT_REGION: ${{ secrets.AWS_REGION }}
@@ -16,13 +14,13 @@ env:
 jobs:
   check_permission:
     runs-on: ubuntu-latest
-    if: github.event.ref != 'refs/heads/main'
+    if: github.event.ref == 'refs/heads/staging'
     steps:
       - name: Get Permission
         uses: octokit/request-action@v2.x
         id: get_permission
         with:
-          route: GET /repos/${{ env.REPO_INFO }}/collaborators/${{ env.USER_INFO }}/permission
+          route: GET /repos/${{ github.repository }}/collaborators/${{ github.actor }}/permission
         env:
           GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
       - name: output
@@ -35,7 +33,7 @@ jobs:
           fi
   check_validation:
     runs-on: ubuntu-latest
-    if: github.event.ref != 'refs/heads/main'
+    if: github.event.ref == 'refs/heads/staging'
     needs: check_permission
     steps:
       - name: checkout
@@ -75,7 +73,7 @@ jobs:
           text: 'Validation status during STAGING manual index:  ${{ steps.validatefiles.outcome }}. In directory: ${{ github.event.inputs.directory-name }}. Please check: ${env.GITHUB_SERVER_URL}/${env.GITHUB_REPOSITORY}/actions/runs/${env.GITHUB_RUN_ID}'
   copy-files:
     runs-on: ubuntu-latest
-    if: github.event.ref != 'refs/heads/main'
+    if: github.event.ref == 'refs/heads/staging'
     needs: check_validation
     steps:
       - name: checkout
@@ -100,7 +98,7 @@ jobs:
         with:
           channel: '#ror-curation-releases'
           color: 'good'
-          text: 'Copy status to dev S3 Bucket:  ${{ steps.copyfiles.outcome }}.  From directory: ${{ github.event.inputs.directory-name }}. Please check: ${env.GITHUB_SERVER_URL}/${env.GITHUB_REPOSITORY}/actions/runs/${env.GITHUB_RUN_ID}'
+          text: 'Copy status to STAGING S3 Bucket:  ${{ steps.copyfiles.outcome }}.  From directory: ${{ github.event.inputs.directory-name }}. Please check: ${env.GITHUB_SERVER_URL}/${env.GITHUB_REPOSITORY}/actions/runs/${env.GITHUB_RUN_ID}'
       - name: Index file
         id: indexdata
         run: |
@@ -116,5 +114,5 @@ jobs:
         with:
           channel: '#ror-curation-releases'
           color: 'good'
-          text: 'Staging index status: ${{ steps.indexdata.outcome }}. From directory: ${{ github.event.inputs.directory-name }}. Please check: ${env.GITHUB_SERVER_URL}/${env.GITHUB_REPOSITORY}/actions/runs/${env.GITHUB_RUN_ID}'
+          text: 'STAGING index status: ${{ steps.indexdata.outcome }}. From directory: ${{ github.event.inputs.directory-name }}. Please check: ${env.GITHUB_SERVER_URL}/${env.GITHUB_REPOSITORY}/actions/runs/${env.GITHUB_RUN_ID}'
 

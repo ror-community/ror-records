@@ -1,10 +1,10 @@
-name: Merge to Staging
+name: PR to Staging
 on:
   pull_request:
     types: [opened, reopened, synchronize]
     branches:
       - '!main'
-      - '!v.**-rc'
+      - '!v**'
       - 'staging'
     paths-ignore:
       - '**/README.md'
