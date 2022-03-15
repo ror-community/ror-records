@@ -138,6 +138,7 @@ If records needed to be added or changed after an initial Staging release, add t
 - Deleting record files from the release branch after they have been deployed to Staging will not remove them from the Staging index. At the moment, this will need to be done manually by a developer; in the future, we will add a mechanism to remove records from the Staging index that have been deleted from an release branch. This does not affect production, as the production index is completely separate.
 
 # Test Staging release
+*Note: There is currently no staging UI search app (https://staging.ror.org connects to production search app using api.ror.org). UI tests should be run against https://dev.ror.org.*
 
 ## New records
 Choose several new records from the Staging release and, for each record:
@@ -145,17 +146,9 @@ Choose several new records from the Staging release and, for each record:
 
         curl https://api.staging.ror.org/organizations/[RORID]
 
-2. Check that the record can be retrieved from the Staging UI
-
-        https://staging.ror.org/[RORID]
-
-3. Check that the record can be searched by name in the Staging API (make sure to [escape spaces and reserved characters](https://ror.readme.io/docs/rest-api#reserved-characters))
+2. Check that the record can be searched by name in the Staging API (make sure to [escape spaces and reserved characters](https://ror.readme.io/docs/rest-api#reserved-characters))
 
           curl https://api.staging.ror.org/organizations?query=[STAGING%20RECORD%20NAME]
-
-4. Check that the record can be searched by name in the Staging UI
-
-        https://staging.ror.org/search > Enter name in search box
 
 ## Updated records
 Choose several updated records from the Staging release and, for each record:
@@ -163,19 +156,11 @@ Choose several updated records from the Staging release and, for each record:
 
         curl https://api.staging.ror.org/organizations/[RORID]
 
-2. Check that the record can be retrieved from the Staging UI
-
-        https://staging.ror.org/[RORID]
-
-3. Check that the record can be searched by name in the Staging API (make sure to [escape spaces and reserved characters](https://ror.readme.io/docs/rest-api#reserved-characters))
+2. Check that the record can be searched by name in the Staging API (make sure to [escape spaces and reserved characters](https://ror.readme.io/docs/rest-api#reserved-characters))
 
           curl https://api.staging.ror.org/organizations?query=[RECORD%20NAME]
 
-4. Check that the record can be searched by name in the Staging UI
-
-        https://staging.ror.org/search > Enter name in search box
-
-5. Retrieve the record from the Staging API and the Production API and compare changes to verify that the expected changes where made.
+3. Retrieve the record from the Staging API and the Production API and compare changes to verify that the expected changes where made.
 
         curl https://api.staging.ror.org/organizations/[ROR ID] > staging_[RORID].json
         curl https://api.ror.org/organizations/[ROR ID] > prod_[RORID].json
@@ -237,6 +222,12 @@ Choose several new, updated and unchanged records and, for each record:
 4. Check that the record can be searched by name in the Production UI and the results are as expected.
 
         https://ror.org/search > Enter name in search box
+
+# Create data dump
+1. In the ror-records repository, go to [Actions > Create data dump](https://github.com/ror-community/ror-records/actions/workflows/generate_dump.yml)
+2. Click Run Workflow and enter the name of the release directory (ex, v1.0) and the name of the last production data dump from ror-data that the new dump should be built from, ex 2021-09-23-ror-data (without the .zip file extension)
+3. Click the Run workflow button
+4. If sucessful, a green checkbox will be shown in the pull request details, and a success messages will be posted to the #ror-curation-releases Slack channel. The new data dump should now be available in ror-data.
 
 # Publish data dump to Zenodo
 1. Download the vX.X-YYYY-MM-DD-ror-data.zip file from ror-data to your computer
