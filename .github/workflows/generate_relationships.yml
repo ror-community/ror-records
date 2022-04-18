@@ -1,11 +1,14 @@
 name: Create relationships
 on:
-  workflow_dispatch
+  workflow_dispatch:
+    inputs:
+      directory-name:
+        type: string
+        description: Name of parent directory containing records to generate relationships for. Needed only if different from branch name.
 
 jobs:
   generate-relationships:
     runs-on: ubuntu-latest
-    if: github.event.ref != 'refs/heads/main'
     steps:
       - name: checkout
         uses: actions/checkout@v2
@@ -15,37 +18,39 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: "3.8"
-      - name: Extract branch name
-        id: extract_branch
-        shell: bash
-        run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
+      - name: Get directory name
+        if: "${{ github.event.inputs.directory-name != '' }}"
+        run: echo "WORKING_DIR=${{ github.event.inputs.directory-name }}" >> $GITHUB_ENV
+      - name: Get branch name
+        if: "${{ github.event.inputs.directory-name == '' }}"
+        run: echo "WORKING_DIR=${GITHUB_REF#refs/heads/}" >> $GITHUB_ENV
       - name: Generate relationships
         id: genrelshp
-        working-directory: ${{ steps.extract_branch.outputs.branch }}
+        working-directory: ${{ env.WORKING_DIR }}
         run: |
           python -m pip install --upgrade pip
           pip install requests==2.23.0
           pip install git+https://github.com/ror-community/update_address.git
-          curl https://raw.githubusercontent.com/ror-community/ror-api/staging/rorapi/management/commands/generaterelationships.py -o generaterelationships.py
+          curl https://raw.githubusercontent.com/ror-community/ror-api/dev/rorapi/management/commands/generaterelationships.py -o generaterelationships.py
           python generaterelationships.py relationships.csv
-        continue-on-error: true
       - name: commit error file
         if: ${{ steps.genrelshp.outcome != 'success'}}
-        working-directory: ${{ steps.extract_branch.outputs.branch }}
+        working-directory:  ${{ env.WORKING_DIR }}
         run: |
-          echo "ERRORS found:"
+          echo "ERRORS found for some records:"
           cat relationship_errors.log
       - name: commit changed files
         if: ${{ steps.genrelshp.outcome == 'success'}}
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          file_pattern: ${{ steps.extract_branch.outputs.branch }}/*.json
+          file_pattern:  ${{ env.WORKING_DIR }}/**.json
           commit_message: Apply relationship changes to files
       - name: Set env variable for notification
+        if: always()
         run: |
           if [[ ${{ steps.genrelshp.outcome }} == 'success' ]]; then
             echo "relationship_status=SUCCESS" >> $GITHUB_ENV
-          elif [[ ${{ steps.genrelshp.outcome }} == 'failure' ]]; then
+          else
             echo "relationship_status=FAILED" >> $GITHUB_ENV
           fi
       - name: Notify Slack
@@ -57,4 +62,4 @@ jobs:
         with:
           channel: '#ror-curation-releases'
           color: 'good'
-          text: 'Relationship generation status: ${env.VALIDATION_STATUS}. Branch: ${env.GITHUB_SERVER_URL}/${env.GITHUB_REPOSITORY}/tree/${env.GITHUB_REF_NAME}. Directory: ${{ steps.extract_branch.outputs.branch }}. Please check: ${env.GITHUB_SERVER_URL}/${env.GITHUB_REPOSITORY}/actions/runs/${env.GITHUB_RUN_ID} for more details'
+          text: 'DEV relationship generation status: ${env.VALIDATION_STATUS}. Branch: ${env.GITHUB_SERVER_URL}/${env.GITHUB_REPOSITORY}/tree/${env.GITHUB_REF_NAME}. Directory: ${{ env.WORKING_DIR }}. Please check: ${env.GITHUB_SERVER_URL}/${env.GITHUB_REPOSITORY}/actions/runs/${env.GITHUB_RUN_ID} for more details'
