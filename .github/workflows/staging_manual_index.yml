@@ -60,7 +60,7 @@ jobs:
           if [[ -f "../${{ github.event.inputs.directory-name }}/relationships.csv" ]]; then
               python run_validations.py -i ../files -f ../${{ github.event.inputs.directory-name }}/relationships.csv -p ../files/
             else
-              python run_validations.py -i ../files -p ../files/
+              python run_validations.py -i ../files
             fi
       - name: Notify Slack
         if: always()

@@ -5,6 +5,9 @@ on:
       with-relationship:
         type: boolean
         description: Check box to validate with relationships
+      directory-name:
+        type: string
+        description: Name of parent directory containing records to validate. Needed only if different from branch name.
 
 jobs:
   validate-files:
@@ -24,21 +27,23 @@ jobs:
         with:
           repository: ror-community/validation-suite
           path: validation-suite
-      - name: Extract branch name
-        shell: bash
-        run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
-        id: extract_branch
+      - name: Get directory name
+        if: "${{ github.event.inputs.directory-name != '' }}"
+        run: echo "WORKING_DIR=${{ github.event.inputs.directory-name }}" >> $GITHUB_ENV
+      - name: Get branch name
+        if: "${{ github.event.inputs.directory-name == '' }}"
+        run: echo "WORKING_DIR=${GITHUB_REF#refs/heads/}" >> $GITHUB_ENV
       - name: Validate files
         id: validatefiles
         run: |
           mkdir files
-          cp ./${{ steps.extract_branch.outputs.branch }}/*.json files/
+          cp ./${{ env.WORKING_DIR }}/**.json files/
           cd validation-suite
           python -m pip install --upgrade pip
           pip install -r requirements.txt
           if [[ ${{ github.event.inputs.with-relationship }} == "true" ]]; then
-            if [[ -f "../${{ steps.extract_branch.outputs.branch }}/relationships.csv" ]]; then
-              python run_validations.py -i ../files -f ../${{ steps.extract_branch.outputs.branch }}/relationships.csv -p ../files/
+            if [[ -f "../${{ env.WORKING_DIR }}/**relationships.csv" ]]; then
+              python run_validations.py -i ../files -f ../${{ env.WORKING_DIR }}/**relationships.csv -p ../files/
             else
               python run_validations.py -i ../files -p ../files/
             fi
@@ -53,4 +58,4 @@ jobs:
         with:
           channel: '#ror-curation-releases'
           color: 'good'
-          text: 'Validation status:  ${{ steps.validatefiles.outcome }}. On branch: ${env.GITHUB_SERVER_URL}/${env.GITHUB_REPOSITORY}/tree/${env.GITHUB_REF_NAME} in directory ${{ steps.extract_branch.outputs.branch }}. Please check: ${env.GITHUB_SERVER_URL}/${env.GITHUB_REPOSITORY}/actions/runs/${env.GITHUB_RUN_ID}'
+          text: 'Validation status ${{ steps.validatefiles.outcome }} in ${env.GITHUB_REPOSITORY}. On branch: ${{ env.WORKING_DIR }}. Please check: ${env.GITHUB_SERVER_URL}/${env.GITHUB_REPOSITORY}/actions/runs/${env.GITHUB_RUN_ID}'
