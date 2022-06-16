@@ -232,10 +232,23 @@ Choose several new, updated and unchanged records and, for each record:
 # Publish data dump to Zenodo
 1. Download the vX.X-YYYY-MM-DD-ror-data.zip file from ror-data to your computer
 2. Log into [Zenodo](https://zenodo.org/) using the info@ror.org account
-3. Create a new upload in the [ROR Data community](https://zenodo.org/communities/ror-data) (see past example https://doi.org/10.5281/zenodo.4929693). Make sure to include Related Identifiers metadata referencing previous releases.
+3. Create a new version of the ROR data dump (https://doi.org/10.5281/zenodo.6347574in the [ROR Data community](https://zenodo.org/communities/ror-data). Make sure the metadata for the new data dump includes version information, contributor information, and licensing information ("Creative Commons Public Domain Dedication and Certification"). Keep the title metadata the same. The publication date should be the date that the dump was generated. Update the description with relevant information about the new release, such as the number of records being added/updated. 
+
+# Generate release in ror-updates Github
+1. Create a new release in ror-updates that corresponds to the version number of the release
+2. Add information in the release notes about the records that have been added and updated
 
 # Announce production release
-TODO: develop standard text and  list of channels that we announce new release to
-TODO: process for notifying requestors that their curation request has been completed
+Announce the production release on the following channels:
+- Community channel in ROR Slack
+- Twitter
+- Github discussions ("announcements" category)
+- PID Forum
+- API Users' Group
+
+# Clean up ror-updates Github
+1. Close the release milestone
+2. Close the issues in the milestone 
+3. Move the issues in the milestone to the "Done" column on the project board
 
 
