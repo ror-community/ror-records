@@ -61,16 +61,16 @@ These steps assume that you have already [installed and configured git](https://
         mkdir rc-v1.3-review/updates
 
 2. Place the JSON files for new and updated records inside the directories you just created.
-2. Add and commit the files
+3. Add and commit the files
 
         git add rc-v1.3-review/
         git commit -m "add new and updated ROR records to rc-v1.3-review"
 
-3. Push the files and new branch to the remote ror-records repository
+4. Push the files and new branch to the remote ror-records repository
 
         git push origin rc-v1.3-review
 
-4. Repeat steps 1-3 if additional files need to be added to the release candidate.
+5. Repeat steps 1-3 if additional files need to be added to the release candidate.
 
 ## Validate files in ror-updates
 JSON files for new and updated ROR records should be validated before generating relationshps to check that they comply with the ROR schema and contained properly formatted JSON. Validation is performed by a script [run_validations.py](https://github.com/ror-community/validation-suite/blob/main/run_validations.py) triggered by a Github action [Validate files](https://github.com/ror-community/ror-records/blob/staging/.github/workflows/validate.yml
@@ -157,7 +157,7 @@ These steps assume that you have already [installed and configured git](https://
         mkdir v1.3
 
 2. Place JSON files for new and updated records inside the directory you just created. Do not place them in subdirectories. If there are relationships, also include relationships.csv file.
-2. Add and commit the files
+. Add and commit the files
 
         git add v1.3/
         git commit -m "add new and updated ROR records to release v1.3"
@@ -301,10 +301,24 @@ Choose several new, updated and unchanged records and, for each record:
 ## Publish public data dump to Zenodo
 1. Download the vX.X-YYYY-MM-DD-ror-data.zip file from ror-data to your computer
 2. Log into [Zenodo](https://zenodo.org/) using the info@ror.org account
-3. Create a new upload in the [ROR Data community](https://zenodo.org/communities/ror-data) (see past example https://doi.org/10.5281/zenodo.4929693). Make sure to include Related Identifiers metadata referencing previous releases.
+3. Create a new version of the ROR data dump (https://doi.org/10.5281/zenodo.6347574in the [ROR Data community](https://zenodo.org/communities/ror-data). Make sure the metadata for the new data dump includes version information, contributor information, and licensing information ("Creative Commons Public Domain Dedication and Certification"). Keep the title metadata the same. The publication date should be the date that the dump was generated. Update the description with relevant information about the new release, such as the number of records being added/updated.
 
-## Announce public data dump
-TODO: develop standard text and  list of channels that we announce new release to
-TODO: process for notifying requestors that their curation request has been completed
+# Generate release in ror-updates Github
+1. Create a new release in ror-updates that corresponds to the version number of the release
+2. Add information in the release notes about the records that have been added and updated
+
+# Announce production release
+Announce the production release on the following channels:
+- Community channel in ROR Slack
+- Twitter
+- Github discussions ("announcements" category)
+- PID Forum
+- API Users' Group
+
+# Clean up ror-updates Github
+1. Close the release milestone
+2. Close the issues in the milestone
+3. Move the issues in the milestone to the "Done" column on the project board
+
 
 
