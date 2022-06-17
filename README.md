@@ -3,26 +3,121 @@ Test repository for developing deployment process for ROR record updates.
 
 # ROR Data release creation & deployment steps
 
+## Prepare JSON files in ror-updates
 1. [Create JSON files for new and updated ROR records](#create-json-files-for-new-and-updated-ror-records)
-2. [Create new release branch](#create-new-release-branch)
-3. [Push new/updated ROR JSON files to release branch](#push-newupdated-ror-json-files-to-release-branch)
-4. [Generate relationships](#generate-relationships)
-5. [Validate files](#validate-files)
-6. [Deploy to Staging](#deploy-to-staging)
-7. [Test Staging release](#test-staging-release)
-8. [Deploy to Production](#deploy-to-production)
-9. [Test production release](#test-production-release)
-10. [Publish data dump to Zenodo](#publish-data-dump-to-zenodo)
-11. [Announce production release](#announce-production-release)
+2. [Validate files in ror-updates](#validate-files-in-ror-updates)
+3. [Generate relationships](#generate-relationships)
+4. [Validate files again in ror-updates](#validate-files-again-in-ror-updates)
 
-# Create JSON files for new and updated ROR records
+## Release to Staging
+1. [Create new release branch](#create-new-release-branch-in-ror-records)
+2. [Push new/updated ROR JSON files to release branch](#push-newupdated-ror-json-files-to-release-branch-in-ror-records)
+3. [Validate files in ror-records](#validate-files-in-ror-records)
+4. [Deploy to Staging](#deploy-to-staging)
+5. [Test Staging release](#test-staging-release)
+
+## Release to production
+1. [Deploy to Production](#deploy-to-production)
+2. [Test production release](#test-production-release)
+3. [Create data dump for internal use](#create-data-dump-for-internal-use)
+
+## Publish public data dump (quarterly)
+1. [Publish public data dump to Zenodo](#publish-public-data-dump-to-zenodo)
+11. [Announce public data dump](#announce-public-data-dump)
+
+# Prepare JSON files in ror-updates
+
+## Create JSON files for new and updated ROR records
 JSON files for new and updated ROR records are created by the ROR metadata curation lead and curation advisory board as part of the process managed in [ror-updates](https://github.com/ror-community/ror-updates). **Only changes requested and approved through this curation process are included in ROR data releases.**
 
 Schema-valid ROR record JSON can be generated using the [Leo form app](https://leo.dev.ror.org/). Note that relationships should not be included in record files; these are created in the [Generate relationships](#generate-relationships) step of the deployment process.
 
-# Create new release branch
+Once created, push JSON files to ror-updates in a new branch per below.
 
-## Github UI
+### Create new release branch in ror-updates
+These steps assume that you have already [installed and configured git](https://git-scm.com/downloads) on your computer, and that you have cloned the [ror-records](https://github.com/ror-community/ror-updates) repository locally.
+
+1. In your local ror-updates directory, checkout the Main branch
+
+        git checkout main
+
+2. Make sure your local Main branch matches the remote branch (make sure to git stash any local changes before doing this!)
+
+        git fetch origin
+        git reset --hard origin/main
+
+3. Checkout a new branch based on Main. Branch name does not need to match the ror-records release branch naming convention, but should clearly convey the release number.
+
+        git checkout -b rc-v1.3-review
+
+### Push record files to release branch in ror-updates
+1. Create in new directory in the root of the ror-updates repository with the **exact same name** as the branch (ex: rc-v1.3-review).
+
+        mkdir rc-v1.3-review
+
+2. Create subdirectories ```new``` and ```updates``` inside the directory you just created. Note: Creating both directories is not required in order for validation and relationship generation actions to work. If there are only new records or only updates, you only need to create one directory. If there's no ```updates``` directory but the relatinships.csv file contains relationships to production records, the relationship generation action will create an ```updates``` directory and download production records into it.
+
+        mkdir rc-v1.3-review/new
+        mkdir rc-v1.3-review/updates
+
+2. Place the JSON files for new and updated records inside the directories you just created.
+3. Add and commit the files
+
+        git add rc-v1.3-review/
+        git commit -m "add new and updated ROR records to rc-v1.3-review"
+
+4. Push the files and new branch to the remote ror-records repository
+
+        git push origin rc-v1.3-review
+
+5. Repeat steps 1-3 if additional files need to be added to the release candidate.
+
+## Validate files in ror-updates
+JSON files for new and updated ROR records should be validated before generating relationshps to check that they comply with the ROR schema and contained properly formatted JSON. Validation is performed by a script [run_validations.py](https://github.com/ror-community/validation-suite/blob/main/run_validations.py) triggered by a Github action [Validate files](https://github.com/ror-community/ror-records/blob/staging/.github/workflows/validate.yml
+).
+
+1. Go to https://github.com/ror-community/ror-updates/actions/workflows/validate.yml (Actions > Create relationships in the ror-updates repository)
+2. Click Run workflow at right, choose the branch you're working on and leave "Check box to validate relationships" _unchecked_. If you're working on the Main branch or the directory containing the files you'd like to validate has a diffferent name from the branch you're working on, enter name of that directory.
+3. Click the green Run workflow button.
+4. It will take a few minutes for the workflow to run. If sucessful, a green checkbox will be shown on the workflow runs list in Github, and a success messages will be posted to the #ror-curation-releases Slack channel. If the workflow run is unsuccessful, an red X will be shown on the workflow runs list in Github and an error message will be posted to Slack. To see the error details, click the validate-filtes box on the workflow run page in Github.
+5. If this workflow fails, there's an issue with the data in one of more ROR record JSON files that needs to be corrected. In that case, check the error details, make the needed corrections, commit and push the files to your working branch and repeat steps 1-3 to re-run the Validate files workflow.
+
+## Generate relationships
+Relationships are not included in the intitial ROR record JSON files. Relationships are generated using a script [generaterelationships.py](https://github.com/ror-community/ror-api/blob/dev/rorapi/management/commands/generaterelationships.py) triggered by a Github action [Create relationships](https://github.com/ror-community/ror-updates/blob/staging/.github/workflows/generate_relationships.yml), which should be run AFTER all new and updated JSON records to be included in the release are uploaded to ror-updates.
+
+*Note: Currently relationships can only be added using this process, not removed. Removing relationships from an existing record requires manually downloading and editing the record, and adding it to the release branch.*
+
+1. Create relationships list as a CSV file using the template [[TEMPLATE] relationships.csv](https://docs.google.com/spreadsheets/d/17rA549Q6Vc-YyH8WUtXUOvsAROwCDmt1vy4Rjce-ELs) and name the file relationships.csv. **IMPORTANT! File must be named relationships.csv and fields used by the script must be formatted correctly**. Template fields used by the script are:
+
+| **Field name**                          | **Description**                                                                             | **Example value**                               |
+|-----------------------------------------|---------------------------------------------------------------------------------------------|-------------------------------------------------|
+| Record ID                               | ROR ID of record being added/updated, in URL form                                           | https://ror.org/015m7w34                        |
+| Related ID                              | ROR ID of the related record, in URL form                                                   | https://ror.org/02baj6743                       |
+| Relationship of Related ID to Record ID | One the following values: Parent, Child, Related                                            | Parent                                          |
+| Name of org in Related ID               | Name of the related organization, as it appears in the name field of the related ROR record | Indiana University – Purdue University Columbus |
+| Current location of Related ID          | Production or Release branch                                                                | Production                                      |
+
+2. Place the relationships.csv inside the parent directory where the ROR record JSON files are located (ex: rc-v1.3-review - don't put it inside new or updates directories).
+3. Commit and push the relationships.csv file to your working branch, ex:
+
+        git add rc-v1.3-review/relationships.csv
+        git commit -m "adding relationships list to v1.3"
+        git push origin rc-v1.3-review
+
+3. Go to https://github.com/ror-community/ror-updates/actions/workflows/generate_relationships.yml (Actions > Create relationships in the ror-records repository)
+4. Click Run workflow at right, choose the branch that you just pushed relationships.csv to, and click the green Run workflow button.
+5. It will take a few minutes for the workflow to run. If sucessful, the workflow will update ROR record JSON files in the branch that you specified, a green checkbox will be shown on the workflow runs list in Github, and a success messages will be posted to the #ror-curation-releases Slack channel. If the workflow run is unsuccessful, an red X will be shown on the workflow runs list in Github and an error message will be posted to Slack. To see the error details, click the generate-relationships box on the workflow run page in Github.
+6. If this workflow fails, there's likely a mistake in the relationships.csv or one or more of the ROR record JSON files that needs to be corrected. In that case, make the needed corrections, commit and push the files to the vX.X branch and repeat steps 3-5 to re-run the Create relationships workflow.
+
+## Validate files again in ror-updates
+After relationships are added, record files should be validated again to ensure that the changes applied by the script are still schema-valid.
+Follow the steps above to run validation, but make sure to tick the "Check box to validate relationships" checkbox.
+
+# Release to Staging
+
+## Create new release branch in ror-records
+
+### Github UI
 1. Go to [ror-community/ror-records](https://github.com/ror-community/ror-records)
 2. Click the branches dropdown in the upper left (should say 'main' by default)
 3. Click staging to switch to the staging branch
@@ -30,7 +125,7 @@ Schema-valid ROR record JSON can be generated using the [Leo form app](https://l
 5. Enter the name of your new release branch in the "Find or create branch" field. Names for new release candidate branches should follow the convention v[MAJOR VERSION].[MINOR VERSION].[PATCH VERSION IF APPLICABLE], ex: v1.3.
 6. Click Create branch: [NEW BRANCH NAME] from 'staging'
 
-## Git CLI
+### Git CLI
 These steps assume that you have already [installed and configured git](https://git-scm.com/downloads) on your computer, and that you have cloned the [ror-records](https://github.com/ror-community/ror-records) repository locally.
 
 1. In the ror-records checkout the staging branch
@@ -46,9 +141,9 @@ These steps assume that you have already [installed and configured git](https://
 
         git checkout -b v1.3
 
-# Push new/updated ROR JSON files to release branch
+# Push new/updated ROR JSON files to release branch in ror-records
 
-## Github UI
+### Github UI
 1. On your computer, place all the JSON files for the new and updated ROR records into a folder with the **exact same name** as the release branch (ex, v1.3).
 2. In the ror-records repository, click the Branches dropdown at left and choose the vX.X branch that you created in the previous steps.
 3. Click the Add file button at right and choose Upload files
@@ -56,13 +151,13 @@ These steps assume that you have already [installed and configured git](https://
 5. Under Commit changes, type a commit message in the first text box, leave the radio button set to "Commit directly to the vX.X branch" and click Commit changes.
 5. Repeat steps 1-4 if additional files need to be added to the release candidate.
 
-## Git CLI
+### Git CLI
 1. Create in new directory in the root of the ror-records repository the **exact same name** as the release branch (ex, v1.3).
 
         mkdir v1.3
 
-2. Place the JSON files for new and updated records inside the directory you just created.
-2. Add and commit the files
+2. Place JSON files for new and updated records inside the directory you just created. Do not place them in subdirectories. If there are relationships, also include relationships.csv file.
+. Add and commit the files
 
         git add v1.3/
         git commit -m "add new and updated ROR records to release v1.3"
@@ -73,34 +168,7 @@ These steps assume that you have already [installed and configured git](https://
 
 4. Repeat steps 1-3 if additional files need to be added to the release candidate.
 
-# Generate relationships
-Relationships are not included in the intitial ROR record JSON files. Relationships are generated using a script [generaterelationships.py](https://github.com/ror-community/ror-api/blob/dev/rorapi/management/commands/generaterelationships.py) triggered by a Github action [Create relationships](https://github.com/ror-community/ror-records/blob/staging/.github/workflows/generate_relationships.yml), which should be run AFTER all new and updated JSON records to be included in the release are uploaded to the vX.X branch.
-
-*Note: Currently relationships can only be added using this process, not removed. Removing relationships from an existing record requires manually downloading and editing the record, and adding it to the release branch.*
-
-1. Create relationships list as a CSV file using the template [[TEMPLATE] relationships.csv](https://docs.google.com/spreadsheets/d/17rA549Q6Vc-YyH8WUtXUOvsAROwCDmt1vy4Rjce-ELs) and name the file relationships.csv. **IMPORTANT! File must be named relationships.csv and fields used by the script must be formatted correctly**. Template fields used by the script are:
-
-| **Field name**                          | **Description**                                                                             | **Example value**                               |
-|-----------------------------------------|---------------------------------------------------------------------------------------------|-------------------------------------------------|
-| Record ID                               | ROR ID of record being added/updated, in URL form                                           | https://ror.org/015m7w34                        |
-| Related ID                              | ROR ID of the related record, in URL form                                                   | https://ror.org/02baj6743                       |
-| Relationship of Related ID to Record ID | One the following values: Parent, Child, Related                                            | Parent                                          |
-| Name of org in Related ID               | Name of the related organization, as it appears in the name field of the related ROR record | Indiana University – Purdue University Columbus |
-| Current location of Related ID          | Production or Release branch                                                                | Production                                      |
-
-2. Place the relationships.csv inside the vX.X directory where the ROR record JSON files are located.
-3. Commit and push the relationships.csv file to the current rc branch
-
-        git add v1.3/relationships.csv
-        git commit -m "adding relationships list to v1.3"
-        git push origin v1.3
-
-3. Go to https://github.com/ror-community/ror-records/actions/workflows/generate_relationships.yml (Actions > Create relationships in the ror-records repository)
-4. Click Run workflow at right, choose the vX.X branch that you just pushed relationships.csv to, and click the green Run workflow button.
-5. It will take a few minutes for the workflow to run. If sucessful, the workflow will update ROR record JSON files in the vX.X branch that you specified, a green checkbox will be shown on the workflow runs list in Github, and a success messages will be posted to the #ror-curation-releases Slack channel. If the workflow run is unsuccessful, an red X will be shown on the workflow runs list in Github and an error message will be posted to Slack. To see the error details, click the generate-relationships box on the workflow run page in Github.
-6. If this workflow fails, there's likely a mistake in the relationships.csv or one or more of the ROR record JSON files that needs to be corrected. In that case, make the needed corrections, commit and push the files to the vX.X branch and repeat steps 3-5 to re-run the Create relationships workflow.
-
-# Validate files
+## Validate files in ror-records
 Before finalizing a release candidate, JSON files for new and updated ROR records should be validated to check that they comply with the ROR schema and contained properly formatted JSON. Validation is performed by a script [run_validations.py](https://github.com/ror-community/validation-suite/blob/main/run_validations.py) triggered by a Github action [Validate files](https://github.com/ror-community/ror-records/blob/staging/.github/workflows/validate.yml
 ), which should be run after all new and updated JSON records to be included in the release are uploaded to the vX.X branch.
 
@@ -111,14 +179,13 @@ Before finalizing a release candidate, JSON files for new and updated ROR record
 
 **IMPORTANT! Validate files workflow must succeed before proceeding to deployment**
 
-# Deploy to Staging
+## Deploy to Staging
 Deploying to staging.ror.org/search and api.staging.ror.org requires making a Github pull request and merging it. Each of these actions triggers different automated workflows:
 
 - **Open pull request against Staging branch:** Check user permissions and validate files
 - **Merge pull request to Staging branch:**  Check user permissions, deploy release candidate to Staging API
 
 *Note that only specific Github users (ROR staff) are allowed to open/merge pull requests and create releases.*
-
 
 1. Go to https://github.com/ror-community/ror-records/pulls (Pull requests tab in ror-records repository)
 2. Click New pull request at right
@@ -137,10 +204,10 @@ If records needed to be added or changed after an initial Staging release, add t
 - Include relationships for any records already in merged to the vX.X directory on Staging in the release branch relationships.csv (not just the current deployment)
 - Deleting record files from the release branch after they have been deployed to Staging will not remove them from the Staging index. At the moment, this will need to be done manually by a developer; in the future, we will add a mechanism to remove records from the Staging index that have been deleted from an release branch. This does not affect production, as the production index is completely separate.
 
-# Test Staging release
+## Test Staging release
 *Note: There is currently no staging UI search app (https://staging.ror.org connects to production search app using api.ror.org). UI tests should be run against https://dev.ror.org.*
 
-## New records
+### New records
 Choose several new records from the Staging release and, for each record:
 1. Check that the record can be retrieved from the Staging API
 
@@ -150,7 +217,7 @@ Choose several new records from the Staging release and, for each record:
 
           curl https://api.staging.ror.org/organizations?query=[STAGING%20RECORD%20NAME]
 
-## Updated records
+### Updated records
 Choose several updated records from the Staging release and, for each record:
 1. Check that the record can be retrieved from the Staging API
 
@@ -167,7 +234,7 @@ Choose several updated records from the Staging release and, for each record:
         diff staging_[RORID].json prod_[RORID].json
 
 
-## Unchanged records
+### Unchanged records
 Choose several records from Production that were not included in the release and for each record:
 
 1. Retrieve the record from the Staging API and the Production API and compare changes to verify that the records are identical.
@@ -203,7 +270,7 @@ Deploying to ror.org/search and api.ror.org requires making a Github pull reques
 14. Click Publish release
 9. A Github action Deploy to production will be triggered, which pushes the new and updated JSON files to AWS S3, indexes the data into the production ROR Elasticsearch instance and generates  a new data dump file in TBD. If sucessful, a green checkbox will be shown in the pull request details, and a success messages will be posted to the #ror-curation-releases Slack channel. The new data should now be available in https://ror.org/search and https://api.ror.org
 
-# Test production release
+## Test production release
 
 Choose several new, updated and unchanged records and, for each record:
 
@@ -223,16 +290,18 @@ Choose several new, updated and unchanged records and, for each record:
 
         https://ror.org/search > Enter name in search box
 
-# Create data dump
+## Create data dump for internal use
 1. In the ror-records repository, go to [Actions > Create data dump](https://github.com/ror-community/ror-records/actions/workflows/generate_dump.yml)
 2. Click Run Workflow and enter the name of the release directory (ex, v1.0) and the name of the last production data dump from ror-data that the new dump should be built from, ex 2021-09-23-ror-data (without the .zip file extension)
 3. Click the Run workflow button
 4. If sucessful, a green checkbox will be shown in the pull request details, and a success messages will be posted to the #ror-curation-releases Slack channel. The new data dump should now be available in ror-data.
 
-# Publish data dump to Zenodo
+# Publish public data dump (quarterly)
+
+## Publish public data dump to Zenodo
 1. Download the vX.X-YYYY-MM-DD-ror-data.zip file from ror-data to your computer
 2. Log into [Zenodo](https://zenodo.org/) using the info@ror.org account
-3. Create a new version of the ROR data dump (https://doi.org/10.5281/zenodo.6347574in the [ROR Data community](https://zenodo.org/communities/ror-data). Make sure the metadata for the new data dump includes version information, contributor information, and licensing information ("Creative Commons Public Domain Dedication and Certification"). Keep the title metadata the same. The publication date should be the date that the dump was generated. Update the description with relevant information about the new release, such as the number of records being added/updated. 
+3. Create a new version of the ROR data dump (https://doi.org/10.5281/zenodo.6347574in the [ROR Data community](https://zenodo.org/communities/ror-data). Make sure the metadata for the new data dump includes version information, contributor information, and licensing information ("Creative Commons Public Domain Dedication and Certification"). Keep the title metadata the same. The publication date should be the date that the dump was generated. Update the description with relevant information about the new release, such as the number of records being added/updated.
 
 # Generate release in ror-updates Github
 1. Create a new release in ror-updates that corresponds to the version number of the release
@@ -248,7 +317,8 @@ Announce the production release on the following channels:
 
 # Clean up ror-updates Github
 1. Close the release milestone
-2. Close the issues in the milestone 
+2. Close the issues in the milestone
 3. Move the issues in the milestone to the "Done" column on the project board
+
 
 

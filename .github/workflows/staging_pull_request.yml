@@ -1,10 +1,10 @@
-name: Merge to Staging
+name: PR to Staging
 on:
   pull_request:
     types: [opened, reopened, synchronize]
     branches:
       - '!main'
-      - '!v.**-rc'
+      - '!v**'
       - 'staging'
     paths-ignore:
       - '**/README.md'
@@ -61,7 +61,7 @@ jobs:
           if [[ -f "../${{github.event.pull_request.head.ref}}/relationships.csv" ]]; then
               python run_validations.py -i ../files -f ../${{github.event.pull_request.head.ref}}/relationships.csv -p ../files/
             else
-              python run_validations.py -i ../files -p ../files/
+              python run_validations.py -i ../files
             fi
       - name: Notify Slack
         if: always()

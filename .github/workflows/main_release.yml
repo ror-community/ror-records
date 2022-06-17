@@ -1,14 +1,79 @@
 name: Deploy to Prod
 on:
-  push:
-    branches:
-      - 'main'
-    paths-ignore:
-      - '**/README.md'
+  release:
+    types: [published]
+
+env:
+  AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+  AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+  AWS_DEFAULT_REGION: ${{ secrets.AWS_REGION }}
+  TAG: ${{ github.event.release.tag_name }}
+
 jobs:
-  test_job:
+  echo_info:
     runs-on: ubuntu-latest
     steps:
-      - name: Echo message
+      - name: Echo info
         id: echo_message
-        run: echo "Github action Deploy to Prod was triggered"
+        run: echo "Github action Deploy to Prod was triggered with release tag ${{ github.event.release.tag_name }}"
+  check_permission:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get Permission
+        uses: octokit/request-action@v2.x
+        id: get_permission
+        with:
+          route: GET /repos/${{ github.repository }}/collaborators/${{ github.actor }}/permission
+        env:
+          GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+      - name: output
+        run:  |
+          export role_name=${{ fromJson(steps.get_permission.outputs.data).role_name }}
+          if [[ "$role_name" == "maintain"  || "$role_name" == "admin" ]]; then
+            exit 0
+          else
+            exit 1
+          fi
+  copy_files:
+    runs-on: ubuntu-latest
+    needs: check_permission
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+        with:
+          ref: ${{ github.event.ref }}
+      - name: Install aws cli
+        id: install-aws-cli
+        uses: unfor19/install-aws-cli-action@v1.0.2
+      - name: Zip and copy files
+        id: copyfiles
+        run: |
+          cd ./${{ github.event.release.tag_name }}
+          zip files.zip *.json
+          aws s3 cp files.zip s3://${{ secrets.ROR_DATA_S3_BUCKET_PROD }}/${{ github.event.release.tag_name }}/files.zip
+          aws s3 ls s3://${{ secrets.ROR_DATA_S3_BUCKET_PROD }}/${{ github.event.release.tag_name }}/files.zip
+      - name: Notify Slack
+        if: always()
+        uses: edge/simple-slack-notify@master
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.CURATOR_SLACK_WEBHOOK_URL }}
+        with:
+          channel: '#ror-curation-releases'
+          color: 'good'
+          text: 'Copy status to PROD S3 Bucket:  ${{ steps.copyfiles.outcome }}.  From directory: ${{ github.event.release.tag_name }}. Please check: ${env.GITHUB_SERVER_URL}/${env.GITHUB_REPOSITORY}/actions/runs/${env.GITHUB_RUN_ID}'
+      - name: Index data
+        id: indexdata
+        run: |
+          cd .github/workflows
+          python -m pip install --upgrade pip
+          pip install requests==2.23.0
+          python index_files.py -u ${{ secrets.INDEX_PROD_API_URL }} -d ${{ github.event.release.tag_name }} -he ${{ secrets.INDEX_PROD_API_HEADERS }}
+      - name: Notify Slack
+        if: always()
+        uses: edge/simple-slack-notify@master
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.CURATOR_SLACK_WEBHOOK_URL }}
+        with:
+          channel: '#ror-curation-releases'
+          color: 'good'
+          text: 'PROD index status: ${{ steps.indexdata.outcome }}. From directory: ${{ github.event.release.tag_name }}. Please check: ${env.GITHUB_SERVER_URL}/${env.GITHUB_REPOSITORY}/actions/runs/${env.GITHUB_RUN_ID}'
