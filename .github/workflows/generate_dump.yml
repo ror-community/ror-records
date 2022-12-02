@@ -40,7 +40,7 @@ jobs:
         id: gendumpscript
         run: |
           cd ./ror-records
-          curl https://raw.githubusercontent.com/ror-community/ror-api/master/rorapi/management/commands/generate_dump.py -o generate_dump.py
+          curl https://raw.githubusercontent.com/ror-community/curation_ops/main/generate_dump/generate_dump.py-o generate_dump.py
           python generate_dump.py -r ${{github.event.inputs.new-release}} -e ${{github.event.inputs.prev-release}}
       - name: cat error file
         if: ${{ steps.gendumpscript.outcome != 'success'}}
