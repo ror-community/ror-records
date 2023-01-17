@@ -21,9 +21,10 @@ Test repository for developing deployment process for ROR record updates.
 2. [Test production release](#test-production-release)
 3. [Create data dump for internal use](#create-data-dump-for-internal-use)
 
-## Publish public data dump (quarterly)
-1. [Publish public data dump to Zenodo](#publish-public-data-dump-to-zenodo)
-11. [Announce public data dump](#announce-public-data-dump)
+## Publish public data dump
+1. [Generate release in ror-updates Github](#generate-release-in-ror-updates-github)
+2. [Publish public data dump to Zenodo](#publish-public-data-dump-to-zenodo)
+3. [Announce public data dump](#announce-public-data-dump)
 
 # Prepare JSON files in ror-updates
 
@@ -296,18 +297,30 @@ Choose several new, updated and unchanged records and, for each record:
 3. Click the Run workflow button
 4. If sucessful, a green checkbox will be shown in the pull request details, and a success messages will be posted to the #ror-curation-releases Slack channel. The new data dump should now be available in ror-data.
 
-# Publish public data dump (quarterly)
+# Publish public data dump
+
+## Generate release in ror-updates Github
+1. Create a new release in ror-updates that corresponds to the version number of the release
+2. Add information in the release notes about the records that have been added and updated. To generate correct Zenodo upload description text, counts of records in release notes must be formatted like:
+
+```
+- **Total organizations**: 104,402
+- **Records added**: 62
+- **Records updated**: 257
+```
+
+Added and updated lines are not required. These will not be included in Zenodo description text if they don't exist in the release notes.
 
 ## Publish public data dump to Zenodo
-1. Download the vX.X-YYYY-MM-DD-ror-data.zip file from ror-data to your computer
-2. Log into [Zenodo](https://zenodo.org/) using the info@ror.org account
-3. Create a new version of the ROR data dump (https://doi.org/10.5281/zenodo.6347574in the [ROR Data community](https://zenodo.org/communities/ror-data). Make sure the metadata for the new data dump includes version information, contributor information, and licensing information ("Creative Commons Public Domain Dedication and Certification"). Keep the title metadata the same. The publication date should be the date that the dump was generated. Update the description with relevant information about the new release, such as the number of records being added/updated.
+**IMPORTANT! Data dump must be created in ror-data AND release must be created in ror-updates before publishing the dump to Zenodo!**
+The script that publishes the dump to Zenodo uses the zip file from ror-data and information from the Github release notes to create a new version in Zenodo.
 
-# Generate release in ror-updates Github
-1. Create a new release in ror-updates that corresponds to the version number of the release
-2. Add information in the release notes about the records that have been added and updated
+1. In the ror-records repository, go to [Actions > Publish data dump to Zenodo](https://github.com/ror-community/ror-records/actions/workflows/publish_dump_zenodo.yml)
+2. Click Run Workflow and enter the release name (ex, v1.17). Leave Zenodo environment and Parent Zenodo Record ID set to the defaults.
+3. Click the Run workflow button
+4. If sucessful, a green checkbox will be shown in the Actions history, and a success messages will be posted to the #ror-curation-releases Slack channel. The new data dump should now be available in https://zenodo.org/communities/ror-data. The DOI of the new upload will be shown in the "execute script" step of the Action run output in Github.
 
-# Announce production release
+## Announce production release
 Announce the production release on the following channels:
 - Community channel in ROR Slack
 - Twitter
