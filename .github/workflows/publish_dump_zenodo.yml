@@ -22,6 +22,8 @@ on:
 env:
   ZENODO_TOKEN_SANDBOX: ${{ secrets.ZENODO_TOKEN_SANDBOX }}
   ZENODO_TOKEN_PROD: ${{ secrets.ZENODO_TOKEN_PROD }}
+  PERSONAL_ACCESS_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+  PERSONAL_ACCESS_TOKEN_USER: ${{ secrets.PERSONAL_ACCESS_TOKEN_USER }}
 
 jobs:
   publish-dump:
@@ -57,4 +59,4 @@ jobs:
         with:
           channel: '#ror-curation-releases'
           color: 'good'
-          text: 'DEV Data dump ${{github.event.inputs.release}} Zenodo publication status:  ${{ steps.publishdumpscript.outcome }} Please check: ${env.GITHUB_SERVER_URL}/${env.GITHUB_REPOSITORY}/actions/runs/${env.GITHUB_RUN_ID}'
+          text: 'PROD Data dump ${{github.event.inputs.release}} Zenodo publication status:  ${{ steps.publishdumpscript.outcome }} Please check: ${env.GITHUB_SERVER_URL}/${env.GITHUB_REPOSITORY}/actions/runs/${env.GITHUB_RUN_ID}'
