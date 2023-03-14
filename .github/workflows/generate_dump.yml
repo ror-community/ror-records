@@ -32,6 +32,12 @@ jobs:
         id: copyprevdump
         run: |
           cp -R ./ror-data/${{github.event.inputs.prev-release}}.zip ./ror-records
+      - name: checkout ror curation ops repo
+        uses: actions/checkout@v2
+        with:
+          repository: ror-community/curation_ops
+          token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+          path: ./curation_ops
       - name: Set up Python environment
         uses: actions/setup-python@v2
         with:
@@ -39,9 +45,8 @@ jobs:
       - name: execute script
         id: gendumpscript
         run: |
-          cd ./ror-records
-          curl https://raw.githubusercontent.com/ror-community/curation_ops/main/generate_dump/generate_dump.py -o generate_dump.py
-          python generate_dump.py -r ${{github.event.inputs.new-release}} -e ${{github.event.inputs.prev-release}}
+          cd ./curation_ops/generate_dump/
+          python generate_dump.py -r ${{github.event.inputs.new-release}} -e ${{github.event.inputs.prev-release}} -i '../../ror-records' -o '../../ror-records'
       - name: cat error file
         if: ${{ steps.gendumpscript.outcome != 'success'}}
         run: |
@@ -69,4 +74,4 @@ jobs:
         with:
           channel: '#ror-curation-releases'
           color: 'good'
-          text: 'Data dump ${{github.event.inputs.new-release}} generation status:  ${{ steps.commitdumpfile.outcome }} Please check: ${env.GITHUB_SERVER_URL}/${env.GITHUB_REPOSITORY}/actions/runs/${env.GITHUB_RUN_ID}'
+          text: 'PROD Data dump ${{github.event.inputs.new-release}} generation status:  ${{ steps.commitdumpfile.outcome }} Please check: ${env.GITHUB_SERVER_URL}/${env.GITHUB_REPOSITORY}/actions/runs/${env.GITHUB_RUN_ID}'

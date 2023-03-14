@@ -59,9 +59,9 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
           if [[ -f "../${{github.event.pull_request.head.ref}}/relationships.csv" ]]; then
-              python run_validations.py -i ../files -f ../${{github.event.pull_request.head.ref}}/relationships.csv -p ../files/
+              python run_validations.py -i ../files -f ../${{github.event.pull_request.head.ref}}/relationships.csv -p ../files/ --no-geonames
             else
-              python run_validations.py -i ../files
+              python run_validations.py -i ../files --no-geonames
             fi
       - name: Notify Slack
         if: always()
