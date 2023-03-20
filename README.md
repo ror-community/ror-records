@@ -26,6 +26,9 @@ Test repository for developing deployment process for ROR record updates.
 2. [Publish public data dump to Zenodo](#publish-public-data-dump-to-zenodo)
 3. [Announce public data dump](#announce-public-data-dump)
 
+## Misc
+1. [Manual deployment](#manual-deployment)
+
 # Prepare JSON files in ror-updates
 
 ## Create JSON files for new and updated ROR records
@@ -332,6 +335,23 @@ Announce the production release on the following channels:
 1. Close the release milestone
 2. Close the issues in the milestone
 3. Move the issues in the milestone to the "Done" column on the project board
+
+## Manual deployment
+
+Occasionally, a 504 Gateway Timeout happens while indexing files into AWS ElasticSearch. This will cause the automatic Deploy to Staging (on PR merge) or Deploy to Prod (on release) actions to fail at the Index file step.
+
+In this case, you can re-run the deployment action manually:
+
+1. In the ror-records repository, go to [Actions > Manual deploy to Staging](https://github.com/ror-community/ror-records/actions/workflows/staging_manual_index.yml) or [Actions > Manual deploy to Prod](https://github.com/ror-community/ror-records/actions/workflows/prod_manual_index.yml), depending on which environment you need to deploy to.
+2. Click **Run Workflow**, then click **Run worfklow from** and choose the main branch when deploying to production or the staging branch when deploying to staging.
+3. In the **Name of the release tag that you would like to deploy**, enter the release name (ex, v1.17)
+3. Click the Run workflow button
+4. If sucessful, a green checkbox will be shown in the Actions history, and a success messages will be posted to the #ror-curation-releases Slack channel.
+
+
+
+
+
 
 
 
