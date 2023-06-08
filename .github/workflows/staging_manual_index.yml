@@ -6,14 +6,7 @@ on:
         type: string
         required: true
         description: Name of the directory you would like to deploy
-      es-version:
-        description: Elastic search version to deploy to
-        required: true
-        default: 7
-        type: choice
-        options:
-          - 6
-          - 7
+
 env:
   AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
   AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
@@ -113,7 +106,7 @@ jobs:
           cd .github/workflows
           python -m pip install --upgrade pip
           pip install requests==2.23.0
-          python index_files.py -u ${{ secrets.INDEX_STAGING_API_URL }} -d ${{ github.event.inputs.directory-name }} -es ${{ github.event.inputs.es-version }} -he ${{ secrets.INDEX_STAGING_API_HEADERS }}
+          python index_files.py -u ${{ secrets.INDEX_STAGING_API_URL }} -d ${{ github.event.inputs.directory-name }} -he ${{ secrets.INDEX_STAGING_API_HEADERS }}
       - name: Notify Slack
         if: always()
         uses: edge/simple-slack-notify@master
@@ -122,5 +115,5 @@ jobs:
         with:
           channel: '#ror-curation-releases'
           color: 'good'
-          text: 'STAGING index status to ES ${{ github.event.inputs.es-version }}: ${{ steps.indexdata.outcome }}. From directory: ${{ github.event.inputs.directory-name }}. Please check: ${env.GITHUB_SERVER_URL}/${env.GITHUB_REPOSITORY}/actions/runs/${env.GITHUB_RUN_ID}'
+          text: 'STAGING index status to ES: ${{ steps.indexdata.outcome }}. From directory: ${{ github.event.inputs.directory-name }}. Please check: ${env.GITHUB_SERVER_URL}/${env.GITHUB_REPOSITORY}/actions/runs/${env.GITHUB_RUN_ID}'
 

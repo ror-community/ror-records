@@ -56,7 +56,7 @@ jobs:
           cd .github/workflows
           python -m pip install --upgrade pip
           pip install requests==2.23.0
-          python index_files.py -u ${{ secrets.INDEX_STAGING_API_URL }} -d ${{ env.release_branch }} -es 7 -he ${{ secrets.INDEX_STAGING_API_HEADERS }}
+          python index_files.py -u ${{ secrets.INDEX_STAGING_API_URL }} -d ${{ env.release_branch }} -he ${{ secrets.INDEX_STAGING_API_HEADERS }}
       - name: Notify Slack
         if: always()
         uses: edge/simple-slack-notify@master
