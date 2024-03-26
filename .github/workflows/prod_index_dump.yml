@@ -31,7 +31,7 @@ env:
 jobs:
   check_permission:
     runs-on: ubuntu-latest
-    if: github.event.ref == 'refs/heads/master'
+    if: github.event.ref == 'refs/heads/main'
     steps:
       - name: Get Permission
         uses: octokit/request-action@v2.x
@@ -50,7 +50,7 @@ jobs:
           fi
   index-dump:
     runs-on: ubuntu-latest
-    if: github.event.ref == 'refs/heads/master'
+    if: github.event.ref == 'refs/heads/main'
     needs: check_permission
     steps:
       - name: checkout
