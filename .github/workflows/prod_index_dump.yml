@@ -74,5 +74,5 @@ jobs:
         with:
           channel: '#ror-curation-releases'
           color: 'good'
-          text: 'PROD full index from dump status: ${{ steps.indexdatadump.outcome }}. From file: ${{ github.event.inputs.release-dump }}. Schema version: ${{ github.event.inputs.schema-version }}. Data env: ${{ github.event.inputs.data-env }}. Please check: ${env.GITHUB_SERVER_URL}/${env.GITHUB_REPOSITORY}/actions/runs/${env.GITHUB_RUN_ID}'
+          text: 'PROD full index from dump status: ${{ steps.indexdatadump.outcome }}. Using version: ${{ github.event.inputs.schema-version }}. From file: ${{ github.event.inputs.release-dump }}. Schema version: ${{ github.event.inputs.schema-version }}. Data env: ${{ github.event.inputs.data-env }}. Please check: ${env.GITHUB_SERVER_URL}/${env.GITHUB_REPOSITORY}/actions/runs/${env.GITHUB_RUN_ID}'
 
