@@ -78,7 +78,7 @@ jobs:
           git config --local user.name "ror-bot"
           git add *.zip
           git commit -m "add new data dump file"
-          git push origin main
+          git push origin
       - name: commit changed files
         if: ${{ steps.commitdumpfile.outcome == 'success'}} && ${{ github.event.inputs.schema-version }} == 'v2'
         run: |
@@ -87,7 +87,7 @@ jobs:
           git config --local user.name "ror-bot"
           git add ${{github.event.inputs.new-release}}/v1/
           git commit -m "add generated v1 files"
-          git push origin main
+          git push origin ${{ github.event.ref }}
       - name: Notify Slack
         if: always()
         uses: edge/simple-slack-notify@master
