@@ -2,6 +2,13 @@ name: Manual deploy to Staging
 on:
   workflow_dispatch:
     inputs:
+      schema-version:
+            required: true
+            description: Schema version
+            type: choice
+            options:
+            - v1
+            - v2
       directory-name:
         type: string
         required: true
@@ -49,6 +56,7 @@ jobs:
         uses: actions/checkout@v2
         with:
           repository: ror-community/validation-suite
+          ref: schema-v2
           path: validation-suite
       - name: Validate files
         id: validatefiles
@@ -58,11 +66,22 @@ jobs:
           cd validation-suite
           python -m pip install --upgrade pip
           pip install -r requirements.txt
-          if [[ -f "../${{ github.event.inputs.directory-name }}/relationships.csv" ]]; then
-              python run_validations.py -i ../files -f ../${{ github.event.inputs.directory-name }}/relationships.csv -p ../files/ --no-geonames
-            else
-              python run_validations.py -i ../files --no-geonames
-            fi
+          if [[ ${{ github.event.inputs.schema-version }} == 'v1' ]]; then
+            curl https://raw.githubusercontent.com/ror-community/ror-schema/master/ror_schema.json -o ror_schema.json
+            if [[ -f "../${{github.event.pull_request.head.ref}}/relationships.csv" ]]; then
+                python run_validations.py -i ../files -v 1 -s ror_schema.json -f ../${{github.event.pull_request.head.ref}}/relationships.csv -p ../files/ --no-geonames
+              else
+                python run_validations.py -i ../files -v 1 -s ror_schema.json --no-geonames
+              fi
+          fi
+          if [[ ${{ github.event.inputs.schema-version }} == 'v2' ]]; then
+            curl https://raw.githubusercontent.com/ror-community/ror-schema/master/ror_schema_v2_0.json -o ror_schema_v2_0.json
+            if [[ -f "../${{github.event.pull_request.head.ref}}/relationships.csv" ]]; then
+                python run_validations.py -i ../files -v 2 -s ror_schema_v2_0.json -f ../${{github.event.pull_request.head.ref}}/relationships.csv -p ../files/ --no-geonames
+              else
+                python run_validations.py -i ../files -v 2 -s ror_schema_v2_0.json --no-geonames
+              fi
+          fi
       - name: Notify Slack
         if: always()
         uses: edge/simple-slack-notify@master
@@ -71,7 +90,7 @@ jobs:
         with:
           channel: '#ror-curation-releases'
           color: 'good'
-          text: 'Validation status during STAGING manual index:  ${{ steps.validatefiles.outcome }}. In directory: ${{ github.event.inputs.directory-name }}. Please check: ${env.GITHUB_SERVER_URL}/${env.GITHUB_REPOSITORY}/actions/runs/${env.GITHUB_RUN_ID}'
+          text: 'Validation status during STAGING manual index:  ${{ steps.validatefiles.outcome }}. Using version: ${{ github.event.inputs.schema-version }}. In directory: ${{ github.event.inputs.directory-name }}. Please check: ${env.GITHUB_SERVER_URL}/${env.GITHUB_REPOSITORY}/actions/runs/${env.GITHUB_RUN_ID}'
   copy-files:
     runs-on: ubuntu-latest
     if: github.event.ref == 'refs/heads/staging'
@@ -89,8 +108,8 @@ jobs:
         run: |
           cd ./${{ github.event.inputs.directory-name }}
           zip files.zip *.json
-          aws s3 cp files.zip s3://${{ secrets.ROR_DATA_S3_BUCKET_STAGING }}/${{ github.event.inputs.directory-name }}/files.zip
-          aws s3 ls s3://${{ secrets.ROR_DATA_S3_BUCKET_STAGING }}/${{ github.event.inputs.directory-name }}/files.zip
+          aws s3 cp files.zip s3://${{ secrets.ROR_DATA_S3_BUCKET_STAGING }}/${{ github.event.inputs.directory-name }}-${{ github.event.inputs.schema-version }}/files.zip
+          aws s3 ls s3://${{ secrets.ROR_DATA_S3_BUCKET_STAGING }}/${{ github.event.inputs.directory-name }}-${{ github.event.inputs.schema-version }}/files.zip
       - name: Notify Slack
         if: always()
         uses: edge/simple-slack-notify@master
@@ -106,7 +125,12 @@ jobs:
           cd .github/workflows
           python -m pip install --upgrade pip
           pip install requests==2.23.0
-          python index_files.py -u ${{ secrets.INDEX_STAGING_API_URL }} -d ${{ github.event.inputs.directory-name }} -he ${{ secrets.INDEX_STAGING_API_HEADERS }}
+          if [[ ${{ github.event.inputs.schema-version }} == 'v1' ]]; then
+            python index_files.py -u ${{ secrets.INDEX_STAGING_API_URLL_V1 }} -d ${{ github.event.inputs.directory-name }}-v1 -he ${{ secrets.INDEX_STAGING_API_HEADERS }}
+          fi
+          if [[ ${{ github.event.inputs.schema-version }} == 'v2' ]]; then
+            python index_files.py -u ${{ secrets.INDEX_STAGING_API_URL_V2 }} -d ${{ github.event.inputs.directory-name }}-v2 -he ${{ secrets.INDEX_STAGING_API_HEADERS }}
+          fi
       - name: Notify Slack
         if: always()
         uses: edge/simple-slack-notify@master
@@ -115,5 +139,5 @@ jobs:
         with:
           channel: '#ror-curation-releases'
           color: 'good'
-          text: 'STAGING index status to ES: ${{ steps.indexdata.outcome }}. From directory: ${{ github.event.inputs.directory-name }}. Please check: ${env.GITHUB_SERVER_URL}/${env.GITHUB_REPOSITORY}/actions/runs/${env.GITHUB_RUN_ID}'
+          text: 'STAGING index status to ES: ${{ steps.indexdata.outcome }}. Using version ${{ github.event.inputs.schema-version }}. From directory: ${{ github.event.inputs.directory-name }}. Please check: ${env.GITHUB_SERVER_URL}/${env.GITHUB_REPOSITORY}/actions/runs/${env.GITHUB_RUN_ID}'
 

@@ -2,6 +2,13 @@ name: Manual deploy to Prod
 on:
   workflow_dispatch:
     inputs:
+      schema-version:
+        required: true
+        description: Schema version
+        type: choice
+        options:
+        - v1
+        - v2
       release-tag:
         type: string
         required: true
@@ -49,8 +56,8 @@ jobs:
         run: |
           cd ./${{ github.event.inputs.release-tag }}
           zip files.zip *.json
-          aws s3 cp files.zip s3://${{ secrets.ROR_DATA_S3_BUCKET_PROD }}/${{ github.event.inputs.release-tag }}/files.zip
-          aws s3 ls s3://${{ secrets.ROR_DATA_S3_BUCKET_PROD }}/${{ github.event.inputs.release-tag }}/files.zip
+          aws s3 cp files.zip s3://${{ secrets.ROR_DATA_S3_BUCKET_PROD }}/${{ github.event.inputs.release-tag }}-${{ github.event.inputs.schema-version }}/files.zip
+          aws s3 ls s3://${{ secrets.ROR_DATA_S3_BUCKET_PROD }}/${{ github.event.inputs.release-tag }}-${{ github.event.inputs.schema-version }}/files.zip
       - name: Notify Slack
         if: always()
         uses: edge/simple-slack-notify@master
@@ -59,14 +66,19 @@ jobs:
         with:
           channel: '#ror-curation-releases'
           color: 'good'
-          text: 'Copy status to PROD S3 Bucket:  ${{ steps.copyfiles.outcome }}.  From directory: ${{ github.event.inputs.release-tag }}. Please check: ${env.GITHUB_SERVER_URL}/${env.GITHUB_REPOSITORY}/actions/runs/${env.GITHUB_RUN_ID}'
+          text: 'Copy status to PROD S3 Bucket:  ${{ steps.copyfiles.outcome }}.  Using version: ${{ github.event.inputs.schema-version }}. From directory: ${{ github.event.inputs.release-tag }}. Please check: ${env.GITHUB_SERVER_URL}/${env.GITHUB_REPOSITORY}/actions/runs/${env.GITHUB_RUN_ID}'
       - name: Index file
         id: indexdata
         run: |
           cd .github/workflows
           python -m pip install --upgrade pip
           pip install requests==2.23.0
-          python index_files.py -u ${{ secrets.INDEX_PROD_API_URL }} -d ${{ github.event.inputs.release-tag }} -he ${{ secrets.INDEX_PROD_API_HEADERS }}
+          if [[ ${{ github.event.inputs.schema-version }} == 'v1' ]]; then
+            python index_files.py -u ${{ secrets.INDEX_PROD_API_URL_V1 }} -d ${{ github.event.inputs.directory-name }}-v1 -he ${{ secrets.INDEX_DEV_API_HEADERS }}
+          fi
+          if [[ ${{ github.event.inputs.schema-version }} == 'v2' ]]; then
+            python index_files.py -u ${{ secrets.INDEX_PROD_API_URL_V2 }} -d ${{ github.event.inputs.directory-name }}-v2 -he ${{ secrets.INDEX_DEV_API_HEADERS }}
+          fi
       - name: Notify Slack
         if: always()
         uses: edge/simple-slack-notify@master
@@ -75,5 +87,5 @@ jobs:
         with:
           channel: '#ror-curation-releases'
           color: 'good'
-          text: 'PROD index status to ES: ${{ steps.indexdata.outcome }}. From directory: ${{ github.event.inputs.release-tag }}. Please check: ${env.GITHUB_SERVER_URL}/${env.GITHUB_REPOSITORY}/actions/runs/${env.GITHUB_RUN_ID}'
+          text: 'PROD index status to ES: ${{ steps.indexdata.outcome }}. Using version:. From directory: ${{ github.event.inputs.release-tag }}. Please check: ${env.GITHUB_SERVER_URL}/${env.GITHUB_REPOSITORY}/actions/runs/${env.GITHUB_RUN_ID}'
 
