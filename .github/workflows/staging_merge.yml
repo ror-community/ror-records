@@ -1,4 +1,4 @@
-name: Deploy to Staging
+name: Deploy to Staging v2 only
 on:
   push:
     branches:
@@ -39,8 +39,8 @@ jobs:
         run: |
           cd ./${{ env.release_branch }}
           zip files.zip *.json
-          aws s3 cp files.zip s3://${{ secrets.ROR_DATA_S3_BUCKET_STAGING }}/${{ env.release_branch }}/files.zip
-          aws s3 ls s3://${{ secrets.ROR_DATA_S3_BUCKET_STAGING }}/${{ env.release_branch }}/files.zip
+          aws s3 cp files.zip s3://${{ secrets.ROR_DATA_S3_BUCKET_STAGING }}/${{ env.release_branch }}-v2/files.zip
+          aws s3 ls s3://${{ secrets.ROR_DATA_S3_BUCKET_STAGING }}/${{ env.release_branch }}-v2/files.zip
       - name: Notify Slack
         if: always()
         uses: edge/simple-slack-notify@master
@@ -49,14 +49,14 @@ jobs:
         with:
           channel: '#ror-curation-releases'
           color: 'good'
-          text: 'Copy status to staging S3 Bucket:  ${{ steps.copyfiles.outcome }}.  On branch: ${env.GITHUB_SERVER_URL}/${env.GITHUB_REPOSITORY}/tree/${env.GITHUB_REF_NAME}. Please check: ${env.GITHUB_SERVER_URL}/${env.GITHUB_REPOSITORY}/actions/runs/${env.GITHUB_RUN_ID}'
+          text: 'Copy status to staging S3 Bucket:  ${{ steps.copyfiles.outcome }}. Using v2. On branch: ${env.GITHUB_SERVER_URL}/${env.GITHUB_REPOSITORY}/tree/${env.GITHUB_REF_NAME}. Please check: ${env.GITHUB_SERVER_URL}/${env.GITHUB_REPOSITORY}/actions/runs/${env.GITHUB_RUN_ID}'
       - name: Index file
         id: indexdata
         run: |
           cd .github/workflows
           python -m pip install --upgrade pip
           pip install requests==2.23.0
-          python index_files.py -u ${{ secrets.INDEX_STAGING_API_URL }} -d ${{ env.release_branch }} -he ${{ secrets.INDEX_STAGING_API_HEADERS }}
+          python index_files.py -u ${{ secrets.INDEX_STAGING_API_URL_V2 }} -d ${{ env.release_branch }}-v2 -he ${{ secrets.INDEX_STAGING_API_HEADERS }}
       - name: Notify Slack
         if: always()
         uses: edge/simple-slack-notify@master
@@ -65,5 +65,5 @@ jobs:
         with:
           channel: '#ror-curation-releases'
           color: 'good'
-          text: 'Staging index status: ${{ steps.indexdata.outcome }}. On branch: ${env.GITHUB_SERVER_URL}/${env.GITHUB_REPOSITORY}/tree/${env.GITHUB_REF_NAME}. Directory: ${{ env.release_branch }}. Please check: ${env.GITHUB_SERVER_URL}/${env.GITHUB_REPOSITORY}/actions/runs/${env.GITHUB_RUN_ID}'
+          text: 'Staging index status: ${{ steps.indexdata.outcome }}. Using v2. On branch: ${env.GITHUB_SERVER_URL}/${env.GITHUB_REPOSITORY}/tree/${env.GITHUB_REF_NAME}. Directory: ${{ env.release_branch }}. Please check: ${env.GITHUB_SERVER_URL}/${env.GITHUB_REPOSITORY}/actions/runs/${env.GITHUB_RUN_ID}'
 
