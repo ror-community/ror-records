@@ -32,7 +32,7 @@ jobs:
       - name: checkout ror data repo
         uses: actions/checkout@v2
         with:
-          repository: ror-community/ror-data-test
+          repository: ror-community/ror-data
           token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
           path: ./ror-data
       - name: copy previous data dump file
