@@ -17,21 +17,27 @@ Test repository for developing deployment process for ROR record updates.
 1. [Create new release branch](#create-new-release-branch-in-ror-records)
 2. [Push new/updated ROR JSON files to release branch](#push-newupdated-ror-json-files-to-release-branch-in-ror-records)
 3. [Validate files in ror-records](#validate-files-in-ror-records)
-4. [Deploy to Staging](#deploy-to-staging)
-5. [Test Staging release](#test-staging-release)
+4. [Deploy v2 to Staging](#deploy-v2-to-staging)
+5. [Test v2 Staging release](#test-v2-staging-release)
+6. [Create data dump](#create-data-dump)
+7. [Test data dump](#test-data-dump)
+7. [Deploy v1 to Staging](#deploy-v1-to-staging)
+8. [Test v1 Staging release](#test-v1-staging-release)
 
 ## Release to production
-1. [Deploy to Production](#deploy-to-production)
-2. [Test production release](#test-production-release)
-3. [Create data dump for internal use](#create-data-dump-for-internal-use)
+1. [Deploy v2 to Production](#deploy-v2-to-production)
+2. [Test v2 Production release](#test-v2-production-release)
+3. [Deploy v1 to Production](#deploy-v1-to-production)
+4. [Test v1 Production release](#test-v1-production-release)
 
 ## Publish public data dump
 1. [Generate release in ror-updates Github](#generate-release-in-ror-updates-github)
 2. [Publish public data dump to Zenodo](#publish-public-data-dump-to-zenodo)
 3. [Announce public data dump](#announce-public-data-dump)
+4, [Clean up ror-updates Github](#clean-up-ror-updates-github)
 
 ## Misc
-1. [Manual deployment](#manual-deployment)
+1. [Manual deployment v2 only](#manual-deployment-v2-only)
 
 # Prepare JSON files in ror-updates
 
@@ -184,7 +190,7 @@ These steps assume that you have already [installed and configured git](https://
 
         git checkout -b v1.3
 
-# Push new/updated ROR JSON files to release branch in ror-records
+## Push new/updated ROR JSON files to release branch in ror-records
 
 ### Github UI
 1. On your computer, place all the JSON files for the new and updated ROR records into a folder with the **exact same name** as the release branch (ex, v1.3).
@@ -297,13 +303,16 @@ Choose several records from Production that were not included in the release and
 
 ```diff``` result should be nothing (no response).
 
-## Create data dump for internal use
+## Create data dump
 A data dump must be created in order to index v1. To create a data dump with records in both v2 and v1:
 
 1. In the ror-records repository, go to [Actions > Create data dump](https://github.com/ror-community/ror-records/actions/workflows/generate_dump.yml)
 2. Click Run Workflow, select the schema version that the release was curated in (should be v2), enter the name of the release directory (ex, v1.46) and enter the name of the last production data dump from ror-data that the new dump should be built from, ex 2021-09-23-ror-data (without the .zip file extension)
 3. Click the Run workflow button
 4. If sucessful, a green checkbox will be shown in the pull request details, and a success messages will be posted to the #ror-curation-releases Slack channel. The new data dump zip should now be available in ror-data.
+
+## Test data dump
+TODO: add info about running data dump tests
 
 ## Deploy v1 to Staging
 v1 deployment to api.staging.ror.org is done via a full reindex from a data dump. This means that a data dump must be generated in ror-data before v1 can be indexed.
@@ -405,11 +414,12 @@ Announce the production release on the following channels:
 - PID Forum
 - API Users' Group
 
-# Clean up ror-updates Github
+## Clean up ror-updates Github
 1. Close the release milestone
 2. Close the issues in the milestone
 3. Move the issues in the milestone to the "Done" column on the project board
 
+# Misc
 ## Manual deployment v2 only
 
 **This process can only be used for v2. To deploy (or re-deploy) v1, follow the deploy v1 steps above to deploy from a data dump.**
