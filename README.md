@@ -306,26 +306,15 @@ A data dump must be created in order to index v1. To create a data dump with rec
 4. If sucessful, a green checkbox will be shown in the pull request details, and a success messages will be posted to the #ror-curation-releases Slack channel. The new data dump zip should now be available in ror-data.
 
 ## Deploy v1 to Staging
-Deploying v2 to staging.ror.org/search and api.staging.ror.org requires making a Github pull request and merging it. Each of these actions triggers different automated workflows:
+v1 deployment to api.staging.ror.org is done via a full reindex from a data dump. This means that a data dump must be generated in ror-data before v1 can be indexed.
 
-- **Open pull request against Staging branch:** Check user permissions and validate files
-- **Merge pull request to Staging branch:**  Check user permissions, deploy release candidate to Staging API (v2 only)
-
-v1 must be deployed separately, after data dump is created.
-
-*Note that only specific Github users (ROR staff) are allowed to open/merge pull requests and create releases.*
-
-1. Go to https://github.com/ror-community/ror-records/pulls (Pull requests tab in ror-records repository)
-2. Click New pull request at right
-3. Click the Base dropdown at left and choose Staging. Important! Do not make a pull request against the default Main branch.
-4. Click the Compare dropdown and choose the vX.X branch that you have been working with in the previous steps.
-5. Click Create pull request and enter ```Merge vX.X to staging``` in the Title field. Leave the Comments field blank.
-6. Double-check that the Base dropdown is set to Staging and that the list of updated files appears to be correct, then click Create pull request
-7. A Github action [Staging pull request](https://github.com/ror-community/ror-records/blob/staging/.github/workflows/staging_pull_request.yml) will be triggered which (1) verifies that the user is allowed to perform a release to staging and (2) runs the file validation script again. If sucessful, a green checkbox will be shown in the pull request details, and a success messages will be posted to the #ror-curation-releases Slack channel.
-8. Once the Staging pull request workflow has completed successfully, click Merge pull request
-9. A Github action [Deploy to staging](https://github.com/ror-community/ror-records/blob/staging/.github/workflows/merge.yml) will be triggered, which pushes the new and updated JSON files from the vX.X directory to AWS S3 and indexes the data into the ROR Elasticsearch instance. If sucessful, a green checkbox will be shown in the pull request details, and a success messages will be posted to the #ror-curation-releases Slack channel. The new data should now be available in https://staging.ror.org/search and https://api.staging.ror.org
+1. Go to https://github.com/ror-community/ror-records/actions/workflows/staging_index_dump.yml (Actions > STAGING index full data dump in the ror-records repository)
+2. Click Run workflow at right, set the branch to Staging, enter the name of the dump file to index from (must exist in ror-data repo), set "Schema version to index" to v2, set "ROR data env" to prod, and click the green Run workflow button.
+3. It will take a few minutes for the workflow to run. If sucessful, a green checkbox will be shown on the workflow runs list in Github, and a success messages will be posted to the #ror-curation-releases Slack channel. If the workflow run is unsuccessful, an red X will be shown on the workflow runs list in Github and an error message will be posted to Slack. To see the error details, click the action run URL in the Slack message, ex `Please check: https://github.com/ror-community/dev-ror-records/actions/runs/8978212832 `
+4. If this workflow fails, most likely there was a timeout in the API server. In this case, the file was likely successfully indexed; the server connection just timed out before indexing completed. Check https://api.staging.ror.org/v1/organizations to see whether the dump was indexed.
 
 ## Test v1 Staging release
+Perform API tests above, using v1 base URL https://api.staging.ror.org/v1/organizations . v1 is not available in the UI.
 
 # Release to production
 
