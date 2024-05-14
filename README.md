@@ -182,6 +182,7 @@ Last modified dates are updated using a script [update_last_mod.py](https://gith
 After all record updates above are complete, record files should be validated again to ensure that the changes applied by the script are still schema-valid. During this validation run, relationships and locations should also be validated.
 
 Follow the steps above to run validation, but with Geonames and relationship validation:
+f
     - **Use workflow from:** Branch rc-vX.X
     - **Schema version:** v2
     - **Check box to skip Geonames validation:** Unchecked
@@ -271,18 +272,19 @@ v1 must be deployed separately, after data dump is created.
 *Note that only specific Github users (ROR staff) are allowed to open/merge pull requests and create releases.*
 
 1. Go to https://github.com/ror-community/ror-records/pulls (Pull requests tab in ror-records repository)
-2. Click New pull request at right
-3. Click the Base dropdown at left and choose Staging. Important! Do not make a pull request against the default Main branch.
-4. Click the Compare dropdown and choose the vX.X branch that you have been working with in the previous steps.
-5. Click Create pull request and enter ```Merge vX.X to staging``` in the Title field. Leave the Comments field blank.
-6. Double-check that the Base dropdown is set to Staging and that the list of updated files appears to be correct, then click Create pull request
-7. A Github action [Staging pull request](https://github.com/ror-community/ror-records/blob/staging/.github/workflows/staging_pull_request.yml) will be triggered which (1) verifies that the user is allowed to perform a release to staging and (2) runs the file validation script again. Success/error status will be shown in Github actions and posted to the #ror-curation-releases Slack channel.
-8. Once the Staging pull request workflow has completed successfully, click Merge pull request
-9. A Github action [Deploy to staging v2 only](https://github.com/ror-community/ror-records/blob/staging/.github/workflows/merge.yml) will be triggered, which pushes the new and updated JSON files from the vX.X directory to AWS S3 and indexes the data into the v2 ROR Elasticsearch index. Success/error status will be shown in Github actions and posted to the #ror-curation-releases Slack channel. The new data should now be available in https://staging.ror.org/search and https://api.staging.ror.org/v2
+2. Click New pull request at right and set the following options:
+    - Base: Staging (Important! Do not make a pull request against the default Main branch)
+    - Compare: vX.X branch
+3. Click Create pull request and enter ```Merge vX.X to staging``` in the Title field. Leave the Comments field blank.
+4. Double-check that the Base dropdown is set to Staging and that the list of updated files appears to be correct, then click Create pull request
+5. A Github action [Staging pull request](https://github.com/ror-community/ror-records/blob/staging/.github/workflows/staging_pull_request.yml) will be triggered which (1) verifies that the user is allowed to perform a release to staging and (2) runs the file validation script again. Success/error status will be shown in Github actions and posted to the #ror-curation-releases Slack channel.
+6. Once the Staging pull request workflow has completed successfully, click Merge pull request
+7. A Github action [Deploy to staging v2 only](https://github.com/ror-community/ror-records/blob/staging/.github/workflows/merge.yml) will be triggered, which pushes the new and updated JSON files from the vX.X directory to AWS S3 and indexes the data into the v2 ROR Elasticsearch index. Success/error status will be shown in Github actions and posted to the #ror-curation-releases Slack channel. The new data should now be available in https://staging.ror.org/search and https://api.staging.ror.org/v2
 
 ### Multiple staging releases
-If records needed to be added or changed after an initial Staging release, add the new/updated records to the existing release branch per [Push new/updated ROR JSON files to release branch](#push-newupdated-ror-json-files-to-release-branch) and repeat the steps to [Generate relationships](#generate-relationships), [Validate files](#validate-files) and [Deploy to v2 Staging](#deploy-to-v2-staging). A few points to note with multiple Staging releases:
+If records needed to be added or changed after an initial Staging release, add the new/updated records to the existing release branch per [Push new/updated ROR JSON files to release branch](#push-newupdated-ror-json-files-to-release-branch) and repeat the steps to [Deploy to v2 Staging](#deploy-to-v2-staging). A few points to note with multiple Staging releases:
 
+- Relationship generation/removal, label updates, addresses updates and last modified date udpates may need to be re-run in ror-updates, depending on changes.
 - Do not remove records from the release branch that have already been deployed to Staging. Overwrite any records already deployed to Staging that require changes and leave the rest as they are. When ready to deploy to poduction, the release branch should contain all new/updated records to be included in the production release.
 - Include relationships for any records already in merged to the vX.X directory on Staging in the release branch relationships.csv (not just the current deployment)
 - Deleting record files from the release branch after they have been deployed to Staging will not remove them from the Staging index. At the moment, this will need to be done manually by a developer; in the future, we will add a mechanism to remove records from the Staging index that have been deleted from an release branch. This does not affect production, as the production index is completely separate.
@@ -379,21 +381,22 @@ Deploying v2 to ror.org/search and api.ror.org requires making a Github pull req
 *Note that only specific Github users (ROR staff) are allowed to open/merge pull requests and create releases.*
 
 1. Go to https://github.com/ror-community/ror-records/pulls (Pull requests tab in ror-records repository)
-2. Click New pull request at right
-3. Click the Base dropdown at left and choose Main.
-4. Click the Compare dropdown and choose Staging.
-5. Click Create pull request, enter ```Merge vX.X to production``` in the Title field. Leave the Comments field blank.
-6. Double-check that the Base dropdown is set to Main and that the list of updated files appears to be correct, then click Create pull request
-7. A Github action Production pull request will be triggered, which checks that the user has permission to open a pull request.
-8. Once the Production pull request workflow has completed successfully, request approval from another ROR team member in Slack. At least one approval is required before merging the pull request.
-9. After the pull request has been approved, click Merge pull request.
-10. Go to https://github.com/ror-community/ror-records/releases (Release tab in ror-records repository)
-11. Click Draft new release at right
-12. Click the Choose a tag dropdown and enter the version number for the release, ex v1.3. This should be the same number as the release branch and the directory that the release files are located in. Click Create new tag X.X on publish.
-13. In the Release name field, enter ```vX.X``` (replace X.X with the release tag number)
-14. In the Dsecribe this release field, enter ```Includes updates listed in https://github.com/ror-community/ror-records/milestone/X``` (link to correct milestone for this release)
-15. Click Publish release
-16. A Github action [Deploy to prod v2 only](https://github.com/ror-community/ror-records/actions/workflows/main_release.yml) will be triggered, which pushes the new and updated JSON files to AWS S3, indexes the data into the production v2 ROR Elasticsearch index. Success/error status will be shown in Github actions and posted to the #ror-curation-releases Slack channel. The new data should now be available in https://ror.org/search and https://api.ror.org/v2/organizations
+2. Click New pull request at right and set the following options:
+    - Base: Main
+    - Compare: Staging
+
+3. Click Create pull request, enter ```Merge vX.X to production``` in the Title field. Leave the Comments field blank.
+4. Double-check that the Base dropdown is set to Main and that the list of updated files appears to be correct, then click Create pull request
+5. A Github action Production pull request will be triggered, which checks that the user has permission to open a pull request.
+6. Once the Production pull request workflow has completed successfully, request approval from another ROR team member in Slack. At least one approval is required before merging the pull request.
+7. After the pull request has been approved, click Merge pull request.
+8. Go to https://github.com/ror-community/ror-records/releases (Release tab in ror-records repository)
+9. Click Draft new release at right
+10. Click the Choose a tag dropdown and enter the version number for the release, ex v1.3. This should be the same number as the release branch and the directory that the release files are located in. Click Create new tag X.X on publish.
+11. In the Release name field, enter ```vX.X``` (replace X.X with the release tag number)
+12. In the Dsecribe this release field, enter ```Includes updates listed in https://github.com/ror-community/ror-records/milestone/X``` (link to correct milestone for this release)
+13. Click Publish release
+14. A Github action [Deploy to prod v2 only](https://github.com/ror-community/ror-records/actions/workflows/main_release.yml) will be triggered, which pushes the new and updated JSON files to AWS S3, indexes the data into the production v2 ROR Elasticsearch index. Success/error status will be shown in Github actions and posted to the #ror-curation-releases Slack channel. The new data should now be available in https://ror.org/search and https://api.ror.org/v2/organizations
 
 ## Test v2 Production release
 
@@ -485,7 +488,7 @@ In this case, you can re-run the deployment action manually:
     - **Schema version to index:** v2
     - **Name of the release tag that you would like to deploy (prod) OR Name of the directory you would like to deploy (staging):** vX.X
 
-5. Click the Run workflow button. If sucessful, a green checkbox will be shown in the Actions history, and a success messages will be posted to the #ror-curation-releases Slack channel.
+3. Click the Run workflow button. If sucessful, a green checkbox will be shown in the Actions history, and a success messages will be posted to the #ror-curation-releases Slack channel.
 
 
 
