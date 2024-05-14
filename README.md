@@ -34,7 +34,7 @@ Test repository for developing deployment process for ROR record updates.
 1. [Generate release in ror-updates Github](#generate-release-in-ror-updates-github)
 2. [Publish public data dump to Zenodo](#publish-public-data-dump-to-zenodo)
 3. [Announce public data dump](#announce-public-data-dump)
-4, [Clean up ror-updates Github](#clean-up-ror-updates-github)
+4. [Clean up ror-updates Github](#clean-up-ror-updates-github)
 
 ## Misc
 1. [Manual deployment v2 only](#manual-deployment-v2-only)
@@ -49,7 +49,7 @@ Schema-valid ROR record JSON can be generated from a CSV using the [ROR API /bul
 Once created, push JSON files to ror-updates in a new branch per below.
 
 ### Create new release branch in ror-updates
-These steps assume that you have already [installed and configured git](https://git-scm.com/downloads) on your computer, and that you have cloned the [ror-records](https://github.com/ror-community/ror-updates) repository locally.
+These steps assume that you have already [installed and configured git](https://git-scm.com/downloads) on your computer, and that you have cloned the [ror-updates](https://github.com/ror-community/ror-updates) repository locally.
 
 1. In your local ror-updates directory, checkout the Main branch
 
@@ -69,7 +69,8 @@ These steps assume that you have already [installed and configured git](https://
 
         mkdir rc-v1.3-review
 
-2. Create subdirectories ```new``` and ```updates``` inside the directory you just created. Note: Creating both directories is not required in order for validation and relationship generation actions to work. If there are only new records or only updates, you only need to create one directory. If there's no ```updates``` directory but the relatinships.csv file contains relationships to production records, the relationship generation action will create an ```updates``` directory and download production records into it.
+2. Create subdirectories ```new``` and ```updates``` inside the directory you just created.
+*Note: Creating both directories is not required in order for validation and relationship generation actions to work. If there are only new records or only updates, you only need to create one directory. If there's no ```updates``` directory but the relatinships.csv file contains relationships to production records, the relationship generation action will create an ```updates``` directory and download production records into it.*
 
         mkdir rc-v1.3-review/new
         mkdir rc-v1.3-review/updates
@@ -87,17 +88,21 @@ These steps assume that you have already [installed and configured git](https://
 6. Repeat steps 1-3 if additional files need to be added to the release candidate.
 
 ## Validate files in ror-updates
-JSON files for new and updated ROR records should be validated before generating relationshps to check that they comply with the ROR schema and contained properly formatted JSON. Validation is performed by a script [run_validations.py](https://github.com/ror-community/validation-suite/blob/main/run_validations.py) triggered by a Github action [Validate files](https://github.com/ror-community/ror-records/blob/staging/.github/workflows/validate.yml
+JSON files for new and updated ROR records should be validated before generating relationshps to check that they comply with the ROR schema and contained properly formatted JSON. Validation is performed by a script [run_validations.py](https://github.com/ror-community/validation-suite/blob/main/run_validations.py) triggered by a Github action [Validate files](https://github.com/ror-community/ror-updates/actions/workflows/validate.yml
 ).
 
 1. Go to https://github.com/ror-community/ror-updates/actions/workflows/validate.yml (Actions > Create relationships in the ror-updates repository)
-2. Click Run workflow at right, choose the schema version and branch you're working on, check the "Check box to skip Geonames validation" box and leave "Check box to validate relationships" and "_unchecked_. If the directory containing the files you'd like to validate has a different name from the branch you're working on, enter name of that directory.
-3. Click the green Run workflow button.
-4. It will take a few minutes for the workflow to run. If sucessful, a green checkbox will be shown on the workflow runs list in Github, and a success messages will be posted to the #ror-curation-releases Slack channel. If the workflow run is unsuccessful, an red X will be shown on the workflow runs list in Github and an error message will be posted to Slack. To see the error details, click the action run URL in the Slack message, ex `Please check: https://github.com/ror-community/dev-ror-records/actions/runs/8978212832 `
-5. If this workflow fails, there's an issue with the data in one of more ROR record JSON files that needs to be corrected. In that case, check the error details, make the needed corrections, commit and push the files to your working branch and repeat steps 1-3 to re-run the Validate files workflow.
+2. Click Run workflow at right and set the following options:
+    - **Use workflow from:** Branch rc-vX.X
+    - **Schema version:** v2
+    - **Check box to skip Geonames validation:** Checked
+    - **Check box to validate relationships:** Unchecked
+    - **Name of parent directory containing records to validate:** Blank, unless files are located in a directory with a different name from the release branch name
+3. Click the green Run workflow button. Success/error status will be shown in Github actions and posted to the #ror-curation-releases Slack channel.
+4. If this workflow fails, there's an issue with the data in one of more ROR record JSON files that needs to be corrected. In that case, check the error details, make the needed corrections, commit and push the files to your working branch and repeat steps 1-3 to re-run the Validate files workflow.
 
 ## Generate relationships
-Relationships are not included in the intitial ROR record JSON files. Relationships are generated using a script [generaterelationships.py](https://github.com/ror-community/curation_ops/blob/v2-crosswalk/generate_relationships/generate_relationships.py) triggered by a Github action [Create relationships](https://github.com/ror-community/ror-updates/blob/staging/.github/workflows/generate_relationships.yml), which should be run AFTER all new and updated JSON records to be included in the release are uploaded to ror-updates.
+Relationships are not included in the intitial ROR record JSON files. Relationships are generated using a script [generaterelationships.py](https://github.com/ror-community/curation_ops/blob/v2-crosswalk/generate_relationships/generate_relationships.py) triggered by a Github action [Create relationships](https://github.com/ror-community/ror-updates/actions/workflows/generate_relationships.yml), which should be run AFTER all new and updated JSON records to be included in the release are uploaded to ror-updates.
 
 
 1. Create relationships list as a CSV file using the template [[TEMPLATE] relationships.csv](https://docs.google.com/spreadsheets/d/17rA549Q6Vc-YyH8WUtXUOvsAROwCDmt1vy4Rjce-ELs) and name the file relationships.csv. **IMPORTANT! File must be named relationships.csv and fields used by the script must be formatted correctly**. Template fields used by the script are:
@@ -106,7 +111,7 @@ Relationships are not included in the intitial ROR record JSON files. Relationsh
 |-----------------------------------------|---------------------------------------------------------------------------------------------|-------------------------------------------------|
 | Record ID                               | ROR ID of record being added/updated, in URL form                                           | https://ror.org/015m7w34                        |
 | Related ID                              | ROR ID of the related record, in URL form                                                   | https://ror.org/02baj6743                       |
-| Relationship of Related ID to Record ID | One the following values: Parent, Child, Related                                            | Parent, Delete (case insensitive)                                          |
+| Relationship of Related ID to Record ID | One the following values: Parent, Child, Related, Delete (case insensitive)                                             | Parent                                         |
 | Name of org in Related ID               | Name of the related organization, as it appears in the name field of the related ROR record | Indiana University – Purdue University Columbus |
 | Current location of Related ID          | Production or Release branch (not required for Delete relationship)                                                             | Production                                      |
 
@@ -120,8 +125,12 @@ Relationships are not included in the intitial ROR record JSON files. Relationsh
         git push origin rc-v1.3-review
 
 4. Go to https://github.com/ror-community/ror-updates/actions/workflows/generate_relationships.yml (Actions > Create relationships in the ror-updates repository)
-5. Click Run workflow at right, choose the schema version and branch that you just pushed relationships.csv to, and click the green Run workflow button. If the directory containing the files you'd like to update has a different name from the branch you're working on, enter name of that directory.
-6. It will take a few minutes for the workflow to run. If sucessful, the workflow will update ROR record JSON files in the branch that you specified, a green checkbox will be shown on the workflow runs list in Github, and a success messages will be posted to the #ror-curation-releases Slack channel. If the workflow run is unsuccessful, an red X will be shown on the workflow runs list in Github and an error message will be posted to Slack. To see the error details, click the action run URL in the Slack message, ex `Please check: https://github.com/ror-community/dev-ror-records/actions/runs/8978212832 `
+5. Click Run workflow at right and set the following options:
+    - **Use workflow from:** Branch rc-vX.X
+    - **Schema version:** v2
+    - **Name of parent directory containing records to generate relationships for:** Blank, unless files are located in a directory with a different name from the release branch name
+
+6. Click the green Run workflow button. Success/error status will be shown in Github actions and posted to the #ror-curation-releases Slack channel.
 7. If this workflow fails, there's likely a mistake in the relationships.csv or one or more of the ROR record JSON files that needs to be corrected. In that case, make the needed corrections, commit and push the files to the rc-vX.X branch and repeat steps 3-5 to re-run the Create relationships workflow.
 
 ## Remove relationships to inactive records
@@ -132,21 +141,21 @@ Relationships to inactive records are removed using a script [remove_relationshi
 
 1. Go to https://github.com/ror-community/ror-updates/actions/workflows/remove_relationships.yml (Actions > Remove relationships to inactive records in the ror-updates repository)
 2. Click Run workflow at right, choose the schema version and the rc-vX.X branch, and click the green Run workflow button. If the directory containing the files you'd like to validate has a different name from the branch you're working on, enter name of that directory.
-3. It will take a few minutes for the workflow to run. If sucessful, the workflow will update ROR record JSON files in the branch that you specified, a green checkbox will be shown on the workflow runs list in Github, and a success messages will be posted to the #ror-curation-releases Slack channel. If the workflow run is unsuccessful, an red X will be shown on the workflow runs list in Github and an error message will be posted to Slack. To see the error details, click the action run URL in the Slack message, ex `Please check: https://github.com/ror-community/dev-ror-records/actions/runs/8978212832 `
+3. Click the green Run workflow button. Success/error status will be shown in Github actions and posted to the #ror-curation-releases Slack channel.
 
 ## Update labels in relationships
-When the ROR display name changes in a release record, relationships labels must be updated in any related records. Records are checked for ROR display name changes and relationship labels in related records are updated using a script [update_related.py](https://github.com/ror-community/curation_ops/blob/main/update_related_records/update_related.py) triggered by a Github action [Update labels in relationships](https://github.com/ror-community/ror-updates/actions/workflows/update_labels.yml), which must be run AFTER the Remove relationships to inactive records action.
+When the ROR display name changes in a release record, relationship labels must be updated in any related records. Records are checked for ROR display name changes and relationship labels in related records are updated using a script [update_related.py](https://github.com/ror-community/curation_ops/blob/main/update_related_records/update_related.py) triggered by a Github action [Update labels in relationships](https://github.com/ror-community/ror-updates/actions/workflows/update_labels.yml), which must be run AFTER the Remove relationships to inactive records action.
 
 1. Go to https://github.com/ror-community/ror-updates/actions/workflows/update_labels.yml (Actions > Update labels in related records in the ror-updates repository)
 2. Click Run workflow at right, choose the schema version and the rc-vX.X branch, and click the green Run workflow button. If the directory containing the files you'd like to update has a different name from the branch you're working on, enter name of that directory.
-3. It will take a few minutes for the workflow to run. If sucessful, the workflow will update ROR record JSON files in the branch that you specified, a green checkbox will be shown on the workflow runs list in Github, and a success messages will be posted to the #ror-curation-releases Slack channel. If the workflow run is unsuccessful, an red X will be shown on the workflow runs list in Github and an error message will be posted to Slack. To see the error details, click the action run URL in the Slack message, ex `Please check: https://github.com/ror-community/dev-ror-records/actions/runs/8978212832 `
+3. Click the green Run workflow button. Success/error status will be shown in Github actions and posted to the #ror-curation-releases Slack channel.
 
 ## Update locations
 All release records must have their locations.geonames_details checked against the Geonames API and updated with the latest Geonames data if any differences exist. Locations are updated using a script [update_addresses.py](https://github.com/ror-community/curation_ops/blob/main/update_address_only/update_addresses.py) triggered by a Github action [Update addresses](https://github.com/ror-community/ror-updates/actions/workflows/update_addresses.yml). This action should be run after all changes to release files are complete, except last modified date updates.
 
 1. Go to https://github.com/ror-community/ror-updates/actions/workflows/update_addresses.yml (Actions > Update addresses in the ror-updates repository)
 2. Click Run workflow at right, choose the schema version and the rc-vX.X branch, and click the green Run workflow button. If the directory containing the files you'd like to update has a different name from the branch you're working on, enter name of that directory.
-3. It will take a few minutes for the workflow to run (can be longer for large releases or if the Geonames API is disagreeable). If sucessful, the workflow will update ROR record JSON files in the branch that you specified, a green checkbox will be shown on the workflow runs list in Github, and a success messages will be posted to the #ror-curation-releases Slack channel. If the workflow run is unsuccessful, an red X will be shown on the workflow runs list in Github and an error message will be posted to Slack. To see the error details, click the action run URL in the Slack message, ex `Please check: https://github.com/ror-community/dev-ror-records/actions/runs/8978212832`
+3. Click the green Run workflow button. Success/error status will be shown in Github actions and posted to the #ror-curation-releases Slack channel.
 
 ## Update last modified dates
 All release records must have their last modified date updated to match the (planned) date of the release. Ideally, this date should match the data dump file date. Release file generation is often completed 1 or more days before the release is actually deployed. In that case, the planned release date should be used (not the current date).
@@ -155,7 +164,7 @@ Last modified dates are updated using a script [update_last_mod.py](https://gith
 
 1. Go to https://github.com/ror-community/ror-updates/actions/workflows/update_last_mod.yml(Actions > Update last modified date in the ror-updates repository)
 2. Click Run workflow at right, choose the rc-vX.X branch, enter the planned release date in the "Date value to populate last_modified field with (YYYY-MM-DD)" field and click the green Run workflow button. If the directory containing the files you'd like to update has a different name from the branch you're working on, enter name of that directory.
-3. It will take a few minutes for the workflow to run (can be longer for large releases or if the Geonames API is disagreeable). If sucessful, the workflow will update ROR record JSON files in the branch that you specified, a green checkbox will be shown on the workflow runs list in Github, and a success messages will be posted to the #ror-curation-releases Slack channel. If the workflow run is unsuccessful, an red X will be shown on the workflow runs list in Github and an error message will be posted to Slack. To see the error details, click the action run URL in the Slack message, ex `Please check: https://github.com/ror-community/dev-ror-records/actions/runs/8978212832`
+3. Click the green Run workflow button. Success/error status will be shown in Github actions and posted to the #ror-curation-releases Slack channel.
 
 ## Validate files again in ror-updates
 After all record updates above are complete, record files should be validated again to ensure that the changes applied by the script are still schema-valid. During this validation run, relationships and locations should also be validated.
@@ -223,7 +232,7 @@ Before finalizing a release candidate, JSON files for new and updated ROR record
 
 1. Go to https://github.com/ror-community/ror-records/actions/workflows/validate.yml (Actions > Create relationships in the ror-records repository)
 2. Click Run workflow at right, choose the schema version and current vX.X branch, tick "Check box to validate relationships", leave "Check box to skip Geonames validation" unchecked, and click the green Run workflow button.
-3. It will take a few minutes for the workflow to run. If sucessful, a green checkbox will be shown on the workflow runs list in Github, and a success messages will be posted to the #ror-curation-releases Slack channel. If the workflow run is unsuccessful, an red X will be shown on the workflow runs list in Github and an error message will be posted to Slack. To see the error details, click the action run URL in the Slack message, ex `Please check: https://github.com/ror-community/dev-ror-records/actions/runs/8978212832 `
+3. Click the green Run workflow button. Success/error status will be shown in Github actions and posted to the #ror-curation-releases Slack channel.
 4. If this workflow fails, there's an issue with the data in one of more ROR record JSON files that needs to be corrected. In that case, check the error details, make the needed corrections, commit and push the files to the vX.X branch and repeat steps 1-3 to re-run the Validate files workflow.
 
 **IMPORTANT! Validate files workflow must succeed before proceeding to deployment**
@@ -244,9 +253,9 @@ v1 must be deployed separately, after data dump is created.
 4. Click the Compare dropdown and choose the vX.X branch that you have been working with in the previous steps.
 5. Click Create pull request and enter ```Merge vX.X to staging``` in the Title field. Leave the Comments field blank.
 6. Double-check that the Base dropdown is set to Staging and that the list of updated files appears to be correct, then click Create pull request
-7. A Github action [Staging pull request](https://github.com/ror-community/ror-records/blob/staging/.github/workflows/staging_pull_request.yml) will be triggered which (1) verifies that the user is allowed to perform a release to staging and (2) runs the file validation script again. If sucessful, a green checkbox will be shown in the pull request details, and a success messages will be posted to the #ror-curation-releases Slack channel.
+7. A Github action [Staging pull request](https://github.com/ror-community/ror-records/blob/staging/.github/workflows/staging_pull_request.yml) will be triggered which (1) verifies that the user is allowed to perform a release to staging and (2) runs the file validation script again. Success/error status will be shown in Github actions and posted to the #ror-curation-releases Slack channel.
 8. Once the Staging pull request workflow has completed successfully, click Merge pull request
-9. A Github action [Deploy to staging v2 only](https://github.com/ror-community/ror-records/blob/staging/.github/workflows/merge.yml) will be triggered, which pushes the new and updated JSON files from the vX.X directory to AWS S3 and indexes the data into the v2 ROR Elasticsearch index. If sucessful, a green checkbox will be shown in the pull request details, and a success messages will be posted to the #ror-curation-releases Slack channel. The new data should now be available in https://staging.ror.org/search and https://api.staging.ror.org/v2
+9. A Github action [Deploy to staging v2 only](https://github.com/ror-community/ror-records/blob/staging/.github/workflows/merge.yml) will be triggered, which pushes the new and updated JSON files from the vX.X directory to AWS S3 and indexes the data into the v2 ROR Elasticsearch index. Success/error status will be shown in Github actions and posted to the #ror-curation-releases Slack channel. The new data should now be available in https://staging.ror.org/search and https://api.staging.ror.org/v2
 
 ### Multiple staging releases
 If records needed to be added or changed after an initial Staging release, add the new/updated records to the existing release branch per [Push new/updated ROR JSON files to release branch](#push-newupdated-ror-json-files-to-release-branch) and repeat the steps to [Generate relationships](#generate-relationships), [Validate files](#validate-files) and [Deploy to v2 Staging](#deploy-to-v2-staging). A few points to note with multiple Staging releases:
@@ -308,8 +317,7 @@ A data dump must be created in order to index v1. To create a data dump with rec
 
 1. In the ror-records repository, go to [Actions > Create data dump](https://github.com/ror-community/ror-records/actions/workflows/generate_dump.yml)
 2. Click Run Workflow, select the schema version that the release was curated in (should be v2), enter the name of the release directory (ex, v1.46) and enter the name of the last production data dump from ror-data that the new dump should be built from, ex 2021-09-23-ror-data (without the .zip file extension)
-3. Click the Run workflow button
-4. If sucessful, a green checkbox will be shown in the pull request details, and a success messages will be posted to the #ror-curation-releases Slack channel. The new data dump zip should now be available in ror-data.
+3. Click the green Run workflow button. Success/error status will be shown in Github actions and posted to the #ror-curation-releases Slack channel.
 
 ## Test data dump
 TODO: add info about running data dump tests
@@ -319,7 +327,7 @@ v1 deployment to api.staging.ror.org is done via a full reindex from a data dump
 
 1. Go to https://github.com/ror-community/ror-records/actions/workflows/staging_index_dump.yml (Actions > STAGING index full data dump in the ror-records repository)
 2. Click Run workflow at right, set the branch to Staging, enter the name of the dump file to index from (must exist in ror-data repo), set "Schema version to index" to v2, set "ROR data env" to prod, and click the green Run workflow button.
-3. It will take a few minutes for the workflow to run. If sucessful, a green checkbox will be shown on the workflow runs list in Github, and a success messages will be posted to the #ror-curation-releases Slack channel. If the workflow run is unsuccessful, an red X will be shown on the workflow runs list in Github and an error message will be posted to Slack. To see the error details, click the action run URL in the Slack message, ex `Please check: https://github.com/ror-community/dev-ror-records/actions/runs/8978212832 `
+3. Click the green Run workflow button. Success/error status will be shown in Github actions and posted to the #ror-curation-releases Slack channel.
 4. If this workflow fails, most likely there was a timeout in the API server. In this case, the file was likely successfully indexed; the server connection just timed out before indexing completed. Check https://api.staging.ror.org/v1/organizations to see whether the dump was indexed.
 
 ## Test v1 Staging release
@@ -351,7 +359,7 @@ Deploying v2 to ror.org/search and api.ror.org requires making a Github pull req
 13. In the Release name field, enter ```vX.X``` (replace X.X with the release tag number)
 14. In the Dsecribe this release field, enter ```Includes updates listed in https://github.com/ror-community/ror-records/milestone/X``` (link to correct milestone for this release)
 15. Click Publish release
-16. A Github action [Deploy to prod v2 only](https://github.com/ror-community/ror-records/actions/workflows/main_release.yml) will be triggered, which pushes the new and updated JSON files to AWS S3, indexes the data into the production v2 ROR Elasticsearch index. If sucessful, a green checkbox will be shown in the pull request details, and a success messages will be posted to the #ror-curation-releases Slack channel. The new data should now be available in https://ror.org/search and https://api.ror.org
+16. A Github action [Deploy to prod v2 only](https://github.com/ror-community/ror-records/actions/workflows/main_release.yml) will be triggered, which pushes the new and updated JSON files to AWS S3, indexes the data into the production v2 ROR Elasticsearch index. Success/error status will be shown in Github actions and posted to the #ror-curation-releases Slack channel. The new data should now be available in https://ror.org/search and https://api.ror.org/v2/organizations
 
 ## Test v2 Production release
 
@@ -379,7 +387,7 @@ v1 deployment to api.ror.org is done via a full reindex from a data dump. This m
 
 1. Go to https://github.com/ror-community/ror-records/actions/workflows/prod_index_dump.yml (Actions > PROD index full data dump in the ror-records repository)
 2. Click Run workflow at right, set the branch to Main, enter the name of the dump file to index from (must exist in ror-data repo), set "Schema version to index" to v2, set "ROR data env" to prod, and click the green Run workflow button.
-3. It will take a few minutes for the workflow to run. If sucessful, a green checkbox will be shown on the workflow runs list in Github, and a success messages will be posted to the #ror-curation-releases Slack channel. If the workflow run is unsuccessful, an red X will be shown on the workflow runs list in Github and an error message will be posted to Slack. To see the error details, click the action run URL in the Slack message, ex `Please check: https://github.com/ror-community/dev-ror-records/actions/runs/8978212832 `
+3. Click the green Run workflow button. Success/error status will be shown in Github actions and posted to the #ror-curation-releases Slack channel.
 4. If this workflow fails, most likely there was a timeout in the API server. In this case, the file was likely successfully indexed; the server connection just timed out before indexing completed. Check https://api.ror.org/v1/organizations to see whether the dump was indexed.
 
 ## Test v1 Production release
@@ -403,8 +411,7 @@ The script that publishes the dump to Zenodo uses the zip file from ror-data and
 
 1. In the ror-records repository, go to [Actions > Publish data dump to Zenodo](https://github.com/ror-community/ror-records/actions/workflows/publish_dump_zenodo.yml)
 2. Click Run Workflow and enter the release name (ex, v1.17). Leave Zenodo environment and Parent Zenodo Record ID set to the defaults.
-3. Click the Run workflow button
-4. If sucessful, a green checkbox will be shown in the Actions history, and a success messages will be posted to the #ror-curation-releases Slack channel. The new data dump should now be available in https://zenodo.org/communities/ror-data. The DOI of the new upload will be shown in the "execute script" step of the Action run output in Github.
+3. Click the green Run workflow button. Success/error status will be shown in Github actions and posted to the #ror-curation-releases Slack channel.communities/ror-data. The DOI of the new upload will be shown in the "execute script" step of the Action run output in Github.
 
 ## Announce production release
 Announce the production release on the following channels:
