@@ -97,7 +97,7 @@ JSON files for new and updated ROR records should be validated before generating
     - **Schema version:** v2
     - **Check box to skip Geonames validation:** Checked
     - **Check box to validate relationships:** Unchecked
-    - **Name of parent directory containing records to validate:** Blank, unless files are located in a directory with a different name from the release branch name
+    - **Name of parent directory:** Blank, unless files are located in a directory with a different name from the release branch name
 3. Click the green Run workflow button. Success/error status will be shown in Github actions and posted to the #ror-curation-releases Slack channel.
 4. If this workflow fails, there's an issue with the data in one of more ROR record JSON files that needs to be corrected. In that case, check the error details, make the needed corrections, commit and push the files to your working branch and repeat steps 1-3 to re-run the Validate files workflow.
 
@@ -128,7 +128,7 @@ Relationships are not included in the intitial ROR record JSON files. Relationsh
 5. Click Run workflow at right and set the following options:
     - **Use workflow from:** Branch rc-vX.X
     - **Schema version:** v2
-    - **Name of parent directory containing records to generate relationships for:** Blank, unless files are located in a directory with a different name from the release branch name
+    - **Name of parent directory:** Blank, unless files are located in a directory with a different name from the release branch name
 
 6. Click the green Run workflow button. Success/error status will be shown in Github actions and posted to the #ror-curation-releases Slack channel.
 7. If this workflow fails, there's likely a mistake in the relationships.csv or one or more of the ROR record JSON files that needs to be corrected. In that case, make the needed corrections, commit and push the files to the rc-vX.X branch and repeat steps 3-5 to re-run the Create relationships workflow.
@@ -147,14 +147,22 @@ Relationships to inactive records are removed using a script [remove_relationshi
 When the ROR display name changes in a release record, relationship labels must be updated in any related records. Records are checked for ROR display name changes and relationship labels in related records are updated using a script [update_related.py](https://github.com/ror-community/curation_ops/blob/main/update_related_records/update_related.py) triggered by a Github action [Update labels in relationships](https://github.com/ror-community/ror-updates/actions/workflows/update_labels.yml), which must be run AFTER the Remove relationships to inactive records action.
 
 1. Go to https://github.com/ror-community/ror-updates/actions/workflows/update_labels.yml (Actions > Update labels in related records in the ror-updates repository)
-2. Click Run workflow at right, choose the schema version and the rc-vX.X branch, and click the green Run workflow button. If the directory containing the files you'd like to update has a different name from the branch you're working on, enter name of that directory.
+2. Click Run workflow at right and set the following options:
+    - **Use workflow from:** Branch rc-vX.X
+    - **Schema version:** v2
+    - **Name of parent directory:** Blank, unless files are located in a directory with a different name from the release branch name
+
 3. Click the green Run workflow button. Success/error status will be shown in Github actions and posted to the #ror-curation-releases Slack channel.
 
 ## Update locations
 All release records must have their locations.geonames_details checked against the Geonames API and updated with the latest Geonames data if any differences exist. Locations are updated using a script [update_addresses.py](https://github.com/ror-community/curation_ops/blob/main/update_address_only/update_addresses.py) triggered by a Github action [Update addresses](https://github.com/ror-community/ror-updates/actions/workflows/update_addresses.yml). This action should be run after all changes to release files are complete, except last modified date updates.
 
 1. Go to https://github.com/ror-community/ror-updates/actions/workflows/update_addresses.yml (Actions > Update addresses in the ror-updates repository)
-2. Click Run workflow at right, choose the schema version and the rc-vX.X branch, and click the green Run workflow button. If the directory containing the files you'd like to update has a different name from the branch you're working on, enter name of that directory.
+2. Click Run workflow at right and set the following options:
+    - **Use workflow from:** Branch rc-vX.X
+    - **Schema version:** v2
+    - **Name of parent directory:** Blank, unless files are located in a directory with a different name from the release branch name
+
 3. Click the green Run workflow button. Success/error status will be shown in Github actions and posted to the #ror-curation-releases Slack channel.
 
 ## Update last modified dates
@@ -163,13 +171,22 @@ All release records must have their last modified date updated to match the (pla
 Last modified dates are updated using a script [update_last_mod.py](https://github.com/ror-community/curation_ops/blob/v2-crosswalk/utilities/update_last_mod/update_last_mod.py) triggered by a Github action [Update last modified date](https://github.com/ror-community/ror-updates/actions/workflows/update_last_mod.yml). This action should be run after all other changes to release files are complete.
 
 1. Go to https://github.com/ror-community/ror-updates/actions/workflows/update_last_mod.yml(Actions > Update last modified date in the ror-updates repository)
-2. Click Run workflow at right, choose the rc-vX.X branch, enter the planned release date in the "Date value to populate last_modified field with (YYYY-MM-DD)" field and click the green Run workflow button. If the directory containing the files you'd like to update has a different name from the branch you're working on, enter name of that directory.
+2. Click Run workflow at right and set the following options:
+    - **Use workflow from:** Branch rc-vX.X
+    - **Date value to populate last_modified field with:** Planned release date (YYYY-MM-DD)
+    - **Name of parent directory:** Blank, unless files are located in a directory with a different name from the release branch name
+
 3. Click the green Run workflow button. Success/error status will be shown in Github actions and posted to the #ror-curation-releases Slack channel.
 
 ## Validate files again in ror-updates
 After all record updates above are complete, record files should be validated again to ensure that the changes applied by the script are still schema-valid. During this validation run, relationships and locations should also be validated.
 
-Follow the steps above to run validation, but make sure to tick the "Check box to validate relationships" checkbox and leave the "Check box to skip Geonames validation" box unchecked.
+Follow the steps above to run validation, but with Geonames and relationship validation:
+    - **Use workflow from:** Branch rc-vX.X
+    - **Schema version:** v2
+    - **Check box to skip Geonames validation:** Unchecked
+    - **Check box to validate relationships:** Checked
+    - **Name of parent directory:** Blank, unless files are located in a directory with a different name from the release branch name
 
 # Release to Staging
 
@@ -231,7 +248,13 @@ Before finalizing a release candidate, JSON files for new and updated ROR record
 ), which should be run after all new and updated JSON records to be included in the release are uploaded to the vX.X branch.
 
 1. Go to https://github.com/ror-community/ror-records/actions/workflows/validate.yml (Actions > Create relationships in the ror-records repository)
-2. Click Run workflow at right, choose the schema version and current vX.X branch, tick "Check box to validate relationships", leave "Check box to skip Geonames validation" unchecked, and click the green Run workflow button.
+2. Click Run workflow at right and set the following options:
+    - **Use workflow from:** Branch vX.X
+    - **Schema version:** v2
+    - **Check box to skip Geonames validation:** Unchecked
+    - **Check box to validate relationships:** Checked
+    - **Name of parent directory:** Blank, unless files are located in a directory with a different name from the release branch name
+
 3. Click the green Run workflow button. Success/error status will be shown in Github actions and posted to the #ror-curation-releases Slack channel.
 4. If this workflow fails, there's an issue with the data in one of more ROR record JSON files that needs to be corrected. In that case, check the error details, make the needed corrections, commit and push the files to the vX.X branch and repeat steps 1-3 to re-run the Validate files workflow.
 
@@ -316,7 +339,13 @@ Choose several records from Production that were not included in the release and
 A data dump must be created in order to index v1. To create a data dump with records in both v2 and v1:
 
 1. In the ror-records repository, go to [Actions > Create data dump](https://github.com/ror-community/ror-records/actions/workflows/generate_dump.yml)
-2. Click Run Workflow, select the schema version that the release was curated in (should be v2), enter the name of the release directory (ex, v1.46) and enter the name of the last production data dump from ror-data that the new dump should be built from, ex 2021-09-23-ror-data (without the .zip file extension)
+2. Click Run workflow at right and set the following options:
+    - **Use workflow from:** Branch Staging (Main is also OK - doesn't matter)
+    - **Schema version:** v2
+    - **Name of the directory that the new release is located in:** vX.X
+    - **Check box to validate relationships:** Checked
+    - **Name of the existing release zip file to base this data dump from:** Name of the last production data dump from ror-data that the new dump should be built from, ex 2021-09-23-ror-data (without the .zip file extension)
+
 3. Click the green Run workflow button. Success/error status will be shown in Github actions and posted to the #ror-curation-releases Slack channel.
 
 ## Test data dump
@@ -326,7 +355,12 @@ TODO: add info about running data dump tests
 v1 deployment to api.staging.ror.org is done via a full reindex from a data dump. This means that a data dump must be generated in ror-data before v1 can be indexed.
 
 1. Go to https://github.com/ror-community/ror-records/actions/workflows/staging_index_dump.yml (Actions > STAGING index full data dump in the ror-records repository)
-2. Click Run workflow at right, set the branch to Staging, enter the name of the dump file to index from (must exist in ror-data repo), set "Schema version to index" to v2, set "ROR data env" to prod, and click the green Run workflow button.
+2. Click Run workflow at right and set the following options:
+    - **Use workflow from:** Branch Staging (will fail if any other branch selected)
+    - **Name of existing release dump file to index:** Name of the dump file to index, ex 2021-09-23-ror-data (without the .zip file extension). Must exist in ror-data.
+    - **Schema version to index:** v1
+    - **ROR data env:** prod (uses dump from ror-data)
+
 3. Click the green Run workflow button. Success/error status will be shown in Github actions and posted to the #ror-curation-releases Slack channel.
 4. If this workflow fails, most likely there was a timeout in the API server. In this case, the file was likely successfully indexed; the server connection just timed out before indexing completed. Check https://api.staging.ror.org/v1/organizations to see whether the dump was indexed.
 
@@ -386,7 +420,12 @@ Choose several new, updated and unchanged records and, for each record:
 v1 deployment to api.ror.org is done via a full reindex from a data dump. This means that a data dump must be generated in ror-data before v1 can be indexed.
 
 1. Go to https://github.com/ror-community/ror-records/actions/workflows/prod_index_dump.yml (Actions > PROD index full data dump in the ror-records repository)
-2. Click Run workflow at right, set the branch to Main, enter the name of the dump file to index from (must exist in ror-data repo), set "Schema version to index" to v2, set "ROR data env" to prod, and click the green Run workflow button.
+2. Click Run workflow at right and set the following options:
+    - **Use workflow from:** Branch Main (will fail if any other branch selected)
+    - **Name of existing release dump file to index:** Name of the dump file to index, ex 2021-09-23-ror-data (without the .zip file extension). Must exist in ror-data.
+    - **Schema version to index:** v1
+    - **ROR data env:** prod (uses dump from ror-data)
+
 3. Click the green Run workflow button. Success/error status will be shown in Github actions and posted to the #ror-curation-releases Slack channel.
 4. If this workflow fails, most likely there was a timeout in the API server. In this case, the file was likely successfully indexed; the server connection just timed out before indexing completed. Check https://api.ror.org/v1/organizations to see whether the dump was indexed.
 
@@ -410,7 +449,12 @@ Perform API tests above, using v1 base URL https://api.ror.org/v1/organizations 
 The script that publishes the dump to Zenodo uses the zip file from ror-data and information from the Github release notes to create a new version in Zenodo.
 
 1. In the ror-records repository, go to [Actions > Publish data dump to Zenodo](https://github.com/ror-community/ror-records/actions/workflows/publish_dump_zenodo.yml)
-2. Click Run Workflow and enter the release name (ex, v1.17). Leave Zenodo environment and Parent Zenodo Record ID set to the defaults.
+2. Click Run workflow at right and set the following options:
+    - **Use workflow from:** Branch Main
+    - **Release version:** vX.X
+    - **Zenodo environment:** Prod
+    - **Parent Zenodo record ID:** 6347575
+
 3. Click the green Run workflow button. Success/error status will be shown in Github actions and posted to the #ror-curation-releases Slack channel.communities/ror-data. The DOI of the new upload will be shown in the "execute script" step of the Action run output in Github.
 
 ## Announce production release
@@ -436,11 +480,12 @@ Occasionally, a 504 Gateway Timeout happens while indexing files into AWS Elasti
 In this case, you can re-run the deployment action manually:
 
 1. In the ror-records repository, go to [Actions > Manual deploy to Staging](https://github.com/ror-community/ror-records/actions/workflows/staging_manual_index.yml) or [Actions > Manual deploy to Prod](https://github.com/ror-community/ror-records/actions/workflows/prod_manual_index.yml), depending on which environment you need to deploy to.
-2. Click **Run Workflow**, then click **Run worfklow from** and choose the main branch when deploying to production or the staging branch when deploying to staging.
-3. In the **Schema version** dropdown, choose v2 (this indicates the version that release files are fomatted in)
-4. In the **Name of the release tag that you would like to deploy**, enter the release name (ex, v1.17)
-5. Click the Run workflow button
-6. If sucessful, a green checkbox will be shown in the Actions history, and a success messages will be posted to the #ror-curation-releases Slack channel.
+2. Click Run workflow at right and set the following options:
+    - **Use workflow from:** Main branch when deploying to production or the staging branch when deploying to staging.
+    - **Schema version to index:** v2
+    - **Name of the release tag that you would like to deploy (prod) OR Name of the directory you would like to deploy (staging):** vX.X
+
+5. Click the Run workflow button. If sucessful, a green checkbox will be shown in the Actions history, and a success messages will be posted to the #ror-curation-releases Slack channel.
 
 
 
