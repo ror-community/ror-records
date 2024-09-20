@@ -102,7 +102,7 @@ JSON files for new and updated ROR records should be validated before generating
 4. If this workflow fails, there's an issue with the data in one of more ROR record JSON files that needs to be corrected. In that case, check the error details, make the needed corrections, commit and push the files to your working branch and repeat steps 1-3 to re-run the Validate files workflow.
 
 ## Generate relationships
-Relationships are not included in the intitial ROR record JSON files. Relationships are generated using a script [generaterelationships.py](https://github.com/ror-community/curation_ops/blob/v2-crosswalk/generate_relationships/generate_relationships.py) triggered by a Github action [Create relationships](https://github.com/ror-community/ror-updates/actions/workflows/generate_relationships.yml), which should be run AFTER all new and updated JSON records to be included in the release are uploaded to ror-updates.
+Relationships are not included in the intitial ROR record JSON files. Relationships are generated using a script [generaterelationships.py](https://github.com/ror-community/curation_ops/blob/main/generate_relationships/generate_relationships.py) triggered by a Github action [Create relationships](https://github.com/ror-community/ror-updates/actions/workflows/generate_relationships.yml), which should be run AFTER all new and updated JSON records to be included in the release are uploaded to ror-updates.
 
 
 1. Create relationships list as a CSV file using the template [[TEMPLATE] relationships.csv](https://docs.google.com/spreadsheets/d/17rA549Q6Vc-YyH8WUtXUOvsAROwCDmt1vy4Rjce-ELs) and name the file relationships.csv. **IMPORTANT! File must be named relationships.csv and fields used by the script must be formatted correctly**. Template fields used by the script are:
@@ -136,7 +136,7 @@ Relationships are not included in the intitial ROR record JSON files. Relationsh
 ## Remove relationships to inactive records
 Active records cannot contain relationships to inactive or withdrawn records. On each release, all release records must be checked for status changes and, for any where status changed from active to inactive or withdrawn, relationships to those records must be removed from active records (both in the release and in production).
 
-Relationships to inactive records are removed using a script [remove_relationships.py](https://github.com/ror-community/curation_ops/blob/v2-crosswalk/remove_relationships/remove_relationships.py) triggered by a Github action [Remove relationships to inactive records](https://github.com/ror-community/ror-updates/actions/workflows/remove_relationships.yml), which must be run AFTER the Generate relationships action.
+Relationships to inactive records are removed using a script [remove_relationships.py](https://github.com/ror-community/curation_ops/blob/main/remove_relationships/remove_relationships.py) triggered by a Github action [Remove relationships to inactive records](https://github.com/ror-community/ror-updates/actions/workflows/remove_relationships.yml), which must be run AFTER the Generate relationships action.
 
 
 1. Go to https://github.com/ror-community/ror-updates/actions/workflows/remove_relationships.yml (Actions > Remove relationships to inactive records in the ror-updates repository)
@@ -168,7 +168,7 @@ All release records must have their locations.geonames_details checked against t
 ## Update last modified dates
 All release records must have their last modified date updated to match the (planned) date of the release. Ideally, this date should match the data dump file date. Release file generation is often completed 1 or more days before the release is actually deployed. In that case, the planned release date should be used (not the current date).
 
-Last modified dates are updated using a script [update_last_mod.py](https://github.com/ror-community/curation_ops/blob/v2-crosswalk/utilities/update_last_mod/update_last_mod.py) triggered by a Github action [Update last modified date](https://github.com/ror-community/ror-updates/actions/workflows/update_last_mod.yml). This action should be run after all other changes to release files are complete.
+Last modified dates are updated using a script [update_last_mod.py](https://github.com/ror-community/curation_ops/blob/main/utilities/update_last_mod/update_last_mod.py) triggered by a Github action [Update last modified date](https://github.com/ror-community/ror-updates/actions/workflows/update_last_mod.yml). This action should be run after all other changes to release files are complete.
 
 1. Go to https://github.com/ror-community/ror-updates/actions/workflows/update_last_mod.yml(Actions > Update last modified date in the ror-updates repository)
 2. Click Run workflow at right and set the following options:
