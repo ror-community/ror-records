@@ -1,11 +1,11 @@
-name: PR to Staging
+name: PR to DEV
 on:
   pull_request:
     types: [opened, reopened, synchronize]
     branches:
       - '!main'
       - '!v**'
-      - 'staging'
+      - 'dev'
     paths-ignore:
       - '**/README.md'
       - '.github/*'
@@ -49,6 +49,7 @@ jobs:
         uses: actions/checkout@v2
         with:
           repository: ror-community/validation-suite
+          ref: schema-v2
           path: validation-suite
       - name: Validate files
         id: validatefiles
@@ -72,5 +73,5 @@ jobs:
         with:
           channel: '#ror-curation-releases'
           color: 'good'
-          text: 'Validation status during PR to STAGING:  ${{ steps.validatefiles.outcome }}. Using v2. On branch: ${env.GITHUB_SERVER_URL}/${env.GITHUB_REPOSITORY}/tree/${env.GITHUB_HEAD_REF}. In directory: ${env.GITHUB_HEAD_REF}. Please check: ${env.GITHUB_SERVER_URL}/${env.GITHUB_REPOSITORY}/actions/runs/${env.GITHUB_RUN_ID}'
+          text: 'Validation status during PR to DEV:  ${{ steps.validatefiles.outcome }}. Using v2. On branch: ${env.GITHUB_SERVER_URL}/${env.GITHUB_REPOSITORY}/tree/${env.GITHUB_HEAD_REF}. In directory: ${env.GITHUB_HEAD_REF}. Please check: ${env.GITHUB_SERVER_URL}/${env.GITHUB_REPOSITORY}/actions/runs/${env.GITHUB_RUN_ID}'
 

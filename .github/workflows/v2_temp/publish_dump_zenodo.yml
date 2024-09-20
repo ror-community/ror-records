@@ -9,7 +9,7 @@ on:
       zenodo-env:
         required: true
         description: Zenodo environment
-        default: 'prod'
+        default: 'sandbox'
         type: choice
         options:
         - sandbox
@@ -18,7 +18,7 @@ on:
         required: true
         type: string
         description: Parent Zenodo record ID (if different from default)
-        default: '6347575'
+        default: '1098376'
 env:
   ZENODO_TOKEN_SANDBOX: ${{ secrets.ZENODO_TOKEN_SANDBOX }}
   ZENODO_TOKEN_PROD: ${{ secrets.ZENODO_TOKEN_PROD }}
@@ -37,7 +37,7 @@ jobs:
         with:
           repository: ror-community/ror-data
           token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
-          path: ./ror-data
+          path: ./ror-data-test
       - name: Set up Python environment
         uses: actions/setup-python@v2
         with:
@@ -59,4 +59,4 @@ jobs:
         with:
           channel: '#ror-curation-releases'
           color: 'good'
-          text: 'PROD Data dump ${{github.event.inputs.release}} Zenodo publication status:  ${{ steps.publishdumpscript.outcome }} Please check: ${env.GITHUB_SERVER_URL}/${env.GITHUB_REPOSITORY}/actions/runs/${env.GITHUB_RUN_ID}'
+          text: 'DEV Data dump ${{github.event.inputs.release}} Zenodo publication status:  ${{ steps.publishdumpscript.outcome }} Please check: ${env.GITHUB_SERVER_URL}/${env.GITHUB_REPOSITORY}/actions/runs/${env.GITHUB_RUN_ID}'

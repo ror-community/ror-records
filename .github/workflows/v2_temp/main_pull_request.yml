@@ -1,0 +1,33 @@
+name: PR to Main
+on:
+  pull_request:
+    types: [opened, reopened, synchronize]
+    branches:
+      - '!v**'
+      - 'main'
+      - '!staging'
+
+env:
+  USER_INFO: ${{ github.event.pull_request.user.login }}
+  REPO_INFO: ${{ github.event.pull_request.base.repo.full_name }}
+
+jobs:
+  check_permission:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get Permission
+        uses: octokit/request-action@v2.x
+        id: get_permission
+        with:
+          route: GET /repos/${{ env.REPO_INFO }}/collaborators/${{ env.USER_INFO }}/permission
+        env:
+          GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+      - name: output
+        run:  |
+          export role_name=${{ fromJson(steps.get_permission.outputs.data).role_name }}
+          if [[ "$role_name" == "maintain"  || "$role_name" == "admin" ]]; then
+            exit 0
+          else
+            exit 1
+          fi
+

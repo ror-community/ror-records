@@ -36,6 +36,7 @@ jobs:
         uses: actions/checkout@v2
         with:
           repository: ror-community/validation-suite
+          ref: schema-v2
           path: validation-suite
       - name: Get directory name
         if: "${{ github.event.inputs.directory-name != '' }}"
@@ -46,8 +47,9 @@ jobs:
       - name: Validate files
         id: validatefiles
         run: |
+          echo ${{ github.event.inputs.schema-version}}
           mkdir files
-          cp ./${{ env.WORKING_DIR }}/*.json files/
+          cp ./${{ env.WORKING_DIR }}/*/*.json files/
           cd validation-suite
           python -m pip install --upgrade pip
           pip install -r requirements.txt
@@ -102,6 +104,7 @@ jobs:
               fi
             fi
           fi
+
       - name: Notify Slack
         if: always()
         uses: edge/simple-slack-notify@master
@@ -110,4 +113,4 @@ jobs:
         with:
           channel: '#ror-curation-releases'
           color: 'good'
-          text: 'Validation status ${{ steps.validatefiles.outcome }} in ${env.GITHUB_REPOSITORY}. On branch: ${{ env.WORKING_DIR }}. Using version ${{ github.event.inputs.schema-version }}. Please check: ${env.GITHUB_SERVER_URL}/${env.GITHUB_REPOSITORY}/actions/runs/${env.GITHUB_RUN_ID}'
+          text: 'Validation status ${{ steps.validatefiles.outcome }} in ${env.GITHUB_REPOSITORY}. Using version ${{ github.event.inputs.schema-version }}. On branch: ${{ env.WORKING_DIR }}. Please check: ${env.GITHUB_SERVER_URL}/${env.GITHUB_REPOSITORY}/actions/runs/${env.GITHUB_RUN_ID}'
