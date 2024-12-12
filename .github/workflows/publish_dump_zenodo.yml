@@ -37,6 +37,7 @@ jobs:
         with:
           repository: ror-community/ror-data
           token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+          ref: schema-v2-1
           path: ./ror-data
       - name: Set up Python environment
         uses: actions/setup-python@v2
