@@ -44,6 +44,7 @@ jobs:
         with:
           repository: ror-community/curation_ops
           token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+          ref: schema-v2-1
           path: ./curation_ops
       - name: Set up Python environment
         uses: actions/setup-python@v2
