@@ -60,7 +60,7 @@ jobs:
         run: |
           cd .github/workflows
           python -m pip install --upgrade pip
-          pip install requests==2.23.0
+          pip install requests
           if [[ ${{ github.event.inputs.schema-version }} == "v1" ]]; then
             python index_dump.py -u ${{ secrets.INDEX_DUMP_PROD_API_URL }} -f ${{ github.event.inputs.release-dump }} -e  ${{ github.event.inputs.data-env }} -he ${{ secrets.INDEX_PROD_API_HEADERS }}
           else
