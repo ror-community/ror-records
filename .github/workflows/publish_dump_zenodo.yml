@@ -47,9 +47,9 @@ jobs:
         run: |
           cd ./ror-data
           python -m pip install --upgrade pip
-          curl https://raw.githubusercontent.com/ror-community/curation_ops/refs/heads/schema-v2-1/upload_dump_zenodo/requirements.txt -o requirements.txt
+          curl https://raw.githubusercontent.com/ror-community/curation_ops/refs/heads/main/upload_dump_zenodo/requirements.txt -o requirements.txt
           pip install -r requirements.txt
-          curl https://raw.githubusercontent.com/ror-community/curation_ops/refs/heads/schema-v2-1/upload_dump_zenodo/upload_dump_zenodo.py -o upload_dump_zenodo.py
+          curl https://raw.githubusercontent.com/ror-community/curation_ops/refs/heads/main/upload_dump_zenodo/upload_dump_zenodo.py -o upload_dump_zenodo.py
           python upload_dump_zenodo.py -r ${{github.event.inputs.release}} -p ${{github.event.inputs.record-id}} -e ${{github.event.inputs.zenodo-env}}
       - name: Notify Slack
         if: always()
