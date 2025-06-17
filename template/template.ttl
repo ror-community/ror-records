@@ -1,0 +1,49 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+{% for item in sets['qres'] -%}
+<{{ item.id }}> 
+    a org:Organization ;
+    rdfs:label "{{ item.name }}" ;
+    schema:name "{{ item.name }}" ;{% if item.established %}
+    schema:foundingDate "{{ item.established }}"^^xsd:gYear ;{% endif %}{% if item.wikipedia_url %}
+    schema:sameAs <{{ item.wikipedia_url }}> ;{% endif %}{% if item.status %}
+    org:status "{{ item.status }}" ;{% endif %}
+    {% for type in item.types -%}
+    org:classification "{{ type }}" ;
+    {% endfor -%}
+    {% for rel in item.relationships -%}
+    org:hasLink [
+        a org:Membership ;
+        org:role "{{ rel.type }}" ;
+        org:member <{{ rel.id }}> ;
+        rdfs:label "{{ rel.label }}" ;
+    ] ;
+    {% endfor -%}
+    {% for addr in item.addresses -%}
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT({{ addr.lng }} {{ addr.lat }})"^^geo:wktLiteral ;{% if addr.city %}
+        schema:addressLocality "{{ addr.city }}" ;{% endif %}{% if addr.country_geonames_id %}
+        schema:addressCountry "{{ addr.country.country_code }}" ;{% endif %}
+    ] ;
+    {% endfor -%}
+    {% for link in item.links -%}
+    schema:url <{{ link }}> ;
+    {% endfor -%}
+    {% for id_type, ids in item.external_ids.items() -%}
+        {% if id_type == "Wikidata" -%}
+            {% for wikidata_id in ids.all -%}
+            schema:sameAs <http://www.wikidata.org/entity/{{ wikidata_id }}> ;
+            {% endfor -%}
+        {% elif id_type == "ISNI" -%}
+            {% for isni in ids.all -%}
+            schema:sameAs <http://isni.org/isni/{{ isni | replace(" ", "") }}> ;
+            {% endfor -%}
+        {% endif -%}
+    {% endfor %} .
+{% endfor %}
