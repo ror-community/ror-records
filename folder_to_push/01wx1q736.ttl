@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/01wx1q736> a org:Organization ;
+    rdfs:label "Krivoy Rog State Pedagogical Institute" ;
+    schema:name "Krivoy Rog State Pedagogical Institute" ;
+    schema:foundingDate "1930"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "KDPU" ;
+    schema:url <https://kdpu.edu.ua/en/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Kryvyi_Rih_State_Pedagogical_University> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(33.39404 47.90572)"^^geo:wktLiteral ;
+            schema:addressLocality "Kryvyi Rih" ;
+            schema:addressCountry "UA" ;
+            owl:sameAs <http://sws.geonames.org/703845/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q12114710> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

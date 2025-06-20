@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/01h4fxd96> a org:Organization ;
+    rdfs:label "Grenoble Ecole de Management" ;
+    schema:name "Grenoble Ecole de Management" ;
+    schema:foundingDate "1984"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "GEM" ;
+    org:alternativeName "Grenoble School of Management" ;
+    schema:url <http://en.grenoble-em.com/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Grenoble_School_of_Management> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(5.71479 45.17869)"^^geo:wktLiteral ;
+            schema:addressLocality "Grenoble" ;
+            schema:addressCountry "FR" ;
+            owl:sameAs <http://sws.geonames.org/3014728/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000121677879> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q839224> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

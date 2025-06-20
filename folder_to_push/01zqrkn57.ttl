@@ -1,0 +1,26 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/01zqrkn57> a org:Organization ;
+    rdfs:label "Municipal Higher Education Institution "Kherson Academy of Continuing Education" of the Kherson Regional Council" ;
+    schema:name "Municipal Higher Education Institution "Kherson Academy of Continuing Education" of the Kherson Regional Council" ;
+    schema:foundingDate "1944"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:alternativeName "MHEI "Kherson academy of continuing education"" ;
+    schema:url <http://academy.ks.ua/> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(32.61458 46.63695)"^^geo:wktLiteral ;
+            schema:addressLocality "Kherson" ;
+            schema:addressCountry "UA" ;
+            owl:sameAs <http://sws.geonames.org/706448/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    .

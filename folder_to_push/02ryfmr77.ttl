@@ -1,0 +1,34 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/02ryfmr77> a org:Organization ;
+    rdfs:label "University of the French Antilles" ;
+    schema:name "University of the French Antilles" ;
+    schema:foundingDate "1850"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "UAG" ;
+    org:alternativeName "University of the French West Indies" ;
+    schema:url <http://www.univ-ag.fr/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/University_of_the_French_Antilles> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-61.53614 16.24125)"^^geo:wktLiteral ;
+            schema:addressLocality "Pointe-à-Pitre" ;
+            schema:addressCountry "GP" ;
+            owl:sameAs <http://sws.geonames.org/3578599/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000121973053> ;
+    schema:sameAs <http://isni.org/isni/0000000405935227> ;
+    schema:sameAs <http://isni.org/isni/0000000494712972> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q829169> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q16682075> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

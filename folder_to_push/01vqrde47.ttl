@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/01vqrde47> a org:Organization ;
+    rdfs:label "Nançay Radio Observatory" ;
+    schema:name "Nançay Radio Observatory" ;
+    schema:foundingDate "1956"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    org:abbreviation "USN" ;
+    schema:url <https://www.obs-nancay.fr> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Nan%C3%A7ay_Radio_Observatory> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(2.19286 47.3501)"^^geo:wktLiteral ;
+            schema:addressLocality "Nançay" ;
+            schema:addressCountry "FR" ;
+            owl:sameAs <http://sws.geonames.org/2991013/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000404717041> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q60643512> ;
+    .

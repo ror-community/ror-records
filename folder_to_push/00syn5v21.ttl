@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/00syn5v21> a org:Organization ;
+    rdfs:label "Igor Sikorsky Kyiv Polytechnic Institute" ;
+    schema:name "Igor Sikorsky Kyiv Polytechnic Institute" ;
+    schema:foundingDate "1898"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "NTUU "KPI"" ;
+    org:alternativeName "КПІ ім. Ігоря Сікорського" ;
+    schema:url <http://kpi.ua/en> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Kyiv_Polytechnic_Institute> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(30.5238 50.45466)"^^geo:wktLiteral ;
+            schema:addressLocality "Kyiv" ;
+            schema:addressCountry "UA" ;
+            owl:sameAs <http://sws.geonames.org/703448/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/000000040399838X> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q85449> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

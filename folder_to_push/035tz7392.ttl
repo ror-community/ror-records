@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/035tz7392> a org:Organization ;
+    rdfs:label "Gothenburg Botanic Garden" ;
+    schema:name "Gothenburg Botanic Garden" ;
+    schema:foundingDate "1923"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    org:abbreviation "GBG" ;
+    schema:url <https://www.botaniska.se/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Gothenburg_Botanical_Garden> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(11.96679 57.70716)"^^geo:wktLiteral ;
+            schema:addressLocality "Gothenburg" ;
+            schema:addressCountry "SE" ;
+            owl:sameAs <http://sws.geonames.org/2711537/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000110124355> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q956772> ;
+    .

@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/04df9ks57> a org:Organization ;
+    rdfs:label "Universidad Nacional Intercultural "Fabiola Salazar LeguÍa" de Bagua" ;
+    schema:name "Universidad Nacional Intercultural "Fabiola Salazar LeguÍa" de Bagua" ;
+    schema:foundingDate "2010"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "UNIB" ;
+    schema:url <http://www.unibagua.edu.pe/> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-78.39972 -5.09006)"^^geo:wktLiteral ;
+            schema:addressLocality "Provincia de Bagua" ;
+            schema:addressCountry "PE" ;
+            owl:sameAs <http://sws.geonames.org/3699485/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q57987734> ;
+    .
