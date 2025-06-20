@@ -4,23 +4,20 @@ from jsonschema import validate, ValidationError
 
 def load_schema(version):
     """Charge le schéma JSON correspondant à la version"""
-    schema_path = Path(__file__).parent.parent / "json_struct" / f"ror_schema_v{version}.json"
+    schema_path = Path(__file__).parent.parent / "json_struct" / f"ror_schema{version}.json"
     with open(schema_path, 'r', encoding='utf-8') as f:
         return json.load(f)
 
 def detect_ror_version(json_file_path):
     """Détecte la version ROR d'un fichier JSON"""
     try:
-        # Charger les schémas
-        schema_v1 = load_schema("1")
-        schema_v2_0 = load_schema("2_0")
-        schema_v2_1 = load_schema("2_1")
+        schema_v1 = load_schema("")
+        schema_v2_0 = load_schema("_v2_0")
+        schema_v2_1 = load_schema("_v2_1")
         
-        # Charger le fichier à analyser avec encodage UTF-8
         with open(json_file_path, 'r', encoding='utf-8') as f:
             data = json.load(f)
         
-        # Tester d'abord la version la plus récente (2.1)
         try:
             validate(data, schema_v2_1)
             return "2.1"
@@ -29,7 +26,7 @@ def detect_ror_version(json_file_path):
                 validate(data, schema_v2_0)
                 return "2.0"
             except ValidationError:
-                validate(data, schema_v1)  # Si échec, lève une exception
+                validate(data, schema_v1)  
                 return "1.0"
                 
     except FileNotFoundError as e:
@@ -46,10 +43,23 @@ def detect_ror_version(json_file_path):
         return None
 
 if __name__ == "__main__":
-    # Chemin vers le fichier à analyser
-    test_file = Path("../releases/v1.66/00b3mhg89.json")
+    test_file_2_1 = Path("../releases/v1.66/00b3mhg89.json") 
+    test_file_2_0 = Path("../releases/v1.66/00b3mhg89.json") 
+    test_file_1_0 = Path("../releases/v1.0/000ccd270.json") 
     
-    # Vérification que le fichier existe
+    test_file = Path("../releases/v1.66/00b3mhg89.json")
+
+    choice_version = 1.0
+
+    if choice_version == 1.0:
+        test_file = test_file_1_0
+    elif choice_version == 2.0:
+        test_file_2_0 = test_file_2_0
+    elif choice_version == 2.1:
+        test_file = test_file_2_1
+    else:
+        print("error de version")
+
     if not test_file.exists():
         print(f"Erreur: Le fichier {test_file} n'existe pas")
     else:
