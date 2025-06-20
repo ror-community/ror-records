@@ -21,12 +21,25 @@ En résumé:
 Parmi les choses auquelles il fallait s'attendre, il y avait la structure du json en fonction des différentes releases. En effet, au cours de son développement, ror a changé plusieurs fois l'architecture de son json, rendant le travail directement plus compliqué, car le template et le code n'est pas adapté à chaque structure. Il va sans doute falloir récupérer chaque version de structure, pour ensuite adapter le code en fonction de cela. En ce qui concerne les tests pour vérifier cela, voici ce que j'ai fais : 
 
 ```
-1. Test sur **v1.0/01912nj27.json**
-    * erreur d'argument, car structure différente
-2. Test sur structure similaire à celle du dernier dump disponible (**v1.66-2025-05-20-ror-data.json**)
-    * rajout de [ ] => code a modifier car préparé pour ensemble d'organisation, alors que la une seule
-    * test sur fichier **v1.66/00b3mhg89.json**
-        * erreur d'argument, car structure différente
-    * test sur fichier **v1.66/v1/00b3mhg89.json**
-        * bonne sortie dans folder_to_push
+1. Test sur v1.0/01912nj27.json
+    --> erreur d'argument, car structure différente
+2. Test sur structure similaire à celle du dernier dump disponible (v1.66-2025-05-20-ror-data.json)
+    --> test sur fichier v1.66/00b3mhg89.json
+        -> erreur d'argument, car structure différente
+    --> test sur fichier v1.66/v1/00b3mhg89.json
+        -> bonne sortie dans folder_to_push
+```
+
+Ce que nous allons essayer de faire, c'est de faire une détection de la version utilisée. En effet, à cette adresse, ror explique les différentes structures json utilisées au cours de leur développement.
+
+```
+https://github.com/ror-community/ror-schema?tab=readme-ov-file
+https://ror.readme.io/docs/schema-versions
+```
+
+Il reste maintenant à savoir à quelle version notre fichier json appartient. Il est aussi possible de faire une vérication de notre json à l'aide de ces commandes:
+
+```
+jsonschema -i test.json ror_schema_v2_0.json // obsolète avec jsonschema
+check-jsonschema --schemafile test.json ror_schema_v2_0.json // dernière version
 ```
