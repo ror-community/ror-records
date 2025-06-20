@@ -85,17 +85,17 @@ def git_push_existing_ttl(repo_dir, target_dir, version_name, tag_version=None):
         print(f"\nERREUR : {str(e)}")
         return False
 
-if __name__ == "__main__":
-    repo_dir = Path(__file__).parent.parent
-    target_dir = "folder_to_push"  
+# if __name__ == "__main__":
+#     repo_dir = Path(__file__).parent.parent
+#     target_dir = "folder_to_push"  
     
-    success = git_push_existing_ttl(
-        repo_dir=repo_dir,
-        target_dir=target_dir,
-        version_name="Release v1.0",
-        tag_version="v1.0"
-    )
+#     success = git_push_existing_ttl(
+#         repo_dir=repo_dir,
+#         target_dir=target_dir,
+#         version_name="Release v1.0",
+#         tag_version="v1.0"
+#     )
     
-    if not success:
-        print("\n✗ Échec de l'opération. Voir les messages ci-dessus.")
-        exit(1)
+#     if not success:
+#         print("\n✗ Échec de l'opération. Voir les messages ci-dessus.")
+#         exit(1)
