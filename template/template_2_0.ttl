@@ -1,0 +1,51 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+{% for item in sets['qres'] %}
+<{{ item.id }}> a org:Organization ;
+    rdfs:label "{{ item.names | selectattr('types', 'equalto', ['ror_display', 'label']) | map(attribute='value') | first }}" ;
+    schema:name "{{ item.names | selectattr('types', 'equalto', ['ror_display', 'label']) | map(attribute='value') | first }}" ;{% if item.established %}
+    schema:foundingDate "{{ item.established }}"^^xsd:gYear ;{% endif %}{% if item.status %}
+    org:status "{{ item.status }}" ;{% endif %}
+    {% for type in item.types %}org:classification "{{ type }}" ; {% endfor %}
+    {% for name in item.names if "acronym" in name.types %}org:abbreviation "{{ name.value }}" ; {% endfor %}
+    {% for domain in item.domains %}schema:url <http://{{ domain }}> ; {% endfor %}
+    {% for link in item.links %}{% if link.type == "wikipedia" %}owl:sameAs <{{ link.value }}> ; {% endif %}{% endfor %}
+
+    {# Gestion des identifiants externes #}
+    {% for ext_id in item.external_ids %}
+        {% if ext_id.type == "isni" and ext_id.all %}
+            schema:sameAs <http://isni.org/isni/{{ ext_id.all[0] | replace(" ", "") }}> ;
+        {% elif ext_id.type == "grid" and ext_id.all %}
+            schema:sameAs <https://grid.ac/institutions/{{ ext_id.all[0] }}> ;
+        {% elif ext_id.type == "fundref" and ext_id.all %}
+            schema:sameAs <https://api.crossref.org/funders/{{ ext_id.all[0] }}> ;
+        {% endif %}
+    {% endfor %}
+
+    {# Relations hiérarchiques #}
+    {% for rel in item.relationships %}
+    org:hasLink [
+        a org:Membership ;
+        org:role "{{ rel.type }}" ;
+        org:member <{{ rel.id }}> ;
+        rdfs:label "{{ rel.label }}" ;
+    ] ; {% endfor %}
+
+    {# Localisations géographiques #}
+    {% for loc in item.locations if loc.geonames_details %}
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT({{ loc.geonames_details.lng }} {{ loc.geonames_details.lat }})"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "{{ loc.geonames_details.name }}" ;
+            schema:addressCountry "{{ loc.geonames_details.country_code }}" ;
+        ] ;
+        owl:sameAs <http://sws.geonames.org/{{ loc.geonames_id }}/> ;
+    ] ; {% endfor %} .
+{% endfor %}

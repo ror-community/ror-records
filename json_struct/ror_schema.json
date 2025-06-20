@@ -1,0 +1,535 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "ip_addresses": {
+      "type": "array",
+      "default": []
+    },
+    "aliases": {
+      "type": "array",
+      "default": [],
+      "items": {
+        "type": "string"
+      }
+    },
+    "acronyms": {
+      "type": "array",
+      "default": [],
+      "items": {
+        "type": "string"
+      }
+    },
+    "links": {
+      "type": "array",
+      "default": [],
+      "items": {
+        "type": "string"
+      }
+    },
+    "country": {
+      "type": "object",
+      "default": {},
+      "additionalProperties": false,
+      "properties": {
+        "country_code": {
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 2,
+          "readOnly": true
+        },
+        "country_name": {
+          "type": "string",
+          "readOnly": true
+        }
+      },
+      "required": [
+        "country_code",
+        "country_name"
+      ]
+    },
+    "name": {
+      "$ref": "#/definitions/non-empty-string",
+      "default": ""
+    },
+    "wikipedia_url": {
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": null
+    },
+    "addresses": {
+      "type": "array",
+      "default": [],
+      "maxItems": 1,
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "geonames_city"
+        ],
+        "properties": {
+          "geonames_city": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "title": "Location ID",
+                "type": "integer"
+              },
+              "city": {
+                "type": "string",
+                "readOnly": true
+              },
+              "license": {
+                "type": "object",
+                "additionalProperties": false,
+                "default": {},
+                "properties": {
+                  "attribution": {
+                    "readOnly": true,
+                    "type": "string",
+                    "default": "Data from geonames.org under a CC-BY 3.0 license"
+                  },
+                  "license": {
+                    "type": "string",
+                    "readOnly": true,
+                    "default": "http://creativecommons.org/licenses/by/3.0/"
+                  }
+                },
+                "required": [
+                  "attribution",
+                  "license"
+                ]
+              },
+              "geonames_admin1": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "ascii_name": {
+                    "readOnly": true,
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "default": null
+                  },
+                  "name": {
+                    "readOnly": true,
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "default": null
+                  },
+                  "id": {
+                    "readOnly": true,
+                    "type": [
+                      "integer",
+                      "null"
+                    ],
+                    "default": null
+                  },
+                  "code": {
+                    "readOnly": true,
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "default": null
+                  }
+                }
+              },
+              "geonames_admin2": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "ascii_name": {
+                    "readOnly": true,
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "default": null
+                  },
+                  "name": {
+                    "readOnly": true,
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "default": null
+                  },
+                  "id": {
+                    "readOnly": true,
+                    "type": [
+                      "integer",
+                      "null"
+                    ],
+                    "default": null
+                  },
+                  "code": {
+                    "readOnly": true,
+                    "type": [
+                      "string",
+                      "null"
+                    ],
+                    "default": null
+                  }
+                }
+              },
+              "nuts_level1": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "name": {
+                    "type": [
+                      "null",
+                      "string"
+                    ],
+                    "default": null
+                  },
+                  "code": {
+                    "type": [
+                      "null",
+                      "string"
+                    ],
+                    "default": null
+                  }
+                },
+                "required": [
+                  "code",
+                  "name"
+                ]
+              },
+              "nuts_level2": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "name": {
+                    "type": [
+                      "null",
+                      "string"
+                    ],
+                    "default": null
+                  },
+                  "code": {
+                    "type": [
+                      "null",
+                      "string"
+                    ],
+                    "default": null
+                  }
+                },
+                "required": [
+                  "code",
+                  "name"
+                ]
+              },
+              "nuts_level3": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "name": {
+                    "type": [
+                      "null",
+                      "string"
+                    ],
+                    "default": null
+                  },
+                  "code": {
+                    "type": [
+                      "null",
+                      "string"
+                    ],
+                    "default": null
+                  }
+                },
+                "required": [
+                  "code",
+                  "name"
+                ]
+              }
+            }
+          },
+          "lat": {
+            "type": "number",
+            "readOnly": true
+          },
+          "lng": {
+            "type": "number",
+            "readOnly": true
+          },
+          "city": {
+            "type": "string",
+            "readOnly": true
+          },
+          "state_code": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "readOnly": true,
+            "default": null
+          },
+          "state": {
+            "readOnly": true,
+            "type": [
+              "null",
+              "string"
+            ],
+            "default": null
+          },
+          "country_geonames_id": {
+            "type": [
+              "null",
+              "integer"
+            ],
+            "readOnly": true
+          },
+          "primary": {
+            "type": "boolean",
+            "default": false
+          },
+          "postcode": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "default": null
+          },
+          "line": {
+            "type": [
+              "null",
+              "string"
+            ],
+            "default": null
+          }
+        }
+      }
+    },
+    "types": {
+      "type": "array",
+      "minItems": 1,
+      "default": [],
+      "description": "Institutional Types",
+      "items": {
+        "type": "string",
+        "enum": [
+          "Education",
+          "Healthcare",
+          "Company",
+          "Archive",
+          "Nonprofit",
+          "Government",
+          "Facility",
+          "Funder",
+          "Other"
+        ]
+      }
+    },
+    "external_ids": {
+      "type": "object",
+      "default": {},
+      "additionalProperties": true,
+      "title": "External IDs",
+      "properties": {
+        "GRID": {
+          "type": "object",
+          "title": "GRID",
+          "additionalProperties": false,
+          "properties": {
+            "preferred": {
+              "type": [
+                "null",
+                "string"
+              ],
+              "default": null
+            },
+            "all": {
+              "type": [
+                "null",
+                "string"
+              ]
+            }
+          },
+          "required": [
+            "all"
+          ]
+        },
+        "ISNI": {
+          "type": "object",
+          "title": "ISNI",
+          "additionalProperties": false,
+          "properties": {
+            "preferred": {
+              "type": [
+                "null",
+                "string"
+              ],
+              "default": null
+            },
+            "all": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "required": [
+            "all"
+          ]
+        },
+        "FundRef": {
+          "type": "object",
+          "title": "FunderRef",
+          "additionalProperties": false,
+          "properties": {
+            "preferred": {
+              "type": [
+                "null",
+                "string"
+              ],
+              "default": null
+            },
+            "all": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "required": [
+            "all"
+          ]
+        },
+        "Wikidata": {
+          "type": "object",
+          "title": "Wikidata",
+          "additionalProperties": false,
+          "properties": {
+            "preferred": {
+              "type": [
+                "null",
+                "string"
+              ],
+              "default": null
+            },
+            "all": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "required": [
+            "all"
+          ]
+        }
+      }
+    },
+    "established": {
+      "type": [
+        "null",
+        "number"
+      ],
+      "default": null
+    },
+    "relationships": {
+      "type": "array",
+      "default": [],
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "Related",
+              "Parent",
+              "Child",
+              "Successor",
+              "Predecessor"
+            ]
+          },
+          "id": {
+            "type": "string",
+            "pattern": "^https://ror.org/0[a-z|0-9]{8}$"
+          },
+          "label": {
+            "$ref": "#/definitions/non-empty-string"
+          }
+        },
+        "required": [
+          "id",
+          "label",
+          "type"
+        ]
+      }
+    },
+    "email_address": {
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": null
+    },
+    "id": {
+      "type": "string",
+      "default": "https://ror.org/012xzy7a9",
+      "pattern": "^https://ror.org/0[a-z|0-9]{8}$",
+      "readOnly": true
+    },
+    "labels": {
+      "type": "array",
+      "default": [],
+      "items": {
+        "type": "object",
+        "properties": {
+          "label": {
+            "type": "string"
+          },
+          "iso639": {
+            "type": [
+                "null",
+                "string"
+            ],
+            "minLength": 2,
+            "maxLength": 2
+          }
+        },
+        "required": [
+          "label",
+          "iso639"
+        ]
+      }
+    },
+    "status": {
+      "type": "string",
+      "default": "active",
+      "enum": [
+        "active",
+        "inactive",
+        "withdrawn"
+      ]
+    }
+  },
+  "definitions": {
+    "non-empty-string": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "required": [
+    "name",
+    "types",
+    "addresses",
+    "status"
+  ]
+}

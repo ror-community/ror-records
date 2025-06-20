@@ -1,0 +1,71 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+{% for item in sets['qres'] -%}
+<{{ item.id }}> a org:Organization ;
+    rdfs:label "{{ item.name }}" ;
+    schema:name "{{ item.name }}" ;
+    {% if item.established -%}
+        schema:foundingDate "{{ item.established }}"^^xsd:gYear ;
+    {% endif -%}
+    org:status "{{ item.status }}" ;
+    {% for type in item.types -%}
+        org:classification "{{ type }}" ; 
+    {% endfor -%}
+    {% if item.acronyms -%}
+        org:abbreviation "{{ item.acronyms[0] }}" ;
+    {% endif -%}
+    {% if item.aliases -%}
+        org:alternativeName "{{ item.aliases[0] }}" ;
+    {% endif -%}
+    {% if item.email_address -%}
+        schema:email "{{ item.email_address }}" ;
+    {% endif -%}
+    {% for link in item.links -%}
+        schema:url <{{ link }}> ; 
+    {% endfor -%}
+    {% if item.wikipedia_url -%}
+        owl:sameAs <{{ item.wikipedia_url }}> ;
+    {% endif -%}
+    {% for addr in item.addresses -%}
+        schema:location [
+            a schema:Place ;
+            {% if addr.lat and addr.lng -%}
+                geo:asWKT "POINT({{ addr.lng }} {{ addr.lat }})"^^geo:wktLiteral ;
+            {% endif -%}
+            {% if addr.city -%}
+                schema:addressLocality "{{ addr.city }}" ;
+            {% endif -%}
+            {% if item.country.country_code -%}
+                schema:addressCountry "{{ item.country.country_code }}" ;
+            {% endif -%}
+            {% if addr.geonames_city -%}
+                owl:sameAs <http://sws.geonames.org/{{ addr.geonames_city.id }}/> ;
+                dct:license <{{ addr.geonames_city.license.license }}> ;
+            {% endif -%}
+        ] ; 
+    {% endfor -%}
+    {% if item.external_ids and item.external_ids.ISNI is defined and item.external_ids.ISNI.all -%}
+    {%- for isni in item.external_ids.ISNI.all if isni -%}
+        schema:sameAs <http://isni.org/isni/{{ isni | replace(" ", "") }}> ;
+    {% endfor -%}
+    {% endif -%}
+    {% if item.external_ids and item.external_ids.Wikidata is defined and item.external_ids.Wikidata.all %}
+    {%- for wikidata_id in item.external_ids.Wikidata.all if wikidata_id -%}
+        schema:sameAs <http://www.wikidata.org/entity/{{ wikidata_id }}> ;
+    {% endfor -%}
+    {% endif -%}
+    {% if item.external_ids is defined
+        and item.external_ids.GRID is defined
+        and item.external_ids.GRID.all is defined
+        and item.external_ids.GRID.all -%}
+        {% set grid_id = item.external_ids.GRID.all[0] | string | trim -%}
+        {% if grid_id %}schema:sameAs <https://grid.ac/institutions/{{ grid_id }}> ;{% endif %}
+    {% endif -%}.
+{% endfor -%}
