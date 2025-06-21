@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/0127mpp72> a org:Organization ;
+    rdfs:label "University of Uyo" ;
+    schema:name "University of Uyo" ;
+    schema:foundingDate "1991"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "UNIUYO" ;
+    org:alternativeName "University of Cross River State" ;
+    schema:url <http://www.uniuyo.edu.ng/> ; 
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Uyo> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(7.9335 5.05127)"^^geo:wktLiteral ;
+            schema:addressLocality "Uyo" ;
+            schema:addressCountry "NG" ;
+            owl:sameAs <http://sws.geonames.org/2319480/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000091562260> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q7896523> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/028t46f04> a org:Organization ;
+    rdfs:label "James Cancer Hospital" ;
+    schema:name "James Cancer Hospital" ;
+    schema:foundingDate "1990"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Healthcare" ; 
+    org:alternativeName "Ohio State University Comprehensive Cancer Center – Arthur G. James Cancer Hospital and Richard J. Solove Research Institute" ;
+    schema:url <https://cancer.osu.edu/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/The_James_Cancer_Hospital> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-82.99879 39.96118)"^^geo:wktLiteral ;
+            schema:addressLocality "Columbus" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/4509177/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000104474797> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q14716521> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

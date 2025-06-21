@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/024ws6f80> a org:Organization ;
+    rdfs:label "Department of Transport and Main Roads" ;
+    schema:name "Department of Transport and Main Roads" ;
+    schema:foundingDate "2009"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Government" ; 
+    org:abbreviation "TMR" ;
+    org:alternativeName "Department of Main Roads" ;
+    schema:url <http://www.tmr.qld.gov.au/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Department_of_Transport_and_Main_Roads> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(153.02809 -27.46794)"^^geo:wktLiteral ;
+            schema:addressLocality "Brisbane" ;
+            schema:addressCountry "AU" ;
+            owl:sameAs <http://sws.geonames.org/2174003/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000406312339> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q1191482> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/02psedk13> a org:Organization ;
+    rdfs:label "Wisconsin Department of Health Services" ;
+    schema:name "Wisconsin Department of Health Services" ;
+    schema:foundingDate "1967"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Government" ; 
+    org:abbreviation "WisDHS" ;
+    schema:url <https://www.dhs.wisconsin.gov/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Wisconsin_Department_of_Health_Services> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-89.40123 43.07305)"^^geo:wktLiteral ;
+            schema:addressLocality "Madison" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/5261457/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000404709885> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q17004374> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

@@ -1,0 +1,38 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/00987cb86> a org:Organization ;
+    rdfs:label "São Paulo State University" ;
+    schema:name "São Paulo State University" ;
+    schema:foundingDate "1976"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "UNESP" ;
+    schema:url <http://www.unesp.br/portal#!/eng> ; 
+    owl:sameAs <http://en.wikipedia.org/wiki/S%C3%A3o_Paulo_State_University> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-46.63611 -23.5475)"^^geo:wktLiteral ;
+            schema:addressLocality "São Paulo" ;
+            schema:addressCountry "BR" ;
+            owl:sameAs <http://sws.geonames.org/3448439/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/000000012188478X> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q1817137> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q10387793> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q18467813> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q10387797> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q10302852> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q10387788> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q10387791> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q39487333> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q10387795> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/007qwym43> a org:Organization ;
+    rdfs:label "National Environmental Satellite Data and Information Service" ;
+    schema:name "National Environmental Satellite Data and Information Service" ;
+    schema:foundingDate "1982"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    org:abbreviation "NESDIS" ;
+    org:alternativeName "NOAA Satellite and Information Service" ;
+    schema:url <http://www.nesdis.noaa.gov/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/National_Environmental_Satellite,_Data,_and_Information_Service> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-77.02609 38.99067)"^^geo:wktLiteral ;
+            schema:addressLocality "Silver Spring" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/4369596/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000106602940> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q20895097> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

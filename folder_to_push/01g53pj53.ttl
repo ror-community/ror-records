@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/01g53pj53> a org:Organization ;
+    rdfs:label "National Commission for the Knowledge and Use of Biodiversity" ;
+    schema:name "National Commission for the Knowledge and Use of Biodiversity" ;
+    schema:foundingDate "1992"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Government" ; 
+    org:abbreviation "CONABIO" ;
+    schema:url <https://www.gob.mx/conabio> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Comisi%C3%B3n_Nacional_para_el_Conocimiento_y_Uso_de_la_Biodiversidad> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-99.16206 19.29513)"^^geo:wktLiteral ;
+            schema:addressLocality "Tlalpan" ;
+            schema:addressCountry "MX" ;
+            owl:sameAs <http://sws.geonames.org/3515428/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000403695952> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q5152005> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/02k949197> a org:Organization ;
+    rdfs:label "Koneru Lakshmaiah Education Foundation" ;
+    schema:name "Koneru Lakshmaiah Education Foundation" ;
+    schema:foundingDate "1980"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "KLU" ;
+    org:alternativeName "K L University" ;
+    schema:url <http://www.kluniversity.in/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/K_L_University> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(80.6466 16.50745)"^^geo:wktLiteral ;
+            schema:addressLocality "Vijayawada" ;
+            schema:addressCountry "IN" ;
+            owl:sameAs <http://sws.geonames.org/1253184/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000417662457> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q6342915> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

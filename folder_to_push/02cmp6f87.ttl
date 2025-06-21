@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/02cmp6f87> a org:Organization ;
+    rdfs:label "Ministry of Environment and Energy" ;
+    schema:name "Ministry of Environment and Energy" ;
+    schema:foundingDate "2009"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Government" ; 
+    org:alternativeName "Ministry for the Environment, Energy and Climate Change" ;
+    schema:url <http://www.ypeka.gr/Default.aspx?tabid=230&language=en-US> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Ministry_of_Environment_and_Energy_(Greece)> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(23.72784 37.98376)"^^geo:wktLiteral ;
+            schema:addressLocality "Athens" ;
+            schema:addressCountry "GR" ;
+            owl:sameAs <http://sws.geonames.org/264371/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q3557152> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

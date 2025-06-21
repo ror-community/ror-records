@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/00pn44t17> a org:Organization ;
+    rdfs:label "Universidad Mayor" ;
+    schema:name "Universidad Mayor" ;
+    schema:foundingDate "1988"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    schema:url <http://www.mayor.cl/> ; 
+    owl:sameAs <http://en.wikipedia.org/wiki/Universidad_Mayor> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-70.64827 -33.45694)"^^geo:wktLiteral ;
+            schema:addressLocality "Santiago" ;
+            schema:addressCountry "CL" ;
+            owl:sameAs <http://sws.geonames.org/3871336/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000404878785> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q29731> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

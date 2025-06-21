@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/020aczd56> a org:Organization ;
+    rdfs:label "Flinders Medical Centre" ;
+    schema:name "Flinders Medical Centre" ;
+    schema:foundingDate "1976"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Healthcare" ; 
+    org:abbreviation "FMC" ;
+    schema:url <http://www.flinders.sa.gov.au/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Flinders_Medical_Centre> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(138.56815 -35.02204)"^^geo:wktLiteral ;
+            schema:addressLocality "Bedford Park" ;
+            schema:addressCountry "AU" ;
+            owl:sameAs <http://sws.geonames.org/2076918/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000096850624> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q5459413> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

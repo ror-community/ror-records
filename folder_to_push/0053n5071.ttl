@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/0053n5071> a org:Organization ;
+    rdfs:label "West Chester University" ;
+    schema:name "West Chester University" ;
+    schema:foundingDate "1880"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "WCUPA" ;
+    schema:url <http://www.wcupa.edu/> ; 
+    owl:sameAs <http://en.wikipedia.org/wiki/West_Chester_University_of_Pennsylvania> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-75.60804 39.96097)"^^geo:wktLiteral ;
+            schema:addressLocality "West Chester" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/4562144/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000107012416> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q3443893> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

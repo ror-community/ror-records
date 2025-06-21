@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/01q9h8k89> a org:Organization ;
+    rdfs:label "University of Naples - L'Orientale" ;
+    schema:name "University of Naples - L'Orientale" ;
+    schema:foundingDate "1732"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    schema:url <http://www.unior.it/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Universit%C3%A0_degli_Studi_di_Napoli_%22L%27Orientale%22> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(14.26811 40.85216)"^^geo:wktLiteral ;
+            schema:addressLocality "Naples" ;
+            schema:addressCountry "IT" ;
+            owl:sameAs <http://sws.geonames.org/3172394/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000121042363> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q1632525> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

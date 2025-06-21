@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/00wdk8w52> a org:Organization ;
+    rdfs:label "South African Association for Marine Biological Research" ;
+    schema:name "South African Association for Marine Biological Research" ;
+    schema:foundingDate "1947"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Other" ; 
+    org:abbreviation "SAAMBR" ;
+    schema:url <http://www.seaworld.org.za/> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(31.0292 -29.8579)"^^geo:wktLiteral ;
+            schema:addressLocality "Durban" ;
+            schema:addressCountry "ZA" ;
+            owl:sameAs <http://sws.geonames.org/1007311/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

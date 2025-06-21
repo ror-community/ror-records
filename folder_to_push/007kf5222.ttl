@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/007kf5222> a org:Organization ;
+    rdfs:label "Centro Universitário da FEI" ;
+    schema:name "Centro Universitário da FEI" ;
+    schema:foundingDate "1941"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "FEI" ;
+    org:alternativeName "Faculty of Industrial Engineering" ;
+    schema:url <http://portal.fei.edu.br/en-us/Pages/home.aspx> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Centro_Universit%C3%A1rio_da_FEI> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-46.565 -23.69389)"^^geo:wktLiteral ;
+            schema:addressLocality "São Bernardo do Campo" ;
+            schema:addressCountry "BR" ;
+            owl:sameAs <http://sws.geonames.org/3449344/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000086077447> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q16836504> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

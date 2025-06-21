@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/00bv1jr75> a org:Organization ;
+    rdfs:label "Yuhan (South Korea)" ;
+    schema:name "Yuhan (South Korea)" ;
+    schema:foundingDate "1926"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Company" ; 
+    schema:url <http://www.yuhan.co.kr/Main/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Yuhan> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(126.9784 37.566)"^^geo:wktLiteral ;
+            schema:addressLocality "Seoul" ;
+            schema:addressCountry "KR" ;
+            owl:sameAs <http://sws.geonames.org/1835848/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000096806340> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q30253824> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

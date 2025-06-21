@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/00mgfdc89> a org:Organization ;
+    rdfs:label "University Hospital Dubrava" ;
+    schema:name "University Hospital Dubrava" ;
+    schema:foundingDate "1988"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Healthcare" ; 
+    org:abbreviation "KBD" ;
+    schema:url <http://www.kbd.hr/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Clinical_Hospital_Dubrava> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(15.97798 45.81444)"^^geo:wktLiteral ;
+            schema:addressLocality "Zagreb" ;
+            schema:addressCountry "HR" ;
+            owl:sameAs <http://sws.geonames.org/3186886/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/000000040631385X> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q5133765> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

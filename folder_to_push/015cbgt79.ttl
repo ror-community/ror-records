@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/015cbgt79> a org:Organization ;
+    rdfs:label "Fraunhofer Institute for Wood Research Wilhelm-Klauditz-Institut" ;
+    schema:name "Fraunhofer Institute for Wood Research Wilhelm-Klauditz-Institut" ;
+    schema:foundingDate "1946"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    org:abbreviation "WKI" ;
+    org:alternativeName "Fraunhofer WKI" ;
+    schema:url <http://www.wki.fraunhofer.de/en.html> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(10.52673 52.26594)"^^geo:wktLiteral ;
+            schema:addressLocality "Braunschweig" ;
+            schema:addressCountry "DE" ;
+            owl:sameAs <http://sws.geonames.org/2945024/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/000000010791062X> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q1452010> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

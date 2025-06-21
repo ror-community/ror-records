@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/00a5pe906> a org:Organization ;
+    rdfs:label "University of Western Macedonia" ;
+    schema:name "University of Western Macedonia" ;
+    schema:foundingDate "2004"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "UOWM" ;
+    schema:url <http://www.uowm.gr/index> ; 
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Western_Macedonia> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(21.78896 40.30069)"^^geo:wktLiteral ;
+            schema:addressLocality "Kozani" ;
+            schema:addressCountry "GR" ;
+            owl:sameAs <http://sws.geonames.org/735563/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000093648877> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q2665063> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

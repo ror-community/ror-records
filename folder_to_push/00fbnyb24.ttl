@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/00fbnyb24> a org:Organization ;
+    rdfs:label "University of Würzburg" ;
+    schema:name "University of Würzburg" ;
+    schema:foundingDate "1402"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:alternativeName "Julius Maximilian University of Würzburg" ;
+    schema:url <http://www.uni-wuerzburg.de/en/ueber/university/> ; 
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_W%C3%BCrzburg> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(9.95121 49.79391)"^^geo:wktLiteral ;
+            schema:addressLocality "Würzburg" ;
+            schema:addressCountry "DE" ;
+            owl:sameAs <http://sws.geonames.org/2805615/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000119588658> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q161976> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

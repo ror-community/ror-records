@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/01mtxmr84> a org:Organization ;
+    rdfs:label "Inner Mongolia Medical University" ;
+    schema:name "Inner Mongolia Medical University" ;
+    schema:foundingDate "1956"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Healthcare" ; 
+    org:abbreviation "IMMU" ;
+    org:alternativeName "Inner Mongolia Medical College" ;
+    schema:url <http://www.immu.edu.cn/eng/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Inner_Mongolia_Medical_University> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(111.65222 40.81056)"^^geo:wktLiteral ;
+            schema:addressLocality "Hohhot" ;
+            schema:addressCountry "CN" ;
+            owl:sameAs <http://sws.geonames.org/2036892/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000406046392> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q6035481> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

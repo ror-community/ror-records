@@ -1,0 +1,25 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/02z37qb25> a org:Organization ;
+    rdfs:label "NIHR Exeter Clinical Research Facility" ;
+    schema:name "NIHR Exeter Clinical Research Facility" ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    schema:url <http://exeter.crf.nihr.ac.uk/> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-3.52751 50.7236)"^^geo:wktLiteral ;
+            schema:addressLocality "Exeter" ;
+            schema:addressCountry "GB" ;
+            owl:sameAs <http://sws.geonames.org/2649808/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

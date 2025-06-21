@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/00ka6rp58> a org:Organization ;
+    rdfs:label "Sir Run Run Shaw Hospital" ;
+    schema:name "Sir Run Run Shaw Hospital" ;
+    schema:foundingDate "1994"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Healthcare" ; 
+    org:abbreviation "SRRSH" ;
+    org:alternativeName "Shao Yifu Hospital" ;
+    schema:url <http://www.srrsh.com/html/main/gb2312/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Sir_Run_Run_Shaw_Hospital> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(120.16142 30.29365)"^^geo:wktLiteral ;
+            schema:addressLocality "Hangzhou" ;
+            schema:addressCountry "CN" ;
+            owl:sameAs <http://sws.geonames.org/1808926/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000417989361> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q7528920> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

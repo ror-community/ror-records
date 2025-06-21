@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/01z7eb286> a org:Organization ;
+    rdfs:label "Directorate General of Traffic" ;
+    schema:name "Directorate General of Traffic" ;
+    schema:foundingDate "1959"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Government" ; 
+    org:abbreviation "DGT" ;
+    schema:url <http://www.dgt.es/es/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Directorate_General_of_Traffic> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-3.70256 40.4165)"^^geo:wktLiteral ;
+            schema:addressLocality "Madrid" ;
+            schema:addressCountry "ES" ;
+            owl:sameAs <http://sws.geonames.org/3117735/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000406173236> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q5280627> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

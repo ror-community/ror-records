@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/016czhx14> a org:Organization ;
+    rdfs:label "St. Cloud State University" ;
+    schema:name "St. Cloud State University" ;
+    schema:foundingDate "1869"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "SCSU" ;
+    schema:url <http://www.stcloudstate.edu/> ; 
+    owl:sameAs <http://en.wikipedia.org/wiki/St._Cloud_State_University> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-94.16249 45.5608)"^^geo:wktLiteral ;
+            schema:addressLocality "Saint Cloud" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/5044407/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000107383196> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q1136874> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

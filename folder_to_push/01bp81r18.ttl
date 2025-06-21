@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/01bp81r18> a org:Organization ;
+    rdfs:label "National Centre for Cell Science" ;
+    schema:name "National Centre for Cell Science" ;
+    schema:foundingDate "1986"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    org:abbreviation "NCCS" ;
+    org:alternativeName "National Facility for Animal Tissue and Cell Culture" ;
+    schema:url <http://www.nccs.res.in/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/National_Centre_for_Cell_Science> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(73.85535 18.51957)"^^geo:wktLiteral ;
+            schema:addressLocality "Pune" ;
+            schema:addressCountry "IN" ;
+            owl:sameAs <http://sws.geonames.org/1259229/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q6971399> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

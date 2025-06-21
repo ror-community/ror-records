@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/00tpx5s27> a org:Organization ;
+    rdfs:label "National Association of Universities and Higher Education Institutions" ;
+    schema:name "National Association of Universities and Higher Education Institutions" ;
+    schema:foundingDate "1950"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Other" ; 
+    org:abbreviation "ANUIES" ;
+    schema:url <http://www.anuies.mx/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/ANUIES> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-99.12766 19.42847)"^^geo:wktLiteral ;
+            schema:addressLocality "Mexico City" ;
+            schema:addressCountry "MX" ;
+            owl:sameAs <http://sws.geonames.org/3530597/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/000000010069870X> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q4653076> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

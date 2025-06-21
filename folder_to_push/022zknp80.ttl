@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/022zknp80> a org:Organization ;
+    rdfs:label "Texas Department of State Health Services" ;
+    schema:name "Texas Department of State Health Services" ;
+    schema:foundingDate "2003"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Government" ; 
+    org:abbreviation "DSHS" ;
+    schema:url <https://www.dshs.state.tx.us/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Texas_Department_of_State_Health_Services> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-97.74306 30.26715)"^^geo:wktLiteral ;
+            schema:addressLocality "Austin" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/4671654/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/000000010125625X> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q5649489> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

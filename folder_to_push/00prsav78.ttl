@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/00prsav78> a org:Organization ;
+    rdfs:label "Polytechnic Institute of Bragança" ;
+    schema:name "Polytechnic Institute of Bragança" ;
+    schema:foundingDate "1983"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "IPB" ;
+    schema:url <http://portal3.ipb.pt/index.php/en/ipben/home> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-6.75719 41.80582)"^^geo:wktLiteral ;
+            schema:addressLocality "Bragança" ;
+            schema:addressCountry "PT" ;
+            owl:sameAs <http://sws.geonames.org/2742027/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/000000009851275X> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q10302635> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

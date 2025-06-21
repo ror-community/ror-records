@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/01r2c3v86> a org:Organization ;
+    rdfs:label "Universidad San Francisco de Quito" ;
+    schema:name "Universidad San Francisco de Quito" ;
+    schema:foundingDate "1988"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "USFQ" ;
+    org:alternativeName "Universidad San Francisco" ;
+    schema:url <https://www.usfq.edu.ec/Paginas/Inicio.aspx> ; 
+    owl:sameAs <http://en.wikipedia.org/wiki/Universidad_San_Francisco_de_Quito> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-78.52495 -0.22985)"^^geo:wktLiteral ;
+            schema:addressLocality "Quito" ;
+            schema:addressCountry "EC" ;
+            owl:sameAs <http://sws.geonames.org/3652462/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000090084711> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q2495713> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

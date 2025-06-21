@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/017qpw206> a org:Organization ;
+    rdfs:label "Welsh Ambulance Services NHS Trust" ;
+    schema:name "Welsh Ambulance Services NHS Trust" ;
+    schema:foundingDate "1998"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Healthcare" ; 
+    org:alternativeName "Welsh Ambulance Service" ;
+    schema:url <https://www.ambulance.wales.nhs.uk/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Welsh_Ambulance_Service> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-3.44524 53.25815)"^^geo:wktLiteral ;
+            schema:addressLocality "St Asaph" ;
+            schema:addressCountry "GB" ;
+            owl:sameAs <http://sws.geonames.org/2638855/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000404891066> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q30293052> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

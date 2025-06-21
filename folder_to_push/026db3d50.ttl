@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/026db3d50> a org:Organization ;
+    rdfs:label "Aksaray University" ;
+    schema:name "Aksaray University" ;
+    schema:foundingDate "2006"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    schema:url <http://en.aksaray.edu.tr/> ; 
+    owl:sameAs <http://en.wikipedia.org/wiki/Aksaray_University> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(34.02537 38.37255)"^^geo:wktLiteral ;
+            schema:addressLocality "Aksaray" ;
+            schema:addressCountry "TR" ;
+            owl:sameAs <http://sws.geonames.org/324496/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/000000040384345X> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q4701750> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

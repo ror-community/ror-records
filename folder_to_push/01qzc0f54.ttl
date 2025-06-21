@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/01qzc0f54> a org:Organization ;
+    rdfs:label "Qingdao University of Technology" ;
+    schema:name "Qingdao University of Technology" ;
+    schema:foundingDate "1953"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "QUT" ;
+    org:alternativeName "Qingdao Technological University" ;
+    schema:url <http://www.qtech.edu.cn/> ; 
+    owl:sameAs <http://en.wikipedia.org/wiki/Qingdao_Technological_University> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(120.38042 36.06488)"^^geo:wktLiteral ;
+            schema:addressLocality "Qingdao" ;
+            schema:addressCountry "CN" ;
+            owl:sameAs <http://sws.geonames.org/1797929/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000089772197> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q2399342> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

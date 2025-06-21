@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/00v29jp57> a org:Organization ;
+    rdfs:label "National University of General San Martín" ;
+    schema:name "National University of General San Martín" ;
+    schema:foundingDate "1994"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "UNSAM" ;
+    org:alternativeName "Universidad Nacional de San Martín" ;
+    schema:url <http://www.unsam.edu.ar/english/> ; 
+    owl:sameAs <http://en.wikipedia.org/wiki/National_University_of_General_San_Mart%C3%ADn> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-58.37723 -34.61315)"^^geo:wktLiteral ;
+            schema:addressLocality "Buenos Aires" ;
+            schema:addressCountry "AR" ;
+            owl:sameAs <http://sws.geonames.org/3435910/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000121050048> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q5733950> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/00zhs8v21> a org:Organization ;
+    rdfs:label "University of Ciego de Ávila" ;
+    schema:name "University of Ciego de Ávila" ;
+    schema:foundingDate "1978"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "UNICA" ;
+    schema:url <http://www.unica.cu/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/University_of_Ciego_de_%C3%81vila> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-78.76194 21.84)"^^geo:wktLiteral ;
+            schema:addressLocality "Ciego de Ávila" ;
+            schema:addressCountry "CU" ;
+            owl:sameAs <http://sws.geonames.org/3564178/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000404018486> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q7895266> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

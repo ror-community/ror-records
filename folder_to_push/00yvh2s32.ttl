@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/00yvh2s32> a org:Organization ;
+    rdfs:label "Arrowhead Regional Medical Center" ;
+    schema:name "Arrowhead Regional Medical Center" ;
+    schema:foundingDate "1999"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Healthcare" ; 
+    org:abbreviation "ARMC" ;
+    schema:url <https://www.arrowheadmedcenter.org/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Arrowhead_Regional_Medical_Center> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-117.31365 34.0739)"^^geo:wktLiteral ;
+            schema:addressLocality "Colton" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/5338783/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000403834879> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q4796185> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

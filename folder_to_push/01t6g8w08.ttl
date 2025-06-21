@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/01t6g8w08> a org:Organization ;
+    rdfs:label "Scottish Natural Heritage" ;
+    schema:name "Scottish Natural Heritage" ;
+    schema:foundingDate "1992"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Archive" ; 
+    org:abbreviation "SNH" ;
+    org:alternativeName "Dualchas Nàdair na h-Alba" ;
+    schema:url <http://www.snh.gov.uk/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Scottish_Natural_Heritage> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-3.19648 55.95206)"^^geo:wktLiteral ;
+            schema:addressLocality "Edinburgh" ;
+            schema:addressCountry "GB" ;
+            owl:sameAs <http://sws.geonames.org/2650225/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000121538713> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q1537425> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

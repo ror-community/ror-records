@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/00c69fd82> a org:Organization ;
+    rdfs:label "American Society of Head and Neck Radiology" ;
+    schema:name "American Society of Head and Neck Radiology" ;
+    schema:foundingDate "1976"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Other" ; 
+    org:abbreviation "ASHNR" ;
+    schema:url <http://ashnr.org/> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-87.92895 41.83281)"^^geo:wktLiteral ;
+            schema:addressLocality "Oak Brook" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/4904277/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

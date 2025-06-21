@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/00a1c5n07> a org:Organization ;
+    rdfs:label "VA Western New York Healthcare System" ;
+    schema:name "VA Western New York Healthcare System" ;
+    schema:foundingDate "1950"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Healthcare" ; 
+    org:abbreviation "VAWNYHS" ;
+    schema:url <http://www.buffalo.va.gov/> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-78.87837 42.88645)"^^geo:wktLiteral ;
+            schema:addressLocality "Buffalo" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/5110629/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000404201352> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

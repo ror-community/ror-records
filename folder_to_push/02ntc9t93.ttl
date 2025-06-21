@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/02ntc9t93> a org:Organization ;
+    rdfs:label "Chang Bing Show Chwan Memorial Hospital" ;
+    schema:name "Chang Bing Show Chwan Memorial Hospital" ;
+    schema:foundingDate "1973"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Healthcare" ; 
+    schema:url <http://www.scmh.org.tw/INTERNET/PUBLIC/Pub/PUB_News02.aspx?Theme=c9cdfaac-de24-4b5f-ac61-f0ddb97af2b9> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(120.49083 23.95361)"^^geo:wktLiteral ;
+            schema:addressLocality "Changhua" ;
+            schema:addressCountry "TW" ;
+            owl:sameAs <http://sws.geonames.org/1679134/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000406343637> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q30296426> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

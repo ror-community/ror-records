@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/02jsp2z03> a org:Organization ;
+    rdfs:label "Telenor (Norway)" ;
+    schema:name "Telenor (Norway)" ;
+    schema:foundingDate "1977"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Company" ; 
+    schema:url <http://www.telenor.com/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Telenor> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(10.52774 59.89073)"^^geo:wktLiteral ;
+            schema:addressLocality "Sandvika" ;
+            schema:addressCountry "NO" ;
+            owl:sameAs <http://sws.geonames.org/3140128/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000404018398> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q845632> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

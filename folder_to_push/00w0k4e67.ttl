@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/00w0k4e67> a org:Organization ;
+    rdfs:label "Texas A&M University at Galveston" ;
+    schema:name "Texas A&M University at Galveston" ;
+    schema:foundingDate "1962"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "TAMUG" ;
+    schema:url <http://www.tamug.edu/> ; 
+    owl:sameAs <http://en.wikipedia.org/wiki/Texas_A%26M_University_at_Galveston> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-94.7977 29.30135)"^^geo:wktLiteral ;
+            schema:addressLocality "Galveston" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/4692883/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q5973443> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

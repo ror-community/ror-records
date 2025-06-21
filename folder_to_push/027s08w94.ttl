@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/027s08w94> a org:Organization ;
+    rdfs:label "Ponta Grossa State University" ;
+    schema:name "Ponta Grossa State University" ;
+    schema:foundingDate "1969"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "UEPG" ;
+    schema:url <http://portal.uepg.br/> ; 
+    owl:sameAs <http://en.wikipedia.org/wiki/Ponta_Grossa_State_University> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-50.16194 -25.095)"^^geo:wktLiteral ;
+            schema:addressLocality "Ponta Grossa" ;
+            schema:addressCountry "BR" ;
+            owl:sameAs <http://sws.geonames.org/3453186/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000122183838> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q7228043> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

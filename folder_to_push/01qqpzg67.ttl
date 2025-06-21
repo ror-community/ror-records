@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/01qqpzg67> a org:Organization ;
+    rdfs:label "NIHR Southampton Biomedical Research Centre" ;
+    schema:name "NIHR Southampton Biomedical Research Centre" ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    org:abbreviation "SCBR" ;
+    schema:url <https://www.southamptonbrc.nihr.ac.uk/> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-1.40428 50.90395)"^^geo:wktLiteral ;
+            schema:addressLocality "Southampton" ;
+            schema:addressCountry "GB" ;
+            owl:sameAs <http://sws.geonames.org/2637487/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000491280182> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/01vjvsj67> a org:Organization ;
+    rdfs:label "Kuwait College of Science and Technology" ;
+    schema:name "Kuwait College of Science and Technology" ;
+    schema:foundingDate "2016"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "KCST" ;
+    schema:url <https://kcst.edu.kw/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Kuwait_College_of_Science_and_Technology> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(47.97833 29.36972)"^^geo:wktLiteral ;
+            schema:addressLocality "Kuwait City" ;
+            schema:addressCountry "KW" ;
+            owl:sameAs <http://sws.geonames.org/285787/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000446516918> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q39060049> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .
