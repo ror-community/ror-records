@@ -1,0 +1,25 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/051pg0937> a org:Organization ;
+    rdfs:label "Operador Nacional de Electricidad - CENACE" ;
+    schema:name "Operador Nacional de Electricidad - CENACE" ;
+    org:status "active" ;
+    org:classification "Government" ; 
+    org:abbreviation "CENACE" ;
+    schema:url <https://www.cenace.gob.ec> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-78.74451 -0.35077)"^^geo:wktLiteral ;
+            schema:addressLocality "Cantón Mejía" ;
+            schema:addressCountry "EC" ;
+            owl:sameAs <http://sws.geonames.org/3654259/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    .

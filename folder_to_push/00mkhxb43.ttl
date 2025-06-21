@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/00mkhxb43> a org:Organization ;
+    rdfs:label "University of Notre Dame" ;
+    schema:name "University of Notre Dame" ;
+    schema:foundingDate "1842"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    schema:url <https://www.nd.edu/> ; 
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Notre_Dame> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-86.23793 41.70019)"^^geo:wktLiteral ;
+            schema:addressLocality "Notre Dame" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/8469294/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000121680066> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q178848> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/0001zgs18> a org:Organization ;
+    rdfs:label "Niedersächsisches Ministerium für Umwelt, Energie und Klimaschutz" ;
+    schema:name "Niedersächsisches Ministerium für Umwelt, Energie und Klimaschutz" ;
+    schema:foundingDate "1986"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Government" ; 
+    org:alternativeName "Niedersächsisches Ministerium für Umwelt, Energie, Bauen und Klimaschutz" ;
+    schema:url <https://www.umwelt.niedersachsen.de> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(9.73322 52.37052)"^^geo:wktLiteral ;
+            schema:addressLocality "Hanover" ;
+            schema:addressCountry "DE" ;
+            owl:sameAs <http://sws.geonames.org/2910831/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000102150481> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q1988661> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

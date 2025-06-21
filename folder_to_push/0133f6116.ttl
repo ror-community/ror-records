@@ -1,0 +1,26 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/0133f6116> a org:Organization ;
+    rdfs:label "Universidad Tecnológica del Centro de Veracruz" ;
+    schema:name "Universidad Tecnológica del Centro de Veracruz" ;
+    schema:foundingDate "2004"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "UTCV" ;
+    schema:url <http://www.utcv.edu.mx> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-96.73179 18.79084)"^^geo:wktLiteral ;
+            schema:addressLocality "Cuitláhuac" ;
+            schema:addressCountry "MX" ;
+            owl:sameAs <http://sws.geonames.org/8583699/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    .

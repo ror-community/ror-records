@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/00wk3s644> a org:Organization ;
+    rdfs:label "Kedge Business School" ;
+    schema:name "Kedge Business School" ;
+    schema:foundingDate "1874"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:alternativeName "BEM Management School" ;
+    schema:url <https://student.kedge.edu> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/BEM_Management_School> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-0.58915 44.80849)"^^geo:wktLiteral ;
+            schema:addressLocality "Talence" ;
+            schema:addressCountry "FR" ;
+            owl:sameAs <http://sws.geonames.org/2973495/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000406233438> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q795819> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q16647785> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/05923zj50> a org:Organization ;
+    rdfs:label "Asociación Colombiana de Neumología y Cirugía de Tórax" ;
+    schema:name "Asociación Colombiana de Neumología y Cirugía de Tórax" ;
+    schema:foundingDate "1978"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Nonprofit" ; 
+    org:abbreviation "ASONEUMOCITO" ;
+    org:alternativeName "Sociedad Colombiana de Neumologia, Tisiologia y Enfermedades del Torax" ;
+    schema:url <https://asoneumocito.org> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-74.08175 4.60971)"^^geo:wktLiteral ;
+            schema:addressLocality "Bogotá" ;
+            schema:addressCountry "CO" ;
+            owl:sameAs <http://sws.geonames.org/3688689/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q120061529> ;
+    .

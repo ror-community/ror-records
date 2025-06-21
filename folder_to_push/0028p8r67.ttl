@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/0028p8r67> a org:Organization ;
+    rdfs:label "Laboratoire Hubert Curien" ;
+    schema:name "Laboratoire Hubert Curien" ;
+    schema:foundingDate "1995"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    org:abbreviation "LaHC" ;
+    schema:url <http://laboratoirehubertcurien.fr/spip.php?rubrique39> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Hubert_Curien_Laboratory> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(4.39 45.43389)"^^geo:wktLiteral ;
+            schema:addressLocality "Saint-Etienne" ;
+            schema:addressCountry "FR" ;
+            owl:sameAs <http://sws.geonames.org/2980291/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000099550977> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q15407445> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

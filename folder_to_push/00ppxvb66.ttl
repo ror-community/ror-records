@@ -1,0 +1,25 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/00ppxvb66> a org:Organization ;
+    rdfs:label "Office of Energy Policy" ;
+    schema:name "Office of Energy Policy" ;
+    org:status "active" ;
+    org:classification "Government" ; 
+    org:alternativeName "United States Department of Energy Office of the General Counsel Office of Energy Policy" ;
+    schema:url <https://www.energy.gov/gc/office-general-counsel> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-77.03637 38.89511)"^^geo:wktLiteral ;
+            schema:addressLocality "Washington" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/4140963/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    .

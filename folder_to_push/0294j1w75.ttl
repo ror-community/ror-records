@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/0294j1w75> a org:Organization ;
+    rdfs:label "Bendix Field Engineering Corporation (United States)" ;
+    schema:name "Bendix Field Engineering Corporation (United States)" ;
+    schema:foundingDate "1924"^^xsd:gYear ;
+    org:status "inactive" ;
+    org:classification "Company" ; 
+    schema:url <http://www.bfec.us/> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-76.83942 39.24038)"^^geo:wktLiteral ;
+            schema:addressLocality "Columbia" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/4352053/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q30255354> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .
