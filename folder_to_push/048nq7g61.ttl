@@ -4,26 +4,43 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/048nq7g61> a org:Organization ;
     rdfs:label "Centre National de Création Musicale" ;
     schema:name "Centre National de Création Musicale" ;
     schema:foundingDate "1968"^^xsd:gYear ;
-    org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "CNCM" ;
-    schema:url <https://www.cirm-manca.org> ; 
-    owl:sameAs <https://fr.wikipedia.org/wiki/Centre_national_de_cr%C3%A9ation_musicale> ;
+    org:status "inactive" ;
+    org:classification "facility" ; 
+    dct:created "2023-07-27"^^xsd:date ;
+    dct:modified "2024-10-31"^^xsd:date ;
+    org:abbreviation "CNCM"@None ; 
+    schema:mainEntityOfPage <https://www.cirm-manca.org> ;
+    owl:sameAs <https://fr.wikipedia.org/wiki/Centre_national_de_cr%C3%A9ation_musicale> ; 
+    schema:sameAs <http://isni.org/isni/000000012348291X> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/019tgvf94> ;
+        rdfs:label "Université Côte d'Azur" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(7.26608 43.70313)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(7.26608 43.70313)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Nice" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2990440/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/000000012348291X> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q51782223> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2990440/> ;
+    ] ; 
     .

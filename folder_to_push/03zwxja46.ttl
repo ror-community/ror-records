@@ -4,28 +4,78 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/03zwxja46> a org:Organization ;
     rdfs:label "HUN-REN Research Centre for Natural Sciences" ;
     schema:name "HUN-REN Research Centre for Natural Sciences" ;
     schema:foundingDate "2013"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "HUN-REN RCNS" ;
-    org:alternativeName "Magyar Tudományos Akadémia Kémiai Kutatóközpont" ;
-    schema:url <https://www.ttk.hu> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Chemical_Research_Center_of_the_Hungarian_Academy_of_Sciences> ;
+    org:classification "facility" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-31"^^xsd:date ;
+    org:abbreviation "CRC-HAS"@None ; 
+    org:alternativeName "Chemical Research Center of the Hungarian Academy of Sciences"@en ; 
+    org:abbreviation "HUN-REN RCNS"@None ; 
+    org:abbreviation "HUN-REN TTK"@None ; 
+    org:abbreviation "MTA TTK"@None ; 
+    org:alternativeName "Magyar Tudományos Akadémia Kémiai Kutatóközpont"@hu ; 
+    org:abbreviation "RCNS"@None ; 
+    org:alternativeName "Research Centre for Natural Sciences"@en ; 
+    org:alternativeName "Research Centre for Natural Sciences of HAS"@en ; 
+    org:abbreviation "TTK"@None ; 
+    org:alternativeName "Természettudományi Kutatóközpont"@hu ; 
+    schema:mainEntityOfPage <https://www.ttk.hu> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Chemical_Research_Center_of_the_Hungarian_Academy_of_Sciences> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.425578.9> ;
+    schema:sameAs <http://isni.org/isni/0000000405123755> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04q42nz13> ;
+        rdfs:label "Institute of Cognitive Neuroscience and Psychology" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04t4pws42> ;
+        rdfs:label "Institute of Molecular Life Sciences" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00r71zw23> ;
+        rdfs:label "Institute of Materials and Environmental Chemistry" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03azyh744> ;
+        rdfs:label "Institute of Organic Chemistry" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/04w6pnc49> ;
+        rdfs:label "Hungarian Research Network" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(19.04045 47.49835)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(19.04045 47.49835)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Budapest" ;
             schema:addressCountry "HU" ;
-            owl:sameAs <http://sws.geonames.org/3054643/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000405123755> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q5090421> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Hungary" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3054643/> ;
+    ] ; 
     .

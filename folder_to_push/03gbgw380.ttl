@@ -13,9 +13,21 @@
     org:status "active" ;
     org:classification "facility" ; 
     dct:created "2024-09-14"^^xsd:date ;
-    dct:modified "2024-09-16"^^xsd:date ;
+    dct:modified "2024-10-31"^^xsd:date ;
     org:abbreviation "ISDM"@fr ; 
     schema:mainEntityOfPage <https://isdm.umontpellier.fr> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/051escj72> ;
+        rdfs:label "Université de Montpellier" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02vjkv261> ;
+        rdfs:label "Inserm" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(3.87635 43.61093)"^^geo:wktLiteral ;

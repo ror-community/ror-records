@@ -1,0 +1,54 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/028btb530> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    org:status "active" ;
+    org:classification "facility" ; 
+    dct:created "2024-10-29"^^xsd:date ;
+    dct:modified "2024-10-31"^^xsd:date ;
+    schema:mainEntityOfPage <https://emri.tums.ac.ir/%D9%BE%DA%98%D9%88%D9%87%D8%B4%DA%A9%D8%AF%D9%87-%D8%B9%D9%84%D9%88%D9%85-%D8%AC%D9%85%D8%B9%DB%8C%D8%AA%DB%8C-%D8%BA%D8%AF%D8%AF> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/0281zft76> ;
+        rdfs:label "Endocrine & Metabolism Research Institute" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01nspwd23> ;
+        rdfs:label "Non-Communicable Diseases Research Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0235dpm25> ;
+        rdfs:label "Elderly Health Research Center" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(51.42151 35.69439)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Tehran" ;
+            schema:addressCountry "IR" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Iran" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/112931/> ;
+    ] ; 
+    .

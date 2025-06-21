@@ -1,0 +1,50 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/05c22rx21> a org:Organization ;
+    rdfs:label "Mila - Quebec Artificial Intelligence Institute" ;
+    schema:name "Mila - Quebec Artificial Intelligence Institute" ;
+    schema:foundingDate "1993"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "facility" ; 
+    dct:created "2021-04-06"^^xsd:date ;
+    dct:modified "2024-10-31"^^xsd:date ;
+    org:alternativeName "Institut québécois d’intelligence artificielle"@fr ; 
+    org:alternativeName "Mila"@None ; 
+    org:alternativeName "Montreal Institute for Learning Algorithms"@en ; 
+    org:alternativeName "Quebec Artificial Intelligence Institute"@en ; 
+    schema:url <http://mila.quebec> ; 
+    schema:mainEntityOfPage <https://mila.quebec> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Mila_(research_institute)> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.510486.e> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02bkw1m29> ;
+        rdfs:label "International Laboratory on Learning Systems" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-73.58781 45.50884)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Montreal" ;
+            schema:addressCountry "CA" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Canada" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/6077243/> ;
+    ] ; 
+    .

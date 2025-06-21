@@ -1,0 +1,42 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/01238z614> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "2011"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "government" ; 
+    dct:created "2024-10-29"^^xsd:date ;
+    dct:modified "2024-10-31"^^xsd:date ;
+    org:alternativeName "Environmental Protection Authority of New Zealand"@en ; 
+    org:alternativeName "New Zealand Environmental Protection Authority"@en ; 
+    schema:url <http://epa.govt.nz> ; 
+    schema:mainEntityOfPage <https://www.epa.govt.nz> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Environmental_Protection_Authority_%28New_Zealand%29> ; 
+    schema:sameAs <http://isni.org/isni/0000000107272277> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(174.77557 -41.28664)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Wellington" ;
+            schema:addressCountry "NZ" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "New Zealand" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2179537/> ;
+    ] ; 
+    .

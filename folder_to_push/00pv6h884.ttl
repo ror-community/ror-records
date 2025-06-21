@@ -1,0 +1,40 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/00pv6h884> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "2015"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2024-10-29"^^xsd:date ;
+    dct:modified "2024-10-31"^^xsd:date ;
+    org:abbreviation "UMBJM"@id ; 
+    org:alternativeName "University of Muhammadiyah Banjarmasin"@en ; 
+    schema:url <http://umbjm.ac.id> ; 
+    schema:mainEntityOfPage <https://umbjm.ac.id> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(114.68333 -3.08333)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Barito Kuala Regency" ;
+            schema:addressCountry "ID" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Indonesia" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1649992/> ;
+    ] ; 
+    .

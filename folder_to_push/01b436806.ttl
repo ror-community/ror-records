@@ -8,17 +8,18 @@
 @prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01b436806> a org:Organization ;
-    rdfs:label "CIRED" ;
-    schema:name "CIRED" ;
+    rdfs:label "" ;
+    schema:name "" ;
     schema:foundingDate "1973"^^xsd:gYear ;
     org:status "active" ;
     org:classification "facility" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-08-21"^^xsd:date ;
-    org:alternativeName "Centre International de Recherche sur l'Environnement et le Developpement"@fr ; 
-    org:alternativeName "International Research Center on Environment and Development"@en ; 
+    dct:modified "2024-10-31"^^xsd:date ;
+    org:abbreviation "CIRED"@fr ; 
+    org:alternativeName "Centre for International Research on Environment and Development"@en ; 
     org:alternativeName "UMR CIRED"@fr ; 
-    schema:mainEntityOfPage <http://www.centre-cired.fr/index.php/en/> ;
+    schema:url <http://centre-cired.fr> ; 
+    schema:mainEntityOfPage <https://www.centre-cired.fr> ;
     schema:sameAs <https://grid.ac/institutions/grid.462809.1> ;
     schema:sameAs <http://isni.org/isni/0000000121655311> ;
     org:hasLink [
@@ -36,14 +37,8 @@
     org:hasLink [
         a org:Membership ;
         org:role "parent" ;
-        org:member <https://ror.org/0233st365> ;
-        rdfs:label "Météo-France" ;
-    ] ; 
-    org:hasLink [
-        a org:Membership ;
-        org:role "parent" ;
         org:member <https://ror.org/02nwvxz07> ;
-        rdfs:label "École des Ponts ParisTech" ;
+        rdfs:label "École nationale des ponts et chaussées" ;
     ] ; 
     org:hasLink [
         a org:Membership ;
@@ -56,6 +51,12 @@
         org:role "parent" ;
         org:member <https://ror.org/02feahw73> ;
         rdfs:label "Centre National de la Recherche Scientifique" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02d9dg697> ;
+        rdfs:label "École des hautes études en sciences sociales" ;
     ] ; 
     schema:location [
         a schema:Place ;

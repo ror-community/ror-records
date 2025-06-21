@@ -14,9 +14,10 @@
     org:status "active" ;
     org:classification "facility" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-06-20"^^xsd:date ;
-    org:alternativeName "Microbiologie de l'Alimentation au Service de la Santé"@fr ; 
-    org:alternativeName "Microbiologie de l'Alimentation au Service de la Santé humaine"@fr ; 
+    dct:modified "2024-10-31"^^xsd:date ;
+    org:alternativeName "Institut Micalis"@fr ; 
+    org:abbreviation "MICALIS"@fr ; 
+    org:alternativeName "Micalis Institute"@en ; 
     schema:mainEntityOfPage <https://www.micalis.fr> ;
     schema:sameAs <https://grid.ac/institutions/grid.462293.8> ;
     schema:sameAs <http://isni.org/isni/0000000405220627> ;
@@ -32,11 +33,17 @@
         org:member <https://ror.org/00gtg0p11> ;
         rdfs:label "Centre Île-de-France - Jouy-en-Josas - Antony" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/03xjwb503> ;
+        rdfs:label "Université Paris-Saclay" ;
+    ] ; 
     schema:location [
         a schema:Place ;
-        geo:asWKT "POINT(2.3488 48.85341)"^^geo:wktLiteral ;
+        geo:asWKT "POINT(2.18727 48.69572)"^^geo:wktLiteral ;
         schema:address [
-            schema:addressLocality "Paris" ;
+            schema:addressLocality "Orsay" ;
             schema:addressCountry "FR" ;
             schema:addressRegion "" ;
             dct:spatial [
@@ -48,6 +55,24 @@
                 ]
             ]
         ] ;
-        owl:sameAs <http://sws.geonames.org/2988507/> ;
+        owl:sameAs <http://sws.geonames.org/2989204/> ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(2.16966 48.75909)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Jouy-en-Josas" ;
+            schema:addressCountry "FR" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3012165/> ;
     ] ; 
     .

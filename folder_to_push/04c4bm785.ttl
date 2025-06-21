@@ -4,27 +4,151 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/04c4bm785> a org:Organization ;
     rdfs:label "CGIAR" ;
     schema:name "CGIAR" ;
     schema:foundingDate "1971"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Other" ; 
-    org:alternativeName "Consultative Group for International Agricultural Research" ;
-    schema:url <http://www.cgiar.org/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/CGIAR> ;
+    org:classification "funder" ; 
+    org:classification "other" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-31"^^xsd:date ;
+    org:alternativeName "CGIAR Consortium"@en ; 
+    org:alternativeName "CGIAR System Organization"@en ; 
+    org:alternativeName "Consortium of International Agricultural Research Centers"@en ; 
+    org:alternativeName "Consultative Group for International Agricultural Research"@en ; 
+    schema:mainEntityOfPage <http://www.cgiar.org/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/CGIAR> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100015815> ;
+    schema:sameAs <https://grid.ac/institutions/grid.475046.4> ;
+    schema:sameAs <http://isni.org/isni/000000010943820X> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/040y9br29> ;
+        rdfs:label "Africa Rice Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04xsxqp89> ;
+        rdfs:label "Alliance Bioversity International - CIAT" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02n2syw04> ;
+        rdfs:label "International Center for Agricultural Research in the Dry Areas" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/037wny167> ;
+        rdfs:label "International Center for Tropical Agriculture" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02g43d244> ;
+        rdfs:label "International Crops Research Institute for the Semi-Arid Tropics" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01tapgj66> ;
+        rdfs:label "International Crops Research Institute for the Semi-Arid Tropics" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03pxz9p87> ;
+        rdfs:label "International Food Policy Research Institute" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01a0ymj74> ;
+        rdfs:label "International Institute of Tropical Agriculture" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01jxjwb74> ;
+        rdfs:label "International Livestock Research Institute" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03gvhpa76> ;
+        rdfs:label "Centro Internacional de Mejoramiento de Maíz Y Trigo" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/002vr4d22> ;
+        rdfs:label "International Potato Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05asvgp75> ;
+        rdfs:label "International Potato Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0593p4448> ;
+        rdfs:label "International Rice Research Institute" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04vpcaw67> ;
+        rdfs:label "International Water Management Institute" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04bd4pk40> ;
+        rdfs:label "WorldFish" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00va88c89> ;
+        rdfs:label "International Institute of Tropical Agriculture" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01kmz4383> ;
+        rdfs:label "World Agroforestry Centre" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01jbzz330> ;
+        rdfs:label "Center for International Forestry Research" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(3.87635 43.61093)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(3.87635 43.61093)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Montpellier" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2992166/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/000000010943820X> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1128401> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2992166/> ;
+    ] ; 
     .

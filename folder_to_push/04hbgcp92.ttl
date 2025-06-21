@@ -1,0 +1,55 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/04hbgcp92> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "2013"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2024-10-29"^^xsd:date ;
+    dct:modified "2024-10-31"^^xsd:date ;
+    org:abbreviation "LAUB"@fr ; 
+    org:alternativeName "University Lounici Ali of Blida"@en ; 
+    org:alternativeName "University of Blida II"@en ; 
+    org:alternativeName "University of El Affroun"@en ; 
+    org:alternativeName "Université Blida 2"@fr ; 
+    org:alternativeName "Université Blida II"@fr ; 
+    org:alternativeName "Université Lounici Ali de Blida"@fr ; 
+    org:alternativeName "Université d'El Affroun"@fr ; 
+    org:alternativeName "جامعة البليدة2 - لونيسي علي"@ar ; 
+    schema:url <http://univ-blida2.dz> ; 
+    schema:mainEntityOfPage <https://univ-blida2.dz> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/University_Lounici_Ali_of_Blida> ; 
+    schema:sameAs <http://isni.org/isni/0000000446550040> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03g41pw14> ;
+        rdfs:label "University of Blida" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(2.8277 36.47004)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Blida" ;
+            schema:addressCountry "DZ" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Algeria" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2503769/> ;
+    ] ; 
+    .

@@ -8,18 +8,18 @@
 @prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02nwvxz07> a org:Organization ;
-    rdfs:label "École des Ponts ParisTech" ;
-    schema:name "École des Ponts ParisTech" ;
+    rdfs:label "" ;
+    schema:name "" ;
     schema:foundingDate "1747"^^xsd:gYear ;
     org:status "active" ;
     org:classification "education" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-10-14"^^xsd:date ;
+    dct:modified "2024-10-31"^^xsd:date ;
     org:abbreviation "ENPC"@None ; 
-    org:alternativeName "Ecole Nationale des Ponts et Chaussees"@fr ; 
     org:alternativeName "Ecole des Ponts ParisTech"@fr ; 
+    org:alternativeName "Ecole nationale des ponts et chaussées"@fr ; 
     org:alternativeName "Les Ponts"@fr ; 
-    org:alternativeName "École Nationale des Ponts et Chaussées"@fr ; 
+    org:alternativeName "École des Ponts ParisTech"@fr ; 
     schema:mainEntityOfPage <https://ecoledesponts.fr> ;
     owl:sameAs <https://en.wikipedia.org/wiki/%C3%89cole_des_ponts_ParisTech> ; 
     schema:sameAs <https://grid.ac/institutions/grid.424447.5> ;
@@ -46,7 +46,7 @@
         a org:Membership ;
         org:role "child" ;
         org:member <https://ror.org/01b436806> ;
-        rdfs:label "CIRED" ;
+        rdfs:label "Centre international de recherche sur l’environnement et le développement" ;
     ] ; 
     org:hasLink [
         a org:Membership ;
@@ -99,20 +99,14 @@
     org:hasLink [
         a org:Membership ;
         org:role "child" ;
-        org:member <https://ror.org/01bbf9m56> ;
-        rdfs:label "Fédération Francilienne de Mécanique - Matériaux, Structures, Procédés" ;
-    ] ; 
-    org:hasLink [
-        a org:Membership ;
-        org:role "child" ;
         org:member <https://ror.org/01qtp1053> ;
         rdfs:label "Paris School of Economics" ;
     ] ; 
     org:hasLink [
         a org:Membership ;
-        org:role "parent" ;
-        org:member <https://ror.org/05c2qg481> ;
-        rdfs:label "ParisTech" ;
+        org:role "child" ;
+        org:member <https://ror.org/01bzdp563> ;
+        rdfs:label "Enveloppes fluides : de la ville à l'exobiologie" ;
     ] ; 
     org:hasLink [
         a org:Membership ;
@@ -128,9 +122,15 @@
     ] ; 
     org:hasLink [
         a org:Membership ;
-        org:role "child" ;
-        org:member <https://ror.org/01bzdp563> ;
-        rdfs:label "Enveloppes fluides : de la ville à l'exobiologie" ;
+        org:role "related" ;
+        org:member <https://ror.org/01bbf9m56> ;
+        rdfs:label "Fédération Francilienne de Mécanique - Matériaux, Structures, Procédés" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/042tfbd02> ;
+        rdfs:label "Institut Polytechnique de Paris" ;
     ] ; 
     schema:location [
         a schema:Place ;

@@ -1,0 +1,47 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/02n2tgg58> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "2004"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2024-10-29"^^xsd:date ;
+    dct:modified "2024-10-31"^^xsd:date ;
+    org:abbreviation "CUCN"@en ; 
+    org:alternativeName "Nanguang College, Communication University of China"@en ; 
+    org:alternativeName "Nanjing Communication College"@en ; 
+    org:alternativeName "中国传媒大学南广学院"@zh ; 
+    org:abbreviation "南传"@zh ; 
+    org:alternativeName "南广"@zh ; 
+    org:alternativeName "南广学院"@zh ; 
+    schema:url <http://cucn.edu.cn> ; 
+    schema:mainEntityOfPage <https://www.cucn.edu.cn> ;
+    owl:sameAs <https://zh.wikipedia.org/wiki/%E5%8D%97%E4%BA%AC%E4%BC%A0%E5%AA%92%E5%AD%A6%E9%99%A2> ; 
+    schema:sameAs <http://isni.org/isni/0000000417662553> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(118.77778 32.06167)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Nanjing" ;
+            schema:addressCountry "CN" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "China" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1799962/> ;
+    ] ; 
+    .

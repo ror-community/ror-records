@@ -4,28 +4,46 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/00q7d9z06> a org:Organization ;
     rdfs:label "Norwegian Institute for Air Research" ;
     schema:name "Norwegian Institute for Air Research" ;
     schema:foundingDate "1969"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Nonprofit" ; 
-    org:abbreviation "NILU" ;
-    org:alternativeName "Norsk Institutt for Luftforskning" ;
-    schema:url <http://www.nilu.no/Forsiden/tabid/41/language/en-GB/Default.aspx> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Norwegian_Institute_for_Air_Research> ;
+    org:classification "nonprofit" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-31"^^xsd:date ;
+    org:abbreviation "NILU"@None ; 
+    org:alternativeName "Norsk Institutt for Luftforskning"@no ; 
+    schema:url <http://nilu.com> ; 
+    schema:mainEntityOfPage <https://nilu.com> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Norwegian_Institute_for_Air_Research> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.19169.36> ;
+    schema:sameAs <http://isni.org/isni/0000000098886866> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02grwav03> ;
+        rdfs:label "NorESM Climate Modeling Consortium" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(11.04918 59.95597)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(11.04918 59.95597)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Lillestrøm" ;
             schema:addressCountry "NO" ;
-            owl:sameAs <http://sws.geonames.org/3147465/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000098886866> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q876791> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Norway" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3147465/> ;
+    ] ; 
     .

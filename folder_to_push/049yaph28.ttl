@@ -4,26 +4,55 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/049yaph28> a org:Organization ;
     rdfs:label "Laboratoire d'Hydraulique Saint-Venant" ;
     schema:name "Laboratoire d'Hydraulique Saint-Venant" ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "LHSV" ;
-    org:alternativeName "Saint-Venant Hydraulics Laboratory" ;
-    schema:url <https://www.saint-venant-lab.fr/> ; 
+    org:classification "facility" ; 
+    dct:created "2019-02-17"^^xsd:date ;
+    dct:modified "2024-10-31"^^xsd:date ;
+    org:abbreviation "LHSV"@None ; 
+    org:alternativeName "Saint-Venant Hydraulics Laboratory"@en ; 
+    schema:mainEntityOfPage <https://www.saint-venant-lab.fr/> ;
+    schema:sameAs <https://grid.ac/institutions/grid.503289.5> ;
+    schema:sameAs <http://isni.org/isni/000000046816612X> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/05k0nvr25> ;
+        rdfs:label "Centre d'Études et d'Expertise sur les Risques, l'Environnement, la Mobilité et l'Aménagement" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02nwvxz07> ;
+        rdfs:label "École nationale des ponts et chaussées" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/03wb8xz10> ;
+        rdfs:label "Électricité de France (France)" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(2.15863 48.8898)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(2.15863 48.8898)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Chatou" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/3026033/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/000000046816612X> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q51782900> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3026033/> ;
+    ] ; 
     .

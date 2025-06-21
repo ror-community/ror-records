@@ -1,0 +1,47 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/05c99rg80> a org:Organization ;
+    rdfs:label "Universidad La Salle" ;
+    schema:name "Universidad La Salle" ;
+    schema:foundingDate "1962"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-31"^^xsd:date ;
+    org:abbreviation "ULSA"@None ; 
+    schema:mainEntityOfPage <http://www.lasalle.mx/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Universidad_La_Salle> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.441070.6> ;
+    schema:sameAs <http://isni.org/isni/0000000121114953> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02b28ye70> ;
+        rdfs:label "Universidad La Salle Noroeste" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-99.12766 19.42847)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Mexico City" ;
+            schema:addressCountry "MX" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Mexico" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3530597/> ;
+    ] ; 
+    .

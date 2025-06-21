@@ -1,0 +1,53 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/004pv5w59> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "1953"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "facility" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-31"^^xsd:date ;
+    org:alternativeName "Archeologický ústav SAV"@sk ; 
+    org:alternativeName "Archeologický ústav SAV, v. v. i."@sk ; 
+    org:alternativeName "Archeologický ústav Slovenská akadémia vied, v. v. i."@sk ; 
+    org:alternativeName "Archeologický ústav Slovenská akadémia vied, verejná výskumná inštitúcia"@sk ; 
+    org:alternativeName "Institute of Archaeology"@en ; 
+    org:alternativeName "Institute of Archaeology SAS"@en ; 
+    org:alternativeName "Institute of Archaeology SAV"@en ; 
+    schema:url <http://archeol.sav.sk> ; 
+    schema:mainEntityOfPage <https://archeol.sav.sk> ;
+    schema:sameAs <https://grid.ac/institutions/grid.484920.3> ;
+    schema:sameAs <http://isni.org/isni/0000000119588674> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/03h7qq074> ;
+        rdfs:label "Slovak Academy of Sciences" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(18.08453 48.30763)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Nitra" ;
+            schema:addressCountry "SK" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Slovakia" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3058531/> ;
+    ] ; 
+    .

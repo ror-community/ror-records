@@ -4,27 +4,82 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/0166hxq48> a org:Organization ;
     rdfs:label "Ministry of Education, Universities and Research" ;
     schema:name "Ministry of Education, Universities and Research" ;
     schema:foundingDate "1988"^^xsd:gYear ;
     org:status "inactive" ;
-    org:classification "Government" ; 
-    org:abbreviation "MIUR" ;
-    schema:url <http://www.miur.gov.it/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Ministry_of_Education,_Universities_and_Research_(Italy)> ;
+    org:classification "funder" ; 
+    org:classification "government" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-31"^^xsd:date ;
+    org:abbreviation "MIUR"@None ; 
+    schema:mainEntityOfPage <http://www.miur.gov.it/> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Ministry_of_Education,_Universities_and_Research_(Italy)> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100003407> ;
+    schema:sameAs <https://grid.ac/institutions/grid.425707.3> ;
+    schema:sameAs <http://isni.org/isni/0000000098713068> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03kzgzp82> ;
+        rdfs:label "Conservatorio di Musica Giuseppe Tartini" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/010wgh593> ;
+        rdfs:label "Consorzio Interuniversitario per lo Sviluppo dei Sistemi a Grande Interfase" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03vn1bh77> ;
+        rdfs:label "Istituto Nazionale di Ricerca Metrologica" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03tq10v65> ;
+        rdfs:label "Fondazione ICSC Centro Nazionale di Ricerca in High Performance Computing, Big Data e Quantum Computing" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/00xqkj280> ;
+        rdfs:label "Governo Italiano" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "successor" ;
+        org:member <https://ror.org/01ehyh486> ;
+        rdfs:label "Ministero dell'Istruzione e del Merito" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "successor" ;
+        org:member <https://ror.org/0341vw408> ;
+        rdfs:label "Ministero dell'università e della ricerca" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(12.51133 41.89193)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(12.51133 41.89193)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Rome" ;
             schema:addressCountry "IT" ;
-            owl:sameAs <http://sws.geonames.org/3169070/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000098713068> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1307461> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Italy" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3169070/> ;
+    ] ; 
     .

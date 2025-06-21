@@ -1,0 +1,145 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/02xvc5r05> a org:Organization ;
+    rdfs:label "Government of Victoria" ;
+    schema:name "Government of Victoria" ;
+    schema:foundingDate "1851"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "funder" ; 
+    org:classification "government" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-31"^^xsd:date ;
+    org:alternativeName "Victorian Government"@en ; 
+    schema:mainEntityOfPage <http://www.vic.gov.au/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Government_of_Victoria> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100004752> ;
+    schema:sameAs <https://grid.ac/institutions/grid.453690.d> ;
+    schema:sameAs <http://isni.org/isni/0000000406066094> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/052sgg612> ;
+        rdfs:label "Arthur Rylah Institute for Environmental Research" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02qa5kg76> ;
+        rdfs:label "Australian Regenerative Medicine Institute" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03e0qa028> ;
+        rdfs:label "Department of Economic Development Jobs Transport and Resources" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02sx0vk32> ;
+        rdfs:label "Department of Education and Training" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03m3hse57> ;
+        rdfs:label "Department of Environment, Land, Water and Planning" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00b9jhh55> ;
+        rdfs:label "Department of Health and Human Services" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03fjgt095> ;
+        rdfs:label "Goulburn Broken Catchment Management Authority" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01r7sqp31> ;
+        rdfs:label "Melbourne Water" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/015eg4898> ;
+        rdfs:label "Moreland City Council" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03sjyr749> ;
+        rdfs:label "Mornington Peninsula Shire" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/018apx651> ;
+        rdfs:label "North Central Catchment Management Authority" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04vghy880> ;
+        rdfs:label "Port of Melbourne Corporation" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03tmpzb72> ;
+        rdfs:label "State Library of Victoria" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0500yaj74> ;
+        rdfs:label "Victoria Police" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00b2vwt46> ;
+        rdfs:label "Victorian Multicultural Commission" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/033s2jy46> ;
+        rdfs:label "South East Water (Australia)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04507gt97> ;
+        rdfs:label "Royal Botanic Gardens Victoria" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(144.96332 -37.814)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Melbourne" ;
+            schema:addressCountry "AU" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Australia" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2158177/> ;
+    ] ; 
+    .

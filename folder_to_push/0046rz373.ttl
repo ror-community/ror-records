@@ -1,0 +1,53 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/0046rz373> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "1969"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "facility" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-31"^^xsd:date ;
+    org:abbreviation "IEP SAS"@None ; 
+    org:alternativeName "Institute of Experimental Physics"@en ; 
+    org:alternativeName "Institute of Experimental Physics SAV"@en ; 
+    org:abbreviation "ÚEF SAV "@None ; 
+    org:alternativeName "Ústav Experimentálnej Fyziky SAV"@sk ; 
+    org:alternativeName "Ústav Experimentálnej Fyziky SAV, v. v. i."@sk ; 
+    org:alternativeName "Ústav Experimentálnej Fyziky Slovenská akadémia vied, v. v. i."@sk ; 
+    org:alternativeName "Ústav Experimentálnej Fyziky Slovenská akadémia vied, verejná výskumná inštitúcia"@sk ; 
+    schema:mainEntityOfPage <https://websrv.saske.sk/uef/> ;
+    schema:sameAs <https://grid.ac/institutions/grid.435184.f> ;
+    schema:sameAs <http://isni.org/isni/0000000404889791> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/03h7qq074> ;
+        rdfs:label "Slovak Academy of Sciences" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(21.25808 48.71395)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Košice" ;
+            schema:addressCountry "SK" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Slovakia" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/724443/> ;
+    ] ; 
+    .

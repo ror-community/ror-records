@@ -4,25 +4,54 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/041rsh762> a org:Organization ;
     rdfs:label "INSA Hauts-de-France" ;
     schema:name "INSA Hauts-de-France" ;
     schema:foundingDate "2019"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:alternativeName "Institut national des sciences appliquées Hauts-de-France" ;
-    schema:url <https://www.insa-hautsdefrance.fr> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/INSA_Hauts-de-France> ;
+    org:classification "education" ; 
+    dct:created "2023-07-27"^^xsd:date ;
+    dct:modified "2024-10-31"^^xsd:date ;
+    org:alternativeName "Institut national des sciences appliquées Hauts-de-France"@fr ; 
+    schema:mainEntityOfPage <https://www.insa-hautsdefrance.fr> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/INSA_Hauts-de-France> ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02q4res37> ;
+        rdfs:label "Institut d'électronique de microélectronique et de nanotechnologie" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/006z7v557> ;
+        rdfs:label "Laboratoire d'Automatique, de Mécanique et d'Informatique Industrielles et Humaines" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02ezch769> ;
+        rdfs:label "Université Polytechnique Hauts-de-France" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(3.52506 50.35909)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(3.52506 50.35909)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Valenciennes" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2971041/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://www.wikidata.org/entity/Q67212715> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2971041/> ;
+    ] ; 
     .

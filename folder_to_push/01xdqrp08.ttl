@@ -1,0 +1,150 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/01xdqrp08> a org:Organization ;
+    rdfs:label "Pfizer (United States)" ;
+    schema:name "Pfizer (United States)" ;
+    schema:foundingDate "1849"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "company" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-31"^^xsd:date ;
+    schema:mainEntityOfPage <http://www.pfizer.com/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Pfizer> ; 
+    schema:sameAs <https://api.crossref.org/funders/100004319> ;
+    schema:sameAs <https://grid.ac/institutions/grid.410513.2> ;
+    schema:sameAs <http://isni.org/isni/0000000088007493> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/042pnza07> ;
+        rdfs:label "Pfizer (Australia)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04jtnvj04> ;
+        rdfs:label "Pfizer (Austria)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01zk1vt68> ;
+        rdfs:label "Pfizer (Belgium)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/059g90c15> ;
+        rdfs:label "Pfizer (Canada)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04ktfyy52> ;
+        rdfs:label "Pfizer (China)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02c9yny10> ;
+        rdfs:label "Pfizer (France)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00m8w3m39> ;
+        rdfs:label "Pfizer (Germany)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05d3c1829> ;
+        rdfs:label "Pfizer (India)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05y381977> ;
+        rdfs:label "Pfizer (Ireland)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03htt2d69> ;
+        rdfs:label "Pfizer (Italy)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05pm71w80> ;
+        rdfs:label "Pfizer (Japan)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02bzf1224> ;
+        rdfs:label "Pfizer (Netherlands)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03v1s7b70> ;
+        rdfs:label "Pfizer (South Korea)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03x2xt559> ;
+        rdfs:label "Pfizer (Spain)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00kkwkq76> ;
+        rdfs:label "Pfizer (Sweden)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00z8x2k69> ;
+        rdfs:label "Pfizer (Switzerland)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04x4v8p40> ;
+        rdfs:label "Pfizer (United Kingdom)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "predecessor" ;
+        org:member <https://ror.org/035j24j42> ;
+        rdfs:label "Wyeth" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-74.00597 40.71427)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "New York" ;
+            schema:addressCountry "US" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/5128581/> ;
+    ] ; 
+    .

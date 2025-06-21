@@ -4,26 +4,48 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/03fvq2a72> a org:Organization ;
     rdfs:label "Czech Academy of Sciences, Institute of Thermomechanics" ;
     schema:name "Czech Academy of Sciences, Institute of Thermomechanics" ;
     schema:foundingDate "1953"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "ÚT AV ČR" ;
-    org:alternativeName "Institute of Thermomechanics of the Czech Academy of Sciences" ;
-    schema:url <http://www.it.cas.cz> ; 
+    org:classification "facility" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-31"^^xsd:date ;
+    org:alternativeName "Czech Acad Sci, Inst Thermomech"@en ; 
+    org:alternativeName "Institute of Thermomechanics CAS"@en ; 
+    org:alternativeName "Institute of Thermomechanics of the Czech Academy of Sciences"@en ; 
+    org:abbreviation "ÚT AV ČR"@None ; 
+    schema:mainEntityOfPage <http://www.it.cas.cz> ;
+    schema:sameAs <https://api.crossref.org/funders/501100021674> ;
+    schema:sameAs <https://grid.ac/institutions/grid.448112.a> ;
+    schema:sameAs <http://isni.org/isni/0000000403851281> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/053avzc18> ;
+        rdfs:label "Czech Academy of Sciences" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(14.42076 50.08804)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(14.42076 50.08804)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Prague" ;
             schema:addressCountry "CZ" ;
-            owl:sameAs <http://sws.geonames.org/3067696/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000403851281> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Czechia" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3067696/> ;
+    ] ; 
     .

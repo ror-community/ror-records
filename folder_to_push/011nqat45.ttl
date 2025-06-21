@@ -4,26 +4,51 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/011nqat45> a org:Organization ;
     rdfs:label "Centre de Recherches Pétrographiques et Géochimiques" ;
     schema:name "Centre de Recherches Pétrographiques et Géochimiques" ;
     schema:foundingDate "1953"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "CRPG" ;
-    schema:url <http://www.crpg.cnrs-nancy.fr/spip.php?article1554> ; 
+    org:classification "facility" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-31"^^xsd:date ;
+    org:abbreviation "CRPG"@None ; 
+    org:alternativeName "UMR 7358"@None ; 
+    schema:url <http://crpg.univ-lorraine.fr> ; 
+    schema:mainEntityOfPage <https://crpg.univ-lorraine.fr> ;
+    schema:sameAs <https://grid.ac/institutions/grid.462869.7> ;
+    schema:sameAs <http://isni.org/isni/0000000121940016> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/04kdfz702> ;
+        rdfs:label "Institut National des Sciences de l'Univers" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/04vfs2w97> ;
+        rdfs:label "Université de Lorraine" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(6.17114 48.66115)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(6.17114 48.66115)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Vandœuvre-lès-Nancy" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2970797/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000121940016> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q16507426> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2970797/> ;
+    ] ; 
     .

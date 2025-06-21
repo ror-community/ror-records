@@ -4,28 +4,48 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/04jymbd90> a org:Organization ;
     rdfs:label "Czech Academy of Sciences, Nuclear Physics Institute" ;
     schema:name "Czech Academy of Sciences, Nuclear Physics Institute" ;
     schema:foundingDate "1955"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "ÚJF AV ČR" ;
-    org:alternativeName "Nuclear Physics Institute of the Czech Academy of Sciences" ;
-    schema:url <https://www.ujf.cas.cz> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Nuclear_Physics_Institute_of_the_Czech_Academy_of_Sciences> ;
+    org:classification "facility" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-31"^^xsd:date ;
+    org:alternativeName "Czech Acad Sci, Nucl Phys Inst"@en ; 
+    org:alternativeName "Nuclear Physics Institute CAS"@en ; 
+    org:alternativeName "Nuclear Physics Institute of the Czech Academy of Sciences"@en ; 
+    org:abbreviation "ÚJF AV ČR"@None ; 
+    schema:url <http://ujf.cas.cz> ; 
+    schema:mainEntityOfPage <https://www.ujf.cas.cz> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Nuclear_Physics_Institute_of_the_Czech_Academy_of_Sciences> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.425110.3> ;
+    schema:sameAs <http://isni.org/isni/0000000089656073> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/053avzc18> ;
+        rdfs:label "Czech Academy of Sciences" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(14.35733 50.17734)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(14.35733 50.17734)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Řež" ;
             schema:addressCountry "CZ" ;
-            owl:sameAs <http://sws.geonames.org/3066885/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000089656073> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q25055737> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Czechia" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3066885/> ;
+    ] ; 
     .

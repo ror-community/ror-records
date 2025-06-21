@@ -4,26 +4,46 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/03aba6h29> a org:Organization ;
     rdfs:label "Czech Academy of Sciences, Institute of Psychology" ;
     schema:name "Czech Academy of Sciences, Institute of Psychology" ;
     schema:foundingDate "1967"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "PSÚ AV ČR" ;
-    org:alternativeName "Institute of Psychology of the Czech Academy of Sciences" ;
-    schema:url <https://www.psu.cas.cz> ; 
+    org:classification "facility" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-31"^^xsd:date ;
+    org:alternativeName "Czech Acad Sci, Inst Psychol"@en ; 
+    org:alternativeName "Institute of Psychology CAS"@en ; 
+    org:alternativeName "Institute of Psychology of the Czech Academy of Sciences"@en ; 
+    org:abbreviation "PSÚ AV ČR"@None ; 
+    schema:mainEntityOfPage <https://www.psu.cas.cz> ;
+    schema:sameAs <https://grid.ac/institutions/grid.448114.c> ;
+    schema:sameAs <http://isni.org/isni/000000040397429X> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/053avzc18> ;
+        rdfs:label "Czech Academy of Sciences" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(16.60796 49.19522)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(16.60796 49.19522)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Brno" ;
             schema:addressCountry "CZ" ;
-            owl:sameAs <http://sws.geonames.org/3078610/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/000000040397429X> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Czechia" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3078610/> ;
+    ] ; 
     .

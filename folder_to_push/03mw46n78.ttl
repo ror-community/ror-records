@@ -4,25 +4,55 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/03mw46n78> a org:Organization ;
     rdfs:label "Fundació Clínic per a la Recerca Biomèdica" ;
     schema:name "Fundació Clínic per a la Recerca Biomèdica" ;
     schema:foundingDate "1989"^^xsd:gYear ;
-    org:status "active" ;
-    org:classification "Nonprofit" ; 
-    org:abbreviation "FCRB" ;
+    org:status "inactive" ;
+    org:classification "nonprofit" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-31"^^xsd:date ;
+    org:abbreviation "FCRB"@None ; 
+    org:abbreviation "FCRB-CERCA"@None ; 
+    schema:sameAs <https://grid.ac/institutions/grid.428756.a> ;
+    schema:sameAs <http://isni.org/isni/0000000404120974> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/054vayn55> ;
+        rdfs:label "Consorci Institut D'Investigacions Biomediques August Pi I Sunyer" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/01bkbaq61> ;
+        rdfs:label "CERCA Institution" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "successor" ;
+        org:member <https://ror.org/041gvmd67> ;
+        rdfs:label "Fundació de Recerca Clínic Barcelona-Institut d’Investigacions Biomèdiques August Pi i Sunyer" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(2.15899 41.38879)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(2.15899 41.38879)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Barcelona" ;
             schema:addressCountry "ES" ;
-            owl:sameAs <http://sws.geonames.org/3128760/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000404120974> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q30287378> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Spain" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3128760/> ;
+    ] ; 
     .

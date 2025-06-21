@@ -4,23 +4,48 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/018ndmv91> a org:Organization ;
     rdfs:label "Fundació Privada Clínic per a La Recerca Biomèdica" ;
     schema:name "Fundació Privada Clínic per a La Recerca Biomèdica" ;
-    org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "FPRCB" ;
-    schema:url <http://web.fundacioclinic.org/Home/tabid/499/language/en-US/Default.aspx> ; 
+    org:status "inactive" ;
+    org:classification "facility" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-31"^^xsd:date ;
+    org:abbreviation "FPCRB-CERCA"@None ; 
+    org:abbreviation "FPRCB"@None ; 
+    schema:mainEntityOfPage <http://web.fundacioclinic.org/Home/tabid/499/language/en-US/Default.aspx> ;
+    schema:sameAs <https://grid.ac/institutions/grid.10447.36> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/01bkbaq61> ;
+        rdfs:label "CERCA Institution" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "successor" ;
+        org:member <https://ror.org/041gvmd67> ;
+        rdfs:label "Fundació de Recerca Clínic Barcelona-Institut d’Investigacions Biomèdiques August Pi i Sunyer" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(2.15899 41.38879)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(2.15899 41.38879)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Barcelona" ;
             schema:addressCountry "ES" ;
-            owl:sameAs <http://sws.geonames.org/3128760/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Spain" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3128760/> ;
+    ] ; 
     .

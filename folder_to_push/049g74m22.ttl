@@ -1,0 +1,49 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/049g74m22> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "1986"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2024-10-29"^^xsd:date ;
+    dct:modified "2024-10-31"^^xsd:date ;
+    org:alternativeName "FCET Umunze"@en ; 
+    org:abbreviation "FCETU"@en ; 
+    org:abbreviation "FECETU"@en ; 
+    schema:url <http://fcetumunze.edu.ng> ; 
+    schema:mainEntityOfPage <https://fcetumunze.edu.ng> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Federal_College_of_Education_%28Technical%29%2C_Umunze> ; 
+    schema:sameAs <http://isni.org/isni/0000000105836745> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02r6pfc06> ;
+        rdfs:label "Nnamdi Azikiwe University" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(7.23664 5.96694)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Umunze" ;
+            schema:addressCountry "NG" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Nigeria" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2343269/> ;
+    ] ; 
+    .

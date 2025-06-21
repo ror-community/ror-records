@@ -1,0 +1,55 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/0388g9052> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "1990"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "facility" ; 
+    dct:created "2021-09-23"^^xsd:date ;
+    dct:modified "2024-10-31"^^xsd:date ;
+    org:alternativeName "Institute of Political Science"@en ; 
+    org:alternativeName "Institute of Political Science SAS"@en ; 
+    org:alternativeName "Institute of Political Science SAV"@en ; 
+    org:abbreviation "ÚPV SAV"@None ; 
+    org:alternativeName "Ústav politických vied SAV"@sk ; 
+    org:alternativeName "Ústav politických vied SAV, v. v. i."@sk ; 
+    org:alternativeName "Ústav politických vied Slovenská akadémia vied, v. v. i."@sk ; 
+    org:alternativeName "Ústav politických vied Slovenská akadémia vied, verejná výskumná inštitúcia"@sk ; 
+    schema:url <http://upv.sav.sk> ; 
+    schema:mainEntityOfPage <http://www.upv.sav.sk> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Institute_of_Political_Science_of_SAS> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.511135.2> ;
+    schema:sameAs <http://isni.org/isni/0000000122981856> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/03h7qq074> ;
+        rdfs:label "Slovak Academy of Sciences" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(17.10674 48.14816)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Bratislava" ;
+            schema:addressCountry "SK" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Slovakia" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3060972/> ;
+    ] ; 
+    .

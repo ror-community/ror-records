@@ -1,0 +1,49 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/04zp4f313> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "2024"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "facility" ; 
+    dct:created "2024-10-29"^^xsd:date ;
+    dct:modified "2024-10-31"^^xsd:date ;
+    org:alternativeName "Laboratoire de recherche en entreprise et décisions"@fr ; 
+    org:alternativeName "RED Lab"@en ; 
+    org:alternativeName "RED Laboratory"@en ; 
+    org:alternativeName "UR RED"@None ; 
+    org:alternativeName "Unité de recherche RED"@fr ; 
+    schema:url <http://red-laboratory.net> ; 
+    schema:mainEntityOfPage <https://red-laboratory.net> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/022efad20> ;
+        rdfs:label "University of Gabès" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(10.0982 33.88146)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Gabès" ;
+            schema:addressCountry "TN" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Tunisia" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2468369/> ;
+    ] ; 
+    .

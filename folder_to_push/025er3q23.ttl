@@ -15,7 +15,7 @@
     org:classification "funder" ; 
     org:classification "government" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-10-14"^^xsd:date ;
+    dct:modified "2024-10-31"^^xsd:date ;
     org:alternativeName "Ministry of the Armed Forces"@en ; 
     org:alternativeName "Ministère de la Défense"@fr ; 
     schema:url <http://defense.gouv.fr> ; 
@@ -49,6 +49,12 @@
     ] ; 
     org:hasLink [
         a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04zx93s85> ;
+        rdfs:label "Gendarmerie Nationale" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
         org:role "parent" ;
         org:member <https://ror.org/0172v8z89> ;
         rdfs:label "Gouvernement de la République française" ;
@@ -56,8 +62,20 @@
     org:hasLink [
         a org:Membership ;
         org:role "child" ;
-        org:member <https://ror.org/04zx93s85> ;
-        rdfs:label "Gendarmerie Nationale" ;
+        org:member <https://ror.org/051dhry29> ;
+        rdfs:label "Marine nationale" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0060wr328> ;
+        rdfs:label "Armée de l'air et de l'espace" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/016dc4c80> ;
+        rdfs:label "Armée de terre" ;
     ] ; 
     schema:location [
         a schema:Place ;

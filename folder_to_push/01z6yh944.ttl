@@ -14,9 +14,12 @@
     org:status "active" ;
     org:classification "facility" ; 
     dct:created "2019-02-17"^^xsd:date ;
-    dct:modified "2024-06-20"^^xsd:date ;
+    dct:modified "2024-10-31"^^xsd:date ;
     org:abbreviation "ECOSYS"@None ; 
-    schema:mainEntityOfPage <https://www6.versailles-grignon.inrae.fr/ecosys_eng/> ;
+    org:alternativeName "UMR ÉcoSys"@fr ; 
+    org:alternativeName "Unité Mixte de Recherche ÉcoSys"@fr ; 
+    schema:url <http://ecosys.versailles-saclay.hub.inrae.fr> ; 
+    schema:mainEntityOfPage <https://ecosys.versailles-saclay.hub.inrae.fr> ;
     schema:sameAs <https://grid.ac/institutions/grid.503170.0> ;
     org:hasLink [
         a org:Membership ;
@@ -30,11 +33,17 @@
         org:member <https://ror.org/02cbapb21> ;
         rdfs:label "Centre Île-de-France - Versailles-Grignon" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/03xjwb503> ;
+        rdfs:label "Université Paris-Saclay" ;
+    ] ; 
     schema:location [
         a schema:Place ;
-        geo:asWKT "POINT(1.91729 48.84964)"^^geo:wktLiteral ;
+        geo:asWKT "POINT(2.2498 48.71828)"^^geo:wktLiteral ;
         schema:address [
-            schema:addressLocality "Thiverval-Grignon" ;
+            schema:addressLocality "Palaiseau" ;
             schema:addressCountry "FR" ;
             schema:addressRegion "" ;
             dct:spatial [
@@ -46,6 +55,6 @@
                 ]
             ]
         ] ;
-        owl:sameAs <http://sws.geonames.org/2972794/> ;
+        owl:sameAs <http://sws.geonames.org/2988758/> ;
     ] ; 
     .

@@ -4,27 +4,50 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/056vbnz12> a org:Organization ;
     rdfs:label "Laboratoire Ville Mobilité Transport" ;
     schema:name "Laboratoire Ville Mobilité Transport" ;
     schema:foundingDate "2003"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "LVMT" ;
-    org:alternativeName "Laboratoire Ville Mobilite Transport" ;
-    schema:url <http://www.lvmt.fr/en/> ; 
+    org:classification "facility" ; 
+    dct:created "2019-02-17"^^xsd:date ;
+    dct:modified "2024-10-31"^^xsd:date ;
+    org:abbreviation "LVMT"@None ; 
+    org:alternativeName "Laboratoire Ville Mobilite Transport"@fr ; 
+    schema:mainEntityOfPage <http://www.lvmt.fr/en/> ;
+    schema:sameAs <https://grid.ac/institutions/grid.503350.0> ;
+    schema:sameAs <http://isni.org/isni/0000000123219273> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/03x42jk29> ;
+        rdfs:label "Université Gustave Eiffel" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02nwvxz07> ;
+        rdfs:label "École nationale des ponts et chaussées" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(2.6 48.85)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(2.6 48.85)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Champs-sur-Marne" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/3027014/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000123219273> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q51781747> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3027014/> ;
+    ] ; 
     .

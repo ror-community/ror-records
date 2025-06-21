@@ -4,24 +4,42 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/0495mzm65> a org:Organization ;
     rdfs:label "Interpsy" ;
     schema:name "Interpsy" ;
     schema:foundingDate "2009"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:alternativeName "InterPsy Laboratory" ;
-    schema:url <https://interpsy.univ-lorraine.fr> ; 
+    org:classification "facility" ; 
+    dct:created "2023-09-21"^^xsd:date ;
+    dct:modified "2024-10-31"^^xsd:date ;
+    org:alternativeName "UR 4432"@None ; 
+    schema:url <http://interpsy.univ-lorraine.fr> ; 
+    schema:mainEntityOfPage <https://interpsy.univ-lorraine.fr> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/04vfs2w97> ;
+        rdfs:label "Université de Lorraine" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(6.18496 48.68439)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(6.18496 48.68439)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Nancy" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2990999/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://www.wikidata.org/entity/Q51780572> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2990999/> ;
+    ] ; 
     .

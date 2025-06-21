@@ -1,0 +1,51 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/01ywyw124> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "1990"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "facility" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-31"^^xsd:date ;
+    org:abbreviation "IPGB SAS"@None ; 
+    org:alternativeName "Institute of Plant Genetics and Biotechnology"@en ; 
+    org:alternativeName "Ústav genetiky a biotechnológií rastlín SAV"@sk ; 
+    org:alternativeName "Ústav genetiky a biotechnológií rastlín SAV, v. v. i."@sk ; 
+    org:alternativeName "Ústav genetiky a biotechnológií rastlín Slovenská akadémia vied, v. v. i."@sk ; 
+    org:alternativeName "Ústav genetiky a biotechnológií rastlín Slovenská akadémia vied, verejná výskumná inštitúcia"@sk ; 
+    schema:url <http://ugbr.sav.sk> ; 
+    schema:mainEntityOfPage <https://ugbr.sav.sk> ;
+    schema:sameAs <https://grid.ac/institutions/grid.493324.b> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/03h7qq074> ;
+        rdfs:label "Slovak Academy of Sciences" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(18.08453 48.30763)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Nitra" ;
+            schema:addressCountry "SK" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Slovakia" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3058531/> ;
+    ] ; 
+    .

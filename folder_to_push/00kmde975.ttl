@@ -1,0 +1,48 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/00kmde975> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "2007"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2024-10-29"^^xsd:date ;
+    dct:modified "2024-10-31"^^xsd:date ;
+    org:abbreviation "ICAQF"@pt ; 
+    org:alternativeName "ICAQF-UNIFESP Diadema"@pt ; 
+    org:alternativeName "Instituto de Ciências Ambientais, Químicas e Farmacêuticas da Universidade Federal de São Paulo"@pt ; 
+    org:alternativeName "Universidade Federal de São Paul, Campus Diadema"@pt ; 
+    schema:mainEntityOfPage <https://www.unifesp.br/edicao-atual-entreteses/item/3926-instituto-de-ciencias-ambientais-quimicas-e-farmaceuticas> ;
+    owl:sameAs <https://pt.wikipedia.org/wiki/Instituto_de_Ci%C3%AAncias_Ambientais,_Qu%C3%ADmicas_e_Farmac%C3%AAuticas_da_Universidade_Federal_de_S%C3%A3o_Paulo> ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02k5swt12> ;
+        rdfs:label "Universidade Federal de São Paulo" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-46.62278 -23.68611)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Diadema" ;
+            schema:addressCountry "BR" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Brazil" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3464739/> ;
+    ] ; 
+    .

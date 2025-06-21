@@ -1,0 +1,75 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/00sh19a92> a org:Organization ;
+    rdfs:label "Ente Ospedaliero Cantonale" ;
+    schema:name "Ente Ospedaliero Cantonale" ;
+    org:status "active" ;
+    org:classification "other" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-31"^^xsd:date ;
+    org:abbreviation "EOC"@None ; 
+    schema:mainEntityOfPage <http://www.eoc.ch/en/> ;
+    schema:sameAs <https://grid.ac/institutions/grid.469433.f> ;
+    schema:sameAs <http://isni.org/isni/0000000405147845> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01a3zyd02> ;
+        rdfs:label "Ospedale Regionale di Locarno" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00gkheh82> ;
+        rdfs:label "Ospedale regionale di Lugano" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04fnna213> ;
+        rdfs:label "Istituto Pediatrico della Svizzera Italiana" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0410gdv63> ;
+        rdfs:label "Istituto Imaging della Svizzera Italiana" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01dpyn972> ;
+        rdfs:label "Istituto Oncologico della Svizzera Italiana" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/017eabx08> ;
+        rdfs:label "Ospedale Regionale di Mendrisio" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(9.01703 46.19278)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Bellinzona" ;
+            schema:addressCountry "CH" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Switzerland" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2661567/> ;
+    ] ; 
+    .
