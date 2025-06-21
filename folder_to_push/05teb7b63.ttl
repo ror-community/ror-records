@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/05teb7b63> a org:Organization ;
+    rdfs:label "Fırat University" ;
+    schema:name "Fırat University" ;
+    schema:foundingDate "1975"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:alternativeName "Elazığ Technical College" ;
+    schema:url <https://yeni.firat.edu.tr/> ; 
+    owl:sameAs <http://en.wikipedia.org/wiki/F%C4%B1rat_University> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(39.22321 38.67431)"^^geo:wktLiteral ;
+            schema:addressLocality "Elâzığ" ;
+            schema:addressCountry "TR" ;
+            owl:sameAs <http://sws.geonames.org/315808/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000405741529> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q1142874> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

@@ -1,0 +1,25 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/02wnb5903> a org:Organization ;
+    rdfs:label "KMAN Research Institute" ;
+    schema:name "KMAN Research Institute" ;
+    schema:foundingDate "2023"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Nonprofit" ; 
+    schema:url <https://kmanresce.ca> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-79.43725 43.87111)"^^geo:wktLiteral ;
+            schema:addressLocality "Richmond Hill" ;
+            schema:addressCountry "CA" ;
+            owl:sameAs <http://sws.geonames.org/6122091/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    .

@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/04z9etn73> a org:Organization ;
+    rdfs:label "FDI (France)" ;
+    schema:name "FDI (France)" ;
+    schema:foundingDate "1995"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Company" ; 
+    org:alternativeName "FDI France Medical" ;
+    schema:url <http://www.fdifrance.com/en/> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(5.585 45.53694)"^^geo:wktLiteral ;
+            schema:addressLocality "Les Abrets en Dauphiné" ;
+            schema:addressCountry "FR" ;
+            owl:sameAs <http://sws.geonames.org/6457195/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

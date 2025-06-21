@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/01qkmtm61> a org:Organization ;
+    rdfs:label "UC San Diego Moores Cancer Center" ;
+    schema:name "UC San Diego Moores Cancer Center" ;
+    schema:foundingDate "1978"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Healthcare" ; 
+    org:alternativeName "UCSD Moores Cancer Center" ;
+    schema:url <https://health.ucsd.edu/care/cancer/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Moores_Cancer_Center> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-117.2742 32.84727)"^^geo:wktLiteral ;
+            schema:addressLocality "La Jolla" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/5363943/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000404125492> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q43401559> ;
+    .

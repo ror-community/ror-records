@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/03v7tx966> a org:Organization ;
+    rdfs:label "Huntsman Cancer Institute" ;
+    schema:name "Huntsman Cancer Institute" ;
+    schema:foundingDate "1995"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Healthcare" ; 
+    org:abbreviation "HCI" ;
+    org:alternativeName "Huntsman Cancer Institute - University of Utah" ;
+    schema:url <https://healthcare.utah.edu/huntsmancancerinstitute/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Huntsman_Cancer_Institute> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-111.89105 40.76078)"^^geo:wktLiteral ;
+            schema:addressLocality "Salt Lake City" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/5780993/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000404223447> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q5945809> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

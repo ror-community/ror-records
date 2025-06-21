@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/02177hd90> a org:Organization ;
+    rdfs:label "Moinhos de Vento Agroecology Research Centre" ;
+    schema:name "Moinhos de Vento Agroecology Research Centre" ;
+    schema:foundingDate "2018"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    org:abbreviation "MVARC" ;
+    org:alternativeName "Moinhos de Vento Agroecological Research Centre" ;
+    schema:url <https://www.mvarc.eu> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-7.6901 37.55239)"^^geo:wktLiteral ;
+            schema:addressLocality "Moinhos de Vento de Baixo" ;
+            schema:addressCountry "PT" ;
+            owl:sameAs <http://sws.geonames.org/2266324/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    .

@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/00q6v6102> a org:Organization ;
+    rdfs:label "Spallation Neutron Source" ;
+    schema:name "Spallation Neutron Source" ;
+    schema:foundingDate "2006"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    org:abbreviation "SNS" ;
+    org:alternativeName "United States Department of Energy Office of Science Oak Ridge National Laboratory Spallation Neutron Source" ;
+    schema:url <https://neutrons.ornl.gov/sns> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Spallation_Neutron_Source> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-84.26964 36.01036)"^^geo:wktLiteral ;
+            schema:addressLocality "Oak Ridge" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/4646571/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q7573015> ;
+    .

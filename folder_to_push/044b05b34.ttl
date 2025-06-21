@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/044b05b34> a org:Organization ;
+    rdfs:label "Dartmouth Cancer Center" ;
+    schema:name "Dartmouth Cancer Center" ;
+    org:status "active" ;
+    org:classification "Healthcare" ; 
+    org:alternativeName "Dartmouth-Hitchcock Norris Cotton Cancer Center" ;
+    schema:url <https://cancer.dartmouth.edu> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Dartmouth_Cancer_Center> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-72.25176 43.64229)"^^geo:wktLiteral ;
+            schema:addressLocality "Lebanon" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/5088597/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000094769750> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q7053293> ;
+    .

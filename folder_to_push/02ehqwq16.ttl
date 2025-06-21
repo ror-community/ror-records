@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/02ehqwq16> a org:Organization ;
+    rdfs:label "Al-Rashid International Private University for Science and Technology" ;
+    schema:name "Al-Rashid International Private University for Science and Technology" ;
+    schema:foundingDate "2007"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "RU" ;
+    org:alternativeName "Al-Rashid International Private University" ;
+    schema:url <https://ru.edu.sy> ; 
+    owl:sameAs <https://ar.wikipedia.org/wiki/%D8%AC%D8%A7%D9%85%D8%B9%D8%A9_%D8%A7%D9%84%D8%B1%D8%B4%D9%8A%D8%AF_%D8%A7%D9%84%D8%AF%D9%88%D9%84%D9%8A%D8%A9_%D8%A7%D9%84%D8%AE%D8%A7%D8%B5%D8%A9_%D9%84%D9%84%D8%B9%D9%84%D9%88%D9%85_%D9%88%D8%A7%D9%84%D8%AA%D9%83%D9%86%D9%88%D9%84%D9%88%D8%AC%D9%8A%D8%A7> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(36.10213 32.61889)"^^geo:wktLiteral ;
+            schema:addressLocality "Dar‘ā" ;
+            schema:addressCountry "SY" ;
+            owl:sameAs <http://sws.geonames.org/170905/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    .

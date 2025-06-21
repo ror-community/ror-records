@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/02k243t26> a org:Organization ;
+    rdfs:label "Laboratoire physiopathologie et pharmacologie clinique de la douleu" ;
+    schema:name "Laboratoire physiopathologie et pharmacologie clinique de la douleu" ;
+    schema:foundingDate "2006"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    org:abbreviation "LPPD" ;
+    org:alternativeName "Physiopathologie et Pharmacologie Clinique de la Douleur" ;
+    schema:url <https://www.uvsq.fr/laboratoire-physiopathologie-et-pharmacologie-clinique-de-la-douleur-lppd> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(2.24128 48.83545)"^^geo:wktLiteral ;
+            schema:addressLocality "Boulogne-Billancourt" ;
+            schema:addressCountry "FR" ;
+            owl:sameAs <http://sws.geonames.org/3031137/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    .

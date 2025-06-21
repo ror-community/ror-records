@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/008gjgb19> a org:Organization ;
+    rdfs:label "Department of Agriculture Food and the Marine" ;
+    schema:name "Department of Agriculture Food and the Marine" ;
+    schema:foundingDate "1919"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Government" ; 
+    schema:url <http://www.agriculture.gov.ie/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Department_of_Agriculture,_Food_and_the_Marine> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-6.24889 53.33306)"^^geo:wktLiteral ;
+            schema:addressLocality "Dublin" ;
+            schema:addressCountry "IE" ;
+            owl:sameAs <http://sws.geonames.org/2964574/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/000000040488662X> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q3044707> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

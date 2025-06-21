@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/02kjy2z57> a org:Organization ;
+    rdfs:label "Relativistic Heavy Ion Collider" ;
+    schema:name "Relativistic Heavy Ion Collider" ;
+    schema:foundingDate "2000"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    org:abbreviation "RHIC" ;
+    org:alternativeName "United States Department of Energy Office of Science Brookhaven National Laboratory Relativistic Heavy Ion Collider" ;
+    schema:url <https://www.bnl.gov/rhic/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Relativistic_Heavy_Ion_Collider> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-72.88677 40.86954)"^^geo:wktLiteral ;
+            schema:addressLocality "Upton" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/5142042/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q1076995> ;
+    .

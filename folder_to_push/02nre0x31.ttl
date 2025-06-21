@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/02nre0x31> a org:Organization ;
+    rdfs:label "Dan L Duncan Comprehensive Cancer Center" ;
+    schema:name "Dan L Duncan Comprehensive Cancer Center" ;
+    org:status "active" ;
+    org:classification "Healthcare" ; 
+    org:abbreviation "DLDCCC" ;
+    org:alternativeName "Comprehensive Cancer Center at Baylor College of Medicine" ;
+    schema:url <https://www.bcm.edu/academic-centers/dan-l-duncan-comprehensive-cancer-center> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-95.36327 29.76328)"^^geo:wktLiteral ;
+            schema:addressLocality "Houston" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/4699066/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000404744453> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q45134040> ;
+    .

@@ -1,0 +1,26 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/04ke70m21> a org:Organization ;
+    rdfs:label "Røros Vinduer og Dører (Norway)" ;
+    schema:name "Røros Vinduer og Dører (Norway)" ;
+    schema:foundingDate "1875"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Company" ; 
+    schema:url <http://www.rorosvinduet.no/> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(11.3842 62.57468)"^^geo:wktLiteral ;
+            schema:addressLocality "Røros" ;
+            schema:addressCountry "NO" ;
+            owl:sameAs <http://sws.geonames.org/3141332/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

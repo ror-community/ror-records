@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/04e90ca47> a org:Organization ;
+    rdfs:label "Faculty of Electrical Engineering and Computing" ;
+    schema:name "Faculty of Electrical Engineering and Computing" ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "FER" ;
+    org:alternativeName "University of Zagreb Faculty of Electrical Engineering and Computing" ;
+    schema:url <https://www.fer.unizg.hr> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Faculty_of_Electrical_Engineering_and_Computing%2C_University_of_Zagreb> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(15.97798 45.81444)"^^geo:wktLiteral ;
+            schema:addressLocality "Zagreb" ;
+            schema:addressCountry "HR" ;
+            owl:sameAs <http://sws.geonames.org/3186886/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q3514081> ;
+    .

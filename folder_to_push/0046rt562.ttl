@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/0046rt562> a org:Organization ;
+    rdfs:label "Farm Credit Canada" ;
+    schema:name "Farm Credit Canada" ;
+    org:status "active" ;
+    org:classification "Government" ; 
+    org:abbreviation "FCC" ;
+    schema:url <https://www.fcc-fac.ca> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Farm_Credit_Canada> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-104.6178 50.45008)"^^geo:wktLiteral ;
+            schema:addressLocality "Regina" ;
+            schema:addressCountry "CA" ;
+            owl:sameAs <http://sws.geonames.org/6119109/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000122190077> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q5435484> ;
+    .

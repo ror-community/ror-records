@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/008hxwy89> a org:Organization ;
+    rdfs:label "Institut de recherches arctiques Jean Malaurie" ;
+    schema:name "Institut de recherches arctiques Jean Malaurie" ;
+    schema:foundingDate "2020"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    org:abbreviation "IRAM" ;
+    org:alternativeName "Jean Malaurie Institute" ;
+    schema:url <https://www.uvsq.fr/institut-de-recherches-arctique-jean-malaurie-iram-malaurie-institute-of-arctic-research-monaco-uvsq> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(2.07393 48.77334)"^^geo:wktLiteral ;
+            schema:addressLocality "Guyancourt" ;
+            schema:addressCountry "FR" ;
+            owl:sameAs <http://sws.geonames.org/3014143/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    .

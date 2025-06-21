@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/04jt46d36> a org:Organization ;
+    rdfs:label "Prince Sattam Bin Abdulaziz University" ;
+    schema:name "Prince Sattam Bin Abdulaziz University" ;
+    schema:foundingDate "2009"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "PSAU" ;
+    org:alternativeName "Prince Salman Bin Abdulaziz University" ;
+    schema:url <https://www.psau.edu.sa/en/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Prince_Sattam_Bin_Abdulaziz_University> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(47.33457 24.15541)"^^geo:wktLiteral ;
+            schema:addressLocality "Al Kharj" ;
+            schema:addressCountry "SA" ;
+            owl:sameAs <http://sws.geonames.org/109353/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000404415588> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q12204394> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .
