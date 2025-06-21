@@ -4,28 +4,74 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/045sza929> a org:Organization ;
     rdfs:label "China Earthquake Administration" ;
     schema:name "China Earthquake Administration" ;
     schema:foundingDate "1977"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "CEA" ;
-    org:alternativeName "National Earthquake Bureau" ;
-    schema:url <https://www.cea.gov.cn> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/China_Earthquake_Administration> ;
+    org:classification "facility" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-03-17"^^xsd:date ;
+    org:abbreviation "CEA"@None ; 
+    org:abbreviation "NEB"@None ; 
+    org:alternativeName "National Earthquake Bureau"@en ; 
+    org:alternativeName "Zhōngguó dìzhèn jú"@None ; 
+    org:alternativeName "中国地震台网中心"@zh ; 
+    schema:mainEntityOfPage <https://www.cea.gov.cn> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/China_Earthquake_Administration> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100010662> ;
+    schema:sameAs <https://grid.ac/institutions/grid.450296.c> ;
+    schema:sameAs <http://isni.org/isni/0000000095582971> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03jb7qa21> ;
+        rdfs:label "Hebei Seismological Bureau" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00pyv1r78> ;
+        rdfs:label "Institute of Disaster Prevention" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03z8dnf91> ;
+        rdfs:label "Institute of Geology, China Earthquake Administration" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03a2d0d33> ;
+        rdfs:label "Institute of Earthquake Forecasting, China Earthquake Administration" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01z6w7773> ;
+        rdfs:label "Institute of Engineering Mechanics, China Earthquake Administration" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(116.39723 39.9075)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(116.39723 39.9075)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Beijing" ;
             schema:addressCountry "CN" ;
-            owl:sameAs <http://sws.geonames.org/1816670/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000095582971> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q842307> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "Beijing" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "China" ;
+                schema:containedInPlace [
+                    schema:name "Asia" ;
+                    schema:identifier "AS"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1816670/> ;
+    ] ; 
     .

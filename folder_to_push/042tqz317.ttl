@@ -1,0 +1,39 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/042tqz317> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    org:status "active" ;
+    org:classification "nonprofit" ; 
+    dct:created "2025-03-17"^^xsd:date ;
+    dct:modified "2025-03-17"^^xsd:date ;
+    org:alternativeName "ECHOcommunity"@en ; 
+    schema:url <http://echocommunity.org> ; 
+    schema:url <http://echonet.org> ; 
+    schema:mainEntityOfPage <https://echonet.org> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-81.88009 26.66729)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "North Fort Myers" ;
+            schema:addressCountry "US" ;
+            schema:addressRegion "Florida" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "North America" ;
+                    schema:identifier "NA"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/4166195/> ;
+    ] ; 
+    .

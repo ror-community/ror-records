@@ -8,14 +8,19 @@
 @prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01bj4fd12> a org:Organization ;
-    rdfs:label "Laboratoire de Biologie Moléculaire de la Cellule" ;
-    schema:name "Laboratoire de Biologie Moléculaire de la Cellule" ;
+    rdfs:label "" ;
+    schema:name "" ;
     schema:foundingDate "2007"^^xsd:gYear ;
     org:status "active" ;
     org:classification "facility" ; 
+    org:classification "funder" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2025-02-26"^^xsd:date ;
+    dct:modified "2025-03-17"^^xsd:date ;
+    org:alternativeName "Inserm 1293"@None ; 
     org:abbreviation "LBMC"@None ; 
+    org:alternativeName "Laboratoire de Biologie Moléculaire de la Cellule"@fr ; 
+    org:alternativeName "Laboratory of Biology and Modeling of the Cell"@en ; 
+    org:alternativeName "UMR 5239"@None ; 
     schema:mainEntityOfPage <https://www.ens-lyon.fr/LBMC> ;
     schema:sameAs <https://grid.ac/institutions/grid.462957.b> ;
     schema:sameAs <http://isni.org/isni/0000000405980706> ;
@@ -28,20 +33,14 @@
     org:hasLink [
         a org:Membership ;
         org:role "parent" ;
-        org:member <https://ror.org/01502ca60> ;
-        rdfs:label "Hospices Civils de Lyon" ;
-    ] ; 
-    org:hasLink [
-        a org:Membership ;
-        org:role "parent" ;
-        org:member <https://ror.org/00rydyx93> ;
-        rdfs:label "Institut des Sciences Biologiques" ;
-    ] ; 
-    org:hasLink [
-        a org:Membership ;
-        org:role "parent" ;
         org:member <https://ror.org/04zmssz18> ;
         rdfs:label "École Normale Supérieure de Lyon" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02feahw73> ;
+        rdfs:label "Centre National de la Recherche Scientifique" ;
     ] ; 
     schema:location [
         a schema:Place ;

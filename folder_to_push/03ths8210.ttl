@@ -15,7 +15,7 @@
     org:classification "education" ; 
     org:classification "funder" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-10-21"^^xsd:date ;
+    dct:modified "2025-03-17"^^xsd:date ;
     org:abbreviation "UC3M"@None ; 
     schema:url <http://uc3m.es> ; 
     schema:mainEntityOfPage <https://www.uc3m.es> ;
@@ -23,19 +23,25 @@
     schema:sameAs <https://api.crossref.org/funders/501100006318> ;
     schema:sameAs <https://grid.ac/institutions/grid.7840.b> ;
     schema:sameAs <http://isni.org/isni/0000000121689183> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/004aqbt71> ;
+        rdfs:label "Instituto Interuniversitario de Investigación Avanzada sobre Evaluación de la Ciencia y la Universidad" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(-3.70256 40.4165)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Madrid" ;
             schema:addressCountry "ES" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Madrid" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "Spain" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

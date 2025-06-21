@@ -15,7 +15,7 @@
     org:classification "funder" ; 
     org:classification "nonprofit" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-07-29"^^xsd:date ;
+    dct:modified "2025-03-17"^^xsd:date ;
     org:abbreviation "WWF"@None ; 
     org:alternativeName "WWF Schweiz"@de ; 
     org:alternativeName "WWF Switzerland"@en ; 
@@ -110,19 +110,25 @@
         org:member <https://ror.org/010t4mz11> ;
         rdfs:label "WWF Hungary" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00306vw82> ;
+        rdfs:label "World Wide Fund for Nature Japan" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(8.55 47.36667)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Zurich" ;
             schema:addressCountry "CH" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Zurich" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "Switzerland" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

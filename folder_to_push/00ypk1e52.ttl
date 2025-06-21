@@ -1,0 +1,42 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/00ypk1e52> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "2011"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2025-03-17"^^xsd:date ;
+    dct:modified "2025-03-17"^^xsd:date ;
+    org:alternativeName "Al-Ma'aref University"@en ; 
+    org:alternativeName "Al-Maaref University"@en ; 
+    org:abbreviation "MU"@en ; 
+    schema:url <http://mu.edu.lb> ; 
+    schema:mainEntityOfPage <https://www.mu.edu.lb> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Al_Maaref_University> ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(35.50157 33.89332)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Beirut" ;
+            schema:addressCountry "LB" ;
+            schema:addressRegion "Beyrouth" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Lebanon" ;
+                schema:containedInPlace [
+                    schema:name "Asia" ;
+                    schema:identifier "AS"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/276781/> ;
+    ] ; 
+    .

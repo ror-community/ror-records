@@ -15,7 +15,7 @@
     org:classification "education" ; 
     org:classification "funder" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-06-20"^^xsd:date ;
+    dct:modified "2025-03-17"^^xsd:date ;
     org:abbreviation "UiB"@no ; 
     schema:mainEntityOfPage <http://www.uib.no/> ;
     owl:sameAs <http://en.wikipedia.org/wiki/University_of_Bergen> ; 
@@ -58,19 +58,25 @@
         org:member <https://ror.org/02w0r2764> ;
         rdfs:label "MAGIC Telescopes" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04jthgw29> ;
+        rdfs:label "Center for Digital Narrative" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(5.32415 60.39299)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Bergen" ;
             schema:addressCountry "NO" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Vestland" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "Norway" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

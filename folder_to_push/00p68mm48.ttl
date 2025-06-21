@@ -1,0 +1,41 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/00p68mm48> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "2001"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "government" ; 
+    dct:created "2025-03-17"^^xsd:date ;
+    dct:modified "2025-03-17"^^xsd:date ;
+    org:abbreviation "JMG"@ms ; 
+    schema:url <http://jmg.gov.my> ; 
+    schema:mainEntityOfPage <https://www.jmg.gov.my> ;
+    owl:sameAs <https://ms.wikipedia.org/wiki/Jabatan_Mineral_dan_Geosains_Malaysia> ; 
+    schema:sameAs <http://isni.org/isni/0000000106822871> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(101.7 2.91667)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Putrajaya" ;
+            schema:addressCountry "MY" ;
+            schema:addressRegion "Putrajaya" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Malaysia" ;
+                schema:containedInPlace [
+                    schema:name "Asia" ;
+                    schema:identifier "AS"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1996552/> ;
+    ] ; 
+    .

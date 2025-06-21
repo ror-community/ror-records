@@ -1,0 +1,40 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/04eqksj42> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    org:status "active" ;
+    org:classification "company" ; 
+    dct:created "2025-03-17"^^xsd:date ;
+    dct:modified "2025-03-17"^^xsd:date ;
+    org:alternativeName "Rowden"@en ; 
+    org:alternativeName "Rowden Tech"@en ; 
+    schema:url <http://rowdentech.co.uk> ; 
+    schema:url <http://rowdentech.com> ; 
+    schema:mainEntityOfPage <https://www.rowdentech.com> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-2.59665 51.45523)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Bristol" ;
+            schema:addressCountry "GB" ;
+            schema:addressRegion "England" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United Kingdom" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2654675/> ;
+    ] ; 
+    .

@@ -1,0 +1,47 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/012wfs048> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    org:status "active" ;
+    org:classification "government" ; 
+    dct:created "2025-03-17"^^xsd:date ;
+    dct:modified "2025-03-17"^^xsd:date ;
+    org:alternativeName "U.S. Air Forces Africa"@en ; 
+    org:abbreviation "USAFE-AFAFRICA"@en ; 
+    org:alternativeName "United States Air Forces Africa"@en ; 
+    schema:url <http://usafe.af.mil> ; 
+    schema:mainEntityOfPage <https://www.usafe.af.mil> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/United_States_Air_Forces_in_Europe_%E2%80%93_Air_Forces_Africa> ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/01973x930> ;
+        rdfs:label "United States Department of the Air Force" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(7.55 49.45)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Ramstein Air Base" ;
+            schema:addressCountry "DE" ;
+            schema:addressRegion "Rheinland-Pfalz" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Germany" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/6557919/> ;
+    ] ; 
+    .

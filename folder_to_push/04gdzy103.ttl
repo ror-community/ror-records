@@ -1,0 +1,43 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/04gdzy103> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "2008"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "funder" ; 
+    org:classification "nonprofit" ; 
+    dct:created "2025-03-17"^^xsd:date ;
+    dct:modified "2025-03-17"^^xsd:date ;
+    org:abbreviation "CREEW"@en ; 
+    org:alternativeName "Centre of Research for Environment, Energy and Water"@en ; 
+    schema:url <http://creew.org.np> ; 
+    schema:mainEntityOfPage <https://www.creew.org.np> ;
+    schema:sameAs <https://api.crossref.org/funders/501100011014> ;
+    schema:sameAs <http://isni.org/isni/0000000477443520> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(85.3206 27.70169)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Kathmandu" ;
+            schema:addressCountry "NP" ;
+            schema:addressRegion "Bagmati Province" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Nepal" ;
+                schema:containedInPlace [
+                    schema:name "Asia" ;
+                    schema:identifier "AS"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1283240/> ;
+    ] ; 
+    .

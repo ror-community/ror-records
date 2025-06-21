@@ -14,7 +14,7 @@
     org:status "active" ;
     org:classification "government" ; 
     dct:created "2021-09-23"^^xsd:date ;
-    dct:modified "2024-11-19"^^xsd:date ;
+    dct:modified "2025-03-17"^^xsd:date ;
     org:abbreviation "NAAS"@None ; 
     schema:mainEntityOfPage <http://naas.gov.ua/> ;
     schema:sameAs <https://grid.ac/institutions/grid.512254.5> ;
@@ -30,19 +30,25 @@
         org:member <https://ror.org/020s2ee41> ;
         rdfs:label "Institute of Bioenergy Crops and Sugar Beet" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00w3jeh04> ;
+        rdfs:label "Polissya Institute of Agriculture of National Academy of Agrarian Sciences of Ukraine" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(30.5238 50.45466)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Kyiv" ;
             schema:addressCountry "UA" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Kyiv City" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "Ukraine" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

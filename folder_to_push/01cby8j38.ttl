@@ -15,7 +15,7 @@
     org:classification "education" ; 
     org:classification "funder" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-11-19"^^xsd:date ;
+    dct:modified "2025-03-17"^^xsd:date ;
     org:abbreviation "UAM"@None ; 
     schema:url <http://uam.es> ; 
     schema:mainEntityOfPage <https://www.uam.es> ;
@@ -89,19 +89,25 @@
         org:member <https://ror.org/02x2fbb57> ;
         rdfs:label "Red Española de Supercomputación" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/004aqbt71> ;
+        rdfs:label "Instituto Interuniversitario de Investigación Avanzada sobre Evaluación de la Ciencia y la Universidad" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(-3.70256 40.4165)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Madrid" ;
             schema:addressCountry "ES" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Madrid" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "Spain" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

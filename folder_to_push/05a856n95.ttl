@@ -1,0 +1,42 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/05a856n95> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "2018"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "nonprofit" ; 
+    dct:created "2025-03-17"^^xsd:date ;
+    dct:modified "2025-03-17"^^xsd:date ;
+    org:abbreviation "ACSDRI"@en ; 
+    org:alternativeName "Australian Centre for Sustainable Development Research & Innovation (ACSDRI)"@en ; 
+    org:alternativeName "Australian Centre for Sustainable Development Research and Innovation"@en ; 
+    schema:url <http://acsdri.com> ; 
+    schema:mainEntityOfPage <https://acsdri.com> ;
+    schema:sameAs <http://isni.org/isni/0000000507120299> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(138.59863 -34.92866)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Adelaide" ;
+            schema:addressCountry "AU" ;
+            schema:addressRegion "South Australia" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Australia" ;
+                schema:containedInPlace [
+                    schema:name "Oceania" ;
+                    schema:identifier "OC"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2078025/> ;
+    ] ; 
+    .

@@ -14,7 +14,7 @@
     org:status "active" ;
     org:classification "healthcare" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-07-29"^^xsd:date ;
+    dct:modified "2025-03-17"^^xsd:date ;
     org:alternativeName "CISSCA Chaudière-Appalaches"@fr ; 
     org:alternativeName "CISSS Chaudière-Appalaches"@fr ; 
     org:alternativeName "CISSS of Chaudière-Appalaches"@en ; 
@@ -33,19 +33,25 @@
         org:member <https://ror.org/02805zw73> ;
         rdfs:label "Hôpital d'Youville de Sherbrooke" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05sqjae09> ;
+        rdfs:label "Hôpital Hôtel-Dieu de Lévis" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(-71.23921 46.75818)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Saint Romuald" ;
             schema:addressCountry "CA" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Quebec" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "Canada" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "North America" ;
+                    schema:identifier "NA"
                 ]
             ]
         ] ;

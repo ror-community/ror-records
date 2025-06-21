@@ -1,0 +1,40 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/0474m4e38> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "1877"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "archive" ; 
+    dct:created "2025-03-17"^^xsd:date ;
+    dct:modified "2025-03-17"^^xsd:date ;
+    org:alternativeName "Department of National Museums of Sri Lanka"@en ; 
+    org:alternativeName "Department of National Museums, Sri Lanka"@en ; 
+    schema:url <http://museum.gov.lk> ; 
+    schema:mainEntityOfPage <https://www.museum.gov.lk> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(79.84868 6.93548)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Colombo" ;
+            schema:addressCountry "LK" ;
+            schema:addressRegion "Western Province" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Sri Lanka" ;
+                schema:containedInPlace [
+                    schema:name "Asia" ;
+                    schema:identifier "AS"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1248991/> ;
+    ] ; 
+    .

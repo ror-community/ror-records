@@ -1,0 +1,47 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/0393cmd93> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    org:status "active" ;
+    org:classification "government" ; 
+    dct:created "2025-03-17"^^xsd:date ;
+    dct:modified "2025-03-17"^^xsd:date ;
+    org:abbreviation "AFRC"@en ; 
+    org:alternativeName "Air Force Reserve Command"@en ; 
+    org:alternativeName "U.S. Air Force Reserve Command"@en ; 
+    schema:url <http://afrc.af.mil> ; 
+    schema:mainEntityOfPage <https://www.afrc.af.mil> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Air_Force_Reserve_Command> ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/01973x930> ;
+        rdfs:label "United States Department of the Air Force" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-83.59185 32.64014)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Robins AFB" ;
+            schema:addressCountry "US" ;
+            schema:addressRegion "Georgia" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "North America" ;
+                    schema:identifier "NA"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/6301753/> ;
+    ] ; 
+    .

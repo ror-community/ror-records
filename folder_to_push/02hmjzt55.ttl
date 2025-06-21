@@ -15,7 +15,7 @@
     org:classification "funder" ; 
     org:classification "government" ; 
     dct:created "2022-11-28"^^xsd:date ;
-    dct:modified "2024-11-19"^^xsd:date ;
+    dct:modified "2025-03-17"^^xsd:date ;
     org:abbreviation "BRIN"@None ; 
     schema:url <http://brin.go.id> ; 
     schema:mainEntityOfPage <https://www.brin.go.id> ;
@@ -33,19 +33,25 @@
         org:member <https://ror.org/04mb62065> ;
         rdfs:label "Direktorat Riset Dan Pengabdian Kepada Masyarakat" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00jm1tr64> ;
+        rdfs:label "Research Center for Applied Zoology" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(106.84513 -6.21462)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Jakarta" ;
             schema:addressCountry "ID" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Jakarta" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "Indonesia" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Asia" ;
+                    schema:identifier "AS"
                 ]
             ]
         ] ;

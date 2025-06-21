@@ -1,0 +1,41 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/00wh8n595> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "2021"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "company" ; 
+    dct:created "2025-03-17"^^xsd:date ;
+    dct:modified "2025-03-17"^^xsd:date ;
+    org:abbreviation "WLROBO"@en ; 
+    org:alternativeName "Westlake Robotics Technology"@en ; 
+    org:alternativeName "西湖机器人"@zh ; 
+    org:alternativeName "西湖机器人科技"@zh ; 
+    schema:mainEntityOfPage <https://www.wlrobo.com> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(120.16142 30.29365)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Hangzhou" ;
+            schema:addressCountry "CN" ;
+            schema:addressRegion "Zhejiang" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "China" ;
+                schema:containedInPlace [
+                    schema:name "Asia" ;
+                    schema:identifier "AS"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1808926/> ;
+    ] ; 
+    .

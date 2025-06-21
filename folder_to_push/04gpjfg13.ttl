@@ -1,0 +1,45 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/04gpjfg13> a org:Organization ;
+    rdfs:label "International Centre for Materials Physics" ;
+    schema:name "International Centre for Materials Physics" ;
+    schema:foundingDate "1987"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "facility" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-03-17"^^xsd:date ;
+    org:abbreviation "ICMP"@None ; 
+    schema:mainEntityOfPage <http://www.synl.ac.cn/org/mag/chinese/icmp/eintro.htm> ;
+    schema:sameAs <https://grid.ac/institutions/grid.482781.0> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03pa1rf77> ;
+        rdfs:label "Institute of Metal Research" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(123.43278 41.79222)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Shenyang" ;
+            schema:addressCountry "CN" ;
+            schema:addressRegion "Liaoning" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "China" ;
+                schema:containedInPlace [
+                    schema:name "Asia" ;
+                    schema:identifier "AS"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2034937/> ;
+    ] ; 
+    .

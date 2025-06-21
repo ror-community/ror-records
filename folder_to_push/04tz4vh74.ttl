@@ -1,0 +1,45 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/04tz4vh74> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-03-17"^^xsd:date ;
+    org:alternativeName "Ahmed Zabana University"@en ; 
+    org:alternativeName "Ahmed Zabana University - Relizane"@en ; 
+    org:abbreviation "CUR"@None ; 
+    org:alternativeName "Centre Universitaire de Relizane"@fr ; 
+    org:alternativeName "Relizane University"@en ; 
+    org:alternativeName "المركز الجامعي - غليزان"@ar ; 
+    schema:url <http://univ-relizane.dz> ; 
+    schema:mainEntityOfPage <https://univ-relizane.dz> ;
+    schema:sameAs <https://grid.ac/institutions/grid.442420.4> ;
+    schema:sameAs <http://isni.org/isni/0000000405729984> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(0.55599 35.73734)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Relizane" ;
+            schema:addressCountry "DZ" ;
+            schema:addressRegion "Relizane" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Algeria" ;
+                schema:containedInPlace [
+                    schema:name "Africa" ;
+                    schema:identifier "AF"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2483668/> ;
+    ] ; 
+    .

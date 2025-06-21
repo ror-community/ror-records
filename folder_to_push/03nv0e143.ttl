@@ -1,0 +1,40 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/03nv0e143> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "2023"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2025-03-17"^^xsd:date ;
+    dct:modified "2025-03-17"^^xsd:date ;
+    org:abbreviation "SMA"@en ; 
+    org:alternativeName "اكاديمية الشارقة للنقل البحري"@ar ; 
+    schema:url <http://sma.ac.ae> ; 
+    schema:mainEntityOfPage <https://www.sma.ac.ae> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(56.34199 25.33132)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Khor'fakkan" ;
+            schema:addressCountry "AE" ;
+            schema:addressRegion "Sharjah" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United Arab Emirates" ;
+                schema:containedInPlace [
+                    schema:name "Asia" ;
+                    schema:identifier "AS"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/291696/> ;
+    ] ; 
+    .

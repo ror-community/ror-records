@@ -1,0 +1,47 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/01qz8fw96> a org:Organization ;
+    rdfs:label "Lutheran Theological Seminary at Philadelphia" ;
+    schema:name "Lutheran Theological Seminary at Philadelphia" ;
+    schema:foundingDate "1864"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "other" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-03-17"^^xsd:date ;
+    org:abbreviation "LTSP"@None ; 
+    schema:mainEntityOfPage <https://ltsp.edu/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Lutheran_Theological_Seminary_at_Philadelphia> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.447000.7> ;
+    schema:sameAs <http://isni.org/isni/000000011014791X> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "successor" ;
+        org:member <https://ror.org/04x6yts59> ;
+        rdfs:label "United Lutheran Seminary" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-75.16362 39.95238)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Philadelphia" ;
+            schema:addressCountry "US" ;
+            schema:addressRegion "Pennsylvania" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "North America" ;
+                    schema:identifier "NA"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/4560349/> ;
+    ] ; 
+    .

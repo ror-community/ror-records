@@ -1,0 +1,42 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/00sqxf378> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "1956"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "nonprofit" ; 
+    dct:created "2025-03-17"^^xsd:date ;
+    dct:modified "2025-03-17"^^xsd:date ;
+    org:abbreviation "DAI-GT"@en ; 
+    org:alternativeName "Dobrudzha Agricultural Institute"@en ; 
+    org:alternativeName "Добруджански земеделски институт"@bg ; 
+    schema:url <http://dai-gt.org> ; 
+    schema:mainEntityOfPage <https://dai-gt.org> ;
+    owl:sameAs <https://bg.wikipedia.org/wiki/%D0%94%D0%BE%D0%B1%D1%80%D1%83%D0%B4%D0%B6%D0%B0%D0%BD%D1%81%D0%BA%D0%B8_%D0%B7%D0%B5%D0%BC%D0%B5%D0%B4%D0%B5%D0%BB%D1%81%D0%BA%D0%B8_%D0%B8%D0%BD%D1%81%D1%82%D0%B8%D1%82%D1%83%D1%82> ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(28.08333 43.73333)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "General Toshevo" ;
+            schema:addressCountry "BG" ;
+            schema:addressRegion "Dobrich" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Bulgaria" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/731463/> ;
+    ] ; 
+    .

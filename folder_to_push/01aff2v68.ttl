@@ -15,7 +15,7 @@
     org:classification "education" ; 
     org:classification "funder" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-10-21"^^xsd:date ;
+    dct:modified "2025-03-17"^^xsd:date ;
     org:abbreviation "UW"@None ; 
     org:alternativeName "UWaterloo"@en ; 
     schema:url <http://uwaterloo.ca> ; 
@@ -36,19 +36,25 @@
         org:member <https://ror.org/02j3zn476> ;
         rdfs:label "Grand River Hospital" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01sqgq073> ;
+        rdfs:label "Future Cities Institute" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(-80.51639 43.4668)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Waterloo" ;
             schema:addressCountry "CA" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Ontario" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "Canada" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "North America" ;
+                    schema:identifier "NA"
                 ]
             ]
         ] ;

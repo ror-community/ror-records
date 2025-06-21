@@ -11,27 +11,33 @@
     rdfs:label "Fundació CTM Centre Tecnològic" ;
     schema:name "Fundació CTM Centre Tecnològic" ;
     schema:foundingDate "2001"^^xsd:gYear ;
-    org:status "active" ;
+    org:status "inactive" ;
     org:classification "company" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-11-19"^^xsd:date ;
+    dct:modified "2025-03-17"^^xsd:date ;
     org:abbreviation "ATC"@None ; 
     schema:url <http://eurecat.org> ; 
     schema:mainEntityOfPage <https://eurecat.org> ;
     schema:sameAs <https://grid.ac/institutions/grid.424722.5> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "successor" ;
+        org:member <https://ror.org/023yvt917> ;
+        rdfs:label "EURECAT Centre Tecnològic de Catalunya" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(1.82399 41.72815)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Manresa" ;
             schema:addressCountry "ES" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Catalonia" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "Spain" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

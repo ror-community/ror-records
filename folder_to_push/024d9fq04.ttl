@@ -1,0 +1,40 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/024d9fq04> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "1989"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "other" ; 
+    dct:created "2025-03-17"^^xsd:date ;
+    dct:modified "2025-03-17"^^xsd:date ;
+    org:abbreviation "ABET"@pt ; 
+    org:alternativeName "Brazilian Association of Labour Studies"@en ; 
+    schema:url <http://abet-trabalho.org.br> ; 
+    schema:mainEntityOfPage <https://abet-trabalho.org.br> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-48.54917 -27.59667)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Florianópolis" ;
+            schema:addressCountry "BR" ;
+            schema:addressRegion "Santa Catarina" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Brazil" ;
+                schema:containedInPlace [
+                    schema:name "South America" ;
+                    schema:identifier "SA"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3463237/> ;
+    ] ; 
+    .

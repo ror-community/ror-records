@@ -1,0 +1,43 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/000xwam85> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "1825"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "archive" ; 
+    dct:created "2025-03-17"^^xsd:date ;
+    dct:modified "2025-03-17"^^xsd:date ;
+    org:abbreviation "NMS"@de ; 
+    org:alternativeName "Natural History Museum Solothurn"@en ; 
+    schema:url <http://naturmuseum-so.ch> ; 
+    schema:url <http://solothurn.ch> ; 
+    schema:mainEntityOfPage <https://www.naturmuseum-so.ch> ;
+    owl:sameAs <https://de.wikipedia.org/wiki/Naturmuseum_Solothurn> ; 
+    schema:sameAs <http://isni.org/isni/0000000115336664> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(7.53714 47.20791)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Solothurn" ;
+            schema:addressCountry "CH" ;
+            schema:addressRegion "Solothurn" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Switzerland" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2658564/> ;
+    ] ; 
+    .

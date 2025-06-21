@@ -4,27 +4,82 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02rxc7m23> a org:Organization ;
     rdfs:label "Universidad de Navarra" ;
     schema:name "Universidad de Navarra" ;
     schema:foundingDate "1952"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "UNAV" ;
-    schema:url <https://www.unav.edu> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/University_of_Navarra> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-03-17"^^xsd:date ;
+    org:abbreviation "UNAV"@None ; 
+    schema:mainEntityOfPage <https://www.unav.edu> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/University_of_Navarra> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100004435> ;
+    schema:sameAs <https://grid.ac/institutions/grid.5924.a> ;
+    schema:sameAs <http://isni.org/isni/0000000419370271> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00qy6se24> ;
+        rdfs:label "Asociación de Amigos de la Universidad de Navarra" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0226mqz95> ;
+        rdfs:label "Fundación Universitaria de Navarra" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03phm3r45> ;
+        rdfs:label "Clinica Universidad de Navarra" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/011787436> ;
+        rdfs:label "Complejo Hospitalario de Navarra" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/023d5h353> ;
+        rdfs:label "Navarre Institute of Health Research" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01qew8q20> ;
+        rdfs:label "Fundación para la Investigación Médica Aplicada" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00v9d4z37> ;
+        rdfs:label "IESE Business School" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-1.64323 42.81687)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-1.64323 42.81687)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Pamplona" ;
             schema:addressCountry "ES" ;
-            owl:sameAs <http://sws.geonames.org/3114472/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000419370271> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q926068> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "Navarre" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Spain" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3114472/> ;
+    ] ; 
     .

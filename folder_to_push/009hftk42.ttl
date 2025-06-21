@@ -1,0 +1,46 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/009hftk42> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2025-03-17"^^xsd:date ;
+    dct:modified "2025-03-17"^^xsd:date ;
+    org:alternativeName "Asia Malang Institute of Technology and Business"@en ; 
+    org:alternativeName "Institut Asia Malang"@id ; 
+    schema:url <http://asia.ac.id> ; 
+    schema:mainEntityOfPage <https://asia.ac.id> ;
+    owl:sameAs <https://id.wikipedia.org/wiki/Institut_Teknologi_dan_Bisnis_ASIA_Malang> ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02rr0k120> ;
+        rdfs:label "LP2M Institut Teknologi dan Bisnis Asia Malang" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(112.63333 -7.98333)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Kota Malang" ;
+            schema:addressCountry "ID" ;
+            schema:addressRegion "East Java" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Indonesia" ;
+                schema:containedInPlace [
+                    schema:name "Asia" ;
+                    schema:identifier "AS"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1636712/> ;
+    ] ; 
+    .

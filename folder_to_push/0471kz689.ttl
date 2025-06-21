@@ -15,7 +15,7 @@
     org:classification "funder" ; 
     org:classification "government" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-11-19"^^xsd:date ;
+    dct:modified "2025-03-17"^^xsd:date ;
     org:abbreviation "ANSES"@None ; 
     schema:url <http://anses.fr> ; 
     schema:mainEntityOfPage <https://www.anses.fr> ;
@@ -41,19 +41,25 @@
         org:member <https://ror.org/01dthb180> ;
         rdfs:label "Epidémiosurveillance et circulation des parasites dans les environnements" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04ssf8c19> ;
+        rdfs:label "Unité sous contrat Caractérisation et suivi des phénomènes d'évolution des résistances" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(2.43945 48.81171)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Maisons-Alfort" ;
             schema:addressCountry "FR" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Île-de-France" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "France" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

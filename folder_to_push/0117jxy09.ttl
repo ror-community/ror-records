@@ -15,7 +15,7 @@
     org:classification "company" ; 
     org:classification "funder" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-07-29"^^xsd:date ;
+    dct:modified "2025-03-17"^^xsd:date ;
     schema:mainEntityOfPage <https://www.springernature.com> ;
     owl:sameAs <https://en.wikipedia.org/wiki/Springer_Nature> ; 
     schema:sameAs <https://api.crossref.org/funders/501100020487> ;
@@ -55,7 +55,7 @@
         a org:Membership ;
         org:role "child" ;
         org:member <https://ror.org/01pn4sd83> ;
-        rdfs:label "Springer Nature (China)" ;
+        rdfs:label "Springer Nature (Beijing, China)" ;
     ] ; 
     org:hasLink [
         a org:Membership ;
@@ -63,19 +63,31 @@
         org:member <https://ror.org/04kvn3r95> ;
         rdfs:label "Springer Nature (India)" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03bvv1786> ;
+        rdfs:label "Springer Nature (Nanjing, China)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01f9pza55> ;
+        rdfs:label "Springer Nature (Shanghai, China)" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(13.41053 52.52437)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Berlin" ;
             schema:addressCountry "DE" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Berlin" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "Germany" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

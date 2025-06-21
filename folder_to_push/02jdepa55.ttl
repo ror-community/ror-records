@@ -11,10 +11,10 @@
     rdfs:label "Food Research Institute Prague" ;
     schema:name "Food Research Institute Prague" ;
     schema:foundingDate "1958"^^xsd:gYear ;
-    org:status "active" ;
+    org:status "inactive" ;
     org:classification "facility" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-10-21"^^xsd:date ;
+    dct:modified "2025-03-17"^^xsd:date ;
     org:abbreviation "FRIP"@None ; 
     org:abbreviation "VUPP"@None ; 
     org:alternativeName "Výzkumný Ustav Potravinářského Průmyslu"@cs ; 
@@ -22,19 +22,25 @@
     schema:mainEntityOfPage <https://www.vupp.cz> ;
     schema:sameAs <https://grid.ac/institutions/grid.448155.9> ;
     schema:sameAs <http://isni.org/isni/0000000091007371> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "successor" ;
+        org:member <https://ror.org/0436mv865> ;
+        rdfs:label "Czech Agrifood Research Center" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(14.42076 50.08804)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Prague" ;
             schema:addressCountry "CZ" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Prague" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "Czechia" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

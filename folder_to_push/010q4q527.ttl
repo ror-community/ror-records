@@ -15,7 +15,7 @@
     org:classification "funder" ; 
     org:classification "government" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-12-10"^^xsd:date ;
+    dct:modified "2025-03-17"^^xsd:date ;
     org:alternativeName "Gouvernement de Sa Majesté"@fr ; 
     org:alternativeName "Her Majesty's Government"@en ; 
     schema:mainEntityOfPage <http://www.canada.ca/en/> ;
@@ -101,19 +101,25 @@
         org:member <https://ror.org/035rreb34> ;
         rdfs:label "Department of National Defence" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01pxchq54> ;
+        rdfs:label "Parliament of Canada" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(-75.69812 45.41117)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Ottawa" ;
             schema:addressCountry "CA" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Ontario" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "Canada" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "North America" ;
+                    schema:identifier "NA"
                 ]
             ]
         ] ;

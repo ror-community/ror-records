@@ -4,28 +4,44 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/05q2acf12> a org:Organization ;
-    rdfs:label "National Institute of Industrial Engineering" ;
-    schema:name "National Institute of Industrial Engineering" ;
+    rdfs:label "" ;
+    schema:name "" ;
     schema:foundingDate "1963"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "NITIE" ;
-    org:alternativeName "National Institute for Training in Industrial Engineering" ;
-    schema:url <https://www.nitie.edu/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/National_Institute_of_Industrial_Engineering> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-03-17"^^xsd:date ;
+    org:alternativeName "IIM Mumbai"@en ; 
+    org:abbreviation "NITIE"@None ; 
+    org:alternativeName "National Institute for Training in Industrial Engineering"@en ; 
+    org:alternativeName "National Institute of Industrial Engineering"@en ; 
+    schema:url <http://iimmumbai.ac.in> ; 
+    schema:mainEntityOfPage <https://iimmumbai.ac.in> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/National_Institute_of_Industrial_Engineering> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100012263> ;
+    schema:sameAs <https://grid.ac/institutions/grid.462559.9> ;
+    schema:sameAs <http://isni.org/isni/0000000405026066> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(72.88261 19.07283)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(72.88261 19.07283)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Mumbai" ;
             schema:addressCountry "IN" ;
-            owl:sameAs <http://sws.geonames.org/1275339/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000405026066> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q6973662> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "Maharashtra" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "India" ;
+                schema:containedInPlace [
+                    schema:name "Asia" ;
+                    schema:identifier "AS"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1275339/> ;
+    ] ; 
     .

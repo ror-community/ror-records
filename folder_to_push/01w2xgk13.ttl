@@ -1,0 +1,41 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/01w2xgk13> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "1984"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2025-03-17"^^xsd:date ;
+    dct:modified "2025-03-17"^^xsd:date ;
+    org:abbreviation "PTU"@en ; 
+    org:alternativeName "Pondicherry Engineering College"@en ; 
+    schema:url <http://ptuniv.edu.in> ; 
+    schema:mainEntityOfPage <https://ptuniv.edu.in> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Puducherry_Technological_University> ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(79.82979 11.93381)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Puducherry" ;
+            schema:addressCountry "IN" ;
+            schema:addressRegion "Puducherry" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "India" ;
+                schema:containedInPlace [
+                    schema:name "Asia" ;
+                    schema:identifier "AS"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1259425/> ;
+    ] ; 
+    .

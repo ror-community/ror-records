@@ -1,0 +1,40 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/00vvaxp92> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "1969"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2025-03-17"^^xsd:date ;
+    dct:modified "2025-03-17"^^xsd:date ;
+    org:abbreviation "CEETEPS"@pt ; 
+    org:alternativeName "Centro Estadual de Educação Tecnológica Paula Souza"@pt ; 
+    schema:mainEntityOfPage <https://www.cps.sp.gov.br/fatec/cursos-oferecidos-pelas-fatecs/> ;
+    owl:sameAs <https://pt.wikipedia.org/wiki/Centro_Estadual_de_Educa%C3%A7%C3%A3o_Tecnol%C3%B3gica_Paula_Souza> ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-46.63611 -23.5475)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "São Paulo" ;
+            schema:addressCountry "BR" ;
+            schema:addressRegion "São Paulo" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Brazil" ;
+                schema:containedInPlace [
+                    schema:name "South America" ;
+                    schema:identifier "SA"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3448439/> ;
+    ] ; 
+    .

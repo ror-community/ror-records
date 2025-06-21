@@ -4,27 +4,184 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01p8ehb87> a org:Organization ;
     rdfs:label "Ministry of Health of the Russian Federation" ;
     schema:name "Ministry of Health of the Russian Federation" ;
     schema:foundingDate "2012"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Government" ; 
-    org:alternativeName "Ministry of Health" ;
-    schema:url <https://minzdrav.gov.ru> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Ministry_of_Health_(Russia)> ;
+    org:classification "funder" ; 
+    org:classification "government" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-03-17"^^xsd:date ;
+    org:alternativeName "Ministry of Health"@en ; 
+    schema:mainEntityOfPage <https://minzdrav.gov.ru> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Ministry_of_Health_(Russia)> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100017638> ;
+    schema:sameAs <https://grid.ac/institutions/grid.415738.c> ;
+    schema:sameAs <http://isni.org/isni/0000000092162496> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/003pa2681> ;
+        rdfs:label "Endocrinology Research Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/046wkw610> ;
+        rdfs:label "Federal Medical Research Centre for Psychiatry and Narcology" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/054hg7j81> ;
+        rdfs:label "Federal State Budgetary Institution "Center for Expertise and Quality Control of Medical Care"" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01mqnrz37> ;
+        rdfs:label "Federal State Budgetary Institution Russian Scientific Center of Roentgenoradiology" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/015fskz95> ;
+        rdfs:label "Federal State Institution Hematology Research Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01mfpjp46> ;
+        rdfs:label "Institute of Oncology NN Petrov" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/045yh2d25> ;
+        rdfs:label "Ivanovo Research Institute of Motherhood and Childhood named after VN Gorodkov" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03yfnyw34> ;
+        rdfs:label "National Medical Research Center for Obstetrics, Gynecology and Perinatology named after Academician V.I.Kulakov of the Ministry of Healthcare of the Russian Federation" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04f17cx55> ;
+        rdfs:label "National Medical Research Center of Cardiology" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05s7cyn19> ;
+        rdfs:label "National Medical Research Center of Dentistry and Maxillofacial Surgery" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02at9hq18> ;
+        rdfs:label "National Research Center for Preventive Medicine" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/040gsvv83> ;
+        rdfs:label "Nizhny Novgorod Federal Research Institute of Pediatric Gastroenterology" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/027abjr46> ;
+        rdfs:label "Nizhny Novgorod Research Institute of Traumatology and Orthopedics" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05nj6z848> ;
+        rdfs:label "Novosibirsk Scientific Research Institute of Traumatology and Orthopedics. Ya.L. Tsivyan" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04rbazs75> ;
+        rdfs:label "P.A. Hertzen Moscow Oncology Research Institute" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/018159086> ;
+        rdfs:label "Pirogov Russian National Research Medical University" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05qah4n60> ;
+        rdfs:label "Research Institute for the Study of Leprosy" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00zz6h841> ;
+        rdfs:label "Research Institute of Emergency Childrens Surgery and Traumatology" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03wc0ga52> ;
+        rdfs:label "Research Institute of Influenza" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02r9ghz18> ;
+        rdfs:label "Russian Ilizarov Scientific Center for Restorative Traumatology and Orthopaedics" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01t6bjk79> ;
+        rdfs:label "Russian Medical Academy of Continuous Professional Education" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/049317064> ;
+        rdfs:label "Scientific Center of Children's Health" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/052874946> ;
+        rdfs:label "The Turner Scientific Research Institute for Children's Orthopedics" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05xze5t06> ;
+        rdfs:label "Federal State Budgetary Institution ‘Scientific Centre for Expert Evaluation of Medicinal Products’ of the Ministry of Health of the Russian Federation (SCEEMP)" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(37.61556 55.75222)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(37.61556 55.75222)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Moscow" ;
             schema:addressCountry "RU" ;
-            owl:sameAs <http://sws.geonames.org/524901/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000092162496> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q2624248> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "Moscow" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Russia" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/524901/> ;
+    ] ; 
     .

@@ -4,28 +4,47 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/04tgrx733> a org:Organization ;
-    rdfs:label "Bangabandhu Sheikh Mujibur Rahman Agricultural University" ;
-    schema:name "Bangabandhu Sheikh Mujibur Rahman Agricultural University" ;
+    rdfs:label "" ;
+    schema:name "" ;
     schema:foundingDate "1998"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "BSMRAU" ;
-    org:alternativeName "Institute of Post-Graduate Studies in Agriculture" ;
-    schema:url <https://bsmrau.edu.bd/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Bangabandhu_Sheikh_Mujibur_Rahman_Agricultural_University> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-03-17"^^xsd:date ;
+    org:abbreviation "BSMRAU"@None ; 
+    org:alternativeName "Bangabandhu Sheikh Mujibur Rahman Agricultural University"@en ; 
+    org:abbreviation "GAU"@None ; 
+    org:abbreviation "IPSA"@None ; 
+    org:alternativeName "Institute of Post-Graduate Studies in Agriculture"@en ; 
+    org:alternativeName "বঙ্গবন্ধু শেখ মুজিবুর রহমান কৃষি বিশ্ববিদ্যালয়"@bn ; 
+    schema:url <http://bsmrau.edu.bd> ; 
+    schema:url <http://gau.edu.bd> ; 
+    schema:mainEntityOfPage <https://gau.edu.bd> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Bangabandhu_Sheikh_Mujibur_Rahman_Agricultural_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/100019277> ;
+    schema:sameAs <https://grid.ac/institutions/grid.443108.a> ;
+    schema:sameAs <http://isni.org/isni/0000000085505526> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(90.40744 23.7104)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(90.40744 23.7104)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Dhaka" ;
             schema:addressCountry "BD" ;
-            owl:sameAs <http://sws.geonames.org/1185241/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000085505526> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q3449522> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "Dhaka Division" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Bangladesh" ;
+                schema:containedInPlace [
+                    schema:name "Asia" ;
+                    schema:identifier "AS"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1185241/> ;
+    ] ; 
     .
