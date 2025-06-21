@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/024atcf19> a org:Organization ;
+    rdfs:label "UCL Australia" ;
+    schema:name "UCL Australia" ;
+    schema:foundingDate "2008"^^xsd:gYear ;
+    org:status "inactive" ;
+    org:classification "Education" ; 
+    org:alternativeName "University College London" ;
+    schema:url <http://www.ucl.ac.uk/australia/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/UCL_Australia> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(138.59863 -34.92866)"^^geo:wktLiteral ;
+            schema:addressLocality "Adelaide" ;
+            schema:addressCountry "AU" ;
+            owl:sameAs <http://sws.geonames.org/2078025/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q19880139> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

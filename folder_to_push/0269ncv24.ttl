@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/0269ncv24> a org:Organization ;
+    rdfs:label "Limerick Institute of Technology" ;
+    schema:name "Limerick Institute of Technology" ;
+    schema:foundingDate "1975"^^xsd:gYear ;
+    org:status "inactive" ;
+    org:classification "Education" ; 
+    org:abbreviation "LIT" ;
+    schema:url <http://www.lit.ie/default.aspx> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Limerick_Institute_of_Technology> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-8.62306 52.66472)"^^geo:wktLiteral ;
+            schema:addressLocality "Limerick" ;
+            schema:addressCountry "IE" ;
+            owl:sameAs <http://sws.geonames.org/2962943/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000099652674> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q6549261> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

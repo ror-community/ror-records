@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/04jsh0z47> a org:Organization ;
+    rdfs:label "Fukuoka Social Medical Welfare University" ;
+    schema:name "Fukuoka Social Medical Welfare University" ;
+    schema:foundingDate "2002"^^xsd:gYear ;
+    org:status "inactive" ;
+    org:classification "Education" ; 
+    schema:url <http://www.dfu.ac.jp/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Fukuoka_Social_Medical_Welfare_University> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(130.52389 33.51278)"^^geo:wktLiteral ;
+            schema:addressLocality "Dazaifu" ;
+            schema:addressCountry "JP" ;
+            owl:sameAs <http://sws.geonames.org/7422816/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000406215053> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q5507700> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .
