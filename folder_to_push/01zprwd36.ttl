@@ -4,25 +4,69 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01zprwd36> a org:Organization ;
     rdfs:label "Centre d'Acquisition et de Traitement des Images" ;
     schema:name "Centre d'Acquisition et de Traitement des Images" ;
     schema:foundingDate "2022"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "CATI" ;
-    org:alternativeName "Centre pour l'Acquisition & le Traitement des Images" ;
-    schema:url <https://cati-neuroimaging.com> ; 
+    org:classification "facility" ; 
+    dct:created "2023-12-07"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:abbreviation "CATI"@None ; 
+    org:alternativeName "Centre for Acquisition & Image Processing"@en ; 
+    org:alternativeName "Centre for Acquisition and Image Processing"@en ; 
+    org:alternativeName "Centre pour l'Acquisition & le Traitement des Images"@fr ; 
+    org:alternativeName "Centre pour l'Acquisition et le Traitement des Images"@fr ; 
+    schema:mainEntityOfPage <https://cati-neuroimaging.com> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02feahw73> ;
+        rdfs:label "Centre National de la Recherche Scientifique" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02vjkv261> ;
+        rdfs:label "Inserm" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/00jjx8s55> ;
+        rdfs:label "Atomic Energy and Alternative Energies Commission" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/00pg5jh14> ;
+        rdfs:label "Assistance Publique – Hôpitaux de Paris" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02en5vm52> ;
+        rdfs:label "Sorbonne Université" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(2.3488 48.85341)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(2.3488 48.85341)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Paris" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2988507/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://www.wikidata.org/entity/Q123695034> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2988507/> ;
+    ] ; 
     .

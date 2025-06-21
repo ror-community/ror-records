@@ -4,25 +4,38 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/03cjqqq10> a org:Organization ;
-    rdfs:label "Mouse Clinical Institute" ;
-    schema:name "Mouse Clinical Institute" ;
+    rdfs:label "" ;
+    schema:name "" ;
     schema:foundingDate "2002"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "ICS" ;
-    schema:url <http://www.ics-mci.fr/en/> ; 
+    org:classification "facility" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:abbreviation "ICS"@None ; 
+    org:abbreviation "MCI"@None ; 
+    schema:mainEntityOfPage <http://www.ics-mci.fr/en/> ;
+    schema:sameAs <https://grid.ac/institutions/grid.452426.3> ;
+    schema:sameAs <http://isni.org/isni/0000000404048159> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(7.71523 48.52894)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(7.71523 48.52894)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Illkirch-Graffenstaden" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/3012834/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000404048159> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3012834/> ;
+    ] ; 
     .

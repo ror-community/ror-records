@@ -14,8 +14,8 @@
     org:status "active" ;
     org:classification "education" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-05-02"^^xsd:date ;
-    org:alternativeName "Centrale Nantes"@None ; 
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:alternativeName "Centrale Nantes"@fr ; 
     org:abbreviation "ECN"@None ; 
     schema:mainEntityOfPage <http://www.ec-nantes.fr/> ;
     owl:sameAs <https://en.wikipedia.org/wiki/%C3%89cole_centrale_de_Nantes> ; 
@@ -65,21 +65,21 @@
     ] ; 
     org:hasLink [
         a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02mhxg157> ;
+        rdfs:label "Groupement Ligérien pour le Calcul Intensif Distribué" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
         org:role "parent" ;
         org:member <https://ror.org/03gnr7b55> ;
         rdfs:label "Nantes Université" ;
     ] ; 
     org:hasLink [
         a org:Membership ;
-        org:role "related" ;
+        org:role "child" ;
         org:member <https://ror.org/05hz99a17> ;
         rdfs:label "AAU - Ambiances, Architectures, Urbanités" ;
-    ] ; 
-    org:hasLink [
-        a org:Membership ;
-        org:role "child" ;
-        org:member <https://ror.org/02mhxg157> ;
-        rdfs:label "Groupement Ligérien pour le Calcul Intensif Distribué" ;
     ] ; 
     schema:location [
         a schema:Place ;

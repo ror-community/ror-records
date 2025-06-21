@@ -1,0 +1,46 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/00ysecr35> a org:Organization ;
+    rdfs:label "École Nationale Supérieure de Céramique Industrielle" ;
+    schema:name "École Nationale Supérieure de Céramique Industrielle" ;
+    schema:foundingDate "1893"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:abbreviation "ENSCI"@None ; 
+    schema:mainEntityOfPage <http://www.ensci.fr/en/> ;
+    schema:sameAs <https://grid.ac/institutions/grid.424454.7> ;
+    schema:sameAs <http://isni.org/isni/0000000100337760> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/044qpwz88> ;
+        rdfs:label "Institut de Recherche sur les Céramiques" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(1.24759 45.83362)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Limoges" ;
+            schema:addressCountry "FR" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2998286/> ;
+    ] ; 
+    .

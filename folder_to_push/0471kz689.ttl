@@ -4,26 +4,58 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/0471kz689> a org:Organization ;
-    rdfs:label "French Agency for Food, Environmental and Occupational Health & Safety" ;
-    schema:name "French Agency for Food, Environmental and Occupational Health & Safety" ;
+    rdfs:label "" ;
+    schema:name "" ;
     schema:foundingDate "2010"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Government" ; 
-    org:abbreviation "ANSES" ;
-    schema:url <https://www.anses.fr/en> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Agence_nationale_de_s%C3%A9curit%C3%A9_sanitaire_de_l'alimentation,_de_l'environnement_et_du_travail> ;
+    org:classification "funder" ; 
+    org:classification "government" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:abbreviation "ANSES"@None ; 
+    schema:mainEntityOfPage <https://www.anses.fr/en> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Agence_nationale_de_s%C3%A9curit%C3%A9_sanitaire_de_l'alimentation,_de_l'environnement_et_du_travail> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100007546> ;
+    schema:sameAs <https://grid.ac/institutions/grid.15540.35> ;
+    schema:sameAs <http://isni.org/isni/0000000105847022> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/027364b18> ;
+        rdfs:label "Bipar" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/016vxbe23> ;
+        rdfs:label "Zone Atelier Moselle" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01dthb180> ;
+        rdfs:label "Epidémiosurveillance et circulation des parasites dans les environnements" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(2.43945 48.81171)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(2.43945 48.81171)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Maisons-Alfort" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2996568/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000105847022> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2996568/> ;
+    ] ; 
     .

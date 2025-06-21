@@ -4,24 +4,60 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01ja5aj48> a org:Organization ;
     rdfs:label "Histoire, Archéologie et Littérature des Mondes Anciens" ;
     schema:name "Histoire, Archéologie et Littérature des Mondes Anciens" ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "HALMA" ;
-    org:alternativeName "Centre de recherche HALMA" ;
-    schema:url <https://halma.univ-lille.fr> ; 
+    org:classification "facility" ; 
+    dct:created "2023-02-28"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:alternativeName "Centre de recherche HALMA"@fr ; 
+    org:abbreviation "HALMA"@None ; 
+    schema:mainEntityOfPage <https://halma.univ-lille.fr> ;
+    schema:sameAs <http://isni.org/isni/0000000121614640> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02kzqn938> ;
+        rdfs:label "University of Lille" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02feahw73> ;
+        rdfs:label "Centre National de la Recherche Scientifique" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/04andmq85> ;
+        rdfs:label "Institut National de Recherches Archéologiques Préventives" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/017rnyz40> ;
+        rdfs:label "Ministère de la Culture" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(3.16664 50.61669)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(3.16664 50.61669)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Villeneuve-d'Ascq" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/6543862/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000121614640> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/6543862/> ;
+    ] ; 
     .

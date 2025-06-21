@@ -4,26 +4,37 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/036wb4w46> a org:Organization ;
-    rdfs:label "Cévennes National Park" ;
-    schema:name "Cévennes National Park" ;
+    rdfs:label "" ;
+    schema:name "" ;
     schema:foundingDate "1970"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Archive" ; 
-    schema:url <http://www.cevennes-parcnational.fr/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/C%C3%A9vennes_National_Park> ;
+    org:classification "archive" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    schema:mainEntityOfPage <http://www.cevennes-parcnational.fr/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/C%C3%A9vennes_National_Park> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.425367.1> ;
+    schema:sameAs <http://isni.org/isni/0000000106740331> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(3.59306 44.32611)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(3.59306 44.32611)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Florac Trois Rivières" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/6613642/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000106740331> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1368807> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/6613642/> ;
+    ] ; 
     .

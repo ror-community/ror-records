@@ -4,25 +4,48 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/005hw9085> a org:Organization ;
     rdfs:label "Centre d'études supérieures de civilisation médiévale" ;
     schema:name "Centre d'études supérieures de civilisation médiévale" ;
     schema:foundingDate "2012"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "CESCM" ;
-    schema:url <http://cescm.labo.univ-poitiers.fr> ; 
+    org:classification "facility" ; 
+    dct:created "2023-08-17"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:abbreviation "CESCM"@None ; 
+    schema:mainEntityOfPage <http://cescm.labo.univ-poitiers.fr> ;
+    schema:sameAs <http://isni.org/isni/000000012375994X> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/04xhy8q59> ;
+        rdfs:label "Université de Poitiers" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02feahw73> ;
+        rdfs:label "Centre National de la Recherche Scientifique" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(0.34348 46.58261)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(0.34348 46.58261)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Poitiers" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2986495/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/000000012375994X> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q2945232> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2986495/> ;
+    ] ; 
     .

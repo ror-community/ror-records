@@ -4,27 +4,160 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/03zx86w41> a org:Organization ;
     rdfs:label "ESPCI Paris" ;
     schema:name "ESPCI Paris" ;
     schema:foundingDate "1882"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:alternativeName "The City of Paris Industrial Physics and Chemistry Higher Educational Institution" ;
-    schema:url <http://www.espci.fr/en/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/ESPCI_ParisTech> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:alternativeName "The City of Paris Industrial Physics and Chemistry Higher Educational Institution"@en ; 
+    schema:mainEntityOfPage <http://www.espci.fr/en/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/ESPCI_ParisTech> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100003068> ;
+    schema:sameAs <https://grid.ac/institutions/grid.15736.36> ;
+    schema:sameAs <http://isni.org/isni/0000000118820021> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03padqz24> ;
+        rdfs:label "Laboratoire Plasticité du Cerveau" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/058z3vf87> ;
+        rdfs:label "Gulliver" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/007sc9r91> ;
+        rdfs:label "Chimie Moléculaire, Macromoléculaire, Matériaux" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04db3be62> ;
+        rdfs:label "Laboratoire de Chimie Organique" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03g38sn14> ;
+        rdfs:label "Laboratory Colloïdes et Matériaux Divisés" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01thw2g46> ;
+        rdfs:label "Laboratoire de Biochimie" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00a72jq18> ;
+        rdfs:label "Laboratoire de Physique et d’Étude des Matériaux" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00kr24y60> ;
+        rdfs:label "Institut Langevin" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03kr50w79> ;
+        rdfs:label "Physique et Mécanique des Milieux Hétérogènes" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03f0z1g15> ;
+        rdfs:label "Sciences et Ingénierie de la Matière Molle" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04bgzse17> ;
+        rdfs:label "Chimie Biologie Innovation" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04v668f18> ;
+        rdfs:label "Institut des Matériaux Poreux de Paris" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03y7m8990> ;
+        rdfs:label "Physique pour la médecine Paris" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01w1erp60> ;
+        rdfs:label "Couplage Multi-physiques et Multi-échelles en mécanique géo-environnemental" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00mqc8k54> ;
+        rdfs:label "Fédération de Chimie et Matériaux de Paris-Centre" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05be9p317> ;
+        rdfs:label "Micropesanteur Fondamentale et Appliquée" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04ef65y11> ;
+        rdfs:label "Institut de Chimie Moléculaire de Paris : organique, inorganique et biologique" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01sgwka45> ;
+        rdfs:label "Microscopie Fonctionnelle du Vivant" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/013cjyk83> ;
+        rdfs:label "Université Paris Sciences et Lettres" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/05c2qg481> ;
+        rdfs:label "ParisTech" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(2.3488 48.85341)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(2.3488 48.85341)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Paris" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2988507/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000118820021> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q273638> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2988507/> ;
+    ] ; 
     .

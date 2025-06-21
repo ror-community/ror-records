@@ -4,26 +4,56 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/03taa9n66> a org:Organization ;
     rdfs:label "Institut de Microélectronique, Electromagnétisme et Photonique" ;
     schema:name "Institut de Microélectronique, Electromagnétisme et Photonique" ;
     schema:foundingDate "2001"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "IMEP-LAHC" ;
-    org:alternativeName "Institut de Microélectronique, Électromagnétisme et Photonique et le LAboratoire d'Hyperfréquences et de Caractérisation" ;
-    schema:url <http://imep-lahc.grenoble-inp.fr/welcome/> ; 
+    org:classification "facility" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:abbreviation "IMEP-LAHC"@None ; 
+    org:alternativeName "Institut de Microélectronique, Électromagnétisme et Photonique et le LAboratoire d'Hyperfréquences et de Caractérisation"@fr ; 
+    schema:mainEntityOfPage <http://imep-lahc.grenoble-inp.fr/welcome/> ;
+    schema:sameAs <https://grid.ac/institutions/grid.462157.3> ;
+    schema:sameAs <http://isni.org/isni/0000000403828823> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/05sbt2524> ;
+        rdfs:label "Institut polytechnique de Grenoble" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/00s19x989> ;
+        rdfs:label "CNRS Ingénierie" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/04gqg1a07> ;
+        rdfs:label "Université Savoie Mont Blanc" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(5.71479 45.17869)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(5.71479 45.17869)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Grenoble" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/3014728/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000403828823> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3014728/> ;
+    ] ; 
     .

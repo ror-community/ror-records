@@ -1,0 +1,46 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/02q7abn51> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "2021"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "nonprofit" ; 
+    dct:created "2024-06-19"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:alternativeName "Associação BIP4DAB"@pt ; 
+    org:abbreviation "BIP4DAB"@None ; 
+    org:alternativeName "BIP4DAB Association"@en ; 
+    org:alternativeName "BioData.pt - Portuguese Infrastructure of Biological Data"@en ; 
+    org:alternativeName "ELIXIR Portugal"@None ; 
+    org:abbreviation "ELIXIR-PT"@None ; 
+    schema:url <http://biodata.pt> ; 
+    schema:url <http://elixir-portugal.org> ; 
+    schema:mainEntityOfPage <https://biodata.pt> ;
+    schema:sameAs <http://isni.org/isni/0000000493396605> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-9.31085 38.69105)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Oeiras" ;
+            schema:addressCountry "PT" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Portugal" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2265464/> ;
+    ] ; 
+    .

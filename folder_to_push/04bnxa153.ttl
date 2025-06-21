@@ -15,18 +15,30 @@
     org:classification "funder" ; 
     org:classification "other" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-05-30"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
     org:abbreviation "NUWC"@None ; 
-    schema:mainEntityOfPage <http://www.navsea.navy.mil/Home/WarfareCenters.aspx> ;
+    schema:mainEntityOfPage <https://www.navsea.navy.mil/Home/Warfare-Centers/> ;
     owl:sameAs <https://en.wikipedia.org/wiki/Naval_Undersea_Warfare_Center> ; 
     schema:sameAs <https://api.crossref.org/funders/100010216> ;
     schema:sameAs <https://grid.ac/institutions/grid.419846.6> ;
     schema:sameAs <http://isni.org/isni/0000000122037603> ;
     org:hasLink [
         a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00zqysk61> ;
+        rdfs:label "NUWC Newport Division" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/029519s87> ;
+        rdfs:label "NUWC Keyport Division" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
         org:role "parent" ;
-        org:member <https://ror.org/03cs53d16> ;
-        rdfs:label "United States Navy" ;
+        org:member <https://ror.org/03dm1p143> ;
+        rdfs:label "Naval Sea Systems Command" ;
     ] ; 
     schema:location [
         a schema:Place ;

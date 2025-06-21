@@ -4,26 +4,67 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/00fwjkb59> a org:Organization ;
-    rdfs:label "Grenoble Applied Economics Lab" ;
-    schema:name "Grenoble Applied Economics Lab" ;
+    rdfs:label "" ;
+    schema:name "" ;
     schema:foundingDate "2003"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "GAEL" ;
-    schema:url <https://gael.univ-grenoble-alpes.fr/home?language=en> ; 
+    org:classification "facility" ; 
+    dct:created "2019-02-17"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:abbreviation "GAEL"@None ; 
+    schema:mainEntityOfPage <https://gael.univ-grenoble-alpes.fr> ;
+    schema:sameAs <https://grid.ac/institutions/grid.503302.7> ;
+    schema:sameAs <http://isni.org/isni/0000000406230923> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02mg6n827> ;
+        rdfs:label "CEA Grenoble" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/04px4e658> ;
+        rdfs:label "Délégation Alpes" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02rx3b187> ;
+        rdfs:label "Université Grenoble Alpes" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/05sbt2524> ;
+        rdfs:label "Institut polytechnique de Grenoble" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/003vg9w96> ;
+        rdfs:label "Institut National de Recherche pour l'Agriculture, l'Alimentation et l'Environnement" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(5.71479 45.17869)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(5.71479 45.17869)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Grenoble" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/3014728/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000406230923> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q61933127> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3014728/> ;
+    ] ; 
     .

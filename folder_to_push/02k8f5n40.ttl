@@ -4,27 +4,62 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02k8f5n40> a org:Organization ;
     rdfs:label "Laboratoire Cognitions Humaine et Artificielle" ;
     schema:name "Laboratoire Cognitions Humaine et Artificielle" ;
     schema:foundingDate "2007"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "CHArt" ;
-    org:alternativeName "Laboratoire CHArt" ;
-    schema:url <http://www.cognition-usages.org/chart2/> ; 
+    org:classification "facility" ; 
+    dct:created "2019-02-17"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:abbreviation "CHArt"@None ; 
+    org:alternativeName "Laboratoire CHArt"@fr ; 
+    schema:mainEntityOfPage <http://www.cognition-usages.org/chart2/> ;
+    schema:sameAs <https://grid.ac/institutions/grid.503126.3> ;
+    schema:sameAs <http://isni.org/isni/000000040495272X> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/04wez5e68> ;
+        rdfs:label "Université de Vincennes à Saint-Denis" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/05ggc9x40> ;
+        rdfs:label "Université Paris-Est Créteil" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/046b3cj80> ;
+        rdfs:label "École Pratique des Hautes Études" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/043htjv09> ;
+        rdfs:label "CY Cergy Paris Université" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(2.35387 48.93564)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(2.35387 48.93564)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Saint-Denis" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2980916/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/000000040495272X> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q51782494> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2980916/> ;
+    ] ; 
     .

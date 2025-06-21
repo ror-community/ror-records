@@ -4,27 +4,208 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/03wkt5x30> a org:Organization ;
     rdfs:label "Muséum national d'Histoire naturelle" ;
     schema:name "Muséum national d'Histoire naturelle" ;
     schema:foundingDate "1793"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Archive" ; 
-    org:abbreviation "MNHN" ;
-    schema:url <https://www.mnhn.fr> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/National_Museum_of_Natural_History_(France)> ;
+    org:classification "archive" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:abbreviation "MNHN"@None ; 
+    schema:mainEntityOfPage <https://www.mnhn.fr> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/National_Museum_of_Natural_History_(France)> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100007522> ;
+    schema:sameAs <https://grid.ac/institutions/grid.410350.3> ;
+    schema:sameAs <http://isni.org/isni/0000000121581551> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/041tgdz97> ;
+        rdfs:label "Mécanismes Adaptatifs et Evolution" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03j82q602> ;
+        rdfs:label "Archéozoologie et Archéobotanique" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01tp1c480> ;
+        rdfs:label "Biologie des Organismes et Écosystèmes Aquatiques" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02dqsxz11> ;
+        rdfs:label "Centre Alexandre Koyré" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00sad8321> ;
+        rdfs:label "Centre d'Écologie et des Sciences de la Conservation" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04xfycm61> ;
+        rdfs:label "Molécules de Communication et Adaptation des Micro-organismes" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03bpcga21> ;
+        rdfs:label "Evolution des Régulations Endocriniennes" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00c3ta789> ;
+        rdfs:label "Histoire Naturelle de l’Homme Préhistorique" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01dadvw90> ;
+        rdfs:label "Institut de Systématique, Évolution, Biodiversité" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05abgg682> ;
+        rdfs:label "Institut de minéralogie, de physique des matériaux et de cosmochimie" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05j3atf73> ;
+        rdfs:label "Laboratoire d'Océanographie et du Climat : Expérimentations et Approches Numériques" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00nwtj239> ;
+        rdfs:label "Laboratoire de Minéralogie & Cosmochimie du Muséum" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02c6p9834> ;
+        rdfs:label "Physiologie de la Reproduction et des Comportements" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05d6wfd23> ;
+        rdfs:label "Station d’Écologie Théorique et Expérimentale" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05pchb838> ;
+        rdfs:label "Structure et Instabilité des Génomes" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03x0yny97> ;
+        rdfs:label "Éco-Anthropologie" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05q3pap39> ;
+        rdfs:label "Centre de Recherche sur la Conservation" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00mryrd39> ;
+        rdfs:label "Patrimoines locaux, Environnement et Globalisation" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05ax2x637> ;
+        rdfs:label "Centre de recherche en paléontologie - Paris" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/034gk7456> ;
+        rdfs:label "Bases de données sur la Biodiversité, Ecologie, Environnement et Sociétés" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05qhnf349> ;
+        rdfs:label "Acquisition et Analyse de Données pour l'Histoire naturelle" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/037eda396> ;
+        rdfs:label "PatriNat" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05edayg07> ;
+        rdfs:label "Fédération de Physico-Chimie Analytique et Biologique" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03qgfy688> ;
+        rdfs:label "Fédération Ile de France de recherche sur l'environnement" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05kytrf83> ;
+        rdfs:label "Méthodes et Outils pour les Sciences Participatives" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01nrtdp55> ;
+        rdfs:label "GDR NBODY : Problème quantique à N corps en chimie et physique" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01365h357> ;
+        rdfs:label "Observatoire des sciences de l'Univers Paris-Centre Ecce Terra" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04k0drf78> ;
+        rdfs:label "Institut photonique d'analyse non-destructive européen des matériaux anciens" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(2.3488 48.85341)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(2.3488 48.85341)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Paris" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2988507/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000121581551> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q838691> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2988507/> ;
+    ] ; 
     .

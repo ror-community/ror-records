@@ -1,0 +1,118 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/03p6ach34> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "2012"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "facility" ; 
+    dct:created "2024-06-19"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:alternativeName "SFR Bonamy"@fr ; 
+    org:alternativeName "SFR Santé"@fr ; 
+    schema:mainEntityOfPage <https://sfrsante.univ-nantes.fr> ;
+    schema:sameAs <http://isni.org/isni/0000000406205381> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/03gnr7b55> ;
+        rdfs:label "Nantes Université" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/01165k395> ;
+        rdfs:label "Center for Research in Transplantation and Translational Immunology" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/003g1aw90> ;
+        rdfs:label "Centre de Recherche en Cancérologie et Immunologie Intégrée Nantes Angers" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01cqd9q31> ;
+        rdfs:label "Cibles et Médicaments des Infections et de l'Immunité" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/018dfmm35> ;
+        rdfs:label "Immunologie et Nouveaux Concepts en Immunothérapie" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/049kkt456> ;
+        rdfs:label "Institut du Thorax" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/04q2ax456> ;
+        rdfs:label "Laboratoire Motricité, Interactions, Performance" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05vb5nm66> ;
+        rdfs:label "PhysioPathologie des Adaptations Nutritionnelles" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/025agbr41> ;
+        rdfs:label "RMeS - Regenerative Medicine and Skeleton" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/013m8h627> ;
+        rdfs:label "methodS in Patient-centered outcomes and HEalth ResEarch" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02tg88m31> ;
+        rdfs:label "Translational Research in Gene Therapy" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01kbkse74> ;
+        rdfs:label "The Enteric Nervous System in Gut and Brain Disorders" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05ef4v550> ;
+        rdfs:label "Unité en Sciences Biologiques et Biotechnologies de Nantes" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-1.55336 47.21725)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Nantes" ;
+            schema:addressCountry "FR" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2990969/> ;
+    ] ; 
+    .

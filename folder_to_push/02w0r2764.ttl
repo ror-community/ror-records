@@ -1,0 +1,73 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/02w0r2764> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "2003"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "facility" ; 
+    dct:created "2024-06-19"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:abbreviation "MAGIC"@en ; 
+    org:alternativeName "MAGIC Collaboration"@en ; 
+    org:alternativeName "MAGIC Telescope"@en ; 
+    org:alternativeName "MAGIC Telescopes Collaboration"@en ; 
+    org:alternativeName "MAGIC Teleskope"@de ; 
+    schema:mainEntityOfPage <https://magic.mpp.mpg.de> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/MAGIC_%28telescope%29> ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/0079jjr10> ;
+        rdfs:label "Max Planck Institute for Physics" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01sdrjx85> ;
+        rdfs:label "Institute for High Energy Physics" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03zga2b32> ;
+        rdfs:label "University of Bergen" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02wnmk332> ;
+        rdfs:label "Centro Brasileiro de Pesquisas Físicas" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05xx77y52> ;
+        rdfs:label "Centro de Investigaciones Energéticas, Medioambientales y Tecnológicas" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-17.93333 28.81667)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Garafía" ;
+            schema:addressCountry "ES" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Spain" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2517346/> ;
+    ] ; 
+    .

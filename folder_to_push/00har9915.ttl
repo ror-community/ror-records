@@ -4,26 +4,73 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/00har9915> a org:Organization ;
     rdfs:label "École Nationale Supérieure des Sciences Agronomiques de Bordeaux-Aquitaine" ;
     schema:name "École Nationale Supérieure des Sciences Agronomiques de Bordeaux-Aquitaine" ;
     schema:foundingDate "1963"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:alternativeName "Bordeaux Sciences Agro" ;
-    schema:url <http://www.agro-bordeaux.fr/> ; 
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:alternativeName "Bordeaux Sciences Agro"@fr ; 
+    schema:mainEntityOfPage <http://www.agro-bordeaux.fr/> ;
+    schema:sameAs <https://grid.ac/institutions/grid.434203.2> ;
+    schema:sameAs <http://isni.org/isni/0000000106594135> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/027953924> ;
+        rdfs:label "Aménagement, Développement, Environnement, Santé et Sociétés" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03jtzcc30> ;
+        rdfs:label "Chimie et Biologie des Membranes et des Nanoobjects" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/004q3z910> ;
+        rdfs:label "Ecophysiologie et Génomique Fonctionnelle de la Vigne" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04nabhy78> ;
+        rdfs:label "Laboratoire de l'Intégration du Matériau au Système" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00vfxg105> ;
+        rdfs:label "Santé et Agroécologie du Vignoble" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02aswf736> ;
+        rdfs:label "Interactions Sol Plante Atmosphère" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-0.61395 44.77362)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-0.61395 44.77362)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Gradignan" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/3015419/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000106594135> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q3578255> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3015419/> ;
+    ] ; 
     .

@@ -4,26 +4,61 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02chvqy57> a org:Organization ;
     rdfs:label "Laboratoire d’Études en Géophysique et Océanographie Spatiales" ;
     schema:name "Laboratoire d’Études en Géophysique et Océanographie Spatiales" ;
     schema:foundingDate "1995"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "LEGOS" ;
-    schema:url <https://www.legos.omp.eu> ; 
+    org:classification "facility" ; 
+    dct:created "2019-02-17"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:abbreviation "LEGOS"@None ; 
+    schema:mainEntityOfPage <https://www.legos.omp.eu> ;
+    schema:sameAs <https://grid.ac/institutions/grid.503277.4> ;
+    schema:sameAs <http://isni.org/isni/0000000403844620> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/04h1h0y33> ;
+        rdfs:label "Centre National d'Études Spatiales" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/05q3vnk25> ;
+        rdfs:label "Institut de Recherche pour le Développement" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02v6kpv12> ;
+        rdfs:label "Université Toulouse III - Paul Sabatier" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02feahw73> ;
+        rdfs:label "Centre National de la Recherche Scientifique" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(1.44367 43.60426)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(1.44367 43.60426)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Toulouse" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2972315/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000403844620> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q51782431> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2972315/> ;
+    ] ; 
     .

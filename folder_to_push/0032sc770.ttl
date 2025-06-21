@@ -4,25 +4,49 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/0032sc770> a org:Organization ;
-    rdfs:label "Laboratory of Biophotonics and Pharmacology" ;
-    schema:name "Laboratory of Biophotonics and Pharmacology" ;
+    rdfs:label "" ;
+    schema:name "" ;
     schema:foundingDate "2009"^^xsd:gYear ;
     org:status "inactive" ;
-    org:classification "Facility" ; 
-    org:alternativeName "Laboratoire de Bioimagerie et Pathologies" ;
-    schema:url <http://www-lbp.unistra.fr/?lang=fr> ; 
+    org:classification "facility" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:alternativeName "Laboratoire de Bioimagerie et Pathologies"@fr ; 
+    schema:mainEntityOfPage <http://www-lbp.unistra.fr/?lang=fr> ;
+    schema:sameAs <https://grid.ac/institutions/grid.463906.e> ;
+    schema:sameAs <http://isni.org/isni/0000000403682086> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/00rydyx93> ;
+        rdfs:label "Institut des Sciences Biologiques" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/00pg6eq24> ;
+        rdfs:label "Université de Strasbourg" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(7.71523 48.52894)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(7.71523 48.52894)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Illkirch-Graffenstaden" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/3012834/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000403682086> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3012834/> ;
+    ] ; 
     .

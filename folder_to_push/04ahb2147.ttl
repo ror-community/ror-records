@@ -4,25 +4,54 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/04ahb2147> a org:Organization ;
     rdfs:label "Centre de recherche français à Jérusalem" ;
     schema:name "Centre de recherche français à Jérusalem" ;
     schema:foundingDate "2007"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "CRFJ" ;
-    schema:url <http://www.crfj.org> ; 
+    org:classification "facility" ; 
+    dct:created "2023-08-17"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:abbreviation "CRFJ"@None ; 
+    schema:mainEntityOfPage <http://www.crfj.org> ;
+    schema:sameAs <http://isni.org/isni/0000000121130793> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02feahw73> ;
+        rdfs:label "Centre National de la Recherche Scientifique" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/00dfd1509> ;
+        rdfs:label "Ministère de l'Europe et des Affaires étrangères" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/035xkbk20> ;
+        rdfs:label "Aix-Marseille Université" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(35.21633 31.76904)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(35.21633 31.76904)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Jerusalem" ;
             schema:addressCountry "IL" ;
-            owl:sameAs <http://sws.geonames.org/281184/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000121130793> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q51785559> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Israel" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/281184/> ;
+    ] ; 
     .

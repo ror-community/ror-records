@@ -4,26 +4,61 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02zs48f23> a org:Organization ;
     rdfs:label "Conditions Extrêmes et Matériaux Haute Température et Irradiation" ;
     schema:name "Conditions Extrêmes et Matériaux Haute Température et Irradiation" ;
     schema:foundingDate "2008"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "CEMHTI" ;
-    schema:url <http://www.cemhti.cnrs-orleans.fr/> ; 
+    org:classification "facility" ; 
+    dct:created "2019-02-17"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:abbreviation "CEMHTI"@None ; 
+    schema:mainEntityOfPage <http://www.cemhti.cnrs-orleans.fr/> ;
+    schema:sameAs <https://grid.ac/institutions/grid.503138.c> ;
+    schema:sameAs <http://isni.org/isni/0000000403692436> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02wwzvj46> ;
+        rdfs:label "Université de Tours" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02cte4b68> ;
+        rdfs:label "Institut de Chimie" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02cp04407> ;
+        rdfs:label "Université de Limoges" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/014zrew76> ;
+        rdfs:label "Université d'Orléans" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(1.90389 47.90289)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(1.90389 47.90289)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Orléans" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2989317/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000403692436> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q51782802> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2989317/> ;
+    ] ; 
     .

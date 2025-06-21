@@ -4,25 +4,55 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/03cv31q28> a org:Organization ;
     rdfs:label "Centre d'Etudes Supérieures de la Renaissance" ;
     schema:name "Centre d'Etudes Supérieures de la Renaissance" ;
     schema:foundingDate "1956"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "CESR" ;
-    schema:url <http://www.cesr.cnrs.fr/> ; 
+    org:classification "facility" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:abbreviation "CESR"@None ; 
+    schema:mainEntityOfPage <http://www.cesr.cnrs.fr/> ;
+    schema:sameAs <https://grid.ac/institutions/grid.463834.e> ;
+    schema:sameAs <http://isni.org/isni/0000000121966515> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02wwzvj46> ;
+        rdfs:label "Université de Tours" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/04b0z7q78> ;
+        rdfs:label "Institut des Sciences Humaines et Sociales" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/017rnyz40> ;
+        rdfs:label "Ministère de la Culture" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(0.70398 47.39484)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(0.70398 47.39484)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Tours" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2972191/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000121966515> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2972191/> ;
+    ] ; 
     .

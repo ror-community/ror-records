@@ -4,27 +4,111 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/029nkcm90> a org:Organization ;
     rdfs:label "Observatoire de Paris" ;
     schema:name "Observatoire de Paris" ;
     schema:foundingDate "1667"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:alternativeName "Observatoire de Paris-Meudon" ;
-    schema:url <https://www.observatoiredeparis.psl.eu> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Paris_Observatory> ;
+    org:classification "facility" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:alternativeName "Observatoire de Paris-Meudon"@fr ; 
+    org:alternativeName "Observatoire de Paris-PSL"@fr ; 
+    schema:mainEntityOfPage <https://www.observatoiredeparis.psl.eu> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Paris_Observatory> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.4307.0> ;
+    schema:sameAs <http://isni.org/isni/000000040475642X> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03tnjrr49> ;
+        rdfs:label "Laboratoire AstroParticule et Cosmologie" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01920cw75> ;
+        rdfs:label "Galaxies, Etoiles, Physique et Instrumentation" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/002zc3t08> ;
+        rdfs:label "Institut de Mécanique Céleste et de Calcul des Éphémérides" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05c95bg36> ;
+        rdfs:label "Laboratoire de Physique des Plasmas" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00bbtde36> ;
+        rdfs:label "Laboratoire Univers et Théories" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01g5pq328> ;
+        rdfs:label "Laboratoire d’Etudes du Rayonnement et de la Matière en Astrophysique et Atmosphères" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02eptjh02> ;
+        rdfs:label "Laboratoire d’études spatiales et d’instrumentation en astrophysique" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03tdef037> ;
+        rdfs:label "Systèmes de Référence Temps-Espace" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0557mft23> ;
+        rdfs:label "Formation, Innovation, Recherche, Services et Transfert en Temps-Fréquence" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02rmk5x23> ;
+        rdfs:label "Fédération de recherche PLAS@PAR" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/013cjyk83> ;
+        rdfs:label "Université Paris Sciences et Lettres" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01vqrde47> ;
+        rdfs:label "Observatoire Radioastronomique de Nançay" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(2.3488 48.85341)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(2.3488 48.85341)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Paris" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2988507/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/000000040475642X> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q461340> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2988507/> ;
+    ] ; 
     .

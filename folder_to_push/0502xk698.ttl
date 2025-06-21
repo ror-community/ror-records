@@ -4,25 +4,44 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/0502xk698> a org:Organization ;
     rdfs:label "NSWC Philadelphia Division" ;
     schema:name "NSWC Philadelphia Division" ;
     org:status "active" ;
-    org:classification "Government" ; 
-    org:classification "Facility" ; 
-    org:abbreviation "NSWCPD" ;
-    org:alternativeName "Naval Surface Warfare Center Philadelphia Division" ;
-    schema:url <https://www.navsea.navy.mil/Home/Warfare-Centers/NSWC-Philadelphia/> ; 
+    org:classification "facility" ; 
+    org:classification "government" ; 
+    dct:created "2023-11-08"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:alternativeName "NSWC Philadelphia"@en ; 
+    org:abbreviation "NSWCPD"@None ; 
+    org:alternativeName "Naval Surface Warfare Center Philadelphia Division"@en ; 
+    schema:mainEntityOfPage <https://www.navsea.navy.mil/Home/Warfare-Centers/NSWC-Philadelphia/> ;
+    schema:sameAs <http://isni.org/isni/0000000493341831> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/03d4ecn10> ;
+        rdfs:label "Naval Surface Warfare Center" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-75.16362 39.95238)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-75.16362 39.95238)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Philadelphia" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/4560349/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000493341831> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/4560349/> ;
+    ] ; 
     .

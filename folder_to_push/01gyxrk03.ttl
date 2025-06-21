@@ -4,27 +4,116 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01gyxrk03> a org:Organization ;
-    rdfs:label "University of Picardie Jules Verne" ;
-    schema:name "University of Picardie Jules Verne" ;
+    rdfs:label "" ;
+    schema:name "" ;
     schema:foundingDate "1970"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "UPJV" ;
-    schema:url <https://www.u-picardie.fr/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Picardie_Jules_Verne> ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:abbreviation "UPJV"@None ; 
+    schema:mainEntityOfPage <https://www.u-picardie.fr/> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Picardie_Jules_Verne> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.11162.35> ;
+    schema:sameAs <http://isni.org/isni/0000000107891385> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02cd98b83> ;
+        rdfs:label "Center for Southeast Asian Studies" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02bhp7a56> ;
+        rdfs:label "Ecologie et Dynamique des Systèmes Anthropisés" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01c62av11> ;
+        rdfs:label "Groupe de Recherche sur l'Alcool et les Pharmacodépendances" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04smxbm79> ;
+        rdfs:label "Laboratoire Amiénois de Mathématique Fondamentale et Appliquée" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02m9cs548> ;
+        rdfs:label "Laboratoire de Réactivité et Chimie des Solides" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01gje7n16> ;
+        rdfs:label "Laboratoire de Glycochimie, des Antimicrobiens et des Agroressources" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00m090414> ;
+        rdfs:label "Maison Européenne des Sciences de l'Homme et de la Société" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05ewvzm89> ;
+        rdfs:label "Périnatalité & Risques Toxiques" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/032v67m28> ;
+        rdfs:label "UMR Transfrontalière BioEcoAgro" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02a9mrq41> ;
+        rdfs:label "Groupe de Recherches sur l’Analyse Multimodale de la Fonction Cérébrale" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00rxdng69> ;
+        rdfs:label "Centre universitaire de recherches sur l'Action Publique et le Politique Épistémologie & Sciences Sociales" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/059424541> ;
+        rdfs:label "Bassins - Réservoirs - Ressources" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01w1erp60> ;
+        rdfs:label "Couplage Multi-physiques et Multi-échelles en mécanique géo-environnemental" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(2.3 49.9)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(2.3 49.9)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Amiens" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/3037854/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000107891385> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q947747> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3037854/> ;
+    ] ; 
     .

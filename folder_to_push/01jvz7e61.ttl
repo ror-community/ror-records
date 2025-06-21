@@ -4,25 +4,54 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01jvz7e61> a org:Organization ;
     rdfs:label "Virologie et Immunologie Moléculaires" ;
     schema:name "Virologie et Immunologie Moléculaires" ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "VIM" ;
-    org:alternativeName "Unité de Virologie et Immunologie Moléculaires" ;
-    schema:url <https://www6.jouy.inrae.fr/vim> ; 
+    org:classification "facility" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:alternativeName "Unité de Virologie et Immunologie Moléculaires"@fr ; 
+    org:abbreviation "VIM"@None ; 
+    schema:mainEntityOfPage <https://www6.jouy.inrae.fr/vim> ;
+    schema:sameAs <https://grid.ac/institutions/grid.452943.d> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/03mkjjy25> ;
+        rdfs:label "Université de Versailles Saint-Quentin-en-Yvelines" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/03xjwb503> ;
+        rdfs:label "University of Paris-Saclay" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/003vg9w96> ;
+        rdfs:label "Institut National de Recherche pour l'Agriculture, l'Alimentation et l'Environnement" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(2.16966 48.75909)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(2.16966 48.75909)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Jouy-en-Josas" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/3012165/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://www.wikidata.org/entity/Q30296505> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3012165/> ;
+    ] ; 
     .

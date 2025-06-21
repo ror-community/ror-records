@@ -4,24 +4,60 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/00f945z63> a org:Organization ;
     rdfs:label "Institut Pythéas Observatoire des Sciences de l’Univers" ;
     schema:name "Institut Pythéas Observatoire des Sciences de l’Univers" ;
     schema:foundingDate "2012"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "OSU" ;
-    schema:url <https://www.osupytheas.fr> ; 
+    org:classification "facility" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:abbreviation "OSU"@None ; 
+    schema:mainEntityOfPage <https://www.osupytheas.fr> ;
+    schema:sameAs <https://grid.ac/institutions/grid.470941.f> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01gtjxz83> ;
+        rdfs:label "Observatoire de Haute-Provence" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/035xkbk20> ;
+        rdfs:label "Aix-Marseille Université" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/049qgqg40> ;
+        rdfs:label "Délégation Provence et Corse" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/05q3vnk25> ;
+        rdfs:label "Institut de Recherche pour le Développement" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(5.44973 43.5283)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(5.44973 43.5283)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Aix-en-Provence" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/3038354/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3038354/> ;
+    ] ; 
     .

@@ -4,27 +4,64 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/04y5kwa70> a org:Organization ;
-    rdfs:label "University of Technology of Compiègne" ;
-    schema:name "University of Technology of Compiègne" ;
+    rdfs:label "" ;
+    schema:name "" ;
     schema:foundingDate "1972"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "UTC" ;
-    schema:url <http://www.utc.fr/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Technology_of_Compi%C3%A8gne> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:abbreviation "UTC"@None ; 
+    schema:mainEntityOfPage <http://www.utc.fr/> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Technology_of_Compi%C3%A8gne> ; 
+    schema:sameAs <https://api.crossref.org/funders/100012945> ;
+    schema:sameAs <https://grid.ac/institutions/grid.6227.1> ;
+    schema:sameAs <http://isni.org/isni/0000000121892165> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03yaydt41> ;
+        rdfs:label "Biomécanique et Bioingénierie" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0075hvk77> ;
+        rdfs:label "Heuristics and Diagnostics for Complex Systems" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/023ffhx15> ;
+        rdfs:label "Laboratoire Roberval" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/001tmq304> ;
+        rdfs:label "Enzyme and Cell Engineering - Molecular Recognition and Biocatalysis" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(2.82606 49.41794)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(2.82606 49.41794)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Compiègne" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/3024066/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000121892165> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q622906> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3024066/> ;
+    ] ; 
     .

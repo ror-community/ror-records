@@ -4,25 +4,42 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/00vxck708> a org:Organization ;
     rdfs:label "Unité de Recherche Agrosystèmes tropicaux" ;
     schema:name "Unité de Recherche Agrosystèmes tropicaux" ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "UR ASTRO" ;
-    org:alternativeName "Tropical Agrosystems Research Unit" ;
-    schema:url <https://www6.antilles.inrae.fr/astro/> ; 
+    org:classification "facility" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:alternativeName "Tropical Agrosystems Research Unit"@en ; 
+    org:abbreviation "UR ASTRO"@None ; 
+    schema:mainEntityOfPage <https://www6.antilles.inrae.fr/astro/> ;
+    schema:sameAs <https://grid.ac/institutions/grid.464175.5> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/003vg9w96> ;
+        rdfs:label "Institut National de Recherche pour l'Agriculture, l'Alimentation et l'Environnement" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-61.5914 16.19163)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-61.5914 16.19163)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Petit-Bourg" ;
             schema:addressCountry "GP" ;
-            owl:sameAs <http://sws.geonames.org/3578682/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://www.wikidata.org/entity/Q123497096> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Guadeloupe" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3578682/> ;
+    ] ; 
     .

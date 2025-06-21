@@ -1,0 +1,44 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/00aytnh12> a org:Organization ;
+    rdfs:label "Laboratoire de Biotechnologie et Chimie Marines" ;
+    schema:name "Laboratoire de Biotechnologie et Chimie Marines" ;
+    org:status "active" ;
+    org:classification "facility" ; 
+    dct:created "2019-02-17"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:abbreviation "LBCM"@None ; 
+    schema:mainEntityOfPage <http://www-lbcm.univ-ubs.fr/fr/index.html> ;
+    schema:sameAs <https://grid.ac/institutions/grid.503337.1> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/04ed7fw48> ;
+        rdfs:label "Université de Bretagne Sud" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-2.76205 47.65688)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Vannes" ;
+            schema:addressCountry "FR" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2970777/> ;
+    ] ; 
+    .

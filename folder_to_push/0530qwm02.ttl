@@ -4,25 +4,68 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/0530qwm02> a org:Organization ;
     rdfs:label "Institut Terre & Environnement de Strasbourg" ;
     schema:name "Institut Terre & Environnement de Strasbourg" ;
     schema:foundingDate "2021"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "ITES" ;
-    org:alternativeName "Institut Terre et Environnement de Strasbourg" ;
-    schema:url <https://ites.unistra.fr/> ; 
+    org:classification "education" ; 
+    dct:created "2022-03-17"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:alternativeName "Earth and Environment Institute of Strasbourg"@en ; 
+    org:abbreviation "ITES"@fr ; 
+    org:alternativeName "Institut Terre et Environnement de Strasbourg"@fr ; 
+    org:abbreviation "UMR ITES"@fr ; 
+    schema:mainEntityOfPage <https://ites.unistra.fr/> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "predecessor" ;
+        org:member <https://ror.org/03y81da23> ;
+        rdfs:label "Laboratoire d’HYdrologie et de GEochimie" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/04kdfz702> ;
+        rdfs:label "Institut National des Sciences de l'Univers" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/00pg6eq24> ;
+        rdfs:label "Université de Strasbourg" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02jhjzd11> ;
+        rdfs:label "Ecole Nationale du Génie de l'Eau et de l'Environnement de Strasbourg (ENGEES)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/030qxve40> ;
+        rdfs:label "École & Observatoire des Sciences de la Terre" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(7.74553 48.58392)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(7.74553 48.58392)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Strasbourg" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2973783/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://www.wikidata.org/entity/Q111431898> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2973783/> ;
+    ] ; 
     .

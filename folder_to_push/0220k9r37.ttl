@@ -4,26 +4,45 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/0220k9r37> a org:Organization ;
-    rdfs:label "Paris Descartes University" ;
-    schema:name "Paris Descartes University" ;
+    rdfs:label "" ;
+    schema:name "" ;
     org:status "inactive" ;
-    org:classification "Education" ; 
-    org:alternativeName "Université Paris 5 René Descartes" ;
-    schema:url <https://www.univ-paris5.fr/eng> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Paris_Descartes_University> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:alternativeName "Université Paris 5 René Descartes"@fr ; 
+    schema:mainEntityOfPage <https://www.univ-paris5.fr/eng> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Paris_Descartes_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100005413> ;
+    schema:sameAs <https://grid.ac/institutions/grid.10992.33> ;
+    schema:sameAs <http://isni.org/isni/0000000121880914> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "successor" ;
+        org:member <https://ror.org/05f82e368> ;
+        rdfs:label "Université Paris Cité" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(2.3488 48.85341)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(2.3488 48.85341)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Paris" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2988507/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000121880914> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1155944> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2988507/> ;
+    ] ; 
     .

@@ -4,24 +4,47 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02cbapb21> a org:Organization ;
     rdfs:label "Centre Île-de-France - Versailles-Grignon" ;
     schema:name "Centre Île-de-France - Versailles-Grignon" ;
     schema:foundingDate "1957"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    schema:url <https://www.inrae.fr/centres/ile-france-versailles-grignon> ; 
+    org:classification "facility" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    schema:mainEntityOfPage <https://www.inrae.fr/centres/ile-france-versailles-grignon> ;
+    schema:sameAs <https://grid.ac/institutions/grid.418070.a> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01z6yh944> ;
+        rdfs:label "Écologie Fonctionnelle et Écotoxicologie des Agroécosystèmes" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/003vg9w96> ;
+        rdfs:label "Institut National de Recherche pour l'Agriculture, l'Alimentation et l'Environnement" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(2.13424 48.80359)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(2.13424 48.80359)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Versailles" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2969679/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://www.wikidata.org/entity/Q30281570> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2969679/> ;
+    ] ; 
     .

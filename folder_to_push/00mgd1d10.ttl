@@ -4,25 +4,48 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/00mgd1d10> a org:Organization ;
     rdfs:label "Laboratoire Paragraphe" ;
     schema:name "Laboratoire Paragraphe" ;
     schema:foundingDate "1983"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "PARAGRAPHE" ;
-    org:alternativeName "CRAC-Laboratoire Paragraphe" ;
-    schema:url <https://laboratoire-paragraphe.univ-paris8.fr> ; 
+    org:classification "facility" ; 
+    dct:created "2023-04-27"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:alternativeName "CRAC-Laboratoire Paragraphe"@fr ; 
+    org:abbreviation "PARAGRAPHE"@None ; 
+    schema:mainEntityOfPage <https://laboratoire-paragraphe.univ-paris8.fr> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/04wez5e68> ;
+        rdfs:label "Université de Vincennes à Saint-Denis" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/043htjv09> ;
+        rdfs:label "CY Cergy Paris Université" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(55.4504 -20.88231)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(55.4504 -20.88231)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Saint-Denis" ;
             schema:addressCountry "RE" ;
-            owl:sameAs <http://sws.geonames.org/935264/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://www.wikidata.org/entity/Q51785017> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Réunion" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/935264/> ;
+    ] ; 
     .

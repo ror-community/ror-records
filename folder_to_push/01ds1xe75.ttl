@@ -4,24 +4,53 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01ds1xe75> a org:Organization ;
     rdfs:label "Laboratoire d'Immunologie et d'Immunothérapie des Cancers" ;
     schema:name "Laboratoire d'Immunologie et d'Immunothérapie des Cancers" ;
     schema:foundingDate "2012"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "LIIC" ;
-    schema:url <http://www.liic.fr> ; 
+    org:classification "facility" ; 
+    dct:created "2023-08-17"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:abbreviation "LIIC"@None ; 
+    schema:mainEntityOfPage <http://www.liic.fr> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/03k1bsr36> ;
+        rdfs:label "Université de Bourgogne" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02dn7x778> ;
+        rdfs:label "Université Bourgogne Franche-Comté" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/013cjyk83> ;
+        rdfs:label "Université Paris Sciences et Lettres" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(5.01667 47.31667)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(5.01667 47.31667)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Dijon" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/3021372/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://www.wikidata.org/entity/Q52606185> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3021372/> ;
+    ] ; 
     .

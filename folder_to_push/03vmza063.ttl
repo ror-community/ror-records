@@ -4,24 +4,53 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/03vmza063> a org:Organization ;
     rdfs:label "Unité Mixte de Recherche Epidémiologique et de Surveillance Transport Travail Environnement" ;
     schema:name "Unité Mixte de Recherche Epidémiologique et de Surveillance Transport Travail Environnement" ;
     schema:foundingDate "2007"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "UMRESTTE" ;
-    schema:url <http://www.umrestte.ifsttar.fr> ; 
+    org:classification "facility" ; 
+    dct:created "2023-08-17"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:abbreviation "UMRESTTE"@None ; 
+    schema:mainEntityOfPage <http://www.umrestte.ifsttar.fr> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/029brtt94> ;
+        rdfs:label "Université Claude Bernard Lyon 1" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/04q5j9b45> ;
+        rdfs:label "Institut de Veille Sanitaire" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/03x42jk29> ;
+        rdfs:label "Université Gustave Eiffel" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(4.91303 45.73865)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(4.91303 45.73865)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Bron" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/3029931/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://www.wikidata.org/entity/Q51783761> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3029931/> ;
+    ] ; 
     .

@@ -1,0 +1,40 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/03qbxk467> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2024-06-19"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:alternativeName "STABN Sriwijaya"@id ; 
+    org:alternativeName "STABN Sriwijaya Tangerang"@id ; 
+    schema:url <http://stabn-sriwijaya.ac.id> ; 
+    schema:mainEntityOfPage <https://stabn-sriwijaya.ac.id> ;
+    owl:sameAs <https://id.wikipedia.org/wiki/Sekolah_Tinggi_Agama_Buddha_Negeri_Sriwijaya_Tangerang> ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(106.63 -6.17806)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Tangerang" ;
+            schema:addressCountry "ID" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Indonesia" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1625084/> ;
+    ] ; 
+    .

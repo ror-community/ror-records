@@ -4,28 +4,131 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01frn9647> a org:Organization ;
     rdfs:label "Université de Pau et des Pays de l'Adour" ;
     schema:name "Université de Pau et des Pays de l'Adour" ;
     schema:foundingDate "1972"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "UPPA" ;
-    org:alternativeName "University of Pau and Pays de l'Adour" ;
-    schema:url <https://www.univ-pau.fr> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Pau_and_Pays_de_l'Adour> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:abbreviation "UPPA"@None ; 
+    org:alternativeName "University of Pau and Pays de l'Adour"@en ; 
+    schema:mainEntityOfPage <https://www.univ-pau.fr> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Pau_and_Pays_de_l'Adour> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100018694> ;
+    schema:sameAs <https://grid.ac/institutions/grid.5571.6> ;
+    schema:sameAs <http://isni.org/isni/000000012289818X> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03bj0v820> ;
+        rdfs:label "Centre de Recherche sur la Langue et les Textes Basques" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03r0cdk24> ;
+        rdfs:label "Institut de Recherche sur l'Architecture Antique" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00222yk13> ;
+        rdfs:label "Institut des Sciences Analytiques et de Physico-Chimie pour l'Environnement et les Matériaux" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00g669j87> ;
+        rdfs:label "Laboratoire de Mathématiques et de leurs Applications" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00721wn77> ;
+        rdfs:label "Les Afriques dans le Monde" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03qma7a12> ;
+        rdfs:label "Observatoire Aquitain des Sciences de l'Univers" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04ej53908> ;
+        rdfs:label "Typologie et Universaux Linguistiques" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03dg47v24> ;
+        rdfs:label "Laboratoire des Fluides Complexes et leurs Réservoirs" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02brsbg31> ;
+        rdfs:label "Ecologie Comportementale et Biologie des Populations de Poissons" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0127n6542> ;
+        rdfs:label "Laboratoire Interuniversitaire Expérience, Ressources culturelles, Education" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0213f8g15> ;
+        rdfs:label "DMEX Centre for X-ray Imaging" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04pwzyv45> ;
+        rdfs:label "Droit International Comparé et Européen" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04cms1b08> ;
+        rdfs:label "Transitions Energétiques et Environnementales" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01x6z5t49> ;
+        rdfs:label "Fédération de Recherche Spectroscopies de Photoémission" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01nrtdp55> ;
+        rdfs:label "GDR NBODY : Problème quantique à N corps en chimie et physique" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-0.35583 43.31117)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-0.35583 43.31117)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Pau" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2988358/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/000000012289818X> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q572968> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2988358/> ;
+    ] ; 
     .

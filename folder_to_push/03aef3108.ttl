@@ -4,26 +4,51 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/03aef3108> a org:Organization ;
     rdfs:label "Centre de données socio-politiques de Sciences Po" ;
     schema:name "Centre de données socio-politiques de Sciences Po" ;
     schema:foundingDate "2005"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "CDSP" ;
-    org:alternativeName "Centre for Socio-Political Data" ;
-    schema:url <https://cdsp.sciences-po.fr> ; 
+    org:classification "facility" ; 
+    dct:created "2022-10-27"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:abbreviation "CDSP"@None ; 
+    org:abbreviation "CSPD"@None ; 
+    org:alternativeName "Centre de données socio-politiques"@fr ; 
+    org:alternativeName "Centre for Socio-Political Data"@en ; 
+    schema:mainEntityOfPage <https://cdsp.sciences-po.fr> ;
+    schema:sameAs <http://isni.org/isni/0000000404630798> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/04b0z7q78> ;
+        rdfs:label "Institut des Sciences Humaines et Sociales" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/05fe7ax82> ;
+        rdfs:label "Institut d'Etudes Politiques de Paris" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(2.3488 48.85341)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(2.3488 48.85341)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Paris" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2988507/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000404630798> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q51782018> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2988507/> ;
+    ] ; 
     .

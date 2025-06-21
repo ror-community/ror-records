@@ -4,25 +4,57 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/0015ws592> a org:Organization ;
-    rdfs:label "Institute of Genetics and Molecular and Cellular Biology" ;
-    schema:name "Institute of Genetics and Molecular and Cellular Biology" ;
+    rdfs:label "" ;
+    schema:name "" ;
     schema:foundingDate "1994"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "IGBMC" ;
-    schema:url <https://www.igbmc.fr> ; 
+    org:classification "facility" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:alternativeName "Centre Européen de Recherche en Biologie et en Médecine"@fr ; 
+    org:abbreviation "IGBMC"@None ; 
+    schema:url <http://igbmc.fr> ; 
+    schema:mainEntityOfPage <https://www.igbmc.fr> ;
+    schema:sameAs <https://grid.ac/institutions/grid.420255.4> ;
+    schema:sameAs <http://isni.org/isni/0000000406382716> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02vjkv261> ;
+        rdfs:label "Inserm" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/00rydyx93> ;
+        rdfs:label "Institut des Sciences Biologiques" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/00pg6eq24> ;
+        rdfs:label "Université de Strasbourg" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(7.71523 48.52894)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(7.71523 48.52894)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Illkirch-Graffenstaden" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/3012834/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000406382716> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3012834/> ;
+    ] ; 
     .

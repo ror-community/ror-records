@@ -4,25 +4,54 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/00nb39k71> a org:Organization ;
     rdfs:label "University of French Guiana" ;
     schema:name "University of French Guiana" ;
     schema:foundingDate "2014"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    schema:url <http://www.univ-guyane.fr/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/University_of_French_Guiana> ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    schema:mainEntityOfPage <http://www.univ-guyane.fr/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/University_of_French_Guiana> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.460797.b> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04q9vef57> ;
+        rdfs:label "Ecologie des Forêts de Guyane" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01z485314> ;
+        rdfs:label "UMR Espace-Dev" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00gj7r351> ;
+        rdfs:label "Laboratoire écologie, évolution, interactions des systèmes amazoniens" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-52.33333 4.93333)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-52.33333 4.93333)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Cayenne" ;
             schema:addressCountry "GF" ;
-            owl:sameAs <http://sws.geonames.org/3382160/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://www.wikidata.org/entity/Q16682067> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "French Guiana" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3382160/> ;
+    ] ; 
     .

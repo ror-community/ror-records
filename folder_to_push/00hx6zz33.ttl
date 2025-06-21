@@ -4,27 +4,129 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/00hx6zz33> a org:Organization ;
     rdfs:label "École Normale Supérieure Paris-Saclay" ;
     schema:name "École Normale Supérieure Paris-Saclay" ;
     schema:foundingDate "1892"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:alternativeName "ENS Cachan" ;
-    schema:url <http://ens-paris-saclay.fr/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/%C3%89cole_normale_sup%C3%A9rieure_de_Cachan> ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:alternativeName "ENS Cachan"@fr ; 
+    org:alternativeName "Normale Sup' Cachan"@fr ; 
+    schema:mainEntityOfPage <http://ens-paris-saclay.fr/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/%C3%89cole_normale_sup%C3%A9rieure_de_Cachan> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.6390.c> ;
+    schema:sameAs <http://isni.org/isni/0000000417650915> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/006shqv80> ;
+        rdfs:label "Centre d'Économie de la Sorbonne" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03jdg7625> ;
+        rdfs:label "Institut des Sciences Sociales du Politique" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03p76m698> ;
+        rdfs:label "Institutions et Dynamiques Historiques de l'Économie et de la Société" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03njrcx45> ;
+        rdfs:label "Laboratoire de Biologie et Pharmacologie Appliquée" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03r7eh527> ;
+        rdfs:label "Laboratoire de Photophysique et Photochimie Supramoléculaires et Macromoléculaires" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01bn5c048> ;
+        rdfs:label "Laboratoire de Photonique Quantique et Moléculaire" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03vam5b06> ;
+        rdfs:label "Laboratoire des systèmes et applications des technologies de l'information et de l'énergie" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05wjc8a85> ;
+        rdfs:label "Laboratoire Universitaire de Recherche en Production Automatisée" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/007y9b339> ;
+        rdfs:label "Centre de Recherche en Design" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/048d5xq24> ;
+        rdfs:label "Laboratoire Lumière, Matière et Interfaces" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00gdtta79> ;
+        rdfs:label "Laboratoire Méthodes Formelles" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01jv2ft75> ;
+        rdfs:label "Laboratoire de Mécanique Paris-Saclay" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01bbf9m56> ;
+        rdfs:label "Fédération Francilienne de Mécanique - Matériaux, Structures, Procédés" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01sgwka45> ;
+        rdfs:label "Microscopie Fonctionnelle du Vivant" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/03xjwb503> ;
+        rdfs:label "University of Paris-Saclay" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(2.13333 48.68333)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(2.13333 48.68333)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Gif-sur-Yvette" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/3016078/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000417650915> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q273604> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3016078/> ;
+    ] ; 
     .

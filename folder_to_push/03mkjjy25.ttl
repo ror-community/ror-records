@@ -4,27 +4,268 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/03mkjjy25> a org:Organization ;
     rdfs:label "Université de Versailles Saint-Quentin-en-Yvelines" ;
     schema:name "Université de Versailles Saint-Quentin-en-Yvelines" ;
     schema:foundingDate "1991"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "UVSQ" ;
-    schema:url <https://www.uvsq.fr> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Versailles_Saint-Quentin-en-Yvelines_University> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:abbreviation "UVSQ"@None ; 
+    schema:mainEntityOfPage <https://www.uvsq.fr> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Versailles_Saint-Quentin-en-Yvelines_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100020875> ;
+    schema:sameAs <https://grid.ac/institutions/grid.12832.3a> ;
+    schema:sameAs <http://isni.org/isni/0000000123230229> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01qm1tk92> ;
+        rdfs:label "Centre de Recherches Sociologiques sur le Droit et les Institutions Pénales" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01ed4t417> ;
+        rdfs:label "Centre de recherche en Epidémiologie et Santé des Populations" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/059fn5f50> ;
+        rdfs:label "Fédération de Recherche PhotoVoltaïque" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01wrng808> ;
+        rdfs:label "Groupe d’Étude de la Matière Condensée" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02nxezb95> ;
+        rdfs:label "Handicap neuromusculaire : Physiopathologie, Biothérapie et Pharmacologie appliquées" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05mzd8v39> ;
+        rdfs:label "Institut Lavoisier de Versailles" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00mdx2x22> ;
+        rdfs:label "Laboratoire Printemps" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03dsd0g48> ;
+        rdfs:label "Laboratoire des Sciences du Climat et de l'Environnement" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03jv6w209> ;
+        rdfs:label "Maison de la Simulation" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04k5jw363> ;
+        rdfs:label "Laboratoire de Mathématiques de Versailles" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/047rqcm40> ;
+        rdfs:label "Soutenabilité et Résilence" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01jvz7e61> ;
+        rdfs:label "Virologie et Immunologie Moléculaires" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01x6z5t49> ;
+        rdfs:label "Fédération de Recherche Spectroscopies de Photoémission" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0459fdx51> ;
+        rdfs:label "Fédération de Recherche sur l'Energie Solaire" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05ppf7q77> ;
+        rdfs:label "Laboratoire atmosphères, milieux, observations spatiales" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/021sh3243> ;
+        rdfs:label "Infection et inflammation" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05r0mw364> ;
+        rdfs:label "Biomarqueurs et essais cliniques en Cancérologie et Onco-Hématologie" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01bt3e159> ;
+        rdfs:label "Cultures, Environnements, Arctique, Représentations, Climat" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0087n5v55> ;
+        rdfs:label "Centre d’histoire culturelle des sociétés contemporaines" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00ex3jm11> ;
+        rdfs:label "Cohortes épidémiologiques en population" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04ate5z57> ;
+        rdfs:label "Laboratoire de Droit des affaires et nouvelles technologies" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01xta2p78> ;
+        rdfs:label "Données et algorithmes pour une ville intelligente et durable" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00cw4qm30> ;
+        rdfs:label "Dynamiques patrimoniales et culturelles" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/023bv6t84> ;
+        rdfs:label "Equipe de recherche paramédicale sur le handicap neuromoteur" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04k0drf78> ;
+        rdfs:label "Institut photonique d'analyse non-destructive européen des matériaux anciens" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/008hxwy89> ;
+        rdfs:label "Institut de recherches arctiques Jean Malaurie" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/023b2c435> ;
+        rdfs:label "Laboratoire Anthropologie, Archéologie, Biologie" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00s4fex77> ;
+        rdfs:label "Laboratoire de recherche en Management" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00edzht24> ;
+        rdfs:label "Laboratoire de génétique et biologie cellulaire" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01jdptv64> ;
+        rdfs:label "Laboratoire interdisciplinaire sur les mutations des espaces économiques et politiques - Paris Saclay" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00qyswv14> ;
+        rdfs:label "Laboratoire d’informatique Parallélisme Réseaux Algorithmes Distribués" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01hcc6p91> ;
+        rdfs:label "Laboratoire d'Ingénierie des Systèmes de Versailles" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02k243t26> ;
+        rdfs:label "Laboratoire physiopathologie et pharmacologie clinique de la douleur" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01wc6sh26> ;
+        rdfs:label "Risques cliniques et sécurité en santé des femmes et en santé périnatale" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/042j26x71> ;
+        rdfs:label "Centre de recherche Versailles Saint-Quentin Institutions Publiques" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05mfwtg94> ;
+        rdfs:label "Biologie de la Reproduction, Environnement, Epigénétique et Développement" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/03xjwb503> ;
+        rdfs:label "University of Paris-Saclay" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03pef0w96> ;
+        rdfs:label "Hôpital Raymond-Poincaré" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(2.13424 48.80359)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(2.13424 48.80359)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Versailles" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2969679/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000123230229> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q186638> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2969679/> ;
+    ] ; 
     .

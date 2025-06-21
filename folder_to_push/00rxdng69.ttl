@@ -4,25 +4,48 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/00rxdng69> a org:Organization ;
     rdfs:label "Centre universitaire de recherches sur l'Action Publique et le Politique Épistémologie & Sciences Sociales" ;
     schema:name "Centre universitaire de recherches sur l'Action Publique et le Politique Épistémologie & Sciences Sociales" ;
     schema:foundingDate "2012"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "CURAPP-ESS" ;
-    schema:url <https://www.u-picardie.fr/curapp/> ; 
+    org:classification "facility" ; 
+    dct:created "2023-08-17"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:abbreviation "CURAPP-ESS"@None ; 
+    schema:mainEntityOfPage <https://www.u-picardie.fr/curapp/> ;
+    schema:sameAs <http://isni.org/isni/0000000121061732> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/01gyxrk03> ;
+        rdfs:label "Université de Picardie Jules Verne" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02feahw73> ;
+        rdfs:label "Centre National de la Recherche Scientifique" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(2.3 49.9)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(2.3 49.9)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Amiens" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/3037854/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000121061732> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q51781268> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3037854/> ;
+    ] ; 
     .

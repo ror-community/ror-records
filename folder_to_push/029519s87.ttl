@@ -4,24 +4,43 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/029519s87> a org:Organization ;
     rdfs:label "NUWC Keyport Division" ;
     schema:name "NUWC Keyport Division" ;
     org:status "active" ;
-    org:classification "Government" ; 
-    org:classification "Facility" ; 
-    org:alternativeName "Naval Undersea Warfare Center Keyport Division" ;
-    schema:url <https://www.navsea.navy.mil/Home/Warfare-Centers/NUWC-Keyport/> ; 
+    org:classification "facility" ; 
+    org:classification "government" ; 
+    dct:created "2023-11-08"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:alternativeName "NUWC Keyport"@en ; 
+    org:alternativeName "Naval Undersea Warfare Center Keyport Division"@en ; 
+    schema:mainEntityOfPage <https://www.navsea.navy.mil/Home/Warfare-Centers/NUWC-Keyport/> ;
+    schema:sameAs <http://isni.org/isni/0000000405221099> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/04bnxa153> ;
+        rdfs:label "Naval Undersea Warfare Center" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-122.62098 47.70204)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-122.62098 47.70204)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Keyport" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/5799696/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000405221099> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/5799696/> ;
+    ] ; 
     .

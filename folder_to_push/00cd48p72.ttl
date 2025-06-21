@@ -4,24 +4,107 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/00cd48p72> a org:Organization ;
     rdfs:label "Campus Condorcet" ;
     schema:name "Campus Condorcet" ;
     schema:foundingDate "2008"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    schema:url <http://www.campus-condorcet.fr> ; 
+    org:classification "education" ; 
+    dct:created "2023-07-27"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    schema:mainEntityOfPage <http://www.campus-condorcet.fr> ;
+    schema:sameAs <http://isni.org/isni/0000000464575102> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04ces3204> ;
+        rdfs:label "Huma-Num" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02feahw73> ;
+        rdfs:label "Centre National de la Recherche Scientifique" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02d9dg697> ;
+        rdfs:label "École des hautes études en sciences sociales" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/013xvg556> ;
+        rdfs:label "École Nationale des Chartes" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/046b3cj80> ;
+        rdfs:label "École Pratique des Hautes Études" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/0581esp57> ;
+        rdfs:label "Fondation Maison des Sciences de l'Homme" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02cnsac56> ;
+        rdfs:label "Institut national d'études démographiques" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/002t25c44> ;
+        rdfs:label "Université Paris 1 Panthéon-Sorbonne" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03z6jp965> ;
+        rdfs:label "Université Sorbonne Nouvelle" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/04wez5e68> ;
+        rdfs:label "Université de Vincennes à Saint-Denis" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/013bkhk48> ;
+        rdfs:label "Université Paris Nanterre" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/0199hds37> ;
+        rdfs:label "Université Sorbonne Paris Nord" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(2.38333 48.91667)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(2.38333 48.91667)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Aubervilliers" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/3036386/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000464575102> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q2935605> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3036386/> ;
+    ] ; 
     .

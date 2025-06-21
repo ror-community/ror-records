@@ -4,25 +4,54 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02aswf736> a org:Organization ;
-    rdfs:label "Atmosphere Plant Soil Interactions" ;
-    schema:name "Atmosphere Plant Soil Interactions" ;
+    rdfs:label "" ;
+    schema:name "" ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "ISPA" ;
-    schema:url <https://www6.bordeaux-aquitaine.inra.fr/ispa_eng/> ; 
+    org:classification "facility" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:abbreviation "ISPA"@None ; 
+    schema:mainEntityOfPage <https://www6.bordeaux-aquitaine.inra.fr/ispa_eng/> ;
+    schema:sameAs <https://grid.ac/institutions/grid.464125.0> ;
+    schema:sameAs <http://isni.org/isni/0000000404393921> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/00tebkv94> ;
+        rdfs:label "Centre Nouvelle Aquitaine-Bordeaux" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/057qpr032> ;
+        rdfs:label "Université de Bordeaux" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/00har9915> ;
+        rdfs:label "École Nationale Supérieure des Sciences Agronomiques de Bordeaux-Aquitaine" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-0.56707 44.77935)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-0.56707 44.77935)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Villenave-d'Ornon" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2968620/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000404393921> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q30262479> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2968620/> ;
+    ] ; 
     .

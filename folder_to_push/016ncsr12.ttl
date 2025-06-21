@@ -4,26 +4,88 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/016ncsr12> a org:Organization ;
     rdfs:label "Centre Hospitalier Universitaire de Nancy" ;
     schema:name "Centre Hospitalier Universitaire de Nancy" ;
     schema:foundingDate "1970"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Healthcare" ; 
-    org:abbreviation "CHU" ;
-    org:alternativeName "Hôpital Central de Nancy" ;
-    schema:url <http://www.chu-nancy.fr/> ; 
+    org:classification "healthcare" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:abbreviation "CHU"@None ; 
+    org:alternativeName "Central Hospital Nancy"@en ; 
+    org:alternativeName "Central Hospital of Nancy"@en ; 
+    org:alternativeName "Central University Hospital of Nancy"@en ; 
+    org:alternativeName "Hôpital Central Nancy"@fr ; 
+    org:alternativeName "Hôpital Central de Nancy"@fr ; 
+    org:alternativeName "Nancy Central Hospital"@en ; 
+    org:alternativeName "Nancy Central University Hospital"@en ; 
+    org:alternativeName "Nancy University Hospital"@en ; 
+    org:alternativeName "University Hospital of Nancy"@en ; 
+    schema:mainEntityOfPage <http://www.chu-nancy.fr/> ;
+    schema:sameAs <https://grid.ac/institutions/grid.410527.5> ;
+    schema:sameAs <http://isni.org/isni/0000000417651301> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04ghtjd11> ;
+        rdfs:label "Centre d'Investigation Clinique Pierre Drouin" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/025mhc977> ;
+        rdfs:label "Imagerie Adaptative Diagnostique et Interventionnelle" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/047b6f797> ;
+        rdfs:label "Hôpital Jeanne d'Arc" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04yc2e502> ;
+        rdfs:label "Ingénierie Moléculaire et Physiopathologie Articulaire" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/022r5hc56> ;
+        rdfs:label "Centre de Recherche en Automatique de Nancy" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01h6hv014> ;
+        rdfs:label "Hôpital Saint-Julien" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/04vfs2w97> ;
+        rdfs:label "Université de Lorraine" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(6.18496 48.68439)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(6.18496 48.68439)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Nancy" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2990999/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000417651301> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2990999/> ;
+    ] ; 
     .

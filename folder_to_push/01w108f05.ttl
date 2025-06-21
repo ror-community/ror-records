@@ -4,25 +4,55 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01w108f05> a org:Organization ;
     rdfs:label "Building Blocks for Future Electronics Laboratory" ;
     schema:name "Building Blocks for Future Electronics Laboratory" ;
     schema:foundingDate "2017"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "2B-FUEL" ;
-    org:alternativeName "Building Blocks for Future Electronics" ;
-    schema:url <https://2b-fuel.cnrs.fr> ; 
+    org:classification "facility" ; 
+    dct:created "2023-12-07"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:abbreviation "2B-FUEL"@None ; 
+    org:alternativeName "2B-FUEL (Building Blocks for FUture Electronics Laboratory)"@en ; 
+    org:alternativeName "Building Blocks for Future Electronics"@en ; 
+    schema:mainEntityOfPage <https://2b-fuel.cnrs.fr> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02feahw73> ;
+        rdfs:label "Centre National de la Recherche Scientifique" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02en5vm52> ;
+        rdfs:label "Sorbonne Université" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/01wjejq96> ;
+        rdfs:label "Yonsei University" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(126.9784 37.566)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(126.9784 37.566)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Seoul" ;
             schema:addressCountry "KR" ;
-            owl:sameAs <http://sws.geonames.org/1835848/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://www.wikidata.org/entity/Q123695101> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "South Korea" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1835848/> ;
+    ] ; 
     .

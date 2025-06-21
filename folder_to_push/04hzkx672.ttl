@@ -4,24 +4,54 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/04hzkx672> a org:Organization ;
-    rdfs:label "Nutritional Epidemiology Research Unit" ;
-    schema:name "Nutritional Epidemiology Research Unit" ;
+    rdfs:label "" ;
+    schema:name "" ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "UREN" ;
-    schema:url <http://www.univ-paris13.fr/eren/> ; 
+    org:classification "facility" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:abbreviation "UREN"@None ; 
+    schema:mainEntityOfPage <http://www.univ-paris13.fr/eren/> ;
+    schema:sameAs <https://grid.ac/institutions/grid.464122.7> ;
+    schema:sameAs <http://isni.org/isni/0000000404093988> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/0175hh227> ;
+        rdfs:label "Conservatoire National des Arts et Métiers" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/00bw5n526> ;
+        rdfs:label "Délégation Paris 7" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/0199hds37> ;
+        rdfs:label "Université Sorbonne Paris Nord" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(2.45012 48.90982)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(2.45012 48.90982)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Bobigny" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/3032179/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000404093988> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3032179/> ;
+    ] ; 
     .

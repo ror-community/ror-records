@@ -4,23 +4,47 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/059424541> a org:Organization ;
     rdfs:label "Bassins - Réservoirs - Ressources" ;
     schema:name "Bassins - Réservoirs - Ressources" ;
     schema:foundingDate "2018"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "B2R" ;
-    schema:url <https://www.unilasalle.fr/recherche/recherche-service-de-nos-ambitions/b2r/> ; 
+    org:classification "facility" ; 
+    dct:created "2023-08-17"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:abbreviation "B2R"@None ; 
+    schema:mainEntityOfPage <https://www.unilasalle.fr/recherche/recherche-service-de-nos-ambitions/b2r/> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/01gyxrk03> ;
+        rdfs:label "Université de Picardie Jules Verne" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/05wy89733> ;
+        rdfs:label "UniLaSalle" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(2.3 49.9)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(2.3 49.9)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Amiens" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/3037854/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3037854/> ;
+    ] ; 
     .

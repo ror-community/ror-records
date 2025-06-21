@@ -1,0 +1,40 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/004v3m339> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    org:status "active" ;
+    org:classification "healthcare" ; 
+    dct:created "2024-06-19"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:alternativeName "First People's Hospital of Guangyuan"@en ; 
+    org:alternativeName "Guangyuan First People's Hospital"@en ; 
+    schema:url <http://gy072.com> ; 
+    schema:mainEntityOfPage <https://www.gy072.com> ;
+    schema:sameAs <http://isni.org/isni/0000000513284601> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(105.823 32.44201)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Guangyuan" ;
+            schema:addressCountry "CN" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "China" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1806466/> ;
+    ] ; 
+    .

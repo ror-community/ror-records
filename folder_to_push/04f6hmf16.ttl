@@ -4,25 +4,90 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/04f6hmf16> a org:Organization ;
-    rdfs:label "Languedoc-Roussillon Universities" ;
-    schema:name "Languedoc-Roussillon Universities" ;
+    rdfs:label "" ;
+    schema:name "" ;
     schema:foundingDate "2013"^^xsd:gYear ;
-    org:status "active" ;
-    org:classification "Other" ; 
-    schema:url <http://www.languedoc-roussillon-universites.fr/index.php> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Languedoc-Roussillon_Universities> ;
+    org:status "inactive" ;
+    org:classification "other" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    schema:mainEntityOfPage <http://www.languedoc-roussillon-universites.fr/index.php> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Languedoc-Roussillon_Universities> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.468967.2> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05q3vnk25> ;
+        rdfs:label "Institut de Recherche pour le Développement" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03rnk6m14> ;
+        rdfs:label "Institut Agro Montpellier" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/051escj72> ;
+        rdfs:label "University of Montpellier" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/044t4x544> ;
+        rdfs:label "Université de Nîmes" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03am2jy38> ;
+        rdfs:label "Université de Perpignan" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00qhdy563> ;
+        rdfs:label "Université Paul-Valéry Montpellier" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03sgyqj04> ;
+        rdfs:label "École Nationale Supérieure de Chimie de Montpellier" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/008axfh28> ;
+        rdfs:label "National School of Architecture of Montpellier" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03e8rf594> ;
+        rdfs:label "IMT Mines Alès" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(3.87635 43.61093)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(3.87635 43.61093)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Montpellier" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2992166/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://www.wikidata.org/entity/Q2476558> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2992166/> ;
+    ] ; 
     .

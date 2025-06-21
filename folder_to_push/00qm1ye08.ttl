@@ -4,25 +4,55 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/00qm1ye08> a org:Organization ;
-    rdfs:label "Centre for Material Forming" ;
-    schema:name "Centre for Material Forming" ;
+    rdfs:label "" ;
+    schema:name "" ;
     schema:foundingDate "1974"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "CEMEF" ;
-    schema:url <http://www.cemef.mines-paristech.fr/> ; 
+    org:classification "facility" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:abbreviation "CEMEF"@None ; 
+    schema:mainEntityOfPage <http://www.cemef.mines-paristech.fr/> ;
+    schema:sameAs <https://grid.ac/institutions/grid.463782.c> ;
+    schema:sameAs <http://isni.org/isni/0000000106587015> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/00dcrfk74> ;
+        rdfs:label "ARMINES" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/00s19x989> ;
+        rdfs:label "CNRS Ingénierie" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/04y8cs423> ;
+        rdfs:label "École Nationale Supérieure des Mines de Paris" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(7.26608 43.70313)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(7.26608 43.70313)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Nice" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2990440/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000106587015> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2990440/> ;
+    ] ; 
     .

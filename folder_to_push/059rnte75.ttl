@@ -1,0 +1,43 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/059rnte75> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "1875"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:alternativeName "Salt Lake Collegiate Institute"@en ; 
+    org:alternativeName "Westminster College - Utah"@en ; 
+    schema:url <http://westminsteru.edu> ; 
+    schema:mainEntityOfPage <https://westminsteru.edu> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Westminster_College_(Utah)> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.422650.7> ;
+    schema:sameAs <http://isni.org/isni/0000000404607360> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-111.89105 40.76078)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Salt Lake City" ;
+            schema:addressCountry "US" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/5780993/> ;
+    ] ; 
+    .

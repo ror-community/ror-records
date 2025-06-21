@@ -4,25 +4,42 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/006yrbb28> a org:Organization ;
     rdfs:label "École de Psychologues Praticien" ;
     schema:name "École de Psychologues Praticien" ;
     schema:foundingDate "1951"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    schema:url <https://www.psycho-prat.fr> ; 
-    owl:sameAs <https://fr.wikipedia.org/wiki/%C3%89cole_de_psychologues_praticiens_de_l%27institut_catholique_de_Paris> ;
+    org:classification "education" ; 
+    dct:created "2023-07-06"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    schema:mainEntityOfPage <https://www.psycho-prat.fr> ;
+    owl:sameAs <https://fr.wikipedia.org/wiki/%C3%89cole_de_psychologues_praticiens_de_l%27institut_catholique_de_Paris> ; 
+    schema:sameAs <http://isni.org/isni/0000000091229898> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/043a7rc44> ;
+        rdfs:label "Institut catholique de paris" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(2.3486 48.8534)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(2.3486 48.8534)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Paris" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2968815/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000091229898> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q3577907> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2968815/> ;
+    ] ; 
     .

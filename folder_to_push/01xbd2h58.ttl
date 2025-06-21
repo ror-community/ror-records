@@ -4,23 +4,52 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01xbd2h58> a org:Organization ;
     rdfs:label "Unité Mixte de Recherche sur les Fromages" ;
     schema:name "Unité Mixte de Recherche sur les Fromages" ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "UMRF" ;
-    schema:url <https://www6.clermont.inrae.fr/umrf> ; 
+    org:classification "facility" ; 
+    dct:created "2023-06-22"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:abbreviation "UMRF"@None ; 
+    schema:mainEntityOfPage <https://www6.clermont.inrae.fr/umrf> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/003vg9w96> ;
+        rdfs:label "Institut National de Recherche pour l'Agriculture, l'Alimentation et l'Environnement" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/01a8ajp46> ;
+        rdfs:label "University of Clermont Auvergne" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/01c7wz417> ;
+        rdfs:label "VetAgro Sup" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(2.43983 44.92539)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(2.43983 44.92539)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Aurillac" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/3036016/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://www.wikidata.org/entity/Q52557874> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3036016/> ;
+    ] ; 
     .

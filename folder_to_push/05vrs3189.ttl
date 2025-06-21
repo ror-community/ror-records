@@ -4,22 +4,64 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/05vrs3189> a org:Organization ;
     rdfs:label "Centre de Recherche en Informatique, Signal et Automatique de Lille" ;
     schema:name "Centre de Recherche en Informatique, Signal et Automatique de Lille" ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "CRIStAL" ;
-    schema:url <https://www.cristal.univ-lille.fr> ; 
+    org:classification "facility" ; 
+    dct:created "2023-02-28"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:abbreviation "CRIStAL"@None ; 
+    schema:mainEntityOfPage <https://www.cristal.univ-lille.fr> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02kzqn938> ;
+        rdfs:label "University of Lille" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/01x441g73> ;
+        rdfs:label "École Centrale de Lille" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02feahw73> ;
+        rdfs:label "Centre National de la Recherche Scientifique" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02kvxyf05> ;
+        rdfs:label "Institut national de recherche en informatique et en automatique" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/042rh9p26> ;
+        rdfs:label "IMT Nord Europe" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(3.16664 50.61669)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(3.16664 50.61669)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Villeneuve-d'Ascq" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/6543862/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/6543862/> ;
+    ] ; 
     .

@@ -4,25 +4,49 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/00w67e447> a org:Organization ;
-    rdfs:label "Laboratory of Theoretical Physics and Statistical Models" ;
-    schema:name "Laboratory of Theoretical Physics and Statistical Models" ;
+    rdfs:label "" ;
+    schema:name "" ;
     schema:foundingDate "1998"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "LPTMS" ;
-    schema:url <https://www.lptms.universite-paris-saclay.fr> ; 
+    org:classification "facility" ; 
+    dct:created "2019-02-17"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:abbreviation "LPTMS"@None ; 
+    schema:mainEntityOfPage <https://www.lptms.universite-paris-saclay.fr> ;
+    schema:sameAs <https://grid.ac/institutions/grid.503330.6> ;
+    schema:sameAs <http://isni.org/isni/0000000403668268> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/03xjwb503> ;
+        rdfs:label "University of Paris-Saclay" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02feahw73> ;
+        rdfs:label "Centre National de la Recherche Scientifique" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(2.18727 48.69572)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(2.18727 48.69572)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Orsay" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2989204/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000403668268> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2989204/> ;
+    ] ; 
     .

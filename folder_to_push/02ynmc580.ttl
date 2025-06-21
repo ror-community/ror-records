@@ -4,24 +4,47 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02ynmc580> a org:Organization ;
-    rdfs:label "Animal and Functionality of Animal Products" ;
-    schema:name "Animal and Functionality of Animal Products" ;
+    rdfs:label "" ;
+    schema:name "" ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "URAFPA" ;
-    schema:url <https://www.urafpa.fr/index.php/pages/index> ; 
+    org:classification "facility" ; 
+    dct:created "2019-02-17"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:abbreviation "URAFPA"@None ; 
+    schema:mainEntityOfPage <https://www.urafpa.fr/index.php/pages/index> ;
+    schema:sameAs <https://grid.ac/institutions/grid.503413.0> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/00zg31r41> ;
+        rdfs:label "Centre INRAE Grand-Est - Colmar" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/04vfs2w97> ;
+        rdfs:label "Université de Lorraine" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(6.17114 48.66115)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(6.17114 48.66115)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Vandœuvre-lès-Nancy" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2970797/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://www.wikidata.org/entity/Q51782492> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2970797/> ;
+    ] ; 
     .

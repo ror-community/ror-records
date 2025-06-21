@@ -4,23 +4,95 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02wq1s711> a org:Organization ;
     rdfs:label "Fédération de recherche Matière et Interactions" ;
     schema:name "Fédération de recherche Matière et Interactions" ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "FeRMI" ;
-    org:alternativeName "Fédération de recherche Matière et Interactions – FeRMI" ;
-    schema:url <https://fermi.univ-tlse3.fr> ; 
+    org:classification "facility" ; 
+    dct:created "2023-10-26"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:abbreviation "FeRMI"@None ; 
+    org:alternativeName "Fédération de recherche Matière et Interactions – FeRMI"@fr ; 
+    schema:mainEntityOfPage <https://fermi.univ-tlse3.fr> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0416g8z79> ;
+        rdfs:label "Laboratoire Collisions Agrégats Réactivité" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/056g7f250> ;
+        rdfs:label "Laboratoire de Chimie et Physique Quantiques" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01w0hda30> ;
+        rdfs:label "Laboratoire de Physique Théorique" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/042xmz674> ;
+        rdfs:label "Laboratoire de Physique et Chimie des Nano-Objets" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03kwnqq69> ;
+        rdfs:label "Centre d’Élaboration de Matériaux et d’Études Structurales" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/045ktmd28> ;
+        rdfs:label "Laboratoire National des Champs Magnétiques Intenses" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/01h8pf755> ;
+        rdfs:label "Institut National des Sciences Appliquées de Toulouse" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02v6kpv12> ;
+        rdfs:label "Université Toulouse III - Paul Sabatier" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02feahw73> ;
+        rdfs:label "Centre National de la Recherche Scientifique" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "predecessor" ;
+        org:member <https://ror.org/02h158026> ;
+        rdfs:label "Institut de Recherche sur les Systèmes Atomiques et Moléculaires Complexes" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(1.44367 43.60426)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(1.44367 43.60426)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Toulouse" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2972315/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2972315/> ;
+    ] ; 
     .

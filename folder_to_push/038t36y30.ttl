@@ -4,27 +4,87 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/038t36y30> a org:Organization ;
     rdfs:label "Heidelberg University" ;
     schema:name "Heidelberg University" ;
     schema:foundingDate "1386"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    schema:url <http://www.uni-heidelberg.de/index_e.html> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Heidelberg_University> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    schema:mainEntityOfPage <http://www.uni-heidelberg.de/index_e.html> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Heidelberg_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100001661> ;
+    schema:sameAs <https://grid.ac/institutions/grid.7700.0> ;
+    schema:sameAs <http://isni.org/isni/0000000121904373> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05x8b4491> ;
+        rdfs:label "DKFZ-ZMBH Alliance" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/015wgw417> ;
+        rdfs:label "Heidelberger Institut für Radioonkologie" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02cypar22> ;
+        rdfs:label "Hopp Children's Cancer Center Heidelberg" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/003xvvt95> ;
+        rdfs:label "Institute for German, European and International Medical Law, Public Health Law and Bioethics" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/013czdx64> ;
+        rdfs:label "University Hospital Heidelberg" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05sxbyd35> ;
+        rdfs:label "University Medical Centre Mannheim" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00ma6s786> ;
+        rdfs:label "Westpfalz Klinikum" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02m1z0a87> ;
+        rdfs:label "Medizinische Fakultät Mannheim" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(8.69079 49.40768)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(8.69079 49.40768)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Heidelberg" ;
             schema:addressCountry "DE" ;
-            owl:sameAs <http://sws.geonames.org/2907911/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000121904373> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q151510> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q571207> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Germany" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2907911/> ;
+    ] ; 
     .

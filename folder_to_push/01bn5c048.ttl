@@ -4,25 +4,61 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01bn5c048> a org:Organization ;
-    rdfs:label "Laboratory of Quantum and Molecular Photonics" ;
-    schema:name "Laboratory of Quantum and Molecular Photonics" ;
+    rdfs:label "" ;
+    schema:name "" ;
     schema:foundingDate "1998"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "LPQM" ;
-    schema:url <http://lpqm.ens-paris-saclay.fr/> ; 
+    org:classification "facility" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:abbreviation "LPQM"@None ; 
+    schema:mainEntityOfPage <http://lpqm.ens-paris-saclay.fr/> ;
+    schema:sameAs <https://grid.ac/institutions/grid.496752.b> ;
+    schema:sameAs <http://isni.org/isni/0000000403684524> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/019tcpt25> ;
+        rdfs:label "CentraleSupélec" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/00s19x989> ;
+        rdfs:label "CNRS Ingénierie" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/03xjwb503> ;
+        rdfs:label "University of Paris-Saclay" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/00hx6zz33> ;
+        rdfs:label "École Normale Supérieure Paris-Saclay" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(2.33661 48.79632)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(2.33661 48.79632)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Cachan" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/3029276/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000403684524> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3029276/> ;
+    ] ; 
     .

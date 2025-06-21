@@ -4,28 +4,125 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/04mczx267> a org:Organization ;
     rdfs:label "National Academy of Sciences of Armenia" ;
     schema:name "National Academy of Sciences of Armenia" ;
     schema:foundingDate "1943"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Government" ; 
-    org:abbreviation "NAS RA" ;
-    org:alternativeName "Armenian National Academy of Sciences" ;
-    schema:url <http://www.sci.am/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Armenian_National_Academy_of_Sciences> ;
+    org:classification "funder" ; 
+    org:classification "government" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:alternativeName "Armenian National Academy of Sciences"@en ; 
+    org:abbreviation "NAS RA"@None ; 
+    schema:mainEntityOfPage <http://www.sci.am/> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Armenian_National_Academy_of_Sciences> ; 
+    schema:sameAs <https://api.crossref.org/funders/100008721> ;
+    schema:sameAs <https://grid.ac/institutions/grid.418094.0> ;
+    schema:sameAs <http://isni.org/isni/0000000111467878> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0010mjy66> ;
+        rdfs:label "Byurakan Astrophysical Observatory" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01gpc1r56> ;
+        rdfs:label "H.Buniatian Institute of Biochemistry" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04a8k4p47> ;
+        rdfs:label "Institute for Informatics and Automation Problems" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0187pag34> ;
+        rdfs:label "Institute for Physical Research" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02af4h206> ;
+        rdfs:label "Institute of Archaeology and Ethnography" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05mpgew40> ;
+        rdfs:label "Institute of Botany" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00588h422> ;
+        rdfs:label "Institute of Fine Organic Chemistry of Scientific - Technological Center of Organic and Pharmaceutical Chemistry" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03r6rhw30> ;
+        rdfs:label "Institute of Geological Sciences" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03t8mqd25> ;
+        rdfs:label "Institute of Molecular Biology" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02b7e7p97> ;
+        rdfs:label "Institute of Philosophy, Sociology and Law" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/051jgxz75> ;
+        rdfs:label "Institute of Radiophysics and Electronics" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02gse4n09> ;
+        rdfs:label "L. A. Orbeli Institute of Physiology NAS RA" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00t5ymp38> ;
+        rdfs:label "Scientific Center of Zoology and Hydroecology" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01s3m0650> ;
+        rdfs:label "Institute of Chemical Physics NAS RA" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(44.51361 40.18111)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(44.51361 40.18111)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Yerevan" ;
             schema:addressCountry "AM" ;
-            owl:sameAs <http://sws.geonames.org/616052/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000111467878> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q2379496> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Armenia" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/616052/> ;
+    ] ; 
     .

@@ -4,22 +4,58 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/0455vgw31> a org:Organization ;
     rdfs:label "IMPact de l'Environnement Chimique sur la Santé humaine" ;
     schema:name "IMPact de l'Environnement Chimique sur la Santé humaine" ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "IMPECS" ;
-    schema:url <https://impecs.univ-lille.fr> ; 
+    org:classification "facility" ; 
+    dct:created "2023-02-28"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:abbreviation "IMPECS"@None ; 
+    schema:mainEntityOfPage <https://impecs.univ-lille.fr> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02kzqn938> ;
+        rdfs:label "University of Lille" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02ppyfa04> ;
+        rdfs:label "Centre Hospitalier Universitaire de Lille" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02vjkv261> ;
+        rdfs:label "Inserm" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/05k9skc85> ;
+        rdfs:label "Institut Pasteur de Lille" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(3.05858 50.63297)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(3.05858 50.63297)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Lille" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2998324/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2998324/> ;
+    ] ; 
     .

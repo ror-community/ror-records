@@ -4,25 +4,55 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/00g669j87> a org:Organization ;
-    rdfs:label "Laboratory of Mathematics and their Applications" ;
-    schema:name "Laboratory of Mathematics and their Applications" ;
+    rdfs:label "" ;
+    schema:name "" ;
     schema:foundingDate "2005"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "LMAP" ;
-    schema:url <http://lma-umr5142.univ-pau.fr/live/> ; 
+    org:classification "facility" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:abbreviation "LMAP"@None ; 
+    schema:mainEntityOfPage <http://lma-umr5142.univ-pau.fr/live/> ;
+    schema:sameAs <https://grid.ac/institutions/grid.463907.f> ;
+    schema:sameAs <http://isni.org/isni/0000000403829607> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02kvxyf05> ;
+        rdfs:label "Institut national de recherche en informatique et en automatique" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/050jcm728> ;
+        rdfs:label "Institut National des Sciences Mathématiques et de leurs Interactions" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/01frn9647> ;
+        rdfs:label "Université de Pau et des Pays de l'Adour" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-0.35583 43.31117)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-0.35583 43.31117)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Pau" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2988358/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000403829607> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2988358/> ;
+    ] ; 
     .

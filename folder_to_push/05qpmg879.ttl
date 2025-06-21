@@ -4,25 +4,57 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/05qpmg879> a org:Organization ;
-    rdfs:label "Institute for Molecular and Cellular Biology" ;
-    schema:name "Institute for Molecular and Cellular Biology" ;
+    rdfs:label "" ;
+    schema:name "" ;
     schema:foundingDate "1998"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "IBMC" ;
-    schema:url <http://www-ibmc.u-strasbg.fr/> ; 
+    org:classification "facility" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:abbreviation "IBMC"@None ; 
+    org:alternativeName "Institute for Molecular and Cellular Biology"@en ; 
+    schema:url <http://ibmc.cnrs.fr> ; 
+    schema:mainEntityOfPage <https://ibmc.cnrs.fr> ;
+    schema:sameAs <https://grid.ac/institutions/grid.465534.5> ;
+    schema:sameAs <http://isni.org/isni/0000000406380833> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/030przz70> ;
+        rdfs:label "Modèles Insectes de l'Immunité Innée" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/00pg6eq24> ;
+        rdfs:label "Université de Strasbourg" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02feahw73> ;
+        rdfs:label "Centre National de la Recherche Scientifique" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(7.74553 48.58392)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(7.74553 48.58392)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Strasbourg" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2973783/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000406380833> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2973783/> ;
+    ] ; 
     .

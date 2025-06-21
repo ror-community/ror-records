@@ -4,24 +4,47 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/05nhcdk38> a org:Organization ;
     rdfs:label "Laboratoire de Physique Théorique et Modélisation" ;
     schema:name "Laboratoire de Physique Théorique et Modélisation" ;
     schema:foundingDate "2002"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "LPTM" ;
-    schema:url <http://www.u-cergy.fr/lptm/> ; 
+    org:classification "facility" ; 
+    dct:created "2023-08-17"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:abbreviation "LPTM"@None ; 
+    schema:mainEntityOfPage <http://www.u-cergy.fr/lptm/> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02feahw73> ;
+        rdfs:label "Centre National de la Recherche Scientifique" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/043htjv09> ;
+        rdfs:label "CY Cergy Paris Université" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(2.1 49.05)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(2.1 49.05)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Pontoise" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2986140/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://www.wikidata.org/entity/Q51784738> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2986140/> ;
+    ] ; 
     .

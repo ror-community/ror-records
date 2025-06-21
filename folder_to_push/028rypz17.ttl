@@ -4,27 +4,76 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/028rypz17> a org:Organization ;
-    rdfs:label "University of Paris-Sud" ;
-    schema:name "University of Paris-Sud" ;
+    rdfs:label "" ;
+    schema:name "" ;
     schema:foundingDate "1971"^^xsd:gYear ;
     org:status "inactive" ;
-    org:classification "Education" ; 
-    org:alternativeName "University of Paris XI" ;
-    schema:url <http://www.u-psud.fr/en/index.html> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Paris-Sud> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:alternativeName "University of Paris XI"@en ; 
+    schema:mainEntityOfPage <http://www.u-psud.fr/en/index.html> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Paris-Sud> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100007486> ;
+    schema:sameAs <https://grid.ac/institutions/grid.5842.b> ;
+    schema:sameAs <http://isni.org/isni/0000000121712558> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/036mest28> ;
+        rdfs:label "Biology of Extremophiles Laboratory" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/055s8hs34> ;
+        rdfs:label "Stabilité génétique et oncogenèse" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03s92mv58> ;
+        rdfs:label "Geosciences Paris Sud" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04bkzce69> ;
+        rdfs:label "Laboratory Signaling and Cardiovascular Pathophysiology" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02ndr3r66> ;
+        rdfs:label "Hôpital Marie Lannelongue" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "successor" ;
+        org:member <https://ror.org/03xjwb503> ;
+        rdfs:label "University of Paris-Saclay" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(2.18727 48.69572)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(2.18727 48.69572)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Orsay" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2989204/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000121712558> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1480643> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2989204/> ;
+    ] ; 
     .

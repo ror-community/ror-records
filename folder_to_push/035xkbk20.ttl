@@ -4,30 +4,548 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/035xkbk20> a org:Organization ;
-    rdfs:label "Aix-Marseille University" ;
-    schema:name "Aix-Marseille University" ;
+    rdfs:label "" ;
+    schema:name "" ;
     schema:foundingDate "1409"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "AMU" ;
-    org:alternativeName "University of Provence" ;
-    schema:url <http://www.univ-amu.fr/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Aix-Marseille_University> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:abbreviation "AMU"@None ; 
+    org:alternativeName "Paul Cézanne University"@en ; 
+    org:alternativeName "University of Provence"@en ; 
+    org:alternativeName "University of the Mediterranean"@en ; 
+    org:alternativeName "Université d'Aix-Marseille"@fr ; 
+    schema:mainEntityOfPage <http://www.univ-amu.fr/> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Aix-Marseille_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/100007587> ;
+    schema:sameAs <https://grid.ac/institutions/grid.5399.6> ;
+    schema:sameAs <http://isni.org/isni/0000000121764817> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/055ymkj32> ;
+        rdfs:label "Laboratoire Adhésion et inflammation" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04jm8zw14> ;
+        rdfs:label "Architecture et Fonction des Macromolécules Biologiques" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0060xzr04> ;
+        rdfs:label "Bioénergétique et Ingénierie des Protéines" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04ceg1205> ;
+        rdfs:label "Centre de Résonance Magnétique Biologique et Médicale" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00fw8bp86> ;
+        rdfs:label "Centre de Physique des Particules de Marseille" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/050sat078> ;
+        rdfs:label "Centre Camille Jullian" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/028ycv057> ;
+        rdfs:label "Centre Norbert Elias" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00wcvf151> ;
+        rdfs:label "Centre Paul Albert-Février" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/052bbtn31> ;
+        rdfs:label "Centre de Physique Théorique" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0494jpz02> ;
+        rdfs:label "Centre de Recherche en Cancérologie de Marseille" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03vyjkj45> ;
+        rdfs:label "Centre d’Immunologie de Marseille-Luminy" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01pa4h393> ;
+        rdfs:label "Centre de Recherche et d’Enseignement de Géosciences de l’Environnement" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02m19wv39> ;
+        rdfs:label "Centro Internacional Franco-Argentino de Ciencias de la Información y de Sistemas" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02me5cy06> ;
+        rdfs:label "Institut de Biologie du Développement Marseille" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0508wny29> ;
+        rdfs:label "Economic & Social Sciences, Health Systems & Medical Informatics" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/021x7r354> ;
+        rdfs:label "Biodiversité et Biotechnologie Fongiques" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/059fn5f50> ;
+        rdfs:label "Fédération de Recherche PhotoVoltaïque" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02ek9wp67> ;
+        rdfs:label "Groupement de Recherche en Économie Quantitative d’Aix-Marseille" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03br1wy20> ;
+        rdfs:label "Institut Fresnel" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00f945z63> ;
+        rdfs:label "Institut Pythéas Observatoire des Sciences de l’Univers" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04bgbbh33> ;
+        rdfs:label "Institut Universitaire des Systèmes Thermiques Industriels" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/000d5zy28> ;
+        rdfs:label "Institut de Chimie Radicalaire" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/042h2y225> ;
+        rdfs:label "Institut de Mathématiques de Marseille" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02jthx987> ;
+        rdfs:label "Institut de Neurobiologie de la Méditerranée" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00w2q5j98> ;
+        rdfs:label "Institut de Neurophysiopathologie" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/043hw6336> ;
+        rdfs:label "Institut de Neurosciences de la Timone" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/019kqby73> ;
+        rdfs:label "Institut de Neurosciences des Systèmes" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03r0cdk24> ;
+        rdfs:label "Institut de Recherche sur l'Architecture Antique" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03zq0xc17> ;
+        rdfs:label "Institut de Recherche sur les Phénomènes Hors Équilibre" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0238zyh04> ;
+        rdfs:label "Institut des Matériaux, de Microélectronique et des Nanosciences de Provence" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02qprbz18> ;
+        rdfs:label "Institut des Mondes Africains" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05xr3b330> ;
+        rdfs:label "Institut des Sciences Moléculaires de Marseille" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03tncyc93> ;
+        rdfs:label "Institut des Sciences du Mouvement Etienne-Jules Marey" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/043xjcd49> ;
+        rdfs:label "Laboratoire d'Economie et de Sociologie du Travail" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04d3p2m17> ;
+        rdfs:label "Unité de Neurobiologie des canaux Ioniques et de la Synapse" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02pr0xw82> ;
+        rdfs:label "Laboratoire Chimie de l'Environnement" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/011gea244> ;
+        rdfs:label "Laboratoire Méditerranéen de Préhistoire Europe Afrique" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05whq8x35> ;
+        rdfs:label "Laboratoire Parole et Langage" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/057zme681> ;
+        rdfs:label "Laboratoire de Chimie Bactérienne" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01vrxpt40> ;
+        rdfs:label "Laboratoire de Mécanique, Modélisation & Procédés Propres" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01rf5x574> ;
+        rdfs:label "Laboratoire de Psychologie Cognitive" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00ssy9q55> ;
+        rdfs:label "Laboratoire d’Astrophysique de Marseille" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0257sgk90> ;
+        rdfs:label "Laboratoire d’Informatique et Systèmes" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03787ar02> ;
+        rdfs:label "Laboratoire de Mécanique et d’Acoustique" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04fc8dp24> ;
+        rdfs:label "Génétique Médicale & Génomique Fonctionelle" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0409c3995> ;
+        rdfs:label "Institut Méditerranéen de Biodiversité et d'Ecologie Marine et Continentale" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05258q350> ;
+        rdfs:label "Institut Méditerranéen d’Océanologie" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05hqfh882> ;
+        rdfs:label "Nutrition, Obésité et Risque Thrombotique" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04kgf6p94> ;
+        rdfs:label "Physique des interactions ioniques et moléculaires" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/017qtjx43> ;
+        rdfs:label "Laboratoire Population Environnement Développement" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/051p9ra28> ;
+        rdfs:label "Station Marine d'Endoume" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/025sfbe73> ;
+        rdfs:label "Theories and Approaches of Genomic Complexity" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00jj62164> ;
+        rdfs:label "Centre de Recherche et de Documentation sur l'Océanie (CREDO)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/005yfhm28> ;
+        rdfs:label "Institut de Biosciences et biotechnologies d'Aix-Marseille" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04e3d6y73> ;
+        rdfs:label "Centre International de Rencontres Mathématiques" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03e2syc87> ;
+        rdfs:label "Maison Asie Pacifique" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04ahb2147> ;
+        rdfs:label "Centre de recherche français à Jérusalem" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00c62kq26> ;
+        rdfs:label "Institut Méditerranéen des Sciences de l'Information et de la Communication" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01e4wd589> ;
+        rdfs:label "Centre de Génétique Médicale de Marseille" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01ejp3f31> ;
+        rdfs:label "Maison méditerranéenne des sciences de l'Homme" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/034bena10> ;
+        rdfs:label "Centre d'Immunophénomique" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/052cnt662> ;
+        rdfs:label "Étude des Structures, des Processus d’Adaptation et des Changements de l’Espace" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04pwzyv45> ;
+        rdfs:label "Droit International Comparé et Européen" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01qfjp710> ;
+        rdfs:label "Lasers, Plasmas et Procédés Photoniques" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00axatv03> ;
+        rdfs:label "Centre Gilles-Gaston Granger" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03bcyhr16> ;
+        rdfs:label "Irasia Recherche" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/037f3ga09> ;
+        rdfs:label "Institut de Recherches et d'Etudes sur les Mondes Arabes et Musulmans" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05tb4mb78> ;
+        rdfs:label "Laboratoire d'Archéologie Médiévale et Moderne en Méditerranée" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/050gdsq06> ;
+        rdfs:label "Institut d'ethnologie méditerranéenne européenne et comparative" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/010bhn875> ;
+        rdfs:label "Temps, espaces, langages, Europe méridionale, Méditerranée" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00m587853> ;
+        rdfs:label "Matériaux Divisés, Interfaces, Réactivité, Electrochimie" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02hwc1z56> ;
+        rdfs:label "Laboratoire d'Ingénierie des Systèmes Macromoléculaires" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05v0fms67> ;
+        rdfs:label "Laboratoire Information Génomique et Structurale" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04ces3204> ;
+        rdfs:label "Huma-Num" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02aja8v82> ;
+        rdfs:label "OpenEdition Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05de6h762> ;
+        rdfs:label "Maison de l'Orient et de la Méditerranée Jean Pouilloux" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05hb8m595> ;
+        rdfs:label "PHOTOSYNTHESE" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04fgntk96> ;
+        rdfs:label "Tara Oceans Systems Ecology & Evolution" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01x6z5t49> ;
+        rdfs:label "Fédération de Recherche Spectroscopies de Photoémission" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01nrtdp55> ;
+        rdfs:label "GDR NBODY : Problème quantique à N corps en chimie et physique" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00hgbrg14> ;
+        rdfs:label "Fédération française Matériaux sous hautes vitesses de déformation. Application aux matériaux en conditions extrêmes, Procédés et structures" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0459fdx51> ;
+        rdfs:label "Fédération de Recherche sur l'Energie Solaire" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04yem5s35> ;
+        rdfs:label "INFRANALYTICS" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05jrr4320> ;
+        rdfs:label "Hôpital de la Timone" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(5.38107 43.29695)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(5.38107 43.29695)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Marseille" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2995469/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000121764817> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q2302586> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1687719> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1204304> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2995469/> ;
+    ] ; 
     .

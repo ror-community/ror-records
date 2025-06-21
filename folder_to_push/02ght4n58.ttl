@@ -4,25 +4,55 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02ght4n58> a org:Organization ;
     rdfs:label "Laboratoire de Mathématiques de Bretagne Atlantique" ;
     schema:name "Laboratoire de Mathématiques de Bretagne Atlantique" ;
     schema:foundingDate "2004"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "LMBA" ;
-    schema:url <http://www.lmba-math.fr/> ; 
+    org:classification "facility" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:abbreviation "LMBA"@None ; 
+    schema:mainEntityOfPage <http://www.lmba-math.fr/> ;
+    schema:sameAs <https://grid.ac/institutions/grid.463902.a> ;
+    schema:sameAs <http://isni.org/isni/0000000403855573> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/050jcm728> ;
+        rdfs:label "Institut National des Sciences Mathématiques et de leurs Interactions" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/04ed7fw48> ;
+        rdfs:label "Université de Bretagne Sud" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/01b8h3982> ;
+        rdfs:label "Université de Bretagne Occidentale" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-4.48628 48.39029)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-4.48628 48.39029)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Brest" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/3030300/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000403855573> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3030300/> ;
+    ] ; 
     .

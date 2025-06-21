@@ -4,24 +4,59 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/04pwzyv45> a org:Organization ;
     rdfs:label "Droit International Comparé et Européen" ;
     schema:name "Droit International Comparé et Européen" ;
     schema:foundingDate "2012"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "DICE" ;
-    schema:url <https://dice.univ-amu.fr> ; 
+    org:classification "facility" ; 
+    dct:created "2023-08-17"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:abbreviation "DICE"@None ; 
+    schema:mainEntityOfPage <https://dice.univ-amu.fr> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/01frn9647> ;
+        rdfs:label "Université de Pau et des Pays de l'Adour" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02m9kbe37> ;
+        rdfs:label "Université de Toulon" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02feahw73> ;
+        rdfs:label "Centre National de la Recherche Scientifique" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/035xkbk20> ;
+        rdfs:label "Aix-Marseille Université" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(5.44973 43.5283)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(5.44973 43.5283)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Aix-en-Provence" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/3038354/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://www.wikidata.org/entity/Q51780816> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3038354/> ;
+    ] ; 
     .

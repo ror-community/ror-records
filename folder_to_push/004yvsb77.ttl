@@ -4,26 +4,43 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/004yvsb77> a org:Organization ;
-    rdfs:label "National Center of Human Genomics Research" ;
-    schema:name "National Center of Human Genomics Research" ;
+    rdfs:label "" ;
+    schema:name "" ;
     schema:foundingDate "1998"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "CNRGH" ;
-    schema:url <http://www.cea.fr/drf/ifrancoisjacob/Pages/Departements/CNRGH.aspx> ; 
+    org:classification "facility" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:abbreviation "CNRGH"@None ; 
+    schema:mainEntityOfPage <http://www.cea.fr/drf/ifrancoisjacob/Pages/Departements/CNRGH.aspx> ;
+    schema:sameAs <https://grid.ac/institutions/grid.418135.a> ;
+    schema:sameAs <http://isni.org/isni/0000000406413404> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/00jjx8s55> ;
+        rdfs:label "Atomic Energy and Alternative Energies Commission" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(2.44417 48.63389)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(2.44417 48.63389)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Évry-Courcouronnes" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/6454878/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000406413404> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q2945917> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/6454878/> ;
+    ] ; 
     .

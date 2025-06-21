@@ -4,25 +4,56 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/00780az30> a org:Organization ;
     rdfs:label "Mathématiques et Informatique Appliquées" ;
     schema:name "Mathématiques et Informatique Appliquées" ;
     schema:foundingDate "1962"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "MIA" ;
-    org:alternativeName "MIA Paris-Saclay" ;
-    schema:url <https://www.agroparistech.fr/recherche/unites-recherche/mathematiques-informatique-appliquees-paris-mia-paris> ; 
+    org:classification "facility" ; 
+    dct:created "2023-08-17"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:abbreviation "MIA"@None ; 
+    org:alternativeName "MIA Paris-Saclay"@en ; 
+    org:alternativeName "MIA-Paris"@en ; 
+    org:alternativeName "Mathématiques et Informatique Appliquées - Paris-Saclay"@fr ; 
+    schema:mainEntityOfPage <https://www.agroparistech.fr/recherche/unites-recherche/mathematiques-informatique-appliquees-paris-mia-paris> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02kbmgc12> ;
+        rdfs:label "AgroParisTech" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/03xjwb503> ;
+        rdfs:label "University of Paris-Saclay" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/003vg9w96> ;
+        rdfs:label "Institut National de Recherche pour l'Agriculture, l'Alimentation et l'Environnement" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(2.2498 48.71828)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(2.2498 48.71828)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Palaiseau" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2988758/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://www.wikidata.org/entity/Q51782612> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2988758/> ;
+    ] ; 
     .

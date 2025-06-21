@@ -1,0 +1,45 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/000axn811> a org:Organization ;
+    rdfs:label "Audencia Business School" ;
+    schema:name "Audencia Business School" ;
+    schema:foundingDate "1900"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:alternativeName "Audencia"@fr ; 
+    org:alternativeName "Audencia - Ecole Supérieure de Commerce à Nantes, spécialiste en management"@fr ; 
+    org:alternativeName "Audencia Nantes École de management"@fr ; 
+    org:alternativeName "Audencia Naoned"@br ; 
+    schema:url <http://audencia.com> ; 
+    schema:mainEntityOfPage <https://www.audencia.com> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Audencia_Business_School> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.462031.2> ;
+    schema:sameAs <http://isni.org/isni/000000041798339X> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-1.55336 47.21725)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Nantes" ;
+            schema:addressCountry "FR" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2990969/> ;
+    ] ; 
+    .

@@ -4,23 +4,37 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/014hxhm89> a org:Organization ;
-    rdfs:label "University Cancer Institute Toulouse Oncopole" ;
-    schema:name "University Cancer Institute Toulouse Oncopole" ;
+    rdfs:label "" ;
+    schema:name "" ;
     org:status "active" ;
-    org:classification "Healthcare" ; 
-    org:abbreviation "IUCT" ;
-    schema:url <https://www.iuct-oncopole.fr/en> ; 
+    org:classification "funder" ; 
+    org:classification "healthcare" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:abbreviation "IUCT"@None ; 
+    schema:mainEntityOfPage <https://www.iuct-oncopole.fr/en> ;
+    schema:sameAs <https://api.crossref.org/funders/501100019164> ;
+    schema:sameAs <https://grid.ac/institutions/grid.488470.7> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(1.44367 43.60426)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(1.44367 43.60426)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Toulouse" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2972315/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2972315/> ;
+    ] ; 
     .

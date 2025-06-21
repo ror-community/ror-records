@@ -4,24 +4,48 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01waxag60> a org:Organization ;
     rdfs:label "Light, nanomaterials, nanotechnologies" ;
     schema:name "Light, nanomaterials, nanotechnologies" ;
     schema:foundingDate "2020"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "L2n" ;
-    org:alternativeName "Lumière, nanomatériaux, nanotechnologies" ;
-    schema:url <https://recherche.utt.fr/light-nanomaterials-nanotechnologies-l2n> ; 
+    org:classification "facility" ; 
+    dct:created "2023-08-17"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:abbreviation "L2n"@None ; 
+    org:alternativeName "Lumière, nanomatériaux, nanotechnologies"@fr ; 
+    schema:mainEntityOfPage <https://recherche.utt.fr/light-nanomaterials-nanotechnologies-l2n> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/01qhqcj41> ;
+        rdfs:label "Université de Technologie de Troyes" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02feahw73> ;
+        rdfs:label "Centre National de la Recherche Scientifique" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(4.08524 48.30073)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(4.08524 48.30073)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Troyes" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2971549/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2971549/> ;
+    ] ; 
     .

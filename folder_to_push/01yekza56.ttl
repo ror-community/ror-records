@@ -4,27 +4,44 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01yekza56> a org:Organization ;
-    rdfs:label "National Forests Office" ;
-    schema:name "National Forests Office" ;
+    rdfs:label "" ;
+    schema:name "" ;
     schema:foundingDate "1964"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Government" ; 
-    org:abbreviation "ONF" ;
-    schema:url <http://www.onf.fr/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/National_Forests_Office_(France)> ;
+    org:classification "government" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:abbreviation "ONF"@None ; 
+    schema:mainEntityOfPage <http://www.onf.fr/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/National_Forests_Office_(France)> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.464018.f> ;
+    schema:sameAs <http://isni.org/isni/0000000119583056> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04f6qd925> ;
+        rdfs:label "Biologie intégrée pour la valorisation de la diversité des arbres et de la forêt" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(2.3488 48.85341)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(2.3488 48.85341)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Paris" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2988507/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000119583056> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q3260938> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2988507/> ;
+    ] ; 
     .

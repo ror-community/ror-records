@@ -4,25 +4,37 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/04n7js917> a org:Organization ;
-    rdfs:label "Research Institute and Applied Ethology in Semiochemistry" ;
-    schema:name "Research Institute and Applied Ethology in Semiochemistry" ;
+    rdfs:label "" ;
+    schema:name "" ;
     schema:foundingDate "1995"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "IRSEA" ;
-    schema:url <https://www.group-irsea.com/> ; 
+    org:classification "facility" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:abbreviation "IRSEA"@None ; 
+    schema:mainEntityOfPage <https://www.group-irsea.com/> ;
+    schema:sameAs <https://grid.ac/institutions/grid.481991.c> ;
+    schema:sameAs <http://isni.org/isni/0000000406094781> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(5.39635 43.87638)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(5.39635 43.87638)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Apt" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/3037352/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000406094781> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3037352/> ;
+    ] ; 
     .

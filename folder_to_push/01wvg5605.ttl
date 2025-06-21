@@ -4,25 +4,48 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01wvg5605> a org:Organization ;
     rdfs:label "Maladies Rares: Génétique et Métabolisme" ;
     schema:name "Maladies Rares: Génétique et Métabolisme" ;
     schema:foundingDate "2016"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "MRGM" ;
-    org:alternativeName "Laboratoire Maladies Rares: Génétique et Métabolisme" ;
-    schema:url <https://mrgm.fr> ; 
+    org:classification "facility" ; 
+    dct:created "2023-08-17"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:alternativeName "Laboratoire Maladies Rares: Génétique et Métabolisme"@fr ; 
+    org:abbreviation "MRGM"@None ; 
+    schema:mainEntityOfPage <https://mrgm.fr> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02vjkv261> ;
+        rdfs:label "Inserm" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/057qpr032> ;
+        rdfs:label "Université de Bordeaux" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-0.5805 44.84044)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-0.5805 44.84044)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Bordeaux" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/3031582/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://www.wikidata.org/entity/Q52607183> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3031582/> ;
+    ] ; 
     .

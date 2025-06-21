@@ -4,23 +4,47 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01eem7c55> a org:Organization ;
-    rdfs:label "Imaging and Brain" ;
-    schema:name "Imaging and Brain" ;
+    rdfs:label "" ;
+    schema:name "" ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    schema:url <http://www.u930.tours.inserm.fr/welcome-to-the-site-umr-inserm-u930-400366.kjsp?RH=U930_FR> ; 
+    org:classification "facility" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    schema:mainEntityOfPage <http://www.u930.tours.inserm.fr/welcome-to-the-site-umr-inserm-u930-400366.kjsp?RH=U930_FR> ;
+    schema:sameAs <https://grid.ac/institutions/grid.462961.e> ;
+    schema:sameAs <http://isni.org/isni/0000000406381326> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02wwzvj46> ;
+        rdfs:label "Université de Tours" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02vjkv261> ;
+        rdfs:label "Inserm" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(0.70398 47.39484)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(0.70398 47.39484)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Tours" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2972191/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000406381326> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2972191/> ;
+    ] ; 
     .

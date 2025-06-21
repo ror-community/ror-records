@@ -4,24 +4,54 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/03gmkya61> a org:Organization ;
     rdfs:label "SayFood - Food and Bioproduct Engineering" ;
     schema:name "SayFood - Food and Bioproduct Engineering" ;
     schema:foundingDate "2020"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:alternativeName "SayFood" ;
-    schema:url <https://www6.versailles-grignon.inrae.fr/umr-sayfood/UMR-SayFood> ; 
+    org:classification "facility" ; 
+    dct:created "2023-08-17"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:alternativeName "Paris-saclay food and bioproduct engineering research unit"@en ; 
+    org:alternativeName "SayFood"@en ; 
+    schema:mainEntityOfPage <https://www6.versailles-grignon.inrae.fr/umr-sayfood/UMR-SayFood> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02kbmgc12> ;
+        rdfs:label "AgroParisTech" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/03xjwb503> ;
+        rdfs:label "University of Paris-Saclay" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/003vg9w96> ;
+        rdfs:label "Institut National de Recherche pour l'Agriculture, l'Alimentation et l'Environnement" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(2.28301 48.72692)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(2.28301 48.72692)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Massy" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2995206/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://www.wikidata.org/entity/Q109621296> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2995206/> ;
+    ] ; 
     .

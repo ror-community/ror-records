@@ -4,27 +4,38 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01jbdvx51> a org:Organization ;
-    rdfs:label "International Council for Scientific and Technical Information" ;
-    schema:name "International Council for Scientific and Technical Information" ;
+    rdfs:label "" ;
+    schema:name "" ;
     schema:foundingDate "1984"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Nonprofit" ; 
-    org:abbreviation "ICSTI" ;
-    org:alternativeName "International Council for Scientific & Technical Information" ;
-    schema:url <https://www.icsti.org> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/International_Council_for_Scientific_and_Technical_Information> ;
+    org:classification "nonprofit" ; 
+    dct:created "2022-12-15"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:abbreviation "ICSTI"@None ; 
+    org:alternativeName "International Council for Scientific & Technical Information"@en ; 
+    schema:mainEntityOfPage <https://www.icsti.org> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/International_Council_for_Scientific_and_Technical_Information> ; 
+    schema:sameAs <http://isni.org/isni/0000000123227484> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(2.3488 48.85341)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(2.3488 48.85341)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Paris" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2988507/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000123227484> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q17087763> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2988507/> ;
+    ] ; 
     .

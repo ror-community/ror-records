@@ -4,28 +4,48 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/03r13py57> a org:Organization ;
     rdfs:label "UniLaSalle Amiens (ESIEE-Amiens)" ;
     schema:name "UniLaSalle Amiens (ESIEE-Amiens)" ;
     schema:foundingDate "1992"^^xsd:gYear ;
-    org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "ESIEE" ;
-    org:alternativeName "ESIEE Amiens" ;
-    schema:url <https://www.unilasalle-amiens.fr> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/ESIEE_Amiens> ;
+    org:status "inactive" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:abbreviation "ESIEE"@None ; 
+    org:alternativeName "ESIEE Amiens"@fr ; 
+    org:alternativeName "ESIEE-Amiens"@fr ; 
+    org:alternativeName "UniLaSalle Amiens"@fr ; 
+    org:alternativeName "École Supérieure d'Ingénieurs en Électrotechnique et Électronique Amiens"@fr ; 
+    schema:mainEntityOfPage <https://www.unilasalle-amiens.fr> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/ESIEE_Amiens> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.466408.8> ;
+    schema:sameAs <http://isni.org/isni/0000000406404890> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "successor" ;
+        org:member <https://ror.org/05wy89733> ;
+        rdfs:label "UniLaSalle" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(2.3 49.9)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(2.3 49.9)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Amiens" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/3037854/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000406404890> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q3046116> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3037854/> ;
+    ] ; 
     .

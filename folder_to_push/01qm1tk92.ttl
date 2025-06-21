@@ -4,27 +4,62 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01qm1tk92> a org:Organization ;
     rdfs:label "Centre de Recherches Sociologiques sur le Droit et les Institutions Pénales" ;
     schema:name "Centre de Recherches Sociologiques sur le Droit et les Institutions Pénales" ;
     schema:foundingDate "2006"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "CESDIP" ;
-    org:alternativeName "Laboratoire CESDIP" ;
-    schema:url <https://www.cesdip.fr/> ; 
+    org:classification "facility" ; 
+    dct:created "2019-02-17"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:abbreviation "CESDIP"@None ; 
+    org:alternativeName "Laboratoire CESDIP"@fr ; 
+    schema:mainEntityOfPage <https://www.cesdip.fr/> ;
+    schema:sameAs <https://grid.ac/institutions/grid.503089.7> ;
+    schema:sameAs <http://isni.org/isni/0000000122922645> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/043htjv09> ;
+        rdfs:label "CY Cergy Paris Université" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/04b0z7q78> ;
+        rdfs:label "Institut des Sciences Humaines et Sociales" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02ggnyt49> ;
+        rdfs:label "Ministry of Justice" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/03mkjjy25> ;
+        rdfs:label "Université de Versailles Saint-Quentin-en-Yvelines" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(2.07393 48.77334)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(2.07393 48.77334)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Guyancourt" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/3014143/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000122922645> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q51780215> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3014143/> ;
+    ] ; 
     .

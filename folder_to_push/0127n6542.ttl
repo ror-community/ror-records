@@ -4,24 +4,53 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/0127n6542> a org:Organization ;
     rdfs:label "Laboratoire Interuniversitaire Expérience, Ressources culturelles, Education" ;
     schema:name "Laboratoire Interuniversitaire Expérience, Ressources culturelles, Education" ;
     schema:foundingDate "2005"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "EXPERICE" ;
-    schema:url <https://www.univ-paris8.fr/UR-Laboratoire-Interuniversitaire-Experience-Ressources-culturelles-Education> ; 
+    org:classification "facility" ; 
+    dct:created "2023-08-17"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:abbreviation "EXPERICE"@None ; 
+    schema:mainEntityOfPage <https://www.univ-paris8.fr/UR-Laboratoire-Interuniversitaire-Experience-Ressources-culturelles-Education> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/01frn9647> ;
+        rdfs:label "Université de Pau et des Pays de l'Adour" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/0199hds37> ;
+        rdfs:label "Université Sorbonne Paris Nord" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/04wez5e68> ;
+        rdfs:label "Université de Vincennes à Saint-Denis" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(2.34167 48.95833)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(2.34167 48.95833)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Villetaneuse" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2968275/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://www.wikidata.org/entity/Q51785317> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2968275/> ;
+    ] ; 
     .

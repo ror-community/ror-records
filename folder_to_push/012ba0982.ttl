@@ -4,27 +4,50 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/012ba0982> a org:Organization ;
     rdfs:label "NSWC Indian Head" ;
     schema:name "NSWC Indian Head" ;
     org:status "active" ;
-    org:classification "Government" ; 
-    org:classification "Facility" ; 
-    org:abbreviation "NSWC IHD" ;
-    org:alternativeName "Naval Surface Warfare Center Indian Head" ;
-    schema:url <https://www.navsea.navy.mil/Home/Warfare-Centers/NSWC-Indian-Head/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Indian_Head_Naval_Surface_Warfare_Center> ;
+    org:classification "facility" ; 
+    org:classification "funder" ; 
+    org:classification "government" ; 
+    dct:created "2023-11-08"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:alternativeName "Indian Head Explosive Ordnance Disposal Technology Division"@en ; 
+    org:abbreviation "NSWC IHD"@None ; 
+    org:abbreviation "NSWC IHEODTD"@None ; 
+    org:alternativeName "NSWC Indian Head Division"@en ; 
+    org:alternativeName "Naval Surface Warfare Center Indian Head"@en ; 
+    org:alternativeName "Naval Surface Warfare Center Indian Head Division"@en ; 
+    schema:mainEntityOfPage <https://www.navsea.navy.mil/Home/Warfare-Centers/NSWC-Indian-Head/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Indian_Head_Naval_Surface_Warfare_Center> ; 
+    schema:sameAs <https://api.crossref.org/funders/100021633> ;
+    schema:sameAs <http://isni.org/isni/0000000406480981> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/03d4ecn10> ;
+        rdfs:label "Naval Surface Warfare Center" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-77.1622 38.60012)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-77.1622 38.60012)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Indian Head" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/4358916/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000406480981> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q14692015> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/4358916/> ;
+    ] ; 
     .

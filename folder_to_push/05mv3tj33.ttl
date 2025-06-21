@@ -1,0 +1,72 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/05mv3tj33> a org:Organization ;
+    rdfs:label "Observatoire des Sciences de l'Univers de la Réunion" ;
+    schema:name "Observatoire des Sciences de l'Univers de la Réunion" ;
+    schema:foundingDate "2010"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "facility" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:abbreviation "OSU"@fr ; 
+    org:abbreviation "OSU-R"@fr ; 
+    org:alternativeName "OSU-Réunion"@fr ; 
+    org:alternativeName "Universe Sciences Observatory of la Réunion Island"@fr ; 
+    schema:mainEntityOfPage <http://osur.univ-reunion.fr/> ;
+    schema:sameAs <https://grid.ac/institutions/grid.464193.d> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/04kdfz702> ;
+        rdfs:label "Institut National des Sciences de l'Univers" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/005ypkf75> ;
+        rdfs:label "University of Reunion Island" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03wsemq03> ;
+        rdfs:label "Laboratoire de l'Atmosphère et des Cyclones" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/0233st365> ;
+        rdfs:label "Météo-France" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/05q3vnk25> ;
+        rdfs:label "Institut de Recherche pour le Développement" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(55.4504 -20.88231)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Saint-Denis" ;
+            schema:addressCountry "RE" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Réunion" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/935264/> ;
+    ] ; 
+    .

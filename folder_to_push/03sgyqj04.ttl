@@ -4,27 +4,74 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/03sgyqj04> a org:Organization ;
     rdfs:label "École Nationale Supérieure de Chimie de Montpellier" ;
     schema:name "École Nationale Supérieure de Chimie de Montpellier" ;
     schema:foundingDate "1676"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "ENSCM" ;
-    schema:url <http://www.enscm.fr/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/%C3%89cole_nationale_sup%C3%A9rieure_de_chimie_de_Montpellier> ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:abbreviation "ENSCM"@None ; 
+    schema:mainEntityOfPage <http://www.enscm.fr/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/%C3%89cole_nationale_sup%C3%A9rieure_de_chimie_de_Montpellier> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.418671.d> ;
+    schema:sameAs <http://isni.org/isni/0000000121753544> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/028wq3277> ;
+        rdfs:label "Institut Charles Gerhardt" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04nmj9827> ;
+        rdfs:label "Institut Européen des Membranes" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05d1e6v30> ;
+        rdfs:label "Institut des Biomolécules Max Mousseron" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04fr7pd94> ;
+        rdfs:label "Institut de Chimie Séparative de Marcoule" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01x6z5t49> ;
+        rdfs:label "Fédération de Recherche Spectroscopies de Photoémission" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01nrtdp55> ;
+        rdfs:label "GDR NBODY : Problème quantique à N corps en chimie et physique" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(3.87635 43.61093)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(3.87635 43.61093)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Montpellier" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2992166/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000121753544> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q948420> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2992166/> ;
+    ] ; 
     .

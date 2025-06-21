@@ -4,24 +4,53 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/05pny1q12> a org:Organization ;
     rdfs:label "Laboratoire d'Ecologie des Hydrosystèmes Naturels et Anthropisés" ;
     schema:name "Laboratoire d'Ecologie des Hydrosystèmes Naturels et Anthropisés" ;
     schema:foundingDate "1999"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "LEHNA" ;
-    schema:url <http://umr5023.univ-lyon1.fr> ; 
+    org:classification "facility" ; 
+    dct:created "2023-08-17"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:abbreviation "LEHNA"@None ; 
+    schema:mainEntityOfPage <http://umr5023.univ-lyon1.fr> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/029brtt94> ;
+        rdfs:label "Université Claude Bernard Lyon 1" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/05r0ccb59> ;
+        rdfs:label "École Nationale des Travaux Publics de l'État" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02feahw73> ;
+        rdfs:label "Centre National de la Recherche Scientifique" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(4.8795 45.76601)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(4.8795 45.76601)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Villeurbanne" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2968254/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://www.wikidata.org/entity/Q3214492> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2968254/> ;
+    ] ; 
     .

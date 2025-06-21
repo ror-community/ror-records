@@ -4,26 +4,49 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/049bjee35> a org:Organization ;
     rdfs:label "St. Anne´s University Hospital" ;
     schema:name "St. Anne´s University Hospital" ;
     schema:foundingDate "1786"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Healthcare" ; 
-    org:abbreviation "FNUSA" ;
-    schema:url <https://www.fnusa.cz> ; 
+    org:classification "healthcare" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:abbreviation "FNUSA"@None ; 
+    schema:mainEntityOfPage <https://www.fnusa.cz> ;
+    schema:sameAs <https://grid.ac/institutions/grid.412752.7> ;
+    schema:sameAs <http://isni.org/isni/0000000406087557> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/027v97282> ;
+        rdfs:label "International Clinical Research Center, St. Anne's University Hospital Brno" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02j46qs45> ;
+        rdfs:label "Masaryk University" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(16.60796 49.19522)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(16.60796 49.19522)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Brno" ;
             schema:addressCountry "CZ" ;
-            owl:sameAs <http://sws.geonames.org/3078610/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000406087557> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q30287084> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Czechia" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3078610/> ;
+    ] ; 
     .

@@ -4,24 +4,53 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/00gj7r351> a org:Organization ;
     rdfs:label "Laboratoire écologie, évolution, interactions des systèmes amazoniens" ;
     schema:name "Laboratoire écologie, évolution, interactions des systèmes amazoniens" ;
     schema:foundingDate "2011"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "LEEISA" ;
-    schema:url <https://www.leeisa.cnrs.fr> ; 
+    org:classification "facility" ; 
+    dct:created "2023-08-17"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:abbreviation "LEEISA"@None ; 
+    schema:mainEntityOfPage <https://www.leeisa.cnrs.fr> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02feahw73> ;
+        rdfs:label "Centre National de la Recherche Scientifique" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/00nb39k71> ;
+        rdfs:label "University of French Guiana" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/00ggqtz82> ;
+        rdfs:label "Institut Français de la Mer" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-52.33333 4.93333)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-52.33333 4.93333)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Cayenne" ;
             schema:addressCountry "GF" ;
-            owl:sameAs <http://sws.geonames.org/3382160/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://www.wikidata.org/entity/Q51780915> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "French Guiana" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3382160/> ;
+    ] ; 
     .

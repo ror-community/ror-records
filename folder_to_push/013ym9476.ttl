@@ -4,26 +4,44 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/013ym9476> a org:Organization ;
-    rdfs:label "International Association of Geomagnetism and Aeronomy" ;
-    schema:name "International Association of Geomagnetism and Aeronomy" ;
+    rdfs:label "" ;
+    schema:name "" ;
     schema:foundingDate "1873"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Nonprofit" ; 
-    org:abbreviation "AIGA" ;
-    schema:url <https://www.iaga-aiga.org> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/International_Association_of_Geomagnetism_and_Aeronomy> ;
+    org:classification "nonprofit" ; 
+    dct:created "2023-07-06"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:abbreviation "AIGA"@None ; 
+    org:abbreviation "IAGA"@None ; 
+    schema:mainEntityOfPage <https://www.iaga-aiga.org> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/International_Association_of_Geomagnetism_and_Aeronomy> ; 
+    schema:sameAs <http://isni.org/isni/0000000106569634> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/01jachm79> ;
+        rdfs:label "International Union of Geodesy and Geophysics" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(7.74553 48.58392)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(7.74553 48.58392)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Strasbourg" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2973783/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000106569634> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q6048492> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2973783/> ;
+    ] ; 
     .

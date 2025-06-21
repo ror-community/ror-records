@@ -4,24 +4,56 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/019kqby73> a org:Organization ;
     rdfs:label "Institut de Neurosciences des Systèmes" ;
     schema:name "Institut de Neurosciences des Systèmes" ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "INS" ;
-    schema:url <http://ins.univ-amu.fr/> ; 
+    org:classification "facility" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:abbreviation "INS"@None ; 
+    schema:mainEntityOfPage <http://ins.univ-amu.fr/> ;
+    schema:sameAs <https://api.crossref.org/funders/100013106> ;
+    schema:sameAs <https://grid.ac/institutions/grid.462494.9> ;
+    schema:sameAs <http://isni.org/isni/0000000405415643> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/035xkbk20> ;
+        rdfs:label "Aix-Marseille Université" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02vjkv261> ;
+        rdfs:label "Inserm" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/002cp4060> ;
+        rdfs:label "Assistance Publique Hôpitaux de Marseille" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(5.38107 43.29695)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(5.38107 43.29695)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Marseille" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2995469/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000405415643> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2995469/> ;
+    ] ; 
     .

@@ -4,26 +4,85 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/040baw385> a org:Organization ;
     rdfs:label "Centrale Marseille" ;
     schema:name "Centrale Marseille" ;
     schema:foundingDate "1890"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:alternativeName "École Centrale de Marseille" ;
-    schema:url <https://www.centrale-marseille.fr/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/%C3%89cole_centrale_de_Marseille> ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:alternativeName "École Centrale de Marseille"@fr ; 
+    schema:mainEntityOfPage <https://www.centrale-marseille.fr/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/%C3%89cole_centrale_de_Marseille> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.419885.9> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02ek9wp67> ;
+        rdfs:label "Groupement de Recherche en Économie Quantitative d’Aix-Marseille" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03br1wy20> ;
+        rdfs:label "Institut Fresnel" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/042h2y225> ;
+        rdfs:label "Institut de Mathématiques de Marseille" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03zq0xc17> ;
+        rdfs:label "Institut de Recherche sur les Phénomènes Hors Équilibre" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05xr3b330> ;
+        rdfs:label "Institut des Sciences Moléculaires de Marseille" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01vrxpt40> ;
+        rdfs:label "Laboratoire de Mécanique, Modélisation & Procédés Propres" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03787ar02> ;
+        rdfs:label "Laboratoire de Mécanique et d’Acoustique" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01nrtdp55> ;
+        rdfs:label "GDR NBODY : Problème quantique à N corps en chimie et physique" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(5.38107 43.29695)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(5.38107 43.29695)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Marseille" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2995469/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://www.wikidata.org/entity/Q273454> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2995469/> ;
+    ] ; 
     .

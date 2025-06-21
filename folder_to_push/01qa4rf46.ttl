@@ -4,23 +4,77 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01qa4rf46> a org:Organization ;
     rdfs:label "Délégation Régionale Grand Ouest" ;
     schema:name "Délégation Régionale Grand Ouest" ;
     org:status "active" ;
-    org:classification "Government" ; 
-    org:alternativeName "Inserm Délégation Régionale Grand-Ouest" ;
-    schema:url <http://www.grand-ouest.inserm.fr/> ; 
+    org:classification "government" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:alternativeName "Inserm Délégation Régionale Grand-Ouest"@fr ; 
+    schema:mainEntityOfPage <http://www.grand-ouest.inserm.fr/> ;
+    schema:sameAs <https://grid.ac/institutions/grid.457374.6> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02baj6743> ;
+        rdfs:label "CIC Rennes" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/008rwh029> ;
+        rdfs:label "Gene Therapy Laboratory" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05xxb2f26> ;
+        rdfs:label "Génétique, Génomique Fonctionnelle et Biotechnologies" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02dm0bq25> ;
+        rdfs:label "Institut de Transplantation Urologie en Nephrologie" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01f1amm71> ;
+        rdfs:label "Laboratoire Traitement du Signal et de l'Image" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05mqemx33> ;
+        rdfs:label "Laboratoire de Traitement de l'Information Médicale" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02vjkv261> ;
+        rdfs:label "Inserm" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-1.55336 47.21725)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-1.55336 47.21725)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Nantes" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2990969/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2990969/> ;
+    ] ; 
     .

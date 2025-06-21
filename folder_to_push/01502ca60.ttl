@@ -4,27 +4,136 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01502ca60> a org:Organization ;
     rdfs:label "Hospices Civils de Lyon" ;
     schema:name "Hospices Civils de Lyon" ;
     schema:foundingDate "1802"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Healthcare" ; 
-    org:abbreviation "HCL" ;
-    schema:url <http://www.chu-lyon.fr> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Hospices_Civils_de_Lyon> ;
+    org:classification "funder" ; 
+    org:classification "healthcare" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:abbreviation "HCL"@None ; 
+    schema:mainEntityOfPage <http://www.chu-lyon.fr> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Hospices_Civils_de_Lyon> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100006451> ;
+    schema:sameAs <https://grid.ac/institutions/grid.413852.9> ;
+    schema:sameAs <http://isni.org/isni/0000000121633825> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03skt0t88> ;
+        rdfs:label "Laboratoire de Biométrie et Biologie Evolutive" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/023xgd207> ;
+        rdfs:label "Hôpital Lyon Sud" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03smk3872> ;
+        rdfs:label "Centre de Recherche en Acquisition et Traitement de l'Image pour la Santé" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/006yspz11> ;
+        rdfs:label "Hôpital Femme Mère Enfant" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0396v4y86> ;
+        rdfs:label "Hôpital Louis Pradel" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01q046q46> ;
+        rdfs:label "Hôpital Pierre Wertheimer" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01sh1xg03> ;
+        rdfs:label "Hôpital Renée Sabran" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/006evg656> ;
+        rdfs:label "Hôpital de la Croix-Rousse" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02qt1p572> ;
+        rdfs:label "Hôpital Edouard Herriot" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/038fcbc74> ;
+        rdfs:label "Institut de Génomique Fonctionnelle de Lyon" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/059sz6q14> ;
+        rdfs:label "Centre International de Recherche en Infectiologie" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01bj4fd12> ;
+        rdfs:label "Laboratoire de Biologie Moléculaire de la Cellule" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/031xg0236> ;
+        rdfs:label "Virologie et Pathologies Humaines" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0075rng13> ;
+        rdfs:label "Institut d’Hématologie et d’Oncologie Pédiatrique" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/029brtt94> ;
+        rdfs:label "Université Claude Bernard Lyon 1" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/0214h3370> ;
+        rdfs:label "ERN EpiCARE" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(4.84671 45.74846)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(4.84671 45.74846)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Lyon" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2996944/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000121633825> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q3140953> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2996944/> ;
+    ] ; 
     .

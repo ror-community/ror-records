@@ -4,25 +4,48 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01z6yh944> a org:Organization ;
-    rdfs:label "Functional Ecology and Ecotoxicology of AgroEcosystems" ;
-    schema:name "Functional Ecology and Ecotoxicology of AgroEcosystems" ;
+    rdfs:label "" ;
+    schema:name "" ;
     schema:foundingDate "2015"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "ECOSYS" ;
-    schema:url <https://www6.versailles-grignon.inrae.fr/ecosys_eng/> ; 
+    org:classification "facility" ; 
+    dct:created "2019-02-17"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:abbreviation "ECOSYS"@None ; 
+    schema:mainEntityOfPage <https://www6.versailles-grignon.inrae.fr/ecosys_eng/> ;
+    schema:sameAs <https://grid.ac/institutions/grid.503170.0> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02kbmgc12> ;
+        rdfs:label "AgroParisTech" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02cbapb21> ;
+        rdfs:label "Centre Île-de-France - Versailles-Grignon" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(1.91729 48.84964)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(1.91729 48.84964)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Thiverval-Grignon" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2972794/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://www.wikidata.org/entity/Q51782089> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2972794/> ;
+    ] ; 
     .

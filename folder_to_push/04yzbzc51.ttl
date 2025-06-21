@@ -1,0 +1,46 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/04yzbzc51> a org:Organization ;
+    rdfs:label "Laboratoire de Mécanique et Procédés de Fabrication" ;
+    schema:name "Laboratoire de Mécanique et Procédés de Fabrication" ;
+    schema:foundingDate "2013"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "facility" ; 
+    dct:created "2021-04-06"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:alternativeName "Laboratoire MSMP-EA7350"@fr ; 
+    org:abbreviation "MSMP"@None ; 
+    schema:mainEntityOfPage <https://www.msmp.eu/index.php> ;
+    schema:sameAs <https://grid.ac/institutions/grid.510385.a> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/018pp1107> ;
+        rdfs:label "École nationale supérieure d'arts et métiers" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(5.44973 43.5283)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Aix-en-Provence" ;
+            schema:addressCountry "FR" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3038354/> ;
+    ] ; 
+    .

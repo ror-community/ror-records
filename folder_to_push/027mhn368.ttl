@@ -4,28 +4,72 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/027mhn368> a org:Organization ;
     rdfs:label "U.S. Army Engineer Research and Development Center" ;
     schema:name "U.S. Army Engineer Research and Development Center" ;
     schema:foundingDate "1999"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "ERDC" ;
-    org:alternativeName "United States Army Engineer Research and Development Center" ;
-    schema:url <https://www.erdc.usace.army.mil> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Engineer_Research_and_Development_Center> ;
+    org:classification "facility" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:abbreviation "ERDC"@None ; 
+    org:alternativeName "Engineer Research and Development Center"@en ; 
+    org:alternativeName "United States Army Engineer Research and Development Center"@en ; 
+    schema:mainEntityOfPage <https://www.erdc.usace.army.mil> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Engineer_Research_and_Development_Center> ; 
+    schema:sameAs <https://api.crossref.org/funders/100006505> ;
+    schema:sameAs <https://grid.ac/institutions/grid.417553.1> ;
+    schema:sameAs <http://isni.org/isni/0000000106379574> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05wk0m864> ;
+        rdfs:label "Cold Regions Research and Engineering Laboratory" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04cyj6y78> ;
+        rdfs:label "Geotechnical and Structures Laboratory" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00wsjvg44> ;
+        rdfs:label "U.S. Army Corp of Engineers Waterways Experiment Station" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/05w4e8v21> ;
+        rdfs:label "United States Army Corps of Engineers" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/003mzyg61> ;
+        rdfs:label "Construction Engineering Research Laboratory" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-90.87788 32.35265)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-90.87788 32.35265)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Vicksburg" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/4449620/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000106379574> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q5377777> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/4449620/> ;
+    ] ; 
     .

@@ -4,23 +4,53 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02n5evf44> a org:Organization ;
     rdfs:label "Sigma Clermont" ;
     schema:name "Sigma Clermont" ;
     schema:foundingDate "2016"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    schema:url <http://www.sigma-clermont.fr/> ; 
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    schema:mainEntityOfPage <http://www.sigma-clermont.fr/> ;
+    schema:sameAs <https://grid.ac/institutions/grid.466323.6> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00t3fpp34> ;
+        rdfs:label "Laboratoire d'Informatique, de Modélisation et d'Optimisation des Systèmes" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/001f39w38> ;
+        rdfs:label "Clermont Auvergne INP" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "predecessor" ;
+        org:member <https://ror.org/04cxrqq60> ;
+        rdfs:label "Clermont-Ferrand’s Superior National School of Chemistry" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(3.08682 45.77969)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(3.08682 45.77969)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Clermont-Ferrand" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/3024635/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3024635/> ;
+    ] ; 
     .

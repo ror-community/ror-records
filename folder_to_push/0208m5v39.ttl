@@ -1,0 +1,51 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/0208m5v39> a org:Organization ;
+    rdfs:label "Régulations Naturelle et Artificielle" ;
+    schema:name "Régulations Naturelle et Artificielle" ;
+    org:status "active" ;
+    org:classification "facility" ; 
+    dct:created "2019-02-17"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:abbreviation "ARNA"@None ; 
+    schema:mainEntityOfPage <https://amadeus.labex.u-bordeaux.fr/Partenaires/Laboratoires-et-Equipes-de-recherche/ARN-regulations-naturelle-et-artificielle-ARNA/r871.html> ;
+    schema:sameAs <https://grid.ac/institutions/grid.503113.5> ;
+    schema:sameAs <http://isni.org/isni/0000000404594432> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/05nfypp21> ;
+        rdfs:label "Délégation Aquitaine" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/057qpr032> ;
+        rdfs:label "Université de Bordeaux" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-0.5805 44.84044)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Bordeaux" ;
+            schema:addressCountry "FR" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3031582/> ;
+    ] ; 
+    .

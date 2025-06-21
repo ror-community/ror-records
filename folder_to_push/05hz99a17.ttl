@@ -4,27 +4,93 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/05hz99a17> a org:Organization ;
     rdfs:label "AAU - Ambiances, Architectures, Urbanités" ;
     schema:name "AAU - Ambiances, Architectures, Urbanités" ;
     schema:foundingDate "1998"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "AAU" ;
-    org:alternativeName "Architectural and Urban Ambiances" ;
-    schema:url <https://aau.archi.fr> ; 
+    org:classification "facility" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:abbreviation "AAU"@None ; 
+    org:alternativeName "Architectural and Urban Ambiances"@en ; 
+    org:alternativeName "UMR Ambiances, Architectures, Urbanités"@fr ; 
+    schema:mainEntityOfPage <https://aau.archi.fr> ;
+    schema:sameAs <https://grid.ac/institutions/grid.463749.b> ;
+    schema:sameAs <http://isni.org/isni/0000000100898904> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03gnr7b55> ;
+        rdfs:label "Nantes Université" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00x9ewr78> ;
+        rdfs:label "National Council for Scientific Research" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/03nh7d505> ;
+        rdfs:label "École Centrale de Nantes" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02feahw73> ;
+        rdfs:label "Centre National de la Recherche Scientifique" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/01yxtfe92> ;
+        rdfs:label "École Nationale Supérieure d'Architecture de Grenoble" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/01jq57122> ;
+        rdfs:label "École Nationale Supérieure d'Architecture de Nantes" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/017rnyz40> ;
+        rdfs:label "Ministère de la Culture" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02rx3b187> ;
+        rdfs:label "Université Grenoble Alpes" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/03gnr7b55> ;
+        rdfs:label "Nantes Université" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-1.55336 47.21725)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-1.55336 47.21725)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Nantes" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2990969/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000100898904> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q30262148> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2990969/> ;
+    ] ; 
     .

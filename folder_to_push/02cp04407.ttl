@@ -4,26 +4,123 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02cp04407> a org:Organization ;
-    rdfs:label "University of Limoges" ;
-    schema:name "University of Limoges" ;
+    rdfs:label "" ;
+    schema:name "" ;
     schema:foundingDate "1968"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    schema:url <http://www.unilim.fr/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Limoges> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    schema:mainEntityOfPage <http://www.unilim.fr/> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Limoges> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100022107> ;
+    schema:sameAs <https://grid.ac/institutions/grid.9966.0> ;
+    schema:sameAs <http://isni.org/isni/0000000121654861> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05vjwz959> ;
+        rdfs:label "Centre de Recherche Interdisciplinaire en Histoire, Histoire de l’art et Musicologie" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02zs48f23> ;
+        rdfs:label "Conditions Extrêmes et Matériaux Haute Température et Irradiation" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02zh2vx86> ;
+        rdfs:label "Contrôle de la Réponse Immune B et Lymphoproliférations" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0529q4s79> ;
+        rdfs:label "Institut d’Epidémiologie Neurologique et de Neurologie Tropicale" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00e4pqm50> ;
+        rdfs:label "Laboratoire de Géographie Physique et Environnementale" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/044qpwz88> ;
+        rdfs:label "Institut de Recherche sur les Céramiques" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00f7srh09> ;
+        rdfs:label "XLIM" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01h67hk15> ;
+        rdfs:label "Groupe de Recherches Sociologiques sur les sociétés Contemporaines" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/013dngs07> ;
+        rdfs:label "Pharmacologie et Transplantation" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0458p8g61> ;
+        rdfs:label "Anti-infectieux : supports moléculaires des résistances et innovations thérapeutiques" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/023h4a821> ;
+        rdfs:label "Institut d’Epidémiologie et de Neurologie Tropicale" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04kbqb151> ;
+        rdfs:label "BISCEm - Biologie Intégrative Santé Chimie Environnement" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01x6z5t49> ;
+        rdfs:label "Fédération de Recherche Spectroscopies de Photoémission" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0459fdx51> ;
+        rdfs:label "Fédération de Recherche sur l'Energie Solaire" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(1.24759 45.83362)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(1.24759 45.83362)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Limoges" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2998286/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000121654861> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q2661290> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2998286/> ;
+    ] ; 
     .

@@ -4,26 +4,50 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/05y503v71> a org:Organization ;
     rdfs:label "Institut National de la Recherche Agronomique" ;
     schema:name "Institut National de la Recherche Agronomique" ;
     schema:foundingDate "1946"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "INRA" ;
-    schema:url <http://www.inra.org.ma/accueil1.asp?codelangue=23&po=2> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Institut_national_de_la_recherche_agronomique> ;
+    org:classification "facility" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:abbreviation "INRA"@None ; 
+    schema:mainEntityOfPage <http://www.inra.org.ma/accueil1.asp?codelangue=23&po=2> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Institut_national_de_la_recherche_agronomique> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.424661.3> ;
+    schema:sameAs <http://isni.org/isni/0000000121733068> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/028cef883> ;
+        rdfs:label "Laboratoire Chrono-Environnement" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/056ms9a36> ;
+        rdfs:label "GEVES" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-6.83255 34.01325)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-6.83255 34.01325)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Rabat" ;
             schema:addressCountry "MA" ;
-            owl:sameAs <http://sws.geonames.org/2538475/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000121733068> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Morocco" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2538475/> ;
+    ] ; 
     .

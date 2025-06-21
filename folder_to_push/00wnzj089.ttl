@@ -4,27 +4,50 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/00wnzj089> a org:Organization ;
-    rdfs:label "National School of Administration" ;
-    schema:name "National School of Administration" ;
+    rdfs:label "" ;
+    schema:name "" ;
     schema:foundingDate "1945"^^xsd:gYear ;
     org:status "inactive" ;
-    org:classification "Education" ; 
-    org:abbreviation "ENA" ;
-    schema:url <https://www.ena.fr> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/%C3%89cole_nationale_d%27administration> ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:abbreviation "ENA"@None ; 
+    schema:mainEntityOfPage <https://www.ena.fr> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/%C3%89cole_nationale_d%27administration> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.462171.7> ;
+    schema:sameAs <http://isni.org/isni/0000000121167043> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00aqh6z65> ;
+        rdfs:label "École Nationale d'Administration" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02ty42a04> ;
+        rdfs:label "École Nationale d'Administration de Madagascar" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(7.74553 48.58392)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(7.74553 48.58392)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Strasbourg" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2973783/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000121167043> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q273579> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2973783/> ;
+    ] ; 
     .

@@ -4,26 +4,38 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01z4wn485> a org:Organization ;
-    rdfs:label "Agency for Technical Cooperation and Development" ;
-    schema:name "Agency for Technical Cooperation and Development" ;
+    rdfs:label "" ;
+    schema:name "" ;
     schema:foundingDate "1993"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Nonprofit" ; 
-    org:abbreviation "ACTED" ;
-    schema:url <http://www.acted.org/en> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Agency_for_Technical_Cooperation_and_Development> ;
+    org:classification "nonprofit" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:abbreviation "ACTED"@None ; 
+    schema:mainEntityOfPage <http://www.acted.org/en> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Agency_for_Technical_Cooperation_and_Development> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.475035.0> ;
+    schema:sameAs <http://isni.org/isni/0000000103221990> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(2.3488 48.85341)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(2.3488 48.85341)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Paris" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2988507/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000103221990> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2988507/> ;
+    ] ; 
     .

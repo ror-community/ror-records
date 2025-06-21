@@ -4,25 +4,54 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/05k1a6w82> a org:Organization ;
     rdfs:label "Laboratoire Morphodynamique Continentale et Côtière" ;
     schema:name "Laboratoire Morphodynamique Continentale et Côtière" ;
     schema:foundingDate "1996"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "M2C" ;
-    org:alternativeName "Morphodynamique continentale et côtière" ;
-    schema:url <https://m2c.cnrs.fr> ; 
+    org:classification "facility" ; 
+    dct:created "2023-08-17"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:abbreviation "M2C"@None ; 
+    org:alternativeName "Morphodynamique continentale et côtière"@fr ; 
+    schema:mainEntityOfPage <https://m2c.cnrs.fr> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/03nhjew95> ;
+        rdfs:label "Université de Rouen Normandie" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02feahw73> ;
+        rdfs:label "Centre National de la Recherche Scientifique" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/051kpcy16> ;
+        rdfs:label "Université de Caen Normandie" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-0.35912 49.18585)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-0.35912 49.18585)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Caen" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/3029241/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://www.wikidata.org/entity/Q51783493> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3029241/> ;
+    ] ; 
     .

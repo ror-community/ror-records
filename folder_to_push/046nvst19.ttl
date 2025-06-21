@@ -4,28 +4,53 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/046nvst19> a org:Organization ;
     rdfs:label "Norwegian Institute of Public Health" ;
     schema:name "Norwegian Institute of Public Health" ;
     schema:foundingDate "1929"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Government" ; 
-    org:abbreviation "NIPH" ;
-    org:alternativeName "Folkehelseinstituttet" ;
-    schema:url <http://www.fhi.no/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Norwegian_Institute_of_Public_Health> ;
+    org:classification "funder" ; 
+    org:classification "government" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:alternativeName "Folkehelseinstituttet"@no ; 
+    org:abbreviation "NIPH"@None ; 
+    schema:mainEntityOfPage <http://www.fhi.no/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Norwegian_Institute_of_Public_Health> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100021078> ;
+    schema:sameAs <https://grid.ac/institutions/grid.418193.6> ;
+    schema:sameAs <http://isni.org/isni/0000000115414204> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/05ykb3m36> ;
+        rdfs:label "Ministry of Health and Care Services" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03sm1ej59> ;
+        rdfs:label "Cancer Registry of Norway" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(10.74609 59.91273)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(10.74609 59.91273)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Oslo" ;
             schema:addressCountry "NO" ;
-            owl:sameAs <http://sws.geonames.org/3143244/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000115414204> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q7061149> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Norway" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3143244/> ;
+    ] ; 
     .

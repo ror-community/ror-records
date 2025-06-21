@@ -4,26 +4,58 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01vqrde47> a org:Organization ;
-    rdfs:label "Nançay Radio Observatory" ;
-    schema:name "Nançay Radio Observatory" ;
+    rdfs:label "" ;
+    schema:name "" ;
     schema:foundingDate "1956"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "USN" ;
-    schema:url <https://www.obs-nancay.fr> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Nan%C3%A7ay_Radio_Observatory> ;
+    org:classification "facility" ; 
+    dct:created "2022-03-17"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:abbreviation "ORN"@fr ; 
+    org:alternativeName "Station de Radioastronomie de Nançay"@fr ; 
+    org:abbreviation "UAR ORN"@fr ; 
+    org:alternativeName "Unité Scientifique de Nançay"@fr ; 
+    schema:mainEntityOfPage <https://www.obs-nancay.fr> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Nan%C3%A7ay_Radio_Observatory> ; 
+    schema:sameAs <http://isni.org/isni/0000000404717041> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/04kdfz702> ;
+        rdfs:label "Institut National des Sciences de l'Univers" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/014zrew76> ;
+        rdfs:label "Université d'Orléans" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/029nkcm90> ;
+        rdfs:label "Observatoire de Paris" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(2.19286 47.3501)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(2.19286 47.3501)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Nançay" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2991013/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000404717041> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q60643512> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2991013/> ;
+    ] ; 
     .

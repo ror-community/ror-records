@@ -8,15 +8,15 @@
 @prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02f7wz369> a org:Organization ;
-    rdfs:label "Pierre Mendès-France University" ;
-    schema:name "Pierre Mendès-France University" ;
+    rdfs:label "" ;
+    schema:name "" ;
     schema:foundingDate "1970"^^xsd:gYear ;
-    org:status "active" ;
+    org:status "inactive" ;
     org:classification "education" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-05-02"^^xsd:date ;
-    org:alternativeName "Grenoble II"@None ; 
-    org:abbreviation "UPMF"@None ; 
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:alternativeName "Grenoble II"@fr ; 
+    org:abbreviation "UPMF"@fr ; 
     schema:mainEntityOfPage <http://www.upmf-grenoble.fr/en/choose-the-upmf-grenoble-181903.htm> ;
     owl:sameAs <http://en.wikipedia.org/wiki/Pierre_Mend%C3%A8s-France_University> ; 
     schema:sameAs <https://grid.ac/institutions/grid.11906.3f> ;
@@ -24,6 +24,12 @@
     org:hasLink [
         a org:Membership ;
         org:role "parent" ;
+        org:member <https://ror.org/02rx3b187> ;
+        rdfs:label "Université Grenoble Alpes" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "successor" ;
         org:member <https://ror.org/02rx3b187> ;
         rdfs:label "Université Grenoble Alpes" ;
     ] ; 

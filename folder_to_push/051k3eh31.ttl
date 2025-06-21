@@ -4,28 +4,55 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/051k3eh31> a org:Organization ;
     rdfs:label "Tokyo Medical and Dental University" ;
     schema:name "Tokyo Medical and Dental University" ;
     schema:foundingDate "1928"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "TMDU" ;
-    org:alternativeName "Tōkyō ika shika daigaku" ;
-    schema:url <http://www.tmd.ac.jp/english/> ; 
-    owl:sameAs <https://ja.wikipedia.org/wiki/%E6%9D%B1%E4%BA%AC%E5%8C%BB%E7%A7%91%E6%AD%AF%E7%A7%91%E5%A4%A7%E5%AD%A6> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:abbreviation "TMDU"@None ; 
+    org:alternativeName "Tōkyō ika shika daigaku"@None ; 
+    org:alternativeName "とうきょういかしかだいがく"@ja ; 
+    org:alternativeName "トウキョウイカシカダイガク"@ja ; 
+    schema:mainEntityOfPage <http://www.tmd.ac.jp/english/> ;
+    owl:sameAs <https://ja.wikipedia.org/wiki/%E6%9D%B1%E4%BA%AC%E5%8C%BB%E7%A7%91%E6%AD%AF%E7%A7%91%E5%A4%A7%E5%AD%A6> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100007951> ;
+    schema:sameAs <https://grid.ac/institutions/grid.265073.5> ;
+    schema:sameAs <http://isni.org/isni/0000000110149130> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/058548196> ;
+        rdfs:label "Tokyo Medical and Dental University Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05dqf9946> ;
+        rdfs:label "Institute of Science Tokyo" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(139.69171 35.6895)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(139.69171 35.6895)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Tokyo" ;
             schema:addressCountry "JP" ;
-            owl:sameAs <http://sws.geonames.org/1850147/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000110149130> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q3180921> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Japan" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1850147/> ;
+    ] ; 
     .

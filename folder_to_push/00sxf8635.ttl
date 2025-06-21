@@ -4,27 +4,45 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/00sxf8635> a org:Organization ;
     rdfs:label "NSWC Port Hueneme Division" ;
     schema:name "NSWC Port Hueneme Division" ;
     org:status "active" ;
-    org:classification "Government" ; 
-    org:classification "Facility" ; 
-    org:abbreviation "NSWC PHD" ;
-    org:alternativeName "Naval Surface Warfare Center Port Hueneme Division" ;
-    schema:url <https://www.navsea.navy.mil/Home/Warfare-Centers/NSWC-Port-Hueneme/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Naval_Surface_Warfare_Center_Port_Hueneme> ;
+    org:classification "facility" ; 
+    org:classification "government" ; 
+    dct:created "2023-11-08"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:abbreviation "NSWC PHD"@None ; 
+    org:alternativeName "NSWC Port Hueneme"@en ; 
+    org:alternativeName "Naval Surface Warfare Center Port Hueneme Division"@en ; 
+    schema:mainEntityOfPage <https://www.navsea.navy.mil/Home/Warfare-Centers/NSWC-Port-Hueneme/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Naval_Surface_Warfare_Center_Port_Hueneme> ; 
+    schema:sameAs <http://isni.org/isni/0000000406481001> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/03d4ecn10> ;
+        rdfs:label "Naval Surface Warfare Center" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-119.19511 34.14778)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-119.19511 34.14778)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Port Hueneme" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/5384339/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000406481001> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q6981961> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/5384339/> ;
+    ] ; 
     .

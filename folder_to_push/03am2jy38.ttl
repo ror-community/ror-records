@@ -4,27 +4,118 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/03am2jy38> a org:Organization ;
-    rdfs:label "University of Perpignan" ;
-    schema:name "University of Perpignan" ;
+    rdfs:label "" ;
+    schema:name "" ;
     schema:foundingDate "1350"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:alternativeName "Universitat de Perpinyà Via Domitia" ;
-    schema:url <http://www.univ-perp.fr/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Perpignan> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:alternativeName "Universitat de Perpinyà Via Domitia"@ca ; 
+    schema:mainEntityOfPage <http://www.univ-perp.fr/> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Perpignan> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100004223> ;
+    schema:sameAs <https://grid.ac/institutions/grid.11136.34> ;
+    schema:sameAs <http://isni.org/isni/0000000121925916> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00f5hap04> ;
+        rdfs:label "Acteurs, Ressources et Territoires dans le Développement" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01jt5ms28> ;
+        rdfs:label "Centre de Formation et de Recherche sur les Environnements Méditerranéens" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02tp7mm44> ;
+        rdfs:label "Centre de Recherches Insulaires et Observatoire de l'Environnement" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00c3ta789> ;
+        rdfs:label "Histoire Naturelle de l’Homme Préhistorique" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05thdk431> ;
+        rdfs:label "Laboratoire Procédés, Matériaux et Energie Solaire" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/013yean28> ;
+        rdfs:label "Laboratoire d'Informatique, de Robotique et de Microélectronique de Montpellier" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/038207k30> ;
+        rdfs:label "Laboratoire Génome et Développement des Plantes" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00zn13224> ;
+        rdfs:label "Interactions Hôtes-Pathogènes-Environnements" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01z485314> ;
+        rdfs:label "UMR Espace-Dev" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03j65n394> ;
+        rdfs:label "Laboratoire d'Excellence TULIP" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01x6z5t49> ;
+        rdfs:label "Fédération de Recherche Spectroscopies de Photoémission" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0459fdx51> ;
+        rdfs:label "Fédération de Recherche sur l'Energie Solaire" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01sgwka45> ;
+        rdfs:label "Microscopie Fonctionnelle du Vivant" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(2.89541 42.69764)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(2.89541 42.69764)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Perpignan" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2987914/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000121925916> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q304872> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2987914/> ;
+    ] ; 
     .

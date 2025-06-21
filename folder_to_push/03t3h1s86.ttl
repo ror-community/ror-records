@@ -4,25 +4,40 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/03t3h1s86> a org:Organization ;
     rdfs:label "French Norwegian Foundation" ;
     schema:name "French Norwegian Foundation" ;
     schema:foundingDate "1983"^^xsd:gYear ;
-    org:status "active" ;
-    org:classification "Nonprofit" ; 
-    org:abbreviation "FNS" ;
-    schema:url <http://www.ffn-fns.fr/> ; 
+    org:status "inactive" ;
+    org:classification "funder" ; 
+    org:classification "nonprofit" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:abbreviation "FFN"@None ; 
+    org:abbreviation "FNS"@None ; 
+    schema:mainEntityOfPage <http://www.ffn-fns.fr/> ;
+    schema:sameAs <https://api.crossref.org/funders/501100001672> ;
+    schema:sameAs <https://grid.ac/institutions/grid.453995.7> ;
+    schema:sameAs <http://isni.org/isni/0000000459064631> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(2.18967 48.8765)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(2.18967 48.8765)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Rueil-Malmaison" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2982235/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000459064631> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2982235/> ;
+    ] ; 
     .

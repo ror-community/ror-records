@@ -4,26 +4,43 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/05yqfzf35> a org:Organization ;
     rdfs:label "UMR Géographie-cités" ;
     schema:name "UMR Géographie-cités" ;
     schema:foundingDate "1987"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "GC" ;
-    org:alternativeName "UMR 8504" ;
-    schema:url <https://geographie-cites.cnrs.fr/> ; 
+    org:classification "facility" ; 
+    dct:created "2022-03-17"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:abbreviation "GC"@None ; 
+    org:alternativeName "UMR 8504"@fr ; 
+    schema:mainEntityOfPage <https://geographie-cites.cnrs.fr/> ;
+    schema:sameAs <http://isni.org/isni/0000000406236436> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02feahw73> ;
+        rdfs:label "Centre National de la Recherche Scientifique" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(2.38333 48.91667)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(2.38333 48.91667)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Aubervilliers" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/3036386/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000406236436> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q51781143> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3036386/> ;
+    ] ; 
     .

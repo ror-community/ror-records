@@ -4,27 +4,103 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/020ws7586> a org:Organization ;
     rdfs:label "Institut National des Sciences Appliquées Rouen Normandie" ;
     schema:name "Institut National des Sciences Appliquées Rouen Normandie" ;
     schema:foundingDate "1985"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "INSA" ;
-    org:alternativeName "INSA Rouen Normandie" ;
-    schema:url <https://www.insa-rouen.fr> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Institut_national_des_sciences_appliqu%C3%A9es_de_Rouen> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:abbreviation "INSA"@None ; 
+    org:alternativeName "INSA Rouen"@fr ; 
+    org:alternativeName "INSA Rouen Normandie"@fr ; 
+    org:alternativeName "INSA de Rouen"@fr ; 
+    org:alternativeName "National Institute of Applied Sciences of Rouen"@en ; 
+    schema:mainEntityOfPage <https://www.insa-rouen.fr> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Institut_national_des_sciences_appliqu%C3%A9es_de_Rouen> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100007850> ;
+    schema:sameAs <https://grid.ac/institutions/grid.435013.0> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01k1ngp50> ;
+        rdfs:label "Complexe de Recherche Interprofessionnel en Aérothermochimie" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03c2k2909> ;
+        rdfs:label "Groupe de Physique des Matériaux" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04e8pda19> ;
+        rdfs:label "Laboratoire COBRA" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04hd6wf14> ;
+        rdfs:label "Polymères, Biopolymères, Surfaces" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00wdpp052> ;
+        rdfs:label "Laboratoire de Sécurité des Procédés Chimiques" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04yem5s35> ;
+        rdfs:label "INFRANALYTICS" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01f1vfy95> ;
+        rdfs:label "Laboratoire d'Informatique, du Traitement de l'Information et des Systèmes" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/009rwsd77> ;
+        rdfs:label "Laboratoire de Mathématiques de l'INSA de Rouen" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04s945776> ;
+        rdfs:label "Laboratoire de Mécanique de Normandie" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/01k40cz91> ;
+        rdfs:label "Normandie Université" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(1.10467 49.37794)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(1.10467 49.37794)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Saint-Étienne-du-Rouvray" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2980236/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://www.wikidata.org/entity/Q1665112> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2980236/> ;
+    ] ; 
     .

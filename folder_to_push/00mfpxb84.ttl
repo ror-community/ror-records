@@ -4,27 +4,118 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/00mfpxb84> a org:Organization ;
-    rdfs:label "University of Avignon" ;
-    schema:name "University of Avignon" ;
+    rdfs:label "" ;
+    schema:name "" ;
     schema:foundingDate "1303"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:alternativeName "University of Avignon and the Vaucluse" ;
-    schema:url <http://www.univ-avignon.fr/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Avignon> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:alternativeName "University of Avignon and the Vaucluse"@en ; 
+    schema:mainEntityOfPage <http://www.univ-avignon.fr/> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Avignon> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100016988> ;
+    schema:sameAs <https://grid.ac/institutions/grid.7310.5> ;
+    schema:sameAs <http://isni.org/isni/0000000121902394> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04yavcg77> ;
+        rdfs:label "Anthropologie et Histoire des Mondes Antiques" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/028ycv057> ;
+        rdfs:label "Centre Norbert Elias" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05mqwtr17> ;
+        rdfs:label "Histoire, Archéologie, Littératures des Mondes Chrétiens et Musulmans Médiévaux" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05d1e6v30> ;
+        rdfs:label "Institut des Biomolécules Max Mousseron" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02n399288> ;
+        rdfs:label "Laboratoire Informatique d'Avignon" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05gscwg02> ;
+        rdfs:label "Laboratoire Souterrain à Bas Bruit" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0409c3995> ;
+        rdfs:label "Institut Méditerranéen de Biodiversité et d'Ecologie Marine et Continentale" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01xdxaz62> ;
+        rdfs:label "Sécurité et Qualité des Produits d'Origine Végétale" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02125p091> ;
+        rdfs:label "Sciences et Technologies des Cultures et Sociétés Numériques" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/048bnmc64> ;
+        rdfs:label "EMMAH - Environnement Méditerranéen et Modélisation des Agro-Hydrosystèmes" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01nfvkq89> ;
+        rdfs:label "UMR QualiSud" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/052cnt662> ;
+        rdfs:label "Étude des Structures, des Processus d’Adaptation et des Changements de l’Espace" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02aja8v82> ;
+        rdfs:label "OpenEdition Center" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(4.80892 43.94834)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(4.80892 43.94834)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Avignon" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/3035681/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000121902394> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q2033119> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3035681/> ;
+    ] ; 
     .

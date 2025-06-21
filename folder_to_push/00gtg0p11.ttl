@@ -4,24 +4,71 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/00gtg0p11> a org:Organization ;
     rdfs:label "Centre Île-de-France - Jouy-en-Josas - Antony" ;
     schema:name "Centre Île-de-France - Jouy-en-Josas - Antony" ;
     schema:foundingDate "1946"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    schema:url <https://www.inrae.fr/centres/ile-france-jouy-josas-antony> ; 
+    org:classification "facility" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    schema:mainEntityOfPage <https://www.inrae.fr/centres/ile-france-jouy-josas-antony> ;
+    schema:sameAs <https://grid.ac/institutions/grid.417961.c> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05qdnns64> ;
+        rdfs:label "Mathématiques et Informatique Appliquées du Génome à l'Environnement" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05mfwtg94> ;
+        rdfs:label "Biologie de la Reproduction, Environnement, Epigénétique et Développement" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/027364b18> ;
+        rdfs:label "Bipar" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0471cyx86> ;
+        rdfs:label "Institut Micalis" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0024c1w94> ;
+        rdfs:label "Plantes et Système de Cultures Horticoles" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/003vg9w96> ;
+        rdfs:label "Institut National de Recherche pour l'Agriculture, l'Alimentation et l'Environnement" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(2.16966 48.75909)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(2.16966 48.75909)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Jouy-en-Josas" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/3012165/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://www.wikidata.org/entity/Q30281526> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3012165/> ;
+    ] ; 
     .

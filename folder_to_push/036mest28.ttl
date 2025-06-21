@@ -4,23 +4,53 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/036mest28> a org:Organization ;
     rdfs:label "Biology of Extremophiles Laboratory" ;
     schema:name "Biology of Extremophiles Laboratory" ;
     org:status "inactive" ;
-    org:classification "Facility" ; 
-    org:abbreviation "BMGE" ;
-    schema:url <http://www-archbac.u-psud.fr/> ; 
+    org:classification "facility" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:abbreviation "BMGE"@None ; 
+    schema:mainEntityOfPage <http://www-archbac.u-psud.fr/> ;
+    schema:sameAs <https://grid.ac/institutions/grid.463808.1> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/01y8j9r24> ;
+        rdfs:label "Délégation Ile-de-France Sud" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/01fftxe08> ;
+        rdfs:label "Institute of Integrative Biology of the Cell" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/028rypz17> ;
+        rdfs:label "Université Paris-Sud" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(2.18727 48.69572)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(2.18727 48.69572)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Orsay" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2989204/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2989204/> ;
+    ] ; 
     .

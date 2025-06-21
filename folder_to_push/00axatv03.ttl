@@ -4,25 +4,48 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/00axatv03> a org:Organization ;
     rdfs:label "Centre Gilles-Gaston Granger" ;
     schema:name "Centre Gilles-Gaston Granger" ;
     schema:foundingDate "2012"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "CGGG" ;
-    schema:url <https://centregranger.cnrs.fr> ; 
+    org:classification "facility" ; 
+    dct:created "2023-08-17"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:abbreviation "CGGG"@None ; 
+    schema:mainEntityOfPage <https://centregranger.cnrs.fr> ;
+    schema:sameAs <http://isni.org/isni/0000000118928999> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02feahw73> ;
+        rdfs:label "Centre National de la Recherche Scientifique" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/035xkbk20> ;
+        rdfs:label "Aix-Marseille Université" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(5.44973 43.5283)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(5.44973 43.5283)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Aix-en-Provence" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/3038354/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000118928999> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q51781524> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3038354/> ;
+    ] ; 
     .

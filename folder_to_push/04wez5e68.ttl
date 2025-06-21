@@ -4,27 +4,146 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/04wez5e68> a org:Organization ;
-    rdfs:label "Paris 8 University" ;
-    schema:name "Paris 8 University" ;
+    rdfs:label "" ;
+    schema:name "" ;
     schema:foundingDate "1969"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:alternativeName "University of Paris VIII" ;
-    schema:url <http://www.univ-paris8.fr/en/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Paris_8_University> ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:alternativeName "University of Paris VIII"@en ; 
+    schema:mainEntityOfPage <http://www.univ-paris8.fr/en/> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Paris_8_University> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.15878.33> ;
+    schema:sameAs <http://isni.org/isni/0000000121107200> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04jb47e97> ;
+        rdfs:label "Centre de recherches sociologiques et politiques de Paris" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03p76m698> ;
+        rdfs:label "Institutions et Dynamiques Historiques de l'Économie et de la Société" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/018nzqy79> ;
+        rdfs:label "Laboratoire Analyse, Géométrie et Applications" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02k8f5n40> ;
+        rdfs:label "Laboratoire Cognitions Humaine et Artificielle" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/045r56524> ;
+        rdfs:label "Laboratoire Dynamiques Sociales et Recomposition des Espaces" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01dqmj897> ;
+        rdfs:label "Laboratoire Architecture Ville Urbanisme Environnement" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00nrven85> ;
+        rdfs:label "Structures Formelles du Langage" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04ej53908> ;
+        rdfs:label "Typologie et Universaux Linguistiques" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0014xh077> ;
+        rdfs:label "Centre d’histoire des sociétés Médiévales et Modernes" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00mgd1d10> ;
+        rdfs:label "Laboratoire Paragraphe" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05xrx2377> ;
+        rdfs:label "Laboratoire Parisien de Psychologie Sociale" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/051n2s460> ;
+        rdfs:label "Fonctionnement et dysfonctionnement cognitifs: les âges de la vie" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/005w2mm89> ;
+        rdfs:label "Laboratoire d'études de genre et de sexualité" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0127n6542> ;
+        rdfs:label "Laboratoire Interuniversitaire Expérience, Ressources culturelles, Education" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0389fzc60> ;
+        rdfs:label "Centre interdisciplinaire de recherche "Culture, éducation, formation, travail"" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05079x435> ;
+        rdfs:label "Maison des Sciences de l'Homme Paris Nord" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04m69ya83> ;
+        rdfs:label "Théâtre antique : textes, histoire et réception" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00cd48p72> ;
+        rdfs:label "Campus Condorcet" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(2.3488 48.85341)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(2.3488 48.85341)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Paris" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2988507/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000121107200> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1194988> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2988507/> ;
+    ] ; 
     .

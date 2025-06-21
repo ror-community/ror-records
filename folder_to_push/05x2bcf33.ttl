@@ -4,27 +4,94 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/05x2bcf33> a org:Organization ;
     rdfs:label "Carnegie Mellon University" ;
     schema:name "Carnegie Mellon University" ;
     schema:foundingDate "1900"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "CMU" ;
-    schema:url <http://www.cmu.edu/index.shtml> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Carnegie_Mellon_University> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:abbreviation "CMU"@None ; 
+    schema:mainEntityOfPage <http://www.cmu.edu/index.shtml> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Carnegie_Mellon_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/100008047> ;
+    schema:sameAs <https://grid.ac/institutions/grid.147455.6> ;
+    schema:sameAs <http://isni.org/isni/0000000120970344> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02f33m021> ;
+        rdfs:label "Carnegie Mellon University Africa" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00ds41r10> ;
+        rdfs:label "Carnegie Mellon University Australia" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00az5dt38> ;
+        rdfs:label "Carnegie Mellon University Qatar" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00jfeg660> ;
+        rdfs:label "Center for the Neural Basis of Cognition" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01xqjjn94> ;
+        rdfs:label "Software Engineering Institute" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01v6d0b34> ;
+        rdfs:label "Advanced Cyberinfrastructure Coordination Ecosystem: Services & Support" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02w30ae27> ;
+        rdfs:label "SYSU-CMU International Joint Research Institute" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03bw34a45> ;
+        rdfs:label "UPMC Hillman Cancer Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01txfgz53> ;
+        rdfs:label "Center for Statistics and Applications in Forensic Evidence" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-79.99589 40.44062)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-79.99589 40.44062)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Pittsburgh" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/5206379/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000120970344> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q190080> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/5206379/> ;
+    ] ; 
     .

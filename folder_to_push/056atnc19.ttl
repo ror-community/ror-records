@@ -4,28 +4,45 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/056atnc19> a org:Organization ;
-    rdfs:label "French National School for Advanced Studies in Design" ;
-    schema:name "French National School for Advanced Studies in Design" ;
+    rdfs:label "" ;
+    schema:name "" ;
     schema:foundingDate "1982"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "ENSCI" ;
-    org:alternativeName "ENSCI–Les Ateliers" ;
-    schema:url <http://www.ensci.com/en/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/%C3%89cole_nationale_sup%C3%A9rieure_de_cr%C3%A9ation_industrielle> ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:abbreviation "ENSCI"@None ; 
+    org:alternativeName "ENSCI–Les Ateliers"@fr ; 
+    schema:mainEntityOfPage <http://www.ensci.com/en/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/%C3%89cole_nationale_sup%C3%A9rieure_de_cr%C3%A9ation_industrielle> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.466371.1> ;
+    schema:sameAs <http://isni.org/isni/0000000122034373> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/007y9b339> ;
+        rdfs:label "Centre de Recherche en Design" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(2.3488 48.85341)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(2.3488 48.85341)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Paris" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2988507/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000122034373> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q870925> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2988507/> ;
+    ] ; 
     .

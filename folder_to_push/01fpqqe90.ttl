@@ -4,28 +4,93 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01fpqqe90> a org:Organization ;
     rdfs:label "École Nationale Supérieure d'Ingénieurs de Caen" ;
     schema:name "École Nationale Supérieure d'Ingénieurs de Caen" ;
     schema:foundingDate "1976"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "ENSICAEN" ;
-    org:alternativeName "École Nationale Supérieure d'ingénieurs de Caen & Centre de Recherche" ;
-    schema:url <https://www.ensicaen.fr> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/%C3%89cole_nationale_sup%C3%A9rieure_d%27ing%C3%A9nieurs_de_Caen> ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:abbreviation "ENSICAEN"@None ; 
+    org:alternativeName "École Nationale Supérieure d'ingénieurs de Caen & Centre de Recherche"@fr ; 
+    schema:mainEntityOfPage <https://www.ensicaen.fr> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/%C3%89cole_nationale_sup%C3%A9rieure_d%27ing%C3%A9nieurs_de_Caen> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.424453.0> ;
+    schema:sameAs <http://isni.org/isni/000000008694431X> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05jw85995> ;
+        rdfs:label "CNRT Matériaux" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01gan4k05> ;
+        rdfs:label "Laboratoire Catalyse et Spectrochimie" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02y0gk295> ;
+        rdfs:label "Centre de Recherche sur les Ions, les Matériaux et la Photonique" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/043749971> ;
+        rdfs:label "GREYC" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03q7p3t30> ;
+        rdfs:label "Laboratoire de Chimie Moléculaire et Thioorganique" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04310tc15> ;
+        rdfs:label "Laboratoire de Cristallographie et Sciences des Matériaux" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/022txr781> ;
+        rdfs:label "Laboratoire de Physique Corpusculaire de Caen" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/005ba5y61> ;
+        rdfs:label "Laboratoire d'Ingénierie des Systèmes" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/01k40cz91> ;
+        rdfs:label "Normandie Université" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-0.35912 49.18585)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-0.35912 49.18585)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Caen" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/3029241/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/000000008694431X> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q3578208> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3029241/> ;
+    ] ; 
     .

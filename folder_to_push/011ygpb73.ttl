@@ -4,24 +4,48 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/011ygpb73> a org:Organization ;
     rdfs:label "Institut de Chimie Moléculaire de l'Université de Bourgogne" ;
     schema:name "Institut de Chimie Moléculaire de l'Université de Bourgogne" ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "ICMUB" ;
-    org:alternativeName "Molecular Chemistry Institute of the University of Burgundy" ;
-    schema:url <http://www.icmub.com> ; 
+    org:classification "facility" ; 
+    dct:created "2024-01-10"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:abbreviation "ICMUB"@None ; 
+    org:alternativeName "Molecular Chemistry Institute of the University of Burgundy"@en ; 
+    schema:mainEntityOfPage <http://www.icmub.com> ;
+    schema:sameAs <http://isni.org/isni/0000000403831547> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/03k1bsr36> ;
+        rdfs:label "Université de Bourgogne" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02feahw73> ;
+        rdfs:label "Centre National de la Recherche Scientifique" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(5.01667 47.31667)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(5.01667 47.31667)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Dijon" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/3021372/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000403831547> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3021372/> ;
+    ] ; 
     .

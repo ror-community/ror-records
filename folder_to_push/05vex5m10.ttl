@@ -4,24 +4,48 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/05vex5m10> a org:Organization ;
     rdfs:label "PAnTher - Physiopathologie Animale et bioThérapie du muscle et du système nerveux" ;
     schema:name "PAnTher - Physiopathologie Animale et bioThérapie du muscle et du système nerveux" ;
     schema:foundingDate "1980"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "PAnTher" ;
-    org:alternativeName "Physiopathologie Animale et bioThérapie du muscle et du système nerveux" ;
-    schema:url <https://www6.angers-nantes.inrae.fr/panther/> ; 
+    org:classification "facility" ; 
+    dct:created "2023-08-17"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:abbreviation "PAnTher"@None ; 
+    org:alternativeName "Physiopathologie Animale et bioThérapie du muscle et du système nerveux"@fr ; 
+    schema:mainEntityOfPage <https://www6.angers-nantes.inrae.fr/panther/> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/05q0ncs32> ;
+        rdfs:label "Oniris" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/003vg9w96> ;
+        rdfs:label "Institut National de Recherche pour l'Agriculture, l'Alimentation et l'Environnement" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-1.55336 47.21725)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-1.55336 47.21725)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Nantes" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2990969/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2990969/> ;
+    ] ; 
     .

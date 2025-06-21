@@ -4,27 +4,80 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/05q0ncs32> a org:Organization ;
     rdfs:label "Oniris" ;
     schema:name "Oniris" ;
     schema:foundingDate "1979"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:alternativeName "Nantes-Atlantic National College of Veterinary Medicine, Food Science and Engineering" ;
-    schema:url <http://www.oniris-nantes.fr> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Nantes-Atlantic_National_College_of_Veterinary_Medicine,_Food_Science_and_Engineering> ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:alternativeName "Nantes-Atlantic National College of Veterinary Medicine, Food Science and Engineering"@en ; 
+    schema:mainEntityOfPage <http://www.oniris-nantes.fr> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Nantes-Atlantic_National_College_of_Veterinary_Medicine,_Food_Science_and_Engineering> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.418682.1> ;
+    schema:sameAs <http://isni.org/isni/0000000121753974> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00kewvc41> ;
+        rdfs:label "Laboratoire D'étude des Résidus et Contaminants Dans les Aliments" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05ngxmx20> ;
+        rdfs:label "Laboratoire de Génie des Procédés – Environnement – Agro-alimentaire" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02nzb0q40> ;
+        rdfs:label "Sécurité des Aliments et Microbiologie" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05vex5m10> ;
+        rdfs:label "PAnTher - Physiopathologie Animale et bioThérapie du muscle et du système nerveux" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/059h64789> ;
+        rdfs:label "Biologie Epidémiologie et Analyse de Risque en santé animale" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0459fdx51> ;
+        rdfs:label "Fédération de Recherche sur l'Energie Solaire" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/0406t3m57> ;
+        rdfs:label "Université Nantes Angers Le Mans" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-1.55336 47.21725)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-1.55336 47.21725)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Nantes" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2990969/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000121753974> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q3578268> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2990969/> ;
+    ] ; 
     .

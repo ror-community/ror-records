@@ -4,24 +4,60 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/04pfr1b11> a org:Organization ;
-    rdfs:label "European Institute for Marine Studies" ;
-    schema:name "European Institute for Marine Studies" ;
+    rdfs:label "" ;
+    schema:name "" ;
     schema:foundingDate "1991"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "IUEM" ;
-    schema:url <http://www-iuem.univ-brest.fr/en> ; 
+    org:classification "facility" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:abbreviation "IUEM"@None ; 
+    schema:mainEntityOfPage <http://www-iuem.univ-brest.fr/en> ;
+    schema:sameAs <https://grid.ac/institutions/grid.466785.e> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/044jxhp58> ;
+        rdfs:label "Ifremer" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/05q3vnk25> ;
+        rdfs:label "Institut de Recherche pour le Développement" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/04ed7fw48> ;
+        rdfs:label "Université de Bretagne Sud" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/01b8h3982> ;
+        rdfs:label "Université de Bretagne Occidentale" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-4.61805 48.38131)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-4.61805 48.38131)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Plouzané" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2986626/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2986626/> ;
+    ] ; 
     .

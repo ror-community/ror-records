@@ -4,26 +4,43 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/027xymc69> a org:Organization ;
     rdfs:label "Agence Bibliographique de l'Enseignement Supérieur" ;
     schema:name "Agence Bibliographique de l'Enseignement Supérieur" ;
     schema:foundingDate "1994"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Archive" ; 
-    org:abbreviation "ABES" ;
-    schema:url <https://abes.fr> ; 
-    owl:sameAs <https://fr.wikipedia.org/wiki/Agence_bibliographique_de_l%27enseignement_sup%C3%A9rieur> ;
+    org:classification "archive" ; 
+    dct:created "2023-10-12"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:abbreviation "ABES"@None ; 
+    schema:mainEntityOfPage <https://abes.fr> ;
+    owl:sameAs <https://fr.wikipedia.org/wiki/Agence_bibliographique_de_l%27enseignement_sup%C3%A9rieur> ; 
+    schema:sameAs <http://isni.org/isni/000000012155473X> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/03sjk9a61> ;
+        rdfs:label "Ministère de l’Enseignement Supérieur et de la Recherche" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(3.87635 43.61093)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(3.87635 43.61093)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Montpellier" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2992166/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/000000012155473X> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q2826570> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2992166/> ;
+    ] ; 
     .

@@ -4,27 +4,52 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/05d5m2r55> a org:Organization ;
     rdfs:label "Institut des Hautes Études Scientifiques" ;
     schema:name "Institut des Hautes Études Scientifiques" ;
     schema:foundingDate "1958"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "IHÉS" ;
-    schema:url <http://www.ihes.fr/jsp/site/Portal.jsp> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Institut_des_Hautes_%C3%89tudes_Scientifiques> ;
+    org:classification "facility" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:abbreviation "IHÉS"@None ; 
+    schema:mainEntityOfPage <http://www.ihes.fr/jsp/site/Portal.jsp> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Institut_des_Hautes_%C3%89tudes_Scientifiques> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100022300> ;
+    schema:sameAs <https://grid.ac/institutions/grid.425258.c> ;
+    schema:sameAs <http://isni.org/isni/0000000091233862> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01fv25t22> ;
+        rdfs:label "Centre CEA de Saclay" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04g0ktq11> ;
+        rdfs:label "Bibliothèque Jacques Hadamard" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(2.17064 48.69981)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(2.17064 48.69981)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Bures-sur-Yvette" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/3029522/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000091233862> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1156553> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3029522/> ;
+    ] ; 
     .

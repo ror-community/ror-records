@@ -4,26 +4,37 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01zwq9p88> a org:Organization ;
     rdfs:label "Universidad de Ixtlahuaca CUI" ;
     schema:name "Universidad de Ixtlahuaca CUI" ;
     schema:foundingDate "1993"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:alternativeName "Centro Universitario de Ixtlahuaca" ;
-    schema:url <https://uicui.edu.mx> ; 
-    schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-97.33496 19.82309)"^^geo:wktLiteral ;
-            schema:addressLocality "Ixtlahuaca" ;
-            schema:addressCountry "MX" ;
-            owl:sameAs <http://sws.geonames.org/8859788/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:alternativeName "Centro Universitario de Ixtlahuaca"@es ; 
+    schema:mainEntityOfPage <https://uicui.edu.mx> ;
+    schema:sameAs <https://grid.ac/institutions/grid.441494.8> ;
     schema:sameAs <http://isni.org/isni/0000000404834408> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q30293894> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-99.76694 19.56889)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Ixtlahuaca de Rayón" ;
+            schema:addressCountry "MX" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Mexico" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3526670/> ;
+    ] ; 
     .

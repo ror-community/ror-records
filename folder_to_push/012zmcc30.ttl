@@ -4,25 +4,51 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/012zmcc30> a org:Organization ;
     rdfs:label "Laboratory for the Bioengineering of Tissues" ;
     schema:name "Laboratory for the Bioengineering of Tissues" ;
     schema:foundingDate "2011"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "BIOTIS" ;
-    org:alternativeName "Laboratoire Bioingénierie tissulaire" ;
-    schema:url <http://www.biotis-bordeaux.com> ; 
+    org:classification "facility" ; 
+    dct:created "2023-08-17"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:abbreviation "BIOTIS"@None ; 
+    org:alternativeName "Bioingenierie Tissulaire et Cellulaire"@fr ; 
+    org:alternativeName "Bioingénierie tissulaire"@fr ; 
+    org:alternativeName "Bioingénierie tissulaire Tissue Bio-Engeneering"@fr ; 
+    org:alternativeName "Laboratoire Bioingénierie tissulaire"@fr ; 
+    schema:mainEntityOfPage <http://www.biotis-bordeaux.com> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02vjkv261> ;
+        rdfs:label "Inserm" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/057qpr032> ;
+        rdfs:label "Université de Bordeaux" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-0.5805 44.84044)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-0.5805 44.84044)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Bordeaux" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/3031582/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://www.wikidata.org/entity/Q51782588> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3031582/> ;
+    ] ; 
     .

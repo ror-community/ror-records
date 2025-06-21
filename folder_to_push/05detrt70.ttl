@@ -4,22 +4,46 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/05detrt70> a org:Organization ;
     rdfs:label "Research Applications Laboratory" ;
     schema:name "Research Applications Laboratory" ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "RAL" ;
-    schema:url <https://ral.ucar.edu> ; 
+    org:classification "facility" ; 
+    dct:created "2023-04-12"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:abbreviation "RAL"@None ; 
+    schema:mainEntityOfPage <https://ral.ucar.edu> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/05cvfcr44> ;
+        rdfs:label "NSF National Center for Atmospheric Research" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/04zhhyn23> ;
+        rdfs:label "University Corporation for Atmospheric Research" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-105.27055 40.01499)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-105.27055 40.01499)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Boulder" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/5574991/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/5574991/> ;
+    ] ; 
     .

@@ -1,0 +1,38 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/0277bck87> a org:Organization ;
+    rdfs:label "Melun Hospital" ;
+    schema:name "Melun Hospital" ;
+    org:status "inactive" ;
+    org:classification "healthcare" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:alternativeName "Centre Hospitalier de Melun"@fr ; 
+    schema:mainEntityOfPage <http://www.ch-melun.fr/> ;
+    schema:sameAs <https://grid.ac/institutions/grid.477617.4> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(2.65356 48.5457)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Melun" ;
+            schema:addressCountry "FR" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2994651/> ;
+    ] ; 
+    .

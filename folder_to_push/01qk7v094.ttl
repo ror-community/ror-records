@@ -4,27 +4,56 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01qk7v094> a org:Organization ;
     rdfs:label "Intergovernmental Oceanographic Commission of UNESCO" ;
     schema:name "Intergovernmental Oceanographic Commission of UNESCO" ;
     schema:foundingDate "1961"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Government" ; 
-    org:abbreviation "IOC/UNESCO" ;
-    schema:url <https://ioc.unesco.org> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Intergovernmental_Oceanographic_Commission> ;
+    org:classification "government" ; 
+    dct:created "2019-11-07"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:abbreviation "IOC/UNESCO"@None ; 
+    schema:mainEntityOfPage <https://ioc.unesco.org> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Intergovernmental_Oceanographic_Commission> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.506498.6> ;
+    schema:sameAs <http://isni.org/isni/0000000121670474> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04frnva71> ;
+        rdfs:label "World Climate Research Programme" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00d21gf72> ;
+        rdfs:label "International Oceanographic Data and Information Exchange (IODE)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/04h4z8k05> ;
+        rdfs:label "Organisation des Nations Unies pour l'Éducation, la Science et la Culture" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(2.3488 48.85341)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(2.3488 48.85341)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Paris" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2988507/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000121670474> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1666085> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2988507/> ;
+    ] ; 
     .

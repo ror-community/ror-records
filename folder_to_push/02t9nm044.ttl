@@ -4,25 +4,48 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02t9nm044> a org:Organization ;
     rdfs:label "Institut français du Proche-Orient" ;
     schema:name "Institut français du Proche-Orient" ;
     schema:foundingDate "2007"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "IFPO" ;
-    schema:url <http://www.ifporient.org> ; 
+    org:classification "facility" ; 
+    dct:created "2023-08-17"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:abbreviation "IFPO"@None ; 
+    schema:mainEntityOfPage <http://www.ifporient.org> ;
+    schema:sameAs <http://isni.org/isni/0000000121093865> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02feahw73> ;
+        rdfs:label "Centre National de la Recherche Scientifique" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/00dfd1509> ;
+        rdfs:label "Ministère de l'Europe et des Affaires étrangères" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(35.50157 33.89332)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(35.50157 33.89332)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Beirut" ;
             schema:addressCountry "LB" ;
-            owl:sameAs <http://sws.geonames.org/276781/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000121093865> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q3152304> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Lebanon" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/276781/> ;
+    ] ; 
     .

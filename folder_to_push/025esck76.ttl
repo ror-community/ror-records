@@ -4,26 +4,55 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/025esck76> a org:Organization ;
     rdfs:label "Langues et Civilisations à Tradition Orale" ;
     schema:name "Langues et Civilisations à Tradition Orale" ;
     schema:foundingDate "2001"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "LACITO" ;
-    org:alternativeName "Laboratoire de Langues & Civilisations à Tradition Orale" ;
-    schema:url <https://lacito.cnrs.fr> ; 
+    org:classification "facility" ; 
+    dct:created "2023-08-17"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:abbreviation "LACITO"@None ; 
+    org:alternativeName "Laboratoire de Langues & Civilisations à Tradition Orale"@fr ; 
+    schema:mainEntityOfPage <https://lacito.cnrs.fr> ;
+    schema:sameAs <http://isni.org/isni/0000000121900778> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/03z6jp965> ;
+        rdfs:label "Université Sorbonne Nouvelle" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/023zg8w32> ;
+        rdfs:label "Institut National des Langues et Civilisations Orientales" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02feahw73> ;
+        rdfs:label "Centre National de la Recherche Scientifique" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(2.35992 48.7939)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(2.35992 48.7939)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Villejuif" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2968705/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000121900778> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q3217451> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2968705/> ;
+    ] ; 
     .

@@ -4,27 +4,94 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02gdcg342> a org:Organization ;
-    rdfs:label "University of the Littoral Opal Coast" ;
-    schema:name "University of the Littoral Opal Coast" ;
+    rdfs:label "" ;
+    schema:name "" ;
     schema:foundingDate "1991"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "ULCO" ;
-    schema:url <http://www.univ-littoral.fr/english/english_home.htm> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/University_of_the_Littoral_Opal_Coast> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:abbreviation "ULCO"@None ; 
+    schema:mainEntityOfPage <http://www.univ-littoral.fr/english/english_home.htm> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/University_of_the_Littoral_Opal_Coast> ; 
+    schema:sameAs <https://api.crossref.org/funders/100016592> ;
+    schema:sameAs <https://grid.ac/institutions/grid.440918.0> ;
+    schema:sameAs <http://isni.org/isni/0000000121134241> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0018c4h73> ;
+        rdfs:label "Institut Charles Viollette" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/014net767> ;
+        rdfs:label "Laboratoire de Physico-Chimie de l'Atmosphère" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05m14rs93> ;
+        rdfs:label "Laboratoire d’Océanologie et de Géosciences" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00m090414> ;
+        rdfs:label "Maison Européenne des Sciences de l'Homme et de la Société" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04kwqat20> ;
+        rdfs:label "Territoires, Villes, Environnement & Société" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03eq8fa86> ;
+        rdfs:label "Unité de Recherche Pluridisciplinaire Sport, Santé, Société" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00tm1qp20> ;
+        rdfs:label "Laboratoire d’Informatique Signal et Image de la Côte d’Opale" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00hz02a80> ;
+        rdfs:label "Adiposité Médullaire et Os" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/032v67m28> ;
+        rdfs:label "UMR Transfrontalière BioEcoAgro" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(2.37681 51.0344)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(2.37681 51.0344)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Dunkirk" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/3020686/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000121134241> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q3551755> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3020686/> ;
+    ] ; 
     .

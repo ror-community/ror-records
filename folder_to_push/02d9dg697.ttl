@@ -4,27 +4,268 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02d9dg697> a org:Organization ;
-    rdfs:label "School for Advanced Studies in the Social Sciences" ;
-    schema:name "School for Advanced Studies in the Social Sciences" ;
+    rdfs:label "" ;
+    schema:name "" ;
     schema:foundingDate "1975"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "EHESS" ;
-    schema:url <http://www.ehess.fr/en/ehess> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/School_for_Advanced_Studies_in_the_Social_Sciences> ;
+    org:classification "facility" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:abbreviation "EHESS"@None ; 
+    schema:mainEntityOfPage <http://www.ehess.fr/en/ehess> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/School_for_Advanced_Studies_in_the_Social_Sciences> ; 
+    schema:sameAs <https://api.crossref.org/funders/100016844> ;
+    schema:sameAs <https://grid.ac/institutions/grid.17673.34> ;
+    schema:sameAs <http://isni.org/isni/0000000123255880> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04yavcg77> ;
+        rdfs:label "Anthropologie et Histoire des Mondes Antiques" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05tfp1c72> ;
+        rdfs:label "Centre de Recherches Historiques" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02v2jyq75> ;
+        rdfs:label "Centre de Recherche Médecine, Sciences, Santé, Santé Mentale, Société" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02cd98b83> ;
+        rdfs:label "Center for Southeast Asian Studies" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02dqsxz11> ;
+        rdfs:label "Centre Alexandre Koyré" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04qhwn476> ;
+        rdfs:label "Centre Georg Simmel" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01paa1e42> ;
+        rdfs:label "Centre Maurice-Halbwachs" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/028ycv057> ;
+        rdfs:label "Centre Norbert Elias" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00vb8fc53> ;
+        rdfs:label "Centre d'Analyse et de Mathématique Sociales" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/047rmr210> ;
+        rdfs:label "Centre d'études Turques, Ottomanes, Balkaniques et Centrasiatiques" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/026h43663> ;
+        rdfs:label "Centre de Recherches Linguistiques sur l'Asie Orientale" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/025bzyx94> ;
+        rdfs:label "Centre de Recherches sur les Arts et le Langage" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05qn0z879> ;
+        rdfs:label "Centre de Sociologie Européenne" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/052wpc865> ;
+        rdfs:label "Centre d’études des Mondes Russe, Caucasien et Centre-Européen" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0121yvq70> ;
+        rdfs:label "Centre Européen de Sociologie et de Science Politique" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02ek9wp67> ;
+        rdfs:label "Groupement de Recherche en Économie Quantitative d’Aix-Marseille" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05mqwtr17> ;
+        rdfs:label "Histoire, Archéologie, Littératures des Mondes Chrétiens et Musulmans Médiévaux" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00a5z9122> ;
+        rdfs:label "Institut Interdisciplinaire d’Anthropologie du Contemporain" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02c5gbd66> ;
+        rdfs:label "Institut Marcel Mauss" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03xg8m734> ;
+        rdfs:label "Institut de Recherche Interdisciplinaire sur les Enjeux Sociaux" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02qprbz18> ;
+        rdfs:label "Institut des Mondes Africains" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04m5rvb18> ;
+        rdfs:label "Laboratoire Interdisciplinaire Solidarités Sociétés Territoires" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05pm8ec76> ;
+        rdfs:label "Laboratoire d'Anthropologie Sociale" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05fvhm231> ;
+        rdfs:label "Laboratoire de Sciences Cognitives et Psycholinguistique" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02y6fxd73> ;
+        rdfs:label "Mondes Américains" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02125p091> ;
+        rdfs:label "Sciences et Technologies des Cultures et Sociétés Numériques" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02djzje70> ;
+        rdfs:label "Chine, Corée, Japon" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04pfm5x27> ;
+        rdfs:label "Travaux et Recherches Archéologiques sur les Cultures, les Espaces et les Sociétés" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04ej53908> ;
+        rdfs:label "Typologie et Universaux Linguistiques" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00jj62164> ;
+        rdfs:label "Centre de Recherche et de Documentation sur l'Océanie (CREDO)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03vtagt31> ;
+        rdfs:label "Paris Jourdan Sciences Economiques" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04aq4ab28> ;
+        rdfs:label "Centre d'études sociologiques et politiques Raymond-Aron" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01kysxr05> ;
+        rdfs:label "Centre d’études en sciences sociales du religieux" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02aja8v82> ;
+        rdfs:label "OpenEdition Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/046dap961> ;
+        rdfs:label "Laboratoire interdisciplinaire d’études sur les réflexivités - Fonds Yan Thomas" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/039bex249> ;
+        rdfs:label "Centre d'études sud-asiatiques et himalayennes" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01qtp1053> ;
+        rdfs:label "Paris School of Economics" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00cd48p72> ;
+        rdfs:label "Campus Condorcet" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(2.35992 48.7939)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(2.35992 48.7939)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Villejuif" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2968705/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000123255880> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q273518> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2968705/> ;
+    ] ; 
     .

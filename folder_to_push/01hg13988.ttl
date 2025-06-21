@@ -4,25 +4,48 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01hg13988> a org:Organization ;
     rdfs:label "Centre d'Études et de Recherches sur le Développement International" ;
     schema:name "Centre d'Études et de Recherches sur le Développement International" ;
     schema:foundingDate "1996"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "CERDI" ;
-    schema:url <http://www.cerdi.org> ; 
+    org:classification "facility" ; 
+    dct:created "2023-08-17"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:abbreviation "CERDI"@None ; 
+    schema:mainEntityOfPage <http://www.cerdi.org> ;
+    schema:sameAs <http://isni.org/isni/0000000121903223> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02feahw73> ;
+        rdfs:label "Centre National de la Recherche Scientifique" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/01a8ajp46> ;
+        rdfs:label "University of Clermont Auvergne" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(3.08682 45.77969)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(3.08682 45.77969)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Clermont-Ferrand" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/3024635/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000121903223> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q51781081> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3024635/> ;
+    ] ; 
     .

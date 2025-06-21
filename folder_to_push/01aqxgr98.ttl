@@ -4,25 +4,48 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01aqxgr98> a org:Organization ;
-    rdfs:label "Computer Science, Integrative Biology and Complex Systems" ;
-    schema:name "Computer Science, Integrative Biology and Complex Systems" ;
+    rdfs:label "" ;
+    schema:name "" ;
     schema:foundingDate "2010"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "IBISC" ;
-    schema:url <https://hal.archives-ouvertes.fr/IBISC> ; 
+    org:classification "facility" ; 
+    dct:created "2019-02-17"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:abbreviation "IBISC"@None ; 
+    schema:mainEntityOfPage <https://hal.archives-ouvertes.fr/IBISC> ;
+    schema:sameAs <https://grid.ac/institutions/grid.503201.5> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/03xjwb503> ;
+        rdfs:label "University of Paris-Saclay" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/00e96v939> ;
+        rdfs:label "Université d'Évry Val-d'Essonne" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(2.44417 48.63389)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(2.44417 48.63389)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Évry-Courcouronnes" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/6454878/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://www.wikidata.org/entity/Q51781503> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/6454878/> ;
+    ] ; 
     .

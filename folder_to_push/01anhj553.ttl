@@ -4,28 +4,43 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01anhj553> a org:Organization ;
-    rdfs:label "UCLy (Lyon Catholic University)" ;
-    schema:name "UCLy (Lyon Catholic University)" ;
+    rdfs:label "" ;
+    schema:name "" ;
     schema:foundingDate "1875"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "UCLy" ;
-    org:alternativeName "Lyon Catholic University" ;
-    schema:url <https://www.ucly.fr/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Catholic_University_of_Lyon> ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:alternativeName "Catholic Institute of Lyon"@en ; 
+    org:alternativeName "Catholic University of Lyon"@en ; 
+    org:alternativeName "Institut catholique de Lyon"@fr ; 
+    org:alternativeName "Lyon Catholic University"@en ; 
+    org:abbreviation "UCLy"@None ; 
+    org:alternativeName "UCLy - Lyon Catholic University"@en ; 
+    schema:mainEntityOfPage <https://www.ucly.fr/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Catholic_University_of_Lyon> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.448695.2> ;
+    schema:sameAs <http://isni.org/isni/0000000121549535> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(4.84671 45.74846)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(4.84671 45.74846)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Lyon" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2996944/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000121549535> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q8618> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2996944/> ;
+    ] ; 
     .

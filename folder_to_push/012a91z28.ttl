@@ -4,28 +4,109 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/012a91z28> a org:Organization ;
     rdfs:label "Universidad de Zaragoza" ;
     schema:name "Universidad de Zaragoza" ;
     schema:foundingDate "1542"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "UNIZAR" ;
-    org:alternativeName "Saragossa University" ;
-    schema:url <https://en.wikipedia.org/wiki/University_of_Zaragoza> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Zaragoza> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:alternativeName "Saragossa University"@en ; 
+    org:abbreviation "UNIZAR"@None ; 
+    org:alternativeName "Universidad Zaragoza"@es ; 
+    schema:url <http://unizar.es> ; 
+    schema:mainEntityOfPage <https://www.unizar.es> ;
+    owl:sameAs <https://es.wikipedia.org/wiki/Universidad_de_Zaragoza> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100007041> ;
+    schema:sameAs <https://grid.ac/institutions/grid.11205.37> ;
+    schema:sameAs <http://isni.org/isni/0000000121528769> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/031n2c920> ;
+        rdfs:label "Instituto de Nanociencia y Materiales de Aragón" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/002smyt64> ;
+        rdfs:label "Instituto de Síntesis Química y Catálisis Homogénea" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/025580q89> ;
+        rdfs:label "Laboratory of Research in Fluid Dynamics and Combustion Technologies" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03xw5ev35> ;
+        rdfs:label "ORFEO-CINQA Research Network" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/000q4gm66> ;
+        rdfs:label "Instituto de Biocomputación y Física de Sistemas Complejos" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01zytxw03> ;
+        rdfs:label "Centro de Química y Materiales de Aragón" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03fyv3102> ;
+        rdfs:label "Hospital Clínico Universitario Lozano Blesa" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05e08c338> ;
+        rdfs:label "Hospital General San Jorge" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01ca54t29> ;
+        rdfs:label "Hospital Obispo Polanco" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01r13mt55> ;
+        rdfs:label "Hospital Universitario Miguel Servet" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02tpwnr26> ;
+        rdfs:label "Zaragoza Logistics Center" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-0.87734 41.65606)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-0.87734 41.65606)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Zaragoza" ;
             schema:addressCountry "ES" ;
-            owl:sameAs <http://sws.geonames.org/3104324/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000121528769> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q633561> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Spain" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3104324/> ;
+    ] ; 
     .

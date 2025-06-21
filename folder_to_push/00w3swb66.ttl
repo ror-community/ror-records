@@ -1,0 +1,47 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/00w3swb66> a org:Organization ;
+    rdfs:label "European Centre for Space Applications and Telecommunications" ;
+    schema:name "European Centre for Space Applications and Telecommunications" ;
+    schema:foundingDate "2009"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "facility" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:abbreviation "ECSAT"@None ; 
+    schema:mainEntityOfPage <http://www.esa.int/ESA_in_your_country/United_Kingdom> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/European_Centre_for_Space_Applications_and_Telecommunications> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.434160.4> ;
+    schema:sameAs <http://isni.org/isni/000000046043947X> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/03wd9za21> ;
+        rdfs:label "Agence Spatiale Européenne" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-1.24214 51.60928)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Didcot" ;
+            schema:addressCountry "GB" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United Kingdom" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2651269/> ;
+    ] ; 
+    .

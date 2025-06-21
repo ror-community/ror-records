@@ -4,24 +4,36 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/04ynvm727> a org:Organization ;
-    rdfs:label "The Cotentin Cetacean Study Group" ;
-    schema:name "The Cotentin Cetacean Study Group" ;
+    rdfs:label "" ;
+    schema:name "" ;
     schema:foundingDate "1997"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Nonprofit" ; 
-    org:abbreviation "GECC" ;
-    schema:url <https://www.gecc-normandie.org/> ; 
+    org:classification "nonprofit" ; 
+    dct:created "2020-07-06"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:abbreviation "GECC"@None ; 
+    schema:mainEntityOfPage <https://www.gecc-normandie.org/> ;
+    schema:sameAs <https://grid.ac/institutions/grid.507767.4> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-1.6147 49.6386)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-1.6147 49.6386)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Cherbourg-en-Cotentin" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/6614508/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/6614508/> ;
+    ] ; 
     .

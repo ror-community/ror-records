@@ -4,26 +4,46 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/04mfmy854> a org:Organization ;
     rdfs:label "NSWC Crane Division" ;
     schema:name "NSWC Crane Division" ;
     org:status "active" ;
-    org:classification "Government" ; 
-    org:classification "Facility" ; 
-    org:alternativeName "Naval Surface Warfare Center Crane Division" ;
-    schema:url <https://www.navsea.navy.mil/Home/Warfare-Centers/NSWC-Crane/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Naval_Surface_Warfare_Center_Crane_Division> ;
+    org:classification "facility" ; 
+    org:classification "funder" ; 
+    org:classification "government" ; 
+    dct:created "2023-11-08"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:alternativeName "NSWC Crane"@en ; 
+    org:alternativeName "Naval Surface Warfare Center Crane Division"@en ; 
+    schema:mainEntityOfPage <https://www.navsea.navy.mil/Home/Warfare-Centers/NSWC-Crane/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Naval_Surface_Warfare_Center_Crane_Division> ; 
+    schema:sameAs <https://api.crossref.org/funders/100020969> ;
+    schema:sameAs <http://isni.org/isni/0000000406480930> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/03d4ecn10> ;
+        rdfs:label "Naval Surface Warfare Center" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-86.90389 38.89116)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-86.90389 38.89116)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Crane" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/4256252/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000406480930> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q6981959> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/4256252/> ;
+    ] ; 
     .

@@ -4,24 +4,54 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/005w2mm89> a org:Organization ;
     rdfs:label "Laboratoire d'études de genre et de sexualité" ;
     schema:name "Laboratoire d'études de genre et de sexualité" ;
     schema:foundingDate "2015"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "LEGS" ;
-    org:alternativeName "Gender and Sexuality Studies Laboratory" ;
-    schema:url <https://legs.cnrs.fr> ; 
+    org:classification "facility" ; 
+    dct:created "2023-04-27"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:alternativeName "Gender and Sexuality Studies Laboratory"@en ; 
+    org:abbreviation "LEGS"@None ; 
+    schema:mainEntityOfPage <https://legs.cnrs.fr> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/013bkhk48> ;
+        rdfs:label "Université Paris Nanterre" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/04wez5e68> ;
+        rdfs:label "Université de Vincennes à Saint-Denis" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02feahw73> ;
+        rdfs:label "Centre National de la Recherche Scientifique" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(2.38487 48.81568)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(2.38487 48.81568)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Ivry-sur-Seine" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/3012621/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3012621/> ;
+    ] ; 
     .

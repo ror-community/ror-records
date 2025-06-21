@@ -1,0 +1,47 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/018wzhc20> a org:Organization ;
+    rdfs:label "United Nations Educational, Scientific and Cultural Organization Afghanistan" ;
+    schema:name "United Nations Educational, Scientific and Cultural Organization Afghanistan" ;
+    schema:foundingDate "1945"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "government" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:abbreviation "ONUESC"@None ; 
+    org:abbreviation "UNESCO"@None ; 
+    schema:mainEntityOfPage <https://en.unesco.org/fieldoffice/kabul> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/UNESCO> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.473811.8> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/04h4z8k05> ;
+        rdfs:label "Organisation des Nations Unies pour l'Éducation, la Science et la Culture" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(69.17233 34.52813)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Kabul" ;
+            schema:addressCountry "AF" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Afghanistan" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1138958/> ;
+    ] ; 
+    .

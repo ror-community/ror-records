@@ -4,27 +4,57 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/03qeacd72> a org:Organization ;
     rdfs:label "École Nationale Supérieure de l'Électronique et de ses Applications" ;
     schema:name "École Nationale Supérieure de l'Électronique et de ses Applications" ;
     schema:foundingDate "1952"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "ENSEA" ;
-    schema:url <http://www.ensea.fr/en> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/%C3%89cole_nationale_sup%C3%A9rieure_de_l%27%C3%A9lectronique_et_de_ses_applications_(Cergy-Pontoise)> ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:abbreviation "ENREA"@None ; 
+    org:abbreviation "ENSEA"@None ; 
+    schema:mainEntityOfPage <http://www.ensea.fr/en> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/%C3%89cole_nationale_sup%C3%A9rieure_de_l%27%C3%A9lectronique_et_de_ses_applications_(Cergy-Pontoise)> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.424458.b> ;
+    schema:sameAs <http://isni.org/isni/0000000122878330> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0592ata02> ;
+        rdfs:label "Equipes Traitement de l'Information et Systèmes" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01e8etd40> ;
+        rdfs:label "Laboratoire Sols et Environnement" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01s6q2813> ;
+        rdfs:label "Laboratoire Quartz" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(2.07613 49.03645)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(2.07613 49.03645)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Cergy" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/3027883/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000122878330> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q2707341> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3027883/> ;
+    ] ; 
     .

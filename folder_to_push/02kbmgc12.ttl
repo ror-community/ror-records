@@ -4,27 +4,183 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02kbmgc12> a org:Organization ;
     rdfs:label "AgroParisTech" ;
     schema:name "AgroParisTech" ;
     schema:foundingDate "2007"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:alternativeName "Paris Institute of Technology for Life, Food and Environmental Sciences" ;
-    schema:url <https://www.agroparistech.fr> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Agro_ParisTech> ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:alternativeName "Agro ParisTech"@fr ; 
+    org:alternativeName "Paris Institute of Technology for Life, Food and Environmental Sciences"@en ; 
+    schema:mainEntityOfPage <https://www.agroparistech.fr> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Agro_ParisTech> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.417885.7> ;
+    schema:sameAs <http://isni.org/isni/0000000121858223> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/049q30t56> ;
+        rdfs:label "Biologie et Gestion des Risques en Agriculture" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04q9vef57> ;
+        rdfs:label "Ecologie des Forêts de Guyane" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01z6yh944> ;
+        rdfs:label "Écologie Fonctionnelle et Écotoxicologie des Agroécosystèmes" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/020g0rw41> ;
+        rdfs:label "Gestion de l'Eau, Acteurs, Usages" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03rkgeb39> ;
+        rdfs:label "Génétique Animale et Biologie Intégrative" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/012fqzm33> ;
+        rdfs:label "Génétique Quantitative et Évolution Le Moulon" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01wqd6v19> ;
+        rdfs:label "Institut Jean-Pierre Bourgin" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01b436806> ;
+        rdfs:label "CIRED" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0471cyx86> ;
+        rdfs:label "Institut Micalis" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/043f5vc59> ;
+        rdfs:label "Laboratorie de Physiologie de la Nutrition et du Comportement Alimentaire" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/002v3cy83> ;
+        rdfs:label "Pôle de Recherche pour l'Organisation et la Diffusion de l'Information Géographique" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01d5v2p67> ;
+        rdfs:label "Silva" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/026tc4g97> ;
+        rdfs:label "UMR Territoires" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00kk89y84> ;
+        rdfs:label "Écologie, Systématique et Évolution" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02cptmd52> ;
+        rdfs:label "Agronomie" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0050cbz19> ;
+        rdfs:label "MoSAR - Modelisation Systemique Appliquee aux Ruminants" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01cmdgj85> ;
+        rdfs:label "SADAPT Science Action Développement - Activités Produits Territoires" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0458hw939> ;
+        rdfs:label "TETIS - Territoires, Environnement, Télédétection et Information Spatiale" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00780az30> ;
+        rdfs:label "Mathématiques et Informatique Appliquées" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03gmkya61> ;
+        rdfs:label "SayFood - Food and Bioproduct Engineering" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03qgfy688> ;
+        rdfs:label "Fédération Ile de France de recherche sur l'environnement" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/05c2qg481> ;
+        rdfs:label "ParisTech" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/03xjwb503> ;
+        rdfs:label "University of Paris-Saclay" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05rxf9p36> ;
+        rdfs:label "Association française de zootechnie" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(2.3488 48.85341)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(2.3488 48.85341)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Paris" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2988507/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000121858223> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1637105> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2988507/> ;
+    ] ; 
     .

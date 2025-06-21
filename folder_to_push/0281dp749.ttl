@@ -4,26 +4,183 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/0281dp749> a org:Organization ;
     rdfs:label "Helmholtz Association of German Research Centres" ;
     schema:name "Helmholtz Association of German Research Centres" ;
     schema:foundingDate "1995"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Government" ; 
-    schema:url <http://www.helmholtz.de/en/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Helmholtz_Association_of_German_Research_Centres> ;
+    org:classification "funder" ; 
+    org:classification "government" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    schema:mainEntityOfPage <http://www.helmholtz.de/en/> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Helmholtz_Association_of_German_Research_Centres> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100001656> ;
+    schema:sameAs <https://grid.ac/institutions/grid.211011.2> ;
+    schema:sameAs <http://isni.org/isni/0000000119425154> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/032e6b942> ;
+        rdfs:label "Alfred-Wegener-Institut Helmholtz-Zentrum für Polar- und Meeresforschung" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01js2sh04> ;
+        rdfs:label "Deutsches Elektronen-Synchrotron DESY" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02nv7yv05> ;
+        rdfs:label "Forschungszentrum Jülich" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02h2x0161> ;
+        rdfs:label "GEOMAR Helmholtz Centre for Ocean Research Kiel" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02k8cbn47> ;
+        rdfs:label "GSI Helmholtz Centre for Heavy Ion Research" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04bwf3e34> ;
+        rdfs:label "German Aerospace Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04cdgtt98> ;
+        rdfs:label "German Cancer Research Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/043j0f473> ;
+        rdfs:label "German Center for Neurodegenerative Diseases" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02yvsmh51> ;
+        rdfs:label "Helmholtz Alberta Initiative" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03wy6tp26> ;
+        rdfs:label "Helmholtz Alliance for Astroparticle Physics" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02njgxr09> ;
+        rdfs:label "Helmholtz Center for Information Security" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04z8jg394> ;
+        rdfs:label "Helmholtz Centre Potsdam - GFZ German Research Centre for Geosciences" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/000h6jb29> ;
+        rdfs:label "Helmholtz Centre for Environmental Research" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03d0p2685> ;
+        rdfs:label "Helmholtz Centre for Infection Research" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01syejz95> ;
+        rdfs:label "Helmholtz Graduate School for Hadron and Ion Research" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00cfam450> ;
+        rdfs:label "Helmholtz Zentrum München" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/034rhsb33> ;
+        rdfs:label "Helmholtz-Institute Ulm" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02aj13c28> ;
+        rdfs:label "Helmholtz-Zentrum Berlin für Materialien und Energie" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01zy2cs03> ;
+        rdfs:label "Helmholtz-Zentrum Dresden-Rossendorf" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03qjp1d79> ;
+        rdfs:label "Helmholtz-Zentrum Hereon" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04t3en479> ;
+        rdfs:label "Karlsruhe Institute of Technology" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04p5ggc03> ;
+        rdfs:label "Max Delbrück Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05sgy1v64> ;
+        rdfs:label "Brussels Office of Helmholtz Association" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03taest98> ;
+        rdfs:label "Max Planck Institute for Plasma Physics" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(13.41053 52.52437)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(13.41053 52.52437)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Berlin" ;
             schema:addressCountry "DE" ;
-            owl:sameAs <http://sws.geonames.org/2950159/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000119425154> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q679913> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Germany" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2950159/> ;
+    ] ; 
     .

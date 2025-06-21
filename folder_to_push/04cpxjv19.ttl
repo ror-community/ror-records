@@ -4,27 +4,64 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/04cpxjv19> a org:Organization ;
     rdfs:label "McGill University Health Centre" ;
     schema:name "McGill University Health Centre" ;
     schema:foundingDate "1997"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Healthcare" ; 
-    org:abbreviation "MUHC" ;
-    schema:url <https://muhc.ca/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/McGill_University_Health_Centre> ;
+    org:classification "funder" ; 
+    org:classification "healthcare" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-06-20"^^xsd:date ;
+    org:abbreviation "MUHC"@None ; 
+    schema:mainEntityOfPage <https://muhc.ca/> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/McGill_University_Health_Centre> ; 
+    schema:sameAs <https://api.crossref.org/funders/100014131> ;
+    schema:sameAs <https://grid.ac/institutions/grid.63984.30> ;
+    schema:sameAs <http://isni.org/isni/0000000090644811> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/053wt0478> ;
+        rdfs:label "Lachine Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04gbhgc79> ;
+        rdfs:label "Montreal General Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00arwy491> ;
+        rdfs:label "Royal Victoria Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01pxwe438> ;
+        rdfs:label "McGill University" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-73.58781 45.50884)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-73.58781 45.50884)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Montreal" ;
             schema:addressCountry "CA" ;
-            owl:sameAs <http://sws.geonames.org/6077243/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000090644811> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q602748> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Canada" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/6077243/> ;
+    ] ; 
     .
