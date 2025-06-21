@@ -15,7 +15,7 @@
     org:classification "education" ; 
     org:classification "funder" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-10-21"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
     org:abbreviation "WMU"@None ; 
     org:alternativeName "Western Michigan College"@en ; 
     org:alternativeName "Western Michigan College of Education"@en ; 
@@ -39,19 +39,25 @@
         org:member <https://ror.org/05rzk0426> ;
         rdfs:label "West Michigan Cancer Center" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03a1q3q78> ;
+        rdfs:label "The Evaluation Center" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(-85.58723 42.29171)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Kalamazoo" ;
             schema:addressCountry "US" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Michigan" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "United States" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "North America" ;
+                    schema:identifier "NA"
                 ]
             ]
         ] ;

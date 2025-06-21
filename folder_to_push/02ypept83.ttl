@@ -14,7 +14,7 @@
     org:status "active" ;
     org:classification "government" ; 
     dct:created "2023-11-08"^^xsd:date ;
-    dct:modified "2024-12-10"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
     org:alternativeName "U.S. Space Force"@en ; 
     org:abbreviation "USSF"@None ; 
     schema:mainEntityOfPage <https://www.spaceforce.mil> ;
@@ -31,19 +31,31 @@
         org:member <https://ror.org/00714tm23> ;
         rdfs:label "U.S. Air Force Space Command" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/013yc5d80> ;
+        rdfs:label "Space Operations Command" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03kz56x72> ;
+        rdfs:label "Space Development Agency" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(-77.10428 38.88101)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Arlington" ;
             schema:addressCountry "US" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Virginia" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "United States" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "North America" ;
+                    schema:identifier "NA"
                 ]
             ]
         ] ;

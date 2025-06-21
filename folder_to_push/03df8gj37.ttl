@@ -4,27 +4,136 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/03df8gj37> a org:Organization ;
     rdfs:label "Defense Health Agency" ;
     schema:name "Defense Health Agency" ;
     schema:foundingDate "2013"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Government" ; 
-    org:abbreviation "DHA" ;
-    schema:url <https://www.health.mil/About-MHS/OASDHA/Defense-Health-Agency> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Defense_Health_Agency> ;
+    org:classification "funder" ; 
+    org:classification "government" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
+    org:abbreviation "DHA"@None ; 
+    schema:mainEntityOfPage <https://www.health.mil/About-MHS/OASDHA/Defense-Health-Agency> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Defense_Health_Agency> ; 
+    schema:sameAs <https://api.crossref.org/funders/100009898> ;
+    schema:sameAs <https://grid.ac/institutions/grid.478868.d> ;
+    schema:sameAs <http://isni.org/isni/0000000459982926> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/03b7pda13> ;
+        rdfs:label "Military Health System" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05xde4j27> ;
+        rdfs:label "United States Naval Hospital Okinawa" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02n14ez29> ;
+        rdfs:label "Naval Medical Center San Diego" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04vxq1969> ;
+        rdfs:label "Naval Medical Center Portsmouth" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0278h4n28> ;
+        rdfs:label "Naval Hospital Bremerton" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00ajwxp03> ;
+        rdfs:label "Womack Army Medical Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/025cem651> ;
+        rdfs:label "Walter Reed National Military Medical Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05p4q8207> ;
+        rdfs:label "Tripler Army Medical Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00m1mwc36> ;
+        rdfs:label "Brooke Army Medical Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02157xr58> ;
+        rdfs:label "Naval Hospital Pensacola" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0421f6a14> ;
+        rdfs:label "Naval Hospital Jacksonville" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04ydm6t76> ;
+        rdfs:label "Malcolm Grow Medical Clinic" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01sfyq865> ;
+        rdfs:label "Madigan Army Medical Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02knc1802> ;
+        rdfs:label "Alexander T. Augusta Military Medical Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05ya3ee02> ;
+        rdfs:label "David Grant USAF Medical Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02zda6x08> ;
+        rdfs:label "Carl R. Darnall Army Medical Center" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-77.17109 38.88233)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-77.17109 38.88233)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Falls Church" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/4758390/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000459982926> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q16829238> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "Virginia" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "North America" ;
+                    schema:identifier "NA"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/4758390/> ;
+    ] ; 
     .

@@ -4,23 +4,43 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/04fxxe129> a org:Organization ;
     rdfs:label "Botany Foundation" ;
     schema:name "Botany Foundation" ;
     schema:foundingDate "1994"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Nonprofit" ; 
-    org:alternativeName "Botany Foundation, Faculty of Science, University of Melbourne" ;
-    schema:url <https://science.unimelb.edu.au/engage/giving-to-science/botany-foundation> ; 
+    org:classification "funder" ; 
+    org:classification "nonprofit" ; 
+    dct:created "2023-12-07"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
+    org:alternativeName "Botany Foundation, Faculty of Science, University of Melbourne"@en ; 
+    schema:mainEntityOfPage <https://science.unimelb.edu.au/engage/giving-to-science/botany-foundation> ;
+    schema:sameAs <https://api.crossref.org/funders/501100020017> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/01ej9dk98> ;
+        rdfs:label "The University of Melbourne" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(144.96332 -37.814)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(144.96332 -37.814)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Melbourne" ;
             schema:addressCountry "AU" ;
-            owl:sameAs <http://sws.geonames.org/2158177/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
+            schema:addressRegion "Victoria" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Australia" ;
+                schema:containedInPlace [
+                    schema:name "Oceania" ;
+                    schema:identifier "OC"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2158177/> ;
+    ] ; 
     .

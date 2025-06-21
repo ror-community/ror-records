@@ -14,26 +14,32 @@
     org:status "active" ;
     org:classification "other" ; 
     dct:created "2024-07-08"^^xsd:date ;
-    dct:modified "2024-07-11"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
     org:abbreviation "IMEER NASU"@en ; 
     org:alternativeName "Інститут проблем ринку та економіко-екологічних досліджень НАН України"@uk ; 
     org:alternativeName "Одеське відділення Інституту економіки АН України"@uk ; 
     schema:url <http://impeer.org.ua> ; 
     schema:mainEntityOfPage <https://impeer.org.ua> ;
     owl:sameAs <https://uk.wikipedia.org/wiki/Об%27єднаний_інститут_економіки_НАН_України> ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/00je4t102> ;
+        rdfs:label "National Academy of Sciences of Ukraine" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(30.74383 46.48572)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Odesa" ;
             schema:addressCountry "UA" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Odessa" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "Ukraine" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

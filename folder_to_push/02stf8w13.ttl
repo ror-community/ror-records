@@ -14,9 +14,11 @@
     org:status "active" ;
     org:classification "facility" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-06-20"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
     org:abbreviation "DISP"@None ; 
-    schema:mainEntityOfPage <http://disp-lab.fr/en/node/22> ;
+    org:alternativeName "UR4570"@None ; 
+    schema:url <http://disp-lab.fr> ; 
+    schema:mainEntityOfPage <https://www.disp-lab.fr> ;
     schema:sameAs <https://grid.ac/institutions/grid.482728.3> ;
     org:hasLink [
         a org:Membership ;
@@ -36,19 +38,25 @@
         org:member <https://ror.org/03rth4p18> ;
         rdfs:label "Université Lumière Lyon 2" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/04yznqr36> ;
+        rdfs:label "Université Jean Monnet" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(4.8795 45.76601)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Villeurbanne" ;
             schema:addressCountry "FR" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Auvergne-Rhône-Alpes" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "France" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

@@ -14,9 +14,12 @@
     org:status "active" ;
     org:classification "facility" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-06-20"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
     org:abbreviation "EPOC"@None ; 
-    schema:mainEntityOfPage <http://www.epoc.u-bordeaux.fr/index.php?lang=en&page=accueil> ;
+    org:abbreviation "UMR EPOC"@fr ; 
+    org:alternativeName "UMR Environnements et Paléoenvironnements Océaniques et Continentaux"@fr ; 
+    schema:url <http://epoc.u-bordeaux.fr> ; 
+    schema:mainEntityOfPage <https://www.epoc.u-bordeaux.fr> ;
     schema:sameAs <https://grid.ac/institutions/grid.462906.f> ;
     schema:sameAs <http://isni.org/isni/0000000446599485> ;
     org:hasLink [
@@ -31,19 +34,31 @@
         org:member <https://ror.org/057qpr032> ;
         rdfs:label "Université de Bordeaux" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/03qma7a12> ;
+        rdfs:label "Observatoire Aquitain des Sciences de l'Univers" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/054qv7y42> ;
+        rdfs:label "Institut Polytechnique de Bordeaux" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(-0.6324 44.80565)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Pessac" ;
             schema:addressCountry "FR" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Nouvelle-Aquitaine" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "France" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

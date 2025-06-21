@@ -4,26 +4,44 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/00v0g9w49> a org:Organization ;
     rdfs:label "Instituto Andaluz de Ciencias de la Tierra" ;
     schema:name "Instituto Andaluz de Ciencias de la Tierra" ;
     schema:foundingDate "1994"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "IACT" ;
-    schema:url <https://www.iact.ugr-csic.es> ; 
+    org:classification "facility" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
+    org:abbreviation "IACT"@None ; 
+    schema:url <http://iact.csic.es> ; 
+    schema:mainEntityOfPage <https://www.iact.csic.es> ;
+    schema:sameAs <https://grid.ac/institutions/grid.466807.b> ;
+    schema:sameAs <http://isni.org/isni/0000000417940218> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02gfc7t72> ;
+        rdfs:label "Consejo Superior de Investigaciones Científicas" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-3.60667 37.18817)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-3.60667 37.18817)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Granada" ;
             schema:addressCountry "ES" ;
-            owl:sameAs <http://sws.geonames.org/2517117/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000417940218> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q5917167> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "Andalusia" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Spain" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2517117/> ;
+    ] ; 
     .

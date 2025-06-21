@@ -4,27 +4,47 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/05x8ajk28> a org:Organization ;
     rdfs:label "United States Army Command and General Staff College" ;
     schema:name "United States Army Command and General Staff College" ;
     schema:foundingDate "1881"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "CGSC" ;
-    schema:url <https://usacac.army.mil/organizations/cace/cgsc> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/United_States_Army_Command_and_General_Staff_College> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
+    org:abbreviation "CGSC"@None ; 
+    org:abbreviation "USACGSC"@None ; 
+    schema:mainEntityOfPage <https://usacac.army.mil/organizations/cace/cgsc> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/United_States_Army_Command_and_General_Staff_College> ; 
+    schema:sameAs <https://api.crossref.org/funders/100010197> ;
+    schema:sameAs <https://grid.ac/institutions/grid.447499.3> ;
+    schema:sameAs <http://isni.org/isni/0000000121092379> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/05xsb5925> ;
+        rdfs:label "United States Army Combined Arms Center" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-94.92246 39.31111)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-94.92246 39.31111)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Leavenworth" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/4274305/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000121092379> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1115050> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "Kansas" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "North America" ;
+                    schema:identifier "NA"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/4274305/> ;
+    ] ; 
     .

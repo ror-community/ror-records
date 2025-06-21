@@ -14,12 +14,18 @@
     org:status "active" ;
     org:classification "education" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-05-02"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
     org:abbreviation "RENCI"@None ; 
     schema:mainEntityOfPage <https://renci.org> ;
     owl:sameAs <https://en.wikipedia.org/wiki/Renaissance_Computing_Institute> ; 
     schema:sameAs <https://grid.ac/institutions/grid.450328.8> ;
     schema:sameAs <http://isni.org/isni/0000000449042260> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/001zwgm84> ;
+        rdfs:label "NSF CI Compass" ;
+    ] ; 
     org:hasLink [
         a org:Membership ;
         org:role "parent" ;
@@ -38,25 +44,19 @@
         org:member <https://ror.org/0130frc33> ;
         rdfs:label "University of North Carolina at Chapel Hill" ;
     ] ; 
-    org:hasLink [
-        a org:Membership ;
-        org:role "child" ;
-        org:member <https://ror.org/001zwgm84> ;
-        rdfs:label "CI Compass" ;
-    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(-79.05584 35.9132)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Chapel Hill" ;
             schema:addressCountry "US" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "North Carolina" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "United States" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "North America" ;
+                    schema:identifier "NA"
                 ]
             ]
         ] ;

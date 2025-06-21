@@ -1,0 +1,52 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/05xsb5925> a org:Organization ;
+    rdfs:label "United States Army Combined Arms Center" ;
+    schema:name "United States Army Combined Arms Center" ;
+    schema:foundingDate "1973"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "government" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
+    schema:mainEntityOfPage <http://usacac.army.mil/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/United_States_Army_Combined_Arms_Center> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.421916.9> ;
+    schema:sameAs <http://isni.org/isni/0000000122316231> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02t7y5s37> ;
+        rdfs:label "U.S. Army Training and Doctrine Command" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05x8ajk28> ;
+        rdfs:label "United States Army Command and General Staff College" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-94.92246 39.31111)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Leavenworth" ;
+            schema:addressCountry "US" ;
+            schema:addressRegion "Kansas" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "North America" ;
+                    schema:identifier "NA"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/4274305/> ;
+    ] ; 
+    .

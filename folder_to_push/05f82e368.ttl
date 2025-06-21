@@ -15,7 +15,7 @@
     org:classification "education" ; 
     org:classification "funder" ; 
     dct:created "2020-07-06"^^xsd:date ;
-    dct:modified "2024-10-31"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
     org:alternativeName "University of Paris"@en ; 
     org:alternativeName "Université de Paris"@fr ; 
     schema:mainEntityOfPage <https://u-paris.fr/en> ;
@@ -1015,6 +1015,24 @@
     ] ; 
     org:hasLink [
         a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03kja7h52> ;
+        rdfs:label "La Cité du Genre" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02cypx016> ;
+        rdfs:label "Hématopoïèse normale et pathologique : Emergence, environnement et recherche translationnelle" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03r83qv57> ;
+        rdfs:label "France Cohortes" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
         org:role "related" ;
         org:member <https://ror.org/01v676463> ;
         rdfs:label "Hôpitaux Universitaires Paris-Ouest" ;
@@ -1041,7 +1059,7 @@
         a org:Membership ;
         org:role "related" ;
         org:member <https://ror.org/0146pps37> ;
-        rdfs:label "Bretonneau Hospital" ;
+        rdfs:label "Hôpital Bretonneau" ;
     ] ; 
     org:hasLink [
         a org:Membership ;
@@ -1183,24 +1201,6 @@
     ] ; 
     org:hasLink [
         a org:Membership ;
-        org:role "child" ;
-        org:member <https://ror.org/03kja7h52> ;
-        rdfs:label "La Cité du Genre" ;
-    ] ; 
-    org:hasLink [
-        a org:Membership ;
-        org:role "child" ;
-        org:member <https://ror.org/02cypx016> ;
-        rdfs:label "Hématopoïèse normale et pathologique : Emergence, environnement et recherche translationnelle" ;
-    ] ; 
-    org:hasLink [
-        a org:Membership ;
-        org:role "child" ;
-        org:member <https://ror.org/03r83qv57> ;
-        rdfs:label "France Cohortes" ;
-    ] ; 
-    org:hasLink [
-        a org:Membership ;
         org:role "related" ;
         org:member <https://ror.org/03qgfy688> ;
         rdfs:label "Fédération Ile de France de recherche sur l'environnement" ;
@@ -1229,13 +1229,13 @@
         schema:address [
             schema:addressLocality "Paris" ;
             schema:addressCountry "FR" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Île-de-France" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "France" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

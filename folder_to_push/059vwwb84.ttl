@@ -1,0 +1,46 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/059vwwb84> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    org:status "active" ;
+    org:classification "government" ; 
+    dct:created "2025-02-26"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
+    org:abbreviation "FLTCYBERCOM"@en ; 
+    org:alternativeName "U.S. Fleet Cyber Command"@en ; 
+    schema:url <http://fcc.navy.mil> ; 
+    schema:mainEntityOfPage <https://www.fcc.navy.mil> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/United_States_Fleet_Cyber_Command> ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/03ar0mv07> ;
+        rdfs:label "United States Department of the Navy" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-76.74323 39.10815)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Fort Meade" ;
+            schema:addressCountry "US" ;
+            schema:addressRegion "Maryland" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "North America" ;
+                    schema:identifier "NA"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/7257909/> ;
+    ] ; 
+    .

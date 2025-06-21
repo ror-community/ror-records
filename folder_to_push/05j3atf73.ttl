@@ -4,27 +4,64 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/05j3atf73> a org:Organization ;
     rdfs:label "Laboratoire d'Océanographie et du Climat : Expérimentations et Approches Numériques" ;
     schema:name "Laboratoire d'Océanographie et du Climat : Expérimentations et Approches Numériques" ;
     schema:foundingDate "2005"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "LOCEAN" ;
-    org:alternativeName "Laboratoire d'Océanographie et du Climat" ;
-    schema:url <https://www.locean.ipsl.fr> ; 
+    org:classification "facility" ; 
+    dct:created "2019-02-17"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
+    org:abbreviation "LOCEAN"@None ; 
+    org:alternativeName "Laboratoire d'Océanographie et du Climat"@fr ; 
+    org:abbreviation "UMR LOPS"@fr ; 
+    org:alternativeName "UMR Laboratoire d'Océanographie et du Climat : Expérimentations et Approches Numériques"@fr ; 
+    schema:mainEntityOfPage <https://www.locean.ipsl.fr> ;
+    schema:sameAs <https://grid.ac/institutions/grid.503329.e> ;
+    schema:sameAs <http://isni.org/isni/0000000107285406> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/04kdfz702> ;
+        rdfs:label "Institut National des Sciences de l'Univers" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/05q3vnk25> ;
+        rdfs:label "Institut de Recherche pour le Développement" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/03wkt5x30> ;
+        rdfs:label "Muséum national d'Histoire naturelle" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02en5vm52> ;
+        rdfs:label "Sorbonne Université" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(2.3488 48.85341)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(2.3488 48.85341)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Paris" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2988507/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000107285406> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q51782980> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "Île-de-France" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2988507/> ;
+    ] ; 
     .

@@ -4,27 +4,38 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/030snpp57> a org:Organization ;
-    rdfs:label "Universisdad Católica de Santiago de Guayaquil" ;
-    schema:name "Universisdad Católica de Santiago de Guayaquil" ;
+    rdfs:label "" ;
+    schema:name "" ;
     schema:foundingDate "1962"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "UCSG" ;
-    schema:url <https://www.ucsg.edu.ec/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Universidad_Cat%C3%B3lica_de_Santiago_de_Guayaquil> ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
+    org:abbreviation "UCSG"@None ; 
+    schema:mainEntityOfPage <https://www.ucsg.edu.ec/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Universidad_Cat%C3%B3lica_de_Santiago_de_Guayaquil> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.442153.5> ;
+    schema:sameAs <http://isni.org/isni/0000000092072562> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-79.88621 -2.19616)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-79.88621 -2.19616)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Guayaquil" ;
             schema:addressCountry "EC" ;
-            owl:sameAs <http://sws.geonames.org/3657509/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000092072562> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q661971> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "Guayas" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Ecuador" ;
+                schema:containedInPlace [
+                    schema:name "South America" ;
+                    schema:identifier "SA"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3657509/> ;
+    ] ; 
     .

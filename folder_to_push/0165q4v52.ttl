@@ -1,0 +1,39 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/0165q4v52> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "2009"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2025-02-26"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
+    org:abbreviation "UPMS"@es ; 
+    schema:url <http://serrana.edu.py> ; 
+    schema:mainEntityOfPage <https://www.serrana.edu.py> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-57.647 -25.28646)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Asunción" ;
+            schema:addressCountry "PY" ;
+            schema:addressRegion "Asunción" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Paraguay" ;
+                schema:containedInPlace [
+                    schema:name "South America" ;
+                    schema:identifier "SA"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3439389/> ;
+    ] ; 
+    .

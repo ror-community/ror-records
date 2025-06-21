@@ -10,10 +10,16 @@
 <https://ror.org/01t9d4c21> a org:Organization ;
     rdfs:label "" ;
     schema:name "" ;
-    org:status "active" ;
+    org:status "withdrawn" ;
     org:classification "healthcare" ; 
     dct:created "2025-01-12"^^xsd:date ;
-    dct:modified "2025-01-22"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "successor" ;
+        org:member <https://ror.org/05y7zcx10> ;
+        rdfs:label "Tokyo Shinagawa Hospital" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(139.69171 35.6895)"^^geo:wktLiteral ;

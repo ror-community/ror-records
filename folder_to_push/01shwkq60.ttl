@@ -4,26 +4,46 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01shwkq60> a org:Organization ;
-    rdfs:label "Novosibirsk State University of Architecture, Design and Arts" ;
-    schema:name "Novosibirsk State University of Architecture, Design and Arts" ;
+    rdfs:label "" ;
+    schema:name "" ;
     schema:foundingDate "2015"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "NARCHI" ;
-    org:alternativeName "Novosibirsk Architectural Institute" ;
-    schema:url <http://nsuada.ru/en> ; 
+    org:classification "education" ; 
+    dct:created "2019-02-17"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
+    org:alternativeName "Federal State Budgetary Educational Institution of Higher Education «Kryachkov Novosibirsk State University of Architecture, Design and Arts»"@en ; 
+    org:abbreviation "NARCHI"@None ; 
+    org:abbreviation "NSAAFA"@None ; 
+    org:abbreviation "NSUADA"@None ; 
+    org:alternativeName "Novosibirsk Architectural Institute"@en ; 
+    org:alternativeName "Novosibirsk State Academy of Architecture and Fine Arts"@en ; 
+    org:alternativeName "Novosibirsk State University of Architecture, Design and Arts"@en ; 
+    org:abbreviation "НГУАДИ"@ru ; 
+    org:alternativeName "Новосибирский государственный университет архитектуры, дизайна и искусств"@ru ; 
+    schema:url <http://nsuada.ru> ; 
+    schema:mainEntityOfPage <http://nsuada.ru/en> ;
+    schema:sameAs <https://grid.ac/institutions/grid.502052.0> ;
+    schema:sameAs <http://isni.org/isni/0000000479323477> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(82.9346 55.0415)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(82.9346 55.0415)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Novosibirsk" ;
             schema:addressCountry "RU" ;
-            owl:sameAs <http://sws.geonames.org/1496747/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000479323477> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "Novosibirsk Oblast" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Russia" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1496747/> ;
+    ] ; 
     .

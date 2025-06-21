@@ -14,9 +14,12 @@
     org:status "active" ;
     org:classification "facility" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-06-20"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
     org:abbreviation "LIEC"@None ; 
-    schema:mainEntityOfPage <http://liec.univ-lorraine.fr/> ;
+    org:abbreviation "UMR LIEC"@fr ; 
+    org:alternativeName "UMR Laboratoire Interdisciplinaire des Environnements Continentaux"@fr ; 
+    schema:url <http://liec.univ-lorraine.fr> ; 
+    schema:mainEntityOfPage <https://liec.univ-lorraine.fr> ;
     schema:sameAs <https://grid.ac/institutions/grid.463801.8> ;
     schema:sameAs <http://isni.org/isni/0000000417588250> ;
     org:hasLink [
@@ -37,19 +40,25 @@
         org:member <https://ror.org/04vfs2w97> ;
         rdfs:label "Université de Lorraine" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02cyw3861> ;
+        rdfs:label "Observatoire Terre et environnement de Lorraine" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(6.17114 48.66115)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Vandœuvre-lès-Nancy" ;
             schema:addressCountry "FR" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Grand Est" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "France" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

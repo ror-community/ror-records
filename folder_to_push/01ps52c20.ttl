@@ -1,0 +1,42 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/01ps52c20> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "2021"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2025-02-26"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
+    org:alternativeName "Apollo University"@en ; 
+    org:abbreviation "TAU"@en ; 
+    org:alternativeName "The Apollo University Chittoor"@en ; 
+    schema:url <http://apollouniversity.edu.in> ; 
+    schema:mainEntityOfPage <https://apollouniversity.edu.in> ;
+    schema:sameAs <http://isni.org/isni/0000000513509508> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(79.0956 13.21055)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Chittoor" ;
+            schema:addressCountry "IN" ;
+            schema:addressRegion "Andhra Pradesh" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "India" ;
+                schema:containedInPlace [
+                    schema:name "Asia" ;
+                    schema:identifier "AS"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1274033/> ;
+    ] ; 
+    .

@@ -8,18 +8,22 @@
 @prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/05pwkex33> a org:Organization ;
-    rdfs:label "Observatoire des Sciences de l'Univers de Rennes" ;
-    schema:name "Observatoire des Sciences de l'Univers de Rennes" ;
+    rdfs:label "" ;
+    schema:name "" ;
     schema:foundingDate "2010"^^xsd:gYear ;
     org:status "active" ;
     org:classification "education" ; 
     org:classification "facility" ; 
     dct:created "2023-08-17"^^xsd:date ;
-    dct:modified "2024-07-11"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
+    org:abbreviation "OSER"@fr ; 
+    org:abbreviation "OSU OSER"@fr ; 
     org:abbreviation "OSU OSUR"@fr ; 
     org:abbreviation "OSUR"@fr ; 
+    org:alternativeName "Observatoire des Sciences de l'Univers de Rennes"@fr ; 
     org:alternativeName "Universe Sciences Observatory of Rennes"@en ; 
-    schema:mainEntityOfPage <http://osur.univ-rennes1.fr> ;
+    schema:url <http://oseren.univ-rennes.fr> ; 
+    schema:mainEntityOfPage <https://oseren.univ-rennes.fr> ;
     schema:sameAs <http://isni.org/isni/0000000446489534> ;
     org:hasLink [
         a org:Membership ;
@@ -38,12 +42,6 @@
         org:role "child" ;
         org:member <https://ror.org/00vn0zc62> ;
         rdfs:label "Géosciences Rennes" ;
-    ] ; 
-    org:hasLink [
-        a org:Membership ;
-        org:role "child" ;
-        org:member <https://ror.org/05sat2s07> ;
-        rdfs:label "Littoral, Environnement, Télédétection, Géomatique" ;
     ] ; 
     org:hasLink [
         a org:Membership ;
@@ -93,13 +91,13 @@
         schema:address [
             schema:addressLocality "Rennes" ;
             schema:addressCountry "FR" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Brittany" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "France" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

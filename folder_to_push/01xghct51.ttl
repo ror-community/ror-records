@@ -1,0 +1,46 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/01xghct51> a org:Organization ;
+    rdfs:label "Institute for Regional Studies" ;
+    schema:name "Institute for Regional Studies" ;
+    org:status "active" ;
+    org:classification "facility" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
+    org:abbreviation "MTA KRTK RKI"@None ; 
+    org:alternativeName "MTA KRTK Regionális Kutatások Intézete"@hu ; 
+    org:abbreviation "RKI"@None ; 
+    schema:mainEntityOfPage <http://www.rkk.hu/en/> ;
+    schema:sameAs <https://grid.ac/institutions/grid.481822.5> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/051ea1411> ;
+        rdfs:label "HUN-REN Centre for Economic and Regional Studies" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(18.23083 46.0725)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Pécs" ;
+            schema:addressCountry "HU" ;
+            schema:addressRegion "Baranya" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Hungary" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3046526/> ;
+    ] ; 
+    .

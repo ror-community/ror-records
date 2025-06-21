@@ -14,7 +14,7 @@
     org:status "active" ;
     org:classification "other" ; 
     dct:created "2023-12-07"^^xsd:date ;
-    dct:modified "2024-06-20"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
     org:abbreviation "FIRST-TF"@None ; 
     schema:mainEntityOfPage <https://first-tf.fr> ;
     org:hasLink [
@@ -22,12 +22,6 @@
         org:role "parent" ;
         org:member <https://ror.org/05813w841> ;
         rdfs:label "École Nationale Supérieure de Mécanique et des Microtechniques" ;
-    ] ; 
-    org:hasLink [
-        a org:Membership ;
-        org:role "parent" ;
-        org:member <https://ror.org/03pcc9z86> ;
-        rdfs:label "Université de franche-comté" ;
     ] ; 
     org:hasLink [
         a org:Membership ;
@@ -71,19 +65,25 @@
         org:member <https://ror.org/013cjyk83> ;
         rdfs:label "Université Paris Sciences et Lettres" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/04asdee31> ;
+        rdfs:label "Université Marie et Louis Pasteur" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(2.3488 48.85341)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Paris" ;
             schema:addressCountry "FR" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Île-de-France" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "France" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

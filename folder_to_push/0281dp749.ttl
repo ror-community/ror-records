@@ -15,7 +15,7 @@
     org:classification "funder" ; 
     org:classification "government" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-11-19"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
     schema:url <http://helmholtz.de> ; 
     schema:mainEntityOfPage <https://www.helmholtz.de> ;
     owl:sameAs <http://en.wikipedia.org/wiki/Helmholtz_Association_of_German_Research_Centres> ; 
@@ -92,7 +92,7 @@
         a org:Membership ;
         org:role "child" ;
         org:member <https://ror.org/04z8jg394> ;
-        rdfs:label "Helmholtz Centre Potsdam - GFZ German Research Centre for Geosciences" ;
+        rdfs:label "GFZ Helmholtz Centre for Geosciences" ;
     ] ; 
     org:hasLink [
         a org:Membership ;
@@ -156,6 +156,12 @@
     ] ; 
     org:hasLink [
         a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04v4h0v24> ;
+        rdfs:label "Helmholtz Metadata Collaboration" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
         org:role "related" ;
         org:member <https://ror.org/05sgy1v64> ;
         rdfs:label "Brussels Office of Helmholtz Association" ;
@@ -166,25 +172,19 @@
         org:member <https://ror.org/03taest98> ;
         rdfs:label "Max Planck Institute for Plasma Physics" ;
     ] ; 
-    org:hasLink [
-        a org:Membership ;
-        org:role "child" ;
-        org:member <https://ror.org/04v4h0v24> ;
-        rdfs:label "Helmholtz Metadata Collaboration" ;
-    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(13.41053 52.52437)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Berlin" ;
             schema:addressCountry "DE" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Berlin" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "Germany" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

@@ -4,27 +4,40 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/04xtznh26> a org:Organization ;
     rdfs:label "Bishkek Academy of Finance and Economics" ;
     schema:name "Bishkek Academy of Finance and Economics" ;
     schema:foundingDate "1994"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "BFEA" ;
-    org:alternativeName "Adam University" ;
-    schema:url <https://bafe.edu.kg/?lang=en> ; 
+    org:classification "education" ; 
+    dct:created "2019-02-17"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
+    org:alternativeName "Adam University"@en ; 
+    org:abbreviation "BFEA"@None ; 
+    org:alternativeName "Universitet Adam"@None ; 
+    schema:url <http://adam.edu.kg> ; 
+    schema:mainEntityOfPage <https://adam.edu.kg> ;
+    schema:sameAs <https://grid.ac/institutions/grid.501454.1> ;
+    schema:sameAs <http://isni.org/isni/0000000405702992> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(74.59 42.87)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(74.59 42.87)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Bishkek" ;
             schema:addressCountry "KG" ;
-            owl:sameAs <http://sws.geonames.org/1528675/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000405702992> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q4087645> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "Bishkek" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Kyrgyzstan" ;
+                schema:containedInPlace [
+                    schema:name "Asia" ;
+                    schema:identifier "AS"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1528675/> ;
+    ] ; 
     .

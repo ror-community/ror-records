@@ -1,0 +1,58 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/053wq6q28> a org:Organization ;
+    rdfs:label "Northern Virginia Mental Health Institute" ;
+    schema:name "Northern Virginia Mental Health Institute" ;
+    schema:foundingDate "1968"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "healthcare" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
+    org:abbreviation "NVMHI"@None ; 
+    schema:mainEntityOfPage <http://www.nvmhi.dbhds.virginia.gov/> ;
+    schema:sameAs <https://grid.ac/institutions/grid.416545.7> ;
+    schema:sameAs <http://isni.org/isni/0000000404531730> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00y4zzh67> ;
+        rdfs:label "George Washington University" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/04r3kq386> ;
+        rdfs:label "Uniformed Services University of the Health Sciences" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/05c30h479> ;
+        rdfs:label "Virginia Department of Behavioral Health and Developmental Services" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-77.17109 38.88233)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Falls Church" ;
+            schema:addressCountry "US" ;
+            schema:addressRegion "Virginia" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "North America" ;
+                    schema:identifier "NA"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/4758390/> ;
+    ] ; 
+    .

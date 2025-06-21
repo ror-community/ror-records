@@ -1,0 +1,46 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/044webc45> a org:Organization ;
+    rdfs:label "CECOM Software Engineering Center" ;
+    schema:name "CECOM Software Engineering Center" ;
+    schema:foundingDate "1981"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "facility" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
+    org:abbreviation "SEC"@None ; 
+    schema:mainEntityOfPage <http://www.sec.army.mil/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/United_States_Army_Communications-Electronics_Command> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.417996.4> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02cm95j49> ;
+        rdfs:label "U.S. Army Communications-Electronics Command" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-76.13066 39.46686)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Aberdeen Proving Ground" ;
+            schema:addressCountry "US" ;
+            schema:addressRegion "Maryland" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "North America" ;
+                    schema:identifier "NA"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/7257914/> ;
+    ] ; 
+    .

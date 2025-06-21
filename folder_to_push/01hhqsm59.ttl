@@ -14,12 +14,18 @@
     org:status "active" ;
     org:classification "healthcare" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-05-02"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
     org:abbreviation "SCGH"@None ; 
     schema:mainEntityOfPage <http://www.scgh.health.wa.gov.au/> ;
     owl:sameAs <https://en.wikipedia.org/wiki/Sir_Charles_Gairdner_Hospital> ; 
     schema:sameAs <https://grid.ac/institutions/grid.3521.5> ;
     schema:sameAs <http://isni.org/isni/0000000404375942> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/00b9ahn78> ;
+        rdfs:label "Sir Charles Gairdner Osborne Park Health Care Group" ;
+    ] ; 
     org:hasLink [
         a org:Membership ;
         org:role "related" ;
@@ -30,13 +36,7 @@
         a org:Membership ;
         org:role "related" ;
         org:member <https://ror.org/047272k79> ;
-        rdfs:label "University of Western Australia" ;
-    ] ; 
-    org:hasLink [
-        a org:Membership ;
-        org:role "parent" ;
-        org:member <https://ror.org/00b9ahn78> ;
-        rdfs:label "Sir Charles Gairdner Osborne Park Health Care Group" ;
+        rdfs:label "The University of Western Australia" ;
     ] ; 
     schema:location [
         a schema:Place ;
@@ -44,13 +44,13 @@
         schema:address [
             schema:addressLocality "Perth" ;
             schema:addressCountry "AU" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Western Australia" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "Australia" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Oceania" ;
+                    schema:identifier "OC"
                 ]
             ]
         ] ;

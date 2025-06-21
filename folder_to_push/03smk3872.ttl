@@ -10,11 +10,11 @@
 <https://ror.org/03smk3872> a org:Organization ;
     rdfs:label "Centre de Recherche en Acquisition et Traitement de l'Image pour la Santé" ;
     schema:name "Centre de Recherche en Acquisition et Traitement de l'Image pour la Santé" ;
-    schema:foundingDate "1987"^^xsd:gYear ;
+    schema:foundingDate "1995"^^xsd:gYear ;
     org:status "active" ;
     org:classification "facility" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-06-20"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
     org:abbreviation "CREATIS"@None ; 
     schema:mainEntityOfPage <http://www.creatis.insa-lyon.fr/site/en> ;
     schema:sameAs <https://grid.ac/institutions/grid.462859.4> ;
@@ -61,19 +61,25 @@
         org:member <https://ror.org/00s19x989> ;
         rdfs:label "CNRS Ingénierie" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/04yznqr36> ;
+        rdfs:label "Université Jean Monnet" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(4.8795 45.76601)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Villeurbanne" ;
             schema:addressCountry "FR" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Auvergne-Rhône-Alpes" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "France" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

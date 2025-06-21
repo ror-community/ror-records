@@ -1,0 +1,45 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/00s2qq515> a org:Organization ;
+    rdfs:label "Dr. D.Y. Patil Vidyapeeth, Pune" ;
+    schema:name "Dr. D.Y. Patil Vidyapeeth, Pune" ;
+    schema:foundingDate "1956"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
+    schema:mainEntityOfPage <http://www.dpu.edu.in/> ;
+    schema:sameAs <https://grid.ac/institutions/grid.440681.f> ;
+    schema:sameAs <http://isni.org/isni/0000000417649922> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04t7c7a05> ;
+        rdfs:label "Dr. D. Y. Patil B-School" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(73.85535 18.51957)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Pune" ;
+            schema:addressCountry "IN" ;
+            schema:addressRegion "Maharashtra" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "India" ;
+                schema:containedInPlace [
+                    schema:name "Asia" ;
+                    schema:identifier "AS"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1259229/> ;
+    ] ; 
+    .

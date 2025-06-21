@@ -15,7 +15,7 @@
     org:classification "education" ; 
     org:classification "funder" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-11-19"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
     org:abbreviation "UM"@None ; 
     org:alternativeName "UMich"@en ; 
     schema:url <http://umich.edu> ; 
@@ -35,18 +35,6 @@
         org:role "child" ;
         org:member <https://ror.org/057mgcy61> ;
         rdfs:label "Michigan Space Grant Consortium" ;
-    ] ; 
-    org:hasLink [
-        a org:Membership ;
-        org:role "child" ;
-        org:member <https://ror.org/035wtm547> ;
-        rdfs:label "University of Michigan–Dearborn" ;
-    ] ; 
-    org:hasLink [
-        a org:Membership ;
-        org:role "child" ;
-        org:member <https://ror.org/01c3xc117> ;
-        rdfs:label "University of Michigan–Flint" ;
     ] ; 
     org:hasLink [
         a org:Membership ;
@@ -74,6 +62,12 @@
     ] ; 
     org:hasLink [
         a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02bkkgm47> ;
+        rdfs:label "Center for Complex Particle Systems" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
         org:role "related" ;
         org:member <https://ror.org/034npj057> ;
         rdfs:label "Hurley Medical Center" ;
@@ -92,9 +86,15 @@
     ] ; 
     org:hasLink [
         a org:Membership ;
-        org:role "child" ;
-        org:member <https://ror.org/02bkkgm47> ;
-        rdfs:label "Center for Complex Particle Systems" ;
+        org:role "related" ;
+        org:member <https://ror.org/035wtm547> ;
+        rdfs:label "University of Michigan–Dearborn" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01c3xc117> ;
+        rdfs:label "University of Michigan–Flint" ;
     ] ; 
     schema:location [
         a schema:Place ;
@@ -102,13 +102,13 @@
         schema:address [
             schema:addressLocality "Ann Arbor" ;
             schema:addressCountry "US" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Michigan" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "United States" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "North America" ;
+                    schema:identifier "NA"
                 ]
             ]
         ] ;

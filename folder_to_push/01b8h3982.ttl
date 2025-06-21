@@ -15,7 +15,7 @@
     org:classification "education" ; 
     org:classification "funder" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-07-29"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
     org:alternativeName "Bretagne Occidentale University"@en ; 
     org:abbreviation "UBO"@None ; 
     org:alternativeName "University of Western Brittany"@en ; 
@@ -169,19 +169,25 @@
         org:member <https://ror.org/0459fdx51> ;
         rdfs:label "Fédération de Recherche sur l'Energie Solaire" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00aytnh12> ;
+        rdfs:label "Laboratoire de Biotechnologie et Chimie Marines" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(-4.48628 48.39029)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Brest" ;
             schema:addressCountry "FR" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Brittany" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "France" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

@@ -15,7 +15,7 @@
     org:classification "education" ; 
     org:classification "funder" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-10-14"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
     org:abbreviation "LMU"@None ; 
     org:alternativeName "Ludwig Maximilian University of Munich"@en ; 
     org:alternativeName "University of Munich"@en ; 
@@ -87,6 +87,12 @@
     ] ; 
     org:hasLink [
         a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02nfy3535> ;
+        rdfs:label "Munich Center for Machine Learning" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
         org:role "related" ;
         org:member <https://ror.org/02jjvb954> ;
         rdfs:label "Collegium Carolinum" ;
@@ -100,8 +106,8 @@
     org:hasLink [
         a org:Membership ;
         org:role "child" ;
-        org:member <https://ror.org/02nfy3535> ;
-        rdfs:label "Munich Center for Machine Learning" ;
+        org:member <https://ror.org/029e6qe04> ;
+        rdfs:label "LMU Open Science Center" ;
     ] ; 
     schema:location [
         a schema:Place ;
@@ -109,13 +115,13 @@
         schema:address [
             schema:addressLocality "Munich" ;
             schema:addressCountry "DE" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Bavaria" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "Germany" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

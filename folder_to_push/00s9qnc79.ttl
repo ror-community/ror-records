@@ -4,25 +4,40 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/00s9qnc79> a org:Organization ;
-    rdfs:label "Irish Sea Fisheries Board" ;
-    schema:name "Irish Sea Fisheries Board" ;
+    rdfs:label "" ;
+    schema:name "" ;
     schema:foundingDate "1952"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Other" ; 
-    schema:url <http://www.bim.ie/> ; 
+    org:classification "other" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
+    org:abbreviation "BIM"@ga ; 
+    org:alternativeName "Bord Iascaigh Mhara - Ireland's Seafood Development Agency"@en ; 
+    org:alternativeName "Irish Sea Fisheries Board"@en ; 
+    schema:url <http://bim.ie> ; 
+    schema:mainEntityOfPage <https://bim.ie> ;
+    schema:sameAs <https://grid.ac/institutions/grid.438402.9> ;
+    schema:sameAs <http://isni.org/isni/0000000123224590> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-6.24889 53.33306)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-6.24889 53.33306)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Dublin" ;
             schema:addressCountry "IE" ;
-            owl:sameAs <http://sws.geonames.org/2964574/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000123224590> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q4944430> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "Leinster" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Ireland" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2964574/> ;
+    ] ; 
     .

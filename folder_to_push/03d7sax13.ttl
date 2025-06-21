@@ -1,0 +1,46 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/03d7sax13> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "1951"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
+    org:abbreviation "SCUN"@None ; 
+    org:alternativeName "South Central University for Nationalities"@en ; 
+    org:alternativeName "Zhōngnán mínzú Dàxué"@None ; 
+    schema:url <http://scuec.edu.cn> ; 
+    schema:mainEntityOfPage <https://www.scuec.edu.cn> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/South_Central_University_for_Nationalities> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100005290> ;
+    schema:sameAs <https://grid.ac/institutions/grid.412692.a> ;
+    schema:sameAs <http://isni.org/isni/0000000091479053> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(114.26667 30.58333)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Wuhan" ;
+            schema:addressCountry "CN" ;
+            schema:addressRegion "Hubei" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "China" ;
+                schema:containedInPlace [
+                    schema:name "Asia" ;
+                    schema:identifier "AS"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1791247/> ;
+    ] ; 
+    .

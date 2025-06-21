@@ -1,0 +1,39 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/057g0ax13> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "2024"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "company" ; 
+    dct:created "2025-02-26"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
+    org:alternativeName "MPhysX"@et ; 
+    schema:url <http://mphysx.com> ; 
+    schema:mainEntityOfPage <https://www.mphysx.com> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(24.75353 59.43696)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Tallinn" ;
+            schema:addressCountry "EE" ;
+            schema:addressRegion "Harjumaa" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Estonia" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/588409/> ;
+    ] ; 
+    .

@@ -1,0 +1,50 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/02naczy15> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "2010"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "funder" ; 
+    org:classification "government" ; 
+    dct:created "2025-02-26"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
+    org:abbreviation "MPRV SR"@sk ; 
+    org:alternativeName "Ministerstvo pôdohospodárstva a rozvoja vidieka SR"@sk ; 
+    schema:url <http://mpsr.sk> ; 
+    schema:mainEntityOfPage <https://www.mpsr.sk> ;
+    owl:sameAs <https://cs.wikipedia.org/wiki/Ministerstvo_zem%C4%9Bd%C4%9Blstv%C3%AD_a_rozvoje_venkova_Slovensk%C3%A9_republiky> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100008803> ;
+    schema:sameAs <http://isni.org/isni/0000000106813705> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02erxsp04> ;
+        rdfs:label "Animal Production Research Centre" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(17.10674 48.14816)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Bratislava" ;
+            schema:addressCountry "SK" ;
+            schema:addressRegion "Bratislava Region" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Slovakia" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3060972/> ;
+    ] ; 
+    .

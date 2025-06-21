@@ -15,7 +15,7 @@
     org:classification "education" ; 
     org:classification "funder" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-12-10"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
     schema:url <http://unistra.fr> ; 
     schema:mainEntityOfPage <https://www.unistra.fr> ;
     owl:sameAs <http://en.wikipedia.org/wiki/University_of_Strasbourg> ; 
@@ -241,12 +241,6 @@
     org:hasLink [
         a org:Membership ;
         org:role "child" ;
-        org:member <https://ror.org/000n1xh78> ;
-        rdfs:label "Biopathologie de la myéline, neuroprotection et stratégies thérapeutiques" ;
-    ] ; 
-    org:hasLink [
-        a org:Membership ;
-        org:role "child" ;
         org:member <https://ror.org/030d6wr93> ;
         rdfs:label "Laboratoire d'innovation moléculaire et applications" ;
     ] ; 
@@ -444,6 +438,12 @@
     ] ; 
     org:hasLink [
         a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03nb7az85> ;
+        rdfs:label "Institut de recherches Carré de Malberg" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
         org:role "related" ;
         org:member <https://ror.org/04bckew43> ;
         rdfs:label "Hôpitaux Universitaires de Strasbourg" ;
@@ -478,25 +478,19 @@
         org:member <https://ror.org/01x6z5t49> ;
         rdfs:label "Fédération de Recherche Spectroscopies de Photoémission" ;
     ] ; 
-    org:hasLink [
-        a org:Membership ;
-        org:role "child" ;
-        org:member <https://ror.org/03nb7az85> ;
-        rdfs:label "Institut de recherches Carré de Malberg" ;
-    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(7.74553 48.58392)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Strasbourg" ;
             schema:addressCountry "FR" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Grand Est" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "France" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

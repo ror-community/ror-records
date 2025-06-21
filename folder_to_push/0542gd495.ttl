@@ -1,0 +1,40 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/0542gd495> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "2011"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "government" ; 
+    dct:created "2025-02-26"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
+    org:abbreviation "ELGO - DIMITRA"@el ; 
+    org:abbreviation "ΕΛΓΟ - ΔΗΜΗΤΡΑ"@el ; 
+    schema:url <http://elgo.gr> ; 
+    schema:mainEntityOfPage <https://www.elgo.gr> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(23.72784 37.98376)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Athens" ;
+            schema:addressCountry "GR" ;
+            schema:addressRegion "Attica" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Greece" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/264371/> ;
+    ] ; 
+    .

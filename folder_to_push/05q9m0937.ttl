@@ -4,28 +4,54 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/05q9m0937> a org:Organization ;
     rdfs:label "University of Klagenfurt" ;
     schema:name "University of Klagenfurt" ;
     schema:foundingDate "1970"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "AAU" ;
-    org:alternativeName "Alpen-Adria-Universität Klagenfurt" ;
-    schema:url <http://www.uni-klu.ac.at/main/inhalt/1.htm> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Alpen-Adria-Universit%C3%A4t_Klagenfurt> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
+    org:abbreviation "AAU"@None ; 
+    org:alternativeName "Alpen-Adria-Universität Klagenfurt"@de ; 
+    schema:url <http://aau.at> ; 
+    schema:mainEntityOfPage <https://www.aau.at> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Alpen-Adria-Universit%C3%A4t_Klagenfurt> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100008905> ;
+    schema:sameAs <https://grid.ac/institutions/grid.7520.0> ;
+    schema:sameAs <http://isni.org/isni/0000000121963349> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/001zf8v27> ;
+        rdfs:label "Institute for Interdisciplinary Studies of Austrian Universities" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02yf6ha74> ;
+        rdfs:label "Institute for Comparative Media and Communication Studies" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(14.30528 46.62472)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(14.30528 46.62472)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Klagenfurt" ;
             schema:addressCountry "AT" ;
-            owl:sameAs <http://sws.geonames.org/2774326/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000121963349> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q690639> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "Carinthia" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Austria" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2774326/> ;
+    ] ; 
     .

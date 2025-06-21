@@ -1,0 +1,43 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/04karqd05> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "1972"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "healthcare" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
+    org:abbreviation "BUMHS"@en ; 
+    org:alternativeName "Bolan Medical College"@en ; 
+    schema:url <http://bumhs.edu.pk> ; 
+    schema:mainEntityOfPage <https://bumhs.edu.pk> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Bolan_University_of_Medical_%26_Health_Sciences> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.414533.4> ;
+    schema:sameAs <http://isni.org/isni/0000000099718733> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(67.00141 30.18414)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Quetta" ;
+            schema:addressCountry "PK" ;
+            schema:addressRegion "Balochistan" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Pakistan" ;
+                schema:containedInPlace [
+                    schema:name "Asia" ;
+                    schema:identifier "AS"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1167528/> ;
+    ] ; 
+    .

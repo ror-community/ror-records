@@ -15,7 +15,7 @@
     org:classification "facility" ; 
     org:classification "funder" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-08-21"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
     org:abbreviation "INL"@None ; 
     org:alternativeName "Office of Nuclear Energy Idaho National Laboratory"@en ; 
     org:alternativeName "United States Department of Energy Office of Nuclear Energy Idaho National Laboratory"@en ; 
@@ -42,19 +42,25 @@
         org:member <https://ror.org/019q0z051> ;
         rdfs:label "Rocky Mountain Advanced Computing Consortium" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03c7p2r39> ;
+        rdfs:label "Nuclear Science User Facilities" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(-112.03414 43.46658)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Idaho Falls" ;
             schema:addressCountry "US" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Idaho" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "United States" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "North America" ;
+                    schema:identifier "NA"
                 ]
             ]
         ] ;

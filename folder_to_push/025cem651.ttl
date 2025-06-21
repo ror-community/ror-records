@@ -4,28 +4,60 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/025cem651> a org:Organization ;
     rdfs:label "Walter Reed National Military Medical Center" ;
     schema:name "Walter Reed National Military Medical Center" ;
     schema:foundingDate "1940"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Healthcare" ; 
-    org:abbreviation "WRNMMC" ;
-    org:alternativeName "National Naval Medical Center" ;
-    schema:url <https://tricare.mil/mtf/Walterreed> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Walter_Reed_National_Military_Medical_Center> ;
+    org:classification "funder" ; 
+    org:classification "healthcare" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
+    org:alternativeName "Bethesda Naval Hospital"@en ; 
+    org:alternativeName "National Naval Medical Center"@en ; 
+    org:abbreviation "WRNMMC"@None ; 
+    schema:mainEntityOfPage <https://tricare.mil/mtf/Walterreed> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Walter_Reed_National_Military_Medical_Center> ; 
+    schema:sameAs <https://api.crossref.org/funders/100013131> ;
+    schema:sameAs <https://grid.ac/institutions/grid.414467.4> ;
+    schema:sameAs <http://isni.org/isni/0000000105606544> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00y4zzh67> ;
+        rdfs:label "George Washington University" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/04r3kq386> ;
+        rdfs:label "Uniformed Services University of the Health Sciences" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/03df8gj37> ;
+        rdfs:label "Defense Health Agency" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-77.10026 38.98067)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-77.10026 38.98067)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Bethesda" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/4348599/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000105606544> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1457886> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "Maryland" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "North America" ;
+                    schema:identifier "NA"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/4348599/> ;
+    ] ; 
     .

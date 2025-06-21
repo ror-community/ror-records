@@ -4,27 +4,46 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/03p1tqc11> a org:Organization ;
     rdfs:label "Naval Submarine Medical Research Laboratory" ;
     schema:name "Naval Submarine Medical Research Laboratory" ;
     schema:foundingDate "1942"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "NSMRL" ;
-    schema:url <https://www.med.navy.mil/sites/nmrc/NSMRL/Pages/Home.aspx> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Naval_Submarine_Medical_Research_Laboratory> ;
+    org:classification "facility" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
+    org:abbreviation "NSMRL"@None ; 
+    schema:mainEntityOfPage <https://www.med.navy.mil/Naval-Medical-Research-Command/R-D-Commands/Naval-Submarine-Medical-Research-Laboratory/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Naval_Submarine_Medical_Research_Laboratory> ; 
+    schema:sameAs <https://api.crossref.org/funders/100014060> ;
+    schema:sameAs <https://grid.ac/institutions/grid.415942.f> ;
+    schema:sameAs <http://isni.org/isni/0000000121744824> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/05f421b09> ;
+        rdfs:label "Naval Medical Research Command" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-72.07841 41.3501)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-72.07841 41.3501)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Groton" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/4835461/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000121744824> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q6981947> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "Connecticut" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "North America" ;
+                    schema:identifier "NA"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/4835461/> ;
+    ] ; 
     .

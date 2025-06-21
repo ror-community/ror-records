@@ -15,7 +15,7 @@
     org:classification "education" ; 
     org:classification "funder" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-12-10"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
     org:abbreviation "IU"@None ; 
     schema:mainEntityOfPage <http://www.iu.edu/> ;
     owl:sameAs <http://en.wikipedia.org/wiki/Indiana_University> ; 
@@ -67,12 +67,6 @@
     org:hasLink [
         a org:Membership ;
         org:role "child" ;
-        org:member <https://ror.org/00e0c0q64> ;
-        rdfs:label "Indiana University – Purdue University Columbus" ;
-    ] ; 
-    org:hasLink [
-        a org:Membership ;
-        org:role "child" ;
         org:member <https://ror.org/03eftgw80> ;
         rdfs:label "Indiana University Indianapolis" ;
     ] ; 
@@ -92,7 +86,13 @@
         a org:Membership ;
         org:role "child" ;
         org:member <https://ror.org/001zwgm84> ;
-        rdfs:label "CI Compass" ;
+        rdfs:label "NSF CI Compass" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02vnghs48> ;
+        rdfs:label "Indiana University Columbus" ;
     ] ; 
     schema:location [
         a schema:Place ;
@@ -100,13 +100,13 @@
         schema:address [
             schema:addressLocality "Bloomington" ;
             schema:addressCountry "US" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Indiana" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "United States" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "North America" ;
+                    schema:identifier "NA"
                 ]
             ]
         ] ;

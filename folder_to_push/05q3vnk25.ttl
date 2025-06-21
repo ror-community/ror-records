@@ -15,7 +15,7 @@
     org:classification "funder" ; 
     org:classification "government" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-10-31"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
     org:abbreviation "IRD"@None ; 
     schema:mainEntityOfPage <https://en.ird.fr/> ;
     owl:sameAs <https://en.wikipedia.org/wiki/Institut_de_recherche_pour_le_d%C3%A9veloppement> ; 
@@ -116,7 +116,7 @@
         a org:Membership ;
         org:role "child" ;
         org:member <https://ror.org/00f945z63> ;
-        rdfs:label "Institut Pythéas Observatoire des Sciences de l’Univers" ;
+        rdfs:label "Institut Pytheas" ;
     ] ; 
     org:hasLink [
         a org:Membership ;
@@ -460,19 +460,25 @@
         org:member <https://ror.org/03qgfy688> ;
         rdfs:label "Fédération Ile de France de recherche sur l'environnement" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01pa4h393> ;
+        rdfs:label "Centre de Recherche et d’Enseignement de Géosciences de l’Environnement" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(5.38107 43.29695)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Marseille" ;
             schema:addressCountry "FR" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Provence-Alpes-Côte d'Azur" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "France" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

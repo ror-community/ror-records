@@ -15,7 +15,7 @@
     org:classification "funder" ; 
     org:classification "government" ; 
     dct:created "2024-02-13"^^xsd:date ;
-    dct:modified "2024-05-30"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
     org:abbreviation "BUMED"@None ; 
     org:alternativeName "Navy Bureau of Medicine and Surgery"@en ; 
     org:alternativeName "U.S. Navy Bureau of Medicine and Surgery"@en ; 
@@ -26,9 +26,21 @@
     schema:sameAs <http://isni.org/isni/0000000106725166> ;
     org:hasLink [
         a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/035agn614> ;
+        rdfs:label "Navy and Marine Corps Force Health Protection Command" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05f421b09> ;
+        rdfs:label "Naval Medical Research Command" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
         org:role "parent" ;
-        org:member <https://ror.org/03cs53d16> ;
-        rdfs:label "United States Navy" ;
+        org:member <https://ror.org/03ar0mv07> ;
+        rdfs:label "United States Department of the Navy" ;
     ] ; 
     schema:location [
         a schema:Place ;
@@ -36,13 +48,13 @@
         schema:address [
             schema:addressLocality "Falls Church" ;
             schema:addressCountry "US" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Virginia" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "United States" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "North America" ;
+                    schema:identifier "NA"
                 ]
             ]
         ] ;

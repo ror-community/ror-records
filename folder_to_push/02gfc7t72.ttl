@@ -15,7 +15,7 @@
     org:classification "funder" ; 
     org:classification "government" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-11-19"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
     org:abbreviation "CSIC"@None ; 
     schema:mainEntityOfPage <https://www.csic.es> ;
     owl:sameAs <https://en.wikipedia.org/wiki/Spanish_National_Research_Council> ; 
@@ -877,18 +877,6 @@
     org:hasLink [
         a org:Membership ;
         org:role "child" ;
-        org:member <https://ror.org/041xzk838> ;
-        rdfs:label "Instituto Biofisika" ;
-    ] ; 
-    org:hasLink [
-        a org:Membership ;
-        org:role "related" ;
-        org:member <https://ror.org/03abrgd14> ;
-        rdfs:label "Centre for Research on Ecology and Forestry Applications" ;
-    ] ; 
-    org:hasLink [
-        a org:Membership ;
-        org:role "child" ;
         org:member <https://ror.org/04cadha73> ;
         rdfs:label "Instituto Geológico y Minero de España" ;
     ] ; 
@@ -898,19 +886,25 @@
         org:member <https://ror.org/011q66e29> ;
         rdfs:label "Instituto Nacional de Investigación y Tecnología Agraria y Alimentaria" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03abrgd14> ;
+        rdfs:label "Centre for Research on Ecology and Forestry Applications" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(-3.70256 40.4165)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Madrid" ;
             schema:addressCountry "ES" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Madrid" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "Spain" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

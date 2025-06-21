@@ -14,7 +14,7 @@
     org:status "active" ;
     org:classification "education" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-07-29"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
     org:alternativeName "ENSIETA"@fr ; 
     org:alternativeName "ENSTA Bretagne"@fr ; 
     schema:mainEntityOfPage <http://www.ensta-bretagne.eu/> ;
@@ -27,19 +27,25 @@
         org:member <https://ror.org/00hgbrg14> ;
         rdfs:label "Fédération française Matériaux sous hautes vitesses de déformation. Application aux matériaux en conditions extrêmes, Procédés et structures" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05k9wmt43> ;
+        rdfs:label "Formation et apprentissages professionnels" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(-4.48628 48.39029)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Brest" ;
             schema:addressCountry "FR" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Brittany" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "France" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

@@ -1,0 +1,37 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/04fcqnd54> a org:Organization ;
+    rdfs:label "Ottery St Mary Hospital" ;
+    schema:name "Ottery St Mary Hospital" ;
+    org:status "active" ;
+    org:classification "healthcare" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
+    schema:mainEntityOfPage <https://www.rdehospital.nhs.uk/patients/services/community-hospitals/ottery-hospital.html> ;
+    schema:sameAs <https://grid.ac/institutions/grid.439393.7> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-3.26667 50.75)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Ottery St Mary" ;
+            schema:addressCountry "GB" ;
+            schema:addressRegion "England" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United Kingdom" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2640834/> ;
+    ] ; 
+    .

@@ -14,21 +14,9 @@
     org:status "active" ;
     org:classification "facility" ; 
     dct:created "2023-08-17"^^xsd:date ;
-    dct:modified "2024-06-20"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
     org:abbreviation "CREGO"@None ; 
     schema:mainEntityOfPage <http://crego.u-bourgogne.fr> ;
-    org:hasLink [
-        a org:Membership ;
-        org:role "parent" ;
-        org:member <https://ror.org/03k1bsr36> ;
-        rdfs:label "Université de Bourgogne" ;
-    ] ; 
-    org:hasLink [
-        a org:Membership ;
-        org:role "parent" ;
-        org:member <https://ror.org/03pcc9z86> ;
-        rdfs:label "Université de franche-comté" ;
-    ] ; 
     org:hasLink [
         a org:Membership ;
         org:role "parent" ;
@@ -41,19 +29,31 @@
         org:member <https://ror.org/04k8k6n84> ;
         rdfs:label "Université de Haute-Alsace" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/00g700j37> ;
+        rdfs:label "Université Bourgogne Europe" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/04asdee31> ;
+        rdfs:label "Université Marie et Louis Pasteur" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(5.01667 47.31667)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Dijon" ;
             schema:addressCountry "FR" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Bourgogne-Franche-Comté" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "France" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

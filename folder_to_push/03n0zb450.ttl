@@ -1,0 +1,41 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/03n0zb450> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "2005"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "healthcare" ; 
+    dct:created "2025-02-26"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
+    org:abbreviation "INRSP"@en ; 
+    schema:url <http://inrsp.mr> ; 
+    schema:mainEntityOfPage <https://inrsp.mr> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Institut_National_de_Recherches_en_Sante_Publique> ; 
+    schema:sameAs <http://isni.org/isni/0000000502780319> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-15.9785 18.08581)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Nouakchott" ;
+            schema:addressCountry "MR" ;
+            schema:addressRegion "None" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Mauritania" ;
+                schema:containedInPlace [
+                    schema:name "Africa" ;
+                    schema:identifier "AF"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2377450/> ;
+    ] ; 
+    .

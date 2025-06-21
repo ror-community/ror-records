@@ -14,7 +14,7 @@
     org:status "active" ;
     org:classification "government" ; 
     dct:created "2024-01-10"^^xsd:date ;
-    dct:modified "2024-05-30"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
     org:alternativeName "U.S. Fleet Forces"@en ; 
     org:alternativeName "U.S. Fleet Forces Command"@en ; 
     org:abbreviation "USFF"@None ; 
@@ -23,9 +23,15 @@
     owl:sameAs <https://en.wikipedia.org/wiki/United_States_Fleet_Forces_Command> ; 
     org:hasLink [
         a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03fqkgf18> ;
+        rdfs:label "Navy Expeditionary Combat Command" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
         org:role "parent" ;
-        org:member <https://ror.org/03cs53d16> ;
-        rdfs:label "United States Navy" ;
+        org:member <https://ror.org/03ar0mv07> ;
+        rdfs:label "United States Department of the Navy" ;
     ] ; 
     schema:location [
         a schema:Place ;
@@ -33,13 +39,13 @@
         schema:address [
             schema:addressLocality "Norfolk" ;
             schema:addressCountry "US" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Virginia" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "United States" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "North America" ;
+                    schema:identifier "NA"
                 ]
             ]
         ] ;

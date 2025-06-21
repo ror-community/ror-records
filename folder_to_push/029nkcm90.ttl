@@ -14,7 +14,7 @@
     org:status "active" ;
     org:classification "facility" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-10-31"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
     org:alternativeName "Observatoire de Paris-Meudon"@fr ; 
     org:alternativeName "Observatoire de Paris-PSL"@fr ; 
     schema:mainEntityOfPage <https://www.observatoiredeparis.psl.eu> ;
@@ -66,12 +66,6 @@
     org:hasLink [
         a org:Membership ;
         org:role "child" ;
-        org:member <https://ror.org/03tdef037> ;
-        rdfs:label "Systèmes de Référence Temps-Espace" ;
-    ] ; 
-    org:hasLink [
-        a org:Membership ;
-        org:role "child" ;
         org:member <https://ror.org/0557mft23> ;
         rdfs:label "Formation, Innovation, Recherche, Services et Transfert en Temps-Fréquence" ;
     ] ; 
@@ -93,19 +87,25 @@
         org:member <https://ror.org/02rmk5x23> ;
         rdfs:label "Fédération de recherche PLAS@PAR" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03hgsyv65> ;
+        rdfs:label "Laboratoire Temps Espace" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(2.3488 48.85341)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Paris" ;
             schema:addressCountry "FR" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Île-de-France" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "France" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

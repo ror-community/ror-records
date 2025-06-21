@@ -1,0 +1,48 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/00zv91802> a org:Organization ;
+    rdfs:label "Science Applications International Corporation (United States)" ;
+    schema:name "Science Applications International Corporation (United States)" ;
+    schema:foundingDate "1969"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "company" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
+    org:abbreviation "SAIC"@None ; 
+    schema:mainEntityOfPage <http://www.saic.com/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Science_Applications_International_Corporation> ; 
+    schema:sameAs <https://api.crossref.org/funders/100004400> ;
+    schema:sameAs <https://grid.ac/institutions/grid.419669.5> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "predecessor" ;
+        org:member <https://ror.org/01h2d3422> ;
+        rdfs:label "Engility (United States)" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-77.17748 38.93428)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "McLean" ;
+            schema:addressCountry "US" ;
+            schema:addressRegion "Virginia" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "North America" ;
+                    schema:identifier "NA"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/4772354/> ;
+    ] ; 
+    .

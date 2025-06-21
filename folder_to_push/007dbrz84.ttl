@@ -14,9 +14,11 @@
     org:status "active" ;
     org:classification "facility" ; 
     dct:created "2023-08-17"^^xsd:date ;
-    dct:modified "2024-09-16"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
     org:abbreviation "LGO"@None ; 
     org:alternativeName "Laboratoire Géosciences Océan"@fr ; 
+    org:abbreviation "UMR GO"@fr ; 
+    org:alternativeName "UMR Geo-Ocean"@fr ; 
     schema:mainEntityOfPage <https://www.geo-ocean.fr> ;
     org:hasLink [
         a org:Membership ;
@@ -36,19 +38,25 @@
         org:member <https://ror.org/044jxhp58> ;
         rdfs:label "Ifremer" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/04ed7fw48> ;
+        rdfs:label "Université de Bretagne Sud" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(-4.61805 48.38131)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Plouzané" ;
             schema:addressCountry "FR" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Brittany" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "France" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

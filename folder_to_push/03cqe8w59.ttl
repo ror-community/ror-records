@@ -15,7 +15,7 @@
     org:classification "funder" ; 
     org:classification "government" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-06-20"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
     org:abbreviation "CONICET"@None ; 
     schema:mainEntityOfPage <http://www.conicet.gov.ar> ;
     owl:sameAs <https://en.wikipedia.org/wiki/National_Scientific_and_Technical_Research_Council> ; 
@@ -288,6 +288,24 @@
     ] ; 
     org:hasLink [
         a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02raxsg56> ;
+        rdfs:label "Instituto de Investigaciones y Políticas del Ambiente Construido (IIPAC)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/049hngf66> ;
+        rdfs:label "Laboratorio de Planificación y Gestión Estratégica" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03vdg0553> ;
+        rdfs:label "Instituto de Ambiente, Hábitat y Energía" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
         org:role "parent" ;
         org:member <https://ror.org/02h503d38> ;
         rdfs:label "Ministerio de Ciencia, Tecnología e Innovación" ;
@@ -313,20 +331,8 @@
     org:hasLink [
         a org:Membership ;
         org:role "child" ;
-        org:member <https://ror.org/02raxsg56> ;
-        rdfs:label "Instituto de Investigaciones y Políticas del Ambiente Construido (IIPAC)" ;
-    ] ; 
-    org:hasLink [
-        a org:Membership ;
-        org:role "child" ;
-        org:member <https://ror.org/049hngf66> ;
-        rdfs:label "Laboratorio de Planificación y Gestión Estratégica" ;
-    ] ; 
-    org:hasLink [
-        a org:Membership ;
-        org:role "child" ;
-        org:member <https://ror.org/03vdg0553> ;
-        rdfs:label "Instituto de Ambiente, Hábitat y Energía" ;
+        org:member <https://ror.org/01pcb8y44> ;
+        rdfs:label "Instituto de Investigación en Paleobiología y Geología" ;
     ] ; 
     schema:location [
         a schema:Place ;
@@ -334,13 +340,13 @@
         schema:address [
             schema:addressLocality "Buenos Aires" ;
             schema:addressCountry "AR" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Buenos Aires F.D." ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "Argentina" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "South America" ;
+                    schema:identifier "SA"
                 ]
             ]
         ] ;

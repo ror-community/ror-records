@@ -4,28 +4,43 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01s57k749> a org:Organization ;
-    rdfs:label "Singapore University of Social Sciences" ;
-    schema:name "Singapore University of Social Sciences" ;
+    rdfs:label "" ;
+    schema:name "" ;
     schema:foundingDate "2005"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "SUSS" ;
-    org:alternativeName "SIM University" ;
-    schema:url <http://www.suss.edu.sg/Pages/index.aspx> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Singapore_University_of_Social_Sciences> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
+    org:alternativeName "SIM University"@en ; 
+    org:abbreviation "SUSS"@None ; 
+    org:alternativeName "சிங்கப்பூர் சமூக அறிவியல் பல்கலைக்கழகம்"@ta ; 
+    schema:url <http://suss.edu.sg> ; 
+    schema:mainEntityOfPage <https://www.suss.edu.sg> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Singapore_University_of_Social_Sciences> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100009063> ;
+    schema:sameAs <https://grid.ac/institutions/grid.443365.3> ;
+    schema:sameAs <http://isni.org/isni/0000000403886484> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(103.85007 1.28967)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(103.85007 1.28967)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Singapore" ;
             schema:addressCountry "SG" ;
-            owl:sameAs <http://sws.geonames.org/1880252/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000403886484> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q494179> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "SG.01" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Singapore" ;
+                schema:containedInPlace [
+                    schema:name "Asia" ;
+                    schema:identifier "AS"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1880252/> ;
+    ] ; 
     .

@@ -1,0 +1,46 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/008mx9f83> a org:Organization ;
+    rdfs:label "Institute for Particle and Nuclear Physics" ;
+    schema:name "Institute for Particle and Nuclear Physics" ;
+    schema:foundingDate "1950"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "facility" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
+    org:alternativeName "KFKI Research Institute for Particle and Nuclear Physics"@en ; 
+    org:abbreviation "RMKI"@None ; 
+    schema:mainEntityOfPage <http://www.rmki.kfki.hu/en/home.html> ;
+    schema:sameAs <https://grid.ac/institutions/grid.481809.c> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/035dsb084> ;
+        rdfs:label "HUN-REN Wigner Research Centre for Physics" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(19.04045 47.49835)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Budapest" ;
+            schema:addressCountry "HU" ;
+            schema:addressRegion "Budapest" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Hungary" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3054643/> ;
+    ] ; 
+    .

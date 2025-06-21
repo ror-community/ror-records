@@ -15,7 +15,7 @@
     org:classification "education" ; 
     org:classification "funder" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-10-21"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
     org:alternativeName "Cal Berkeley"@en ; 
     org:alternativeName "UC Berkeley"@en ; 
     org:abbreviation "UCB"@None ; 
@@ -116,19 +116,25 @@
         org:member <https://ror.org/01ewh7m12> ;
         rdfs:label "International Computer Science Institute" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/048400679> ;
+        rdfs:label "Space Sciences Laboratory" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(-122.27275 37.87159)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Berkeley" ;
             schema:addressCountry "US" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "California" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "United States" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "North America" ;
+                    schema:identifier "NA"
                 ]
             ]
         ] ;

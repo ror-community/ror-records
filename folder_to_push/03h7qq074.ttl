@@ -15,7 +15,7 @@
     org:classification "funder" ; 
     org:classification "government" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-10-31"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
     org:abbreviation "SAS"@None ; 
     org:abbreviation "SAV"@None ; 
     schema:url <http://sav.sk> ; 
@@ -336,19 +336,31 @@
         org:member <https://ror.org/04gyhce28> ;
         rdfs:label "Slovak Astronomical Society at the Slovak Academy of Sciences" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01sbda189> ;
+        rdfs:label "Central Library of the Slovak Academy of Sciences" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0200wpa28> ;
+        rdfs:label "Plant Science and Biodiversity Centre of the Slovak Academy of Sciences" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(17.10674 48.14816)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Bratislava" ;
             schema:addressCountry "SK" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Bratislava Region" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "Slovakia" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

@@ -1,0 +1,48 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/02qvmaf13> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "1993"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2025-02-26"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
+    org:abbreviation "COEA"@en ; 
+    org:alternativeName "M. B. E. Society's College of Engineering"@en ; 
+    org:alternativeName "M. B. E. Society's College of Engineering, Ambajogai"@en ; 
+    org:alternativeName "Mahatma Basaveshwar Education Society's College of Engineering"@en ; 
+    schema:url <http://coea.ac.in> ; 
+    schema:mainEntityOfPage <https://www.coea.ac.in> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05tc4vc39> ;
+        rdfs:label "Dr. Babasaheb Ambedkar Technological University" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(76.48126 18.69981)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Ambejogai" ;
+            schema:addressCountry "IN" ;
+            schema:addressRegion "Maharashtra" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "India" ;
+                schema:containedInPlace [
+                    schema:name "Asia" ;
+                    schema:identifier "AS"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/12681294/> ;
+    ] ; 
+    .

@@ -8,14 +8,18 @@
 @prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/00f945z63> a org:Organization ;
-    rdfs:label "Institut Pythéas Observatoire des Sciences de l’Univers" ;
-    schema:name "Institut Pythéas Observatoire des Sciences de l’Univers" ;
+    rdfs:label "" ;
+    schema:name "" ;
     schema:foundingDate "2012"^^xsd:gYear ;
     org:status "active" ;
     org:classification "facility" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2025-01-22"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
+    org:alternativeName "Institut Pythéas Observatoire des Sciences de l’Univers"@fr ; 
     org:abbreviation "OSU"@None ; 
+    org:alternativeName "OSU Institut Pytheas"@fr ; 
+    org:alternativeName "OSU Pytheas"@fr ; 
+    org:alternativeName "Observatoire des Sciences de l'Univers Pytheas"@fr ; 
     schema:mainEntityOfPage <https://www.osupytheas.fr> ;
     schema:sameAs <https://grid.ac/institutions/grid.470941.f> ;
     org:hasLink [
@@ -26,15 +30,15 @@
     ] ; 
     org:hasLink [
         a org:Membership ;
-        org:role "parent" ;
-        org:member <https://ror.org/035xkbk20> ;
-        rdfs:label "Aix-Marseille Université" ;
+        org:role "child" ;
+        org:member <https://ror.org/05258q350> ;
+        rdfs:label "Institut Méditerranéen d’Océanologie" ;
     ] ; 
     org:hasLink [
         a org:Membership ;
         org:role "parent" ;
-        org:member <https://ror.org/049qgqg40> ;
-        rdfs:label "Délégation Provence et Corse" ;
+        org:member <https://ror.org/035xkbk20> ;
+        rdfs:label "Aix-Marseille Université" ;
     ] ; 
     org:hasLink [
         a org:Membership ;
@@ -44,9 +48,27 @@
     ] ; 
     org:hasLink [
         a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02feahw73> ;
+        rdfs:label "Centre National de la Recherche Scientifique" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/003vg9w96> ;
+        rdfs:label "Institut National de Recherche pour l'Agriculture, l'Alimentation et l'Environnement" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
         org:role "child" ;
-        org:member <https://ror.org/05258q350> ;
-        rdfs:label "Institut Méditerranéen d’Océanologie" ;
+        org:member <https://ror.org/01pa4h393> ;
+        rdfs:label "Centre de Recherche et d’Enseignement de Géosciences de l’Environnement" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03r5d5c48> ;
+        rdfs:label "Unité d'Appui et de Recherche Pythéas" ;
     ] ; 
     schema:location [
         a schema:Place ;

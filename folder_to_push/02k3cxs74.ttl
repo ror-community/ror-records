@@ -1,0 +1,53 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/02k3cxs74> a org:Organization ;
+    rdfs:label "St Vincents Institute of Medical Research" ;
+    schema:name "St Vincents Institute of Medical Research" ;
+    schema:foundingDate "1951"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "nonprofit" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
+    org:abbreviation "SVI"@None ; 
+    schema:mainEntityOfPage <https://www.svi.edu.au/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/St._Vincent's_Institute_of_Medical_Research> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.1073.5> ;
+    schema:sameAs <http://isni.org/isni/000000040626201X> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/001kjn539> ;
+        rdfs:label "St Vincent's Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01ej9dk98> ;
+        rdfs:label "The University of Melbourne" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(144.97833 -37.79839)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Fitzroy" ;
+            schema:addressCountry "AU" ;
+            schema:addressRegion "Victoria" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Australia" ;
+                schema:containedInPlace [
+                    schema:name "Oceania" ;
+                    schema:identifier "OC"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2166584/> ;
+    ] ; 
+    .

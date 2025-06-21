@@ -4,27 +4,46 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01vvnmw35> a org:Organization ;
     rdfs:label "Research Institute For Sustainability – Helmholtz Centre Potsdam" ;
     schema:name "Research Institute For Sustainability – Helmholtz Centre Potsdam" ;
     schema:foundingDate "2009"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "IASS" ;
-    org:alternativeName "RIFS Potsdam" ;
-    schema:url <http://www.rifs-potsdam.de> ; 
+    org:classification "facility" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
+    org:abbreviation "IASS"@None ; 
+    org:alternativeName "Institut für transformative Nachhaltigkeitsforschung"@de ; 
+    org:alternativeName "Institute for Advanced Sustainability Studies"@en ; 
+    org:alternativeName "RIFS Potsdam"@en ; 
+    schema:mainEntityOfPage <http://www.rifs-potsdam.de> ;
+    schema:sameAs <https://grid.ac/institutions/grid.464582.9> ;
+    schema:sameAs <http://isni.org/isni/0000000404094235> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/04z8jg394> ;
+        rdfs:label "GFZ Helmholtz Centre for Geosciences" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(13.06566 52.39886)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(13.06566 52.39886)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Potsdam" ;
             schema:addressCountry "DE" ;
-            owl:sameAs <http://sws.geonames.org/2852458/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000404094235> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1665134> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "Brandenburg" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Germany" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2852458/> ;
+    ] ; 
     .

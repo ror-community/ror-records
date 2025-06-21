@@ -1,0 +1,42 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/04g9wgp02> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "2014"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2025-02-26"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
+    org:alternativeName "Kotli University"@en ; 
+    org:alternativeName "University of Kotli"@en ; 
+    org:abbreviation "UoK"@en ; 
+    schema:url <http://uokajk.edu.pk> ; 
+    schema:mainEntityOfPage <https://www.uokajk.edu.pk> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/University_of_Kotli> ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(73.9022 33.51836)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Kotli" ;
+            schema:addressCountry "PK" ;
+            schema:addressRegion "Azad Kashmir" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Pakistan" ;
+                schema:containedInPlace [
+                    schema:name "Asia" ;
+                    schema:identifier "AS"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1173055/> ;
+    ] ; 
+    .

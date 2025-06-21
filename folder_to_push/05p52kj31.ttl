@@ -1,0 +1,53 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/05p52kj31> a org:Organization ;
+    rdfs:label "Royal Brisbane and Women's Hospital" ;
+    schema:name "Royal Brisbane and Women's Hospital" ;
+    schema:foundingDate "2003"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "healthcare" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
+    org:abbreviation "RBWH"@None ; 
+    schema:mainEntityOfPage <http://www.health.qld.gov.au/rbwh/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Royal_Brisbane_and_Women's_Hospital> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.416100.2> ;
+    schema:sameAs <http://isni.org/isni/0000000106884634> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/00c1dt378> ;
+        rdfs:label "Queensland Health" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00rqy9422> ;
+        rdfs:label "The University of Queensland" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(153.02809 -27.46794)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Brisbane" ;
+            schema:addressCountry "AU" ;
+            schema:addressRegion "Queensland" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Australia" ;
+                schema:containedInPlace [
+                    schema:name "Oceania" ;
+                    schema:identifier "OC"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2174003/> ;
+    ] ; 
+    .

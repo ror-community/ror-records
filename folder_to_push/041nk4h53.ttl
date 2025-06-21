@@ -15,7 +15,7 @@
     org:classification "facility" ; 
     org:classification "funder" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-10-21"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
     org:abbreviation "LLL"@None ; 
     org:abbreviation "LLNL"@None ; 
     org:alternativeName "U.S. Department of Energy Lawrence Livermore National Laboratory"@en ; 
@@ -58,19 +58,25 @@
         org:member <https://ror.org/04n07f274> ;
         rdfs:label "Materials Science in Extreme Environments University Research Alliance" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02k3nmd98> ;
+        rdfs:label "Program for Climate Model Diagnosis and Intercomparison" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(-121.76801 37.68187)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Livermore" ;
             schema:addressCountry "US" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "California" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "United States" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "North America" ;
+                    schema:identifier "NA"
                 ]
             ]
         ] ;

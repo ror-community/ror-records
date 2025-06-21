@@ -1,0 +1,67 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/02cm95j49> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    org:status "active" ;
+    org:classification "government" ; 
+    dct:created "2025-02-26"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
+    org:alternativeName "Army Communications-Electronics Command"@en ; 
+    org:abbreviation "CECOM"@en ; 
+    org:alternativeName "U.S. Army CECOM"@en ; 
+    org:alternativeName "United States Army Communications-Electronics Command"@en ; 
+    schema:url <http://cecom.army.mil> ; 
+    schema:mainEntityOfPage <https://cecom.army.mil> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/United_States_Army_Communications-Electronics_Command> ; 
+    schema:sameAs <http://isni.org/isni/0000000107397141> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/011rwyf32> ;
+        rdfs:label "U.S. Army Materiel Command" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/044webc45> ;
+        rdfs:label "CECOM Software Engineering Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02kyzc549> ;
+        rdfs:label "U.S. Army Information Systems Engineering Command" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00a3qqg15> ;
+        rdfs:label "U.S. Army CECOM Integrated Logistics Support Center" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-76.13066 39.46686)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Aberdeen Proving Ground" ;
+            schema:addressCountry "US" ;
+            schema:addressRegion "Maryland" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "North America" ;
+                    schema:identifier "NA"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/7257914/> ;
+    ] ; 
+    .

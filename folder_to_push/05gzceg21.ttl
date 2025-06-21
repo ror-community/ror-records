@@ -4,27 +4,52 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/05gzceg21> a org:Organization ;
     rdfs:label "Kasetsart University" ;
     schema:name "Kasetsart University" ;
     schema:foundingDate "1943"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:alternativeName "Maha Witthayalai Kasetsat" ;
-    schema:url <http://www.ku.ac.th/web2012/index.php?c=adms&m=mainpage1> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Kasetsart_University> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
+    org:alternativeName "Maha Witthayalai Kasetsat"@None ; 
+    schema:mainEntityOfPage <http://www.ku.ac.th/web2012/index.php?c=adms&m=mainpage1> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Kasetsart_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100004539> ;
+    schema:sameAs <https://grid.ac/institutions/grid.9723.f> ;
+    schema:sameAs <http://isni.org/isni/000000010944049X> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/050519n85> ;
+        rdfs:label "Postharvest Technology Innovation Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00r4taj88> ;
+        rdfs:label "IRL HealthDEEP" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(100.50144 13.75398)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(100.50144 13.75398)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Bangkok" ;
             schema:addressCountry "TH" ;
-            owl:sameAs <http://sws.geonames.org/1609350/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/000000010944049X> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q452406> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "Bangkok" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Thailand" ;
+                schema:containedInPlace [
+                    schema:name "Asia" ;
+                    schema:identifier "AS"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1609350/> ;
+    ] ; 
     .

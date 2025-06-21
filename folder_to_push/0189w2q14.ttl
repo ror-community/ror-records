@@ -4,25 +4,97 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/0189w2q14> a org:Organization ;
     rdfs:label "United States Army Test and Evaluation Command" ;
     schema:name "United States Army Test and Evaluation Command" ;
     org:status "active" ;
-    org:classification "Government" ; 
-    org:abbreviation "ATEC" ;
-    org:alternativeName "U.S. Army Test and Evaluation Command" ;
-    schema:url <https://www.atec.army.mil> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/United_States_Army_Test_and_Evaluation_Command> ;
+    org:classification "government" ; 
+    dct:created "2023-11-08"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
+    org:abbreviation "ATEC"@None ; 
+    org:alternativeName "U.S. Army Test & Evaluation Command"@en ; 
+    org:alternativeName "U.S. Army Test and Evaluation Command"@en ; 
+    schema:mainEntityOfPage <https://www.atec.army.mil> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/United_States_Army_Test_and_Evaluation_Command> ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/050sd4346> ;
+        rdfs:label "U.S. Army Yuma Test Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02vb70n88> ;
+        rdfs:label "U.S. Army White Sands Test Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04hewx527> ;
+        rdfs:label "U.S. Army Cold Regions Test Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04h617f37> ;
+        rdfs:label "U.S. Army West Desert Test Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/024ms8859> ;
+        rdfs:label "U.S. Army Aberdeen Test Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/055cy8878> ;
+        rdfs:label "U.S. Army Evaluation Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00k44np55> ;
+        rdfs:label "U.S. Army Redstone Test Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04rr8kp31> ;
+        rdfs:label "U.S. Army Tropic Regions Test Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0095e2947> ;
+        rdfs:label "U.S. Army Electronic Proving Ground" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/035w1gb98> ;
+        rdfs:label "United States Department of the Army" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-76.13066 39.46686)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-76.13066 39.46686)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Aberdeen Proving Ground" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/7257914/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://www.wikidata.org/entity/Q548699> ;
+            schema:addressRegion "Maryland" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "North America" ;
+                    schema:identifier "NA"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/7257914/> ;
+    ] ; 
     .

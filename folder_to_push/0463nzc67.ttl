@@ -4,26 +4,36 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/0463nzc67> a org:Organization ;
     rdfs:label "Universitas Nahdlatul Ulama Lampung" ;
     schema:name "Universitas Nahdlatul Ulama Lampung" ;
     schema:foundingDate "2014"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:alternativeName "UNU Lampung" ;
-    schema:url <https://unulampung.ac.id> ; 
-    owl:sameAs <https://id.wikipedia.org/wiki/Universitas_Nahdlatul_Ulama_Lampung> ;
+    org:classification "education" ; 
+    dct:created "2023-04-12"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
+    org:alternativeName "UNU Lampung"@id ; 
+    schema:mainEntityOfPage <https://unulampung.ac.id> ;
+    owl:sameAs <https://id.wikipedia.org/wiki/Universitas_Nahdlatul_Ulama_Lampung> ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(105.68003 -5.10273)"^^geo:wktLiteral ;
-            schema:addressLocality "Kabupaten Lampung Timur" ;
+        a schema:Place ;
+        geo:asWKT "POINT(105.68003 -5.10273)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "East Lampung Regency" ;
             schema:addressCountry "ID" ;
-            owl:sameAs <http://sws.geonames.org/9165778/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000495302553> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q56394052> ;
+            schema:addressRegion "Lampung" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Indonesia" ;
+                schema:containedInPlace [
+                    schema:name "Asia" ;
+                    schema:identifier "AS"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/9165778/> ;
+    ] ; 
     .

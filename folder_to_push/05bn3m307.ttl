@@ -14,7 +14,7 @@
     org:status "active" ;
     org:classification "education" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-10-21"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
     org:abbreviation "UTBM"@None ; 
     schema:url <http://utbm.fr> ; 
     schema:mainEntityOfPage <https://www.utbm.fr> ;
@@ -57,19 +57,31 @@
         org:member <https://ror.org/0557mft23> ;
         rdfs:label "Formation, Innovation, Recherche, Services et Transfert en Temps-Fréquence" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02b6c1039> ;
+        rdfs:label "Laboratoire Interdisciplinaire Carnot de Bourgogne" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/04asdee31> ;
+        rdfs:label "Université Marie et Louis Pasteur" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(6.85385 47.64218)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Belfort" ;
             schema:addressCountry "FR" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Bourgogne-Franche-Comté" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "France" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

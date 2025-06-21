@@ -15,7 +15,7 @@
     org:classification "education" ; 
     org:classification "funder" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-10-21"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
     org:abbreviation "UMAB"@None ; 
     org:abbreviation "UMB"@None ; 
     schema:url <http://umaryland.edu> ; 
@@ -54,19 +54,25 @@
         org:member <https://ror.org/05ax3zh38> ;
         rdfs:label "VA Maryland Health Care System" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/055yg0521> ;
+        rdfs:label "University of Maryland School of Medicine" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(-76.61219 39.29038)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Baltimore" ;
             schema:addressCountry "US" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Maryland" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "United States" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "North America" ;
+                    schema:identifier "NA"
                 ]
             ]
         ] ;

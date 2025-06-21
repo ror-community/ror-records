@@ -1,0 +1,47 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/0312sjw67> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "2014"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2025-02-26"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
+    org:abbreviation "EMSO-FR"@en ; 
+    org:alternativeName "EMSO-France"@en ; 
+    org:alternativeName "European Multidisciplinary Seafloor and water column Observatory - France"@en ; 
+    schema:url <http://emso-fr.org> ; 
+    schema:mainEntityOfPage <https://www.emso-fr.org> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/04xkqms46> ;
+        rdfs:label "European Multidisciplinary Seafloor and water column Observatory" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-4.61805 48.38131)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Plouzané" ;
+            schema:addressCountry "FR" ;
+            schema:addressRegion "Brittany" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2986626/> ;
+    ] ; 
+    .

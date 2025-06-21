@@ -1,0 +1,40 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/020hzkv18> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "1990"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "government" ; 
+    dct:created "2025-02-26"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
+    org:alternativeName "National Observatory of Science, Technology and Innovation"@en ; 
+    org:abbreviation "ONCTI"@es ; 
+    schema:url <http://oncti.gob.ve> ; 
+    schema:mainEntityOfPage <https://www.oncti.gob.ve> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-66.87919 10.48801)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Caracas" ;
+            schema:addressCountry "VE" ;
+            schema:addressRegion "Distrito Federal" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Venezuela" ;
+                schema:containedInPlace [
+                    schema:name "South America" ;
+                    schema:identifier "SA"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3646738/> ;
+    ] ; 
+    .

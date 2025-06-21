@@ -4,27 +4,143 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/0314h5y94> a org:Organization ;
     rdfs:label "Australian Government" ;
     schema:name "Australian Government" ;
     schema:foundingDate "1901"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Government" ; 
-    org:alternativeName "Government of Australia" ;
-    schema:url <http://www.australia.gov.au/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Government_of_Australia> ;
+    org:classification "funder" ; 
+    org:classification "government" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
+    org:alternativeName "Government of Australia"@en ; 
+    org:alternativeName "Government of the Commonwealth of Australia"@en ; 
+    schema:mainEntityOfPage <http://www.australia.gov.au/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Government_of_Australia> ; 
+    schema:sameAs <https://api.crossref.org/funders/100015539> ;
+    schema:sameAs <https://grid.ac/institutions/grid.450426.1> ;
+    schema:sameAs <http://isni.org/isni/0000000101242253> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05d2pc330> ;
+        rdfs:label "Attorney-General's Department Australia" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/005rhrm66> ;
+        rdfs:label "Australian Renewable Energy Agency" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/051wnqr14> ;
+        rdfs:label "Department of Defence" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02wa0fq92> ;
+        rdfs:label "Department of Employment and Workplace Relations" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/042wrtw77> ;
+        rdfs:label "Department of Finance" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/023wsvq95> ;
+        rdfs:label "Department of Foreign Affairs and Trade" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02swcnz29> ;
+        rdfs:label "Department of Health and Aged Care" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00seaxa44> ;
+        rdfs:label "Department of Home Affairs" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/043rbr770> ;
+        rdfs:label "Department of Infrastructure, Transport, Regional Development, Communications and the Arts" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04vctsm14> ;
+        rdfs:label "Department of Social Services" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05dbx6743> ;
+        rdfs:label "Department of Veterans Affairs" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01kjdwm51> ;
+        rdfs:label "Department of the Prime Minister and Cabinet" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02zbc1a16> ;
+        rdfs:label "Department of the Treasury" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04w9gdv63> ;
+        rdfs:label "Parliament of Australia" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01db6n192> ;
+        rdfs:label "Department of Climate Change, Energy, the Environment and Water" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00jks2h96> ;
+        rdfs:label "Department of Agriculture, Fisheries and Forestry" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/021z9m619> ;
+        rdfs:label "Department of Industry, Science and Resources" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(149.12807 -35.28346)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(149.12807 -35.28346)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Canberra" ;
             schema:addressCountry "AU" ;
-            owl:sameAs <http://sws.geonames.org/2172517/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000101242253> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q2991162> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "Australian Capital Territory" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Australia" ;
+                schema:containedInPlace [
+                    schema:name "Oceania" ;
+                    schema:identifier "OC"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2172517/> ;
+    ] ; 
     .

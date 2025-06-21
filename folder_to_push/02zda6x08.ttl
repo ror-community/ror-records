@@ -4,28 +4,65 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02zda6x08> a org:Organization ;
     rdfs:label "Carl R. Darnall Army Medical Center" ;
     schema:name "Carl R. Darnall Army Medical Center" ;
     schema:foundingDate "1965"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Healthcare" ; 
-    org:abbreviation "CRDAMC" ;
-    org:alternativeName "Darnall Army Community Hospital" ;
-    schema:url <https://darnall.tricare.mil> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Carl_R._Darnall_Army_Medical_Center> ;
-    schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-97.77561 31.13489)"^^geo:wktLiteral ;
-            schema:addressLocality "Fort Hood" ;
-            schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/7261291/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
+    org:classification "funder" ; 
+    org:classification "healthcare" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
+    org:abbreviation "CRDAMC"@None ; 
+    org:alternativeName "Darnall Army Community Hospital"@en ; 
+    schema:mainEntityOfPage <https://darnall.tricare.mil> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Carl_R._Darnall_Army_Medical_Center> ; 
+    schema:sameAs <https://api.crossref.org/funders/100010187> ;
+    schema:sameAs <https://grid.ac/institutions/grid.413434.5> ;
     schema:sameAs <http://isni.org/isni/000000040418891X> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q5040673> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/04r3kq386> ;
+        rdfs:label "Uniformed Services University of the Health Sciences" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01tx6pn92> ;
+        rdfs:label "Texas A&M Health Science Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02pttbw34> ;
+        rdfs:label "Baylor College of Medicine" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/03df8gj37> ;
+        rdfs:label "Defense Health Agency" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-97.77561 31.13489)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Fort Cavazos" ;
+            schema:addressCountry "US" ;
+            schema:addressRegion "Texas" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "North America" ;
+                    schema:identifier "NA"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/7261291/> ;
+    ] ; 
     .

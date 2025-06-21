@@ -1,0 +1,50 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/04dxv8v14> a org:Organization ;
+    rdfs:label "ARC Centre of Excellence for Innovations in Peptide and Protein Science" ;
+    schema:name "ARC Centre of Excellence for Innovations in Peptide and Protein Science" ;
+    org:status "active" ;
+    org:classification "facility" ; 
+    dct:created "2021-09-23"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
+    org:abbreviation "CIPPS"@None ; 
+    schema:mainEntityOfPage <https://cipps.org.au/> ;
+    schema:sameAs <https://grid.ac/institutions/grid.511664.1> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/05mmh0f86> ;
+        rdfs:label "Australian Research Council" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/00rqy9422> ;
+        rdfs:label "The University of Queensland" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(153.02809 -27.46794)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Brisbane" ;
+            schema:addressCountry "AU" ;
+            schema:addressRegion "Queensland" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Australia" ;
+                schema:containedInPlace [
+                    schema:name "Oceania" ;
+                    schema:identifier "OC"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2174003/> ;
+    ] ; 
+    .

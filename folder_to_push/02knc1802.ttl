@@ -4,28 +4,51 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02knc1802> a org:Organization ;
     rdfs:label "Alexander T. Augusta Military Medical Center" ;
     schema:name "Alexander T. Augusta Military Medical Center" ;
     schema:foundingDate "2011"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Healthcare" ; 
-    org:abbreviation "FBCH" ;
-    org:alternativeName "Fort Belvoir Community Hospital" ;
-    schema:url <https://belvoirhospital.tricare.mil> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Alexander_T._Augusta_Military_Medical_Center> ;
+    org:classification "healthcare" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
+    org:abbreviation "FBCH"@None ; 
+    org:alternativeName "Fort Belvoir Community Hospital"@en ; 
+    schema:mainEntityOfPage <https://belvoirhospital.tricare.mil> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Alexander_T._Augusta_Military_Medical_Center> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.413661.7> ;
+    schema:sameAs <http://isni.org/isni/0000000405951323> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/04r3kq386> ;
+        rdfs:label "Uniformed Services University of the Health Sciences" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/03df8gj37> ;
+        rdfs:label "Defense Health Agency" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-77.14589 38.7119)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-77.14589 38.7119)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Fort Belvoir" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/7257902/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000405951323> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q5470801> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "Virginia" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "North America" ;
+                    schema:identifier "NA"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/7257902/> ;
+    ] ; 
     .

@@ -4,25 +4,41 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01vwxpj86> a org:Organization ;
-    rdfs:label "Amhara Regional Agricultural Research Institute" ;
-    schema:name "Amhara Regional Agricultural Research Institute" ;
+    rdfs:label "" ;
+    schema:name "" ;
     schema:foundingDate "2000"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Government" ; 
-    org:abbreviation "ARARI" ;
-    schema:url <http://www.arari.gov.et/> ; 
+    org:classification "funder" ; 
+    org:classification "government" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
+    org:abbreviation "ARARI"@None ; 
+    org:alternativeName "Amhara Regional Agricultural Research Institute"@en ; 
+    schema:url <http://arari.gov.et> ; 
+    schema:mainEntityOfPage <https://arari.gov.et> ;
+    schema:sameAs <https://api.crossref.org/funders/501100022767> ;
+    schema:sameAs <https://grid.ac/institutions/grid.464522.3> ;
+    schema:sameAs <http://isni.org/isni/0000000404564858> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(37.39077 11.59364)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(37.39077 11.59364)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Bahir Dar" ;
             schema:addressCountry "ET" ;
-            owl:sameAs <http://sws.geonames.org/342884/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000404564858> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "Amhara" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Ethiopia" ;
+                schema:containedInPlace [
+                    schema:name "Africa" ;
+                    schema:identifier "AF"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/342884/> ;
+    ] ; 
     .

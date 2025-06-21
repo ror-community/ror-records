@@ -13,7 +13,7 @@
     org:status "active" ;
     org:classification "facility" ; 
     dct:created "2021-09-23"^^xsd:date ;
-    dct:modified "2024-10-31"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
     org:alternativeName "Art Research Centre"@en ; 
     org:alternativeName "Art Research Centre SAS"@en ; 
     org:alternativeName "Art Research Centre SAV"@en ; 
@@ -31,19 +31,31 @@
         org:member <https://ror.org/03h7qq074> ;
         rdfs:label "Slovak Academy of Sciences" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02fxw5m16> ;
+        rdfs:label "Institute of Theatre and Film Research of the Art Research Centre of the Slovak Academy of Sciences" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/035cfnw24> ;
+        rdfs:label "Institute of Art History of the Art Research Centre of the Slovak Academy of Sciences" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(17.10674 48.14816)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Bratislava" ;
             schema:addressCountry "SK" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Bratislava Region" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "Slovakia" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

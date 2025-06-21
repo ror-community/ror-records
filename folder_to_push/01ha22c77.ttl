@@ -11,11 +11,11 @@
     rdfs:label "Institut de Radioprotection et de Sûreté Nucléaire" ;
     schema:name "Institut de Radioprotection et de Sûreté Nucléaire" ;
     schema:foundingDate "2001"^^xsd:gYear ;
-    org:status "active" ;
+    org:status "inactive" ;
     org:classification "funder" ; 
     org:classification "nonprofit" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-11-19"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
     org:abbreviation "IRSN"@None ; 
     org:alternativeName "Radioprotection and Nuclear Safety Institute"@en ; 
     schema:url <http://irsn.fr> ; 
@@ -24,19 +24,25 @@
     schema:sameAs <https://api.crossref.org/funders/501100004598> ;
     schema:sameAs <https://grid.ac/institutions/grid.418735.c> ;
     schema:sameAs <http://isni.org/isni/0000000114146236> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "successor" ;
+        org:member <https://ror.org/04dbtaf18> ;
+        rdfs:label "Autorité de sûreté nucléaire et de radioprotection" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(2.29275 48.79325)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Fontenay-aux-Roses" ;
             schema:addressCountry "FR" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Île-de-France" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "France" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

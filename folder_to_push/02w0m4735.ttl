@@ -4,25 +4,44 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02w0m4735> a org:Organization ;
     rdfs:label "Organ and Tissue Authority" ;
     schema:name "Organ and Tissue Authority" ;
     schema:foundingDate "2009"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Government" ; 
-    org:abbreviation "OTA" ;
-    schema:url <https://donatelife.gov.au/> ; 
+    org:classification "funder" ; 
+    org:classification "government" ; 
+    dct:created "2019-11-07"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
+    org:abbreviation "OTA"@None ; 
+    schema:mainEntityOfPage <https://donatelife.gov.au/> ;
+    schema:sameAs <https://api.crossref.org/funders/100015744> ;
+    schema:sameAs <https://grid.ac/institutions/grid.507364.3> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02swcnz29> ;
+        rdfs:label "Department of Health and Aged Care" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(149.12807 -35.28346)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(149.12807 -35.28346)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Canberra" ;
             schema:addressCountry "AU" ;
-            owl:sameAs <http://sws.geonames.org/2172517/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://www.wikidata.org/entity/Q106518029> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "Australian Capital Territory" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Australia" ;
+                schema:containedInPlace [
+                    schema:name "Oceania" ;
+                    schema:identifier "OC"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2172517/> ;
+    ] ; 
     .

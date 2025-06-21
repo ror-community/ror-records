@@ -14,7 +14,7 @@
     org:status "active" ;
     org:classification "education" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-07-29"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
     org:alternativeName "Bordeaux INP"@fr ; 
     schema:mainEntityOfPage <https://www.bordeaux-inp.fr/en> ;
     schema:sameAs <https://grid.ac/institutions/grid.424725.2> ;
@@ -109,19 +109,25 @@
         org:member <https://ror.org/00hgbrg14> ;
         rdfs:label "Fédération française Matériaux sous hautes vitesses de déformation. Application aux matériaux en conditions extrêmes, Procédés et structures" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01tsa0x55> ;
+        rdfs:label "Environnements et Paléoenvironnements Océaniques et Continentaux" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(-0.5805 44.84044)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Bordeaux" ;
             schema:addressCountry "FR" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Nouvelle-Aquitaine" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "France" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

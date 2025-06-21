@@ -13,20 +13,20 @@
     org:status "active" ;
     org:classification "facility" ; 
     dct:created "2024-07-27"^^xsd:date ;
-    dct:modified "2024-07-29"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
     org:abbreviation "CMM"@en ; 
     schema:mainEntityOfPage <https://cmm.centre.uq.edu.au> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/00rqy9422> ;
+        rdfs:label "The University of Queensland" ;
+    ] ; 
     org:hasLink [
         a org:Membership ;
         org:role "related" ;
         org:member <https://ror.org/042mm0k03> ;
         rdfs:label "Microscopy Australia" ;
-    ] ; 
-    org:hasLink [
-        a org:Membership ;
-        org:role "parent" ;
-        org:member <https://ror.org/00rqy9422> ;
-        rdfs:label "University of Queensland" ;
     ] ; 
     schema:location [
         a schema:Place ;
@@ -34,13 +34,13 @@
         schema:address [
             schema:addressLocality "Brisbane" ;
             schema:addressCountry "AU" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Queensland" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "Australia" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Oceania" ;
+                    schema:identifier "OC"
                 ]
             ]
         ] ;

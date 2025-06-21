@@ -4,25 +4,72 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/05h1pdj54> a org:Organization ;
     rdfs:label "National Academy of Educational Sciences of Ukraine" ;
     schema:name "National Academy of Educational Sciences of Ukraine" ;
     schema:foundingDate "1992"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Nonprofit" ; 
-    schema:url <http://naps.gov.ua/en/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/National_Academy_of_Educational_Sciences_of_Ukraine> ;
+    org:classification "nonprofit" ; 
+    dct:created "2019-02-17"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
+    schema:mainEntityOfPage <http://naps.gov.ua/en/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/National_Academy_of_Educational_Sciences_of_Ukraine> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.501346.5> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02qqjk369> ;
+        rdfs:label "Institute for Digitalisation of Education of the NAES of Ukraine" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/049z73212> ;
+        rdfs:label "Institute of Social and Political Psychology" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/047agv396> ;
+        rdfs:label "Ivan Ziaziun Institute of Pedagogical Education and Adult Education of the National Academy of Pedagogical Sciences of Ukraine" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/056reh520> ;
+        rdfs:label "University of Educational Management" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02rdthx75> ;
+        rdfs:label "Institute of Higher Education of NAES of Ukraine" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02bv1h546> ;
+        rdfs:label "Institute of Vocational Education of the National Academy of Educational Sciences of Ukraine" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(30.5238 50.45466)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(30.5238 50.45466)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Kyiv" ;
             schema:addressCountry "UA" ;
-            owl:sameAs <http://sws.geonames.org/703448/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://www.wikidata.org/entity/Q3734241> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "Kyiv City" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Ukraine" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/703448/> ;
+    ] ; 
     .

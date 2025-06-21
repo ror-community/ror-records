@@ -1,0 +1,71 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/00sde4n60> a org:Organization ;
+    rdfs:label "University of Maryland Medical Center" ;
+    schema:name "University of Maryland Medical Center" ;
+    schema:foundingDate "1823"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "healthcare" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
+    org:abbreviation "UMMC"@None ; 
+    schema:mainEntityOfPage <http://umm.edu/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/University_of_Maryland_Medical_Center> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.413036.3> ;
+    schema:sameAs <http://isni.org/isni/0000000404340002> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/04fkqna53> ;
+        rdfs:label "University of Maryland Medical System" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/0011azt19> ;
+        rdfs:label "Saint Agnes Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/052vt9742> ;
+        rdfs:label "St. Joseph Medical Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/04rq5mt64> ;
+        rdfs:label "University of Maryland, Baltimore" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/055yg0521> ;
+        rdfs:label "University of Maryland School of Medicine" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-76.61219 39.29038)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Baltimore" ;
+            schema:addressCountry "US" ;
+            schema:addressRegion "Maryland" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "North America" ;
+                    schema:identifier "NA"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/4347778/> ;
+    ] ; 
+    .

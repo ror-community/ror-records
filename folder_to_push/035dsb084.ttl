@@ -4,27 +4,61 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/035dsb084> a org:Organization ;
-    rdfs:label "Wigner Research Centre for Physics" ;
-    schema:name "Wigner Research Centre for Physics" ;
+    rdfs:label "" ;
+    schema:name "" ;
     schema:foundingDate "1950"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "MTA Wigner RC" ;
-    org:alternativeName "Wigner RCP" ;
-    schema:url <https://wigner.hu/> ; 
+    org:classification "facility" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
+    org:abbreviation "MTA Wigner RC"@None ; 
+    org:alternativeName "Wigner Fizikai Kutatóközpont"@hu ; 
+    org:alternativeName "Wigner RCP"@en ; 
+    org:alternativeName "Wigner Research Centre for Physics"@en ; 
+    schema:url <http://wigner.hu> ; 
+    schema:mainEntityOfPage <https://wigner.hu> ;
+    schema:sameAs <https://api.crossref.org/funders/501100014549> ;
+    schema:sameAs <https://grid.ac/institutions/grid.419766.b> ;
+    schema:sameAs <http://isni.org/isni/0000000417598344> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/008mx9f83> ;
+        rdfs:label "Institute for Particle and Nuclear Physics" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01pdam362> ;
+        rdfs:label "Institute for Solid State Physics and Optics" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/04w6pnc49> ;
+        rdfs:label "Hungarian Research Network" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(19.04045 47.49835)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(19.04045 47.49835)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Budapest" ;
             schema:addressCountry "HU" ;
-            owl:sameAs <http://sws.geonames.org/3054643/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000417598344> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1161072> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "Budapest" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Hungary" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3054643/> ;
+    ] ; 
     .

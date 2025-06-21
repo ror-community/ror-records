@@ -10,12 +10,17 @@
 <https://ror.org/00b5jyb64> a org:Organization ;
     rdfs:label "" ;
     schema:name "" ;
-    org:status "active" ;
+    org:status "withdrawn" ;
     org:classification "healthcare" ; 
     dct:created "2025-01-12"^^xsd:date ;
-    dct:modified "2025-01-22"^^xsd:date ;
-    schema:url <http://kanazawa-municipal-hosp.com> ; 
+    dct:modified "2025-02-26"^^xsd:date ;
     schema:mainEntityOfPage <https://kanazawa-municipal-hosp.com> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "successor" ;
+        org:member <https://ror.org/018jgg490> ;
+        rdfs:label "Kanazawa Municipal Hospital" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(136.61667 36.6)"^^geo:wktLiteral ;

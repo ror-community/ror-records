@@ -8,16 +8,18 @@
 @prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01ej9dk98> a org:Organization ;
-    rdfs:label "University of Melbourne" ;
-    schema:name "University of Melbourne" ;
+    rdfs:label "" ;
+    schema:name "" ;
     schema:foundingDate "1853"^^xsd:gYear ;
     org:status "active" ;
     org:classification "education" ; 
     org:classification "funder" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2025-01-22"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
     org:alternativeName "Melbourne University"@en ; 
-    schema:mainEntityOfPage <http://www.unimelb.edu.au/> ;
+    org:alternativeName "University of Melbourne"@en ; 
+    schema:url <http://unimelb.edu.au> ; 
+    schema:mainEntityOfPage <https://www.unimelb.edu.au> ;
     owl:sameAs <http://en.wikipedia.org/wiki/University_of_Melbourne> ; 
     schema:sameAs <https://api.crossref.org/funders/501100001782> ;
     schema:sameAs <https://grid.ac/institutions/grid.1008.9> ;
@@ -63,6 +65,12 @@
         org:role "child" ;
         org:member <https://ror.org/04fxxe129> ;
         rdfs:label "Botany Foundation" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/011wdec52> ;
+        rdfs:label "Centre of Excellence for Biosecurity Risk Analysis" ;
     ] ; 
     org:hasLink [
         a org:Membership ;
@@ -183,12 +191,6 @@
         org:role "related" ;
         org:member <https://ror.org/01az7g189> ;
         rdfs:label "Stawell Underground Physics Laboratory" ;
-    ] ; 
-    org:hasLink [
-        a org:Membership ;
-        org:role "child" ;
-        org:member <https://ror.org/011wdec52> ;
-        rdfs:label "Centre of Excellence for Biosecurity Risk Analysis" ;
     ] ; 
     schema:location [
         a schema:Place ;

@@ -15,7 +15,7 @@
     org:classification "education" ; 
     org:classification "funder" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-10-21"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
     org:alternativeName "Curtin University of Technology"@en ; 
     schema:url <http://curtin.edu.au> ; 
     schema:mainEntityOfPage <https://www.curtin.edu.au> ;
@@ -41,19 +41,25 @@
         org:member <https://ror.org/024jkkf40> ;
         rdfs:label "Australian Centre for Excellence in Antarctic Science" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00hjft591> ;
+        rdfs:label "Curtin Hub for Immersive Visualisation and eResearch" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(115.8614 -31.95224)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Perth" ;
             schema:addressCountry "AU" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Western Australia" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "Australia" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Oceania" ;
+                    schema:identifier "OC"
                 ]
             ]
         ] ;

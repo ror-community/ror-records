@@ -1,0 +1,48 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/00mffw377> a org:Organization ;
+    rdfs:label "Australian Health Practitioner Regulation Agency" ;
+    schema:name "Australian Health Practitioner Regulation Agency" ;
+    schema:foundingDate "2010"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "funder" ; 
+    org:classification "government" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
+    org:abbreviation "AHPRA"@None ; 
+    schema:mainEntityOfPage <https://www.ahpra.gov.au/> ;
+    schema:sameAs <https://api.crossref.org/funders/501100001068> ;
+    schema:sameAs <https://grid.ac/institutions/grid.468032.b> ;
+    schema:sameAs <http://isni.org/isni/0000000094876740> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02swcnz29> ;
+        rdfs:label "Department of Health and Aged Care" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(144.96332 -37.814)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Melbourne" ;
+            schema:addressCountry "AU" ;
+            schema:addressRegion "Victoria" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Australia" ;
+                schema:containedInPlace [
+                    schema:name "Oceania" ;
+                    schema:identifier "OC"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2158177/> ;
+    ] ; 
+    .

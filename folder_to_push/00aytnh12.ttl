@@ -13,9 +13,9 @@
     org:status "active" ;
     org:classification "facility" ; 
     dct:created "2019-02-17"^^xsd:date ;
-    dct:modified "2024-06-20"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
     org:abbreviation "LBCM"@None ; 
-    schema:mainEntityOfPage <http://www-lbcm.univ-ubs.fr/fr/index.html> ;
+    schema:mainEntityOfPage <https://www-lbcm.univ-ubs.fr> ;
     schema:sameAs <https://grid.ac/institutions/grid.503337.1> ;
     org:hasLink [
         a org:Membership ;
@@ -23,19 +23,31 @@
         org:member <https://ror.org/04ed7fw48> ;
         rdfs:label "Université de Bretagne Sud" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/01b8h3982> ;
+        rdfs:label "Université de Bretagne Occidentale" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02feahw73> ;
+        rdfs:label "Centre National de la Recherche Scientifique" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(-2.76205 47.65688)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Vannes" ;
             schema:addressCountry "FR" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Brittany" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "France" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

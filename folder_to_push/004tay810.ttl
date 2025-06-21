@@ -14,17 +14,20 @@
     org:status "active" ;
     org:classification "government" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-05-30"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
+    org:abbreviation "MSC"@en ; 
     org:abbreviation "MSTS"@None ; 
     org:alternativeName "Military Sea Transportation Service"@en ; 
-    schema:mainEntityOfPage <http://www.msc.navy.mil/> ;
+    org:alternativeName "Naval Station Norfolk, Virginia"@en ; 
+    schema:url <http://sealiftcommand.com> ; 
+    schema:mainEntityOfPage <https://sealiftcommand.com> ;
     owl:sameAs <https://en.wikipedia.org/wiki/Military_Sealift_Command> ; 
     schema:sameAs <https://grid.ac/institutions/grid.487635.b> ;
     org:hasLink [
         a org:Membership ;
         org:role "parent" ;
-        org:member <https://ror.org/03cs53d16> ;
-        rdfs:label "United States Navy" ;
+        org:member <https://ror.org/03ar0mv07> ;
+        rdfs:label "United States Department of the Navy" ;
     ] ; 
     schema:location [
         a schema:Place ;
@@ -32,13 +35,13 @@
         schema:address [
             schema:addressLocality "Arlington" ;
             schema:addressCountry "US" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Virginia" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "United States" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "North America" ;
+                    schema:identifier "NA"
                 ]
             ]
         ] ;

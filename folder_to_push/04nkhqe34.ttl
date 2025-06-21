@@ -1,0 +1,47 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/04nkhqe34> a org:Organization ;
+    rdfs:label "United States Army Intelligence and Security Command" ;
+    schema:name "United States Army Intelligence and Security Command" ;
+    schema:foundingDate "1977"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "government" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
+    org:abbreviation "INSCOM"@None ; 
+    schema:mainEntityOfPage <https://www.army.mil/inscom/?from=wiki> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/United_States_Army_Intelligence_and_Security_Command> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.473417.2> ;
+    schema:sameAs <http://isni.org/isni/0000000122956255> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/035w1gb98> ;
+        rdfs:label "United States Department of the Army" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-78.47668 38.02931)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Charlottesville" ;
+            schema:addressCountry "US" ;
+            schema:addressRegion "Virginia" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "North America" ;
+                    schema:identifier "NA"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/4752031/> ;
+    ] ; 
+    .

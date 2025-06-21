@@ -4,26 +4,67 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/03tdef037> a org:Organization ;
     rdfs:label "Systèmes de Référence Temps-Espace" ;
     schema:name "Systèmes de Référence Temps-Espace" ;
     schema:foundingDate "1998"^^xsd:gYear ;
-    org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "SYRTE" ;
-    schema:url <https://syrte.obspm.fr/spip> ; 
+    org:status "inactive" ;
+    org:classification "facility" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
+    org:abbreviation "SYRTE"@None ; 
+    schema:mainEntityOfPage <https://syrte.obspm.fr/spip> ;
+    schema:sameAs <https://grid.ac/institutions/grid.464088.6> ;
+    schema:sameAs <http://isni.org/isni/0000000094822072> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/04kdfz702> ;
+        rdfs:label "Institut National des Sciences de l'Univers" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/01ph39d13> ;
+        rdfs:label "Laboratoire National de Métrologie et d'Essais" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/029nkcm90> ;
+        rdfs:label "Observatoire de Paris" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02en5vm52> ;
+        rdfs:label "Sorbonne Université" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "successor" ;
+        org:member <https://ror.org/03hgsyv65> ;
+        rdfs:label "Laboratoire Temps Espace" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(2.3488 48.85341)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(2.3488 48.85341)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Paris" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2988507/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000094822072> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q30262445> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "Île-de-France" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2988507/> ;
+    ] ; 
     .

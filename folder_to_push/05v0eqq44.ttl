@@ -1,0 +1,41 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/05v0eqq44> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "2002"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2025-02-26"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
+    org:alternativeName "Harapan Bangsa University"@en ; 
+    org:abbreviation "UHB"@id ; 
+    schema:url <http://uhb.ac.id> ; 
+    schema:mainEntityOfPage <https://www.uhb.ac.id> ;
+    owl:sameAs <https://id.wikipedia.org/wiki/Universitas_Harapan_Bangsa> ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(109.23444 -7.42139)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Purwokerto" ;
+            schema:addressCountry "ID" ;
+            schema:addressRegion "Central Java" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Indonesia" ;
+                schema:containedInPlace [
+                    schema:name "Asia" ;
+                    schema:identifier "AS"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1630328/> ;
+    ] ; 
+    .

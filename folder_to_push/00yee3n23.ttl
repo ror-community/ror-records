@@ -14,9 +14,12 @@
     org:status "active" ;
     org:classification "facility" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-06-20"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
     org:abbreviation "LAB"@None ; 
-    schema:mainEntityOfPage <http://www.obs.u-bordeaux1.fr/EN/index.en.html> ;
+    org:abbreviation "UMR LAB"@fr ; 
+    org:alternativeName "UMR Laboratoire d'Astrophysique de Bordeaux"@fr ; 
+    schema:url <http://astrophy.u-bordeaux.fr> ; 
+    schema:mainEntityOfPage <https://astrophy.u-bordeaux.fr> ;
     schema:sameAs <https://grid.ac/institutions/grid.469948.e> ;
     schema:sameAs <http://isni.org/isni/0000000404051569> ;
     org:hasLink [
@@ -31,19 +34,25 @@
         org:member <https://ror.org/057qpr032> ;
         rdfs:label "Université de Bordeaux" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/03qma7a12> ;
+        rdfs:label "Observatoire Aquitain des Sciences de l'Univers" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(-0.5805 44.84044)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Bordeaux" ;
             schema:addressCountry "FR" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Nouvelle-Aquitaine" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "France" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

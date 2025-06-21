@@ -14,22 +14,22 @@
     org:classification "funder" ; 
     org:classification "government" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-05-02"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
     org:abbreviation "NSF ACI"@None ; 
     schema:mainEntityOfPage <http://www.nsf.gov/div/index.jsp?div=ACI> ;
     schema:sameAs <https://api.crossref.org/funders/100007523> ;
     schema:sameAs <https://grid.ac/institutions/grid.457789.0> ;
     org:hasLink [
         a org:Membership ;
-        org:role "parent" ;
-        org:member <https://ror.org/025kzpk63> ;
-        rdfs:label "Directorate for Computer & Information Science & Engineering" ;
+        org:role "child" ;
+        org:member <https://ror.org/001zwgm84> ;
+        rdfs:label "NSF CI Compass" ;
     ] ; 
     org:hasLink [
         a org:Membership ;
-        org:role "child" ;
-        org:member <https://ror.org/001zwgm84> ;
-        rdfs:label "CI Compass" ;
+        org:role "parent" ;
+        org:member <https://ror.org/025kzpk63> ;
+        rdfs:label "Directorate for Computer & Information Science & Engineering" ;
     ] ; 
     schema:location [
         a schema:Place ;
@@ -37,13 +37,13 @@
         schema:address [
             schema:addressLocality "Arlington" ;
             schema:addressCountry "US" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Virginia" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "United States" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "North America" ;
+                    schema:identifier "NA"
                 ]
             ]
         ] ;

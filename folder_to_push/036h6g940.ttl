@@ -4,28 +4,94 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/036h6g940> a org:Organization ;
     rdfs:label "Government of India" ;
     schema:name "Government of India" ;
     schema:foundingDate "1991"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Government" ; 
-    org:abbreviation "GOI" ;
-    org:alternativeName "Union Government" ;
-    schema:url <http://india.gov.in/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Government_of_India> ;
+    org:classification "government" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
+    org:alternativeName "Central Government"@en ; 
+    org:abbreviation "GOI"@None ; 
+    org:alternativeName "Union Government"@en ; 
+    schema:mainEntityOfPage <http://india.gov.in/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Government_of_India> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.454780.a> ;
+    schema:sameAs <http://isni.org/isni/0000000106832228> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02m388s04> ;
+        rdfs:label "Department of Atomic Energy" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05e7w0f38> ;
+        rdfs:label "Ministry of External Affairs" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04pqetg36> ;
+        rdfs:label "Ministry of Health and Family Welfare" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/050kded90> ;
+        rdfs:label "Ministry of Minority Affairs" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03emtbt60> ;
+        rdfs:label "Ministry of Science and Technology" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01v7v5m29> ;
+        rdfs:label "Uttarakhand Jal Sansthan" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/052zwa538> ;
+        rdfs:label "Vision Group on Science and Technology" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00gm8tg57> ;
+        rdfs:label "Ministry of Steel" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04e5av293> ;
+        rdfs:label "Ministry of Mines" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(77.2148 28.62137)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(77.2148 28.62137)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "New Delhi" ;
             schema:addressCountry "IN" ;
-            owl:sameAs <http://sws.geonames.org/1261481/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000106832228> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q2767140> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "Delhi" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "India" ;
+                schema:containedInPlace [
+                    schema:name "Asia" ;
+                    schema:identifier "AS"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1261481/> ;
+    ] ; 
     .

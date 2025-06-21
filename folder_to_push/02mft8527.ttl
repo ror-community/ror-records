@@ -4,23 +4,48 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02mft8527> a org:Organization ;
     rdfs:label "Bentley Health Service" ;
     schema:name "Bentley Health Service" ;
     org:status "active" ;
-    org:classification "Healthcare" ; 
-    org:abbreviation "BHS" ;
-    org:alternativeName "Bentley Health Service WA" ;
-    schema:url <https://www.bhs.health.wa.gov.au> ; 
+    org:classification "healthcare" ; 
+    dct:created "2023-11-08"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
+    org:abbreviation "BHS"@None ; 
+    org:alternativeName "Bentley Health Service WA"@en ; 
+    org:alternativeName "Bentley Hospital"@en ; 
+    schema:mainEntityOfPage <https://www.bhs.health.wa.gov.au> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02baa5g50> ;
+        rdfs:label "East Metropolitan Health Service" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/05dzwvx76> ;
+        rdfs:label "Royal Perth Bentley Group" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(115.92473 -32.00224)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(115.92473 -32.00224)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Bentley" ;
             schema:addressCountry "AU" ;
-            owl:sameAs <http://sws.geonames.org/2076752/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
+            schema:addressRegion "Western Australia" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Australia" ;
+                schema:containedInPlace [
+                    schema:name "Oceania" ;
+                    schema:identifier "OC"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2076752/> ;
+    ] ; 
     .

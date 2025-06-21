@@ -8,16 +8,19 @@
 @prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/0384j8v12> a org:Organization ;
-    rdfs:label "University of Sydney" ;
-    schema:name "University of Sydney" ;
+    rdfs:label "" ;
+    schema:name "" ;
     schema:foundingDate "1850"^^xsd:gYear ;
     org:status "active" ;
     org:classification "education" ; 
+    org:classification "funder" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2023-07-27"^^xsd:date ;
-    org:alternativeName "Sydney University"@None ; 
+    dct:modified "2025-02-26"^^xsd:date ;
+    org:alternativeName "Sydney University"@en ; 
     org:abbreviation "USYD"@None ; 
-    schema:mainEntityOfPage <http://sydney.edu.au/> ;
+    org:alternativeName "University of Sydney"@en ; 
+    schema:url <http://sydney.edu.au> ; 
+    schema:mainEntityOfPage <https://www.sydney.edu.au> ;
     owl:sameAs <http://en.wikipedia.org/wiki/University_of_Sydney> ; 
     schema:sameAs <https://api.crossref.org/funders/501100001774> ;
     schema:sameAs <https://grid.ac/institutions/grid.1013.3> ;
@@ -160,13 +163,13 @@
         schema:address [
             schema:addressLocality "Sydney" ;
             schema:addressCountry "AU" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "New South Wales" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "Australia" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Oceania" ;
+                    schema:identifier "OC"
                 ]
             ]
         ] ;

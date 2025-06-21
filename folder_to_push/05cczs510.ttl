@@ -4,28 +4,52 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/05cczs510> a org:Organization ;
     rdfs:label "Ukrainian Medical Stomatological Academy" ;
     schema:name "Ukrainian Medical Stomatological Academy" ;
     schema:foundingDate "1921"^^xsd:gYear ;
-    org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "PUMSA" ;
-    org:alternativeName "Ukrayinska Medychna Stomatologichna Akademiya" ;
-    schema:url <http://www.umsa.poltava.ua/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Ukrainian_Medical_Stomatological_Academy> ;
+    org:status "inactive" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
+    org:abbreviation "PUMSA"@None ; 
+    org:alternativeName "Poltava Ukrainian Medical Stomatological Academy"@en ; 
+    org:alternativeName "Ukrayinska Medychna Stomatologichna Akademiya"@None ; 
+    schema:mainEntityOfPage <http://www.umsa.poltava.ua/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Ukrainian_Medical_Stomatological_Academy> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.416987.5> ;
+    schema:sameAs <http://isni.org/isni/0000000403872568> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00kx55e87> ;
+        rdfs:label "Poltava State Medical University" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "successor" ;
+        org:member <https://ror.org/00kx55e87> ;
+        rdfs:label "Poltava State Medical University" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(34.55367 49.58925)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(34.55367 49.58925)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Poltava" ;
             schema:addressCountry "UA" ;
-            owl:sameAs <http://sws.geonames.org/696643/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000403872568> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q4470499> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "Poltava" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Ukraine" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/696643/> ;
+    ] ; 
     .

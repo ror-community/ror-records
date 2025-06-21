@@ -1,0 +1,44 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/02w95hf30> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "1947"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "other" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
+    org:abbreviation "DHMZ"@None ; 
+    org:abbreviation "MHS"@None ; 
+    org:alternativeName "Meteorological and Hydrological Service"@en ; 
+    schema:url <http://meteo.hr> ; 
+    schema:mainEntityOfPage <https://meteo.hr> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Croatian_Meteorological_and_Hydrological_Service> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.433746.1> ;
+    schema:sameAs <http://isni.org/isni/0000000404523984> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(15.97798 45.81444)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Zagreb" ;
+            schema:addressCountry "HR" ;
+            schema:addressRegion "Zagreb" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Croatia" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3186886/> ;
+    ] ; 
+    .

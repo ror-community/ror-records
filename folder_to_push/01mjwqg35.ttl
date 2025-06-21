@@ -1,0 +1,40 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/01mjwqg35> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "1994"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "company" ; 
+    dct:created "2025-02-26"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
+    org:alternativeName "TYDEX"@en ; 
+    org:alternativeName "Тидекс"@ru ; 
+    schema:url <http://tydexoptics.com> ; 
+    schema:mainEntityOfPage <https://www.tydexoptics.com> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(30.31413 59.93863)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "St Petersburg" ;
+            schema:addressCountry "RU" ;
+            schema:addressRegion "St.-Petersburg" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Russia" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/498817/> ;
+    ] ; 
+    .

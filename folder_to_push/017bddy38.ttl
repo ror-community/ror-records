@@ -4,27 +4,52 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/017bddy38> a org:Organization ;
     rdfs:label "Blacktown & Mount Druitt Hospital" ;
     schema:name "Blacktown & Mount Druitt Hospital" ;
     schema:foundingDate "1965"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Healthcare" ; 
-    org:abbreviation "BMDH" ;
-    org:alternativeName "Blacktown Hospital" ;
-    schema:url <http://www.wslhd.health.nsw.gov.au/Blacktown-Mount-Druitt-Hospital> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Blacktown_Hospital> ;
+    org:classification "healthcare" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
+    org:abbreviation "BMDH"@None ; 
+    org:alternativeName "Blacktown Hospital"@en ; 
+    org:alternativeName "Mount Druitt Hospital"@en ; 
+    schema:mainEntityOfPage <http://www.wslhd.health.nsw.gov.au/Blacktown-Mount-Druitt-Hospital> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Blacktown_Hospital> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.460687.b> ;
+    schema:sameAs <http://isni.org/isni/0000000405727882> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/0384j8v12> ;
+        rdfs:label "The University of Sydney" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03t52dk35> ;
+        rdfs:label "Western Sydney University" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(150.91667 -33.76667)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(150.91667 -33.76667)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Blacktown" ;
             schema:addressCountry "AU" ;
-            owl:sameAs <http://sws.geonames.org/2175411/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000405727882> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "New South Wales" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Australia" ;
+                schema:containedInPlace [
+                    schema:name "Oceania" ;
+                    schema:identifier "OC"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2175411/> ;
+    ] ; 
     .

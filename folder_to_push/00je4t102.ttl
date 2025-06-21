@@ -15,7 +15,7 @@
     org:classification "funder" ; 
     org:classification "government" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-10-31"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
     org:alternativeName "NAN Ukraine"@en ; 
     org:alternativeName "Natsional’na Akademiya Nauk Ukrayiny"@None ; 
     schema:mainEntityOfPage <http://www.nas.gov.ua/en/> ;
@@ -545,19 +545,25 @@
         org:member <https://ror.org/0067sfd77> ;
         rdfs:label "Kuras Institute of Political and Ethnic Studies of the National Academy of Sciences of Ukraine" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/032vkvz43> ;
+        rdfs:label "State Organization "Institute of Market and Economic&Ecological Researches of NAS of Ukraine"" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(30.5238 50.45466)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Kyiv" ;
             schema:addressCountry "UA" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Kyiv City" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "Ukraine" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

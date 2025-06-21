@@ -1,0 +1,48 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/001gedw60> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "2000"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2025-02-26"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
+    org:abbreviation "ITESHU"@es ; 
+    org:alternativeName "ITS Huichapan"@es ; 
+    org:alternativeName "TecNM Campus Huichapan"@es ; 
+    org:alternativeName "Tecnológico Nacional de México Campus Huichapan"@es ; 
+    schema:url <http://iteshu.edu.mx> ; 
+    schema:mainEntityOfPage <https://www.iteshu.edu.mx/iteshu/> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/00davry38> ;
+        rdfs:label "Tecnológico Nacional de México" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-99.65197 20.38929)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Huichapan Municipality" ;
+            schema:addressCountry "MX" ;
+            schema:addressRegion "Hidalgo" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Mexico" ;
+                schema:containedInPlace [
+                    schema:name "North America" ;
+                    schema:identifier "NA"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/8582049/> ;
+    ] ; 
+    .

@@ -15,7 +15,7 @@
     org:classification "education" ; 
     org:classification "facility" ; 
     dct:created "2022-12-15"^^xsd:date ;
-    dct:modified "2024-06-20"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
     org:abbreviation "OSU OSUNA"@fr ; 
     org:abbreviation "OSUNA"@fr ; 
     org:alternativeName "Universe Sciences Observatory of Nantes Atlantique"@en ; 
@@ -23,27 +23,9 @@
     schema:sameAs <http://isni.org/isni/0000000446490236> ;
     org:hasLink [
         a org:Membership ;
-        org:role "related" ;
-        org:member <https://ror.org/01kxesq83> ;
-        rdfs:label "Laboratoire de Physique Subatomique et des Technologies Associées" ;
-    ] ; 
-    org:hasLink [
-        a org:Membership ;
-        org:role "related" ;
+        org:role "child" ;
         org:member <https://ror.org/04fm0sh33> ;
         rdfs:label "Laboratoire de Planétologie et Géosciences" ;
-    ] ; 
-    org:hasLink [
-        a org:Membership ;
-        org:role "related" ;
-        org:member <https://ror.org/03x42jk29> ;
-        rdfs:label "Université Gustave Eiffel" ;
-    ] ; 
-    org:hasLink [
-        a org:Membership ;
-        org:role "related" ;
-        org:member <https://ror.org/0175hh227> ;
-        rdfs:label "Conservatoire National des Arts et Métiers" ;
     ] ; 
     org:hasLink [
         a org:Membership ;
@@ -83,15 +65,27 @@
     ] ; 
     org:hasLink [
         a org:Membership ;
-        org:role "child" ;
+        org:role "related" ;
+        org:member <https://ror.org/01kxesq83> ;
+        rdfs:label "Laboratoire de Physique Subatomique et des Technologies Associées" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
         org:member <https://ror.org/04fm0sh33> ;
         rdfs:label "Laboratoire de Planétologie et Géosciences" ;
     ] ; 
     org:hasLink [
         a org:Membership ;
-        org:role "child" ;
-        org:member <https://ror.org/05sat2s07> ;
-        rdfs:label "Littoral, Environnement, Télédétection, Géomatique" ;
+        org:role "related" ;
+        org:member <https://ror.org/03x42jk29> ;
+        rdfs:label "Université Gustave Eiffel" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/0175hh227> ;
+        rdfs:label "Conservatoire National des Arts et Métiers" ;
     ] ; 
     schema:location [
         a schema:Place ;
@@ -99,13 +93,13 @@
         schema:address [
             schema:addressLocality "Nantes" ;
             schema:addressCountry "FR" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Pays de la Loire" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "France" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

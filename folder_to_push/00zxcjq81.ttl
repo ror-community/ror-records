@@ -1,0 +1,41 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/00zxcjq81> a org:Organization ;
+    rdfs:label "European Powder Metallugy Association" ;
+    schema:name "European Powder Metallugy Association" ;
+    schema:foundingDate "1989"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "other" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
+    org:abbreviation "EPMA"@None ; 
+    schema:url <http://epma.com> ; 
+    schema:mainEntityOfPage <https://www.epma.com> ;
+    schema:sameAs <https://grid.ac/institutions/grid.434700.4> ;
+    schema:sameAs <http://isni.org/isni/0000000107288340> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(4.34878 50.85045)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Brussels" ;
+            schema:addressCountry "BE" ;
+            schema:addressRegion "Brussels Capital" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Belgium" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2800866/> ;
+    ] ; 
+    .

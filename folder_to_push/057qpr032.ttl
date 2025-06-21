@@ -15,7 +15,7 @@
     org:classification "education" ; 
     org:classification "funder" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-07-29"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
     schema:mainEntityOfPage <http://www.u-bordeaux.com/> ;
     owl:sameAs <http://en.wikipedia.org/wiki/University_of_Bordeaux> ; 
     schema:sameAs <https://api.crossref.org/funders/501100006251> ;
@@ -234,12 +234,6 @@
     org:hasLink [
         a org:Membership ;
         org:role "child" ;
-        org:member <https://ror.org/03qma7a12> ;
-        rdfs:label "Observatoire Aquitain des Sciences de l'Univers" ;
-    ] ; 
-    org:hasLink [
-        a org:Membership ;
-        org:role "child" ;
         org:member <https://ror.org/04xz2my07> ;
         rdfs:label "Oenology Research Unit" ;
     ] ; 
@@ -411,19 +405,31 @@
         org:member <https://ror.org/01sgwka45> ;
         rdfs:label "Microscopie Fonctionnelle du Vivant" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03qma7a12> ;
+        rdfs:label "Observatoire Aquitain des Sciences de l'Univers" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "predecessor" ;
+        org:member <https://ror.org/04gbzm373> ;
+        rdfs:label "Université Bordeaux Segalen" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(-0.5805 44.84044)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Bordeaux" ;
             schema:addressCountry "FR" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Nouvelle-Aquitaine" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "France" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

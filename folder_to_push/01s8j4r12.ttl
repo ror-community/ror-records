@@ -1,0 +1,48 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/01s8j4r12> a org:Organization ;
+    rdfs:label "State Herbarium of South Australia" ;
+    schema:name "State Herbarium of South Australia" ;
+    schema:foundingDate "1954"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "archive" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
+    org:abbreviation "AD"@None ; 
+    org:alternativeName "South Australian Herbarium"@en ; 
+    schema:mainEntityOfPage <https://www.environment.sa.gov.au/topics/Science/science-research/State_Herbarium> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/State_Herbarium_of_South_Australia> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.410671.5> ;
+    schema:sameAs <http://isni.org/isni/0000000092271975> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/053gv9453> ;
+        rdfs:label "Department for Environment and Water" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(138.59863 -34.92866)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Adelaide" ;
+            schema:addressCountry "AU" ;
+            schema:addressRegion "South Australia" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Australia" ;
+                schema:containedInPlace [
+                    schema:name "Oceania" ;
+                    schema:identifier "OC"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2078025/> ;
+    ] ; 
+    .

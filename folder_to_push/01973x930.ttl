@@ -14,7 +14,7 @@
     org:status "active" ;
     org:classification "government" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-05-30"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
     org:abbreviation "DAF"@None ; 
     org:alternativeName "U.S. Department of the Air Force"@en ; 
     schema:url <http://af.mil> ; 
@@ -30,6 +30,12 @@
     ] ; 
     org:hasLink [
         a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02ypept83> ;
+        rdfs:label "United States Space Force" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
         org:role "parent" ;
         org:member <https://ror.org/0447fe631> ;
         rdfs:label "United States Department of Defense" ;
@@ -37,8 +43,14 @@
     org:hasLink [
         a org:Membership ;
         org:role "child" ;
-        org:member <https://ror.org/02ypept83> ;
-        rdfs:label "United States Space Force" ;
+        org:member <https://ror.org/02m4c1x70> ;
+        rdfs:label "U.S. Air Force Materiel Command" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05wnp9598> ;
+        rdfs:label "Air Education and Training Command" ;
     ] ; 
     schema:location [
         a schema:Place ;
@@ -46,13 +58,13 @@
         schema:address [
             schema:addressLocality "Washington" ;
             schema:addressCountry "US" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "District of Columbia" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "United States" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "North America" ;
+                    schema:identifier "NA"
                 ]
             ]
         ] ;

@@ -14,23 +14,12 @@
     org:status "active" ;
     org:classification "facility" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-09-16"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
     org:abbreviation "OASU"@None ; 
+    schema:url <http://oasu.fr> ; 
     schema:mainEntityOfPage <http://www.oasu.u-bordeaux.fr/index.php/present2015.html> ;
     schema:sameAs <https://grid.ac/institutions/grid.470942.c> ;
     schema:sameAs <http://isni.org/isni/0000000119589570> ;
-    org:hasLink [
-        a org:Membership ;
-        org:role "parent" ;
-        org:member <https://ror.org/04kdfz702> ;
-        rdfs:label "Institut National des Sciences de l'Univers" ;
-    ] ; 
-    org:hasLink [
-        a org:Membership ;
-        org:role "parent" ;
-        org:member <https://ror.org/03pbgwk21> ;
-        rdfs:label "Université Bordeaux Montaigne" ;
-    ] ; 
     org:hasLink [
         a org:Membership ;
         org:role "parent" ;
@@ -40,14 +29,32 @@
     org:hasLink [
         a org:Membership ;
         org:role "parent" ;
+        org:member <https://ror.org/02feahw73> ;
+        rdfs:label "Centre National de la Recherche Scientifique" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/04mv1z119> ;
+        rdfs:label "La Rochelle Université" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
         org:member <https://ror.org/057qpr032> ;
         rdfs:label "Université de Bordeaux" ;
     ] ; 
     org:hasLink [
         a org:Membership ;
-        org:role "parent" ;
-        org:member <https://ror.org/01frn9647> ;
-        rdfs:label "Université de Pau et des Pays de l'Adour" ;
+        org:role "child" ;
+        org:member <https://ror.org/00yee3n23> ;
+        rdfs:label "Laboratoire d'Astrophysique de Bordeaux" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01tsa0x55> ;
+        rdfs:label "Environnements et Paléoenvironnements Océaniques et Continentaux" ;
     ] ; 
     schema:location [
         a schema:Place ;
@@ -55,13 +62,13 @@
         schema:address [
             schema:addressLocality "Floirac" ;
             schema:addressCountry "FR" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Nouvelle-Aquitaine" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "France" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

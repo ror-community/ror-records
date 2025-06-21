@@ -4,26 +4,49 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02ett6548> a org:Organization ;
     rdfs:label "Epworth Hospital" ;
     schema:name "Epworth Hospital" ;
     schema:foundingDate "1920"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Healthcare" ; 
-    schema:url <https://www.epworth.org.au> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Epworth_Hospital> ;
+    org:classification "healthcare" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
+    schema:mainEntityOfPage <https://www.epworth.org.au> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Epworth_Hospital> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.414539.e> ;
+    schema:sameAs <http://isni.org/isni/0000000104595396> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01ej9dk98> ;
+        rdfs:label "The University of Melbourne" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02czsnj07> ;
+        rdfs:label "Deakin University" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(144.96332 -37.814)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(144.96332 -37.814)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Melbourne" ;
             schema:addressCountry "AU" ;
-            owl:sameAs <http://sws.geonames.org/2158177/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000104595396> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q5384060> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "Victoria" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Australia" ;
+                schema:containedInPlace [
+                    schema:name "Oceania" ;
+                    schema:identifier "OC"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2158177/> ;
+    ] ; 
     .

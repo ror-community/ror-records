@@ -4,26 +4,63 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/05p4q8207> a org:Organization ;
     rdfs:label "Tripler Army Medical Center" ;
     schema:name "Tripler Army Medical Center" ;
     schema:foundingDate "1907"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Healthcare" ; 
-    schema:url <http://www.tamc.amedd.army.mil/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Tripler_Army_Medical_Center> ;
+    org:classification "funder" ; 
+    org:classification "healthcare" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
+    schema:mainEntityOfPage <http://www.tamc.amedd.army.mil/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Tripler_Army_Medical_Center> ; 
+    schema:sameAs <https://api.crossref.org/funders/100010196> ;
+    schema:sameAs <https://grid.ac/institutions/grid.417301.0> ;
+    schema:sameAs <http://isni.org/isni/000000040474295X> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/04r3kq386> ;
+        rdfs:label "Uniformed Services University of the Health Sciences" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01wspgy28> ;
+        rdfs:label "University of Hawaiʻi at Mānoa" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/028zspe92> ;
+        rdfs:label "VA Pacific Islands Health Care System" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/03df8gj37> ;
+        rdfs:label "Defense Health Agency" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-157.85833 21.30694)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-157.85833 21.30694)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Honolulu" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/5856195/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/000000040474295X> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q7843582> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "Hawaii" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "North America" ;
+                    schema:identifier "NA"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/5856195/> ;
+    ] ; 
     .

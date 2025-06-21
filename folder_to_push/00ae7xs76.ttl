@@ -4,25 +4,42 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/00ae7xs76> a org:Organization ;
     rdfs:label "Laboratoire énergétique mécanique électromagnétisme" ;
     schema:name "Laboratoire énergétique mécanique électromagnétisme" ;
     schema:foundingDate "2009"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "LEME" ;
-    org:alternativeName "Energetics, Mechanics and Electromagnetism Laboratory" ;
-    schema:url <https://leme.parisnanterre.fr> ; 
+    org:classification "facility" ; 
+    dct:created "2023-04-27"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
+    org:alternativeName "Energetics, Mechanics and Electromagnetism Laboratory"@en ; 
+    org:abbreviation "LEME"@None ; 
+    schema:mainEntityOfPage <https://leme.parisnanterre.fr> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/013bkhk48> ;
+        rdfs:label "Université Paris Nanterre" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(2.19311 48.82358)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(2.19311 48.82358)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Ville-d'Avray" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2968819/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://www.wikidata.org/entity/Q51784861> ;
+            schema:addressRegion "Île-de-France" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2968819/> ;
+    ] ; 
     .

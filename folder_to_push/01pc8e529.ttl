@@ -1,0 +1,46 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/01pc8e529> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "1973"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
+    org:abbreviation "ZSMPhU"@en ; 
+    org:abbreviation "ZSMU"@None ; 
+    org:alternativeName "Zaporizhia State Medical University"@en ; 
+    org:alternativeName "Запорожский государственный медицинский университет"@ru ; 
+    org:alternativeName "Запорізький державний медичний університет"@uk ; 
+    schema:url <http://int.mphu.edu.ua> ; 
+    schema:mainEntityOfPage <https://int.mphu.edu.ua> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Zaporizhia_State_Medical_University> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.431132.6> ;
+    schema:sameAs <http://isni.org/isni/0000000446902958> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(35.11714 47.85167)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Zaporizhzhya" ;
+            schema:addressCountry "UA" ;
+            schema:addressRegion "Zaporizhzhia" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Ukraine" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/687700/> ;
+    ] ; 
+    .

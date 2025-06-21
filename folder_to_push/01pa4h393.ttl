@@ -14,8 +14,9 @@
     org:status "active" ;
     org:classification "facility" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-06-20"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
     org:abbreviation "CEREGE"@None ; 
+    org:abbreviation "UMR CEREGE"@fr ; 
     schema:mainEntityOfPage <https://www.cerege.fr/en> ;
     schema:sameAs <https://grid.ac/institutions/grid.498067.4> ;
     schema:sameAs <http://isni.org/isni/0000000108454216> ;
@@ -37,19 +38,43 @@
         org:member <https://ror.org/04kdfz702> ;
         rdfs:label "Institut National des Sciences de l'Univers" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/00f945z63> ;
+        rdfs:label "Institut Pytheas" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/05q3vnk25> ;
+        rdfs:label "Institut de Recherche pour le Développement" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/003vg9w96> ;
+        rdfs:label "Institut National de Recherche pour l'Agriculture, l'Alimentation et l'Environnement" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/013cjyk83> ;
+        rdfs:label "Université Paris Sciences et Lettres" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(5.44973 43.5283)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Aix-en-Provence" ;
             schema:addressCountry "FR" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Provence-Alpes-Côte d'Azur" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "France" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

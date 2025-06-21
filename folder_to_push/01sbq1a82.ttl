@@ -15,7 +15,7 @@
     org:classification "education" ; 
     org:classification "funder" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-12-10"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
     org:abbreviation "UD"@None ; 
     schema:url <http://udel.edu> ; 
     schema:mainEntityOfPage <https://www.udel.edu> ;
@@ -43,6 +43,12 @@
     ] ; 
     org:hasLink [
         a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01tqfb593> ;
+        rdfs:label "Delaware Asteroseismic Research Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
         org:role "related" ;
         org:member <https://ror.org/00jyx0v10> ;
         rdfs:label "Alfred I. duPont Hospital for Children" ;
@@ -50,8 +56,8 @@
     org:hasLink [
         a org:Membership ;
         org:role "child" ;
-        org:member <https://ror.org/01tqfb593> ;
-        rdfs:label "Delaware Asteroseismic Research Center" ;
+        org:member <https://ror.org/00e0jd726> ;
+        rdfs:label "Delaware Geological Survey" ;
     ] ; 
     schema:location [
         a schema:Place ;
@@ -59,13 +65,13 @@
         schema:address [
             schema:addressLocality "Newark" ;
             schema:addressCountry "US" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Delaware" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "United States" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "North America" ;
+                    schema:identifier "NA"
                 ]
             ]
         ] ;

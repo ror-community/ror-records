@@ -4,27 +4,47 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02dbwrk72> a org:Organization ;
-    rdfs:label "Naval Medical Research Unit Six" ;
-    schema:name "Naval Medical Research Unit Six" ;
+    rdfs:label "" ;
+    schema:name "" ;
     schema:foundingDate "1983"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Healthcare" ; 
-    org:abbreviation "NAMRU-6" ;
-    schema:url <http://www.med.navy.mil/sites/NAMRU6/Pages/namru6.htm> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Naval_Medical_Research_Unit_Six> ;
+    org:classification "healthcare" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
+    org:abbreviation "NAMRU SOUTH"@en ; 
+    org:abbreviation "NAMRU-6"@None ; 
+    org:alternativeName "Naval Medical Research Unit Six"@en ; 
+    org:alternativeName "U.S. Naval Medical Research Unit SOUTH"@en ; 
+    schema:mainEntityOfPage <https://www.med.navy.mil/Naval-Medical-Research-Command/R-D-Commands/Naval-Medical-Research-Unit-SOUTH/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Naval_Medical_Research_Unit_Six> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.415929.2> ;
+    schema:sameAs <http://isni.org/isni/0000000404866610> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/05f421b09> ;
+        rdfs:label "Naval Medical Research Command" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-77.02824 -12.04318)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-77.02824 -12.04318)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Lima" ;
             schema:addressCountry "PE" ;
-            owl:sameAs <http://sws.geonames.org/3936456/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000404866610> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q6981864> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "Lima Province" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Peru" ;
+                schema:containedInPlace [
+                    schema:name "South America" ;
+                    schema:identifier "SA"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3936456/> ;
+    ] ; 
     .

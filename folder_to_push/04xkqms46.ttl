@@ -4,26 +4,50 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/04xkqms46> a org:Organization ;
     rdfs:label "European Multidisciplinary Seafloor and water column Observatory" ;
     schema:name "European Multidisciplinary Seafloor and water column Observatory" ;
     schema:foundingDate "2016"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "EMSO" ;
-    schema:url <https://www.emso.eu> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/European_Multidisciplinary_Seafloor_and_water_column_Observatory> ;
+    org:classification "facility" ; 
+    dct:created "2022-10-27"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
+    org:abbreviation "EMSO"@None ; 
+    org:abbreviation "EMSO ERIC"@None ; 
+    schema:mainEntityOfPage <https://www.emso.eu> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/European_Multidisciplinary_Seafloor_and_water_column_Observatory> ; 
+    schema:sameAs <http://isni.org/isni/0000000506322948> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00qps9a02> ;
+        rdfs:label "Istituto Nazionale di Geofisica e Vulcanologia" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0312sjw67> ;
+        rdfs:label "EMSO-France" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(12.51133 41.89193)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(12.51133 41.89193)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Rome" ;
             schema:addressCountry "IT" ;
-            owl:sameAs <http://sws.geonames.org/3169070/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000506322948> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q17075202> ;
+            schema:addressRegion "Lazio" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Italy" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3169070/> ;
+    ] ; 
     .

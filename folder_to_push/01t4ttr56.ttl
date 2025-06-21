@@ -14,23 +14,35 @@
     org:status "active" ;
     org:classification "education" ; 
     dct:created "2024-08-19"^^xsd:date ;
-    dct:modified "2024-08-21"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
     org:alternativeName "ScaDS.AI"@en ; 
     schema:url <http://scads.ai> ; 
     schema:mainEntityOfPage <https://scads.ai> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/03s7gtk40> ;
+        rdfs:label "Leipzig University" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/042aqky30> ;
+        rdfs:label "TU Dresden" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(13.73832 51.05089)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Dresden" ;
             schema:addressCountry "DE" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Saxony" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "Germany" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

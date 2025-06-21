@@ -15,7 +15,7 @@
     org:classification "education" ; 
     org:classification "funder" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-10-21"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
     org:alternativeName "University of Minnesota, Twin Cities"@en ; 
     schema:url <http://umn.edu> ; 
     schema:mainEntityOfPage <https://twin-cities.umn.edu> ;
@@ -39,7 +39,7 @@
         a org:Membership ;
         org:role "child" ;
         org:member <https://ror.org/03a976s92> ;
-        rdfs:label "Cedar Creek Long Term Ecological Research" ;
+        rdfs:label "Cedar Creek Ecosystem Science Reserve" ;
     ] ; 
     org:hasLink [
         a org:Membership ;
@@ -125,19 +125,25 @@
         org:member <https://ror.org/03e1ayz78> ;
         rdfs:label "University of Minnesota Medical Center" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02vq8p756> ;
+        rdfs:label "University of Minnesota Itasca Biological Station and Laboratories" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(-93.26384 44.97997)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Minneapolis" ;
             schema:addressCountry "US" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Minnesota" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "United States" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "North America" ;
+                    schema:identifier "NA"
                 ]
             ]
         ] ;

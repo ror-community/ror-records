@@ -4,23 +4,40 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/05mzhke23> a org:Organization ;
     rdfs:label "Kansai Photon Science Institute" ;
     schema:name "Kansai Photon Science Institute" ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    schema:url <https://www.qst.go.jp/site/kansai> ; 
+    org:classification "facility" ; 
+    dct:created "2022-10-27"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
+    schema:mainEntityOfPage <https://www.qst.go.jp/site/kansai> ;
+    schema:sameAs <http://isni.org/isni/0000000474361394> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/020rbyg91> ;
+        rdfs:label "National Institutes for Quantum Science and Technology" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(135.82128 34.73781)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(135.82128 34.73781)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Kizugawa-shi" ;
             schema:addressCountry "JP" ;
-            owl:sameAs <http://sws.geonames.org/1859202/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000474361394> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q39022389> ;
+            schema:addressRegion "Kyoto" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Japan" ;
+                schema:containedInPlace [
+                    schema:name "Asia" ;
+                    schema:identifier "AS"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1859202/> ;
+    ] ; 
     .

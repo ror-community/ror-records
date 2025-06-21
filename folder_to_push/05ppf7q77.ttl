@@ -4,27 +4,63 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/05ppf7q77> a org:Organization ;
     rdfs:label "Laboratoire atmosphères, milieux, observations spatiales" ;
     schema:name "Laboratoire atmosphères, milieux, observations spatiales" ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "LATMOS" ;
-    org:alternativeName "Atmospheres Laboratory Environments, Observations Spatiales" ;
-    schema:url <https://www.latmos.ipsl.fr> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Laboratoire_atmosph%C3%A8res,_milieux,_observations_spatiales> ;
+    org:classification "facility" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
+    org:alternativeName "Atmospheres Laboratory Environments, Observations Spatiales"@en ; 
+    org:abbreviation "LATMOS"@None ; 
+    org:abbreviation "UMR LATMOS"@fr ; 
+    schema:mainEntityOfPage <https://www.latmos.ipsl.fr> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Laboratoire_atmosph%C3%A8res,_milieux,_observations_spatiales> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.494619.7> ;
+    schema:sameAs <http://isni.org/isni/0000000104563087> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02en5vm52> ;
+        rdfs:label "Sorbonne Université" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/03mkjjy25> ;
+        rdfs:label "Université de Versailles Saint-Quentin-en-Yvelines" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02feahw73> ;
+        rdfs:label "Centre National de la Recherche Scientifique" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/04h1h0y33> ;
+        rdfs:label "Centre National d'Études Spatiales" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(2.07393 48.77334)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(2.07393 48.77334)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Guyancourt" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/3014143/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000104563087> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q3214361> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "Île-de-France" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3014143/> ;
+    ] ; 
     .

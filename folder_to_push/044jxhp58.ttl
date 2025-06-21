@@ -15,7 +15,7 @@
     org:classification "facility" ; 
     org:classification "funder" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-10-21"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
     schema:url <http://ifremer.fr> ; 
     schema:mainEntityOfPage <https://www.ifremer.fr> ;
     owl:sameAs <https://en.wikipedia.org/wiki/IFREMER> ; 
@@ -88,19 +88,25 @@
         org:member <https://ror.org/001j26r80> ;
         rdfs:label "Ecosystèmes Insulaires Océaniens" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0518tra10> ;
+        rdfs:label "UAR Data Terra" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(-4.48628 48.39029)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Brest" ;
             schema:addressCountry "FR" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Brittany" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "France" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

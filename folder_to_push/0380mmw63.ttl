@@ -14,7 +14,7 @@
     org:status "active" ;
     org:classification "facility" ; 
     dct:created "2021-04-06"^^xsd:date ;
-    dct:modified "2024-10-31"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
     org:abbreviation "CEM"@None ; 
     org:alternativeName "Centre of Experimental Medicine"@en ; 
     org:alternativeName "Centre of Experimental Medicine SAS"@en ; 
@@ -38,19 +38,25 @@
         org:member <https://ror.org/03h7qq074> ;
         rdfs:label "Slovak Academy of Sciences" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/044mjtc47> ;
+        rdfs:label "Institute for Heart Research of the Slovak Academy of Sciences" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(17.10674 48.14816)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Bratislava" ;
             schema:addressCountry "SK" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Bratislava Region" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "Slovakia" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

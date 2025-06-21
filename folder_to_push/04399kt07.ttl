@@ -4,25 +4,42 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/04399kt07> a org:Organization ;
     rdfs:label "Takasaki Advanced Radiation Research Institute" ;
     schema:name "Takasaki Advanced Radiation Research Institute" ;
     schema:foundingDate "2005"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "TARRI" ;
-    schema:url <https://www.qst.go.jp/site/taka> ; 
+    org:classification "facility" ; 
+    dct:created "2022-09-29"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
+    org:abbreviation "TARRI"@None ; 
+    schema:mainEntityOfPage <https://www.qst.go.jp/site/taka> ;
+    schema:sameAs <http://isni.org/isni/0000000090459544> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/020rbyg91> ;
+        rdfs:label "National Institutes for Quantum Science and Technology" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(139.01667 36.33333)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(139.01667 36.33333)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Takasaki" ;
             schema:addressCountry "JP" ;
-            owl:sameAs <http://sws.geonames.org/1851002/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000090459544> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q39652817> ;
+            schema:addressRegion "Gunma" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Japan" ;
+                schema:containedInPlace [
+                    schema:name "Asia" ;
+                    schema:identifier "AS"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1851002/> ;
+    ] ; 
     .

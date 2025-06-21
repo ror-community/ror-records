@@ -15,7 +15,7 @@
     org:classification "education" ; 
     org:classification "funder" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-12-10"^^xsd:date ;
+    dct:modified "2025-02-26"^^xsd:date ;
     org:abbreviation "AMU"@None ; 
     org:alternativeName "Paul Cézanne University"@en ; 
     org:alternativeName "University of Provence"@en ; 
@@ -144,7 +144,7 @@
         a org:Membership ;
         org:role "child" ;
         org:member <https://ror.org/00f945z63> ;
-        rdfs:label "Institut Pythéas Observatoire des Sciences de l’Univers" ;
+        rdfs:label "Institut Pytheas" ;
     ] ; 
     org:hasLink [
         a org:Membership ;
@@ -490,6 +490,12 @@
     ] ; 
     org:hasLink [
         a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0368jkn02> ;
+        rdfs:label "Centre de Droit Social" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
         org:role "related" ;
         org:member <https://ror.org/05jrr4320> ;
         rdfs:label "Hôpital de la Timone" ;
@@ -530,25 +536,19 @@
         org:member <https://ror.org/01x6z5t49> ;
         rdfs:label "Fédération de Recherche Spectroscopies de Photoémission" ;
     ] ; 
-    org:hasLink [
-        a org:Membership ;
-        org:role "child" ;
-        org:member <https://ror.org/0368jkn02> ;
-        rdfs:label "Centre de Droit Social" ;
-    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(5.38107 43.29695)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Marseille" ;
             schema:addressCountry "FR" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Provence-Alpes-Côte d'Azur" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "France" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;
