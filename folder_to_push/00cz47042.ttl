@@ -4,27 +4,52 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/00cz47042> a org:Organization ;
     rdfs:label "National Museum of Natural History" ;
     schema:name "National Museum of Natural History" ;
     schema:foundingDate "1910"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Archive" ; 
-    org:abbreviation "NMNH" ;
-    schema:url <http://www.mnh.si.edu/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/National_Museum_of_Natural_History> ;
+    org:classification "archive" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-05-30"^^xsd:date ;
+    org:abbreviation "NMNH"@None ; 
+    schema:mainEntityOfPage <https://naturalhistory.si.edu> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/National_Museum_of_Natural_History> ; 
+    schema:sameAs <https://api.crossref.org/funders/100006271> ;
+    schema:sameAs <https://grid.ac/institutions/grid.453560.1> ;
+    schema:sameAs <http://isni.org/isni/0000000121927591> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05b8c0r92> ;
+        rdfs:label "Laboratories of Analytical Biology" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/01pp8nd67> ;
+        rdfs:label "Smithsonian Institution" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-77.03637 38.89511)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-77.03637 38.89511)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Washington" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/4140963/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000121927591> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q148554> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/4140963/> ;
+    ] ; 
     .

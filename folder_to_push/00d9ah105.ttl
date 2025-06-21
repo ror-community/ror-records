@@ -4,28 +4,54 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/00d9ah105> a org:Organization ;
     rdfs:label "University of California, Merced" ;
     schema:name "University of California, Merced" ;
     schema:foundingDate "2005"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "UCM" ;
-    org:alternativeName "UC Merced" ;
-    schema:url <http://www.ucmerced.edu/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/University_of_California,_Merced> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-05-30"^^xsd:date ;
+    org:alternativeName "UC Merced"@en ; 
+    org:abbreviation "UCM"@en ; 
+    schema:url <http://ucmerced.edu> ; 
+    schema:mainEntityOfPage <https://www.ucmerced.edu> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_California,_Merced> ; 
+    schema:sameAs <https://api.crossref.org/funders/100010945> ;
+    schema:sameAs <https://grid.ac/institutions/grid.266096.d> ;
+    schema:sameAs <http://isni.org/isni/0000000100491282> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/00pjdza24> ;
+        rdfs:label "University of California System" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01qcacz92> ;
+        rdfs:label "Sevilleta Long Term Ecological Research" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-120.48297 37.30216)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-120.48297 37.30216)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Merced" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/5372253/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000100491282> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1728622> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/5372253/> ;
+    ] ; 
     .

@@ -1,0 +1,42 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/051qmsg29> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "1998"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2024-05-27"^^xsd:date ;
+    dct:modified "2024-05-30"^^xsd:date ;
+    org:abbreviation "SBS"@en ; 
+    org:alternativeName "Swiss Business School, SBS"@en ; 
+    schema:url <http://sbs.edu> ; 
+    schema:mainEntityOfPage <https://www.sbs.edu> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/SBS_Swiss_Business_School> ; 
+    schema:sameAs <http://isni.org/isni/0000000404350681> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(8.58491 47.45152)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Kloten" ;
+            schema:addressCountry "CH" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Switzerland" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2660127/> ;
+    ] ; 
+    .

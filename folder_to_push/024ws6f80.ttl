@@ -4,28 +4,47 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/024ws6f80> a org:Organization ;
-    rdfs:label "Department of Transport and Main Roads" ;
-    schema:name "Department of Transport and Main Roads" ;
+    rdfs:label "" ;
+    schema:name "" ;
     schema:foundingDate "2009"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Government" ; 
-    org:abbreviation "TMR" ;
-    org:alternativeName "Department of Main Roads" ;
-    schema:url <http://www.tmr.qld.gov.au/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Department_of_Transport_and_Main_Roads> ;
+    org:classification "funder" ; 
+    org:classification "government" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-05-30"^^xsd:date ;
+    org:alternativeName "Department of Transport and Main Roads"@en ; 
+    org:abbreviation "TMR"@None ; 
+    schema:mainEntityOfPage <http://www.tmr.qld.gov.au/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Department_of_Transport_and_Main_Roads> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100008915> ;
+    schema:sameAs <https://grid.ac/institutions/grid.474139.c> ;
+    schema:sameAs <http://isni.org/isni/0000000406312339> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/037405308> ;
+        rdfs:label "Queensland Government" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(153.02809 -27.46794)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(153.02809 -27.46794)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Brisbane" ;
             schema:addressCountry "AU" ;
-            owl:sameAs <http://sws.geonames.org/2174003/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000406312339> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1191482> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Australia" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2174003/> ;
+    ] ; 
     .

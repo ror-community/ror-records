@@ -1,0 +1,46 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/03j1z6h17> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "2002"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "archive" ; 
+    dct:created "2024-05-27"^^xsd:date ;
+    dct:modified "2024-05-30"^^xsd:date ;
+    org:abbreviation "KKVYSOCINY"@cs ; 
+    schema:mainEntityOfPage <https://www.kkvysociny.cz> ;
+    owl:sameAs <https://cs.wikipedia.org/wiki/Krajsk%C3%A1_knihovna_Vyso%C4%8Diny> ; 
+    schema:sameAs <http://isni.org/isni/0000000404785378> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/01cbd4k69> ;
+        rdfs:label "Vysočina Region" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(15.57937 49.6069)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Havlíčkův Brod" ;
+            schema:addressCountry "CZ" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Czechia" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3075919/> ;
+    ] ; 
+    .

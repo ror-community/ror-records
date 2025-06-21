@@ -4,24 +4,90 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01y8j9r24> a org:Organization ;
     rdfs:label "Délégation Ile-de-France Sud" ;
     schema:name "Délégation Ile-de-France Sud" ;
     schema:foundingDate "1990"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Government" ; 
-    org:alternativeName "DR04" ;
-    schema:url <http://www.dr4.cnrs.fr/> ; 
+    org:classification "government" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-05-30"^^xsd:date ;
+    org:abbreviation "DR04"@fr ; 
+    schema:mainEntityOfPage <https://www.iledefrance-gif.cnrs.fr> ;
+    schema:sameAs <https://grid.ac/institutions/grid.457079.8> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/052ahj806> ;
+        rdfs:label "Centre de Génétique Moléculaire" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02cf97417> ;
+        rdfs:label "Heteroelements and Coordination Chemistry Lab" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/006je8v76> ;
+        rdfs:label "Institut de Biochimie et Biophysique Moléculaire et Cellulaire" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01xpreq28> ;
+        rdfs:label "Laboratoire Archéomatériaux et Prévision de l'Altération" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0378sf364> ;
+        rdfs:label "Laboratoire Structure et Dynamique par Résonance Magnétique" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0452rtt80> ;
+        rdfs:label "Laboratoire de Neurobiologie Cellulaire et Moléculaire" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01dz5cg19> ;
+        rdfs:label "Laboratoire de Virologie Moléculaire et Structurale" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00enct420> ;
+        rdfs:label "Service Interdisciplinaire sur les Systèmes Moléculaires et les Matériaux" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/03yz3tz18> ;
+        rdfs:label "Direction Générale Déléguée aux Ressources" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(2.13333 48.68333)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(2.13333 48.68333)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Gif-sur-Yvette" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/3016078/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3016078/> ;
+    ] ; 
     .

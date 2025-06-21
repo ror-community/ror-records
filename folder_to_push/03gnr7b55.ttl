@@ -15,9 +15,9 @@
     org:classification "education" ; 
     org:classification "funder" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-05-02"^^xsd:date ;
-    org:alternativeName "University of Nantes"@None ; 
-    org:alternativeName "Université de Nantes"@None ; 
+    dct:modified "2024-05-30"^^xsd:date ;
+    org:alternativeName "University of Nantes"@en ; 
+    org:alternativeName "Université de Nantes"@fr ; 
     schema:mainEntityOfPage <http://www.univ-nantes.fr> ;
     owl:sameAs <http://en.wikipedia.org/wiki/University_of_Nantes> ; 
     schema:sameAs <https://api.crossref.org/funders/501100009371> ;
@@ -331,6 +331,12 @@
     ] ; 
     org:hasLink [
         a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02mhxg157> ;
+        rdfs:label "Groupement Ligérien pour le Calcul Intensif Distribué" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
         org:role "related" ;
         org:member <https://ror.org/05c1qsg97> ;
         rdfs:label "Centre Hospitalier Universitaire de Nantes" ;
@@ -350,8 +356,8 @@
     org:hasLink [
         a org:Membership ;
         org:role "child" ;
-        org:member <https://ror.org/02mhxg157> ;
-        rdfs:label "Groupement Ligérien pour le Calcul Intensif Distribué" ;
+        org:member <https://ror.org/058qdtv35> ;
+        rdfs:label "Centre de recherches en histoire internationale et atlantique" ;
     ] ; 
     schema:location [
         a schema:Place ;

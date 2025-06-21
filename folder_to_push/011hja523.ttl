@@ -4,24 +4,47 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/011hja523> a org:Organization ;
     rdfs:label "Rome et ses renaissances" ;
     schema:name "Rome et ses renaissances" ;
     schema:foundingDate "2006"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Other" ; 
-    org:alternativeName "Rome et ses renaisances : arts, archéologie, littérature et philosophie" ;
-    schema:url <https://romerenaissances.hypotheses.org> ; 
+    org:classification "other" ; 
+    dct:created "2023-12-07"^^xsd:date ;
+    dct:modified "2024-05-30"^^xsd:date ;
+    org:alternativeName "Rome et ses renaisances : arts, archéologie, littérature et philosophie"@fr ; 
+    schema:mainEntityOfPage <https://romerenaissances.hypotheses.org> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02en5vm52> ;
+        rdfs:label "Sorbonne Université" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "predecessor" ;
+        org:member <https://ror.org/02689mz67> ;
+        rdfs:label "Linguistique et lexicographie latines et romanes" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(2.3488 48.85341)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(2.3488 48.85341)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Paris" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2988507/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://www.wikidata.org/entity/Q123695069> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2988507/> ;
+    ] ; 
     .

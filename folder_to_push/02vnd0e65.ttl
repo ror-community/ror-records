@@ -4,24 +4,65 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02vnd0e65> a org:Organization ;
     rdfs:label "Laboratoire de Probabilités, Statistique et Modélisation" ;
     schema:name "Laboratoire de Probabilités, Statistique et Modélisation" ;
     schema:foundingDate "2018"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "LPSM" ;
-    schema:url <https://www.lpsm.paris> ; 
+    org:classification "facility" ; 
+    dct:created "2023-08-17"^^xsd:date ;
+    dct:modified "2024-05-30"^^xsd:date ;
+    org:abbreviation "LPSM"@None ; 
+    schema:mainEntityOfPage <https://www.lpsm.paris> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02feahw73> ;
+        rdfs:label "French National Centre for Scientific Research" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02en5vm52> ;
+        rdfs:label "Sorbonne Université" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/05f82e368> ;
+        rdfs:label "Université Paris Cité" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "predecessor" ;
+        org:member <https://ror.org/04hjc7403> ;
+        rdfs:label "Laboratoire de Probabilités et Modèles Aléatoires" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "predecessor" ;
+        org:member <https://ror.org/01vnn4t89> ;
+        rdfs:label "Laboratoire de Statistique Théorique et Appliquée" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(2.3488 48.85341)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(2.3488 48.85341)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Paris" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2988507/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://www.wikidata.org/entity/Q52605327> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2988507/> ;
+    ] ; 
     .

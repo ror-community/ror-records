@@ -4,29 +4,60 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/03ddh2c27> a org:Organization ;
-    rdfs:label "LG Corporation (South Korea)" ;
-    schema:name "LG Corporation (South Korea)" ;
+    rdfs:label "" ;
+    schema:name "" ;
     schema:foundingDate "1947"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Company" ; 
-    org:alternativeName "GoldStar" ;
-    schema:url <http://www.lge.co.kr/lgekor/main.do> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/LG_Corporation> ;
+    org:classification "company" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-05-30"^^xsd:date ;
+    org:alternativeName "GoldStar"@None ; 
+    org:alternativeName "LG Corporation"@en ; 
+    org:alternativeName "Lucky Goldstar"@None ; 
+    schema:mainEntityOfPage <https://www.lge.co.kr> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/LG_Corporation> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100004118> ;
+    schema:sameAs <https://grid.ac/institutions/grid.464630.3> ;
+    schema:sameAs <http://isni.org/isni/0000000106969566> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04pjzv747> ;
+        rdfs:label "LG Chem (South Korea)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/043h32y24> ;
+        rdfs:label "LG (China)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02b948n83> ;
+        rdfs:label "LG (United States)" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(126.9784 37.566)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(126.9784 37.566)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Seoul" ;
             schema:addressCountry "KR" ;
-            owl:sameAs <http://sws.geonames.org/1835848/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000106969566> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q136778> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q486976> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q483006> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "South Korea" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1835848/> ;
+    ] ; 
     .

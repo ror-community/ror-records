@@ -1,0 +1,55 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/02zt1gg83> a org:Organization ;
+    rdfs:label "International Atomic Energy Agency" ;
+    schema:name "International Atomic Energy Agency" ;
+    schema:foundingDate "1957"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "funder" ; 
+    org:classification "nonprofit" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-05-30"^^xsd:date ;
+    org:abbreviation "IAEA"@None ; 
+    schema:mainEntityOfPage <https://www.iaea.org/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/International_Atomic_Energy_Agency> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100004493> ;
+    schema:sameAs <https://grid.ac/institutions/grid.420221.7> ;
+    schema:sameAs <http://isni.org/isni/0000000404038399> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02zty9d43> ;
+        rdfs:label "FAO/IAEA Agriculture and Biotechnology Laboratories" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00e50mf91> ;
+        rdfs:label "International Network of Nuclear Reaction Data Centres" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(16.37208 48.20849)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Vienna" ;
+            schema:addressCountry "AT" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Austria" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2761369/> ;
+    ] ; 
+    .

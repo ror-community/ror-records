@@ -4,27 +4,128 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01wp2jz98> a org:Organization ;
     rdfs:label "European X-Ray Free-Electron Laser" ;
     schema:name "European X-Ray Free-Electron Laser" ;
     schema:foundingDate "2009"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:alternativeName "European XFEL" ;
-    schema:url <https://www.xfel.eu> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/European_x-ray_free_electron_laser> ;
+    org:classification "facility" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-05-30"^^xsd:date ;
+    org:alternativeName "European XFEL"@en ; 
+    schema:mainEntityOfPage <https://www.xfel.eu> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/European_x-ray_free_electron_laser> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.434729.f> ;
+    schema:sameAs <http://isni.org/isni/0000000405902900> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/01js2sh04> ;
+        rdfs:label "Deutsches Elektronen-Synchrotron DESY" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02sptwz63> ;
+        rdfs:label "Danish Agency for Science and Higher Education" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/00jjx8s55> ;
+        rdfs:label "Atomic Energy and Alternative Energies Commission" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/03g2am276> ;
+        rdfs:label "National Research, Development and Innovation Office" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/005ta0471> ;
+        rdfs:label "Istituto Nazionale di Fisica Nucleare" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/04zaypm56> ;
+        rdfs:label "National Research Council" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/00nzsxq20> ;
+        rdfs:label "National Centre for Nuclear Research" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/00n1nz186> ;
+        rdfs:label "Kurchatov Institute" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/044gwpv05> ;
+        rdfs:label "Ministry of Education, Science, Research and Sport of the Slovak Republic" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/05r0vyz12> ;
+        rdfs:label "Ministerio de Ciencia, Innovación y Universidades" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/03zttf063> ;
+        rdfs:label "Swedish Research Council" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/001aqnf71> ;
+        rdfs:label "UK Research and Innovation" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/00mt8k932> ;
+        rdfs:label "State Secretariat for Education, Research and Innovation" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/04wcn4e27> ;
+        rdfs:label "LEAPS" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02feahw73> ;
+        rdfs:label "French National Centre for Scientific Research" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(9.48333 54.05)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(9.48333 54.05)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Schenefeld" ;
             schema:addressCountry "DE" ;
-            owl:sameAs <http://sws.geonames.org/2839763/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000405902900> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q462592> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Germany" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2839763/> ;
+    ] ; 
     .

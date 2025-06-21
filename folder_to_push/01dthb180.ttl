@@ -4,22 +4,52 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01dthb180> a org:Organization ;
     rdfs:label "Epidémiosurveillance et circulation des parasites dans les environnements" ;
     schema:name "Epidémiosurveillance et circulation des parasites dans les environnements" ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "ESCAPE" ;
-    schema:url <https://www.univ-reims.fr/universite/organisation/epidemiosurveillance-de-protozooses-a-transmission-alimentaire-et-vectorielle-escape,7741,18258.html> ; 
+    org:classification "facility" ; 
+    dct:created "2024-02-21"^^xsd:date ;
+    dct:modified "2024-05-30"^^xsd:date ;
+    org:abbreviation "ESCAPE"@None ; 
+    schema:mainEntityOfPage <https://www.univ-reims.fr/universite/organisation/epidemiosurveillance-de-protozooses-a-transmission-alimentaire-et-vectorielle-escape,7741,18258.html> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/03hypw319> ;
+        rdfs:label "Université de Reims Champagne-Ardenne" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/03nhjew95> ;
+        rdfs:label "Université de Rouen Normandie" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/0471kz689> ;
+        rdfs:label "French Agency for Food, Environmental and Occupational Health & Safety" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(4.02853 49.26526)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(4.02853 49.26526)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Reims" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2984114/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2984114/> ;
+    ] ; 
     .

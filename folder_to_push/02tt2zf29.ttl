@@ -4,25 +4,45 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02tt2zf29> a org:Organization ;
-    rdfs:label "Centre Tecnològic Forestal de Catalunya" ;
-    schema:name "Centre Tecnològic Forestal de Catalunya" ;
+    rdfs:label "" ;
+    schema:name "" ;
     schema:foundingDate "1996"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "CTFC" ;
-    schema:url <http://www.ctfc.cat/> ; 
+    org:classification "facility" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-05-30"^^xsd:date ;
+    org:abbreviation "CTFC"@None ; 
+    org:abbreviation "CTFC-CERCA"@None ; 
+    org:alternativeName "Centre Tecnològic Forestal de Catalunya"@ca ; 
+    schema:mainEntityOfPage <http://www.ctfc.cat/> ;
+    schema:sameAs <https://grid.ac/institutions/grid.423822.d> ;
+    schema:sameAs <http://isni.org/isni/0000000091612635> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/01bkbaq61> ;
+        rdfs:label "CERCA Institution" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(1.51706 41.99395)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(1.51706 41.99395)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Solsona" ;
             schema:addressCountry "ES" ;
-            owl:sameAs <http://sws.geonames.org/3108747/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000091612635> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Spain" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3108747/> ;
+    ] ; 
     .

@@ -4,28 +4,359 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/05qrfxd25> a org:Organization ;
     rdfs:label "Russian Academy of Sciences" ;
     schema:name "Russian Academy of Sciences" ;
     schema:foundingDate "1724"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Government" ; 
-    org:abbreviation "RAS" ;
-    org:alternativeName "Rossíiskaya Akadémiya Naúk" ;
-    schema:url <http://www.ras.ru/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Russian_Academy_of_Sciences> ;
+    org:classification "funder" ; 
+    org:classification "government" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-05-30"^^xsd:date ;
+    org:abbreviation "RAS"@None ; 
+    org:alternativeName "Rossíiskaya Akadémiya Naúk"@None ; 
+    schema:mainEntityOfPage <http://www.ras.ru/> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Russian_Academy_of_Sciences> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100002674> ;
+    schema:sameAs <https://grid.ac/institutions/grid.4886.2> ;
+    schema:sameAs <http://isni.org/isni/0000000121929124> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01wxbtj35> ;
+        rdfs:label "All-Russian Scientific Research Institute of Butter and Cheese Making" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04f0ydx59> ;
+        rdfs:label "Bioengineering Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00tgr2h49> ;
+        rdfs:label "Computer Equipment and Technologies" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01fz81h65> ;
+        rdfs:label "Dagestan Scientific Center of the Russian Academy of Sciences" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05wtp9w08> ;
+        rdfs:label "Department of Agricultural Sciences" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/038rjvd86> ;
+        rdfs:label "Department of Biological Sciences" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/059tqvg48> ;
+        rdfs:label "Department of Chemistry and Material Sciences" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0554h7e84> ;
+        rdfs:label "Department of Earth Sciences" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05kknxr83> ;
+        rdfs:label "Department of Energy, Engineering, Mechanics and Control Processes" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/021eek248> ;
+        rdfs:label "Department of Global Issues and International Relations" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02xkdev90> ;
+        rdfs:label "Department of Mathematical Sciences" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/019zcmj26> ;
+        rdfs:label "Department of Medical Sciences" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0218eta95> ;
+        rdfs:label "Department of Physiological Sciences" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01twn9665> ;
+        rdfs:label "Department of Social Sciences" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02ae4g054> ;
+        rdfs:label "Division of Historical and Philological Sciences" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/010rhww45> ;
+        rdfs:label "Experimental Factory of Scientific Engineering and Special Design Department" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05t43vz03> ;
+        rdfs:label "Far Eastern Branch of the Russian Academy of Sciences" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/046npx426> ;
+        rdfs:label "Federal State Budgetary Institution of Science "Scientific and Technological Center of Unique Instrumentation" of the Russian Academy of Sciences" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04d2pnx52> ;
+        rdfs:label "Institute for Complex Analysis of Regional Problems" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00fr05644> ;
+        rdfs:label "Institute for International Economic and Political Studies" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04f3vpm64> ;
+        rdfs:label "Institute of Anthropology and Ethnography" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00029be75> ;
+        rdfs:label "Institute of Biology of Komi Scientific Centre" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/037jk8996> ;
+        rdfs:label "Institute of Ecology of Mountain Territories" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02ggnh308> ;
+        rdfs:label "Institute of Far Eastern Studies" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/021923v79> ;
+        rdfs:label "Institute of Marine Geology and Geophysics" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/041v5wj47> ;
+        rdfs:label "Institute of Mineralogy, Geochemistry and Crystallochemistry of Rare Elements" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/005n3yy14> ;
+        rdfs:label "Institute of Physics and Technology" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03a8ase89> ;
+        rdfs:label "Institute of Physics of Molecules and Crystals" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00sv3ym08> ;
+        rdfs:label "Institute of Precision Mechanics and Computer Science S.A. Lebedev" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04j4xtm35> ;
+        rdfs:label "Institute of Scientific Information on Social Sciences" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03cdkd641> ;
+        rdfs:label "Institute of Social and Economic Studies of Population" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/003gcpg05> ;
+        rdfs:label "Institute of Superhigh-Frequency Semiconductor Electronics of the Russian Academy of Sciences" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/031aa5q21> ;
+        rdfs:label "Kabardino-Balkarian Scientific Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01brhxa96> ;
+        rdfs:label "Library of the Russian Academy of Sciences" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00bh9qz66> ;
+        rdfs:label "Mavlyutov Institute of Mechanics" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/049cw4s75> ;
+        rdfs:label "North Caucasian Research Institute of Mountain and Foothill Agriculture" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00ns9pc83> ;
+        rdfs:label "Physical Sciences Division" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/040r4cv22> ;
+        rdfs:label "Program Systems Institute of RAS" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05tc61k56> ;
+        rdfs:label "Pushchino State Institute of Natural Sciences" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05rbd6k73> ;
+        rdfs:label "Regional Research Centres" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04kybmr51> ;
+        rdfs:label "S.I. Vavilov Institute for the History of Science and Technology" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/044037f11> ;
+        rdfs:label "Saratov Research Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/005n4rr58> ;
+        rdfs:label "Scientific Research Institute of Introscopy" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02frkq021> ;
+        rdfs:label "Siberian Branch of the Russian Academy of Sciences" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/053nrfb18> ;
+        rdfs:label "Southern Scientific Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/045dz4566> ;
+        rdfs:label "Submicron Heterostructures for Microelectronics Research and Engineering Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/049zx9d10> ;
+        rdfs:label "The Institute of Europe of the Russian Academy of Sciences" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01z0w8p93> ;
+        rdfs:label "Tomsk National Research Medical Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02s4h3z39> ;
+        rdfs:label "Ural Branch of the Russian Academy of Sciences" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02qhbts44> ;
+        rdfs:label "Vernadsky State Geological Museum" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0028hwj42> ;
+        rdfs:label "St. Petersburg Research Center of the Russian Academy of Sciences" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04prhhh77> ;
+        rdfs:label "Institute of Limnology of the Russian Academy of Sciences" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05kmgev50> ;
+        rdfs:label "Science Center for Information Technologies in Design" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(37.61556 55.75222)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(37.61556 55.75222)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Moscow" ;
             schema:addressCountry "RU" ;
-            owl:sameAs <http://sws.geonames.org/524901/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000121929124> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q83172> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Russia" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/524901/> ;
+    ] ; 
     .

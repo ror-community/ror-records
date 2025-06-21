@@ -4,27 +4,140 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/019tcpt25> a org:Organization ;
     rdfs:label "CentraleSupélec" ;
     schema:name "CentraleSupélec" ;
     schema:foundingDate "2015"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "CS" ;
-    schema:url <https://www.centralesupelec.fr> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/CentraleSup%C3%A9lec> ;
+    org:classification "facility" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-05-30"^^xsd:date ;
+    org:abbreviation "CS"@None ; 
+    schema:mainEntityOfPage <https://www.centralesupelec.fr> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/CentraleSup%C3%A9lec> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.494567.d> ;
+    schema:sameAs <http://isni.org/isni/0000000449071766> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02wy3s959> ;
+        rdfs:label "Laboratoire d'Énergétique Moléculaire et Macroscopique, Combustion" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00skw9v43> ;
+        rdfs:label "Laboratoire des signaux et systèmes" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01bn5c048> ;
+        rdfs:label "Laboratory of Quantum and Molecular Photonics" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/055swm364> ;
+        rdfs:label "Laboratoire Matériaux Optiques, Photonique et Systèmes" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01t05f005> ;
+        rdfs:label "Laboratoire Structures, Propriétés et Modélisation des Solides" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03q29s414> ;
+        rdfs:label "Mathématiques et Informatique pour la Complexité et les Systèmes" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01jv2ft75> ;
+        rdfs:label "Laboratoire de Mécanique Paris-Saclay" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01bbf9m56> ;
+        rdfs:label "Fédération Francilienne de Mécanique - Matériaux, Structures, Procédés" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05be9p317> ;
+        rdfs:label "Micropesanteur Fondamentale et Appliquée" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01x6z5t49> ;
+        rdfs:label "Fédération de Recherche Spectroscopies de Photoémission" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0459fdx51> ;
+        rdfs:label "Fédération de Recherche sur l'Energie Solaire" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02xnnng09> ;
+        rdfs:label "Laboratoire de Génie Électrique et Électronique de Paris" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/03xjwb503> ;
+        rdfs:label "University of Paris-Saclay" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "predecessor" ;
+        org:member <https://ror.org/00n7gwn90> ;
+        rdfs:label "Supélec" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "predecessor" ;
+        org:member <https://ror.org/00v0y5771> ;
+        rdfs:label "École Centrale Paris" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05751b994> ;
+        rdfs:label "Mahindra University" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03vsc0s28> ;
+        rdfs:label "Fondation CentraleSupélec" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(2.13333 48.68333)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(2.13333 48.68333)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Gif-sur-Yvette" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/3016078/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000449071766> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q19203245> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3016078/> ;
+    ] ; 
     .

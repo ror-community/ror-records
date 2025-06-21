@@ -4,27 +4,46 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/00znex860> a org:Organization ;
     rdfs:label "United States Naval Academy" ;
     schema:name "United States Naval Academy" ;
     schema:foundingDate "1845"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "USNA" ;
-    schema:url <http://www.usna.edu/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/United_States_Naval_Academy> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-05-30"^^xsd:date ;
+    org:abbreviation "USNA"@None ; 
+    schema:mainEntityOfPage <http://www.usna.edu/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/United_States_Naval_Academy> ; 
+    schema:sameAs <https://api.crossref.org/funders/100009911> ;
+    schema:sameAs <https://grid.ac/institutions/grid.265465.6> ;
+    schema:sameAs <http://isni.org/isni/0000000122963025> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/03cs53d16> ;
+        rdfs:label "United States Navy" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-76.49184 38.97859)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-76.49184 38.97859)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Annapolis" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/4347242/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000122963025> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q559549> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/4347242/> ;
+    ] ; 
     .

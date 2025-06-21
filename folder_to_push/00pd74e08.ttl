@@ -4,28 +4,55 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/00pd74e08> a org:Organization ;
     rdfs:label "University of Münster" ;
     schema:name "University of Münster" ;
     schema:foundingDate "1780"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "WWU" ;
-    org:alternativeName "Westfälische Wilhelms-Universität Münster" ;
-    schema:url <https://www.uni-muenster.de> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/University_of_M%C3%BCnster> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-05-30"^^xsd:date ;
+    org:alternativeName "Universitaet Muenster"@de ; 
+    org:alternativeName "University of Muenster"@en ; 
+    org:abbreviation "WWU"@None ; 
+    org:alternativeName "Westfälische Wilhelms-Universität Münster"@de ; 
+    schema:mainEntityOfPage <https://www.uni-muenster.de> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_M%C3%BCnster> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100004869> ;
+    schema:sameAs <https://grid.ac/institutions/grid.5949.1> ;
+    schema:sameAs <http://isni.org/isni/0000000121729288> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01856cw59> ;
+        rdfs:label "University Hospital Münster" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/032a28f65> ;
+        rdfs:label "European Research Center for Information Systems" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(7.62571 51.96236)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(7.62571 51.96236)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Münster" ;
             schema:addressCountry "DE" ;
-            owl:sameAs <http://sws.geonames.org/2867543/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000121729288> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q168426> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Germany" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2867543/> ;
+    ] ; 
     .

@@ -4,26 +4,140 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/03rnk6m14> a org:Organization ;
     rdfs:label "Institut Agro Montpellier" ;
     schema:name "Institut Agro Montpellier" ;
     schema:foundingDate "1842"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:alternativeName "Montpellier SupAgro" ;
-    schema:url <https://www.institut-agro-montpellier.fr> ; 
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-05-30"^^xsd:date ;
+    org:alternativeName "Montpellier SupAgro"@fr ; 
+    org:alternativeName "SupAgro"@fr ; 
+    schema:mainEntityOfPage <https://www.institut-agro-montpellier.fr> ;
+    schema:sameAs <https://grid.ac/institutions/grid.434209.8> ;
+    schema:sameAs <http://isni.org/isni/0000000121725332> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0000n5x09> ;
+        rdfs:label "Agropolymerpolymer Engineering and Emerging Technologies" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05r332y60> ;
+        rdfs:label "Biochemistry and Plant Molecular Physiology" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/008rywf59> ;
+        rdfs:label "Centre d'Écologie Fonctionnelle et Évolutive" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05h7ddb14> ;
+        rdfs:label "Centre de Biologie et de Gestion des Populations" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03q1qx424> ;
+        rdfs:label "Diversity, Genomes and Insects-Microorganisms Interactions" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00b80ez59> ;
+        rdfs:label "Functional Ecology and Biogeochemistry of Soils and Agrosystems" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/020g0rw41> ;
+        rdfs:label "Gestion de l'Eau, Acteurs, Usages" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0262br971> ;
+        rdfs:label "Innovation and Development in Agriculture and Food" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03fte3n86> ;
+        rdfs:label "Laboratoire d'Écophysiologie Moléculaire des Plantes sous Stress Environnementaux" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/011xg1225> ;
+        rdfs:label "Montpellier Interdisciplinary center on Sustainable Agri-food systems: social and nutritional sciences" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01pd2sz18> ;
+        rdfs:label "Mathématiques, Informatique et Statistique pour l'Environnement et l'Agronomie" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04w07sc25> ;
+        rdfs:label "Sciences pour L’Œnologie" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05merjr74> ;
+        rdfs:label "Tropical and Mediterranean Animal Production Systems" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03kbarg82> ;
+        rdfs:label "Laboratoire interdisciplinaire de recherche en didactique, éducation et formation" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/04f6hmf16> ;
+        rdfs:label "Languedoc-Roussillon Universities" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05y5s3h28> ;
+        rdfs:label "Plant Health Institute de Montpellier" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/01dkyve95> ;
+        rdfs:label "L'Institut Agro" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(3.87635 43.61093)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(3.87635 43.61093)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Montpellier" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2992166/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000121725332> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q2945808> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2992166/> ;
+    ] ; 
     .

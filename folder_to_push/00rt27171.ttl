@@ -4,26 +4,51 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/00rt27171> a org:Organization ;
-    rdfs:label "Laboratory of Pathogen-Host Interactions" ;
-    schema:name "Laboratory of Pathogen-Host Interactions" ;
+    rdfs:label "" ;
+    schema:name "" ;
     schema:foundingDate "2006"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "LPHI" ;
-    org:alternativeName "Dynamique des Interactions Membranaires Normales et Pathologiques" ;
-    schema:url <https://lphi.umontpellier.fr> ; 
+    org:classification "facility" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-05-30"^^xsd:date ;
+    org:alternativeName "Dynamique des Interactions Membranaires Normales et Pathologiques"@fr ; 
+    org:abbreviation "LPHI"@None ; 
+    org:alternativeName "Laboratory of Pathogen-Host Interactions"@en ; 
+    schema:mainEntityOfPage <https://lphi.umontpellier.fr> ;
+    schema:sameAs <https://grid.ac/institutions/grid.464150.2> ;
+    schema:sameAs <http://isni.org/isni/0000000403839805> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/00rydyx93> ;
+        rdfs:label "Institut des Sciences Biologiques" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02feahw73> ;
+        rdfs:label "French National Centre for Scientific Research" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(3.87635 43.61093)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(3.87635 43.61093)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Montpellier" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2992166/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000403839805> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2992166/> ;
+    ] ; 
     .

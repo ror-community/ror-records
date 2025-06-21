@@ -1,0 +1,42 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/05tvhac84> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "2021"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "government" ; 
+    dct:created "2024-05-27"^^xsd:date ;
+    dct:modified "2024-05-30"^^xsd:date ;
+    org:abbreviation "AR+I"@None ; 
+    org:alternativeName "Andorra Recerca Innovació"@ca ; 
+    org:alternativeName "Andorra Research & Innovation"@en ; 
+    org:alternativeName "Andorra Research + Innovation"@en ; 
+    schema:url <http://ari.ad> ; 
+    schema:mainEntityOfPage <https://ari.ad> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(1.49129 42.46372)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Sant Julià de Lòria" ;
+            schema:addressCountry "AD" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Andorra" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3039163/> ;
+    ] ; 
+    .

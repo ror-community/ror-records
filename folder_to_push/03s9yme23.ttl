@@ -1,0 +1,46 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/03s9yme23> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "2005"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "archive" ; 
+    dct:created "2024-05-27"^^xsd:date ;
+    dct:modified "2024-05-30"^^xsd:date ;
+    org:abbreviation "KVKLI"@cs ; 
+    schema:mainEntityOfPage <https://www.kvkli.cz> ;
+    owl:sameAs <https://cs.wikipedia.org/wiki/Krajsk%C3%A1_v%C4%9Bdeck%C3%A1_knihovna_v_Liberci> ; 
+    schema:sameAs <http://isni.org/isni/0000000107902056> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/0192yc246> ;
+        rdfs:label "Liberec Region" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(15.05619 50.76711)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Liberec" ;
+            schema:addressCountry "CZ" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Czechia" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3071961/> ;
+    ] ; 
+    .

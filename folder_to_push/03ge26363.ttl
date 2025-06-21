@@ -1,0 +1,42 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/03ge26363> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    org:status "active" ;
+    org:classification "facility" ; 
+    org:classification "funder" ; 
+    dct:created "2024-05-27"^^xsd:date ;
+    dct:modified "2024-05-30"^^xsd:date ;
+    org:alternativeName "Okinaka Memorial Institute"@en ; 
+    schema:url <http://okiken.tokyo> ; 
+    schema:mainEntityOfPage <https://okiken.tokyo> ;
+    owl:sameAs <https://ja.wikipedia.org/wiki/%E5%86%B2%E4%B8%AD%E8%A8%98%E5%BF%B5%E6%88%90%E4%BA%BA%E7%97%85%E7%A0%94%E7%A9%B6%E6%89%80> ; 
+    schema:sameAs <https://api.crossref.org/funders/100012832> ;
+    schema:sameAs <http://isni.org/isni/0000000476902553> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(139.69171 35.6895)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Tokyo" ;
+            schema:addressCountry "JP" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Japan" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1850147/> ;
+    ] ; 
+    .

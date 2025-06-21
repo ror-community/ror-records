@@ -4,23 +4,222 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01sgwka45> a org:Organization ;
     rdfs:label "Microscopie Fonctionnelle du Vivant" ;
     schema:name "Microscopie Fonctionnelle du Vivant" ;
     schema:foundingDate "2003"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:alternativeName "Biophotonique Microscopie Fonctionnelle du Vivant" ;
+    org:classification "facility" ; 
+    dct:created "2023-12-07"^^xsd:date ;
+    dct:modified "2024-05-30"^^xsd:date ;
+    org:alternativeName "Biophotonique Microscopie Fonctionnelle du Vivant"@fr ; 
+    org:alternativeName "GDR Microscopie Fonctionnelle du Vivant"@fr ; 
+    org:alternativeName "Groupement de Recherche Microscopie Fonctionnelle du Vivant"@fr ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/033p9g875> ;
+        rdfs:label "National Polytechnic Institute of Toulouse" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02v6kpv12> ;
+        rdfs:label "Université Toulouse III - Paul Sabatier" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/05sbt2524> ;
+        rdfs:label "Grenoble Institute of Technology" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/04yznqr36> ;
+        rdfs:label "Jean Monnet University" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/03hypw319> ;
+        rdfs:label "Université de Reims Champagne-Ardenne" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/03am2jy38> ;
+        rdfs:label "University of Perpignan" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/04k8k6n84> ;
+        rdfs:label "University of Upper Alsace" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/04t0gwh46> ;
+        rdfs:label "Institute Curie" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/03zx86w41> ;
+        rdfs:label "ESPCI Paris" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/05a0dhs15> ;
+        rdfs:label "École Normale Supérieure - PSL" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/046b3cj80> ;
+        rdfs:label "École Pratique des Hautes Études" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/03nhjew95> ;
+        rdfs:label "Université de Rouen Normandie" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/04xhy8q59> ;
+        rdfs:label "University of Poitiers" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/05hy3tk52> ;
+        rdfs:label "École Polytechnique" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/00e96v939> ;
+        rdfs:label "University of Évry Val d'Essonne" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/00hx6zz33> ;
+        rdfs:label "École Normale Supérieure Paris-Saclay" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02kvxyf05> ;
+        rdfs:label "French Institute for Research in Computer Science and Automation" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/003vg9w96> ;
+        rdfs:label "National Research Institute for Agriculture, Food and Environment" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/00pg6eq24> ;
+        rdfs:label "University of Strasbourg" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/04zmssz18> ;
+        rdfs:label "École Normale Supérieure de Lyon" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/04vfs2w97> ;
+        rdfs:label "Université de Lorraine" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/057qpr032> ;
+        rdfs:label "University of Bordeaux" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02en5vm52> ;
+        rdfs:label "Sorbonne Université" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/042tfbd02> ;
+        rdfs:label "Institut Polytechnique de Paris" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/05f82e368> ;
+        rdfs:label "Université Paris Cité" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/019tgvf94> ;
+        rdfs:label "Université Côte d'Azur" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02rx3b187> ;
+        rdfs:label "Université Grenoble Alpes" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/013cjyk83> ;
+        rdfs:label "Université Paris Sciences et Lettres" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/051escj72> ;
+        rdfs:label "University of Montpellier" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02kzqn938> ;
+        rdfs:label "University of Lille" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/015m7wh34> ;
+        rdfs:label "University of Rennes" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(3.16664 50.61669)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(3.16664 50.61669)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Villeneuve-d'Ascq" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/6543862/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://www.wikidata.org/entity/Q51782436> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/6543862/> ;
+    ] ; 
     .

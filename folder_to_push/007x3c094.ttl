@@ -4,24 +4,42 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/007x3c094> a org:Organization ;
     rdfs:label "Délégation Paris-Villejuif-03" ;
     schema:name "Délégation Paris-Villejuif-03" ;
     schema:foundingDate "1990"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Government" ; 
-    org:alternativeName "DR03" ;
-    schema:url <http://www.dr1.cnrs.fr/spip.php?article118> ; 
+    org:classification "government" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-05-30"^^xsd:date ;
+    org:abbreviation "DR03"@fr ; 
+    schema:mainEntityOfPage <http://www.dr1.cnrs.fr/spip.php?article118> ;
+    schema:sameAs <https://grid.ac/institutions/grid.457096.9> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/03yz3tz18> ;
+        rdfs:label "Direction Générale Déléguée aux Ressources" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(2.3961 48.76496)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(2.3961 48.76496)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Thiais" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2972893/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2972893/> ;
+    ] ; 
     .

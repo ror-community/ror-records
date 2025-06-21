@@ -4,27 +4,119 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/010q4q527> a org:Organization ;
     rdfs:label "Government of Canada" ;
     schema:name "Government of Canada" ;
     schema:foundingDate "1867"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Government" ; 
-    org:alternativeName "Her Majesty's Government" ;
-    schema:url <http://www.canada.ca/en/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Government_of_Canada> ;
+    org:classification "funder" ; 
+    org:classification "government" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-05-30"^^xsd:date ;
+    org:alternativeName "Gouvernement de Sa Majesté"@fr ; 
+    org:alternativeName "Her Majesty's Government"@en ; 
+    schema:mainEntityOfPage <http://www.canada.ca/en/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Government_of_Canada> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100000023> ;
+    schema:sameAs <https://grid.ac/institutions/grid.451254.3> ;
+    schema:sameAs <http://isni.org/isni/0000000403771994> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/051dzs374> ;
+        rdfs:label "Agriculture and Agri-Food Canada" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02tvrwm90> ;
+        rdfs:label "Canada Excellence Research Chairs" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0517h6h17> ;
+        rdfs:label "Canada Research Chairs" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03rqcfv80> ;
+        rdfs:label "Canadian Armed Forces" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00hgy8d33> ;
+        rdfs:label "Defence Research and Development Canada" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/026ny0e17> ;
+        rdfs:label "Environment and Climate Change Canada" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02edexj13> ;
+        rdfs:label "Networks of Centres of Excellence" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01sj8qf84> ;
+        rdfs:label "Treasury Board of Canada Secretariat" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01sz34q98> ;
+        rdfs:label "Veterans Affairs Canada" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05hepy730> ;
+        rdfs:label "Natural Resources Canada" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02qa1x782> ;
+        rdfs:label "Fisheries and Oceans Canada" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01ktx4s83> ;
+        rdfs:label "Canada First Research Excellence Fund" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03pkrdc36> ;
+        rdfs:label "PacifiCan" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-75.69812 45.41117)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-75.69812 45.41117)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Ottawa" ;
             schema:addressCountry "CA" ;
-            owl:sameAs <http://sws.geonames.org/6094817/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000403771994> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q422404> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Canada" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/6094817/> ;
+    ] ; 
     .

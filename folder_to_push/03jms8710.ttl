@@ -4,25 +4,42 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/03jms8710> a org:Organization ;
     rdfs:label "Centre Gabriel Naudé" ;
     schema:name "Centre Gabriel Naudé" ;
     schema:foundingDate "1999"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "CGN" ;
-    org:alternativeName "Gabriel Naudé Research Centre" ;
-    schema:url <https://cgn.enssib.fr> ; 
+    org:classification "education" ; 
+    dct:created "2023-11-21"^^xsd:date ;
+    dct:modified "2024-05-30"^^xsd:date ;
+    org:abbreviation "CGN"@None ; 
+    org:alternativeName "Gabriel Naudé Research Centre"@fr ; 
+    schema:mainEntityOfPage <https://cgn.enssib.fr> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/059qr5h87> ;
+        rdfs:label "École nationale supérieure des sciences de l'information et des bibliothèques" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(4.8795 45.76601)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(4.8795 45.76601)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Villeurbanne" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2968254/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://www.wikidata.org/entity/Q51780523> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2968254/> ;
+    ] ; 
     .

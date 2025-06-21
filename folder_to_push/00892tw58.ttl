@@ -4,27 +4,88 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/00892tw58> a org:Organization ;
     rdfs:label "University of Adelaide" ;
     schema:name "University of Adelaide" ;
     schema:foundingDate "1874"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:alternativeName "Adelaide Uni" ;
-    schema:url <http://www.adelaide.edu.au/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Adelaide> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-05-30"^^xsd:date ;
+    org:alternativeName "Adelaide Uni"@en ; 
+    schema:mainEntityOfPage <http://www.adelaide.edu.au/> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Adelaide> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100001786> ;
+    schema:sameAs <https://grid.ac/institutions/grid.1010.0> ;
+    schema:sameAs <http://isni.org/isni/0000000419367304> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/043t7b640> ;
+        rdfs:label "Freemasons Foundation Centre for Men's Health" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/047kx5j58> ;
+        rdfs:label "Hanson Institute" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00pjm1054> ;
+        rdfs:label "Lyell McEwin Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03pa4y709> ;
+        rdfs:label "Modbury Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00carf720> ;
+        rdfs:label "Royal Adelaide Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03kwrfk72> ;
+        rdfs:label "Women's and Children's Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/000ghw467> ;
+        rdfs:label "Sir Mark Mitchell Research Foundation" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01az7g189> ;
+        rdfs:label "Stawell Underground Physics Laboratory" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(138.59863 -34.92866)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(138.59863 -34.92866)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Adelaide" ;
             schema:addressCountry "AU" ;
-            owl:sameAs <http://sws.geonames.org/2078025/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000419367304> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q15574> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Australia" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2078025/> ;
+    ] ; 
     .

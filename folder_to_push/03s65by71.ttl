@@ -4,29 +4,66 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/03s65by71> a org:Organization ;
     rdfs:label "University of California, Santa Cruz" ;
     schema:name "University of California, Santa Cruz" ;
     schema:foundingDate "1965"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "UCSC" ;
-    org:alternativeName "UC Santa Cruz" ;
-    schema:url <http://www.ucsc.edu/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/University_of_California,_Santa_Cruz> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-05-30"^^xsd:date ;
+    org:alternativeName "UC Santa Cruz"@en ; 
+    org:abbreviation "UCSC"@en ; 
+    schema:url <http://ucsc.edu> ; 
+    schema:mainEntityOfPage <https://www.ucsc.edu> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_California,_Santa_Cruz> ; 
+    schema:sameAs <https://api.crossref.org/funders/100006358> ;
+    schema:sameAs <https://grid.ac/institutions/grid.205975.c> ;
+    schema:sameAs <http://isni.org/isni/0000000107406917> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04n1n3n22> ;
+        rdfs:label "QB3" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/00pjdza24> ;
+        rdfs:label "University of California System" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/017vyhs10> ;
+        rdfs:label "Moorea Coral Reef Long Term Ecological Research" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01csn4944> ;
+        rdfs:label "Northern Gulf of Alaska Long Term Ecological Research" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-122.0308 36.97412)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-122.0308 36.97412)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Santa Cruz" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/5393052/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000107406917> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1047293> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q7419417> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/5393052/> ;
+    ] ; 
     .

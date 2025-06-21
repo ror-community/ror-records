@@ -4,26 +4,39 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/00eqwze33> a org:Organization ;
     rdfs:label "Basque Centre for Climate Change" ;
     schema:name "Basque Centre for Climate Change" ;
     schema:foundingDate "2008"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Nonprofit" ; 
-    org:abbreviation "BERC" ;
-    org:alternativeName "BC3" ;
-    schema:url <https://www.bc3research.org/> ; 
+    org:classification "nonprofit" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-05-30"^^xsd:date ;
+    org:abbreviation "BC3"@en ; 
+    org:abbreviation "BERC"@en ; 
+    org:alternativeName "Basque Excellence Research Centre"@en ; 
+    schema:mainEntityOfPage <https://www.bc3research.org/> ;
+    schema:sameAs <https://grid.ac/institutions/grid.423984.0> ;
+    schema:sameAs <http://isni.org/isni/0000000120020998> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-2.92528 43.26271)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-2.92528 43.26271)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Bilbao" ;
             schema:addressCountry "ES" ;
-            owl:sameAs <http://sws.geonames.org/3128026/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000120020998> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Spain" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3128026/> ;
+    ] ; 
     .

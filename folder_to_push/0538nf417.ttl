@@ -4,22 +4,35 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/0538nf417> a org:Organization ;
     rdfs:label "InnoRenew CoE" ;
     schema:name "InnoRenew CoE" ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:alternativeName "InnoRenew CoE Center odličnosti za raziskave in inovacije na področju obnovljivih materialov in zdravega bivanjskega okolja" ;
-    schema:url <https://innorenew.eu> ; 
+    org:classification "nonprofit" ; 
+    dct:created "2024-03-13"^^xsd:date ;
+    dct:modified "2024-05-30"^^xsd:date ;
+    org:alternativeName "InnoRenew CoE Center odličnosti za raziskave in inovacije na področju obnovljivih materialov in zdravega bivanjskega okolja"@sl ; 
+    org:alternativeName "InnoRenew CoE Renewable Materials and Healthy Environments Research and Innovation Centre of Excellence"@en ; 
+    schema:mainEntityOfPage <https://innorenew.eu> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(13.65655 45.51123)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(13.65655 45.51123)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Izola" ;
             schema:addressCountry "SI" ;
-            owl:sameAs <http://sws.geonames.org/3199016/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Slovenia" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3199016/> ;
+    ] ; 
     .

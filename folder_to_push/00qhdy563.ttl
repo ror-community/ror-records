@@ -4,28 +4,123 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/00qhdy563> a org:Organization ;
     rdfs:label "Université Paul-Valéry Montpellier" ;
     schema:name "Université Paul-Valéry Montpellier" ;
     schema:foundingDate "1970"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "UPVM" ;
-    org:alternativeName "Université Paul Valéry Montpellier 3" ;
-    schema:url <https://www.univ-montp3.fr/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Paul_Val%C3%A9ry_University,_Montpellier_III> ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-05-30"^^xsd:date ;
+    org:abbreviation "UPVM"@None ; 
+    org:alternativeName "Université Paul Valéry Montpellier 3"@fr ; 
+    schema:mainEntityOfPage <https://www.univ-montp3.fr/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Paul_Val%C3%A9ry_University,_Montpellier_III> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.440910.8> ;
+    schema:sameAs <http://isni.org/isni/000000012196152X> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00f5hap04> ;
+        rdfs:label "Acteurs, Ressources et Territoires dans le Développement" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/008rywf59> ;
+        rdfs:label "Centre d'Écologie Fonctionnelle et Évolutive" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01h4rra97> ;
+        rdfs:label "Gouvernance, Risque, Environnement, Développement" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02sz8cn84> ;
+        rdfs:label "Institut de Recherche sur la Renaissance l'Age Classique et les Lumières" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/013yean28> ;
+        rdfs:label "Montpellier Laboratory of Informatics, Robotics and Microelectronics" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01bxfc994> ;
+        rdfs:label "Laboratoire d'Études et de Recherches Appliquées en Sciences Sociales" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03kbarg82> ;
+        rdfs:label "Laboratoire interdisciplinaire de recherche en didactique, éducation et formation" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04n9eyw42> ;
+        rdfs:label "Archéologie des Sociétés Méditerranéennes" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03ym2w748> ;
+        rdfs:label "Praxiling" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/021hb4c69> ;
+        rdfs:label "Centre de Recherche et d'Études Germaniques" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/057trhh06> ;
+        rdfs:label "Dynamique des Capacités Humaines et des Conduites de Santé" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00vazrw17> ;
+        rdfs:label "Laboratoire de Géographie et d'Aménagement de Montpellier" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04gpe6h67> ;
+        rdfs:label "Savoirs, Environnement, Sociétés" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/04f6hmf16> ;
+        rdfs:label "Languedoc-Roussillon Universities" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(3.87635 43.61093)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(3.87635 43.61093)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Montpellier" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2992166/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/000000012196152X> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q2912244> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2992166/> ;
+    ] ; 
     .

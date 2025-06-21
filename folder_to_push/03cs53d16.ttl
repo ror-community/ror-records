@@ -1,0 +1,175 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/03cs53d16> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "1775"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "funder" ; 
+    org:classification "government" ; 
+    dct:created "2024-05-27"^^xsd:date ;
+    dct:modified "2024-05-30"^^xsd:date ;
+    org:alternativeName "U.S. Navy"@en ; 
+    schema:url <http://navy.mil> ; 
+    schema:mainEntityOfPage <https://www.navy.mil> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/United_States_Navy> ; 
+    schema:sameAs <https://api.crossref.org/funders/100009896> ;
+    schema:sameAs <http://isni.org/isni/0000000121555249> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/03ar0mv07> ;
+        rdfs:label "United States Department of the Navy" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/004tay810> ;
+        rdfs:label "Military Sealift Command" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04rm24644> ;
+        rdfs:label "Naval Aerospace Medical Institute" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01gsy1c54> ;
+        rdfs:label "Naval Aerospace Medical Research Laboratory" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0539h2w52> ;
+        rdfs:label "Naval Facilities Engineering Command" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02c37bg49> ;
+        rdfs:label "Naval History and Heritage Command" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0278h4n28> ;
+        rdfs:label "Naval Hospital Bremerton" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04vxq1969> ;
+        rdfs:label "Naval Medical Center Portsmouth" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02n14ez29> ;
+        rdfs:label "Naval Medical Center San Diego" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05f421b09> ;
+        rdfs:label "Naval Medical Research Command" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/033yfkj90> ;
+        rdfs:label "Naval Postgraduate School" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03dm1p143> ;
+        rdfs:label "Naval Sea Systems Command" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04bnxa153> ;
+        rdfs:label "Naval Undersea Warfare Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/035agn614> ;
+        rdfs:label "Navy and Marine Corps Public Health Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01dh9vr61> ;
+        rdfs:label "Office of Naval Intelligence" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00rk2pe57> ;
+        rdfs:label "Office of Naval Research" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/000ztjy10> ;
+        rdfs:label "Naval Information Warfare Systems Command" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00znex860> ;
+        rdfs:label "United States Naval Academy" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05xde4j27> ;
+        rdfs:label "United States Naval Hospital Okinawa" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/054ajk512> ;
+        rdfs:label "Naval Air Systems Command" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04w46c814> ;
+        rdfs:label "United States Fleet Forces Command" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01e2k1j30> ;
+        rdfs:label "Bureau of Medicine and Surgery" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-77.03637 38.89511)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Washington" ;
+            schema:addressCountry "US" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/4140963/> ;
+    ] ; 
+    .

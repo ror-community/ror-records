@@ -1,0 +1,46 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/03ny67e60> a org:Organization ;
+    rdfs:label "Institute of Engineering" ;
+    schema:name "Institute of Engineering" ;
+    schema:foundingDate "1972"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2020-12-21"^^xsd:date ;
+    dct:modified "2024-05-30"^^xsd:date ;
+    org:abbreviation "IOE"@None ; 
+    schema:mainEntityOfPage <https://ioe.tu.edu.np> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Institute_of_Engineering> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.509296.1> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02rg1r889> ;
+        rdfs:label "Tribhuvan University" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(85.31685 27.67824)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Pulchowk" ;
+            schema:addressCountry "NP" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Nepal" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/8740352/> ;
+    ] ; 
+    .

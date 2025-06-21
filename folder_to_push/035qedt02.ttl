@@ -4,28 +4,61 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/035qedt02> a org:Organization ;
     rdfs:label "Ministero della cultura" ;
     schema:name "Ministero della cultura" ;
     schema:foundingDate "1974"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Government" ; 
-    org:abbreviation "MiBACT" ;
-    org:alternativeName "Ministry of Culture" ;
-    schema:url <https://www.beniculturali.it> ; 
-    owl:sameAs <https://it.wikipedia.org/wiki/Ministero_della_cultura> ;
+    org:classification "funder" ; 
+    org:classification "government" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-05-30"^^xsd:date ;
+    org:abbreviation "MiBACT"@None ; 
+    org:abbreviation "MiC"@None ; 
+    org:alternativeName "Ministry for Cultural Assets and Environments"@en ; 
+    org:alternativeName "Ministry of Culture"@en ; 
+    schema:mainEntityOfPage <https://www.beniculturali.it> ;
+    owl:sameAs <https://it.wikipedia.org/wiki/Ministero_della_cultura> ; 
+    schema:sameAs <https://api.crossref.org/funders/100014811> ;
+    schema:sameAs <https://grid.ac/institutions/grid.425779.a> ;
+    schema:sameAs <http://isni.org/isni/0000000110867917> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/058m2zy02> ;
+        rdfs:label "Biblioteca Universitaria di Napoli" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/00xqkj280> ;
+        rdfs:label "Governo Italiano" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01beje961> ;
+        rdfs:label "Galleria Borghese" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(12.51133 41.89193)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(12.51133 41.89193)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Rome" ;
             schema:addressCountry "IT" ;
-            owl:sameAs <http://sws.geonames.org/3169070/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000110867917> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1347047> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Italy" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3169070/> ;
+    ] ; 
     .

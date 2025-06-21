@@ -1,0 +1,63 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/04cxsn644> a org:Organization ;
+    rdfs:label "Délégation Nord, Pas-de-Calais et Picardie" ;
+    schema:name "Délégation Nord, Pas-de-Calais et Picardie" ;
+    schema:foundingDate "1990"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "government" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-05-30"^^xsd:date ;
+    org:abbreviation "DR18"@fr ; 
+    schema:mainEntityOfPage <http://www.dr18.cnrs.fr/> ;
+    schema:sameAs <https://grid.ac/institutions/grid.457021.5> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04wez4p43> ;
+        rdfs:label "Laboratoire d'Automatique, Génie Informatique et Signal" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/014net767> ;
+        rdfs:label "Laboratoire de Physico-Chimie de l'Atmosphère" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04y91dy23> ;
+        rdfs:label "Unité Évolution, Écologie et Paléontologie" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/03yz3tz18> ;
+        rdfs:label "Direction Générale Déléguée aux Ressources" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(3.05858 50.63297)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Lille" ;
+            schema:addressCountry "FR" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2998324/> ;
+    ] ; 
+    .

@@ -4,28 +4,90 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/05rrcem69> a org:Organization ;
     rdfs:label "University of California, Davis" ;
     schema:name "University of California, Davis" ;
     schema:foundingDate "1905"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "UCD" ;
-    org:alternativeName "UC Davis" ;
-    schema:url <http://ucdavis.edu/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/University_of_California,_Davis> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-05-30"^^xsd:date ;
+    org:alternativeName "UC Davis"@en ; 
+    org:abbreviation "UCD"@en ; 
+    schema:url <http://ucdavis.edu> ; 
+    schema:mainEntityOfPage <https://www.ucdavis.edu> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_California,_Davis> ; 
+    schema:sameAs <https://api.crossref.org/funders/100007707> ;
+    schema:sameAs <https://grid.ac/institutions/grid.27860.3b> ;
+    schema:sameAs <http://isni.org/isni/0000000419369684> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00fyrp007> ;
+        rdfs:label "NeuroMab" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00xcmeq33> ;
+        rdfs:label "Tahoe Environmental Research Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/00pjdza24> ;
+        rdfs:label "University of California System" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02ha38c24> ;
+        rdfs:label "San Joaquin General Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05ehe8t08> ;
+        rdfs:label "UC Davis Children's Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05q8kyc69> ;
+        rdfs:label "UC Davis Health System" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05t6gpm70> ;
+        rdfs:label "University of California Davis Medical Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/026t0fx73> ;
+        rdfs:label "Veterinary Medical Teaching Hospital" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-121.74052 38.54491)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-121.74052 38.54491)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Davis" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/5341704/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000419369684> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q129421> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/5341704/> ;
+    ] ; 
     .

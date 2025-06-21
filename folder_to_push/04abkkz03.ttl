@@ -4,26 +4,55 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/04abkkz03> a org:Organization ;
     rdfs:label "International Centre for Advanced Mediterranean Agronomic Studies" ;
     schema:name "International Centre for Advanced Mediterranean Agronomic Studies" ;
     schema:foundingDate "1962"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Government" ; 
-    org:abbreviation "CIHEAM" ;
-    schema:url <http://ciheam.org/index.php/en/> ; 
+    org:classification "government" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-05-30"^^xsd:date ;
+    org:abbreviation "CIHEAM"@None ; 
+    schema:mainEntityOfPage <http://ciheam.org/index.php/en/> ;
+    schema:sameAs <https://grid.ac/institutions/grid.433092.f> ;
+    schema:sameAs <http://isni.org/isni/0000000404118970> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/011xg1225> ;
+        rdfs:label "Montpellier Interdisciplinary center on Sustainable Agri-food systems: social and nutritional sciences" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0005r2j17> ;
+        rdfs:label "Mediterranean Agronomic Institute of Montpellier" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00n2c0309> ;
+        rdfs:label "ABSys" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(2.3488 48.85341)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(2.3488 48.85341)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Paris" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2988507/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000404118970> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q2972371> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2988507/> ;
+    ] ; 
     .

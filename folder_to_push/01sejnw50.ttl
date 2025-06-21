@@ -1,0 +1,41 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/01sejnw50> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2024-05-27"^^xsd:date ;
+    dct:modified "2024-05-30"^^xsd:date ;
+    org:abbreviation "HEG-FR"@None ; 
+    org:alternativeName "Haute école de gestion Fribourg"@fr ; 
+    org:alternativeName "Hochschule Für Wirtschaft Freibourg"@de ; 
+    schema:url <http://heg-fr.ch> ; 
+    schema:mainEntityOfPage <https://www.heg-fr.ch> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/School_of_Management_Fribourg> ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(7.15128 46.80237)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Fribourg" ;
+            schema:addressCountry "CH" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Switzerland" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2660718/> ;
+    ] ; 
+    .

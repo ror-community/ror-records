@@ -4,26 +4,429 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/051escj72> a org:Organization ;
     rdfs:label "University of Montpellier" ;
     schema:name "University of Montpellier" ;
     schema:foundingDate "1289"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    schema:url <http://www.umontpellier.fr/en/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/University_of_Montpellier> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-05-30"^^xsd:date ;
+    schema:mainEntityOfPage <http://www.umontpellier.fr/en/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/University_of_Montpellier> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100008222> ;
+    schema:sameAs <https://grid.ac/institutions/grid.121334.6> ;
+    schema:sameAs <http://isni.org/isni/0000000120970141> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00f5hap04> ;
+        rdfs:label "Acteurs, Ressources et Territoires dans le Développement" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0000n5x09> ;
+        rdfs:label "Agropolymerpolymer Engineering and Emerging Technologies" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05r332y60> ;
+        rdfs:label "Biochemistry and Plant Molecular Physiology" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/020nks034> ;
+        rdfs:label "Botany and Modelling of Plant Architecture and Vegetation" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/008rywf59> ;
+        rdfs:label "Centre d'Écologie Fonctionnelle et Évolutive" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0189yvq06> ;
+        rdfs:label "Centre de Biologie Structurale" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01xpc6869> ;
+        rdfs:label "Centre for Biochemical and Macromolecular Research" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02banhz78> ;
+        rdfs:label "Diversité, adaptation, développement des plantes" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03q1qx424> ;
+        rdfs:label "Diversity, Genomes and Insects-Microorganisms Interactions" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02pzyz439> ;
+        rdfs:label "Forests and Societies" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00b80ez59> ;
+        rdfs:label "Functional Ecology and Biogeochemistry of Soils and Agrosystems" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/024gts110> ;
+        rdfs:label "Géosciences Montpellier" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/028wq3277> ;
+        rdfs:label "Institut Charles Gerhardt" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04nmj9827> ;
+        rdfs:label "Institut Européen des Membranes" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0431hh004> ;
+        rdfs:label "Institut d'Électronique et des Systèmes" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/043wmc583> ;
+        rdfs:label "Institut de Génomique Fonctionnelle" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02785qs39> ;
+        rdfs:label "Institut de Génétique Moléculaire de Montpellier" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/044kxby82> ;
+        rdfs:label "Institut Montpelliérain Alexander Grothendieck" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/036eg1q44> ;
+        rdfs:label "Institut de Recherche en Infectiologie de Montpellier" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05d1e6v30> ;
+        rdfs:label "Institut des Biomolécules Max Mousseron" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01cah1n37> ;
+        rdfs:label "Institut des Sciences de l'Evolution de Montpellier" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00b8mh310> ;
+        rdfs:label "Institute for Regenerative Medicine & Biotherapy" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04fr7pd94> ;
+        rdfs:label "Institute for the Separation Chemistry in Marcoule" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03capj968> ;
+        rdfs:label "Institute of Cancer Research of Montpellier" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05ee10k25> ;
+        rdfs:label "Institute of Human Genetics" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02ftce284> ;
+        rdfs:label "Laboratoire Charles Coulomb" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00nrbzg90> ;
+        rdfs:label "Laboratoire Univers et Particules de Montpellier" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03fte3n86> ;
+        rdfs:label "Laboratoire d'Écophysiologie Moléculaire des Plantes sous Stress Environnementaux" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02fke9256> ;
+        rdfs:label "Laboratoire de Mécanique et Génie Civil" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00aycez97> ;
+        rdfs:label "Laboratory HydroSciences Montpellier" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00357kh21> ;
+        rdfs:label "Maladies Infectieuses et Vecteurs: Écologie, Génétique, Évolution et Contrôle" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/049dk3691> ;
+        rdfs:label "Marine Biodiversity Exploitation and Conservation" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/013yean28> ;
+        rdfs:label "Montpellier Laboratory of Informatics, Robotics and Microelectronics" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/003sscq03> ;
+        rdfs:label "Physiology & Experimental Medicine of the Heart and Muscles" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04pzw3j14> ;
+        rdfs:label "Rhizogenesis Lab" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04w07sc25> ;
+        rdfs:label "Sciences pour L’Œnologie" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02wzg8t73> ;
+        rdfs:label "Centre d’Etudes Politiques Et sociaLes" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00xffm983> ;
+        rdfs:label "Dynamique Musculaire et Métabolisme" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03kbarg82> ;
+        rdfs:label "Laboratoire interdisciplinaire de recherche en didactique, éducation et formation" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00zn13224> ;
+        rdfs:label "Interactions Hôtes-Pathogènes-Environnements" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/008qs6838> ;
+        rdfs:label "Mécanismes moléculaires dans les démences neurodégénératives" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01nfvkq89> ;
+        rdfs:label "UMR QualiSud" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00cesps27> ;
+        rdfs:label "Observatoire des Sciences de l'Univers OREME" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01z485314> ;
+        rdfs:label "UMR Espace-Dev" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/044jxv425> ;
+        rdfs:label "Bacterial Virulence and Chronic Infections" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/014sj8802> ;
+        rdfs:label "Recherches Translationnelles sur le VIH et les Maladies Infectieuses" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/030vwjb30> ;
+        rdfs:label "Genopolys" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01f5c5978> ;
+        rdfs:label "Centre d'Etudes des Maladies Infectieuses et Pharmacologie Anti-Infectieuse" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05d362832> ;
+        rdfs:label "Laboratoire de Chimie Bio-inspirée et d’Innovations Ecologiques" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00rwjvc96> ;
+        rdfs:label "Center for Environmental Economics - Montpellier" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04eeyfe07> ;
+        rdfs:label "Centre Méditerranéen de l’Environnement et de la Biodiversité" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01w1erp60> ;
+        rdfs:label "Couplage Multi-physiques et Multi-échelles en mécanique géo-environnemental" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01x6z5t49> ;
+        rdfs:label "Fédération de Recherche Spectroscopies de Photoémission" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01nrtdp55> ;
+        rdfs:label "GDR NBODY : Problème quantique à N corps en chimie et physique" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01r19bq53> ;
+        rdfs:label "Replication des chromosomes eucaryotes et ses points de contrôle" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02r1kz177> ;
+        rdfs:label "Bioinformatique Moléculaire" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01sgwka45> ;
+        rdfs:label "Microscopie Fonctionnelle du Vivant" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/04f6hmf16> ;
+        rdfs:label "Languedoc-Roussillon Universities" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "predecessor" ;
+        org:member <https://ror.org/0227fbx80> ;
+        rdfs:label "University of Montpellier 1" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "predecessor" ;
+        org:member <https://ror.org/00wh4bp03> ;
+        rdfs:label "University of Montpellier 2" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03xzagw65> ;
+        rdfs:label "Hôpital Lapeyronie" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/04pwyfk22> ;
+        rdfs:label "Hôpital Saint Eloi" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03kfkzp90> ;
+        rdfs:label "Institut Universitaire de Recherche Clinique" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00mthsf17> ;
+        rdfs:label "University Hospital of Montpellier" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05y5s3h28> ;
+        rdfs:label "Plant Health Institute de Montpellier" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(3.87635 43.61093)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(3.87635 43.61093)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Montpellier" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2992166/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000120970141> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q776223> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2992166/> ;
+    ] ; 
     .

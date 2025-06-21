@@ -4,26 +4,177 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/05kpkpg04> a org:Organization ;
     rdfs:label "Centre de Coopération Internationale en Recherche Agronomique pour le Développement" ;
     schema:name "Centre de Coopération Internationale en Recherche Agronomique pour le Développement" ;
     schema:foundingDate "1984"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "CIRAD" ;
-    schema:url <https://www.cirad.fr> ; 
+    org:classification "facility" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-05-30"^^xsd:date ;
+    org:abbreviation "CIRAD"@None ; 
+    schema:mainEntityOfPage <https://www.cirad.fr> ;
+    schema:sameAs <https://api.crossref.org/funders/501100007204> ;
+    schema:sameAs <https://grid.ac/institutions/grid.8183.2> ;
+    schema:sameAs <http://isni.org/isni/0000000121539871> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00f5hap04> ;
+        rdfs:label "Acteurs, Ressources et Territoires dans le Développement" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0000n5x09> ;
+        rdfs:label "Agropolymerpolymer Engineering and Emerging Technologies" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/006fhby04> ;
+        rdfs:label "Animal, Santé, Territoires, Risques et Ecosystèmes" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/020nks034> ;
+        rdfs:label "Botany and Modelling of Plant Architecture and Vegetation" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05h7ddb14> ;
+        rdfs:label "Centre de Biologie et de Gestion des Populations" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04q9vef57> ;
+        rdfs:label "Ecology of Guianan Forests" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02pzyz439> ;
+        rdfs:label "Forests and Societies" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00b80ez59> ;
+        rdfs:label "Functional Ecology and Biogeochemistry of Soils and Agrosystems" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/020g0rw41> ;
+        rdfs:label "Gestion de l'Eau, Acteurs, Usages" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0262br971> ;
+        rdfs:label "Innovation and Development in Agriculture and Food" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01cah1n37> ;
+        rdfs:label "Institut des Sciences de l'Evolution de Montpellier" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01b436806> ;
+        rdfs:label "CIRED" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/011xg1225> ;
+        rdfs:label "Montpellier Interdisciplinary center on Sustainable Agri-food systems: social and nutritional sciences" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03mj14b52> ;
+        rdfs:label "Peuplement Végétaux et Bio-agresseurs en Milieu Tropical" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04pzw3j14> ;
+        rdfs:label "Rhizogenesis Lab" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05merjr74> ;
+        rdfs:label "Tropical and Mediterranean Animal Production Systems" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01nfvkq89> ;
+        rdfs:label "UMR QualiSud" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0458hw939> ;
+        rdfs:label "TETIS - Territoires, Environnement, Télédétection et Information Spatiale" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05ye29x39> ;
+        rdfs:label "Interactions hotes-vecteurs-parasites-environnement dans les maladies tropicales négligées dues aux trypanosomatides" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04gpe6h67> ;
+        rdfs:label "Savoirs, Environnement, Sociétés" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0459fdx51> ;
+        rdfs:label "Fédération de Recherche sur l'Energie Solaire" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05y5s3h28> ;
+        rdfs:label "Plant Health Institute de Montpellier" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00n2c0309> ;
+        rdfs:label "ABSys" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(2.3488 48.85341)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(2.3488 48.85341)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Paris" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2988507/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000121539871> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q2945274> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2988507/> ;
+    ] ; 
     .

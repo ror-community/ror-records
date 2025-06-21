@@ -4,26 +4,38 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/0420bzz85> a org:Organization ;
     rdfs:label "Universitas Pembangunan Nasional Veteran Yogyakarta" ;
     schema:name "Universitas Pembangunan Nasional Veteran Yogyakarta" ;
     schema:foundingDate "1958"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:alternativeName "UPN "Veteran" ;
-    schema:url <http://www.upnyk.ac.id/> ; 
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-05-30"^^xsd:date ;
+    org:alternativeName "UPN Veteran"@id ; 
+    schema:url <http://upnyk.ac.id> ; 
+    schema:mainEntityOfPage <https://www.upnyk.ac.id> ;
+    schema:sameAs <https://grid.ac/institutions/grid.444318.e> ;
+    schema:sameAs <http://isni.org/isni/0000000417595637> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(110.35556 -7.71556)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(110.35556 -7.71556)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Sleman" ;
             schema:addressCountry "ID" ;
-            owl:sameAs <http://sws.geonames.org/1626754/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000417595637> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q12523429> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Indonesia" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1626754/> ;
+    ] ; 
     .

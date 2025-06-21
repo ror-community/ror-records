@@ -4,24 +4,53 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/005yfhm28> a org:Organization ;
     rdfs:label "Institut de Biosciences et biotechnologies d'Aix-Marseille" ;
     schema:name "Institut de Biosciences et biotechnologies d'Aix-Marseille" ;
     schema:foundingDate "2012"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "BIAM" ;
-    schema:url <https://www.cite-des-energies.fr/biam/> ; 
+    org:classification "education" ; 
+    dct:created "2023-06-22"^^xsd:date ;
+    dct:modified "2024-05-30"^^xsd:date ;
+    org:abbreviation "BIAM"@None ; 
+    schema:mainEntityOfPage <https://www.cite-des-energies.fr/biam/> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/035xkbk20> ;
+        rdfs:label "Aix-Marseille University" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/00jjx8s55> ;
+        rdfs:label "Atomic Energy and Alternative Energies Commission" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02feahw73> ;
+        rdfs:label "French National Centre for Scientific Research" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(5.70775 43.68504)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(5.70775 43.68504)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Saint-Paul-lès-Durance" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2977644/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://www.wikidata.org/entity/Q52607033> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2977644/> ;
+    ] ; 
     .

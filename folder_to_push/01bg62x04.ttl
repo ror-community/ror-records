@@ -4,27 +4,129 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01bg62x04> a org:Organization ;
     rdfs:label "Government of Catalonia" ;
     schema:name "Government of Catalonia" ;
     schema:foundingDate "1977"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Government" ; 
-    schema:url <https://catalangovernment.eu> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Generalitat_de_Catalunya> ;
+    org:classification "funder" ; 
+    org:classification "government" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-05-30"^^xsd:date ;
+    schema:mainEntityOfPage <https://catalangovernment.eu> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Generalitat_de_Catalunya> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100002809> ;
+    schema:sameAs <https://grid.ac/institutions/grid.454735.4> ;
+    schema:sameAs <http://isni.org/isni/0000000123317762> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01xhc9d78> ;
+        rdfs:label "Agencia per a la Competitivit de l'Empresa" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01n4pqe45> ;
+        rdfs:label "Agència de Gestió d'Ajuts Universitaris i de Recerca" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02dkz1149> ;
+        rdfs:label "Departament d'Educació" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/014ns9811> ;
+        rdfs:label "Departament de Cultura" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00nyrjc53> ;
+        rdfs:label "Departament de Salut" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04wkdwp52> ;
+        rdfs:label "Institut Català de la Salut" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03g0h0k24> ;
+        rdfs:label "Institut Català de les Dones" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01k6ah132> ;
+        rdfs:label "Institut de Seguretat Pública de Catalunya" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/012zh9h13> ;
+        rdfs:label "Institute for Research and Technology in Food and Agriculture" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0564q6y15> ;
+        rdfs:label "Departament d'Economia i Hisenda de la Generalitat de Catalunya" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04xrm3t06> ;
+        rdfs:label "National Institute of Physical Education of Catalonia" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03wbt1f24> ;
+        rdfs:label "Institut de Política Econòmica i Governança" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01gbnem66> ;
+        rdfs:label "Departament de Recerca i Universitats" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03abrgd14> ;
+        rdfs:label "Centre for Research on Ecology and Forestry Applications" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01jn7qf49> ;
+        rdfs:label "Departament d'Empresa i Treball" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(2.15899 41.38879)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(2.15899 41.38879)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Barcelona" ;
             schema:addressCountry "ES" ;
-            owl:sameAs <http://sws.geonames.org/3128760/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000123317762> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q8022> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q3112544> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Spain" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3128760/> ;
+    ] ; 
     .

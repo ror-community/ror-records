@@ -1,0 +1,61 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/01973x930> a org:Organization ;
+    rdfs:label "United States Department of the Air Force" ;
+    schema:name "United States Department of the Air Force" ;
+    schema:foundingDate "1947"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "government" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-05-30"^^xsd:date ;
+    org:abbreviation "DAF"@None ; 
+    org:alternativeName "U.S. Department of the Air Force"@en ; 
+    schema:url <http://af.mil> ; 
+    schema:mainEntityOfPage <https://www.af.mil> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/United_States_Department_of_the_Air_Force> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.495456.f> ;
+    schema:sameAs <http://isni.org/isni/0000000404787146> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/006gmme17> ;
+        rdfs:label "United States Air Force" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/0447fe631> ;
+        rdfs:label "United States Department of Defense" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02ypept83> ;
+        rdfs:label "United States Space Force" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-77.03637 38.89511)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Washington" ;
+            schema:addressCountry "US" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/4140963/> ;
+    ] ; 
+    .

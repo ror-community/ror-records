@@ -1,0 +1,46 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/02s5cdn70> a org:Organization ;
+    rdfs:label "Gwanda State University" ;
+    schema:name "Gwanda State University" ;
+    schema:foundingDate "2012"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-05-30"^^xsd:date ;
+    schema:mainEntityOfPage <http://www.gsu.ac.zw/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Gwanda_State_University> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.448948.d> ;
+    schema:sameAs <http://isni.org/isni/0000000492813083> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/04y0q2a96> ;
+        rdfs:label "Zimbabwe University Libraries Consortium" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(29.00698 -20.93622)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Gwanda" ;
+            schema:addressCountry "ZW" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Zimbabwe" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/890516/> ;
+    ] ; 
+    .

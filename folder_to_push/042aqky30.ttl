@@ -4,28 +4,130 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/042aqky30> a org:Organization ;
     rdfs:label "TU Dresden" ;
     schema:name "TU Dresden" ;
     schema:foundingDate "1828"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "TUD" ;
-    schema:url <https://tu-dresden.de> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Dresden_University_of_Technology> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-05-30"^^xsd:date ;
+    org:abbreviation "TUD"@None ; 
+    schema:mainEntityOfPage <https://tu-dresden.de> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Dresden_University_of_Technology> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100002957> ;
+    schema:sameAs <https://grid.ac/institutions/grid.4488.0> ;
+    schema:sameAs <http://isni.org/isni/0000000121117257> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05hrn3e05> ;
+        rdfs:label "Center for Systems Biology Dresden" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00kkpv737> ;
+        rdfs:label "Complexity and Topology in Quantum Matter" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04wn6w972> ;
+        rdfs:label "Förderverein Institut für Medizintechnik Dresden" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00me29179> ;
+        rdfs:label "Institut für Holztechnologie Dresden" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/056qj1t15> ;
+        rdfs:label "Institute of Automation" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/028070c57> ;
+        rdfs:label "NaMLab (Germany)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05ke5hb07> ;
+        rdfs:label "Paul Langerhans Institute Dresden" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01dj9qb53> ;
+        rdfs:label "TransDeN Lab" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01zy07c70> ;
+        rdfs:label "Nationales Centrum für Tumorerkrankungen Dresden" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/044fhy270> ;
+        rdfs:label "Carl-Thiem-Klinikum Cottbus" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00qcpjs09> ;
+        rdfs:label "Klinikum Görlitz" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/035xba693> ;
+        rdfs:label "Krankenhaus Dresden-Friedrichstadt" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/04za5zm41> ;
+        rdfs:label "University Hospital Carl Gustav Carus" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02nx8n605> ;
+        rdfs:label "TU9" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/042wjdg05> ;
+        rdfs:label "Hannah-Arendt-Institut für Totalitarismusforschung e.V. an der TU Dresden" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(13.73832 51.05089)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(13.73832 51.05089)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Dresden" ;
             schema:addressCountry "DE" ;
-            owl:sameAs <http://sws.geonames.org/2935022/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000121117257> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q158158> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q31837129> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Germany" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2935022/> ;
+    ] ; 
     .

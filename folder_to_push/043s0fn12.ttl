@@ -1,0 +1,47 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/043s0fn12> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "1986"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "funder" ; 
+    org:classification "nonprofit" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-05-30"^^xsd:date ;
+    org:alternativeName "Ichiro Kanae Foundation"@en ; 
+    org:alternativeName "Ichiro Kanehara Foundation for the Promotion of Medical Sciences and Medical Care"@en ; 
+    org:alternativeName "Kanae Foundation"@en ; 
+    org:alternativeName "Kanae Foundation for the Promotion of Medical Science"@en ; 
+    org:alternativeName "金原一郎記念医学医療振興財団"@ja ; 
+    schema:url <http://kanehara-zaidan.or.jp> ; 
+    schema:mainEntityOfPage <https://www.kanehara-zaidan.or.jp> ;
+    schema:sameAs <https://api.crossref.org/funders/501100003837> ;
+    schema:sameAs <https://grid.ac/institutions/grid.479881.b> ;
+    schema:sameAs <http://isni.org/isni/0000000458976698> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(139.69171 35.6895)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Tokyo" ;
+            schema:addressCountry "JP" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Japan" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1850147/> ;
+    ] ; 
+    .

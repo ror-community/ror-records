@@ -1,0 +1,65 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/0492nfe34> a org:Organization ;
+    rdfs:label "University of Cape Coast" ;
+    schema:name "University of Cape Coast" ;
+    schema:foundingDate "1962"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-05-30"^^xsd:date ;
+    org:abbreviation "UCC"@None ; 
+    schema:mainEntityOfPage <http://www.ucc.edu.gh/> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Cape_Coast> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.413081.f> ;
+    schema:sameAs <http://isni.org/isni/0000000123228567> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01y434850> ;
+        rdfs:label "Abetifi Presbyterian College of Education" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01428y038> ;
+        rdfs:label "Kibi Presbyterian College of Education" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/04t59f227> ;
+        rdfs:label "Our Lady of Apostles College of Education" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05gedzg25> ;
+        rdfs:label "Foso College of Education" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-1.2466 5.10535)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Cape Coast" ;
+            schema:addressCountry "GH" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Ghana" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2302357/> ;
+    ] ; 
+    .

@@ -8,17 +8,19 @@
 @prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/03hypw319> a org:Organization ;
-    rdfs:label "University of Reims Champagne-Ardenne" ;
-    schema:name "University of Reims Champagne-Ardenne" ;
+    rdfs:label "" ;
+    schema:name "" ;
     schema:foundingDate "1971"^^xsd:gYear ;
     org:status "active" ;
     org:classification "education" ; 
     org:classification "funder" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-05-02"^^xsd:date ;
+    dct:modified "2024-05-30"^^xsd:date ;
     org:abbreviation "URCA"@None ; 
-    org:alternativeName "University of Reims"@None ; 
-    schema:mainEntityOfPage <http://www.univ-reims.eu/> ;
+    org:alternativeName "University of Reims"@en ; 
+    org:alternativeName "University of Reims Champagne-Ardenne"@en ; 
+    schema:url <http://univ-reims.fr> ; 
+    schema:mainEntityOfPage <https://www.univ-reims.fr> ;
     owl:sameAs <http://en.wikipedia.org/wiki/University_of_Reims_Champagne-Ardenne> ; 
     schema:sameAs <https://api.crossref.org/funders/501100016399> ;
     schema:sameAs <https://grid.ac/institutions/grid.11667.37> ;
@@ -85,6 +87,12 @@
     ] ; 
     org:hasLink [
         a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04j8jrf09> ;
+        rdfs:label "Centre Interdisciplinaire de Recherches sur les Langues Et la Pensée" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
         org:role "related" ;
         org:member <https://ror.org/01jbb3w63> ;
         rdfs:label "Centre Hospitalier Universitaire de Reims" ;
@@ -92,8 +100,8 @@
     org:hasLink [
         a org:Membership ;
         org:role "child" ;
-        org:member <https://ror.org/04j8jrf09> ;
-        rdfs:label "Centre Interdisciplinaire de Recherches sur les Langues Et la Pensée" ;
+        org:member <https://ror.org/01x1mwt32> ;
+        rdfs:label "Centre de recherche interdisciplinaire sur les modèles esthétiques et littéraires" ;
     ] ; 
     schema:location [
         a schema:Place ;

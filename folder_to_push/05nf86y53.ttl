@@ -1,0 +1,61 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/05nf86y53> a org:Organization ;
+    rdfs:label "Japan Atomic Energy Agency" ;
+    schema:name "Japan Atomic Energy Agency" ;
+    schema:foundingDate "2005"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "funder" ; 
+    org:classification "government" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-05-30"^^xsd:date ;
+    org:abbreviation "JAEA"@None ; 
+    schema:mainEntityOfPage <https://www.jaea.go.jp/english/index.html> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Japan_Atomic_Energy_Agency> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100005118> ;
+    schema:sameAs <https://grid.ac/institutions/grid.20256.33> ;
+    schema:sameAs <http://isni.org/isni/0000000103721485> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05xrbcc66> ;
+        rdfs:label "Advanced Science Research Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02vck8g64> ;
+        rdfs:label "Japan Proton Accelerator Research Complex" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00e50mf91> ;
+        rdfs:label "International Network of Nuclear Reaction Data Centres" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(140.58058 36.46078)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Tōkai Mura" ;
+            schema:addressCountry "JP" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Japan" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2110767/> ;
+    ] ; 
+    .

@@ -4,26 +4,261 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/03rth4p18> a org:Organization ;
     rdfs:label "Lumière University Lyon 2" ;
     schema:name "Lumière University Lyon 2" ;
     schema:foundingDate "1835"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    schema:url <http://www.univ-lyon2.fr/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Lumi%C3%A8re_University_Lyon_2> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-05-30"^^xsd:date ;
+    schema:mainEntityOfPage <http://www.univ-lyon2.fr/> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Lumi%C3%A8re_University_Lyon_2> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100011079> ;
+    schema:sameAs <https://grid.ac/institutions/grid.72960.3a> ;
+    schema:sameAs <http://isni.org/isni/0000000121880906> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02bq56641> ;
+        rdfs:label "Archéologie et Archéométrie" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/059xs3104> ;
+        rdfs:label "Archéorient" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04bsn3y16> ;
+        rdfs:label "Center for Research in Psychopathology and Clinical Psychology" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/026tf7535> ;
+        rdfs:label "Centre Max Weber" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/048z48z46> ;
+        rdfs:label "Centre de Recherche en Linguistique Appliquée" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01rzzcx32> ;
+        rdfs:label "Centre de Recherches Critiques sur le Droit" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0476zq753> ;
+        rdfs:label "Conception de l'Action en Situation" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02stf8w13> ;
+        rdfs:label "Decision & Information Sciences for Production Systems" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03cccec37> ;
+        rdfs:label "Droits, Contrats et Territoires" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/037xc1874> ;
+        rdfs:label "Education, Cultures, Politiques" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/009frb846> ;
+        rdfs:label "Entrepôts, Représentation et Ingénierie des Connaissances" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0256r1e04> ;
+        rdfs:label "Environment, City, Society" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04y24xj84> ;
+        rdfs:label "Equipe de recherche de Lyon en Sciences de l'Information et de la Communication" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/054f5fc35> ;
+        rdfs:label "Fédération Informatique de Lyon" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/042fmc481> ;
+        rdfs:label "Groupe d'Analyse et de Théorie Economique Lyon St Etienne" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/028cp7y71> ;
+        rdfs:label "Groupe de Recherche en Psychologie Sociale" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01yx7av22> ;
+        rdfs:label "Histoire et Sources des Mondes Antiques" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05mqwtr17> ;
+        rdfs:label "Histoire, Archéologie, Littératures des Mondes Chrétiens et Musulmans Médiévaux" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01ap27310> ;
+        rdfs:label "Institut Supérieur pour l'Étude des Religions et de la Laïcité" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02wmc6m46> ;
+        rdfs:label "Institut d'Histoire des Représentations et des Idées dans les Modernités" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03r0cdk24> ;
+        rdfs:label "Institut de Recherche sur l'Architecture Antique" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04mn0nr69> ;
+        rdfs:label "Interactions, Corpus, Apprentissages, Représentations" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01yw97595> ;
+        rdfs:label "Laboratoire Aménagement Économie Transports" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01fvx3s14> ;
+        rdfs:label "Laboratoire Dynamique du Langage" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/048ryj409> ;
+        rdfs:label "Laboratoire Passages XX_XXI" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04qz4qy85> ;
+        rdfs:label "Laboratoire de Recherche Historique Rhône-Alpes" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0061rmm93> ;
+        rdfs:label "Laboratoire d’Étude des Mécanismes Cognitifs" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00rj8cd91> ;
+        rdfs:label "Laboratory of Rural Studies" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/051br2d77> ;
+        rdfs:label "Langues et Cultures Européennes" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04rkh0096> ;
+        rdfs:label "Littérature, Idéologies, Représentations aux XVIIIe et XIXe Siècles" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/007dy3y92> ;
+        rdfs:label "Lyons Institute of East Asian Studies" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00rawf147> ;
+        rdfs:label "Maison des Sciences de l'Homme Lyon St-Étienne" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02125p091> ;
+        rdfs:label "Sciences et Technologies des Cultures et Sociétés Numériques" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04x9a0q46> ;
+        rdfs:label "Triangle" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04ej53908> ;
+        rdfs:label "Typologie et Universaux Linguistiques" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05de6h762> ;
+        rdfs:label "Maison de l'Orient et de la Méditerranée Jean Pouilloux" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/01rk35k63> ;
+        rdfs:label "Université de Lyon" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(4.84671 45.74846)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(4.84671 45.74846)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Lyon" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2996944/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000121880906> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q4041> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2996944/> ;
+    ] ; 
     .

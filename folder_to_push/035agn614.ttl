@@ -1,0 +1,45 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/035agn614> a org:Organization ;
+    rdfs:label "Navy and Marine Corps Public Health Center" ;
+    schema:name "Navy and Marine Corps Public Health Center" ;
+    org:status "active" ;
+    org:classification "healthcare" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-05-30"^^xsd:date ;
+    org:abbreviation "NMCPHC"@None ; 
+    schema:mainEntityOfPage <http://www.nmcphc.med.navy.mil/> ;
+    schema:sameAs <https://grid.ac/institutions/grid.415961.e> ;
+    schema:sameAs <http://isni.org/isni/0000000121745237> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/03cs53d16> ;
+        rdfs:label "United States Navy" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-76.29827 36.83543)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Portsmouth" ;
+            schema:addressCountry "US" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/4779999/> ;
+    ] ; 
+    .

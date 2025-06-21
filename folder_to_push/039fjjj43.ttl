@@ -4,26 +4,44 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/039fjjj43> a org:Organization ;
     rdfs:label "Zlín Region" ;
     schema:name "Zlín Region" ;
     schema:foundingDate "2000"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Government" ; 
-    org:alternativeName "Zlin Region" ;
-    schema:url <https://www.kr-zlinsky.cz> ; 
-    owl:sameAs <https://cs.wikipedia.org/wiki/Zl%C3%ADnsk%C3%BD_kraj> ;
+    org:classification "government" ; 
+    dct:created "2023-01-26"^^xsd:date ;
+    dct:modified "2024-05-30"^^xsd:date ;
+    org:alternativeName "Zlin Region"@en ; 
+    org:alternativeName "Zlin Region of the Czech Republic"@en ; 
+    schema:mainEntityOfPage <https://www.kr-zlinsky.cz> ;
+    owl:sameAs <https://cs.wikipedia.org/wiki/Zl%C3%ADnsk%C3%BD_kraj> ; 
+    schema:sameAs <http://isni.org/isni/0000000403975700> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0020fz961> ;
+        rdfs:label "František Bartoš Regional Library in Zlín" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(17.67065 49.22645)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(17.67065 49.22645)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Zlín" ;
             schema:addressCountry "CZ" ;
-            owl:sameAs <http://sws.geonames.org/3061370/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000403975700> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q192536> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Czechia" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3061370/> ;
+    ] ; 
     .

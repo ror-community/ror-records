@@ -1,0 +1,44 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/01e6mcq80> a org:Organization ;
+    rdfs:label "Universitas Bosowa" ;
+    schema:name "Universitas Bosowa" ;
+    schema:foundingDate "1985"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-05-30"^^xsd:date ;
+    org:alternativeName "Bosowa University"@en ; 
+    org:alternativeName "Makassar "45" University"@en ; 
+    org:abbreviation "UNIBOS"@id ; 
+    schema:url <http://unibos.ac.id> ; 
+    schema:mainEntityOfPage <https://unibos.ac.id> ;
+    owl:sameAs <https://id.wikipedia.org/wiki/Universitas_Bosowa> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.444598.0> ;
+    schema:sameAs <http://isni.org/isni/0000000403857624> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(119.43194 -5.14861)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Makassar" ;
+            schema:addressCountry "ID" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Indonesia" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1622786/> ;
+    ] ; 
+    .

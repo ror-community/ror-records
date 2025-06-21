@@ -1,0 +1,47 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/004tay810> a org:Organization ;
+    rdfs:label "Military Sealift Command" ;
+    schema:name "Military Sealift Command" ;
+    schema:foundingDate "1949"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "government" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-05-30"^^xsd:date ;
+    org:abbreviation "MSTS"@None ; 
+    org:alternativeName "Military Sea Transportation Service"@en ; 
+    schema:mainEntityOfPage <http://www.msc.navy.mil/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Military_Sealift_Command> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.487635.b> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/03cs53d16> ;
+        rdfs:label "United States Navy" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-77.10428 38.88101)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Arlington" ;
+            schema:addressCountry "US" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/4744709/> ;
+    ] ; 
+    .

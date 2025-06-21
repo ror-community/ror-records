@@ -4,25 +4,39 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02b7jh107> a org:Organization ;
     rdfs:label "Innopolis University" ;
     schema:name "Innopolis University" ;
     schema:foundingDate "2012"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    schema:url <http://university.innopolis.ru/> ; 
-    schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(49.12214 55.78874)"^^geo:wktLiteral ;
-            schema:addressLocality "Kazan’" ;
-            schema:addressCountry "RU" ;
-            owl:sameAs <http://sws.geonames.org/551487/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-05-30"^^xsd:date ;
+    schema:url <http://innopolis.university> ; 
+    schema:mainEntityOfPage <https://innopolis.university> ;
+    schema:sameAs <https://api.crossref.org/funders/501100019733> ;
+    schema:sameAs <https://grid.ac/institutions/grid.465471.5> ;
     schema:sameAs <http://isni.org/isni/0000000449108311> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q18786156> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(48.74754 55.74982)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Innopolis" ;
+            schema:addressCountry "RU" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Russia" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/11280178/> ;
+    ] ; 
     .

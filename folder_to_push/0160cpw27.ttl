@@ -4,26 +4,87 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/0160cpw27> a org:Organization ;
     rdfs:label "University of Alberta" ;
     schema:name "University of Alberta" ;
     schema:foundingDate "1908"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:alternativeName "UAlberta" ;
-    schema:url <http://ualberta.ca/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Alberta> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-05-30"^^xsd:date ;
+    org:alternativeName "UAlberta"@None ; 
+    schema:mainEntityOfPage <http://ualberta.ca/> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Alberta> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100000190> ;
+    schema:sameAs <https://grid.ac/institutions/grid.17089.37> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/030ykd126> ;
+        rdfs:label "Alberta Gambling Research Institute" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/039cthy03> ;
+        rdfs:label "Bamfield Marine Sciences Centre" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02yvsmh51> ;
+        rdfs:label "Helmholtz Alberta Initiative" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/04f7crx66> ;
+        rdfs:label "Red Deer Regional Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05w90nk74> ;
+        rdfs:label "Stollery Children's Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/013e81n30> ;
+        rdfs:label "University of Alberta Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/027790w81> ;
+        rdfs:label "Open Data Commons for Spinal Cord Injury" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/049bc0z69> ;
+        rdfs:label "Canadian Glycomics Network" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-113.46871 53.55014)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-113.46871 53.55014)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Edmonton" ;
             schema:addressCountry "CA" ;
-            owl:sameAs <http://sws.geonames.org/5946768/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://www.wikidata.org/entity/Q640694> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Canada" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/5946768/> ;
+    ] ; 
     .

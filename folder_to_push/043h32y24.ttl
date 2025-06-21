@@ -1,0 +1,46 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/043h32y24> a org:Organization ;
+    rdfs:label "LG (China)" ;
+    schema:name "LG (China)" ;
+    schema:foundingDate "1993"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "company" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-05-30"^^xsd:date ;
+    schema:mainEntityOfPage <http://www.lg.com/cn> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/LG_Electronics> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.497379.7> ;
+    schema:sameAs <http://isni.org/isni/0000000460634304> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/03ddh2c27> ;
+        rdfs:label "LG (South Korea)" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(116.39723 39.9075)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Beijing" ;
+            schema:addressCountry "CN" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "China" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1816670/> ;
+    ] ; 
+    .

@@ -4,27 +4,50 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/0539h2w52> a org:Organization ;
     rdfs:label "Naval Facilities Engineering Command" ;
     schema:name "Naval Facilities Engineering Command" ;
     schema:foundingDate "1842"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Government" ; 
-    org:abbreviation "NAVFAC" ;
-    schema:url <http://www.navy.mil/local/navfachq/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Naval_Facilities_Engineering_Command> ;
+    org:classification "government" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-05-30"^^xsd:date ;
+    org:abbreviation "NAVFAC"@None ; 
+    schema:mainEntityOfPage <http://www.navy.mil/local/navfachq/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Naval_Facilities_Engineering_Command> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.482920.5> ;
+    schema:sameAs <http://isni.org/isni/0000000404510120> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0103y3647> ;
+        rdfs:label "Naval Facilities Engineering and Expeditionary Warfare Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/03cs53d16> ;
+        rdfs:label "United States Navy" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-77.03637 38.89511)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-77.03637 38.89511)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Washington" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/4140963/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000404510120> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q6981810> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/4140963/> ;
+    ] ; 
     .

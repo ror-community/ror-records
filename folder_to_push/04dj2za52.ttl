@@ -1,0 +1,46 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/04dj2za52> a org:Organization ;
+    rdfs:label "Africa University" ;
+    schema:name "Africa University" ;
+    schema:foundingDate "1992"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-05-30"^^xsd:date ;
+    schema:mainEntityOfPage <http://www.africau.edu/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Africa_University> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.442719.d> ;
+    schema:sameAs <http://isni.org/isni/0000000089300245> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/04y0q2a96> ;
+        rdfs:label "Zimbabwe University Libraries Consortium" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(32.67086 -18.9707)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Mutare" ;
+            schema:addressCountry "ZW" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Zimbabwe" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/884979/> ;
+    ] ; 
+    .

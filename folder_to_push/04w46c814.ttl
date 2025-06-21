@@ -4,26 +4,45 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/04w46c814> a org:Organization ;
     rdfs:label "United States Fleet Forces Command" ;
     schema:name "United States Fleet Forces Command" ;
     schema:foundingDate "1906"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Government" ; 
-    org:abbreviation "USFF" ;
-    org:alternativeName "U.S. Fleet Forces Command" ;
-    schema:url <https://www.usff.navy.mil> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/United_States_Fleet_Forces_Command> ;
+    org:classification "government" ; 
+    dct:created "2024-01-10"^^xsd:date ;
+    dct:modified "2024-05-30"^^xsd:date ;
+    org:alternativeName "U.S. Fleet Forces"@en ; 
+    org:alternativeName "U.S. Fleet Forces Command"@en ; 
+    org:abbreviation "USFF"@None ; 
+    org:alternativeName "United States Fleet Forces"@en ; 
+    schema:mainEntityOfPage <https://www.usff.navy.mil> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/United_States_Fleet_Forces_Command> ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/03cs53d16> ;
+        rdfs:label "United States Navy" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-76.28522 36.84681)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-76.28522 36.84681)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Norfolk" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/4776222/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://www.wikidata.org/entity/Q2297940> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/4776222/> ;
+    ] ; 
     .

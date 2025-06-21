@@ -4,28 +4,59 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/03ar0mv07> a org:Organization ;
     rdfs:label "United States Department of the Navy" ;
     schema:name "United States Department of the Navy" ;
     schema:foundingDate "1798"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Government" ; 
-    org:abbreviation "DON" ;
-    schema:url <http://www.navy.mil/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/United_States_Department_of_the_Navy> ;
+    org:classification "funder" ; 
+    org:classification "government" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-05-30"^^xsd:date ;
+    org:abbreviation "DON"@None ; 
+    org:alternativeName "U.S. Department of the Navy"@en ; 
+    schema:url <http://navy.mil> ; 
+    schema:mainEntityOfPage <https://www.navy.mil> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/United_States_Department_of_the_Navy> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.420434.5> ;
+    schema:sameAs <http://isni.org/isni/0000000404809616> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05av6m066> ;
+        rdfs:label "United States Marine Corps" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/0447fe631> ;
+        rdfs:label "United States Department of Defense" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03cs53d16> ;
+        rdfs:label "United States Navy" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-77.10428 38.88101)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-77.10428 38.88101)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Arlington" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/4744709/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000404809616> ;
-    schema:sameAs <http://isni.org/isni/0000000110873903> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q742787> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/4744709/> ;
+    ] ; 
     .

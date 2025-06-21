@@ -4,24 +4,53 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/0449rap84> a org:Organization ;
     rdfs:label "Laboratoire de Biologie de l'Exercice pour la Performance et la Santé" ;
     schema:name "Laboratoire de Biologie de l'Exercice pour la Performance et la Santé" ;
     schema:foundingDate "2019"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "LBEPS" ;
-    schema:url <https://www.univ-evry.fr/recherche/unites-de-recherche/sciences-du-vivant/laboratoire-de-biologie-de-lexercice-pour-la-performance-et-la-sante-lbeps.html> ; 
+    org:classification "facility" ; 
+    dct:created "2023-08-17"^^xsd:date ;
+    dct:modified "2024-05-30"^^xsd:date ;
+    org:abbreviation "LBEPS"@None ; 
+    schema:mainEntityOfPage <https://www.univ-evry.fr/recherche/unites-de-recherche/sciences-du-vivant/laboratoire-de-biologie-de-lexercice-pour-la-performance-et-la-sante-lbeps.html> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/00e96v939> ;
+        rdfs:label "University of Évry Val d'Essonne" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/025er3q23> ;
+        rdfs:label "Ministère des Armées" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/03xjwb503> ;
+        rdfs:label "University of Paris-Saclay" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(2.44417 48.63389)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(2.44417 48.63389)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Évry-Courcouronnes" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/6454878/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://www.wikidata.org/entity/Q109620334> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/6454878/> ;
+    ] ; 
     .

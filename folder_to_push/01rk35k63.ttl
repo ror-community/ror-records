@@ -4,28 +4,149 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01rk35k63> a org:Organization ;
     rdfs:label "Université de Lyon" ;
     schema:name "Université de Lyon" ;
     schema:foundingDate "2007"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "UDL" ;
-    org:alternativeName "University of Lyon System" ;
-    schema:url <https://www.universite-lyon.fr> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Lyon> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-05-30"^^xsd:date ;
+    org:abbreviation "UDL"@None ; 
+    org:alternativeName "University of Lyon System"@en ; 
+    schema:mainEntityOfPage <https://www.universite-lyon.fr> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Lyon> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100011074> ;
+    schema:sameAs <https://grid.ac/institutions/grid.25697.3f> ;
+    schema:sameAs <http://isni.org/isni/0000000121724233> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/037b3he73> ;
+        rdfs:label "Biologie, Ingénierie et Imagerie de la Greffe de Cornée" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/029brtt94> ;
+        rdfs:label "Claude Bernard University Lyon 1" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05s608j53> ;
+        rdfs:label "Contact and Structure Mechanics Laboratory" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/050jn9y42> ;
+        rdfs:label "Institut National des Sciences Appliquées de Lyon" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04yznqr36> ;
+        rdfs:label "Jean Monnet University" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05b5c0584> ;
+        rdfs:label "Jean Moulin University Lyon 3" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01j6cta96> ;
+        rdfs:label "Laboratoire de Biotechnologies Végétales Appliquées aux Plantes Aromatiques et Médicinales" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03rth4p18> ;
+        rdfs:label "Lumière University Lyon 2" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05a1dws80> ;
+        rdfs:label "Mines Saint-Étienne" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/040zr6b15> ;
+        rdfs:label "Pathophysiology, Diagnosis and Treatment of Bone Diseases" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00j29pk38> ;
+        rdfs:label "The European Center for High Field NMR" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05s6rge65> ;
+        rdfs:label "École Centrale de Lyon" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/017cfeh02> ;
+        rdfs:label "École Nationale d'Ingénieurs de Saint-Étienne" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04zmssz18> ;
+        rdfs:label "École Normale Supérieure de Lyon" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/026m44z54> ;
+        rdfs:label "Laboratoire Nanotechnologies et Nanosystèmes" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0459fdx51> ;
+        rdfs:label "Fédération de Recherche sur l'Energie Solaire" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05tqzgp98> ;
+        rdfs:label "Centre Lyonnais d'Acoustique" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/050qe2074> ;
+        rdfs:label "LabEx PRIMES" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(4.84671 45.74846)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(4.84671 45.74846)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Lyon" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2996944/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000121724233> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q10176> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2996944/> ;
+    ] ; 
     .

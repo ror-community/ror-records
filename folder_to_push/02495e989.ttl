@@ -4,28 +4,59 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02495e989> a org:Organization ;
     rdfs:label "UCLouvain" ;
     schema:name "UCLouvain" ;
     schema:foundingDate "1425"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "UCL" ;
-    org:alternativeName "Université catholique de Belgique" ;
-    schema:url <https://uclouvain.be> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Universit%C3%A9_catholique_de_Louvain> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-05-30"^^xsd:date ;
+    org:alternativeName "Université catholique de Belgique"@fr ; 
+    org:alternativeName "Université catholique de Louvain"@fr ; 
+    schema:mainEntityOfPage <https://uclouvain.be> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Universit%C3%A9_catholique_de_Louvain> ; 
+    schema:sameAs <https://api.crossref.org/funders/100007355> ;
+    schema:sameAs <https://grid.ac/institutions/grid.7942.8> ;
+    schema:sameAs <http://isni.org/isni/000000012294713X> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02ygek028> ;
+        rdfs:label "UCLouvain Saint-Louis Brussels" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00ntbvq76> ;
+        rdfs:label "CHU Dinant Godinne UCL Namur" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03s4khd80> ;
+        rdfs:label "Cliniques Universitaires Saint-Luc" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(4.61443 50.66829)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(4.61443 50.66829)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Louvain-la-Neuve" ;
             schema:addressCountry "BE" ;
-            owl:sameAs <http://sws.geonames.org/2792073/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/000000012294713X> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q378134> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Belgium" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2792073/> ;
+    ] ; 
     .

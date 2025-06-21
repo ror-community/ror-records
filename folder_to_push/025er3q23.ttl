@@ -4,25 +4,59 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/025er3q23> a org:Organization ;
-    rdfs:label "Ministère de la Défense" ;
-    schema:name "Ministère de la Défense" ;
+    rdfs:label "" ;
+    schema:name "" ;
     schema:foundingDate "1589"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Government" ; 
-    schema:url <http://www.defense.gouv.fr/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Minister_of_the_Armed_Forces_(France)> ;
+    org:classification "funder" ; 
+    org:classification "government" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-05-30"^^xsd:date ;
+    org:alternativeName "Ministry of the Armed Forces"@en ; 
+    org:alternativeName "Ministère de la Défense"@fr ; 
+    schema:url <http://defense.gouv.fr> ; 
+    schema:mainEntityOfPage <https://www.defense.gouv.fr> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Minister_of_the_Armed_Forces_(France)> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100005900> ;
+    schema:sameAs <https://grid.ac/institutions/grid.418221.c> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03m8r7k33> ;
+        rdfs:label "Hôpital d'instruction des Armées Desgenettes" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0449rap84> ;
+        rdfs:label "Laboratoire de Biologie de l'Exercice pour la Performance et la Santé" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/011mac819> ;
+        rdfs:label "Histoire et Archéologie Maritimes" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(2.3488 48.85341)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(2.3488 48.85341)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Paris" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2988507/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://www.wikidata.org/entity/Q75706> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2988507/> ;
+    ] ; 
     .

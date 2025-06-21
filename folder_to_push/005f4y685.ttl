@@ -4,27 +4,46 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/005f4y685> a org:Organization ;
     rdfs:label "Chinhoyi University of Technology" ;
     schema:name "Chinhoyi University of Technology" ;
     schema:foundingDate "2001"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "CUT" ;
-    schema:url <http://www.cut.ac.zw> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Chinhoyi_University_of_Technology> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-05-30"^^xsd:date ;
+    org:abbreviation "CUT"@None ; 
+    schema:mainEntityOfPage <http://www.cut.ac.zw> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Chinhoyi_University_of_Technology> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100021794> ;
+    schema:sameAs <https://grid.ac/institutions/grid.442707.2> ;
+    schema:sameAs <http://isni.org/isni/0000000406484819> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/04y0q2a96> ;
+        rdfs:label "Zimbabwe University Libraries Consortium" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(30.2 -17.36667)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(30.2 -17.36667)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Chinhoyi" ;
             schema:addressCountry "ZW" ;
-            owl:sameAs <http://sws.geonames.org/893697/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000406484819> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q5101057> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Zimbabwe" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/893697/> ;
+    ] ; 
     .

@@ -1,0 +1,55 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/031rekg67> a org:Organization ;
+    rdfs:label "Swinburne University of Technology" ;
+    schema:name "Swinburne University of Technology" ;
+    schema:foundingDate "1908"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-05-30"^^xsd:date ;
+    org:alternativeName "Swinburne"@en ; 
+    schema:mainEntityOfPage <http://www.swinburne.edu.au/> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Swinburne_University_of_Technology> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100001781> ;
+    schema:sameAs <https://grid.ac/institutions/grid.1027.4> ;
+    schema:sameAs <http://isni.org/isni/0000000404092862> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/014cjmc76> ;
+        rdfs:label "Swinburne University of Technology Sarawak Campus" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01az7g189> ;
+        rdfs:label "Stawell Underground Physics Laboratory" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(144.96332 -37.814)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Melbourne" ;
+            schema:addressCountry "AU" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Australia" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2158177/> ;
+    ] ; 
+    .

@@ -4,26 +4,44 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/04pjzv747> a org:Organization ;
     rdfs:label "LG Chem (South Korea)" ;
     schema:name "LG Chem (South Korea)" ;
     schema:foundingDate "1947"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Company" ; 
-    org:alternativeName "LG Chem" ;
-    schema:url <https://www.lgchem.com> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/LG_Chem> ;
+    org:classification "company" ; 
+    dct:created "2023-07-27"^^xsd:date ;
+    dct:modified "2024-05-30"^^xsd:date ;
+    org:alternativeName "LG Chem"@None ; 
+    org:alternativeName "LG Chemical"@None ; 
+    schema:mainEntityOfPage <https://www.lgchem.com> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/LG_Chem> ; 
+    schema:sameAs <http://isni.org/isni/0000000406363187> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/03ddh2c27> ;
+        rdfs:label "LG (South Korea)" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(126.9784 37.566)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(126.9784 37.566)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Seoul" ;
             schema:addressCountry "KR" ;
-            owl:sameAs <http://sws.geonames.org/1835848/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000406363187> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q486976> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "South Korea" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1835848/> ;
+    ] ; 
     .

@@ -1,0 +1,46 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/0493yt138> a org:Organization ;
+    rdfs:label "Thüringer Universitäts- und Landesbibliothek" ;
+    schema:name "Thüringer Universitäts- und Landesbibliothek" ;
+    schema:foundingDate "1549"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "archive" ; 
+    dct:created "2019-11-07"^^xsd:date ;
+    dct:modified "2024-05-30"^^xsd:date ;
+    org:abbreviation "ThULB"@None ; 
+    schema:mainEntityOfPage <https://www.thulb.uni-jena.de/> ;
+    schema:sameAs <https://grid.ac/institutions/grid.506562.2> ;
+    schema:sameAs <http://isni.org/isni/0000000121522586> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/05qpz1x62> ;
+        rdfs:label "Friedrich Schiller University Jena" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(11.5899 50.92878)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Jena" ;
+            schema:addressCountry "DE" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Germany" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2895044/> ;
+    ] ; 
+    .

@@ -4,24 +4,44 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/010gha940> a org:Organization ;
     rdfs:label "Swiss Vaccine Research Institute" ;
     schema:name "Swiss Vaccine Research Institute" ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "SVRI" ;
-    schema:url <http://www.swissvaccineresearchinstitute.ch/> ; 
+    org:classification "facility" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-05-30"^^xsd:date ;
+    org:abbreviation "SVRI"@None ; 
+    schema:mainEntityOfPage <http://www.swissvaccineresearchinstitute.ch/> ;
+    schema:sameAs <https://api.crossref.org/funders/501100013905> ;
+    schema:sameAs <https://grid.ac/institutions/grid.482333.d> ;
+    schema:sameAs <http://isni.org/isni/0000000483079008> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/019whta54> ;
+        rdfs:label "University of Lausanne" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(6.63282 46.516)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(6.63282 46.516)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Lausanne" ;
             schema:addressCountry "CH" ;
-            owl:sameAs <http://sws.geonames.org/2659994/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000483079008> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Switzerland" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2659994/> ;
+    ] ; 
     .

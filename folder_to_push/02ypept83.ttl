@@ -4,26 +4,49 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02ypept83> a org:Organization ;
     rdfs:label "United States Space Force" ;
     schema:name "United States Space Force" ;
     schema:foundingDate "2019"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Government" ; 
-    org:abbreviation "USSF" ;
-    org:alternativeName "U.S. Space Force" ;
-    schema:url <https://www.spaceforce.mil> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/United_States_Space_Force> ;
+    org:classification "government" ; 
+    dct:created "2023-11-08"^^xsd:date ;
+    dct:modified "2024-05-30"^^xsd:date ;
+    org:alternativeName "U.S. Space Force"@en ; 
+    org:abbreviation "USSF"@None ; 
+    schema:mainEntityOfPage <https://www.spaceforce.mil> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/United_States_Space_Force> ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "predecessor" ;
+        org:member <https://ror.org/00714tm23> ;
+        rdfs:label "Air Force Space Command" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/01973x930> ;
+        rdfs:label "United States Department of the Air Force" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-77.10428 38.88101)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-77.10428 38.88101)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Arlington" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/4744709/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://www.wikidata.org/entity/Q55088961> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/4744709/> ;
+    ] ; 
     .

@@ -1,0 +1,48 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/03yrm5c26> a org:Organization ;
+    rdfs:label "California Digital Library" ;
+    schema:name "California Digital Library" ;
+    schema:foundingDate "1997"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "archive" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-05-30"^^xsd:date ;
+    org:abbreviation "CDL"@en ; 
+    schema:url <http://cdlib.org> ; 
+    schema:mainEntityOfPage <https://cdlib.org> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/California_Digital_Library> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.463323.3> ;
+    schema:sameAs <http://isni.org/isni/0000000119575136> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/00pjdza24> ;
+        rdfs:label "University of California System" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-122.2708 37.80437)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Oakland" ;
+            schema:addressCountry "US" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/5378538/> ;
+    ] ; 
+    .

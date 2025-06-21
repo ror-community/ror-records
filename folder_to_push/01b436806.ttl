@@ -4,25 +4,74 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01b436806> a org:Organization ;
     rdfs:label "CIRED" ;
     schema:name "CIRED" ;
     schema:foundingDate "1973"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:alternativeName "Centre International de Recherche sur l'Environnement et le Developpement" ;
-    schema:url <http://www.centre-cired.fr/index.php/en/> ; 
+    org:classification "facility" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-05-30"^^xsd:date ;
+    org:alternativeName "Centre International de Recherche sur l'Environnement et le Developpement"@fr ; 
+    org:alternativeName "International Research Center on Environment and Development"@en ; 
+    schema:mainEntityOfPage <http://www.centre-cired.fr/index.php/en/> ;
+    schema:sameAs <https://grid.ac/institutions/grid.462809.1> ;
+    schema:sameAs <http://isni.org/isni/0000000121655311> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02kbmgc12> ;
+        rdfs:label "AgroParisTech" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/05kpkpg04> ;
+        rdfs:label "Centre de Coopération Internationale en Recherche Agronomique pour le Développement" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/0233st365> ;
+        rdfs:label "Météo-France" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02nwvxz07> ;
+        rdfs:label "École des Ponts ParisTech" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/03xjwb503> ;
+        rdfs:label "University of Paris-Saclay" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02feahw73> ;
+        rdfs:label "French National Centre for Scientific Research" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(2.48255 48.83669)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(2.48255 48.83669)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Nogent-sur-Marne" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2990265/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000121655311> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2990265/> ;
+    ] ; 
     .
