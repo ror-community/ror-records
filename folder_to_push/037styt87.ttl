@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/037styt87> a org:Organization ;
+    rdfs:label "Petersburg Nuclear Physics Institute" ;
+    schema:name "Petersburg Nuclear Physics Institute" ;
+    schema:foundingDate "1954"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    org:abbreviation "PNPI" ;
+    org:alternativeName "B.P. Konstantinov Petersburg Nuclear Physics Institute" ;
+    schema:url <http://www.pnpi.spb.ru/> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(30.12833 59.57639)"^^geo:wktLiteral ;
+            schema:addressLocality "Gatchina" ;
+            schema:addressCountry "RU" ;
+            owl:sameAs <http://sws.geonames.org/561887/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000406193376> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q51065> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

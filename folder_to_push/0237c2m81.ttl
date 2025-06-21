@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/0237c2m81> a org:Organization ;
+    rdfs:label "Hospital Corporation of America" ;
+    schema:name "Hospital Corporation of America" ;
+    schema:foundingDate "1968"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Healthcare" ; 
+    org:abbreviation "HCA" ;
+    schema:url <http://hcahealthcare.com/home/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Hospital_Corporation_of_America> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-86.78444 36.16589)"^^geo:wktLiteral ;
+            schema:addressLocality "Nashville" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/4644585/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000101586152> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q1630431> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

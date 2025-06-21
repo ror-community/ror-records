@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/01c1kpg39> a org:Organization ;
+    rdfs:label "Tajik Technical University named after academic M.S.Osimi" ;
+    schema:name "Tajik Technical University named after academic M.S.Osimi" ;
+    schema:foundingDate "1956"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "TTU" ;
+    schema:url <https://web.ttu.tj> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(68.77905 38.53575)"^^geo:wktLiteral ;
+            schema:addressLocality "Dushanbe" ;
+            schema:addressCountry "TJ" ;
+            owl:sameAs <http://sws.geonames.org/1221874/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000404826328> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

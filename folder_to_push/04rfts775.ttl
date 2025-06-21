@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/04rfts775> a org:Organization ;
+    rdfs:label "École Nationale d'Ingénieurs des Techniques des Industries Agro-Alimentaires" ;
+    schema:name "École Nationale d'Ingénieurs des Techniques des Industries Agro-Alimentaires" ;
+    schema:foundingDate "1974"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    org:abbreviation "ENITIAA" ;
+    schema:url <http://www.enitiaa-nantes.fr/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/%C3%89cole_nationale_d%27ing%C3%A9nieurs_des_techniques_des_industries_agro-alimentaires> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-1.55336 47.21725)"^^geo:wktLiteral ;
+            schema:addressLocality "Nantes" ;
+            schema:addressCountry "FR" ;
+            owl:sameAs <http://sws.geonames.org/2990969/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000121896043> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q3578099> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

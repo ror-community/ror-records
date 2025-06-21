@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/02venad53> a org:Organization ;
+    rdfs:label "Robert Bosch (United States)" ;
+    schema:name "Robert Bosch (United States)" ;
+    schema:foundingDate "1886"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Company" ; 
+    org:alternativeName "Bosch" ;
+    schema:url <http://www.bosch.us/en/us/startpage_1/country-landingpage.php> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Robert_Bosch_GmbH> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-83.37716 42.48531)"^^geo:wktLiteral ;
+            schema:addressLocality "Farmington Hills" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/4992523/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000405296285> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q28973218> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

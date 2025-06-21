@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/01ak5cj98> a org:Organization ;
+    rdfs:label "Simón Bolívar University" ;
+    schema:name "Simón Bolívar University" ;
+    schema:foundingDate "1967"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "USB" ;
+    schema:url <http://www.usb.ve/> ; 
+    owl:sameAs <http://en.wikipedia.org/wiki/Sim%C3%B3n_Bol%C3%ADvar_University> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-66.87919 10.48801)"^^geo:wktLiteral ;
+            schema:addressLocality "Caracas" ;
+            schema:addressCountry "VE" ;
+            owl:sameAs <http://sws.geonames.org/3646738/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000119548293> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q2093477> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

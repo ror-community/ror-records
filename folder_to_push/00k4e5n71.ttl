@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/00k4e5n71> a org:Organization ;
+    rdfs:label "Laboratoire des Sciences de l'Ingénieur, de l'Informatique et de l'Imagerie" ;
+    schema:name "Laboratoire des Sciences de l'Ingénieur, de l'Informatique et de l'Imagerie" ;
+    schema:foundingDate "2013"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    org:abbreviation "ICUBE" ;
+    schema:url <https://icube.unistra.fr/> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(7.71523 48.52894)"^^geo:wktLiteral ;
+            schema:addressLocality "Illkirch-Graffenstaden" ;
+            schema:addressCountry "FR" ;
+            owl:sameAs <http://sws.geonames.org/3012834/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000403673876> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q30262162> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

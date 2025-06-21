@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/01yc7t268> a org:Organization ;
+    rdfs:label "Washington University in St. Louis" ;
+    schema:name "Washington University in St. Louis" ;
+    schema:foundingDate "1853"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "WUSTL" ;
+    schema:url <http://wustl.edu/> ; 
+    owl:sameAs <http://en.wikipedia.org/wiki/Washington_University_in_St._Louis> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-90.19789 38.62727)"^^geo:wktLiteral ;
+            schema:addressLocality "St Louis" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/4407066/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000123557002> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q777403> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

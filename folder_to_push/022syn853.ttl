@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/022syn853> a org:Organization ;
+    rdfs:label "Shanghai Institute of Materia Medica" ;
+    schema:name "Shanghai Institute of Materia Medica" ;
+    schema:foundingDate "1932"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    org:abbreviation "SIMM" ;
+    schema:url <http://english.simm.cas.cn/au> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(121.50094 31.23995)"^^geo:wktLiteral ;
+            schema:addressLocality "Pudong" ;
+            schema:addressCountry "CN" ;
+            owl:sameAs <http://sws.geonames.org/1798524/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000406198396> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q30281978> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

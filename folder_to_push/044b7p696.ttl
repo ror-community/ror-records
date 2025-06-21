@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/044b7p696> a org:Organization ;
+    rdfs:label "ARC Centre of Excellence in Cognition and its Disorders" ;
+    schema:name "ARC Centre of Excellence in Cognition and its Disorders" ;
+    schema:foundingDate "2011"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    org:abbreviation "CCD" ;
+    schema:url <https://www.ccd.edu.au/> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(151.20732 -33.86785)"^^geo:wktLiteral ;
+            schema:addressLocality "Sydney" ;
+            schema:addressCountry "AU" ;
+            owl:sameAs <http://sws.geonames.org/2147714/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/000000045899858X> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q30299505> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

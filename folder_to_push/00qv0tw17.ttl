@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/00qv0tw17> a org:Organization ;
+    rdfs:label "SUNY College of Environmental Science and Forestry" ;
+    schema:name "SUNY College of Environmental Science and Forestry" ;
+    schema:foundingDate "1911"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "SUNY ESF" ;
+    schema:url <http://www.esf.edu/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/State_University_of_New_York_College_of_Environmental_Science_and_Forestry> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-76.14742 43.04812)"^^geo:wktLiteral ;
+            schema:addressLocality "Syracuse" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/5140405/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000403878708> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q7603610> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

@@ -1,0 +1,26 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/032hzqh22> a org:Organization ;
+    rdfs:label "Research Centre for Toxic Compounds in the Environment" ;
+    schema:name "Research Centre for Toxic Compounds in the Environment" ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    org:abbreviation "RI" ;
+    schema:url <http://www.recetox.muni.cz/index-en.php?pg=research-infrastructure> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(16.60796 49.19522)"^^geo:wktLiteral ;
+            schema:addressLocality "Brno" ;
+            schema:addressCountry "CZ" ;
+            owl:sameAs <http://sws.geonames.org/3078610/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

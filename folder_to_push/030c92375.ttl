@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/030c92375> a org:Organization ;
+    rdfs:label "Department of Agriculture, Water and the Environment" ;
+    schema:name "Department of Agriculture, Water and the Environment" ;
+    schema:foundingDate "2020"^^xsd:gYear ;
+    org:status "inactive" ;
+    org:classification "Government" ; 
+    schema:url <https://www.awe.gov.au/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Department_of_Agriculture,_Water_and_the_Environment> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(149.12807 -35.28346)"^^geo:wktLiteral ;
+            schema:addressLocality "Canberra" ;
+            schema:addressCountry "AU" ;
+            owl:sameAs <http://sws.geonames.org/2172517/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q85756401> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

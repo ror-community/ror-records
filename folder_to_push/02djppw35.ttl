@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/02djppw35> a org:Organization ;
+    rdfs:label "China Steel (Taiwan)" ;
+    schema:name "China Steel (Taiwan)" ;
+    schema:foundingDate "1971"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Company" ; 
+    org:abbreviation "CSC" ;
+    org:alternativeName "Zhōngguó Gāngtiě Gǔfèn Yǒuxiàn Gōngsī" ;
+    schema:url <http://www.csc.com.tw/indexe.html> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/China_Steel> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(120.31333 22.61626)"^^geo:wktLiteral ;
+            schema:addressLocality "Kaohsiung City" ;
+            schema:addressCountry "TW" ;
+            owl:sameAs <http://sws.geonames.org/1673820/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/000000010427148X> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q712863> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

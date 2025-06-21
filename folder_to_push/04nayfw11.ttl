@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/04nayfw11> a org:Organization ;
+    rdfs:label "Tomas Bata University in Zlín" ;
+    schema:name "Tomas Bata University in Zlín" ;
+    schema:foundingDate "2001"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "TBU" ;
+    org:alternativeName "Univerzita Tomáše Bati ve Zlíně" ;
+    schema:url <http://www.utb.cz/index.php?lang=2> ; 
+    owl:sameAs <http://en.wikipedia.org/wiki/Tomas_Bata_University_in_Zl%C3%ADn> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(17.67065 49.22645)"^^geo:wktLiteral ;
+            schema:addressLocality "Zlín" ;
+            schema:addressCountry "CZ" ;
+            owl:sameAs <http://sws.geonames.org/3061370/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000115042033> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q1267725> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

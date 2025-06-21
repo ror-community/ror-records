@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/05qetrn02> a org:Organization ;
+    rdfs:label "Ri.MED" ;
+    schema:name "Ri.MED" ;
+    schema:foundingDate "2006"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    schema:url <http://www.fondazionerimed.eu/> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(13.3636 38.1166)"^^geo:wktLiteral ;
+            schema:addressLocality "Palermo" ;
+            schema:addressCountry "IT" ;
+            owl:sameAs <http://sws.geonames.org/2523920/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/000000047858937X> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

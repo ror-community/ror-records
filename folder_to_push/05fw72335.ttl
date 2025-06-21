@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/05fw72335> a org:Organization ;
+    rdfs:label "GIS-Institut pour la Recherche en Santé Publique" ;
+    schema:name "GIS-Institut pour la Recherche en Santé Publique" ;
+    schema:foundingDate "2004"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Other" ; 
+    org:abbreviation "GIS-IReSP" ;
+    org:alternativeName "Institut pour la Recherche en Santé Publique" ;
+    schema:url <http://www.iresp.net/> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(2.3488 48.85341)"^^geo:wktLiteral ;
+            schema:addressLocality "Paris" ;
+            schema:addressCountry "FR" ;
+            owl:sameAs <http://sws.geonames.org/2988507/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000446865544> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q50035387> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .
