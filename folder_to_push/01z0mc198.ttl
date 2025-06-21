@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/01z0mc198> a org:Organization ;
+    rdfs:label "Tadulako University" ;
+    schema:name "Tadulako University" ;
+    schema:foundingDate "1981"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "UNTAD" ;
+    schema:url <https://untad.ac.id/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Tadulako_University> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(119.87083 -0.90833)"^^geo:wktLiteral ;
+            schema:addressLocality "Palu" ;
+            schema:addressCountry "ID" ;
+            owl:sameAs <http://sws.geonames.org/1633034/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000100486811> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q12523473> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

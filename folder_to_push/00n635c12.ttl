@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/00n635c12> a org:Organization ;
+    rdfs:label "Leeds and York Partnership NHS Foundation Trust" ;
+    schema:name "Leeds and York Partnership NHS Foundation Trust" ;
+    schema:foundingDate "2007"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Healthcare" ; 
+    schema:url <http://www.leedsandyorkpft.nhs.uk/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Leeds_and_York_Partnership_NHS_Foundation_Trust> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-1.54785 53.79648)"^^geo:wktLiteral ;
+            schema:addressLocality "Leeds" ;
+            schema:addressCountry "GB" ;
+            owl:sameAs <http://sws.geonames.org/2644688/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000114107560> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q16964314> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/03c4shz64> a org:Organization ;
+    rdfs:label "Abdelmalek Essaâdi University" ;
+    schema:name "Abdelmalek Essaâdi University" ;
+    schema:foundingDate "1989"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    schema:url <http://www.uae.ma/portail/FR/index.php> ; 
+    owl:sameAs <http://en.wikipedia.org/wiki/Abdelmalek_Essa%C3%A2di_University> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-5.36837 35.57845)"^^geo:wktLiteral ;
+            schema:addressLocality "Tétouan" ;
+            schema:addressCountry "MA" ;
+            owl:sameAs <http://sws.geonames.org/2528910/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000106757133> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q3551367> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

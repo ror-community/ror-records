@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/02sf5td35> a org:Organization ;
+    rdfs:label "Macau Polytechnic Institute" ;
+    schema:name "Macau Polytechnic Institute" ;
+    schema:foundingDate "1991"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "IPM" ;
+    org:alternativeName "Instituto Politécnico de Macau" ;
+    schema:url <http://www.ipm.edu.mo/en/index.php> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Macau_Polytechnic_Institute> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(113.54611 22.20056)"^^geo:wktLiteral ;
+            schema:addressLocality "Macao" ;
+            schema:addressCountry "MO" ;
+            owl:sameAs <http://sws.geonames.org/1821274/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000417947946> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q15662456> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

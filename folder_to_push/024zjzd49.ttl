@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/024zjzd49> a org:Organization ;
+    rdfs:label "Lublin University of Technology" ;
+    schema:name "Lublin University of Technology" ;
+    schema:foundingDate "1953"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:alternativeName "Politechnika Lubelska" ;
+    schema:url <http://en.pollub.pl/> ; 
+    owl:sameAs <http://en.wikipedia.org/wiki/Lublin_University_of_Technology> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(22.56667 51.25)"^^geo:wktLiteral ;
+            schema:addressLocality "Lublin" ;
+            schema:addressCountry "PL" ;
+            owl:sameAs <http://sws.geonames.org/765876/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000087694682> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q2333801> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

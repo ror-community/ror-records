@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/04r0hn449> a org:Organization ;
+    rdfs:label "Ordu University" ;
+    schema:name "Ordu University" ;
+    schema:foundingDate "2006"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    schema:url <http://www.odu.edu.tr/> ; 
+    owl:sameAs <http://en.wikipedia.org/wiki/Ordu_University> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(37.89047 40.97782)"^^geo:wktLiteral ;
+            schema:addressLocality "Ordu" ;
+            schema:addressCountry "TR" ;
+            owl:sameAs <http://sws.geonames.org/741100/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000403995963> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q6100422> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

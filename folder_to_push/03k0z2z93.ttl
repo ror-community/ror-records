@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/03k0z2z93> a org:Organization ;
+    rdfs:label "Social Science Research Center Berlin" ;
+    schema:name "Social Science Research Center Berlin" ;
+    schema:foundingDate "1969"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    org:abbreviation "WZB" ;
+    schema:url <http://www.wzb.eu/en> ; 
+    owl:sameAs <http://en.wikipedia.org/wiki/WZB_Berlin_Social_Science_Center> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(13.41053 52.52437)"^^geo:wktLiteral ;
+            schema:addressLocality "Berlin" ;
+            schema:addressCountry "DE" ;
+            owl:sameAs <http://sws.geonames.org/2950159/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/000000012191183X> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q475602> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

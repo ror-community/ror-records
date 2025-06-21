@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/04znxe670> a org:Organization ;
+    rdfs:label "University of Colima" ;
+    schema:name "University of Colima" ;
+    schema:foundingDate "1940"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:alternativeName "People's University of Colima" ;
+    schema:url <http://www.ucol.mx/> ; 
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Colima> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-103.72714 19.24997)"^^geo:wktLiteral ;
+            schema:addressLocality "Colima" ;
+            schema:addressCountry "MX" ;
+            owl:sameAs <http://sws.geonames.org/4013516/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000123758971> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q2495731> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

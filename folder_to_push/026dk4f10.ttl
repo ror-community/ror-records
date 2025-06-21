@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/026dk4f10> a org:Organization ;
+    rdfs:label "Alexander von Humboldt Biological Resources Research Institute" ;
+    schema:name "Alexander von Humboldt Biological Resources Research Institute" ;
+    schema:foundingDate "1993"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    org:abbreviation "IAVH" ;
+    schema:url <http://www.humboldt.org.co/en> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Alexander_von_Humboldt_Biological_Resources_Research_Institute> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-74.08175 4.60971)"^^geo:wktLiteral ;
+            schema:addressLocality "Bogotá" ;
+            schema:addressCountry "CO" ;
+            owl:sameAs <http://sws.geonames.org/3688689/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000122377528> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q4720532> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

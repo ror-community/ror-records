@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/04gvszq17> a org:Organization ;
+    rdfs:label "Center for Higher and Technical Education" ;
+    schema:name "Center for Higher and Technical Education" ;
+    schema:foundingDate "1961"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "CETYS" ;
+    org:alternativeName "CETYS University" ;
+    schema:url <http://www.cetys.mx/en/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Centro_de_Ense%C3%B1anza_T%C3%A9cnica_y_Superior> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-115.45446 32.62781)"^^geo:wktLiteral ;
+            schema:addressLocality "Mexicali" ;
+            schema:addressCountry "MX" ;
+            owl:sameAs <http://sws.geonames.org/3996069/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000404833595> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q5062906> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

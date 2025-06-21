@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/04jskgv42> a org:Organization ;
+    rdfs:label "OPKO Health (Israel)" ;
+    schema:name "OPKO Health (Israel)" ;
+    schema:foundingDate "1987"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Company" ; 
+    schema:url <https://www.opko.com/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/OPKO_Health> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(35.04425 32.76622)"^^geo:wktLiteral ;
+            schema:addressLocality "Nesher" ;
+            schema:addressCountry "IL" ;
+            owl:sameAs <http://sws.geonames.org/294078/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q17138182> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/029d3gv02> a org:Organization ;
+    rdfs:label "The Jane Goodall Institute" ;
+    schema:name "The Jane Goodall Institute" ;
+    schema:foundingDate "1977"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Nonprofit" ; 
+    schema:url <http://www.janegoodall.org/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Jane_Goodall_Institute> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-77.26526 38.90122)"^^geo:wktLiteral ;
+            schema:addressLocality "Vienna" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/4791160/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000088756435> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q958460> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

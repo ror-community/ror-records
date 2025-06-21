@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/0437ej039> a org:Organization ;
+    rdfs:label "Office of the United Nations High Commissioner for Refugees" ;
+    schema:name "Office of the United Nations High Commissioner for Refugees" ;
+    schema:foundingDate "1950"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Government" ; 
+    org:abbreviation "UNHCR" ;
+    org:alternativeName "United Nations High Commissioner for Refugees" ;
+    schema:url <http://www.unhcr.org/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/United_Nations_High_Commissioner_for_Refugees> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(6.14569 46.20222)"^^geo:wktLiteral ;
+            schema:addressLocality "Geneva" ;
+            schema:addressCountry "CH" ;
+            owl:sameAs <http://sws.geonames.org/2660646/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000404046364> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q132551> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/02avhnb77> a org:Organization ;
+    rdfs:label "Emerald Group Publishing (United Kingdom)" ;
+    schema:name "Emerald Group Publishing (United Kingdom)" ;
+    schema:foundingDate "1967"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Company" ; 
+    org:alternativeName "MCB UP Ltd" ;
+    schema:url <https://www.emeraldgrouppublishing.com/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Emerald_Group_Publishing> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-1.83857 53.84861)"^^geo:wktLiteral ;
+            schema:addressLocality "Bingley" ;
+            schema:addressCountry "GB" ;
+            owl:sameAs <http://sws.geonames.org/2655642/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000403794459> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q1335379> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

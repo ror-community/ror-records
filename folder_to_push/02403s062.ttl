@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/02403s062> a org:Organization ;
+    rdfs:label "Zaporizhzhya Institute of Economics and Information Technologies" ;
+    schema:name "Zaporizhzhya Institute of Economics and Information Technologies" ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "ZIEIT" ;
+    org:alternativeName "Zaporozhye Institute of Economics and Information Technologies" ;
+    schema:url <https://www.zieit.edu.ua> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Zaporozhye_Institute_of_Economics_and_Information_Technologies> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(35.11714 47.85167)"^^geo:wktLiteral ;
+            schema:addressLocality "Zaporizhzhya" ;
+            schema:addressCountry "UA" ;
+            owl:sameAs <http://sws.geonames.org/687700/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q8066450> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

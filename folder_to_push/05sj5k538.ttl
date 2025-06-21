@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/05sj5k538> a org:Organization ;
+    rdfs:label "Opole University of Technology" ;
+    schema:name "Opole University of Technology" ;
+    schema:foundingDate "1966"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:alternativeName "Technical University of Opole" ;
+    schema:url <http://www.po.opole.pl/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Opole_University_of_Technology> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(17.92533 50.67211)"^^geo:wktLiteral ;
+            schema:addressLocality "Opole" ;
+            schema:addressCountry "PL" ;
+            owl:sameAs <http://sws.geonames.org/3090048/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/000000009187132X> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q2399339> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

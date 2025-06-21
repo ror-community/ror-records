@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/01g09ef73> a org:Organization ;
+    rdfs:label "Angel Kanchev University of Ruse" ;
+    schema:name "Angel Kanchev University of Ruse" ;
+    schema:foundingDate "1995"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:alternativeName "University of Ruse" ;
+    schema:url <http://www.uni-ruse.bg/en> ; 
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Ruse> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(25.9534 43.84872)"^^geo:wktLiteral ;
+            schema:addressLocality "Rousse" ;
+            schema:addressCountry "BG" ;
+            owl:sameAs <http://sws.geonames.org/727523/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q2496153> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

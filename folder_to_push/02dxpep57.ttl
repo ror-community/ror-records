@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/02dxpep57> a org:Organization ;
+    rdfs:label "Swedish National Board of Forensic Medicine" ;
+    schema:name "Swedish National Board of Forensic Medicine" ;
+    schema:foundingDate "1991"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Other" ; 
+    org:abbreviation "RMV" ;
+    org:alternativeName "Rättsmedicinalverket" ;
+    schema:url <http://rmv.se/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Swedish_National_Board_of_Forensic_Medicine> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(18.06871 59.32938)"^^geo:wktLiteral ;
+            schema:addressLocality "Stockholm" ;
+            schema:addressCountry "SE" ;
+            owl:sameAs <http://sws.geonames.org/2673730/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000404763080> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q10658535> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

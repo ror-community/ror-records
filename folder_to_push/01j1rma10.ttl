@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/01j1rma10> a org:Organization ;
+    rdfs:label "Ajman University" ;
+    schema:name "Ajman University" ;
+    schema:foundingDate "1988"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "AUST" ;
+    org:alternativeName "Ajman University of Science and Technology" ;
+    schema:url <https://www.ajman.ac.ae/en> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Ajman_University_of_Science_and_Technology> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(55.47878 25.40177)"^^geo:wktLiteral ;
+            schema:addressLocality "Ajman" ;
+            schema:addressCountry "AE" ;
+            owl:sameAs <http://sws.geonames.org/292932/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000086729927> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q12204508> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

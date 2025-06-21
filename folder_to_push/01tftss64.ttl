@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/01tftss64> a org:Organization ;
+    rdfs:label "Brain Mapping Medical Research Organization & Support Foundation" ;
+    schema:name "Brain Mapping Medical Research Organization & Support Foundation" ;
+    schema:foundingDate "1991"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Nonprofit" ; 
+    org:abbreviation "BMMRO" ;
+    schema:url <https://brainmappingsupport.org/> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-118.24368 34.05223)"^^geo:wktLiteral ;
+            schema:addressLocality "Los Angeles" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/5368361/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

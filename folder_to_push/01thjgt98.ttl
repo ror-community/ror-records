@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/01thjgt98> a org:Organization ;
+    rdfs:label "Murata (Finland)" ;
+    schema:name "Murata (Finland)" ;
+    schema:foundingDate "1944"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Company" ; 
+    org:alternativeName "Kabushiki-gaisha Murata Seisakusho" ;
+    schema:url <https://muratafinland.com/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Murata_Manufacturing> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(25.04099 60.29414)"^^geo:wktLiteral ;
+            schema:addressLocality "Vantaa" ;
+            schema:addressCountry "FI" ;
+            owl:sameAs <http://sws.geonames.org/632453/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000405201338> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q4355641> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

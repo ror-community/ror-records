@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/05k37v296> a org:Organization ;
+    rdfs:label "Defence Research and Development Organisation" ;
+    schema:name "Defence Research and Development Organisation" ;
+    schema:foundingDate "1958"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Government" ; 
+    org:abbreviation "DRDO" ;
+    schema:url <https://www.drdo.gov.in/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Defence_Research_and_Development_Organisation> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(77.22445 28.63576)"^^geo:wktLiteral ;
+            schema:addressLocality "New Delhi" ;
+            schema:addressCountry "IN" ;
+            owl:sameAs <http://sws.geonames.org/1261481/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000405422069> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q1154393> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

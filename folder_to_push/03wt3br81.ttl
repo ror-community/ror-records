@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/03wt3br81> a org:Organization ;
+    rdfs:label "Ministry of Enterprise, Energy and Communications" ;
+    schema:name "Ministry of Enterprise, Energy and Communications" ;
+    schema:foundingDate "1969"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Government" ; 
+    org:alternativeName "Ministry of Enterprise and Innovation" ;
+    schema:url <https://www.regeringen.se/sveriges-regering/naringsdepartementet/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Ministry_of_Enterprise_and_Innovation_(Sweden)> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(18.06871 59.32938)"^^geo:wktLiteral ;
+            schema:addressLocality "Stockholm" ;
+            schema:addressCountry "SE" ;
+            owl:sameAs <http://sws.geonames.org/2673730/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000404684980> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q1780898> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

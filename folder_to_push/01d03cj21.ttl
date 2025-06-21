@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/01d03cj21> a org:Organization ;
+    rdfs:label "Research Foundation of The City University of New York" ;
+    schema:name "Research Foundation of The City University of New York" ;
+    schema:foundingDate "1963"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Nonprofit" ; 
+    org:abbreviation "RFCUNY" ;
+    org:alternativeName "Research Foundation of CUNY" ;
+    schema:url <https://www.rfcuny.org/RFWebsite/> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-74.00597 40.71427)"^^geo:wktLiteral ;
+            schema:addressLocality "New York" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/5128581/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000459071989> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q30288494> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

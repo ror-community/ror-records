@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/03yfnyw34> a org:Organization ;
+    rdfs:label "National Medical Research Center for Obstetrics, Gynecology and Perinatology named after Academician V.I.Kulakov of the Ministry of Healthcare of the Russian Federation" ;
+    schema:name "National Medical Research Center for Obstetrics, Gynecology and Perinatology named after Academician V.I.Kulakov of the Ministry of Healthcare of the Russian Federation" ;
+    schema:foundingDate "1790"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    org:alternativeName "Research Center for Obstetrics, Gynecology and Perinatology" ;
+    schema:url <http://www.ncagip.ru/> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(37.61556 55.75222)"^^geo:wktLiteral ;
+            schema:addressLocality "Moscow" ;
+            schema:addressCountry "RU" ;
+            owl:sameAs <http://sws.geonames.org/524901/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q30263223> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

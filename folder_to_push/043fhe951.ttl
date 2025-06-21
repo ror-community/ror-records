@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/043fhe951> a org:Organization ;
+    rdfs:label "Federal University of Maranhão" ;
+    schema:name "Federal University of Maranhão" ;
+    schema:foundingDate "1966"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "UFMA" ;
+    schema:url <http://portais.ufma.br/PortalUfma/index.jsf> ; 
+    owl:sameAs <http://en.wikipedia.org/wiki/Federal_University_of_Maranh%C3%A3o> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-44.30278 -2.52972)"^^geo:wktLiteral ;
+            schema:addressLocality "São Luís" ;
+            schema:addressCountry "BR" ;
+            owl:sameAs <http://sws.geonames.org/3388368/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000121657632> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q5440477> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

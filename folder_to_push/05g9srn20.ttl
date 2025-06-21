@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/05g9srn20> a org:Organization ;
+    rdfs:label "Aker BP (Norway)" ;
+    schema:name "Aker BP (Norway)" ;
+    schema:foundingDate "2016"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Company" ; 
+    org:alternativeName "Aker BP ASA" ;
+    schema:url <https://www.akerbp.com/en/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Aker_BP> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(10.62869 59.89951)"^^geo:wktLiteral ;
+            schema:addressLocality "Fornebu" ;
+            schema:addressCountry "NO" ;
+            owl:sameAs <http://sws.geonames.org/3156764/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000459978548> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q55454078> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q7170943> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

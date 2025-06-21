@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/013m0ej23> a org:Organization ;
+    rdfs:label "Perimeter Institute" ;
+    schema:name "Perimeter Institute" ;
+    schema:foundingDate "1999"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    org:abbreviation "PI" ;
+    org:alternativeName "Perimeter Institute for Theoretical Physics" ;
+    schema:url <http://www.perimeterinstitute.ca/> ; 
+    owl:sameAs <http://en.wikipedia.org/wiki/Perimeter_Institute_for_Theoretical_Physics> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-80.51639 43.4668)"^^geo:wktLiteral ;
+            schema:addressLocality "Waterloo" ;
+            schema:addressCountry "CA" ;
+            owl:sameAs <http://sws.geonames.org/6176823/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000086580851> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q2004561> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

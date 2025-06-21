@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/036kgyt43> a org:Organization ;
+    rdfs:label "Chouaib Doukkali University" ;
+    schema:name "Chouaib Doukkali University" ;
+    schema:foundingDate "1985"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "UCD" ;
+    schema:url <http://www.ucd.ac.ma> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Chouaib_Doukkali_University> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-8.50882 33.25682)"^^geo:wktLiteral ;
+            schema:addressLocality "El Jadida" ;
+            schema:addressCountry "MA" ;
+            owl:sameAs <http://sws.geonames.org/2550078/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000088068069> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q12204499> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

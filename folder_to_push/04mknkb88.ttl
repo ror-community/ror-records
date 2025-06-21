@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/04mknkb88> a org:Organization ;
+    rdfs:label "Canadian Medical Hall of Fame" ;
+    schema:name "Canadian Medical Hall of Fame" ;
+    schema:foundingDate "1994"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Other" ; 
+    org:abbreviation "CMHF" ;
+    schema:url <http://www.cdnmedhall.org/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Canadian_Medical_Hall_of_Fame> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-81.23304 42.98339)"^^geo:wktLiteral ;
+            schema:addressLocality "London" ;
+            schema:addressCountry "CA" ;
+            owl:sameAs <http://sws.geonames.org/6058560/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q3517661> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .
