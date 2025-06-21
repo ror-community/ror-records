@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/01dhcyx48> a org:Organization ;
+    rdfs:label "Cary Institute of Ecosystem Studies" ;
+    schema:name "Cary Institute of Ecosystem Studies" ;
+    schema:foundingDate "1983"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Nonprofit" ; 
+    org:alternativeName "Cary Institute" ;
+    schema:url <http://www.caryinstitute.org/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Institute_of_Ecosystem_Studies> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-73.69402 41.78509)"^^geo:wktLiteral ;
+            schema:addressLocality "Millbrook" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/5127007/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000087568029> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q16986438> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

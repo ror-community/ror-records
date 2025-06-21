@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/042j94f44> a org:Organization ;
+    rdfs:label "Marine Technology Unit" ;
+    schema:name "Marine Technology Unit" ;
+    schema:foundingDate "1992"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    org:abbreviation "UTM" ;
+    schema:url <http://www.utm.csic.es/> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-8.64435 42.431)"^^geo:wktLiteral ;
+            schema:addressLocality "Pontevedra" ;
+            schema:addressCountry "ES" ;
+            owl:sameAs <http://sws.geonames.org/3113209/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q6156134> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

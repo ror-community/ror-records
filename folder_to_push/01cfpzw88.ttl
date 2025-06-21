@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/01cfpzw88> a org:Organization ;
+    rdfs:label "Deutsches Institut für Japanstudien Tokyo" ;
+    schema:name "Deutsches Institut für Japanstudien Tokyo" ;
+    schema:foundingDate "1988"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Government" ; 
+    org:abbreviation "DIJT" ;
+    org:alternativeName "DIJ Tokyo" ;
+    schema:url <https://www.dijtokyo.org/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/German_Institute_for_Japanese_Studies> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(139.69171 35.6895)"^^geo:wktLiteral ;
+            schema:addressLocality "Tokyo" ;
+            schema:addressCountry "JP" ;
+            owl:sameAs <http://sws.geonames.org/1850147/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000417641963> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q1205725> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

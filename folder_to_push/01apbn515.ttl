@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/01apbn515> a org:Organization ;
+    rdfs:label "Vaganova Ballet Academy" ;
+    schema:name "Vaganova Ballet Academy" ;
+    schema:foundingDate "1738"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    schema:url <https://vaganovaacademy.ru/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Vaganova_Academy_of_Russian_Ballet> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(30.31413 59.93863)"^^geo:wktLiteral ;
+            schema:addressLocality "St Petersburg" ;
+            schema:addressCountry "RU" ;
+            owl:sameAs <http://sws.geonames.org/498817/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000121725949> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q1357677> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

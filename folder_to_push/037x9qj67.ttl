@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/037x9qj67> a org:Organization ;
+    rdfs:label "Research Data Alliance-US" ;
+    schema:name "Research Data Alliance-US" ;
+    schema:foundingDate "2013"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Nonprofit" ; 
+    org:abbreviation "RDA-US" ;
+    schema:url <https://www.rd-alliance.org/about-rda-us> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Research_Data_Alliance> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-74.20903 40.82593)"^^geo:wktLiteral ;
+            schema:addressLocality "Montclair" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/5101334/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q106411999> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

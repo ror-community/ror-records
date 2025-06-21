@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/043b26x63> a org:Organization ;
+    rdfs:label "National Research Council Institute for Biodiagnostics" ;
+    schema:name "National Research Council Institute for Biodiagnostics" ;
+    schema:foundingDate "1992"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    org:abbreviation "NRC-IBD" ;
+    schema:url <http://archive.nrc-cnrc.gc.ca/eng/ibp/ibd.html> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Institute_for_Biodiagnostics> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-97.14704 49.8844)"^^geo:wktLiteral ;
+            schema:addressLocality "Winnipeg" ;
+            schema:addressCountry "CA" ;
+            owl:sameAs <http://sws.geonames.org/6183235/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000406338352> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q14875039> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

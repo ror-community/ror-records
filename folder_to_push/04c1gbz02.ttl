@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/04c1gbz02> a org:Organization ;
+    rdfs:label "Keene State College" ;
+    schema:name "Keene State College" ;
+    schema:foundingDate "1909"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "KSC" ;
+    org:alternativeName "Keene Normal School" ;
+    schema:url <http://www.keene.edu/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Keene_State_College> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-72.27814 42.93369)"^^geo:wktLiteral ;
+            schema:addressLocality "Keene" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/5088262/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000090536271> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q6382897> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

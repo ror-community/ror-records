@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/02frkq021> a org:Organization ;
+    rdfs:label "Siberian Branch of the Russian Academy of Sciences" ;
+    schema:name "Siberian Branch of the Russian Academy of Sciences" ;
+    schema:foundingDate "1957"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Government" ; 
+    org:abbreviation "SB RAS" ;
+    schema:url <http://www.sbras.ru/en> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Siberian_Branch_of_the_Russian_Academy_of_Sciences> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(82.9346 55.0415)"^^geo:wktLiteral ;
+            schema:addressLocality "Novosibirsk" ;
+            schema:addressCountry "RU" ;
+            owl:sameAs <http://sws.geonames.org/1496747/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000122541834> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

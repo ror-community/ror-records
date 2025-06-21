@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/04zcfra07> a org:Organization ;
+    rdfs:label "FlowJo (United States)" ;
+    schema:name "FlowJo (United States)" ;
+    org:status "active" ;
+    org:classification "Company" ; 
+    org:alternativeName "Tree Star" ;
+    schema:url <https://www.flowjo.com/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/FlowJo> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-122.70948 42.19458)"^^geo:wktLiteral ;
+            schema:addressLocality "Ashland" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/5711789/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q106573956> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

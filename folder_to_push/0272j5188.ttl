@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/0272j5188> a org:Organization ;
+    rdfs:label "Northern Arizona University" ;
+    schema:name "Northern Arizona University" ;
+    schema:foundingDate "1899"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "NAU" ;
+    org:alternativeName "Arizona State College of Flagstaff" ;
+    schema:url <https://www.nau.edu/> ; 
+    owl:sameAs <http://en.wikipedia.org/wiki/Northern_Arizona_University> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-111.65127 35.19807)"^^geo:wktLiteral ;
+            schema:addressLocality "Flagstaff" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/5294810/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000419368040> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q139901> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

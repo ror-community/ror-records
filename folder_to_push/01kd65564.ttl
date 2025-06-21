@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/01kd65564> a org:Organization ;
+    rdfs:label "The University of Texas at San Antonio" ;
+    schema:name "The University of Texas at San Antonio" ;
+    schema:foundingDate "1969"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "UTSA" ;
+    schema:url <http://www.utsa.edu/> ; 
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Texas_at_San_Antonio> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-98.49363 29.42412)"^^geo:wktLiteral ;
+            schema:addressLocality "San Antonio" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/4726206/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000121845633> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q183170> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

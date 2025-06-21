@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/017bddy38> a org:Organization ;
+    rdfs:label "Blacktown & Mount Druitt Hospital" ;
+    schema:name "Blacktown & Mount Druitt Hospital" ;
+    schema:foundingDate "1965"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Healthcare" ; 
+    org:abbreviation "BMDH" ;
+    org:alternativeName "Blacktown Hospital" ;
+    schema:url <http://www.wslhd.health.nsw.gov.au/Blacktown-Mount-Druitt-Hospital> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Blacktown_Hospital> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(150.91667 -33.76667)"^^geo:wktLiteral ;
+            schema:addressLocality "Blacktown" ;
+            schema:addressCountry "AU" ;
+            owl:sameAs <http://sws.geonames.org/2175411/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000405727882> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

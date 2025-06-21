@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/03jrxta72> a org:Organization ;
+    rdfs:label "Princess Margaret Hospital" ;
+    schema:name "Princess Margaret Hospital" ;
+    schema:foundingDate "1975"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Healthcare" ; 
+    org:abbreviation "PMH" ;
+    schema:url <http://www.ha.org.hk/visitor/ha_hosp_details.asp?Content_ID=100160&Lang=ENG> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Princess_Margaret_Hospital_(Hong_Kong)> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(114.17469 22.27832)"^^geo:wktLiteral ;
+            schema:addressLocality "Hong Kong" ;
+            schema:addressCountry "HK" ;
+            owl:sameAs <http://sws.geonames.org/1819729/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000417997070> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q3971859> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/03k1gpj17> a org:Organization ;
+    rdfs:label "Colorado State University" ;
+    schema:name "Colorado State University" ;
+    schema:foundingDate "1870"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "CSU" ;
+    org:alternativeName "Colorado Agricultural College" ;
+    schema:url <http://www.colostate.edu/> ; 
+    owl:sameAs <http://en.wikipedia.org/wiki/Colorado_State_University> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-105.08442 40.58526)"^^geo:wktLiteral ;
+            schema:addressLocality "Fort Collins" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/5577147/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000419368083> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q1111640> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

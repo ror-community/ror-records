@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/00mkh7345> a org:Organization ;
+    rdfs:label "Hubbard Brook Long Term Ecological Research" ;
+    schema:name "Hubbard Brook Long Term Ecological Research" ;
+    schema:foundingDate "1988"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    org:abbreviation "HBR" ;
+    org:alternativeName "Hubbard Brook LTER" ;
+    schema:url <https://hubbardbrook.org> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Hubbard_Brook_Experimental_Forest> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-71.68508 43.97757)"^^geo:wktLiteral ;
+            schema:addressLocality "Woodstock" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/5094939/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    .

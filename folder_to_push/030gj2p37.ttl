@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/030gj2p37> a org:Organization ;
+    rdfs:label "Ziekenhuis Nij Smellinghe" ;
+    schema:name "Ziekenhuis Nij Smellinghe" ;
+    schema:foundingDate "1945"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Healthcare" ; 
+    schema:url <https://www.nijsmellinghe.nl/> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(6.0989 53.11254)"^^geo:wktLiteral ;
+            schema:addressLocality "Drachten" ;
+            schema:addressCountry "NL" ;
+            owl:sameAs <http://sws.geonames.org/2756644/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000403969626> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q97500878> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

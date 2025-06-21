@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/05ghbjx71> a org:Organization ;
+    rdfs:label "Centre intégré de santé et de services sociaux de Chaudière-Appalaches" ;
+    schema:name "Centre intégré de santé et de services sociaux de Chaudière-Appalaches" ;
+    schema:foundingDate "2011"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Healthcare" ; 
+    org:abbreviation "CSSS" ;
+    schema:url <https://www.cisssca.com/soins-et-services/hebergement/adultes/centre-dhebergement-de-soins-de-longue-duree-chsld/decouvrir-nos-chsld-en-images/alphonse-desjardins/> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-71.17793 46.80326)"^^geo:wktLiteral ;
+            schema:addressLocality "Lévis" ;
+            schema:addressCountry "CA" ;
+            owl:sameAs <http://sws.geonames.org/6325521/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000446866563> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q30282741> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

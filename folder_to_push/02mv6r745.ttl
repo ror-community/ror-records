@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/02mv6r745> a org:Organization ;
+    rdfs:label "Utah System of Higher Education" ;
+    schema:name "Utah System of Higher Education" ;
+    schema:foundingDate "1969"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "USHE" ;
+    schema:url <https://higheredutah.org/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Utah_System_of_Higher_Education> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-111.89105 40.76078)"^^geo:wktLiteral ;
+            schema:addressLocality "Salt Lake City" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/5780993/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000092060844> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

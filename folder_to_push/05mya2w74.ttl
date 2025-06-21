@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/05mya2w74> a org:Organization ;
+    rdfs:label "Combined Military Hospital" ;
+    schema:name "Combined Military Hospital" ;
+    schema:foundingDate "1943"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Healthcare" ; 
+    org:abbreviation "CMH" ;
+    schema:url <https://combined-military-hospital-hospital.business.site/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Combined_Military_Hospital> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(73.0479 33.59733)"^^geo:wktLiteral ;
+            schema:addressLocality "Rawalpindi" ;
+            schema:addressCountry "PK" ;
+            owl:sameAs <http://sws.geonames.org/1166993/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q5150874> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

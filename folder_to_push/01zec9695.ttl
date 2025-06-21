@@ -1,0 +1,26 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/01zec9695> a org:Organization ;
+    rdfs:label "Center for Global Change and Sustainability" ;
+    schema:name "Center for Global Change and Sustainability" ;
+    org:status "active" ;
+    org:classification "Nonprofit" ; 
+    org:abbreviation "CCGS" ;
+    schema:url <https://www.ccgs.mx/> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-92.93028 17.98689)"^^geo:wktLiteral ;
+            schema:addressLocality "Villahermosa" ;
+            schema:addressCountry "MX" ;
+            owl:sameAs <http://sws.geonames.org/3514670/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

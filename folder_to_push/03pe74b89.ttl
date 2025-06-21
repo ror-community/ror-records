@@ -1,0 +1,26 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/03pe74b89> a org:Organization ;
+    rdfs:label "Max Weber Forum für Südasienstudien Delhi" ;
+    schema:name "Max Weber Forum für Südasienstudien Delhi" ;
+    schema:foundingDate "2021"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Government" ; 
+    org:alternativeName "MWF Delhi" ;
+    schema:url <https://mwfdelhi.hypotheses.org> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(77.22445 28.63576)"^^geo:wktLiteral ;
+            schema:addressLocality "New Delhi" ;
+            schema:addressCountry "IN" ;
+            owl:sameAs <http://sws.geonames.org/1261481/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    .

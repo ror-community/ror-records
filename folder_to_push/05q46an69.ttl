@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/05q46an69> a org:Organization ;
+    rdfs:label "Hawk Mountain Sanctuary" ;
+    schema:name "Hawk Mountain Sanctuary" ;
+    schema:foundingDate "1934"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Archive" ; 
+    schema:url <http://www.hawkmountain.org/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Hawk_Mountain_Sanctuary> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-75.92687 40.33565)"^^geo:wktLiteral ;
+            schema:addressLocality "Reading" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/5207728/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000404156715> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q108870439> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

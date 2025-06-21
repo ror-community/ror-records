@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/01kh7ng04> a org:Organization ;
+    rdfs:label "Fundación Universitaria Horizonte" ;
+    schema:name "Fundación Universitaria Horizonte" ;
+    schema:foundingDate "1977"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:alternativeName "UniHorizonte" ;
+    schema:url <https://unihorizonte.edu.co> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-74.08175 4.60971)"^^geo:wktLiteral ;
+            schema:addressLocality "Bogotá" ;
+            schema:addressCountry "CO" ;
+            owl:sameAs <http://sws.geonames.org/3688689/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000477170016> ;
+    .

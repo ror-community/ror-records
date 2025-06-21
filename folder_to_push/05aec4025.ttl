@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/05aec4025> a org:Organization ;
+    rdfs:label "Polytechnic University of Tirana" ;
+    schema:name "Polytechnic University of Tirana" ;
+    schema:foundingDate "1951"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "UPT" ;
+    org:alternativeName "Universiteti Politeknik i Tiranës" ;
+    schema:url <http://www.upt.al/index.php/en/> ; 
+    owl:sameAs <http://en.wikipedia.org/wiki/Polytechnic_University_of_Tirana> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(19.81889 41.3275)"^^geo:wktLiteral ;
+            schema:addressLocality "Tirana" ;
+            schema:addressCountry "AL" ;
+            owl:sameAs <http://sws.geonames.org/3183875/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000122349084> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q821042> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

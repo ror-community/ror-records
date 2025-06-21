@@ -1,0 +1,35 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/057zh3y96> a org:Organization ;
+    rdfs:label "University of Tokyo" ;
+    schema:name "University of Tokyo" ;
+    schema:foundingDate "1877"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "UT" ;
+    org:alternativeName "Tōkyō Daigaku" ;
+    schema:url <http://www.u-tokyo.ac.jp/en/> ; 
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Tokyo> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(139.69171 35.6895)"^^geo:wktLiteral ;
+            schema:addressLocality "Tokyo" ;
+            schema:addressCountry "JP" ;
+            owl:sameAs <http://sws.geonames.org/1850147/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/000000012151536X> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q7842> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q363047> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q56612514> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q11524675> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q11524693> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

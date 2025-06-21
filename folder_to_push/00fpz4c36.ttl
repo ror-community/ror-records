@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/00fpz4c36> a org:Organization ;
+    rdfs:label "Plymouth State University" ;
+    schema:name "Plymouth State University" ;
+    schema:foundingDate "1871"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "PSU" ;
+    org:alternativeName "Plymouth State College" ;
+    schema:url <http://www.plymouth.edu/> ; 
+    owl:sameAs <http://en.wikipedia.org/wiki/Plymouth_State_University> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-71.68813 43.75702)"^^geo:wktLiteral ;
+            schema:addressLocality "Plymouth" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/5091310/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000419369019> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q7205857> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

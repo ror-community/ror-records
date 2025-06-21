@@ -1,0 +1,32 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/02jbv0t02> a org:Organization ;
+    rdfs:label "Lawrence Berkeley National Laboratory" ;
+    schema:name "Lawrence Berkeley National Laboratory" ;
+    schema:foundingDate "1931"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    org:abbreviation "LBNL" ;
+    org:alternativeName "Berkeley Lab" ;
+    schema:url <http://www.lbl.gov/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Lawrence_Berkeley_National_Laboratory> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-122.27275 37.87159)"^^geo:wktLiteral ;
+            schema:addressLocality "Berkeley" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/5327684/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000122314551> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q1133630> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q4686229> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

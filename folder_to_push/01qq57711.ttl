@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/01qq57711> a org:Organization ;
+    rdfs:label "Andrés Bello University" ;
+    schema:name "Andrés Bello University" ;
+    schema:foundingDate "1988"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "UNAB" ;
+    schema:url <http://www.unab.cl/sitio-html/rr_ii/welcome.asp> ; 
+    owl:sameAs <http://en.wikipedia.org/wiki/Andr%C3%A9s_Bello_National_University> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-70.64827 -33.45694)"^^geo:wktLiteral ;
+            schema:addressLocality "Santiago" ;
+            schema:addressCountry "CL" ;
+            owl:sameAs <http://sws.geonames.org/3871336/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/000000012156804X> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q3348434> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

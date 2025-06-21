@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/05kb8h459> a org:Organization ;
+    rdfs:label "Umeå University" ;
+    schema:name "Umeå University" ;
+    schema:foundingDate "1965"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    schema:url <http://www.umu.se/english> ; 
+    owl:sameAs <http://en.wikipedia.org/wiki/Ume%C3%A5_University> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(20.25972 63.82842)"^^geo:wktLiteral ;
+            schema:addressLocality "Umeå" ;
+            schema:addressCountry "SE" ;
+            owl:sameAs <http://sws.geonames.org/602150/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000110343451> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q1144565> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

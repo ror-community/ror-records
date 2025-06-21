@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/02smfhw86> a org:Organization ;
+    rdfs:label "Virginia Tech" ;
+    schema:name "Virginia Tech" ;
+    schema:foundingDate "1872"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:alternativeName "Virginia Polytechnic Institute and State University" ;
+    schema:url <https://www.vt.edu/about/index.html> ; 
+    owl:sameAs <http://en.wikipedia.org/wiki/Virginia_Tech> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-80.41394 37.22957)"^^geo:wktLiteral ;
+            schema:addressLocality "Blacksburg" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/4747845/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000106944940> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q65379> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

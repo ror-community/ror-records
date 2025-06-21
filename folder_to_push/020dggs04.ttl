@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/020dggs04> a org:Organization ;
+    rdfs:label "Humanitas University" ;
+    schema:name "Humanitas University" ;
+    schema:foundingDate "2014"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:alternativeName "Università Humanitas" ;
+    schema:url <http://www.hunimed.eu/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Humanitas_University> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(9.1559 45.38193)"^^geo:wktLiteral ;
+            schema:addressLocality "Rozzano" ;
+            schema:addressCountry "IT" ;
+            owl:sameAs <http://sws.geonames.org/3168837/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q59386762> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

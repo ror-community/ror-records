@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/03s74ag37> a org:Organization ;
+    rdfs:label "Green Chemistry" ;
+    schema:name "Green Chemistry" ;
+    schema:foundingDate "2007"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Other" ; 
+    org:alternativeName "Association West Pomeranian Chemical Cluster "Green Chemistry”" ;
+    schema:url <http://zielonachemia.eu/> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(14.55302 53.42894)"^^geo:wktLiteral ;
+            schema:addressLocality "Szczecin" ;
+            schema:addressCountry "PL" ;
+            owl:sameAs <http://sws.geonames.org/3083829/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q59535772> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .
