@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/00cv9q002> a org:Organization ;
+    rdfs:label "Department of Jobs, Tourism, Science and Innovation" ;
+    schema:name "Department of Jobs, Tourism, Science and Innovation" ;
+    schema:foundingDate "2017"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Government" ; 
+    org:abbreviation "JTSI" ;
+    org:alternativeName "Western Australia Department of Jobs, Tourism, Science and Innovation" ;
+    schema:url <https://www.wa.gov.au/organisation/department-of-jobs-tourism-science-and-innovation> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Department_of_Jobs%2C_Tourism%2C_Science_and_Innovation> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(115.8614 -31.95224)"^^geo:wktLiteral ;
+            schema:addressLocality "Perth" ;
+            schema:addressCountry "AU" ;
+            owl:sameAs <http://sws.geonames.org/2063523/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q111165005> ;
+    .

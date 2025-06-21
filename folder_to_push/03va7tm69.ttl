@@ -1,0 +1,25 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/03va7tm69> a org:Organization ;
+    rdfs:label "State Key Laboratory of Plateau Ecology and Agriculture" ;
+    schema:name "State Key Laboratory of Plateau Ecology and Agriculture" ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    org:alternativeName "青海大学 省部共建三江源生态与高原农牧业国家重点实验室" ;
+    schema:url <https://gz.qhu.edu.cn/lxwm/index.htm> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(101.75739 36.62554)"^^geo:wktLiteral ;
+            schema:addressLocality "Xining" ;
+            schema:addressCountry "CN" ;
+            owl:sameAs <http://sws.geonames.org/1788852/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    .

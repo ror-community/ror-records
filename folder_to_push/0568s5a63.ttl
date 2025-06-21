@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/0568s5a63> a org:Organization ;
+    rdfs:label "Confederación Hidrográfica del Duero" ;
+    schema:name "Confederación Hidrográfica del Duero" ;
+    org:status "active" ;
+    org:classification "Government" ; 
+    org:abbreviation "CHD" ;
+    org:alternativeName "Duero Basin Water Agency" ;
+    schema:url <https://www.chduero.es> ; 
+    owl:sameAs <https://es.wikipedia.org/wiki/Confederaci%C3%B3n_Hidrogr%C3%A1fica_del_Duero> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-4.72372 41.65518)"^^geo:wktLiteral ;
+            schema:addressLocality "Valladolid" ;
+            schema:addressCountry "ES" ;
+            owl:sameAs <http://sws.geonames.org/3106672/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000478633596> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q5782731> ;
+    .

@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/0289t9g81> a org:Organization ;
+    rdfs:label "Minderoo Foundation" ;
+    schema:name "Minderoo Foundation" ;
+    org:status "active" ;
+    org:classification "Nonprofit" ; 
+    org:alternativeName "The Minderoo Foundation" ;
+    schema:url <https://www.minderoo.org> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(115.8073 -31.98184)"^^geo:wktLiteral ;
+            schema:addressLocality "Nedlands" ;
+            schema:addressCountry "AU" ;
+            owl:sameAs <http://sws.geonames.org/2064874/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/000000050277586X> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q110723912> ;
+    .

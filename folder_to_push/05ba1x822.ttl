@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/05ba1x822> a org:Organization ;
+    rdfs:label "Golden Key International Honour Society" ;
+    schema:name "Golden Key International Honour Society" ;
+    schema:foundingDate "1977"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Nonprofit" ; 
+    org:abbreviation "GK" ;
+    org:alternativeName "Golden Key" ;
+    schema:url <https://www.goldenkey.org> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Golden_Key_International_Honour_Society> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-84.38798 33.749)"^^geo:wktLiteral ;
+            schema:addressLocality "Atlanta" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/4180439/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000477545113> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q248421> ;
+    .

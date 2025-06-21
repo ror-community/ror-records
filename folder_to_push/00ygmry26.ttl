@@ -1,0 +1,24 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/00ygmry26> a org:Organization ;
+    rdfs:label "Cluster of Excellence "Inflammation at Interfaces"" ;
+    schema:name "Cluster of Excellence "Inflammation at Interfaces"" ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    org:alternativeName "Cluster of Excellence in Inflammation Research" ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(10.13489 54.32133)"^^geo:wktLiteral ;
+            schema:addressLocality "Kiel" ;
+            schema:addressCountry "DE" ;
+            owl:sameAs <http://sws.geonames.org/2891122/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    .

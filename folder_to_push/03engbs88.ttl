@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/03engbs88> a org:Organization ;
+    rdfs:label "National Health Fund" ;
+    schema:name "National Health Fund" ;
+    org:status "active" ;
+    org:classification "Government" ; 
+    org:abbreviation "NHF" ;
+    org:alternativeName "National Health Fund, Jamaica" ;
+    schema:url <https://www.nhf.org.jm> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-76.79358 17.99702)"^^geo:wktLiteral ;
+            schema:addressLocality "Kingston" ;
+            schema:addressCountry "JM" ;
+            owl:sameAs <http://sws.geonames.org/3489854/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000405770303> ;
+    .
