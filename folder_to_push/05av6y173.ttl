@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/05av6y173> a org:Organization ;
+    rdfs:label "TC İstanbul Rumeli Üniversitesi" ;
+    schema:name "TC İstanbul Rumeli Üniversitesi" ;
+    schema:foundingDate "2015"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:alternativeName "TC Istanbul Rumeli Universitesi" ;
+    schema:url <http://rumeli.edu.tr> ; 
+    owl:sameAs <https://tr.wikipedia.org/wiki/%C4%B0stanbul_Rumeli_%C3%9Cniversitesi> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(28.94966 41.01384)"^^geo:wktLiteral ;
+            schema:addressLocality "Istanbul" ;
+            schema:addressCountry "TR" ;
+            owl:sameAs <http://sws.geonames.org/745044/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000458943888> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q25477809> ;
+    .

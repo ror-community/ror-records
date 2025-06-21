@@ -1,0 +1,25 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/03qdjzt60> a org:Organization ;
+    rdfs:label "Islamic Azad University, Sepidan" ;
+    schema:name "Islamic Azad University, Sepidan" ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:alternativeName "Islamic Azad University, Sepidan Branch" ;
+    schema:url <https://sepidan.iau.ir> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(52.0348 33.4534)"^^geo:wktLiteral ;
+            schema:addressLocality "Sepīdān" ;
+            schema:addressCountry "IR" ;
+            owl:sameAs <http://sws.geonames.org/135285/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    .

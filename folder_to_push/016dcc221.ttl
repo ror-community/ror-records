@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/016dcc221> a org:Organization ;
+    rdfs:label "Kocaeli Sağlık ve Teknoloji Üniversitesi" ;
+    schema:name "Kocaeli Sağlık ve Teknoloji Üniversitesi" ;
+    schema:foundingDate "2009"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:alternativeName "Kocaeli Saglik ve Teknoloji Universitesi" ;
+    schema:url <https://kocaelisaglik.edu.tr> ; 
+    owl:sameAs <https://tr.wikipedia.org/wiki/Kocaeli_Sa%C4%9Fl%C4%B1k_ve_Teknoloji_%C3%9Cniversitesi> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(29.90015 40.64574)"^^geo:wktLiteral ;
+            schema:addressLocality "Başiskele" ;
+            schema:addressCountry "TR" ;
+            owl:sameAs <http://sws.geonames.org/9548074/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000510893516> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q97208050> ;
+    .

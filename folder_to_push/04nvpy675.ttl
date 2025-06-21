@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/04nvpy675> a org:Organization ;
+    rdfs:label "Gaziantep İslam Bilim ve Teknoloji Üniversitesi" ;
+    schema:name "Gaziantep İslam Bilim ve Teknoloji Üniversitesi" ;
+    schema:foundingDate "2018"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "GİBTÜ" ;
+    org:alternativeName "Gaziantep Islam Bilim ve Teknoloji Universitesi" ;
+    schema:url <https://www.gibtu.edu.tr> ; 
+    owl:sameAs <https://tr.wikipedia.org/wiki/Gaziantep_%C4%B0slam_Bilim_ve_Teknoloji_%C3%9Cniversitesi> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(37.3825 37.05944)"^^geo:wktLiteral ;
+            schema:addressLocality "Gaziantep" ;
+            schema:addressCountry "TR" ;
+            owl:sameAs <http://sws.geonames.org/314830/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000480045654> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q60673567> ;
+    .

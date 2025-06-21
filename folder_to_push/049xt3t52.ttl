@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/049xt3t52> a org:Organization ;
+    rdfs:label "Archiv der Deutschen Frauenbewegung" ;
+    schema:name "Archiv der Deutschen Frauenbewegung" ;
+    org:status "active" ;
+    org:classification "Archive" ; 
+    org:abbreviation "AddF" ;
+    org:alternativeName "Kassel Archiv Frauenbewegung" ;
+    schema:url <http://www.addf-kassel.de> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(9.46722 51.32111)"^^geo:wktLiteral ;
+            schema:addressLocality "Kreisfreie Stadt Kassel" ;
+            schema:addressCountry "DE" ;
+            owl:sameAs <http://sws.geonames.org/3220995/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000121663688> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q28737533> ;
+    .

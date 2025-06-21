@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/01fxqs415> a org:Organization ;
+    rdfs:label "Kutahya Saglik Bilimleri Universitesi" ;
+    schema:name "Kutahya Saglik Bilimleri Universitesi" ;
+    schema:foundingDate "2018"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "KSB" ;
+    schema:url <https://www.ksbu.edu.tr> ; 
+    owl:sameAs <https://tr.wikipedia.org/wiki/K%C3%BCtahya_Sa%C4%9Fl%C4%B1k_Bilimleri_%C3%9Cniversitesi> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(29.98333 39.42417)"^^geo:wktLiteral ;
+            schema:addressLocality "Kütahya" ;
+            schema:addressCountry "TR" ;
+            owl:sameAs <http://sws.geonames.org/305268/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000478321680> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q52236454> ;
+    .

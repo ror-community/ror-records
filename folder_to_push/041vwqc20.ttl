@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/041vwqc20> a org:Organization ;
+    rdfs:label "Ankara Bilim Üniversitesi" ;
+    schema:name "Ankara Bilim Üniversitesi" ;
+    schema:foundingDate "2020"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:alternativeName "Ankara Bilim Universitesi" ;
+    schema:url <https://www.ankarabilim.edu.tr> ; 
+    owl:sameAs <https://tr.wikipedia.org/wiki/Ankara_Bilim_%C3%9Cniversitesi> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(32.80147 39.97787)"^^geo:wktLiteral ;
+            schema:addressLocality "Yenimahalle" ;
+            schema:addressCountry "TR" ;
+            owl:sameAs <http://sws.geonames.org/296954/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000491713611> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q97204373> ;
+    .

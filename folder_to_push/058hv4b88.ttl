@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/058hv4b88> a org:Organization ;
+    rdfs:label "Federation of European Microbiological Societies" ;
+    schema:name "Federation of European Microbiological Societies" ;
+    org:status "active" ;
+    org:classification "Nonprofit" ; 
+    org:abbreviation "FEMS" ;
+    schema:url <http://www.fems-microbiology.org> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Federation_of_European_Microbiological_Societies> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(4.35556 52.00667)"^^geo:wktLiteral ;
+            schema:addressLocality "Delft" ;
+            schema:addressCountry "NL" ;
+            owl:sameAs <http://sws.geonames.org/2757345/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000123532024> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q1400262> ;
+    .
