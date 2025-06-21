@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/04my0r533> a org:Organization ;
+    rdfs:label "Sardar Patel University of Police, Security and Criminal Justice, Jodhpur" ;
+    schema:name "Sardar Patel University of Police, Security and Criminal Justice, Jodhpur" ;
+    schema:foundingDate "2012"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "SPUP" ;
+    schema:url <https://www.policeuniversity.ac.in> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Sardar_Patel_University_of_Police%2C_Security_and_Criminal_Justice> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(73.00594 26.26841)"^^geo:wktLiteral ;
+            schema:addressLocality "Jodhpur" ;
+            schema:addressCountry "IN" ;
+            owl:sameAs <http://sws.geonames.org/1268865/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q39047129> ;
+    .

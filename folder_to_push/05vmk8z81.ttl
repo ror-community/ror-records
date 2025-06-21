@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/05vmk8z81> a org:Organization ;
+    rdfs:label "Norwegian Railway Museum" ;
+    schema:name "Norwegian Railway Museum" ;
+    schema:foundingDate "1896"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Archive" ; 
+    org:abbreviation "NJM" ;
+    org:alternativeName "Jernbanemuseet" ;
+    schema:url <https://jernbanemuseet.no> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Norwegian_Railway_Museum> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(11.06798 60.7945)"^^geo:wktLiteral ;
+            schema:addressLocality "Hamar" ;
+            schema:addressCountry "NO" ;
+            owl:sameAs <http://sws.geonames.org/3154084/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000449119950> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q1188798> ;
+    .

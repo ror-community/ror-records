@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/04k3aaz82> a org:Organization ;
+    rdfs:label "Universal College of Learning" ;
+    schema:name "Universal College of Learning" ;
+    schema:foundingDate "1892"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "UCOL" ;
+    schema:url <https://www.ucol.ac.nz/> ; 
+    owl:sameAs <http://en.wikipedia.org/wiki/Universal_College_of_Learning> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(175.61113 -40.35636)"^^geo:wktLiteral ;
+            schema:addressLocality "Palmerston North" ;
+            schema:addressCountry "NZ" ;
+            owl:sameAs <http://sws.geonames.org/2185018/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000087506637> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q7893913> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

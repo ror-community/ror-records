@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/0561ahg72> a org:Organization ;
+    rdfs:label "Higher Institute of Engineering and Technology - King Marriott" ;
+    schema:name "Higher Institute of Engineering and Technology - King Marriott" ;
+    schema:foundingDate "2012"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "KMA" ;
+    schema:url <http://kma.edu.eg> ; 
+    owl:sameAs <https://ar.wikipedia.org/wiki/%D8%A7%D9%84%D9%85%D8%B9%D8%A7%D9%87%D8%AF_%D8%A7%D9%84%D8%B9%D9%84%D9%8A%D8%A7_%D8%A8%D9%83%D9%8A%D9%86%D8%AC_%D9%85%D8%B1%D9%8A%D9%88%D8%B7> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(29.91582 31.20176)"^^geo:wktLiteral ;
+            schema:addressLocality "Alexandria" ;
+            schema:addressCountry "EG" ;
+            owl:sameAs <http://sws.geonames.org/361058/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    .

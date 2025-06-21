@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/00n4k4n97> a org:Organization ;
+    rdfs:label "Providence Health & Services" ;
+    schema:name "Providence Health & Services" ;
+    schema:foundingDate "1859"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Healthcare" ; 
+    schema:url <https://www.providence.org> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Providence_Health_%26_Services> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-122.21707 47.48288)"^^geo:wktLiteral ;
+            schema:addressLocality "Renton" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/5808189/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000404635556> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q7252430> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .
