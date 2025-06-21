@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/025ghn770> a org:Organization ;
+    rdfs:label "Łukasiewicz Research Network - Institute of Non-Ferrous Metals" ;
+    schema:name "Łukasiewicz Research Network - Institute of Non-Ferrous Metals" ;
+    schema:foundingDate "1952"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    org:abbreviation "IMN" ;
+    schema:url <http://www.imn.gliwice.pl/> ; 
+    owl:sameAs <https://pl.wikipedia.org/wiki/Instytut_Metali_Nie%C5%BCelaznych> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(18.67658 50.29761)"^^geo:wktLiteral ;
+            schema:addressLocality "Gliwice" ;
+            schema:addressCountry "PL" ;
+            owl:sameAs <http://sws.geonames.org/3099230/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000084973838> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q11713121> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

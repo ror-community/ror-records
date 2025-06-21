@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/00gt23c81> a org:Organization ;
+    rdfs:label "Universidad Nacional Autónoma Altoandina de Tarma" ;
+    schema:name "Universidad Nacional Autónoma Altoandina de Tarma" ;
+    schema:foundingDate "2010"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "UNAAT" ;
+    schema:url <http://www.unaat.edu.pe/portal/> ; 
+    owl:sameAs <https://es.wikipedia.org/wiki/Universidad_Nacional_Aut%C3%B3noma_Altoandina_de_Tarma> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-75.68992 -11.41899)"^^geo:wktLiteral ;
+            schema:addressLocality "Tarma" ;
+            schema:addressCountry "PE" ;
+            owl:sameAs <http://sws.geonames.org/3927758/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000460211803> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q6156552> ;
+    .

@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/0488nj033> a org:Organization ;
+    rdfs:label "Natural History Museum Maastricht" ;
+    schema:name "Natural History Museum Maastricht" ;
+    schema:foundingDate "1912"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Archive" ; 
+    org:abbreviation "NHMM" ;
+    schema:url <https://www.nhmmaastricht.nl/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Maastricht_Natural_History_Museum> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(5.7 50.85)"^^geo:wktLiteral ;
+            schema:addressLocality "Gemeente Maastricht" ;
+            schema:addressCountry "NL" ;
+            owl:sameAs <http://sws.geonames.org/2751282/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000084997610> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q2412016> ;
+    .

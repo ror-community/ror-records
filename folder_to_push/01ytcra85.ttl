@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/01ytcra85> a org:Organization ;
+    rdfs:label "Institute of Education of the Republic of Azerbaijan" ;
+    schema:name "Institute of Education of the Republic of Azerbaijan" ;
+    schema:foundingDate "1930"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "ARTI" ;
+    schema:url <https://www.arti.edu.az/az/> ; 
+    owl:sameAs <https://az.wikipedia.org/wiki/Az%C9%99rbaycan_Respublikas%C4%B1n%C4%B1n_T%C9%99hsil_%C4%B0nstitutu> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(49.89201 40.37767)"^^geo:wktLiteral ;
+            schema:addressLocality "Baku" ;
+            schema:addressCountry "AZ" ;
+            owl:sameAs <http://sws.geonames.org/587084/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q25536880> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

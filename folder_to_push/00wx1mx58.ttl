@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/00wx1mx58> a org:Organization ;
+    rdfs:label "Maison des Sciences de l'Homme Mondes" ;
+    schema:name "Maison des Sciences de l'Homme Mondes" ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    org:alternativeName "MSH Mondes" ;
+    schema:url <https://www.mshmondes.cnrs.fr/> ; 
+    owl:sameAs <https://fr.wikipedia.org/wiki/Maison_des_Sciences_de_l%E2%80%99homme_Mondes> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(2.20675 48.89198)"^^geo:wktLiteral ;
+            schema:addressLocality "Nanterre" ;
+            schema:addressCountry "FR" ;
+            owl:sameAs <http://sws.geonames.org/2990970/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q3278957> ;
+    .

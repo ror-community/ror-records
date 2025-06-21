@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/05qczcd66> a org:Organization ;
+    rdfs:label "Łukasiewicz Research Network - Industrial Institute of Agricultural Engineering" ;
+    schema:name "Łukasiewicz Research Network - Industrial Institute of Agricultural Engineering" ;
+    schema:foundingDate "1946"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "PIMR" ;
+    schema:url <https://pimr.lukasiewicz.gov.pl> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(16.92993 52.40692)"^^geo:wktLiteral ;
+            schema:addressLocality "Poznan" ;
+            schema:addressCountry "PL" ;
+            owl:sameAs <http://sws.geonames.org/3088171/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000088474817> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q30261196> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

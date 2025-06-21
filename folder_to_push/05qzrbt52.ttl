@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/05qzrbt52> a org:Organization ;
+    rdfs:label "Archaeological Museum in Poznań" ;
+    schema:name "Archaeological Museum in Poznań" ;
+    schema:foundingDate "1862"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Archive" ; 
+    schema:url <https://www.muzarp.poznan.pl/> ; 
+    owl:sameAs <https://pl.wikipedia.org/wiki/Muzeum_Archeologiczne_w_Poznaniu> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(16.92993 52.40692)"^^geo:wktLiteral ;
+            schema:addressLocality "Poznan" ;
+            schema:addressCountry "PL" ;
+            owl:sameAs <http://sws.geonames.org/3088171/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000119313910> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q11786905> ;
+    .

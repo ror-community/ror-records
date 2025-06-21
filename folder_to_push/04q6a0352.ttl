@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/04q6a0352> a org:Organization ;
+    rdfs:label "Volgograd State Medical University" ;
+    schema:name "Volgograd State Medical University" ;
+    schema:foundingDate "1935"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:alternativeName "Stalingrad Medical Institute Volgograd Medical Academy" ;
+    schema:url <https://www.volgmed.ru/ru/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Volgograd_State_Medical_University> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(44.50183 48.71939)"^^geo:wktLiteral ;
+            schema:addressLocality "Volgograd" ;
+            schema:addressCountry "RU" ;
+            owl:sameAs <http://sws.geonames.org/472757/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000087903085> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q3533383> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

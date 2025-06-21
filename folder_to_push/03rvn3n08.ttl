@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/03rvn3n08> a org:Organization ;
+    rdfs:label "Łukasiewicz Research Network – PORT Polish Center for Technology Development" ;
+    schema:name "Łukasiewicz Research Network – PORT Polish Center for Technology Development" ;
+    schema:foundingDate "2007"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    org:abbreviation "PORT" ;
+    schema:url <https://www.port.org.pl> ; 
+    owl:sameAs <https://pl.wikipedia.org/wiki/Sie%C4%87_Badawcza_%C5%81ukasiewicz_%E2%80%93_PORT_Polski_O%C5%9Brodek_Rozwoju_Technologii> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(17.03333 51.1)"^^geo:wktLiteral ;
+            schema:addressLocality "Wroclaw" ;
+            schema:addressCountry "PL" ;
+            owl:sameAs <http://sws.geonames.org/3081368/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q97371596> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .
