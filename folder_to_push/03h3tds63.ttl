@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/03h3tds63> a org:Organization ;
+    rdfs:label "Toyohashi Municipal Hospital" ;
+    schema:name "Toyohashi Municipal Hospital" ;
+    schema:foundingDate "1991"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Healthcare" ; 
+    schema:url <http://www.municipal-hospital.toyohashi.aichi.jp/en/> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(137.38333 34.76667)"^^geo:wktLiteral ;
+            schema:addressLocality "Toyohashi" ;
+            schema:addressCountry "JP" ;
+            owl:sameAs <http://sws.geonames.org/1849846/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000417727556> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

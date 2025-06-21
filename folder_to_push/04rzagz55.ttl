@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/04rzagz55> a org:Organization ;
+    rdfs:label "Utano Hospital" ;
+    schema:name "Utano Hospital" ;
+    schema:foundingDate "1920"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Healthcare" ; 
+    org:alternativeName "National Sanatorium Utano hospital " ;
+    schema:url <http://www.utanohosp.jp/> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(135.75385 35.02107)"^^geo:wktLiteral ;
+            schema:addressLocality "Kyoto" ;
+            schema:addressCountry "JP" ;
+            owl:sameAs <http://sws.geonames.org/1857910/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

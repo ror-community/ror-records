@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/057bx9y85> a org:Organization ;
+    rdfs:label "Tsukuba University of Technology" ;
+    schema:name "Tsukuba University of Technology" ;
+    schema:foundingDate "2005"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "NTUT" ;
+    org:alternativeName "Tsukuba Gijutsu Daigaku" ;
+    schema:url <http://www.tsukuba-tech.ac.jp/en/index.php> ; 
+    owl:sameAs <http://en.wikipedia.org/wiki/National_University_Corporation_Tsukuba_University_of_Technology> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(140.1 36.2)"^^geo:wktLiteral ;
+            schema:addressLocality "Tsukuba" ;
+            schema:addressCountry "JP" ;
+            owl:sameAs <http://sws.geonames.org/2110683/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000105727514> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q3551861> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

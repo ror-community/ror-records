@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/04eekx875> a org:Organization ;
+    rdfs:label "Kansai Research Foundation for Technology Promotion" ;
+    schema:name "Kansai Research Foundation for Technology Promotion" ;
+    schema:foundingDate "1992"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Nonprofit" ; 
+    org:abbreviation "KRF" ;
+    schema:url <http://www.krf.or.jp/> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(135.50218 34.69374)"^^geo:wktLiteral ;
+            schema:addressLocality "Osaka" ;
+            schema:addressCountry "JP" ;
+            owl:sameAs <http://sws.geonames.org/1853909/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

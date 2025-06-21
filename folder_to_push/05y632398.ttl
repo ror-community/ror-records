@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/05y632398> a org:Organization ;
+    rdfs:label "Institute for Animal Reproduction" ;
+    schema:name "Institute for Animal Reproduction" ;
+    schema:foundingDate "1964"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Nonprofit" ; 
+    org:abbreviation "IAR" ;
+    schema:url <http://www.iar.or.jp/english/index.html> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(135.56828 34.81641)"^^geo:wktLiteral ;
+            schema:addressLocality "Ibaraki" ;
+            schema:addressCountry "JP" ;
+            owl:sameAs <http://sws.geonames.org/1862033/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

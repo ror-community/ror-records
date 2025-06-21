@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/057pha386> a org:Organization ;
+    rdfs:label "Kurume Shin-Ai Women's College" ;
+    schema:name "Kurume Shin-Ai Women's College" ;
+    schema:foundingDate "1968"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:alternativeName "Kurume shin-ai Jogakuin Tanki Daigaku" ;
+    schema:url <http://www.kurume-shinai.ac.jp/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Kurume_Shin-Ai_Women%27s_College> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(130.51667 33.31667)"^^geo:wktLiteral ;
+            schema:addressLocality "Kurume" ;
+            schema:addressCountry "JP" ;
+            owl:sameAs <http://sws.geonames.org/1858088/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000403856568> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q6447417> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

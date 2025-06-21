@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/037x16a12> a org:Organization ;
+    rdfs:label "Kaketsuken (Japan)" ;
+    schema:name "Kaketsuken (Japan)" ;
+    schema:foundingDate "1945"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Company" ; 
+    org:alternativeName "Chemo-Sero-Therapeutic Research Institute" ;
+    schema:url <http://www.kaketsuken.or.jp/en/> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(130.69181 32.80589)"^^geo:wktLiteral ;
+            schema:addressLocality "Kumamoto" ;
+            schema:addressCountry "JP" ;
+            owl:sameAs <http://sws.geonames.org/1858421/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000403761390> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q11400693> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

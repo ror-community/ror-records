@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/00xj3b267> a org:Organization ;
+    rdfs:label "GKN (Japan)" ;
+    schema:name "GKN (Japan)" ;
+    schema:foundingDate "1759"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Company" ; 
+    org:alternativeName "Guest, Keen and Nettlefolds" ;
+    schema:url <https://www.gkn.com/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/GKN> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(139.73333 36.38333)"^^geo:wktLiteral ;
+            schema:addressLocality "Tochigi" ;
+            schema:addressCountry "JP" ;
+            owl:sameAs <http://sws.geonames.org/1850311/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000417897299> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q28971034> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .
