@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/05ngpb650> a org:Organization ;
+    rdfs:label "Aljanad University for Science and Technology" ;
+    schema:name "Aljanad University for Science and Technology" ;
+    schema:foundingDate "2018"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "JUST" ;
+    schema:url <https://just.edu.ye> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(44.02091 13.57952)"^^geo:wktLiteral ;
+            schema:addressLocality "Taiz" ;
+            schema:addressCountry "YE" ;
+            owl:sameAs <http://sws.geonames.org/70225/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/000000050497925X> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q105729778> ;
+    .

@@ -1,0 +1,25 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/03wej2k16> a org:Organization ;
+    rdfs:label "World Wide Fund for Nature" ;
+    schema:name "World Wide Fund for Nature" ;
+    org:status "active" ;
+    org:classification "Nonprofit" ; 
+    org:alternativeName "World Wide Fund for Nature Cambodia" ;
+    schema:url <https://www.wwf.org.kh> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(104.91601 11.56245)"^^geo:wktLiteral ;
+            schema:addressLocality "Phnom Penh" ;
+            schema:addressCountry "KH" ;
+            owl:sameAs <http://sws.geonames.org/1821306/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    .
