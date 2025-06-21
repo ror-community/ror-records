@@ -1,0 +1,40 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/02n2b6780> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "2018"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2025-04-25"^^xsd:date ;
+    dct:modified "2025-04-28"^^xsd:date ;
+    org:alternativeName "UNIBA Madura"@id ; 
+    schema:url <http://unibamadura.ac.id> ; 
+    schema:mainEntityOfPage <https://unibamadura.ac.id> ;
+    schema:sameAs <http://isni.org/isni/0000000513590692> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(113.86042 -7.01152)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Sumenep" ;
+            schema:addressCountry "ID" ;
+            schema:addressRegion "East Java" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Indonesia" ;
+                schema:containedInPlace [
+                    schema:name "Asia" ;
+                    schema:identifier "AS"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1626099/> ;
+    ] ; 
+    .

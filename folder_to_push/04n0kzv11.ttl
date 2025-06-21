@@ -14,25 +14,31 @@
     org:status "active" ;
     org:classification "government" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-10-21"^^xsd:date ;
+    dct:modified "2025-04-28"^^xsd:date ;
     org:abbreviation "DGT"@None ; 
     schema:url <http://dgterritorio.gov.pt> ; 
     schema:url <http://dgterritorio.pt> ; 
     schema:mainEntityOfPage <https://www.dgterritorio.gov.pt> ;
     schema:sameAs <https://grid.ac/institutions/grid.434128.8> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02nvdf845> ;
+        rdfs:label "Sistema Nacional de Informação Geográfica" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(-9.13333 38.71667)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Lisbon" ;
             schema:addressCountry "PT" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Lisbon" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "Portugal" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

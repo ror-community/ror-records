@@ -10,12 +10,18 @@
 <https://ror.org/032x6kp45> a org:Organization ;
     rdfs:label "" ;
     schema:name "" ;
-    org:status "active" ;
+    org:status "withdrawn" ;
     org:classification "nonprofit" ; 
     dct:created "2025-03-09"^^xsd:date ;
-    dct:modified "2025-03-17"^^xsd:date ;
+    dct:modified "2025-04-28"^^xsd:date ;
     schema:url <http://rirs.or.jp> ; 
     schema:mainEntityOfPage <https://www.rirs.or.jp> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "successor" ;
+        org:member <https://ror.org/04w8f2338> ;
+        rdfs:label "Research Institute for Road and Street" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(139.69171 35.6895)"^^geo:wktLiteral ;

@@ -14,25 +14,49 @@
     org:status "active" ;
     org:classification "facility" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-10-21"^^xsd:date ;
+    dct:modified "2025-04-28"^^xsd:date ;
     org:abbreviation "LNEG"@None ; 
     schema:url <http://lneg.pt> ; 
     schema:mainEntityOfPage <https://www.lneg.pt> ;
     schema:sameAs <https://grid.ac/institutions/grid.425302.2> ;
     schema:sameAs <http://isni.org/isni/0000000121063068> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/003zsfh57> ;
+        rdfs:label "Laboratório de Energia Solar" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02jtacs89> ;
+        rdfs:label "Infraestrutura de Investigação para a Biomassa e a Bioenergia" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04fmw2x94> ;
+        rdfs:label "Infraestrutura Nacional de Investigação para Energia Solar de Concentração" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05ddx0m09> ;
+        rdfs:label "Research Infrastructure on Integration of Solar Energy Systems in Buildings" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(-9.13333 38.71667)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Lisbon" ;
             schema:addressCountry "PT" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Lisbon" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "Portugal" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

@@ -1,0 +1,44 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/00qcpjs09> a org:Organization ;
+    rdfs:label "Klinikum Görlitz" ;
+    schema:name "Klinikum Görlitz" ;
+    schema:foundingDate "1905"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "healthcare" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-04-28"^^xsd:date ;
+    schema:mainEntityOfPage <http://www.klinikum-goerlitz.de/> ;
+    schema:sameAs <https://grid.ac/institutions/grid.470122.2> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/042aqky30> ;
+        rdfs:label "Technische Universität Dresden" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(14.98853 51.15518)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Görlitz" ;
+            schema:addressCountry "DE" ;
+            schema:addressRegion "Saxony" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Germany" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2918987/> ;
+    ] ; 
+    .

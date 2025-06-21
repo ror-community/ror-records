@@ -13,25 +13,31 @@
     org:status "active" ;
     org:classification "education" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-11-19"^^xsd:date ;
+    dct:modified "2025-04-28"^^xsd:date ;
     org:abbreviation "INACAP"@None ; 
     schema:url <http://inacap.cl> ; 
     schema:mainEntityOfPage <https://www.inacap.cl> ;
     schema:sameAs <https://grid.ac/institutions/grid.441840.d> ;
     schema:sameAs <http://isni.org/isni/0000000121694839> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02e698f45> ;
+        rdfs:label "Universidad Tecnológica de Chile INACAP" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(-70.64827 -33.45694)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Santiago" ;
             schema:addressCountry "CL" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Santiago Metropolitan" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "Chile" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "South America" ;
+                    schema:identifier "SA"
                 ]
             ]
         ] ;

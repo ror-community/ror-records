@@ -1,0 +1,41 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/00asevw10> a org:Organization ;
+    rdfs:label "Universidad para la Cooperación Internacional" ;
+    schema:name "Universidad para la Cooperación Internacional" ;
+    schema:foundingDate "1994"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-04-28"^^xsd:date ;
+    org:abbreviation "UCI"@None ; 
+    schema:url <http://uci.ac.cr> ; 
+    schema:mainEntityOfPage <https://www.uci.ac.cr> ;
+    schema:sameAs <https://grid.ac/institutions/grid.441215.7> ;
+    schema:sameAs <http://isni.org/isni/0000000404858573> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-84.08333 9.93333)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "San José" ;
+            schema:addressCountry "CR" ;
+            schema:addressRegion "San José" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Costa Rica" ;
+                schema:containedInPlace [
+                    schema:name "North America" ;
+                    schema:identifier "NA"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3621849/> ;
+    ] ; 
+    .

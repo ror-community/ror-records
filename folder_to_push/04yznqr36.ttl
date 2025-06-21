@@ -14,7 +14,8 @@
     org:status "active" ;
     org:classification "education" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2025-04-03"^^xsd:date ;
+    dct:modified "2025-04-28"^^xsd:date ;
+    org:abbreviation "UJM"@fr ; 
     schema:mainEntityOfPage <http://portail.univ-st-etienne.fr/> ;
     owl:sameAs <http://en.wikipedia.org/wiki/Jean_Monnet_University> ; 
     schema:sameAs <https://grid.ac/institutions/grid.6279.a> ;
@@ -177,6 +178,12 @@
     ] ; 
     org:hasLink [
         a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/059sz6q14> ;
+        rdfs:label "Centre International de Recherche en Infectiologie" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
         org:role "parent" ;
         org:member <https://ror.org/01rk35k63> ;
         rdfs:label "Université de Lyon" ;
@@ -186,12 +193,6 @@
         org:role "related" ;
         org:member <https://ror.org/01sgwka45> ;
         rdfs:label "Microscopie Fonctionnelle du Vivant" ;
-    ] ; 
-    org:hasLink [
-        a org:Membership ;
-        org:role "child" ;
-        org:member <https://ror.org/059sz6q14> ;
-        rdfs:label "Centre International de Recherche en Infectiologie" ;
     ] ; 
     org:hasLink [
         a org:Membership ;

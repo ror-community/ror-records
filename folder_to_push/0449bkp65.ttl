@@ -4,27 +4,42 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/0449bkp65> a org:Organization ;
-    rdfs:label "University of Karbala" ;
-    schema:name "University of Karbala" ;
+    rdfs:label "" ;
+    schema:name "" ;
     schema:foundingDate "2002"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "UoK" ;
-    schema:url <https://uokerbala.edu.iq/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/University_of_Karbala> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-04-28"^^xsd:date ;
+    org:alternativeName "University of Karbala"@en ; 
+    org:abbreviation "UoK"@None ; 
+    schema:url <http://uokerbala.edu.iq> ; 
+    schema:mainEntityOfPage <https://uokerbala.edu.iq> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/University_of_Karbala> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100019728> ;
+    schema:sameAs <https://grid.ac/institutions/grid.442849.7> ;
+    schema:sameAs <http://isni.org/isni/0000000404178367> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(44.02488 32.61603)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(44.02488 32.61603)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Karbala" ;
             schema:addressCountry "IQ" ;
-            owl:sameAs <http://sws.geonames.org/94824/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000404178367> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q4120426> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "Karbalāʼ" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Iraq" ;
+                schema:containedInPlace [
+                    schema:name "Asia" ;
+                    schema:identifier "AS"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/94824/> ;
+    ] ; 
     .

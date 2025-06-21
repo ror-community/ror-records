@@ -15,7 +15,7 @@
     org:classification "education" ; 
     org:classification "funder" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-10-21"^^xsd:date ;
+    dct:modified "2025-04-28"^^xsd:date ;
     org:abbreviation "UNICAEN"@None ; 
     schema:url <http://unicaen.fr> ; 
     schema:mainEntityOfPage <https://www.unicaen.fr> ;
@@ -297,7 +297,13 @@
         a org:Membership ;
         org:role "related" ;
         org:member <https://ror.org/027arzy69> ;
-        rdfs:label "Centre Hospitalier Universitaire de Caen" ;
+        rdfs:label "Centre Hospitalier Universitaire de Caen Normandie" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0041cxe63> ;
+        rdfs:label "Marine Ecosystems and oRganisms reSEArch Lab" ;
     ] ; 
     schema:location [
         a schema:Place ;
@@ -305,13 +311,13 @@
         schema:address [
             schema:addressLocality "Caen" ;
             schema:addressCountry "FR" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Normandy" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "France" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

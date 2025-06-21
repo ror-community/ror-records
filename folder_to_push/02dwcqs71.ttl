@@ -1,0 +1,145 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/02dwcqs71> a org:Organization ;
+    rdfs:label "All India Institute of Medical Sciences" ;
+    schema:name "All India Institute of Medical Sciences" ;
+    schema:foundingDate "1956"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-04-28"^^xsd:date ;
+    org:alternativeName "AIIMS Delhi"@en ; 
+    schema:mainEntityOfPage <http://www.aiims.edu/en.html> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/All_India_Institute_of_Medical_Sciences_Delhi> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100007338> ;
+    schema:sameAs <https://grid.ac/institutions/grid.413618.9> ;
+    schema:sameAs <http://isni.org/isni/0000000417676103> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0560xr487> ;
+        rdfs:label "DR. B.R.A. Institute Rotary Cancer Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00pnhhv55> ;
+        rdfs:label "Jamia Millia Islamia" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/000kxhc93> ;
+        rdfs:label "All India Institute of Medical Sciences Guwahati" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/000trq935> ;
+        rdfs:label "All India Institute of Medical Sciences Bibinagar" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00t0ht588> ;
+        rdfs:label "All India Institute of Medical Sciences, Deoghar" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01hw1ck36> ;
+        rdfs:label "All India Institute of Medical Sciences, Rajkot" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01rs0zz87> ;
+        rdfs:label "All India Institute of Medical Sciences Bhopal" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01w4gn737> ;
+        rdfs:label "All India Institute of Medical Sciences, Nagpur" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/029mnbn96> ;
+        rdfs:label "All India Institute of Medical Sciences Bhubaneswar" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/04pqetg36> ;
+        rdfs:label "Ministry of Health and Family Welfare" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02ys8pq62> ;
+        rdfs:label "All India Institute of Medical Sciences Raipur" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/033dtky70> ;
+        rdfs:label "All India Institute of Medical Sciences, Kalyani" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03zqqwp43> ;
+        rdfs:label "All India Institute of Medical Sciences, Vijaypur, Jammu" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/04yve5w51> ;
+        rdfs:label "All India Institute of Medical Sciences Gorakhpur" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05qjwb041> ;
+        rdfs:label "All India Institute of Medical Sciences Rishikesh" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05e15a779> ;
+        rdfs:label "All India Institute of Medical Sciences Jodhpur" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05gcgh726> ;
+        rdfs:label "All India Institute of Medical Sciences, Mangalagiri" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(77.2148 28.62137)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "New Delhi" ;
+            schema:addressCountry "IN" ;
+            schema:addressRegion "Delhi" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "India" ;
+                schema:containedInPlace [
+                    schema:name "Asia" ;
+                    schema:identifier "AS"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1261481/> ;
+    ] ; 
+    .

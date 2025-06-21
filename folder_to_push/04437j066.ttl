@@ -4,25 +4,52 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/04437j066> a org:Organization ;
     rdfs:label "Solar System Exploration Research Virtual Institute" ;
     schema:name "Solar System Exploration Research Virtual Institute" ;
     schema:foundingDate "2008"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Other" ; 
-    org:abbreviation "SSERVI" ;
-    org:alternativeName "NASA Lunar Science Institute" ;
-    schema:url <https://sservi.nasa.gov/> ; 
+    org:classification "funder" ; 
+    org:classification "other" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-04-28"^^xsd:date ;
+    org:alternativeName "NASA Lunar Science Institute"@en ; 
+    org:abbreviation "NLSI"@None ; 
+    org:abbreviation "SSERVI"@None ; 
+    schema:mainEntityOfPage <https://sservi.nasa.gov/> ;
+    schema:sameAs <https://api.crossref.org/funders/100014537> ;
+    schema:sameAs <https://grid.ac/institutions/grid.484472.9> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/027ka1x80> ;
+        rdfs:label "National Aeronautics and Space Administration" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02y798n84> ;
+        rdfs:label "Institute for Modeling Plasma, Atmospheres and Cosmic Dust" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-121.95524 37.35411)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-121.95524 37.35411)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Santa Clara" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/5393015/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "California" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "North America" ;
+                    schema:identifier "NA"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/5393015/> ;
+    ] ; 
     .

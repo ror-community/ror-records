@@ -1,0 +1,48 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/02ys8pq62> a org:Organization ;
+    rdfs:label "All India Institute of Medical Sciences Raipur" ;
+    schema:name "All India Institute of Medical Sciences Raipur" ;
+    schema:foundingDate "2012"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-04-28"^^xsd:date ;
+    org:abbreviation "AIIMS"@None ; 
+    org:alternativeName "AIIMS, Raipur"@None ; 
+    schema:mainEntityOfPage <http://www.aiimsraipur.edu.in/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/All_India_Institute_of_Medical_Sciences,_Raipur> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.498559.c> ;
+    schema:sameAs <http://isni.org/isni/0000000446698846> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02dwcqs71> ;
+        rdfs:label "All India Institute of Medical Sciences" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(81.63333 21.23333)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Raipur" ;
+            schema:addressCountry "IN" ;
+            schema:addressRegion "Chhattisgarh" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "India" ;
+                schema:containedInPlace [
+                    schema:name "Asia" ;
+                    schema:identifier "AS"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1258980/> ;
+    ] ; 
+    .

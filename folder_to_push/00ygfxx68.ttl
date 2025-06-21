@@ -1,0 +1,41 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/00ygfxx68> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "2002"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "facility" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-04-28"^^xsd:date ;
+    org:abbreviation "TFZ"@None ; 
+    org:alternativeName "Technologie- und Förderzentrum"@de ; 
+    org:alternativeName "Technology and Support Centre"@en ; 
+    schema:mainEntityOfPage <http://www.tfz.bayern.de/en/index.php> ;
+    schema:sameAs <https://grid.ac/institutions/grid.426245.3> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(12.57385 48.88126)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Straubing" ;
+            schema:addressCountry "DE" ;
+            schema:addressRegion "Bavaria" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Germany" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2826099/> ;
+    ] ; 
+    .

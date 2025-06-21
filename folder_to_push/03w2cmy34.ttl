@@ -11,26 +11,32 @@
     rdfs:label "FernUni Schweiz" ;
     schema:name "FernUni Schweiz" ;
     schema:foundingDate "1992"^^xsd:gYear ;
-    org:status "active" ;
+    org:status "withdrawn" ;
     org:classification "education" ; 
     dct:created "2020-10-19"^^xsd:date ;
-    dct:modified "2024-10-21"^^xsd:date ;
+    dct:modified "2025-04-28"^^xsd:date ;
     schema:url <http://fernuni.ch> ; 
     schema:mainEntityOfPage <https://fernuni.ch/> ;
     schema:sameAs <https://grid.ac/institutions/grid.508727.f> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "successor" ;
+        org:member <https://ror.org/03exthx58> ;
+        rdfs:label "UniDistance Suisse" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(7.98333 46.31667)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Brig" ;
             schema:addressCountry "CH" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Valais" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "Switzerland" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

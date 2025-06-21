@@ -4,25 +4,48 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02693j602> a org:Organization ;
     rdfs:label "Institut Regional du Cancer de Montpellier" ;
     schema:name "Institut Regional du Cancer de Montpellier" ;
     schema:foundingDate "1923"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Healthcare" ; 
-    org:abbreviation "ICM" ;
-    schema:url <https://www.icm.unicancer.fr> ; 
+    org:classification "healthcare" ; 
+    dct:created "2023-02-28"^^xsd:date ;
+    dct:modified "2025-04-28"^^xsd:date ;
+    org:abbreviation "ICM"@None ; 
+    schema:mainEntityOfPage <https://www.icm.unicancer.fr> ;
+    schema:sameAs <http://isni.org/isni/0000000094528287> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/04vhgtv41> ;
+        rdfs:label "UniCancer Group" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03capj968> ;
+        rdfs:label "Institut de Recherche en Cancérologie de Montpellier" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(3.87635 43.61093)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(3.87635 43.61093)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Montpellier" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2992166/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000094528287> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q16643770> ;
+            schema:addressRegion "Occitanie" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2992166/> ;
+    ] ; 
     .

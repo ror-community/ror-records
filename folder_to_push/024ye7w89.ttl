@@ -14,7 +14,7 @@
     org:status "active" ;
     org:classification "facility" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-05-30"^^xsd:date ;
+    dct:modified "2025-04-28"^^xsd:date ;
     org:abbreviation "CNR-IMAA"@None ; 
     org:abbreviation "IMAA"@None ; 
     org:alternativeName "Institute of Methodologies for Environmental Analysis"@en ; 
@@ -28,19 +28,25 @@
         org:member <https://ror.org/04zaypm56> ;
         rdfs:label "National Research Council" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/011fna123> ;
+        rdfs:label "ACTRIS ARES Data Centre Unit" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(15.67621 40.5837)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Tito" ;
             schema:addressCountry "IT" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Basilicate" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "Italy" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

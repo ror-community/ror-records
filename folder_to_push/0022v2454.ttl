@@ -1,0 +1,47 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/0022v2454> a org:Organization ;
+    rdfs:label "Educational Department of Liaoning Province" ;
+    schema:name "Educational Department of Liaoning Province" ;
+    org:status "active" ;
+    org:classification "funder" ; 
+    org:classification "government" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-04-28"^^xsd:date ;
+    org:abbreviation "EDLP"@None ; 
+    schema:mainEntityOfPage <http://www.lnen.cn/> ;
+    schema:sameAs <https://api.crossref.org/funders/501100007620> ;
+    schema:sameAs <https://grid.ac/institutions/grid.454769.d> ;
+    schema:sameAs <http://isni.org/isni/0000000417587514> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/01zp6xd43> ;
+        rdfs:label "The People's Government of Liaoning Province" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(123.43278 41.79222)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Shenyang" ;
+            schema:addressCountry "CN" ;
+            schema:addressRegion "Liaoning" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "China" ;
+                schema:containedInPlace [
+                    schema:name "Asia" ;
+                    schema:identifier "AS"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2034937/> ;
+    ] ; 
+    .

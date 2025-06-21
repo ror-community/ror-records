@@ -14,7 +14,7 @@
     org:status "active" ;
     org:classification "education" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-12-10"^^xsd:date ;
+    dct:modified "2025-04-28"^^xsd:date ;
     org:abbreviation "IPL"@None ; 
     schema:url <http://ipleiria.pt> ; 
     schema:mainEntityOfPage <https://www.ipleiria.pt> ;
@@ -29,15 +29,21 @@
     ] ; 
     org:hasLink [
         a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03vsh1a40> ;
+        rdfs:label "Centro de Inovação em Tecnologias e Cuidados de Saúde" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
         org:role "related" ;
         org:member <https://ror.org/02ht4fk33> ;
         rdfs:label "Instituto de Telecomunicações" ;
     ] ; 
     org:hasLink [
         a org:Membership ;
-        org:role "child" ;
-        org:member <https://ror.org/03vsh1a40> ;
-        rdfs:label "Centro de Inovação em Tecnologias e Cuidados de Saúde" ;
+        org:role "related" ;
+        org:member <https://ror.org/009nk6b02> ;
+        rdfs:label "Portuguese Additive Manufacturing Initiative" ;
     ] ; 
     schema:location [
         a schema:Place ;
@@ -45,13 +51,13 @@
         schema:address [
             schema:addressLocality "Leiria" ;
             schema:addressCountry "PT" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Leiria" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "Portugal" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

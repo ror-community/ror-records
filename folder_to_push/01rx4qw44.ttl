@@ -14,25 +14,31 @@
     org:status "active" ;
     org:classification "facility" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-11-19"^^xsd:date ;
+    dct:modified "2025-04-28"^^xsd:date ;
     org:abbreviation "IRIT"@None ; 
     schema:url <http://irit.fr> ; 
     schema:mainEntityOfPage <https://www.irit.fr> ;
     schema:sameAs <https://grid.ac/institutions/grid.454304.2> ;
     schema:sameAs <http://isni.org/isni/0000000121927225> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/033p9g875> ;
+        rdfs:label "Institut National Polytechnique de Toulouse" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(1.44367 43.60426)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Toulouse" ;
             schema:addressCountry "FR" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Occitanie" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "France" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

@@ -1,0 +1,88 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/041gev667> a org:Organization ;
+    rdfs:label "PricewaterhouseCoopers (United Kingdom)" ;
+    schema:name "PricewaterhouseCoopers (United Kingdom)" ;
+    schema:foundingDate "1998"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "company" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-04-28"^^xsd:date ;
+    org:abbreviation "PwC"@None ; 
+    schema:mainEntityOfPage <https://www.pwc.co.uk> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/PricewaterhouseCoopers> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.499478.f> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00m2wsh37> ;
+        rdfs:label "PricewaterhouseCoopers (Canada)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05dv2tx94> ;
+        rdfs:label "PricewaterhouseCoopers (France)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/031601h81> ;
+        rdfs:label "PricewaterhouseCoopers (Netherlands)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/007sqfz40> ;
+        rdfs:label "PricewaterhouseCoopers (Norway)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01mbh6s37> ;
+        rdfs:label "PricewaterhouseCoopers (South Korea)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/019naky64> ;
+        rdfs:label "PricewaterhouseCoopers (Sweden)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03g75kz98> ;
+        rdfs:label "PricewaterhouseCoopers (United States)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04csh5253> ;
+        rdfs:label "PricewaterhouseCoopers (Portugal)" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-0.12574 51.50853)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "London" ;
+            schema:addressCountry "GB" ;
+            schema:addressRegion "England" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United Kingdom" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2643743/> ;
+    ] ; 
+    .

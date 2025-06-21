@@ -15,7 +15,7 @@
     org:classification "facility" ; 
     org:classification "funder" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-10-21"^^xsd:date ;
+    dct:modified "2025-04-28"^^xsd:date ;
     org:abbreviation "LNEC"@None ; 
     schema:url <http://lnec.pt> ; 
     schema:mainEntityOfPage <https://lnec.pt> ;
@@ -23,19 +23,25 @@
     schema:sameAs <https://api.crossref.org/funders/501100020033> ;
     schema:sameAs <https://grid.ac/institutions/grid.16326.30> ;
     schema:sameAs <http://isni.org/isni/0000000403921227> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02qdtzh46> ;
+        rdfs:label "Centro de Instrumentação Científica" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(-9.13333 38.71667)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Lisbon" ;
             schema:addressCountry "PT" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Lisbon" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "Portugal" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

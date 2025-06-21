@@ -1,0 +1,102 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/0435rc536> a org:Organization ;
+    rdfs:label "Novo Nordisk (Denmark)" ;
+    schema:name "Novo Nordisk (Denmark)" ;
+    schema:foundingDate "1923"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "company" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-04-28"^^xsd:date ;
+    schema:mainEntityOfPage <http://www.novonordisk.com/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Novo_Nordisk> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100004191> ;
+    schema:sameAs <https://grid.ac/institutions/grid.425956.9> ;
+    schema:sameAs <http://isni.org/isni/0000000403912646> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0144enb05> ;
+        rdfs:label "Novo Nordisk (Finland)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03nyzw632> ;
+        rdfs:label "Novo Nordisk (Germany)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05dw07152> ;
+        rdfs:label "Novo Nordisk (India)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/040s9t622> ;
+        rdfs:label "Novo Nordisk (Italy)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03w48ac58> ;
+        rdfs:label "Novo Nordisk (Mexico)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01p1t0k52> ;
+        rdfs:label "Novo Nordisk (Switzerland)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0415cr103> ;
+        rdfs:label "Novo Nordisk (United Kingdom)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/011y67d23> ;
+        rdfs:label "Novo Nordisk (United States)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/04sfxgz72> ;
+        rdfs:label "Novo Holdings (Denmark)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03en16648> ;
+        rdfs:label "Novo Nordisk (Portugal)" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(12.56553 55.67594)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Copenhagen" ;
+            schema:addressCountry "DK" ;
+            schema:addressRegion "Capital Region" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Denmark" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2618425/> ;
+    ] ; 
+    .

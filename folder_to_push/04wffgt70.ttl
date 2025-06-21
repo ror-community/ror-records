@@ -4,28 +4,48 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/04wffgt70> a org:Organization ;
     rdfs:label "Universidade Estadual de Campinas (UNICAMP)" ;
     schema:name "Universidade Estadual de Campinas (UNICAMP)" ;
     schema:foundingDate "1966"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "UNICAMP" ;
-    org:alternativeName "University of Campinas" ;
-    schema:url <https://www.unicamp.br> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/State_University_of_Campinas> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-04-28"^^xsd:date ;
+    org:abbreviation "UNICAMP"@None ; 
+    org:alternativeName "Universidade Estadual de Campinas"@pt ; 
+    org:alternativeName "University of Campinas"@en ; 
+    schema:mainEntityOfPage <https://www.unicamp.br> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/State_University_of_Campinas> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100006416> ;
+    schema:sameAs <https://grid.ac/institutions/grid.411087.b> ;
+    schema:sameAs <http://isni.org/isni/0000000107232494> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01c730s93> ;
+        rdfs:label "Universidade Virtual do Estado de São Paulo" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-47.06083 -22.90556)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-47.06083 -22.90556)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Campinas" ;
             schema:addressCountry "BR" ;
-            owl:sameAs <http://sws.geonames.org/3467865/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000107232494> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q2060678> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "São Paulo" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Brazil" ;
+                schema:containedInPlace [
+                    schema:name "South America" ;
+                    schema:identifier "SA"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3467865/> ;
+    ] ; 
     .

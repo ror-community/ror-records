@@ -15,7 +15,7 @@
     org:classification "funder" ; 
     org:classification "healthcare" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-07-11"^^xsd:date ;
+    dct:modified "2025-04-28"^^xsd:date ;
     org:abbreviation "CHRU MTP"@None ; 
     schema:mainEntityOfPage <http://www.chu-montpellier.fr/> ;
     schema:sameAs <https://api.crossref.org/funders/501100005261> ;
@@ -41,21 +41,21 @@
     ] ; 
     org:hasLink [
         a org:Membership ;
-        org:role "child" ;
+        org:role "related" ;
+        org:member <https://ror.org/051escj72> ;
+        rdfs:label "Université de Montpellier" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
         org:member <https://ror.org/00b8mh310> ;
         rdfs:label "Institute for Regenerative Medicine & Biotherapy" ;
     ] ; 
     org:hasLink [
         a org:Membership ;
-        org:role "child" ;
+        org:role "related" ;
         org:member <https://ror.org/003sscq03> ;
         rdfs:label "Physiologie et Médecine Expérimentale du Coeur et des Muscles" ;
-    ] ; 
-    org:hasLink [
-        a org:Membership ;
-        org:role "related" ;
-        org:member <https://ror.org/051escj72> ;
-        rdfs:label "Université de Montpellier" ;
     ] ; 
     schema:location [
         a schema:Place ;
@@ -63,13 +63,13 @@
         schema:address [
             schema:addressLocality "Montpellier" ;
             schema:addressCountry "FR" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Occitanie" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "France" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

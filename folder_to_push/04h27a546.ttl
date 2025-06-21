@@ -1,0 +1,38 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/04h27a546> a org:Organization ;
+    rdfs:label "Lightning Packs (United States)" ;
+    schema:name "Lightning Packs (United States)" ;
+    schema:foundingDate "2004"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "company" ; 
+    dct:created "2019-05-06"^^xsd:date ;
+    dct:modified "2024-12-11"^^xsd:date ;
+    schema:mainEntityOfPage <http://www.lightningpacks.com> ;
+    schema:sameAs <https://grid.ac/institutions/grid.504765.5> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-75.38769 40.044)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Wayne" ;
+            schema:addressCountry "US" ;
+            schema:addressRegion "Pennsylvania" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "North America" ;
+                    schema:identifier "NA"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/5218270/> ;
+    ] ; 
+    .

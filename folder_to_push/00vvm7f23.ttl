@@ -4,28 +4,43 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/00vvm7f23> a org:Organization ;
     rdfs:label "Universidade Norte do Paraná" ;
     schema:name "Universidade Norte do Paraná" ;
     schema:foundingDate "1972"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "UNOPAR" ;
-    org:alternativeName "Norte do Paraná University" ;
-    schema:url <http://www.unopar.br/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Universidade_Norte_do_Paran%C3%A1> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-04-28"^^xsd:date ;
+    org:alternativeName "Norte do Paraná University"@pt ; 
+    org:abbreviation "UNOPAR"@None ; 
+    org:alternativeName "University of Northern Parana"@en ; 
+    schema:url <http://unopar.com.br> ; 
+    schema:mainEntityOfPage <https://www.unopar.com.br> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Universidade_Norte_do_Paran%C3%A1> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100013925> ;
+    schema:sameAs <https://grid.ac/institutions/grid.441851.d> ;
+    schema:sameAs <http://isni.org/isni/0000000406351143> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-51.16278 -23.31028)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-51.16278 -23.31028)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Londrina" ;
             schema:addressCountry "BR" ;
-            owl:sameAs <http://sws.geonames.org/3458449/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000406351143> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q7894388> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "Paraná" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Brazil" ;
+                schema:containedInPlace [
+                    schema:name "South America" ;
+                    schema:identifier "SA"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3458449/> ;
+    ] ; 
     .

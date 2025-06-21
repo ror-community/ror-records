@@ -4,26 +4,49 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/05e15a779> a org:Organization ;
     rdfs:label "All India Institute of Medical Sciences Jodhpur" ;
     schema:name "All India Institute of Medical Sciences Jodhpur" ;
     schema:foundingDate "2012"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    schema:url <http://www.aiimsjodhpur.edu.in/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/All_India_Institute_of_Medical_Sciences_Jodhpur> ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-04-28"^^xsd:date ;
+    schema:mainEntityOfPage <http://www.aiimsjodhpur.edu.in/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/All_India_Institute_of_Medical_Sciences_Jodhpur> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.463267.2> ;
+    schema:sameAs <http://isni.org/isni/0000000446811140> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/04pqetg36> ;
+        rdfs:label "Ministry of Health and Family Welfare" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02dwcqs71> ;
+        rdfs:label "All India Institute of Medical Sciences" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(73.00594 26.26841)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(73.00594 26.26841)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Jodhpur" ;
             schema:addressCountry "IN" ;
-            owl:sameAs <http://sws.geonames.org/1268865/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000446811140> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q15177602> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "Rajasthan" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "India" ;
+                schema:containedInPlace [
+                    schema:name "Asia" ;
+                    schema:identifier "AS"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1268865/> ;
+    ] ; 
     .

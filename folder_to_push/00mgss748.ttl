@@ -1,0 +1,85 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/00mgss748> a org:Organization ;
+    rdfs:label "3M (United States)" ;
+    schema:name "3M (United States)" ;
+    schema:foundingDate "1902"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "company" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-04-28"^^xsd:date ;
+    org:alternativeName "Minnesota Mining and Manufacturing"@None ; 
+    schema:mainEntityOfPage <https://www.3m.com/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/3M> ; 
+    schema:sameAs <https://api.crossref.org/funders/100004343> ;
+    schema:sameAs <https://grid.ac/institutions/grid.417536.2> ;
+    schema:sameAs <http://isni.org/isni/0000000106956319> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03g1nep17> ;
+        rdfs:label "3M (Canada)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02f12sz84> ;
+        rdfs:label "3M (France)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/047cnmy82> ;
+        rdfs:label "3M (Germany)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0536ew874> ;
+        rdfs:label "3M (Israel)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02gdsvx03> ;
+        rdfs:label "3M (United Kingdom)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00wc6ay63> ;
+        rdfs:label "KCI (United States)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02mqz7148> ;
+        rdfs:label "3M (Portugal)" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-93.09327 44.94441)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Saint Paul" ;
+            schema:addressCountry "US" ;
+            schema:addressRegion "Minnesota" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "North America" ;
+                    schema:identifier "NA"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/5045360/> ;
+    ] ; 
+    .

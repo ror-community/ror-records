@@ -4,25 +4,69 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/056a6x975> a org:Organization ;
     rdfs:label "Ministry of Infrastructure and the Environment" ;
     schema:name "Ministry of Infrastructure and the Environment" ;
     schema:foundingDate "2010"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Government" ; 
-    org:alternativeName "IenM" ;
-    schema:url <https://www.government.nl/ministries/ministry-of-infrastructure-and-water-management> ; 
+    org:classification "funder" ; 
+    org:classification "government" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-04-28"^^xsd:date ;
+    org:alternativeName "IenM"@nl ; 
+    org:alternativeName "Ministry of Infrastructure and Water Management"@en ; 
+    schema:mainEntityOfPage <https://www.government.nl/ministries/ministry-of-infrastructure-and-water-management> ;
+    schema:sameAs <https://api.crossref.org/funders/501100007196> ;
+    schema:sameAs <https://grid.ac/institutions/grid.425715.0> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/052x1hs80> ;
+        rdfs:label "Netherlands Environmental Assessment Agency" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05dfgh554> ;
+        rdfs:label "Royal Netherlands Meteorological Institute" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0355ahf06> ;
+        rdfs:label "Rijkswaterstaat" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/045vgz384> ;
+        rdfs:label "Government of Netherlands" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/038fyf011> ;
+        rdfs:label "Kennisinstituut voor Mobiliteitsbeleid" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(4.29861 52.07667)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(4.29861 52.07667)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "The Hague" ;
             schema:addressCountry "NL" ;
-            owl:sameAs <http://sws.geonames.org/2747373/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://www.wikidata.org/entity/Q2188136> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "South Holland" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "The Netherlands" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2747373/> ;
+    ] ; 
     .

@@ -14,26 +14,50 @@
     org:status "active" ;
     org:classification "education" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-11-19"^^xsd:date ;
+    dct:modified "2025-04-28"^^xsd:date ;
     org:abbreviation "UAL"@None ; 
     schema:url <http://autonoma.pt> ; 
     schema:mainEntityOfPage <https://autonoma.pt> ;
     owl:sameAs <http://en.wikipedia.org/wiki/Universidade_Aut%C3%B3noma_de_Lisboa> ; 
     schema:sameAs <https://grid.ac/institutions/grid.410916.b> ;
     schema:sameAs <http://isni.org/isni/0000000122883105> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00xtxt091> ;
+        rdfs:label "Centro de Estudos de Arquitetura Cidade e Território" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05sd8gr95> ;
+        rdfs:label "Centro de Investigação e Desenvolvimento em Ciências Jurídicas Ratio Legis" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05s5t4n42> ;
+        rdfs:label "Centro de Investigação em Ciências Históricas" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0466t8w27> ;
+        rdfs:label "echLab Centro de Investigação em Tecnologias" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(-9.13333 38.71667)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Lisbon" ;
             schema:addressCountry "PT" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Lisbon" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "Portugal" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

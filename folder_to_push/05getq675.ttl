@@ -1,0 +1,58 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/05getq675> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "2018"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "nonprofit" ; 
+    dct:created "2025-04-25"^^xsd:date ;
+    dct:modified "2025-04-28"^^xsd:date ;
+    org:abbreviation "CEiBa"@en ; 
+    org:alternativeName "Center for Studies in Ethnobiology, Biodiversity, and Sustainability"@en ; 
+    schema:url <http://ceibatrust.org> ; 
+    schema:mainEntityOfPage <https://ceibatrust.org> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(88.14573 25.00447)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Malda" ;
+            schema:addressCountry "IN" ;
+            schema:addressRegion "West Bengal" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "India" ;
+                schema:containedInPlace [
+                    schema:name "Asia" ;
+                    schema:identifier "AS"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1269723/> ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(88.36304 22.56263)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Kolkata" ;
+            schema:addressCountry "IN" ;
+            schema:addressRegion "West Bengal" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "India" ;
+                schema:containedInPlace [
+                    schema:name "Asia" ;
+                    schema:identifier "AS"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1275004/> ;
+    ] ; 
+    .

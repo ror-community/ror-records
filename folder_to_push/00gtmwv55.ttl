@@ -4,27 +4,130 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/00gtmwv55> a org:Organization ;
     rdfs:label "Bristol-Myers Squibb (United States)" ;
     schema:name "Bristol-Myers Squibb (United States)" ;
     schema:foundingDate "1887"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Company" ; 
-    org:abbreviation "BMS" ;
-    schema:url <https://www.bms.com/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Bristol-Myers_Squibb> ;
+    org:classification "company" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-04-28"^^xsd:date ;
+    org:abbreviation "BMS"@None ; 
+    schema:mainEntityOfPage <https://www.bms.com/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Bristol-Myers_Squibb> ; 
+    schema:sameAs <https://api.crossref.org/funders/100002491> ;
+    schema:sameAs <https://grid.ac/institutions/grid.419971.3> ;
+    schema:sameAs <http://isni.org/isni/0000000403748313> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03c09ma81> ;
+        rdfs:label "Bristol-Myers Squibb (Belgium)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01r00g076> ;
+        rdfs:label "Bristol-Myers Squibb (Canada)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/013b57229> ;
+        rdfs:label "Bristol-Myers Squibb (France)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/032hfv632> ;
+        rdfs:label "Bristol-Myers Squibb (Germany)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03zmqr331> ;
+        rdfs:label "Bristol-Myers Squibb (India)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01h0vdv12> ;
+        rdfs:label "Bristol-Myers Squibb (Ireland)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0433f0x41> ;
+        rdfs:label "Bristol-Myers Squibb (Italy)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04dbmrm19> ;
+        rdfs:label "Bristol-Myers Squibb (Japan)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00354aw77> ;
+        rdfs:label "Bristol-Myers Squibb (Netherlands)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05hzjar70> ;
+        rdfs:label "Bristol-Myers Squibb (South Korea)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/035hx4w46> ;
+        rdfs:label "Bristol-Myers Squibb (Sweden)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02xqc6638> ;
+        rdfs:label "Bristol-Myers Squibb (Switzerland)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03emf1n04> ;
+        rdfs:label "Bristol-Myers Squibb (United Kingdom)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03efe6r86> ;
+        rdfs:label "MyoKardia (United States)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0223rpe14> ;
+        rdfs:label "Bristol-Myers Squibb (Portugal)" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-74.00597 40.71427)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-74.00597 40.71427)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "New York" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/5128581/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000403748313> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q266423> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "New York" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "North America" ;
+                    schema:identifier "NA"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/5128581/> ;
+    ] ; 
     .

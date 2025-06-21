@@ -1,0 +1,41 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/00z1f6y87> a org:Organization ;
+    rdfs:label "Seribiotechnology Research Laboratory" ;
+    schema:name "Seribiotechnology Research Laboratory" ;
+    schema:foundingDate "1993"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "facility" ; 
+    dct:created "2019-05-06"^^xsd:date ;
+    dct:modified "2025-04-28"^^xsd:date ;
+    org:abbreviation "SBRL"@None ; 
+    org:alternativeName "SeriBiotech Research Laboratory"@en ; 
+    schema:mainEntityOfPage <http://www.sbrl.res.in/> ;
+    schema:sameAs <https://grid.ac/institutions/grid.506055.3> ;
+    schema:sameAs <http://isni.org/isni/0000000417640266> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(77.59369 12.97194)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Bengaluru" ;
+            schema:addressCountry "IN" ;
+            schema:addressRegion "Karnataka" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "India" ;
+                schema:containedInPlace [
+                    schema:name "Asia" ;
+                    schema:identifier "AS"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1277333/> ;
+    ] ; 
+    .

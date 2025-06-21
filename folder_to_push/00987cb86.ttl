@@ -4,36 +4,53 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/00987cb86> a org:Organization ;
     rdfs:label "Universidade Estadual Paulista (Unesp)" ;
     schema:name "Universidade Estadual Paulista (Unesp)" ;
     schema:foundingDate "1976"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "UNESP" ;
-    org:alternativeName "Universidade Estadual Paulista" ;
-    schema:url <https://www2.unesp.br> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/S%C3%A3o_Paulo_State_University> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-04-28"^^xsd:date ;
+    org:abbreviation "UNESP"@None ; 
+    org:alternativeName "Universidade Estadual Paulista"@pt ; 
+    schema:mainEntityOfPage <https://www2.unesp.br> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/S%C3%A3o_Paulo_State_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100009568> ;
+    schema:sameAs <https://grid.ac/institutions/grid.410543.7> ;
+    schema:sameAs <http://isni.org/isni/000000012188478X> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/022b8mr96> ;
+        rdfs:label "Fundação para o Desenvolvimento da UNESP" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01c730s93> ;
+        rdfs:label "Universidade Virtual do Estado de São Paulo" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-46.63611 -23.5475)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-46.63611 -23.5475)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "São Paulo" ;
             schema:addressCountry "BR" ;
-            owl:sameAs <http://sws.geonames.org/3448439/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/000000012188478X> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1817137> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q10387793> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q18467813> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q10387797> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q10302852> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q10387788> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q10387791> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q39487333> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q10387795> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "São Paulo" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Brazil" ;
+                schema:containedInPlace [
+                    schema:name "South America" ;
+                    schema:identifier "SA"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3448439/> ;
+    ] ; 
     .

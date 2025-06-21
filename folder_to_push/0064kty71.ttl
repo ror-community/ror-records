@@ -15,7 +15,7 @@
     org:classification "education" ; 
     org:classification "funder" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-10-21"^^xsd:date ;
+    dct:modified "2025-04-28"^^xsd:date ;
     schema:url <http://sysu.edu.cn> ; 
     schema:mainEntityOfPage <https://www.sysu.edu.cn> ;
     owl:sameAs <http://en.wikipedia.org/wiki/Sun_Yat-sen_University> ; 
@@ -130,19 +130,25 @@
         org:member <https://ror.org/00xjwyj62> ;
         rdfs:label "Eighth Affiliated Hospital of Sun Yat-sen University" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/042999n30> ;
+        rdfs:label "National Supercomputer Center in Guangzhou" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(113.25 23.11667)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Guangzhou" ;
             schema:addressCountry "CN" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Guangdong" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "China" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Asia" ;
+                    schema:identifier "AS"
                 ]
             ]
         ] ;

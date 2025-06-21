@@ -14,7 +14,7 @@
     org:status "active" ;
     org:classification "education" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-07-29"^^xsd:date ;
+    dct:modified "2025-04-28"^^xsd:date ;
     org:alternativeName "Universidade Lusíada de Lisboa"@pt ; 
     schema:mainEntityOfPage <http://www.lis.ulusiada.pt/en-gb/home.aspx> ;
     owl:sameAs <http://en.wikipedia.org/wiki/Lus%C3%ADada_University> ; 
@@ -26,19 +26,25 @@
         org:member <https://ror.org/056g0b798> ;
         rdfs:label "Fundação Minerva - Cultura - Ensino e Investigação Científica" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/022hk8s78> ;
+        rdfs:label "Centro de Investigação em Serviço Social e Intervenção Social" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(-9.13333 38.71667)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Lisbon" ;
             schema:addressCountry "PT" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Lisbon" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "Portugal" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

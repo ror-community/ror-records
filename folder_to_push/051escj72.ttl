@@ -15,7 +15,7 @@
     org:classification "education" ; 
     org:classification "funder" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-10-31"^^xsd:date ;
+    dct:modified "2025-04-28"^^xsd:date ;
     schema:url <http://umontpellier.fr> ; 
     schema:mainEntityOfPage <https://umontpellier.fr> ;
     owl:sameAs <https://en.wikipedia.org/wiki/University_of_Montpellier> ; 
@@ -492,6 +492,12 @@
     ] ; 
     org:hasLink [
         a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03gbgw380> ;
+        rdfs:label "Institut de Science des Données de Montpellier" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
         org:role "predecessor" ;
         org:member <https://ror.org/0227fbx80> ;
         rdfs:label "Université Montpellier 1" ;
@@ -540,15 +546,33 @@
     ] ; 
     org:hasLink [
         a org:Membership ;
-        org:role "child" ;
-        org:member <https://ror.org/03gbgw380> ;
-        rdfs:label "Institut de Science des Données de Montpellier" ;
-    ] ; 
-    org:hasLink [
-        a org:Membership ;
         org:role "related" ;
         org:member <https://ror.org/01x6z5t49> ;
         rdfs:label "Fédération de Recherche Spectroscopies de Photoémission" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02fpe6x37> ;
+        rdfs:label "Plateforme d'Analyses et de Caractérisations Chimie Balard" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03vba6259> ;
+        rdfs:label "Centre Spatial de l'Université de Montpellier" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/020g0rw41> ;
+        rdfs:label "Gestion de l'Eau, Acteurs, Usages" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05ye29x39> ;
+        rdfs:label "Interactions hotes-vecteurs-parasites-environnement dans les maladies tropicales négligées dues aux trypanosomatides" ;
     ] ; 
     schema:location [
         a schema:Place ;
@@ -556,13 +580,13 @@
         schema:address [
             schema:addressLocality "Montpellier" ;
             schema:addressCountry "FR" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Occitanie" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "France" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

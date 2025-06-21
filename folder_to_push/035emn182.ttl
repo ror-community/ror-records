@@ -14,7 +14,7 @@
     org:status "active" ;
     org:classification "facility" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-11-19"^^xsd:date ;
+    dct:modified "2025-04-28"^^xsd:date ;
     org:abbreviation "LCA"@None ; 
     schema:mainEntityOfPage <http://www6.toulouse.inra.fr/lca> ;
     schema:sameAs <https://grid.ac/institutions/grid.463911.8> ;
@@ -30,19 +30,25 @@
         org:member <https://ror.org/003vg9w96> ;
         rdfs:label "Institut National de Recherche pour l'Agriculture, l'Alimentation et l'Environnement" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/033p9g875> ;
+        rdfs:label "Institut National Polytechnique de Toulouse" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(1.44367 43.60426)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Toulouse" ;
             schema:addressCountry "FR" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Occitanie" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "France" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

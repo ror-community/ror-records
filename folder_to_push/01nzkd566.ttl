@@ -4,24 +4,47 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01nzkd566> a org:Organization ;
     rdfs:label "Centro de Neurociências e Biologia Celular" ;
     schema:name "Centro de Neurociências e Biologia Celular" ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "CNC-UC" ;
-    schema:url <http://www.cnbc.pt> ; 
-    owl:sameAs <https://pt.wikipedia.org/wiki/Centro_de_Neuroci%C3%AAncias_e_Biologia_Celular> ;
+    org:classification "facility" ; 
+    dct:created "2024-03-28"^^xsd:date ;
+    dct:modified "2025-04-28"^^xsd:date ;
+    org:abbreviation "CNC-UC"@None ; 
+    schema:mainEntityOfPage <http://www.cnbc.pt> ;
+    owl:sameAs <https://pt.wikipedia.org/wiki/Centro_de_Neuroci%C3%AAncias_e_Biologia_Celular> ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/04z8k9a98> ;
+        rdfs:label "University of Coimbra" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/009nk6b02> ;
+        rdfs:label "Portuguese Additive Manufacturing Initiative" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-8.41955 40.20564)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-8.41955 40.20564)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Coimbra" ;
             schema:addressCountry "PT" ;
-            owl:sameAs <http://sws.geonames.org/2740637/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://www.wikidata.org/entity/Q5062526> ;
+            schema:addressRegion "Coimbra" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Portugal" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2740637/> ;
+    ] ; 
     .

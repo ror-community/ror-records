@@ -4,26 +4,60 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/030bbe882> a org:Organization ;
-    rdfs:label "Universidad de la República" ;
-    schema:name "Universidad de la República" ;
+    rdfs:label "" ;
+    schema:name "" ;
     schema:foundingDate "1849"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    schema:url <https://udelar.edu.uy> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/University_of_the_Republic_(Uruguay)> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-04-28"^^xsd:date ;
+    org:alternativeName "Universidad de la República"@es ; 
+    org:alternativeName "University of the Republic"@en ; 
+    schema:url <http://udelar.edu.uy> ; 
+    schema:mainEntityOfPage <https://udelar.edu.uy> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_the_Republic_(Uruguay)> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100006048> ;
+    schema:sameAs <https://grid.ac/institutions/grid.11630.35> ;
+    schema:sameAs <http://isni.org/isni/0000000121657640> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00jkr8r49> ;
+        rdfs:label "Programa de Desarrollo de las Ciencias Básicas" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/04jdthe46> ;
+        rdfs:label "Hospital de Clínicas" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03b3ph316> ;
+        rdfs:label "FundaQuim" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-56.18816 -34.90328)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-56.18816 -34.90328)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Montevideo" ;
             schema:addressCountry "UY" ;
-            owl:sameAs <http://sws.geonames.org/3441575/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000121657640> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1856423> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "Montevideo Department" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Uruguay" ;
+                schema:containedInPlace [
+                    schema:name "South America" ;
+                    schema:identifier "SA"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3441575/> ;
+    ] ; 
     .

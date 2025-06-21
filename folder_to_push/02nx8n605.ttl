@@ -4,25 +4,91 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02nx8n605> a org:Organization ;
     rdfs:label "TU9" ;
     schema:name "TU9" ;
     schema:foundingDate "2006"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Other" ; 
-    org:alternativeName "TU9 - Allianz" ;
-    schema:url <https://www.tu9.de> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/TU9> ;
+    org:classification "other" ; 
+    dct:created "2023-05-11"^^xsd:date ;
+    dct:modified "2025-04-28"^^xsd:date ;
+    org:alternativeName "TU9 - Allianz"@de ; 
+    org:alternativeName "TU9 - German Institutes of Technology"@en ; 
+    schema:mainEntityOfPage <https://www.tu9.de> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/TU9> ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/04xfq0f34> ;
+        rdfs:label "RWTH Aachen University" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03v4gjf40> ;
+        rdfs:label "Technische Universität Berlin" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/010nsgg66> ;
+        rdfs:label "Technische Universität Braunschweig" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05n911h24> ;
+        rdfs:label "Technical University of Darmstadt" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/042aqky30> ;
+        rdfs:label "Technische Universität Dresden" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/0304hq317> ;
+        rdfs:label "Leibniz University Hannover" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/04t3en479> ;
+        rdfs:label "Karlsruhe Institute of Technology" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02kkvpp62> ;
+        rdfs:label "Technical University of Munich" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/04vnq7t77> ;
+        rdfs:label "University of Stuttgart" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(13.41053 52.52437)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(13.41053 52.52437)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Berlin" ;
             schema:addressCountry "DE" ;
-            owl:sameAs <http://sws.geonames.org/2950159/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://www.wikidata.org/entity/Q655015> ;
+            schema:addressRegion "State of Berlin" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Germany" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2950159/> ;
+    ] ; 
     .

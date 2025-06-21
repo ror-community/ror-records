@@ -1,0 +1,49 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/04q88r129> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "1945"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "facility" ; 
+    dct:created "2025-04-25"^^xsd:date ;
+    dct:modified "2025-04-28"^^xsd:date ;
+    org:abbreviation "IGEF"@es ; 
+    org:abbreviation "IGF"@es ; 
+    org:alternativeName "Inst. Geof."@es ; 
+    org:alternativeName "Institute of Geophysics UNAM"@en ; 
+    schema:url <http://geofisica.unam.mx> ; 
+    schema:mainEntityOfPage <https://www.geofisica.unam.mx> ;
+    schema:sameAs <http://isni.org/isni/0000000122970444> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/01tmp8f25> ;
+        rdfs:label "Universidad Nacional Autónoma de México" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-99.18495 19.32312)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Ciudad Universitaria" ;
+            schema:addressCountry "MX" ;
+            schema:addressRegion "Mexico City" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Mexico" ;
+                schema:containedInPlace [
+                    schema:name "North America" ;
+                    schema:identifier "NA"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3530583/> ;
+    ] ; 
+    .

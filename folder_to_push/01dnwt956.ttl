@@ -4,24 +4,57 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01dnwt956> a org:Organization ;
     rdfs:label "Naval Research Laboratory Tactical Electronic Warfare Division" ;
     schema:name "Naval Research Laboratory Tactical Electronic Warfare Division" ;
     org:status "active" ;
-    org:classification "Government" ; 
-    org:classification "Facility" ; 
-    org:abbreviation "TEWD" ;
-    org:alternativeName "Offboard Countermeasures Branch" ;
-    schema:url <https://www.nrl.navy.mil/tewd/> ; 
+    org:classification "facility" ; 
+    org:classification "government" ; 
+    dct:created "2023-11-08"^^xsd:date ;
+    dct:modified "2024-12-11"^^xsd:date ;
+    org:alternativeName "Advanced Techniques Branch"@en ; 
+    org:alternativeName "Aerospace Electronic Warfare Systems Branch"@en ; 
+    org:alternativeName "Electronic Warfare Modeling and Simulation Branch"@en ; 
+    org:alternativeName "Electronic Warfare Support Measures Branch"@en ; 
+    org:alternativeName "Integrated Electronic Warfare Simulation Branch"@en ; 
+    org:abbreviation "NRL TEWD"@None ; 
+    org:alternativeName "NRL Tactical Electronic Warfare Division"@en ; 
+    org:alternativeName "Naval Research Laboratory Advanced Techniques Branch"@en ; 
+    org:alternativeName "Naval Research Laboratory Aerospace Electronic Warfare Systems Branch"@en ; 
+    org:alternativeName "Naval Research Laboratory Electronic Warfare Modeling and Simulation Branch"@en ; 
+    org:alternativeName "Naval Research Laboratory Electronic Warfare Support Measures Branch"@en ; 
+    org:alternativeName "Naval Research Laboratory Integrated Electronic Warfare Simulation Branch"@en ; 
+    org:alternativeName "Naval Research Laboratory Offboard Countermeasures Branch"@en ; 
+    org:alternativeName "Naval Research Laboratory Surface Electronic Warfare Systems Branch"@en ; 
+    org:alternativeName "Offboard Countermeasures Branch"@en ; 
+    org:alternativeName "Surface Electronic Warfare Systems Branch"@en ; 
+    org:abbreviation "TEWD"@None ; 
+    schema:mainEntityOfPage <https://www.nrl.navy.mil/tewd/> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/04d23a975> ;
+        rdfs:label "United States Naval Research Laboratory" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-77.03637 38.89511)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-77.03637 38.89511)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Washington" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/4140963/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
+            schema:addressRegion "District of Columbia" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "North America" ;
+                    schema:identifier "NA"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/4140963/> ;
+    ] ; 
     .

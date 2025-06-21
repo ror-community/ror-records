@@ -4,25 +4,42 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/04jdthe46> a org:Organization ;
     rdfs:label "Hospital de Clínicas" ;
     schema:name "Hospital de Clínicas" ;
     schema:foundingDate "1953"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Healthcare" ; 
-    schema:url <http://www.hc.edu.uy/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Hospital_de_Cl%C3%ADnicas_%22Dr._Manuel_Quintela%22> ;
+    org:classification "healthcare" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-04-28"^^xsd:date ;
+    schema:mainEntityOfPage <http://www.hc.edu.uy/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Hospital_de_Cl%C3%ADnicas_%22Dr._Manuel_Quintela%22> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.414446.7> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/030bbe882> ;
+        rdfs:label "Universidad de la República de Uruguay" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-56.18816 -34.90328)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-56.18816 -34.90328)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Montevideo" ;
             schema:addressCountry "UY" ;
-            owl:sameAs <http://sws.geonames.org/3441575/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://www.wikidata.org/entity/Q3014645> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "Montevideo Department" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Uruguay" ;
+                schema:containedInPlace [
+                    schema:name "South America" ;
+                    schema:identifier "SA"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3441575/> ;
+    ] ; 
     .

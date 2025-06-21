@@ -15,7 +15,7 @@
     org:classification "education" ; 
     org:classification "funder" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-10-21"^^xsd:date ;
+    dct:modified "2025-04-28"^^xsd:date ;
     org:abbreviation "WUR"@None ; 
     org:alternativeName "Wageningen Universiteit en Researchcentrum"@nl ; 
     org:alternativeName "Wageningen University and Research Centre"@en ; 
@@ -31,19 +31,25 @@
         org:member <https://ror.org/03rsncr94> ;
         rdfs:label "4TU" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/013dzwk66> ;
+        rdfs:label "Wageningen Marine Research" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(5.66667 51.97)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Wageningen" ;
             schema:addressCountry "NL" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Gelderland" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "The Netherlands" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

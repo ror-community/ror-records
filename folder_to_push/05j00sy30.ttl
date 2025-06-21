@@ -1,0 +1,47 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/05j00sy30> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    org:status "active" ;
+    org:classification "company" ; 
+    org:classification "funder" ; 
+    dct:created "2025-04-25"^^xsd:date ;
+    dct:modified "2025-04-28"^^xsd:date ;
+    org:alternativeName "Idorsia Pharmaceuticals"@en ; 
+    schema:url <http://idorsia.com> ; 
+    schema:mainEntityOfPage <https://www.idorsia.com> ;
+    schema:sameAs <https://api.crossref.org/funders/501100016198> ;
+    schema:sameAs <http://isni.org/isni/0000000464142411> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/03va9ng43> ;
+        rdfs:label "Idorsia (Switzerland)" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(7.53599 47.55074)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Allschwil" ;
+            schema:addressCountry "CH" ;
+            schema:addressRegion "Basel-Landschaft" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Switzerland" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2661810/> ;
+    ] ; 
+    .

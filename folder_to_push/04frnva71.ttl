@@ -4,27 +4,68 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/04frnva71> a org:Organization ;
     rdfs:label "World Climate Research Programme" ;
     schema:name "World Climate Research Programme" ;
     schema:foundingDate "1980"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Nonprofit" ; 
-    org:abbreviation "WCRP" ;
-    org:alternativeName "World Climate Research Program" ;
-    schema:url <https://www.wcrp-climate.org> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/World_Climate_Research_Programme> ;
+    org:classification "nonprofit" ; 
+    dct:created "2023-11-21"^^xsd:date ;
+    dct:modified "2025-04-28"^^xsd:date ;
+    org:abbreviation "WCRP"@None ; 
+    org:alternativeName "World Climate Research Program"@en ; 
+    schema:mainEntityOfPage <https://www.wcrp-climate.org> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/World_Climate_Research_Programme> ; 
+    schema:sameAs <http://isni.org/isni/0000000106597002> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/000fg4e24> ;
+        rdfs:label "WCRP-CMIP International Project Office" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/011pjwf87> ;
+        rdfs:label "World Meteorological Organization" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/034s44556> ;
+        rdfs:label "International Science Council" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/01qk7v094> ;
+        rdfs:label "Intergovernmental Oceanographic Commission of UNESCO" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01tqb7m13> ;
+        rdfs:label "WCRP-ESMO International Project Office" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(6.14569 46.20222)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(6.14569 46.20222)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Geneva" ;
             schema:addressCountry "CH" ;
-            owl:sameAs <http://sws.geonames.org/2660646/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000106597002> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q3407026> ;
+            schema:addressRegion "Geneva" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Switzerland" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2660646/> ;
+    ] ; 
     .

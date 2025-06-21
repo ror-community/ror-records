@@ -15,7 +15,7 @@
     org:classification "company" ; 
     org:classification "funder" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-07-11"^^xsd:date ;
+    dct:modified "2025-04-28"^^xsd:date ;
     schema:mainEntityOfPage <http://www.abbott.com/> ;
     owl:sameAs <https://en.wikipedia.org/wiki/Abbott_Laboratories> ; 
     schema:sameAs <https://api.crossref.org/funders/100001316> ;
@@ -141,19 +141,25 @@
         org:member <https://ror.org/03vb88585> ;
         rdfs:label "Abbott Diabetes Care (United States)" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03n9zbw76> ;
+        rdfs:label "Abbott (Portugal)" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(-87.65005 41.85003)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Chicago" ;
             schema:addressCountry "US" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Illinois" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "United States" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "North America" ;
+                    schema:identifier "NA"
                 ]
             ]
         ] ;

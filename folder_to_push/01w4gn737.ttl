@@ -14,25 +14,31 @@
     org:status "active" ;
     org:classification "government" ; 
     dct:created "2024-07-24"^^xsd:date ;
-    dct:modified "2024-07-29"^^xsd:date ;
+    dct:modified "2025-04-28"^^xsd:date ;
     org:alternativeName "AIIMS Nagpur"@en ; 
     schema:url <http://aiimsnagpur.edu.in> ; 
     schema:mainEntityOfPage <https://aiimsnagpur.edu.in> ;
     owl:sameAs <https://en.wikipedia.org/wiki/All_India_Institute_of_Medical_Sciences%2C_Nagpur> ; 
     schema:sameAs <http://isni.org/isni/0000000475377857> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02dwcqs71> ;
+        rdfs:label "All India Institute of Medical Sciences" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(79.08491 21.14631)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Nagpur" ;
             schema:addressCountry "IN" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Maharashtra" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "India" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Asia" ;
+                    schema:identifier "AS"
                 ]
             ]
         ] ;

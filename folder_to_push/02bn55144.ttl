@@ -4,27 +4,82 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02bn55144> a org:Organization ;
     rdfs:label "Zimmer Biomet (United States)" ;
     schema:name "Zimmer Biomet (United States)" ;
     schema:foundingDate "1927"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Company" ; 
-    org:alternativeName "Biomet" ;
-    schema:url <http://www.zimmer.com/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Zimmer_Biomet> ;
+    org:classification "company" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-04-28"^^xsd:date ;
+    org:alternativeName "Biomet"@None ; 
+    schema:mainEntityOfPage <http://www.zimmer.com/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Zimmer_Biomet> ; 
+    schema:sameAs <https://api.crossref.org/funders/100006338> ;
+    schema:sameAs <https://grid.ac/institutions/grid.467239.d> ;
+    schema:sameAs <http://isni.org/isni/0000000446909076> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/029j6tp05> ;
+        rdfs:label "Zimmer Biomet (France)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/016731f38> ;
+        rdfs:label "Zimmer Biomet (Germany)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/022ftcx89> ;
+        rdfs:label "Zimmer Biomet (India)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/034k8cv93> ;
+        rdfs:label "Zimmer Biomet (Netherlands)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/050g10a24> ;
+        rdfs:label "Zimmer Biomet (Switzerland)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00mke2t69> ;
+        rdfs:label "Zimmer Biomet (United Kingdom)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01dvwhz14> ;
+        rdfs:label "Zimmer (Portugal)" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-85.85305 41.2381)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-85.85305 41.2381)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Warsaw" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/4927854/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000446909076> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q203552> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "Indiana" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "North America" ;
+                    schema:identifier "NA"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/4927854/> ;
+    ] ; 
     .

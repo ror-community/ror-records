@@ -15,7 +15,7 @@
     org:classification "company" ; 
     org:classification "funder" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-09-16"^^xsd:date ;
+    dct:modified "2025-04-28"^^xsd:date ;
     schema:mainEntityOfPage <http://www.abbvie.com/> ;
     owl:sameAs <https://en.wikipedia.org/wiki/AbbVie> ; 
     schema:sameAs <https://api.crossref.org/funders/100006483> ;
@@ -75,19 +75,25 @@
         org:member <https://ror.org/00t09mq63> ;
         rdfs:label "AbbVie (Australia)" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03em9qx04> ;
+        rdfs:label "AbbVie (Portugal)" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(-87.84118 42.32558)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "North Chicago" ;
             schema:addressCountry "US" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Illinois" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "United States" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "North America" ;
+                    schema:identifier "NA"
                 ]
             ]
         ] ;

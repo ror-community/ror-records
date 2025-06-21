@@ -4,26 +4,127 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01v5xwf23> a org:Organization ;
     rdfs:label "Nestlé (Switzerland)" ;
     schema:name "Nestlé (Switzerland)" ;
     schema:foundingDate "1866"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Company" ; 
-    schema:url <http://www.nestle.ch/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Nestl%C3%A9> ;
+    org:classification "company" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-04-28"^^xsd:date ;
+    schema:mainEntityOfPage <http://www.nestle.ch/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Nestl%C3%A9> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.419905.0> ;
+    schema:sameAs <http://isni.org/isni/0000000100664948> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/036yvkz90> ;
+        rdfs:label "Nestlé (Belgium)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0498w0n61> ;
+        rdfs:label "Nestlé (Brazil)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0199b8691> ;
+        rdfs:label "Nestlé (Canada)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03gn7k041> ;
+        rdfs:label "Nestlé (China)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05m1qxf57> ;
+        rdfs:label "Nestlé (France)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00nc2d154> ;
+        rdfs:label "Nestlé (Germany)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04s5pra58> ;
+        rdfs:label "Nestlé (India)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02drjk215> ;
+        rdfs:label "Nestlé (Netherlands)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03w84vf57> ;
+        rdfs:label "Nestlé (Singapore)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/008vha608> ;
+        rdfs:label "Nestlé (South Africa)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/024rmzz69> ;
+        rdfs:label "Nestlé (Sweden)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00knakc29> ;
+        rdfs:label "Nestlé (United Kingdom)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0368qtc02> ;
+        rdfs:label "Nestlé (United States)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03y8jvk69> ;
+        rdfs:label "Nestlé Health Science (United States)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05aqjsn79> ;
+        rdfs:label "Nestle (Portugal)" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(6.84345 46.46299)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(6.84345 46.46299)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Vevey" ;
             schema:addressCountry "CH" ;
-            owl:sameAs <http://sws.geonames.org/2658145/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000100664948> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q160746> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "Vaud" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Switzerland" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2658145/> ;
+    ] ; 
     .

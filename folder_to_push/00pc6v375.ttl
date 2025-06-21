@@ -1,0 +1,44 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/00pc6v375> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "1992"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-04-28"^^xsd:date ;
+    org:abbreviation "RISEBA"@en ; 
+    org:alternativeName "RISEBA University of Business, Arts and Technology"@en ; 
+    org:alternativeName "Riga International School of Economics and Business Administration"@en ; 
+    schema:url <http://riseba.lv> ; 
+    schema:mainEntityOfPage <https://www.riseba.lv> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/RISEBA_University_of_Business,_Arts_and_Technology> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.445886.3> ;
+    schema:sameAs <http://isni.org/isni/0000000404333806> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(24.10589 56.946)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Riga" ;
+            schema:addressCountry "LV" ;
+            schema:addressRegion "Riga" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Latvia" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/456172/> ;
+    ] ; 
+    .

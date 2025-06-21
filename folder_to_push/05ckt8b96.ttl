@@ -4,27 +4,106 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/05ckt8b96> a org:Organization ;
     rdfs:label "Ministry of Agriculture and Rural Affairs" ;
     schema:name "Ministry of Agriculture and Rural Affairs" ;
     schema:foundingDate "1954"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Government" ; 
-    org:abbreviation "MOA" ;
-    schema:url <http://english.agri.gov.cn/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Ministry_of_Agriculture_and_Rural_Affairs> ;
+    org:classification "funder" ; 
+    org:classification "government" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-04-28"^^xsd:date ;
+    org:abbreviation "MOA"@None ; 
+    schema:mainEntityOfPage <http://english.agri.gov.cn/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Ministry_of_Agriculture_and_Rural_Affairs> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100004573> ;
+    schema:sameAs <https://grid.ac/institutions/grid.418524.e> ;
+    schema:sameAs <http://isni.org/isni/0000000403696250> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04ts3qa26> ;
+        rdfs:label "China Association of Rural Energy Industry" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02ag25v06> ;
+        rdfs:label "Chinese Academy of Agricultural Engineering" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0313jb750> ;
+        rdfs:label "Chinese Academy of Agricultural Sciences" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02bwk9n38> ;
+        rdfs:label "Chinese Academy of Fishery Sciences" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/003qeh975> ;
+        rdfs:label "Chinese Academy of Tropical Agricultural Sciences" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04wktzw65> ;
+        rdfs:label "Chinese Center For Disease Control and Prevention" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05xgaq910> ;
+        rdfs:label "Nanjing Institute of Agricultural Mechanization" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/022ekqa73> ;
+        rdfs:label "National Animal Husbandry Service" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02bakwe76> ;
+        rdfs:label "Research Center for Rural Economy" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02fzqav45> ;
+        rdfs:label "State Council of the People's Republic of China" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03p5eky76> ;
+        rdfs:label "China Agriculture Research System" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(116.39723 39.9075)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(116.39723 39.9075)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Beijing" ;
             schema:addressCountry "CN" ;
-            owl:sameAs <http://sws.geonames.org/1816670/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000403696250> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1050095> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "Beijing" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "China" ;
+                schema:containedInPlace [
+                    schema:name "Asia" ;
+                    schema:identifier "AS"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1816670/> ;
+    ] ; 
     .

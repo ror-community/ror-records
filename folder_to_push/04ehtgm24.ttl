@@ -14,7 +14,7 @@
     org:status "active" ;
     org:classification "education" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-07-29"^^xsd:date ;
+    dct:modified "2025-04-28"^^xsd:date ;
     org:alternativeName "Universidade Lusíada do Porto"@pt ; 
     schema:mainEntityOfPage <http://www.por.ulusiada.pt/> ;
     owl:sameAs <http://en.wikipedia.org/wiki/Lus%C3%ADada_University_of_Porto> ; 
@@ -26,19 +26,25 @@
         org:member <https://ror.org/056g0b798> ;
         rdfs:label "Fundação Minerva - Cultura - Ensino e Investigação Científica" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03r0dz519> ;
+        rdfs:label "Centro de Investigação em Psicologia para o Desenvolvimento" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(-8.61099 41.14961)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Porto" ;
             schema:addressCountry "PT" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Porto" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "Portugal" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

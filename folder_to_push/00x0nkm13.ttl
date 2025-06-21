@@ -1,0 +1,49 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/00x0nkm13> a org:Organization ;
+    rdfs:label "Universidade Federal de Ciências da Saúde de Porto Alegre" ;
+    schema:name "Universidade Federal de Ciências da Saúde de Porto Alegre" ;
+    schema:foundingDate "1953"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-04-28"^^xsd:date ;
+    org:alternativeName "Health Sciences Federal University of Porto Alegre"@en ; 
+    org:abbreviation "UFCSPA"@None ; 
+    schema:url <http://ufcspa.edu.br> ; 
+    schema:mainEntityOfPage <https://ufcspa.edu.br> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Universidade_Federal_de_Ci%C3%AAncias_da_Sa%C3%BAde_de_Porto_Alegre> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.412344.4> ;
+    schema:sameAs <http://isni.org/isni/0000000404446202> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01by1qv45> ;
+        rdfs:label "Santa Casa Hospital" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-51.23019 -30.03283)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Porto Alegre" ;
+            schema:addressCountry "BR" ;
+            schema:addressRegion "Rio Grande do Sul" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Brazil" ;
+                schema:containedInPlace [
+                    schema:name "South America" ;
+                    schema:identifier "SA"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3452925/> ;
+    ] ; 
+    .

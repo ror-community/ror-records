@@ -15,7 +15,7 @@
     org:classification "education" ; 
     org:classification "funder" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-06-20"^^xsd:date ;
+    dct:modified "2025-04-28"^^xsd:date ;
     org:abbreviation "CMU"@None ; 
     schema:mainEntityOfPage <http://www.cmu.edu/index.shtml> ;
     owl:sameAs <http://en.wikipedia.org/wiki/Carnegie_Mellon_University> ; 
@@ -76,19 +76,25 @@
         org:member <https://ror.org/01txfgz53> ;
         rdfs:label "Center for Statistics and Applications in Forensic Evidence" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02mxx0b77> ;
+        rdfs:label "Carnegie Mellon Portugal" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(-79.99589 40.44062)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Pittsburgh" ;
             schema:addressCountry "US" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Pennsylvania" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "United States" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "North America" ;
+                    schema:identifier "NA"
                 ]
             ]
         ] ;

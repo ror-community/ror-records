@@ -4,25 +4,54 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01mhd9b84> a org:Organization ;
     rdfs:label "Immunologie et Neurogénétique Expérimentales et Moléculaires" ;
     schema:name "Immunologie et Neurogénétique Expérimentales et Moléculaires" ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "INEM" ;
-    schema:url <https://www.inem.cnrs.fr> ; 
+    org:classification "facility" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-04-28"^^xsd:date ;
+    org:abbreviation "INEM"@None ; 
+    schema:mainEntityOfPage <https://www.inem.cnrs.fr> ;
+    schema:sameAs <https://grid.ac/institutions/grid.428958.a> ;
+    schema:sameAs <http://isni.org/isni/0000000403855960> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/00rydyx93> ;
+        rdfs:label "Institut des Sciences Biologiques" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/014zrew76> ;
+        rdfs:label "Université d'Orléans" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/04yvax419> ;
+        rdfs:label "Centre hospitalier universitaire d'Orléans" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(1.90389 47.90289)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(1.90389 47.90289)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Orléans" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2989317/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000403855960> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q30287552> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "Centre-Val de Loire" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2989317/> ;
+    ] ; 
     .

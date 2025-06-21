@@ -14,7 +14,7 @@
     org:status "active" ;
     org:classification "company" ; 
     dct:created "2019-12-18"^^xsd:date ;
-    dct:modified "2024-08-21"^^xsd:date ;
+    dct:modified "2025-04-28"^^xsd:date ;
     org:alternativeName "General Society of Surveillance"@None ; 
     schema:mainEntityOfPage <https://www.sgs.com/> ;
     owl:sameAs <https://en.wikipedia.org/wiki/SGS_S.A.> ; 
@@ -61,19 +61,25 @@
         org:member <https://ror.org/042phe474> ;
         rdfs:label "SGS Germany GmbH (Germany)" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/004p8an59> ;
+        rdfs:label "SGS Portugal (Portugal)" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(6.14569 46.20222)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Geneva" ;
             schema:addressCountry "CH" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Geneva" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "Switzerland" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

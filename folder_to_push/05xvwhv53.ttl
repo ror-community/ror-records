@@ -4,25 +4,46 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/05xvwhv53> a org:Organization ;
-    rdfs:label "Osaka Medical Center for Cancer and Cardiovascular Diseases" ;
-    schema:name "Osaka Medical Center for Cancer and Cardiovascular Diseases" ;
+    rdfs:label "" ;
+    schema:name "" ;
     schema:foundingDate "1959"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "OMCCCD" ;
-    schema:url <http://www.mc.pref.osaka.jp/omc2/en/index.html> ; 
+    org:classification "facility" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-04-28"^^xsd:date ;
+    org:abbreviation "OMCCCD"@None ; 
+    org:alternativeName "Osaka Medical Center for Cancer and Cardiovascular Diseases"@en ; 
+    org:alternativeName "大阪府立成人病センター"@ja ; 
+    schema:url <http://oici.jp> ; 
+    schema:mainEntityOfPage <https://oici.jp> ;
+    schema:sameAs <https://grid.ac/institutions/grid.416963.f> ;
+    schema:sameAs <http://isni.org/isni/0000000417930765> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/035t8zc32> ;
+        rdfs:label "Osaka University" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(135.50218 34.69374)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(135.50107 34.69379)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Osaka" ;
             schema:addressCountry "JP" ;
-            owl:sameAs <http://sws.geonames.org/1853909/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000417930765> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "Osaka" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Japan" ;
+                schema:containedInPlace [
+                    schema:name "Asia" ;
+                    schema:identifier "AS"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1853909/> ;
+    ] ; 
     .

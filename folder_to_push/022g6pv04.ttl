@@ -14,7 +14,7 @@
     org:status "active" ;
     org:classification "education" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-05-30"^^xsd:date ;
+    dct:modified "2025-04-28"^^xsd:date ;
     org:abbreviation "UNPSJB"@None ; 
     schema:mainEntityOfPage <http://www.unp.edu.ar> ;
     owl:sameAs <https://en.wikipedia.org/wiki/National_University_of_Patagonia_San_Juan_Bosco> ; 
@@ -26,19 +26,25 @@
         org:member <https://ror.org/01yd28726> ;
         rdfs:label "Instituto de Investigaciones Geográficas de la Patagonia" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00t10t971> ;
+        rdfs:label "Instituto Multidisciplinario para la Investigación y el Desarrollo Productivo y Social de la Cuenca del Golfo San Jorge" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(-65.30505 -43.24895)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Trelew" ;
             schema:addressCountry "AR" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Chubut" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "Argentina" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "South America" ;
+                    schema:identifier "SA"
                 ]
             ]
         ] ;

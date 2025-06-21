@@ -13,7 +13,7 @@
     org:status "active" ;
     org:classification "government" ; 
     dct:created "2024-10-13"^^xsd:date ;
-    dct:modified "2024-10-14"^^xsd:date ;
+    dct:modified "2025-04-28"^^xsd:date ;
     org:alternativeName "Portuguese Navy"@en ; 
     schema:url <http://marinha.pt> ; 
     schema:mainEntityOfPage <https://www.marinha.pt> ;
@@ -25,19 +25,25 @@
         org:member <https://ror.org/02kmtwp90> ;
         rdfs:label "Government of Portugal" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00tdc7x54> ;
+        rdfs:label "Escola Naval Unidade Orgânica de Ensino Politécnico" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(-9.13333 38.71667)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Lisbon" ;
             schema:addressCountry "PT" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Lisbon" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "Portugal" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

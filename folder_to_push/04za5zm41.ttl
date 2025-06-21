@@ -4,26 +4,85 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/04za5zm41> a org:Organization ;
     rdfs:label "University Hospital Carl Gustav Carus" ;
     schema:name "University Hospital Carl Gustav Carus" ;
     schema:foundingDate "1999"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Healthcare" ; 
-    org:alternativeName "Carl Gustav Carus Hospital" ;
-    schema:url <https://www.uniklinikum-dresden.de/en> ; 
+    org:classification "healthcare" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-04-28"^^xsd:date ;
+    org:alternativeName "Carl Gustav Carus Hospital"@en ; 
+    schema:mainEntityOfPage <https://www.uniklinikum-dresden.de/en> ;
+    schema:sameAs <https://grid.ac/institutions/grid.412282.f> ;
+    schema:sameAs <http://isni.org/isni/0000000110912917> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/056gvz809> ;
+        rdfs:label "Klinik und Poliklinik für Augenheilkunde am Universitätsklinikum Carl Gustav Carus" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05medrv10> ;
+        rdfs:label "Klinik und Poliklinik für Psychotherapie und Psychosomatik" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00gfym921> ;
+        rdfs:label "Klinik und Poliklinik für Urologie" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05ke5hb07> ;
+        rdfs:label "Paul Langerhans Institute Dresden" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/015e4mc09> ;
+        rdfs:label "Universitäts Kinder Frauenzentrum" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01dj9qb53> ;
+        rdfs:label "TransDeN Lab" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01zy07c70> ;
+        rdfs:label "Nationales Centrum für Tumorerkrankungen Dresden" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/042aqky30> ;
+        rdfs:label "Technische Universität Dresden" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(13.73832 51.05089)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(13.73832 51.05089)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Dresden" ;
             schema:addressCountry "DE" ;
-            owl:sameAs <http://sws.geonames.org/2935022/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000110912917> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1651640> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "Saxony" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Germany" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2935022/> ;
+    ] ; 
     .

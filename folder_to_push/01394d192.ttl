@@ -15,7 +15,7 @@
     org:classification "education" ; 
     org:classification "funder" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-11-19"^^xsd:date ;
+    dct:modified "2025-04-28"^^xsd:date ;
     org:abbreviation "MATE"@None ; 
     org:abbreviation "SZIE"@None ; 
     org:abbreviation "SZIU"@None ; 
@@ -27,19 +27,25 @@
     schema:sameAs <https://api.crossref.org/funders/501100014737> ;
     schema:sameAs <https://grid.ac/institutions/grid.129553.9> ;
     schema:sameAs <http://isni.org/isni/0000000110157851> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "predecessor" ;
+        org:member <https://ror.org/02ff27430> ;
+        rdfs:label "University of Kaposvár" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(19.35515 47.59657)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Gödöllő" ;
             schema:addressCountry "HU" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Pest County" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "Hungary" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

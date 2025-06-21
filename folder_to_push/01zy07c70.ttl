@@ -4,23 +4,59 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01zy07c70> a org:Organization ;
     rdfs:label "Nationales Centrum für Tumorerkrankungen Dresden" ;
     schema:name "Nationales Centrum für Tumorerkrankungen Dresden" ;
     org:status "active" ;
-    org:classification "Healthcare" ; 
-    org:alternativeName "NCT Dresden" ;
-    schema:url <https://www.nct-dresden.de> ; 
+    org:classification "healthcare" ; 
+    dct:created "2023-04-27"^^xsd:date ;
+    dct:modified "2025-04-28"^^xsd:date ;
+    org:alternativeName "NCT Dresden"@de ; 
+    schema:mainEntityOfPage <https://www.nct-dresden.de> ;
+    schema:sameAs <http://isni.org/isni/0000000480035480> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/04cdgtt98> ;
+        rdfs:label "German Cancer Research Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/04za5zm41> ;
+        rdfs:label "University Hospital Carl Gustav Carus" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/042aqky30> ;
+        rdfs:label "Technische Universität Dresden" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/01zy2cs03> ;
+        rdfs:label "Helmholtz-Zentrum Dresden-Rossendorf" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(13.73832 51.05089)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(13.73832 51.05089)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Dresden" ;
             schema:addressCountry "DE" ;
-            owl:sameAs <http://sws.geonames.org/2935022/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000480035480> ;
+            schema:addressRegion "Saxony" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Germany" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2935022/> ;
+    ] ; 
     .

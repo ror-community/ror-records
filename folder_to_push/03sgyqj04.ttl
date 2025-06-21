@@ -14,7 +14,7 @@
     org:status "active" ;
     org:classification "education" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-10-31"^^xsd:date ;
+    dct:modified "2025-04-28"^^xsd:date ;
     org:abbreviation "ENSCM"@None ; 
     schema:url <http://enscm.fr> ; 
     schema:mainEntityOfPage <https://www.enscm.fr> ;
@@ -57,19 +57,25 @@
         org:member <https://ror.org/01x6z5t49> ;
         rdfs:label "Fédération de Recherche Spectroscopies de Photoémission" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02fpe6x37> ;
+        rdfs:label "Plateforme d'Analyses et de Caractérisations Chimie Balard" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(3.87635 43.61093)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Montpellier" ;
             schema:addressCountry "FR" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Occitanie" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "France" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

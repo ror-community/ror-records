@@ -15,7 +15,7 @@
     org:classification "education" ; 
     org:classification "funder" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-10-31"^^xsd:date ;
+    dct:modified "2025-04-28"^^xsd:date ;
     org:abbreviation "USP"@None ; 
     org:alternativeName "Universidade de Sao Paulo"@pt ; 
     org:alternativeName "University of Sao Paulo"@pt ; 
@@ -38,6 +38,12 @@
     ] ; 
     org:hasLink [
         a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04t6wsp57> ;
+        rdfs:label "Instituto de Estudos Avançados da Universidade de São Paulo" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
         org:role "related" ;
         org:member <https://ror.org/03se9eg94> ;
         rdfs:label "Hospital das Clínicas da Faculdade de Medicina da Universidade de São Paulo" ;
@@ -56,9 +62,9 @@
     ] ; 
     org:hasLink [
         a org:Membership ;
-        org:role "child" ;
-        org:member <https://ror.org/04t6wsp57> ;
-        rdfs:label "Instituto de Estudos Avançados da Universidade de São Paulo" ;
+        org:role "related" ;
+        org:member <https://ror.org/01c730s93> ;
+        rdfs:label "Universidade Virtual do Estado de São Paulo" ;
     ] ; 
     schema:location [
         a schema:Place ;
@@ -66,13 +72,13 @@
         schema:address [
             schema:addressLocality "São Paulo" ;
             schema:addressCountry "BR" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "São Paulo" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "Brazil" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "South America" ;
+                    schema:identifier "SA"
                 ]
             ]
         ] ;
