@@ -62,3 +62,21 @@ Ceci vient régler la première partie du problèmes pour faire la transformatio
 ‼️ Warning ‼️ Subyt écrase pour le moment les fichiers en double, ce qui veut dire qu'il y a normalement **64'000** files qui sont ajoutées et modifiées parmi toutes les releases. Cependant, dans le dossier de sortie, il n'y en a que **34'000**. Cela s'explique car il y a environ **30'000** files qui sont modifiées, donc comme subyt réécrit le json par dessus, cela ne tient pas en considération les anciens json.
 
 Le problème sera résolu au moment de la partie commit & push sur github, car une fois push, les files seront supprimées du dossier en question, et il n'y aura **pas de doublon, ni de fichier effacé**.
+
+## Résolution
+
+Le programme est fonctionnel et permet de faire une transformation json to rdf puis un push release by release vers github. Cela permet, par le biais de tag pour chaque release, de voir les nouveaux fichiers ajoutés pour chaque release. Voici un somaire des fichiers utilisés et de leur utilité:
+
+```
+release_rdf_push    // centralise les fonctions et parcours les répertoires
+detect_version_json // detect la version du json en fonction des struct de ror et associe le template
+template_to_try     // en fonction de la version du json, associe le template et test
+git_commit_push     // fait les commit et les push vers github puis supprime les fichiers push du folder_to_push
+create_rdf_file     // creer les fichiers rdf a l'aide de subyt
+```
+
+Voici un schéma:
+
+```
+release_rdf_push --> template_to_try --> detect_version_json --> create_rdf_file --> git_commit_push
+```
