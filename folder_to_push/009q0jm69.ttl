@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/009q0jm69> a org:Organization ;
+    rdfs:label "Agricultural Experiment Station" ;
+    schema:name "Agricultural Experiment Station" ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    org:abbreviation "AES NMSU" ;
+    org:alternativeName "Agricultural Experiment Station, New Mexico State University" ;
+    schema:url <https://aes.nmsu.edu> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/New_Mexico_State_University_Agricultural_Experiment_Station> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-106.77834 32.31232)"^^geo:wktLiteral ;
+            schema:addressLocality "Las Cruces" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/5475352/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q45133446> ;
+    .

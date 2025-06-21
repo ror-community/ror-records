@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/004majf41> a org:Organization ;
+    rdfs:label "Hobart and William Smith Colleges" ;
+    schema:name "Hobart and William Smith Colleges" ;
+    schema:foundingDate "1818"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "HWS" ;
+    schema:url <http://www2.hws.edu/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Hobart_and_William_Smith_Colleges> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-76.97774 42.86896)"^^geo:wktLiteral ;
+            schema:addressLocality "Geneva" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/5118398/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q4119316> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

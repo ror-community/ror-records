@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/049h9f890> a org:Organization ;
+    rdfs:label "Cégep de Granby" ;
+    schema:name "Cégep de Granby" ;
+    schema:foundingDate "1968"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    schema:url <https://cegepgranby.ca> ; 
+    owl:sameAs <https://fr.wikipedia.org/wiki/C%C3%A9gep_de_Granby> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-72.73243 45.40008)"^^geo:wktLiteral ;
+            schema:addressLocality "Granby" ;
+            schema:addressCountry "CA" ;
+            owl:sameAs <http://sws.geonames.org/5964215/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000095369505> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q3009996> ;
+    .

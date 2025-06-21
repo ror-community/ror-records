@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/001d55x84> a org:Organization ;
+    rdfs:label "NIH Common Fund" ;
+    schema:name "NIH Common Fund" ;
+    schema:foundingDate "2004"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Government" ; 
+    org:alternativeName "National Institutes of Health Common Fund" ;
+    schema:url <https://commonfund.nih.gov> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/National_Institutes_of_Health_Common_Fund> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-77.10026 38.98067)"^^geo:wktLiteral ;
+            schema:addressLocality "Bethesda" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/4348599/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000483065685> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q16932298> ;
+    .

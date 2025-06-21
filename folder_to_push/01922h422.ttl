@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/01922h422> a org:Organization ;
+    rdfs:label "Cégep de Lévis" ;
+    schema:name "Cégep de Lévis" ;
+    schema:foundingDate "1967"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:alternativeName "Cégep Lévis" ;
+    schema:url <https://www.cegeplevis.ca> ; 
+    owl:sameAs <http://en.wikipedia.org/wiki/C%C3%A9gep_de_L%C3%A9vis-Lauzon> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-71.17793 46.80326)"^^geo:wktLiteral ;
+            schema:addressLocality "Lévis" ;
+            schema:addressCountry "CA" ;
+            owl:sameAs <http://sws.geonames.org/6325521/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000087237684> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q3010001> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

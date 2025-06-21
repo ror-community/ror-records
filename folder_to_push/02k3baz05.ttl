@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/02k3baz05> a org:Organization ;
+    rdfs:label "Facoltà di Teologia di Lugano" ;
+    schema:name "Facoltà di Teologia di Lugano" ;
+    schema:foundingDate "1993"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    schema:url <http://www.teologialugano.ch/> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(8.96004 46.01008)"^^geo:wktLiteral ;
+            schema:addressLocality "Lugano" ;
+            schema:addressCountry "CH" ;
+            owl:sameAs <http://sws.geonames.org/2659836/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000121887489> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

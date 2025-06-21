@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/04e874t64> a org:Organization ;
+    rdfs:label "Einaudi Institute for Economics and Finance" ;
+    schema:name "Einaudi Institute for Economics and Finance" ;
+    schema:foundingDate "2008"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    org:abbreviation "EIEF" ;
+    schema:url <https://www.eief.it/eief/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Einaudi_Institute_for_Economics_and_Finance> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(12.51133 41.89193)"^^geo:wktLiteral ;
+            schema:addressLocality "Rome" ;
+            schema:addressCountry "IT" ;
+            owl:sameAs <http://sws.geonames.org/3169070/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000417581809> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q16249630> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

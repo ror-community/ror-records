@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/00h3w1m15> a org:Organization ;
+    rdfs:label "King Fahad National Library" ;
+    schema:name "King Fahad National Library" ;
+    schema:foundingDate "1983"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Archive" ; 
+    org:abbreviation "KFNL" ;
+    schema:url <https://kfnl.gov.sa> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/King_Fahd_National_Library> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(46.72185 24.68773)"^^geo:wktLiteral ;
+            schema:addressLocality "Riyadh" ;
+            schema:addressCountry "SA" ;
+            owl:sameAs <http://sws.geonames.org/108410/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000110146204> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q620803> ;
+    .

@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/03s4khd80> a org:Organization ;
+    rdfs:label "Cliniques Universitaires Saint-Luc" ;
+    schema:name "Cliniques Universitaires Saint-Luc" ;
+    schema:foundingDate "1976"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Healthcare" ; 
+    schema:url <http://www.saintluc.be/> ; 
+    owl:sameAs <http://en.wikipedia.org/wiki/Cliniques_Universitaires_Saint-Luc> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(4.34878 50.85045)"^^geo:wktLiteral ;
+            schema:addressLocality "Brussels" ;
+            schema:addressCountry "BE" ;
+            owl:sameAs <http://sws.geonames.org/2800866/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000404616320> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q2979314> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

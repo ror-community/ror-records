@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/03byxpy70> a org:Organization ;
+    rdfs:label "Dennis Osadebay University" ;
+    schema:name "Dennis Osadebay University" ;
+    schema:foundingDate "2021"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "DOU" ;
+    org:alternativeName "Dennis Osadebay University, Asaba" ;
+    schema:url <https://dou.edu.ng> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(6.73187 6.19824)"^^geo:wktLiteral ;
+            schema:addressLocality "Asaba" ;
+            schema:addressCountry "NG" ;
+            owl:sameAs <http://sws.geonames.org/2349276/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    .

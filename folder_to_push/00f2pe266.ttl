@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/00f2pe266> a org:Organization ;
+    rdfs:label "Institut Agama Islam Tafaqquh Fiddin Dumai" ;
+    schema:name "Institut Agama Islam Tafaqquh Fiddin Dumai" ;
+    schema:foundingDate "1999"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "IAITF" ;
+    schema:url <https://iaitfdumai.ac.id> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(101.44316 1.66711)"^^geo:wktLiteral ;
+            schema:addressLocality "Dumai" ;
+            schema:addressCountry "ID" ;
+            owl:sameAs <http://sws.geonames.org/1645133/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q109912239> ;
+    .

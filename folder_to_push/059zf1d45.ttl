@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/059zf1d45> a org:Organization ;
+    rdfs:label "Institut Universitari de Ciencia i Tecnologia (Spain)" ;
+    schema:name "Institut Universitari de Ciencia i Tecnologia (Spain)" ;
+    schema:foundingDate "1997"^^xsd:gYear ;
+    org:status "inactive" ;
+    org:classification "Company" ; 
+    org:abbreviation "IUCT" ;
+    schema:url <http://www.iuct.com/en/> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(2.20901 41.55222)"^^geo:wktLiteral ;
+            schema:addressLocality "Mollet del Vallès" ;
+            schema:addressCountry "ES" ;
+            owl:sameAs <http://sws.geonames.org/6356153/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000405071975> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/00zay3w86> a org:Organization ;
+    rdfs:label "Centre for Nanoscience and Nanotechnology" ;
+    schema:name "Centre for Nanoscience and Nanotechnology" ;
+    schema:foundingDate "2016"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    org:abbreviation "C2N" ;
+    schema:url <https://www.c2n.universite-paris-saclay.fr> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(2.2498 48.71828)"^^geo:wktLiteral ;
+            schema:addressLocality "Palaiseau" ;
+            schema:addressCountry "FR" ;
+            owl:sameAs <http://sws.geonames.org/2988758/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q47520094> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

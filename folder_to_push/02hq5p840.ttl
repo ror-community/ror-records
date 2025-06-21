@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/02hq5p840> a org:Organization ;
+    rdfs:label "Genetrix (Spain)" ;
+    schema:name "Genetrix (Spain)" ;
+    schema:foundingDate "2001"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Company" ; 
+    schema:url <http://www.genetrix.es/> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-3.71579 40.59866)"^^geo:wktLiteral ;
+            schema:addressLocality "Tres Cantos" ;
+            schema:addressCountry "ES" ;
+            owl:sameAs <http://sws.geonames.org/11995365/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000417940365> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q30255894> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/018a8yy17> a org:Organization ;
+    rdfs:label "ENN (China)" ;
+    schema:name "ENN (China)" ;
+    schema:foundingDate "1993"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Company" ; 
+    org:abbreviation "ENN" ;
+    org:alternativeName "ENN Group Co., Ltd." ;
+    schema:url <https://www.enn.cn/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/ENN_Group#:~:text=ENN%20Group%20(Chinese%3A%20%E6%96%B0%E5%A5%A5,energy%20chemicals%20and%20real%20estate.> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(116.71471 39.52079)"^^geo:wktLiteral ;
+            schema:addressLocality "Langfang" ;
+            schema:addressCountry "CN" ;
+            owl:sameAs <http://sws.geonames.org/1804540/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000492913447> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q23409786> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

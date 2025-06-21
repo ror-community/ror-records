@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/012qsrr25> a org:Organization ;
+    rdfs:label "Cornell University Agricultural Experiment Station" ;
+    schema:name "Cornell University Agricultural Experiment Station" ;
+    schema:foundingDate "1880"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    org:abbreviation "CUAES" ;
+    org:alternativeName "Cornell AES" ;
+    schema:url <https://cals.cornell.edu/agricultural-experiment-station> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/New_York_State_Agricultural_Experiment_Station> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-76.49661 42.44063)"^^geo:wktLiteral ;
+            schema:addressLocality "Ithaca" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/5122432/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000121707652> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q45134801> ;
+    .

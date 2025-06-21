@@ -1,0 +1,25 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/03q5e6q66> a org:Organization ;
+    rdfs:label "Fondazione Ricerca Biomedica Avanzata Onlus - VIMM" ;
+    schema:name "Fondazione Ricerca Biomedica Avanzata Onlus - VIMM" ;
+    org:status "active" ;
+    org:classification "Other" ; 
+    org:alternativeName "Fondazione Ricerca Biomedica Avanzata Onlus" ;
+    schema:url <https://www.fondbiomed.it> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(11.88586 45.40797)"^^geo:wktLiteral ;
+            schema:addressLocality "Padua" ;
+            schema:addressCountry "IT" ;
+            owl:sameAs <http://sws.geonames.org/3171728/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    .

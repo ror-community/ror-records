@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/02x3f7722> a org:Organization ;
+    rdfs:label "Lakeland Health" ;
+    schema:name "Lakeland Health" ;
+    schema:foundingDate "1899"^^xsd:gYear ;
+    org:status "inactive" ;
+    org:classification "Healthcare" ; 
+    schema:url <http://www.lakelandhealth.org/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Lakeland_Health> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-86.48002 42.10976)"^^geo:wktLiteral ;
+            schema:addressLocality "Saint Joseph" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/5008327/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000404430139> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q22059525> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

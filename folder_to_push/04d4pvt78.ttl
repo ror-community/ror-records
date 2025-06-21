@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/04d4pvt78> a org:Organization ;
+    rdfs:label "Center for Innovative Medicine" ;
+    schema:name "Center for Innovative Medicine" ;
+    schema:foundingDate "2004"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    org:abbreviation "CIM" ;
+    org:alternativeName "Johns Hopkins Center for Innovative Medicine" ;
+    schema:url <https://www.hopkinscim.org> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-76.61219 39.29038)"^^geo:wktLiteral ;
+            schema:addressLocality "Baltimore" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/4347778/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    .

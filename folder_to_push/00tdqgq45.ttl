@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/00tdqgq45> a org:Organization ;
+    rdfs:label "Cégep de Saint-Félicien" ;
+    schema:name "Cégep de Saint-Félicien" ;
+    schema:foundingDate "1971"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    schema:url <https://cegepstfe.ca> ; 
+    owl:sameAs <https://fr.wikipedia.org/wiki/C%C3%A9gep_de_Saint-F%C3%A9licien> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-72.44906 48.65007)"^^geo:wktLiteral ;
+            schema:addressLocality "Saint-Félicien" ;
+            schema:addressCountry "CA" ;
+            owl:sameAs <http://sws.geonames.org/6138201/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/000000010216404X> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q3010005> ;
+    .
