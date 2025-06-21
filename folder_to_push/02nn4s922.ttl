@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/02nn4s922> a org:Organization ;
+    rdfs:label "Pioneer Hi-Bred" ;
+    schema:name "Pioneer Hi-Bred" ;
+    schema:foundingDate "1926"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Company" ; 
+    org:alternativeName "DuPont Pioneer" ;
+    schema:url <http://www.pioneer.com/landing> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/DuPont_Pioneer> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-93.69772 41.67304)"^^geo:wktLiteral ;
+            schema:addressLocality "Johnston" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/4862760/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/000000040414655X> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q1417484> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

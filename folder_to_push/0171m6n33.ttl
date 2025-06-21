@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/0171m6n33> a org:Organization ;
+    rdfs:label "Schifffahrtmedizinisches Institut der Marine" ;
+    schema:name "Schifffahrtmedizinisches Institut der Marine" ;
+    schema:foundingDate "1961"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Government" ; 
+    org:alternativeName "Naval Medical Institute" ;
+    schema:url <https://www.bundeswehr.de/de/organisation/marine/organisation/schifffahrtmedizinisches-institut> ; 
+    owl:sameAs <https://de.wikipedia.org/wiki/Schifffahrtmedizinisches_Institut_der_Marine> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(10.0994 54.3433)"^^geo:wktLiteral ;
+            schema:addressLocality "Kronshagen" ;
+            schema:addressCountry "DE" ;
+            owl:sameAs <http://sws.geonames.org/6551871/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q1231469> ;
+    .

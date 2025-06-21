@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/0006e6p34> a org:Organization ;
+    rdfs:label "ECOLOG-Institut für sozial-ökologische Forschung und Bildung" ;
+    schema:name "ECOLOG-Institut für sozial-ökologische Forschung und Bildung" ;
+    schema:foundingDate "2003"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Nonprofit" ; 
+    org:alternativeName "ECOLOG" ;
+    schema:url <https://www.ecolog-institut.de/> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(9.73322 52.37052)"^^geo:wktLiteral ;
+            schema:addressLocality "Hanover" ;
+            schema:addressCountry "DE" ;
+            owl:sameAs <http://sws.geonames.org/2910831/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

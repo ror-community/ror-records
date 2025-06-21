@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/02saske07> a org:Organization ;
+    rdfs:label "Kootenay National Park" ;
+    schema:name "Kootenay National Park" ;
+    schema:foundingDate "1920"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Archive" ; 
+    schema:url <https://www.pc.gc.ca/en/pn-np/bc/kootenay> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Kootenay_National_Park> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-115.7959 50.64366)"^^geo:wktLiteral ;
+            schema:addressLocality "Kootenay National Park" ;
+            schema:addressCountry "CA" ;
+            owl:sameAs <http://sws.geonames.org/8051262/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q903323> ;
+    .

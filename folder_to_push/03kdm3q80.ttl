@@ -1,0 +1,26 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/03kdm3q80> a org:Organization ;
+    rdfs:label "Poole Hospital NHS Foundation Trust" ;
+    schema:name "Poole Hospital NHS Foundation Trust" ;
+    org:status "inactive" ;
+    org:classification "Healthcare" ; 
+    schema:url <https://www.poole.nhs.uk/> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-1.98458 50.71429)"^^geo:wktLiteral ;
+            schema:addressLocality "Poole" ;
+            schema:addressCountry "GB" ;
+            owl:sameAs <http://sws.geonames.org/2640101/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000404556778> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

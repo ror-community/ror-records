@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/01jcjpa26> a org:Organization ;
+    rdfs:label "Reinwardt Academie" ;
+    schema:name "Reinwardt Academie" ;
+    schema:foundingDate "1976"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    schema:url <https://www.reinwardt.ahk.nl> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Reinwardt_Academie> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(4.89856 52.37302)"^^geo:wktLiteral ;
+            schema:addressLocality "Gemeente Amsterdam" ;
+            schema:addressCountry "NL" ;
+            owl:sameAs <http://sws.geonames.org/2759793/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q2072098> ;
+    .

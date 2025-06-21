@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/053940494> a org:Organization ;
+    rdfs:label "Riding Mountain National Park" ;
+    schema:name "Riding Mountain National Park" ;
+    schema:foundingDate "1930"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Archive" ; 
+    schema:url <http://www.pc.gc.ca/fra/pn-np/mb/riding/index.aspx> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Riding_Mountain_National_Park> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-99.97297 50.65817)"^^geo:wktLiteral ;
+            schema:addressLocality "Riding Mountain National Park of Canada" ;
+            schema:addressCountry "CA" ;
+            owl:sameAs <http://sws.geonames.org/9409739/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000404796982> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q795190> ;
+    .

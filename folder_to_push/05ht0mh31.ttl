@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/05ht0mh31> a org:Organization ;
+    rdfs:label "University of Udine" ;
+    schema:name "University of Udine" ;
+    schema:foundingDate "1978"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    schema:url <http://www.uniud.it/en/uniud-international?set_language=en> ; 
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Udine> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(13.23715 46.0693)"^^geo:wktLiteral ;
+            schema:addressLocality "Udine" ;
+            schema:addressCountry "IT" ;
+            owl:sameAs <http://sws.geonames.org/3165072/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/000000012113062X> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q2307935> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

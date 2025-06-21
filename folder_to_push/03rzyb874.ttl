@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/03rzyb874> a org:Organization ;
+    rdfs:label "Nahanni National Park Reserve" ;
+    schema:name "Nahanni National Park Reserve" ;
+    schema:foundingDate "1976"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Archive" ; 
+    schema:url <https://www.pc.gc.ca/fr/pn-np/nt/nahanni> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Nahanni_National_Park_Reserve> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-125.68665 61.59991)"^^geo:wktLiteral ;
+            schema:addressLocality "Nahanni National Park Reserve of Canada" ;
+            schema:addressCountry "CA" ;
+            owl:sameAs <http://sws.geonames.org/6085535/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q391391> ;
+    .

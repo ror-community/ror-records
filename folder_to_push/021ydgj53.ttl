@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/021ydgj53> a org:Organization ;
+    rdfs:label "Zentrum für Sportmedizin der Bundeswehr" ;
+    schema:name "Zentrum für Sportmedizin der Bundeswehr" ;
+    schema:foundingDate "2013"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Government" ; 
+    org:abbreviation "ZSportMedBw" ;
+    schema:url <https://www.bundeswehr.de/de/organisation/sanitaetsdienst/kommando-und-organisation-sanitaetsdienst/kommando-regionale-sanitaetsdienstliche-unterstuetzung/zentrum-fuer-sportmedizin-der-bundeswehr/> ; 
+    owl:sameAs <https://de.wikipedia.org/wiki/Zentrum_f%C3%BCr_Sportmedizin_der_Bundeswehr> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(7.98756 51.95109)"^^geo:wktLiteral ;
+            schema:addressLocality "Warendorf" ;
+            schema:addressCountry "DE" ;
+            owl:sameAs <http://sws.geonames.org/2814127/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q2312691> ;
+    .

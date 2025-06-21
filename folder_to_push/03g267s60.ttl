@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/03g267s60> a org:Organization ;
+    rdfs:label "Max Planck Institute for Biological Intelligence" ;
+    schema:name "Max Planck Institute for Biological Intelligence" ;
+    schema:foundingDate "2022"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    org:abbreviation "MPI-BI" ;
+    schema:url <https://www.bi.mpg.de> ; 
+    owl:sameAs <https://de.wikipedia.org/wiki/Max-Planck-Institut_f%C3%BCr_biologische_Intelligenz> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(11.45196 48.10732)"^^geo:wktLiteral ;
+            schema:addressLocality "Martinsried" ;
+            schema:addressCountry "DE" ;
+            owl:sameAs <http://sws.geonames.org/2873111/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q110824334> ;
+    .

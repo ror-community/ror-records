@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/01mv9t934> a org:Organization ;
+    rdfs:label "Ministry of Education of the People's Republic of China" ;
+    schema:name "Ministry of Education of the People's Republic of China" ;
+    schema:foundingDate "1949"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Government" ; 
+    org:abbreviation "MOE" ;
+    org:alternativeName "Ministry of Education Central People's Government" ;
+    schema:url <http://www.moe.edu.cn/publicfiles/business/htmlfiles/moe/moe_2792/> ; 
+    owl:sameAs <http://en.wikipedia.org/wiki/Ministry_of_Education_of_the_People's_Republic_of_China> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(116.39723 39.9075)"^^geo:wktLiteral ;
+            schema:addressLocality "Beijing" ;
+            schema:addressCountry "CN" ;
+            owl:sameAs <http://sws.geonames.org/1816670/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/000000040369313X> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q1042167> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

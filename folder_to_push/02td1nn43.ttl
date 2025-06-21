@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/02td1nn43> a org:Organization ;
+    rdfs:label "Ukkusiksalik National Park" ;
+    schema:name "Ukkusiksalik National Park" ;
+    schema:foundingDate "2014"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Archive" ; 
+    schema:url <https://www.pc.gc.ca/fr/pn-np/nu/ukkusiksalik> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Ukkusiksalik_National_Park> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-100.07813 66.03478)"^^geo:wktLiteral ;
+            schema:addressLocality "Nunavut" ;
+            schema:addressCountry "CA" ;
+            owl:sameAs <http://sws.geonames.org/6091732/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q862318> ;
+    .

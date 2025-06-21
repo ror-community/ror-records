@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/05e33tw76> a org:Organization ;
+    rdfs:label "TOCA at Banner Health" ;
+    schema:name "TOCA at Banner Health" ;
+    schema:foundingDate "1949"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Healthcare" ; 
+    org:abbreviation "TOCA" ;
+    org:alternativeName "The Orthopedic Clinic Association at Banner Health" ;
+    schema:url <https://www.bannerhealth.com/services/orthopedics/toca> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-112.07404 33.44838)"^^geo:wktLiteral ;
+            schema:addressLocality "Phoenix" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/5308655/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000405711442> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q50036375> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

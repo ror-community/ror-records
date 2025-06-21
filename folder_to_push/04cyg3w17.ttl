@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/04cyg3w17> a org:Organization ;
+    rdfs:label "Finnish Heritage Agency" ;
+    schema:name "Finnish Heritage Agency" ;
+    schema:foundingDate "1972"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Government" ; 
+    org:alternativeName "National Board of Antiquities" ;
+    schema:url <https://www.museovirasto.fi> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Finnish_National_Board_of_Antiquities> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(24.93545 60.16952)"^^geo:wktLiteral ;
+            schema:addressLocality "Helsinki" ;
+            schema:addressCountry "FI" ;
+            owl:sameAs <http://sws.geonames.org/658225/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000121141193> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q3029524> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .
