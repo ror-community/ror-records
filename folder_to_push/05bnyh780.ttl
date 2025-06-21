@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/05bnyh780> a org:Organization ;
+    rdfs:label "Østfold Fylkeskommune" ;
+    schema:name "Østfold Fylkeskommune" ;
+    schema:foundingDate "1768"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Government" ; 
+    schema:url <http://www.ostfoldfk.no/modules/module_123/proxy.asp?D=2&C=377&I=17131&m=1389> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(11.10962 59.28391)"^^geo:wktLiteral ;
+            schema:addressLocality "Sarpsborg" ;
+            schema:addressCountry "NO" ;
+            owl:sameAs <http://sws.geonames.org/3140084/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000108112048> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

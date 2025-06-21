@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/03zxw5p19> a org:Organization ;
+    rdfs:label "Korean Academy of International Business Management" ;
+    schema:name "Korean Academy of International Business Management" ;
+    schema:foundingDate "1996"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    org:alternativeName "Southeast International Business Association" ;
+    schema:url <http://www.kaibm.or.kr/modules/doc/index.php?doc=intro> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(127.38493 36.34913)"^^geo:wktLiteral ;
+            schema:addressLocality "Daejeon" ;
+            schema:addressCountry "KR" ;
+            owl:sameAs <http://sws.geonames.org/1835235/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000459350873> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

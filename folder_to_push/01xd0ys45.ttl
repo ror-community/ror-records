@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/01xd0ys45> a org:Organization ;
+    rdfs:label "Laboratoire de Conception Fabrication Commande" ;
+    schema:name "Laboratoire de Conception Fabrication Commande" ;
+    schema:foundingDate "2009"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    org:abbreviation "LCFC" ;
+    schema:url <http://lcfc.ensam.eu/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Laboratory_of_design,_manufacturing_and_control> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(6.17269 49.11911)"^^geo:wktLiteral ;
+            schema:addressLocality "Metz" ;
+            schema:addressCountry "FR" ;
+            owl:sameAs <http://sws.geonames.org/2994160/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000483426081> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q16508572> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

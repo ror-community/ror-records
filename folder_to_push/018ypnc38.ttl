@@ -1,0 +1,26 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/018ypnc38> a org:Organization ;
+    rdfs:label "Human Vaccines Project Europe" ;
+    schema:name "Human Vaccines Project Europe" ;
+    org:status "active" ;
+    org:classification "Nonprofit" ; 
+    org:alternativeName "HVP Stichting" ;
+    schema:url <https://www.humanvaccinesproject.org> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(4.66944 52.54833)"^^geo:wktLiteral ;
+            schema:addressLocality "Castricum" ;
+            schema:addressCountry "NL" ;
+            owl:sameAs <http://sws.geonames.org/2757991/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/009avj582> a org:Organization ;
+    rdfs:label "Oregon Health & Science University" ;
+    schema:name "Oregon Health & Science University" ;
+    schema:foundingDate "1974"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "OHSU" ;
+    org:alternativeName "University of Oregon Health Sciences Center" ;
+    schema:url <http://www.ohsu.edu/xd/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Oregon_Health_%26_Science_University> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-122.67621 45.52345)"^^geo:wktLiteral ;
+            schema:addressLocality "Portland" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/5746545/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000097585690> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q282097> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

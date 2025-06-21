@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/01ftxmw65> a org:Organization ;
+    rdfs:label "Wasserstraßen- und Schifffahrtsamt Oberrhein" ;
+    schema:name "Wasserstraßen- und Schifffahrtsamt Oberrhein" ;
+    schema:foundingDate "2019"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Government" ; 
+    org:alternativeName "Wasserstrassen- und Schifffahrtsamt Oberrhein" ;
+    schema:url <https://www.wsa-oberrhein.wsv.de> ; 
+    owl:sameAs <https://de.wikipedia.org/wiki/Wasserstra%C3%9Fen-_und_Schifffahrtsamt_Oberrhein> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(8.36214 48.95947)"^^geo:wktLiteral ;
+            schema:addressLocality "Mittlerer Oberrhein" ;
+            schema:addressCountry "DE" ;
+            owl:sameAs <http://sws.geonames.org/12077021/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000508505019> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q72200023> ;
+    .
