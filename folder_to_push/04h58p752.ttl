@@ -1,0 +1,41 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/04h58p752> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    org:status "active" ;
+    org:classification "facility" ; 
+    dct:created "2024-12-09"^^xsd:date ;
+    dct:modified "2024-12-10"^^xsd:date ;
+    org:alternativeName "Centre for Computational Personalised Medicine"@en ; 
+    org:alternativeName "Sano"@eo ; 
+    org:alternativeName "Sano- Centrum Medycyny Obliczeniowej"@pl ; 
+    org:alternativeName "The Sano Centre for Computational Medicine"@en ; 
+    schema:url <http://sano.science> ; 
+    schema:mainEntityOfPage <https://sano.science> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(19.93658 50.06143)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Krakow" ;
+            schema:addressCountry "PL" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Poland" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3094802/> ;
+    ] ; 
+    .

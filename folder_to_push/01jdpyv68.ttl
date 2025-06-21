@@ -1,0 +1,72 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/01jdpyv68> a org:Organization ;
+    rdfs:label "Saarland University" ;
+    schema:name "Saarland University" ;
+    schema:foundingDate "1948"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-12-10"^^xsd:date ;
+    schema:mainEntityOfPage <http://www.uni-saarland.de/en/home.html> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Saarland_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100005690> ;
+    schema:sameAs <https://grid.ac/institutions/grid.11749.3a> ;
+    schema:sameAs <http://isni.org/isni/0000000121677588> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02dm92c46> ;
+        rdfs:label "Europa-Institut" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/002n9qz56> ;
+        rdfs:label "European School of Materials" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/04wg18j80> ;
+        rdfs:label "Klinikum Saarbrücken" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00nvxt968> ;
+        rdfs:label "Universitätsklinikum des Saarlandes" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05mnb8680> ;
+        rdfs:label "Deutscher EDV-Gerichtstag" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(7.00982 49.23262)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Saarbrücken" ;
+            schema:addressCountry "DE" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Germany" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2842647/> ;
+    ] ; 
+    .

@@ -4,28 +4,60 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/05m1y4204> a org:Organization ;
     rdfs:label "Serbian Academy of Sciences and Arts" ;
     schema:name "Serbian Academy of Sciences and Arts" ;
     schema:foundingDate "1841"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Government" ; 
-    org:abbreviation "SASA" ;
-    org:alternativeName "Srpska Akademija Nauka i Umetnosti" ;
-    schema:url <http://www.sanu.ac.rs/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Serbian_Academy_of_Sciences_and_Arts> ;
+    org:classification "funder" ; 
+    org:classification "government" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-12-10"^^xsd:date ;
+    org:abbreviation "SANU"@None ; 
+    org:abbreviation "SASA"@None ; 
+    org:alternativeName "Srpska Akademija Nauka i Umetnosti"@sr ; 
+    schema:mainEntityOfPage <http://www.sanu.ac.rs/> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Serbian_Academy_of_Sciences_and_Arts> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100018992> ;
+    schema:sameAs <https://grid.ac/institutions/grid.419269.1> ;
+    schema:sameAs <http://isni.org/isni/0000000121462771> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02f2wk572> ;
+        rdfs:label "Institute of Technical Sciences of SASA" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02jxk1021> ;
+        rdfs:label "Mathematical Institute of the Serbian Academy of Sciences and Arts" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03ham0v36> ;
+        rdfs:label "Etnografski institut Srpske akademije nauka i umetnosti" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(20.46513 44.80401)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(20.46513 44.80401)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Belgrade" ;
             schema:addressCountry "RS" ;
-            owl:sameAs <http://sws.geonames.org/792680/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000121462771> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1132636> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Serbia" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/792680/> ;
+    ] ; 
     .

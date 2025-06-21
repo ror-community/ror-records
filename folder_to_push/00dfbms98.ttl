@@ -1,0 +1,47 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/00dfbms98> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "1950"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-12-10"^^xsd:date ;
+    org:alternativeName "Hamburg University of Music and Theater"@en ; 
+    org:abbreviation "HfMT"@None ; 
+    org:alternativeName "Public University of Music"@en ; 
+    org:alternativeName "Staatliche Hochschule für Musik"@de ; 
+    org:alternativeName "University of Music and Drama Hamburg"@en ; 
+    org:alternativeName "University of Music and Theatre Hamburg"@en ; 
+    schema:url <http://hfmt-hamburg.de> ; 
+    schema:mainEntityOfPage <https://www.hfmt-hamburg.de> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Hochschule_f%C3%BCr_Musik_und_Theater_Hamburg> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.461662.1> ;
+    schema:sameAs <http://isni.org/isni/0000000123754997> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(9.99302 53.55073)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Hamburg" ;
+            schema:addressCountry "DE" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Germany" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2911298/> ;
+    ] ; 
+    .

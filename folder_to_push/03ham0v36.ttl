@@ -1,0 +1,51 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/03ham0v36> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "1947"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "facility" ; 
+    dct:created "2024-12-09"^^xsd:date ;
+    dct:modified "2024-12-10"^^xsd:date ;
+    org:abbreviation "EI SASA"@sr ; 
+    org:alternativeName "Etnografski institut SANU"@sr ; 
+    org:alternativeName "Institute of Ethnography SASA"@en ; 
+    org:alternativeName "Institute of Ethnography Serbian Academy of Sciences and Arts"@en ; 
+    org:alternativeName "Етнографски институт САНУ"@sr ; 
+    org:alternativeName "Етнографски институт Српске академије наука и уметности"@sr ; 
+    schema:url <http://etno-institut.co.rs> ; 
+    schema:mainEntityOfPage <https://etno-institut.co.rs> ;
+    owl:sameAs <https://sh.wikipedia.org/wiki/Etnografski_institut_SANU> ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/05m1y4204> ;
+        rdfs:label "Serbian Academy of Sciences and Arts" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(20.46513 44.80401)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Belgrade" ;
+            schema:addressCountry "RS" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Serbia" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/792680/> ;
+    ] ; 
+    .

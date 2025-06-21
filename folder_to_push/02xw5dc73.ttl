@@ -1,0 +1,42 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/02xw5dc73> a org:Organization ;
+    rdfs:label "Facility for Airborne Atmospheric Measurements" ;
+    schema:name "Facility for Airborne Atmospheric Measurements" ;
+    schema:foundingDate "1972"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "facility" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-12-10"^^xsd:date ;
+    org:abbreviation "FAAM"@None ; 
+    schema:url <http://faam.ac.uk> ; 
+    schema:mainEntityOfPage <https://www.faam.ac.uk> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Facility_for_Airborne_Atmospheric_Measurements> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.459467.d> ;
+    schema:sameAs <http://isni.org/isni/0000000417962740> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-0.60884 52.06869)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Cranfield" ;
+            schema:addressCountry "GB" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United Kingdom" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2652087/> ;
+    ] ; 
+    .

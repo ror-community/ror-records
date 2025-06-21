@@ -13,10 +13,16 @@
     org:status "active" ;
     org:classification "government" ; 
     dct:created "2024-06-19"^^xsd:date ;
-    dct:modified "2024-06-20"^^xsd:date ;
+    dct:modified "2024-12-10"^^xsd:date ;
     org:abbreviation "SHC"@en ; 
     schema:url <http://shc.gov.sa> ; 
     schema:mainEntityOfPage <https://shc.gov.sa> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01wh7p279> ;
+        rdfs:label "Center for Health Research Studies" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(46.72185 24.68773)"^^geo:wktLiteral ;

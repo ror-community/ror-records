@@ -1,0 +1,59 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/03h3w3289> a org:Organization ;
+    rdfs:label "Deutscher Verein des Gas und Wasserfaches" ;
+    schema:name "Deutscher Verein des Gas und Wasserfaches" ;
+    schema:foundingDate "1859"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "other" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-12-10"^^xsd:date ;
+    org:abbreviation "DVGW"@None ; 
+    schema:mainEntityOfPage <http://www.dvgw.de/english-pages/dvgw/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Deutscher_Verein_des_Gas-_und_Wasserfaches> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.424189.2> ;
+    schema:sameAs <http://isni.org/isni/0000000110186740> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0441q2c30> ;
+        rdfs:label "DVGW - Technologiezentrum Wasser" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/040fv5d16> ;
+        rdfs:label "DVGW-Forschungsstelle am Engler-Bunte-Institut des Karlsruher Instituts für Technologie" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/048cva627> ;
+        rdfs:label "DVGW-Forschungsstelle TUHH" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(7.09549 50.73438)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Bonn" ;
+            schema:addressCountry "DE" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Germany" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2946447/> ;
+    ] ; 
+    .

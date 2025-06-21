@@ -4,25 +4,50 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/0584m4844> a org:Organization ;
-    rdfs:label "Air Force Research Laboratory Materials and Manufacturing Directorate" ;
-    schema:name "Air Force Research Laboratory Materials and Manufacturing Directorate" ;
+    rdfs:label "" ;
+    schema:name "" ;
     schema:foundingDate "1997"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Government" ; 
-    org:abbreviation "AFRL/RX" ;
-    org:alternativeName "United States Air Force Research Laboratory Materials and Manufacturing Directorate" ;
-    schema:url <https://www.afrl.af.mil/RX/> ; 
+    org:classification "funder" ; 
+    org:classification "government" ; 
+    dct:created "2023-11-08"^^xsd:date ;
+    dct:modified "2024-12-10"^^xsd:date ;
+    org:alternativeName "AFRL Materials & Manufacturing Directorate"@en ; 
+    org:alternativeName "AFRL Materials and Manufacturing Directorate"@en ; 
+    org:abbreviation "AFRL/RX"@None ; 
+    org:alternativeName "Air Force Research Lab Materials and Manufacturing Directorate"@en ; 
+    org:alternativeName "Air Force Research Laboratory Materials and Manufacturing Directorate"@en ; 
+    org:alternativeName "Air Force Research Laboratory RX"@en ; 
+    org:alternativeName "United States Air Force Research Laboratory Materials and Manufacturing Directorate"@en ; 
+    schema:mainEntityOfPage <https://www.afrl.af.mil/RX/> ;
+    schema:sameAs <https://api.crossref.org/funders/100019377> ;
+    schema:sameAs <http://isni.org/isni/000000040648048X> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02e2egq70> ;
+        rdfs:label "United States Air Force Research Laboratory" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-84.0368 39.82201)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-84.0368 39.82201)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Wright-Patterson Air Force Base" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/7701733/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/000000040648048X> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/7701733/> ;
+    ] ; 
     .

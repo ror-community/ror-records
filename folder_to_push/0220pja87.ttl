@@ -1,0 +1,47 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/0220pja87> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "1952"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "other" ; 
+    dct:created "2024-12-09"^^xsd:date ;
+    dct:modified "2024-12-10"^^xsd:date ;
+    org:abbreviation "IEEE MTT-S"@en ; 
+    org:abbreviation "MTT-S"@en ; 
+    schema:url <http://mtt.org> ; 
+    schema:mainEntityOfPage <https://mtt.org> ;
+    schema:sameAs <http://isni.org/isni/0000000122898964> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/01n002310> ;
+        rdfs:label "Institute of Electrical and Electronics Engineers" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-76.71358 39.21261)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Elkridge" ;
+            schema:addressCountry "US" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/4354256/> ;
+    ] ; 
+    .

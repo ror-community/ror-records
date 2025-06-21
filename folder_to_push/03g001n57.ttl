@@ -4,26 +4,45 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/03g001n57> a org:Organization ;
     rdfs:label "Champalimaud Foundation" ;
     schema:name "Champalimaud Foundation" ;
     schema:foundingDate "2004"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    schema:url <http://www.fchampalimaud.org/en/the-foundation/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Champalimaud_Foundation> ;
+    org:classification "facility" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-12-10"^^xsd:date ;
+    schema:mainEntityOfPage <http://www.fchampalimaud.org/en/the-foundation/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Champalimaud_Foundation> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100014069> ;
+    schema:sameAs <https://grid.ac/institutions/grid.421010.6> ;
+    schema:sameAs <http://isni.org/isni/0000000404539636> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/007rd1x46> ;
+        rdfs:label "Centro Champalimaud" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-9.13333 38.71667)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-9.13333 38.71667)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Lisbon" ;
             schema:addressCountry "PT" ;
-            owl:sameAs <http://sws.geonames.org/2267057/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000404539636> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q5069928> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Portugal" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2267057/> ;
+    ] ; 
     .

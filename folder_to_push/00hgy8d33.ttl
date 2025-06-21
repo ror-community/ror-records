@@ -4,28 +4,47 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/00hgy8d33> a org:Organization ;
     rdfs:label "Defence Research and Development Canada" ;
     schema:name "Defence Research and Development Canada" ;
     schema:foundingDate "1947"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Government" ; 
-    org:abbreviation "DRDC" ;
-    schema:url <http://www.drdc-rddc.gc.ca/en/index.page> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Defence_Research_and_Development_Canada> ;
+    org:classification "funder" ; 
+    org:classification "government" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-12-10"^^xsd:date ;
+    org:abbreviation "DRDC"@None ; 
+    org:abbreviation "RDDC"@None ; 
+    schema:mainEntityOfPage <http://www.drdc-rddc.gc.ca/en/index.page> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Defence_Research_and_Development_Canada> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100002956> ;
+    schema:sameAs <https://grid.ac/institutions/grid.1463.0> ;
+    schema:sameAs <http://isni.org/isni/0000000106926582> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/035rreb34> ;
+        rdfs:label "Department of National Defence" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-75.69812 45.41117)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-75.69812 45.41117)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Ottawa" ;
             schema:addressCountry "CA" ;
-            owl:sameAs <http://sws.geonames.org/6094817/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000106926582> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1182587> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q5206019> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Canada" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/6094817/> ;
+    ] ; 
     .

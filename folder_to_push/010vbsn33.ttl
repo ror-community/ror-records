@@ -4,26 +4,49 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/010vbsn33> a org:Organization ;
-    rdfs:label "Bonn International Centre for Conflict Studies (BICC)" ;
-    schema:name "Bonn International Centre for Conflict Studies (BICC)" ;
+    rdfs:label "" ;
+    schema:name "" ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "BICC" ;
-    schema:url <https://www.bicc.de/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Bonn_International_Center_for_Conversion> ;
+    org:classification "facility" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-12-10"^^xsd:date ;
+    org:abbreviation "BICC"@None ; 
+    org:alternativeName "BICC - Bonn International Center for Conflict Studies"@en ; 
+    org:alternativeName "BICC - Bonn International Center for Conversion"@en ; 
+    org:alternativeName "BICC - Bonn International Centre for Conflict Studies gGmbH"@en ; 
+    org:alternativeName "Bonn International Center for Conflict Studies"@en ; 
+    org:alternativeName "Bonn International Center for Conflict Studies (BICC)"@en ; 
+    org:alternativeName "Bonn International Center for Conflict Studies - BICC"@en ; 
+    org:alternativeName "Bonn International Center for Conversion (BICC)"@en ; 
+    org:alternativeName "Bonn International Centre for Conflict Studies (BICC)"@en ; 
+    org:alternativeName "Bonn International Centre for Conflict Studies - BICC"@en ; 
+    org:alternativeName "Internationales Konversionszentrum Bonn"@de ; 
+    org:alternativeName "Internationales Konversionszentrum Bonn - Bonn International Center for Conversion (BICC) GmbH (Bonn)"@de ; 
+    schema:url <http://bicc.de> ; 
+    schema:mainEntityOfPage <https://www.bicc.de> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Bonn_International_Center_for_Conversion> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.450209.a> ;
+    schema:sameAs <http://isni.org/isni/0000000405624461> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(7.09549 50.73438)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(7.09549 50.73438)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Bonn" ;
             schema:addressCountry "DE" ;
-            owl:sameAs <http://sws.geonames.org/2946447/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000405624461> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q892690> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Germany" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2946447/> ;
+    ] ; 
     .

@@ -1,0 +1,43 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/031w3kk19> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "1931"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "funder" ; 
+    org:classification "other" ; 
+    dct:created "2024-12-09"^^xsd:date ;
+    dct:modified "2024-12-10"^^xsd:date ;
+    org:abbreviation "MLA"@en ; 
+    schema:url <http://musiclibraryassoc.org> ; 
+    schema:mainEntityOfPage <https://www.musiclibraryassoc.org> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Music_Library_Association> ; 
+    schema:sameAs <https://api.crossref.org/funders/100029637> ;
+    schema:sameAs <http://isni.org/isni/0000000119563792> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-89.50429 43.09722)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Middleton" ;
+            schema:addressCountry "US" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/5262838/> ;
+    ] ; 
+    .

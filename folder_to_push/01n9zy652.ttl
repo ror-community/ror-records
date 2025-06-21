@@ -1,0 +1,48 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/01n9zy652> a org:Organization ;
+    rdfs:label "Medical University of Sofia" ;
+    schema:name "Medical University of Sofia" ;
+    schema:foundingDate "1917"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-12-10"^^xsd:date ;
+    schema:mainEntityOfPage <http://www.mu-sofia.bg/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Medical_University,_Sofia> ; 
+    schema:sameAs <https://api.crossref.org/funders/100009086> ;
+    schema:sameAs <https://grid.ac/institutions/grid.410563.5> ;
+    schema:sameAs <http://isni.org/isni/0000000406210092> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02n2wvw97> ;
+        rdfs:label "Specialized Hospital for Active Treatment of Children's Diseases "Prof. Ivan Mitev" ЕАD-Sofia" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(23.32415 42.69751)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Sofia" ;
+            schema:addressCountry "BG" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Bulgaria" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/727011/> ;
+    ] ; 
+    .

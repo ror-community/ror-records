@@ -1,0 +1,38 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/011gp7f64> a org:Organization ;
+    rdfs:label "Hospital Zambrano Hellion" ;
+    schema:name "Hospital Zambrano Hellion" ;
+    org:status "active" ;
+    org:classification "healthcare" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-12-10"^^xsd:date ;
+    schema:mainEntityOfPage <http://www.cmzh.com.mx> ;
+    schema:sameAs <https://grid.ac/institutions/grid.488979.3> ;
+    schema:sameAs <http://isni.org/isni/0000000446881229> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-100.40651 25.6604)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Garza García" ;
+            schema:addressCountry "MX" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Mexico" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/4005937/> ;
+    ] ; 
+    .

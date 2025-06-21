@@ -4,27 +4,39 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/03dhbdp32> a org:Organization ;
     rdfs:label "Özgür Yayınları" ;
     schema:name "Özgür Yayınları" ;
     schema:foundingDate "1969"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Other" ; 
-    org:abbreviation "OZGUR" ;
-    org:alternativeName "Ozgur Press" ;
-    schema:url <https://www.ozguryayinlari.com> ; 
-    owl:sameAs <https://tr.wikipedia.org/wiki/%C3%96zg%C3%BCr_Yay%C4%B1nlar%C4%B1> ;
+    org:classification "other" ; 
+    dct:created "2023-12-07"^^xsd:date ;
+    dct:modified "2024-12-10"^^xsd:date ;
+    org:abbreviation "OZGUR"@None ; 
+    org:alternativeName "Ozgur Press"@en ; 
+    org:alternativeName "Ozgur Yayinlari"@en ; 
+    schema:mainEntityOfPage <https://www.ozguryayinlari.com> ;
+    owl:sameAs <https://tr.wikipedia.org/wiki/%C3%96zg%C3%BCr_Yay%C4%B1nlar%C4%B1> ; 
+    schema:sameAs <http://isni.org/isni/0000000512775345> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(37.3825 37.05944)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(37.3825 37.05944)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Gaziantep" ;
             schema:addressCountry "TR" ;
-            owl:sameAs <http://sws.geonames.org/314830/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000512775345> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q21745557> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Türkiye" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/314830/> ;
+    ] ; 
     .

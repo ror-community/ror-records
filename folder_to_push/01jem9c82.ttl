@@ -4,26 +4,129 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01jem9c82> a org:Organization ;
     rdfs:label "Junta de Andalucía" ;
     schema:name "Junta de Andalucía" ;
     schema:foundingDate "1981"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Government" ; 
-    schema:url <https://www.juntadeandalucia.es> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Regional_Government_of_Andalusia> ;
+    org:classification "funder" ; 
+    org:classification "government" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-12-10"^^xsd:date ;
+    schema:mainEntityOfPage <https://www.juntadeandalucia.es> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Regional_Government_of_Andalusia> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100011011> ;
+    schema:sameAs <https://grid.ac/institutions/grid.419693.0> ;
+    schema:sameAs <http://isni.org/isni/0000000405468753> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05jt8mz33> ;
+        rdfs:label "Agencia de Medio Ambiente y Agua de Andalucía" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02w21g732> ;
+        rdfs:label "Andalusian Institute of Agricultural and Fisheries Research and Training" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0269h3m05> ;
+        rdfs:label "Consejería de Agricultura, Pesca, Agua y Desarrollo Rural" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/040yga518> ;
+        rdfs:label "Consejería de Desarrollo Educativo y Formación Porfesional" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03kak1729> ;
+        rdfs:label "Consejería de Empleo, Formación y Trabajo Autónomo" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/050cc1579> ;
+        rdfs:label "Consejería de Inclusión Social, Juventud, Familias e Igualdad" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/047pymx40> ;
+        rdfs:label "Consejería de Salud y Consumo" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05pmk8j16> ;
+        rdfs:label "Consejería de la Presidencia, Interior, Diálogo Social y Simplificación Administrativa" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/031zwx660> ;
+        rdfs:label "Instituto de Biomedicina de Sevilla" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00r1wwd23> ;
+        rdfs:label "Centro Nacional de Aceleradores" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00pptgy96> ;
+        rdfs:label "Consejería de Economía, Conocimiento, Empresas y Universidad" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02nkg1w23> ;
+        rdfs:label "Consejería de Universidad, Investigación e Innovación" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01v5e3436> ;
+        rdfs:label "Centro Andaluz de Biología del Desarrollo" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/059t7s261> ;
+        rdfs:label "Centro de Documentación Musical de Andalucía" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03zpx9a04> ;
+        rdfs:label "Fundación Pública Andaluza Centro de las Nuevas Tecnologías del Agua" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-5.97317 37.38283)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-5.97317 37.38283)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Seville" ;
             schema:addressCountry "ES" ;
-            owl:sameAs <http://sws.geonames.org/2510911/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000405468753> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q2743342> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Spain" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2510911/> ;
+    ] ; 
     .

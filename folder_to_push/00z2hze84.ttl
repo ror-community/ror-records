@@ -1,0 +1,44 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/00z2hze84> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "2007"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2024-12-09"^^xsd:date ;
+    dct:modified "2024-12-10"^^xsd:date ;
+    org:abbreviation "BUAS"@en ; 
+    org:alternativeName "Polytechnic in Bjelovar"@en ; 
+    org:alternativeName "Technical College in Bjelovar"@en ; 
+    org:abbreviation "VUB"@hr ; 
+    org:alternativeName "Visoka tehnička škola u Bjelovaru"@hr ; 
+    schema:url <http://vub.hr> ; 
+    schema:mainEntityOfPage <https://vub.hr> ;
+    owl:sameAs <https://hr.wikipedia.org/wiki/Veleu%C4%8Dili%C5%A1te_u_Bjelovaru> ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(16.84889 45.89861)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Bjelovar" ;
+            schema:addressCountry "HR" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Croatia" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3203982/> ;
+    ] ; 
+    .

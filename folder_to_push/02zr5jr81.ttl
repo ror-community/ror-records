@@ -1,0 +1,42 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/02zr5jr81> a org:Organization ;
+    rdfs:label "University of Douala" ;
+    schema:name "University of Douala" ;
+    schema:foundingDate "1977"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-12-10"^^xsd:date ;
+    org:abbreviation "UDla"@None ; 
+    schema:url <http://univ-douala.cm> ; 
+    schema:mainEntityOfPage <https://www.univ-douala.cm> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Douala> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.413096.9> ;
+    schema:sameAs <http://isni.org/isni/000000012107607X> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(9.70428 4.04827)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Douala" ;
+            schema:addressCountry "CM" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Cameroon" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2232593/> ;
+    ] ; 
+    .

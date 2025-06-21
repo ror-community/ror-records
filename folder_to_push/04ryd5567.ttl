@@ -1,0 +1,40 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/04ryd5567> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "2024"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "healthcare" ; 
+    dct:created "2024-12-09"^^xsd:date ;
+    dct:modified "2024-12-10"^^xsd:date ;
+    org:abbreviation "FTMA"@en ; 
+    org:alternativeName "파티마동물의료센터"@ko ; 
+    schema:url <http://24ftma.com> ; 
+    schema:mainEntityOfPage <https://www.24ftma.com> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(128.59111 35.87028)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Daegu" ;
+            schema:addressCountry "KR" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "South Korea" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1835329/> ;
+    ] ; 
+    .

@@ -1,0 +1,52 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/02ggnh308> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "1966"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "facility" ; 
+    dct:created "2020-10-19"^^xsd:date ;
+    dct:modified "2024-12-10"^^xsd:date ;
+    org:abbreviation "ICMA RAS"@en ; 
+    org:abbreviation "IFES RAS"@None ; 
+    org:alternativeName "Institute of China and Modern Asia"@en ; 
+    org:alternativeName "Institute of Far Eastern Studies"@en ; 
+    org:abbreviation "ИКСА РАН"@ru ; 
+    org:alternativeName "Институт Дальнего Востока РАН"@ru ; 
+    schema:url <http://iccaras.ru> ; 
+    schema:mainEntityOfPage <https://www.iccaras.ru> ;
+    schema:sameAs <https://grid.ac/institutions/grid.508535.e> ;
+    schema:sameAs <http://isni.org/isni/000000011883129X> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/05qrfxd25> ;
+        rdfs:label "Russian Academy of Sciences" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(37.61556 55.75222)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Moscow" ;
+            schema:addressCountry "RU" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Russia" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/524901/> ;
+    ] ; 
+    .

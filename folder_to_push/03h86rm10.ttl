@@ -1,0 +1,54 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/03h86rm10> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2024-12-09"^^xsd:date ;
+    dct:modified "2024-12-10"^^xsd:date ;
+    org:alternativeName "CESAM-Ciências"@pt ; 
+    org:abbreviation "UA CESAM"@pt ; 
+    org:alternativeName "Universidade de Aveiro Centro de Estudos do Ambiente e do Mar"@pt ; 
+    org:alternativeName "Universidade de Lisboa Centro de Estudos do Ambiente e do Mar"@pt ; 
+    schema:url <http://cesam-la.pt> ; 
+    schema:mainEntityOfPage <https://www.cesam-la.pt> ;
+    schema:sameAs <http://isni.org/isni/0000000458969287> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/00nt41z93> ;
+        rdfs:label "University of Aveiro" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/01c27hj86> ;
+        rdfs:label "University of Lisbon" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-8.64554 40.64427)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Aveiro" ;
+            schema:addressCountry "PT" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Portugal" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2742611/> ;
+    ] ; 
+    .

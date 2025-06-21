@@ -4,24 +4,35 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/00cwssz89> a org:Organization ;
     rdfs:label "Hospice Africa France" ;
     schema:name "Hospice Africa France" ;
     schema:foundingDate "2009"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Healthcare" ; 
-    schema:url <http://www.hospiceafricafrance.com/> ; 
+    org:classification "healthcare" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-12-10"^^xsd:date ;
+    schema:mainEntityOfPage <http://www.hospiceafricafrance.com> ;
+    schema:sameAs <https://grid.ac/institutions/grid.428764.b> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-2.33598 48.40888)"^^geo:wktLiteral ;
-            schema:addressLocality "Commune de Jugon-les-Lacs - Commune nouvelle" ;
+        a schema:Place ;
+        geo:asWKT "POINT(-2.3212 48.4092)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Jugon-les-Lacs" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/12179257/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://www.wikidata.org/entity/Q30287386> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/6616111/> ;
+    ] ; 
     .

@@ -1,0 +1,42 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/05j9d8v51> a org:Organization ;
+    rdfs:label "National Taitung University" ;
+    schema:name "National Taitung University" ;
+    schema:foundingDate "2003"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-12-10"^^xsd:date ;
+    org:alternativeName "Guólì Táidōng Dàxué"@None ; 
+    org:abbreviation "NTTU"@None ; 
+    schema:mainEntityOfPage <http://wwwen.nttu.edu.tw/bin/home.php> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/National_Taitung_University> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.412088.7> ;
+    schema:sameAs <http://isni.org/isni/0000000417971946> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(121.14457 22.75991)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Taitung" ;
+            schema:addressCountry "TW" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Taiwan" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1668295/> ;
+    ] ; 
+    .

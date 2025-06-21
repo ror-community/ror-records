@@ -1,0 +1,40 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/04rmdjx50> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "1979"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "company" ; 
+    dct:created "2024-12-09"^^xsd:date ;
+    dct:modified "2024-12-10"^^xsd:date ;
+    org:abbreviation "IR"@en ; 
+    org:alternativeName "Inter-Research Science Center"@en ; 
+    schema:url <http://int-res.com> ; 
+    schema:mainEntityOfPage <https://www.int-res.com> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(10.2167 53.15)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Oldendorf (Luhe)" ;
+            schema:addressCountry "DE" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Germany" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/6552686/> ;
+    ] ; 
+    .

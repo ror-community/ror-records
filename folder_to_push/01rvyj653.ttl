@@ -1,0 +1,44 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/01rvyj653> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "1880"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "funder" ; 
+    org:classification "other" ; 
+    dct:created "2024-12-09"^^xsd:date ;
+    dct:modified "2024-12-10"^^xsd:date ;
+    org:alternativeName "にほんやくがくかい"@ja ; 
+    org:alternativeName "日本薬学会"@ja ; 
+    schema:url <http://pharm.or.jp> ; 
+    schema:mainEntityOfPage <https://www.pharm.or.jp> ;
+    owl:sameAs <https://ja.wikipedia.org/wiki/%E6%97%A5%E6%9C%AC%E8%96%AC%E5%AD%A6%E4%BC%9A> ; 
+    schema:sameAs <https://api.crossref.org/funders/100016981> ;
+    schema:sameAs <http://isni.org/isni/0000000119553252> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(139.69171 35.6895)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Tokyo" ;
+            schema:addressCountry "JP" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Japan" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1850147/> ;
+    ] ; 
+    .

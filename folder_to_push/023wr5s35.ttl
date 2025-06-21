@@ -1,0 +1,44 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/023wr5s35> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2024-12-09"^^xsd:date ;
+    dct:modified "2024-12-10"^^xsd:date ;
+    org:alternativeName "IT Nuevo Leon"@es ; 
+    org:abbreviation "ITNL"@es ; 
+    org:abbreviation "TECNL"@es ; 
+    org:alternativeName "TecNM Campus Nuevo León"@es ; 
+    org:alternativeName "TecNM Nuevo Leon"@es ; 
+    org:alternativeName "Tecnológico Nacional de México Campus Nuevo León"@es ; 
+    schema:url <http://nuevoleon.tecnm.mx> ; 
+    schema:mainEntityOfPage <http://nuevoleon.tecnm.mx> ;
+    schema:sameAs <http://isni.org/isni/0000000406331484> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-100.25646 25.67678)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Guadalupe" ;
+            schema:addressCountry "MX" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Mexico" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/4005492/> ;
+    ] ; 
+    .

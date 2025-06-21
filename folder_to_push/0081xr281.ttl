@@ -4,28 +4,47 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/0081xr281> a org:Organization ;
     rdfs:label "Nevada State University" ;
     schema:name "Nevada State University" ;
     schema:foundingDate "2002"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "NSC" ;
-    org:alternativeName "Nevada State College" ;
-    schema:url <https://nevadastate.edu> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Nevada_State_College> ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-12-10"^^xsd:date ;
+    org:abbreviation "NS"@en ; 
+    org:abbreviation "NSC"@None ; 
+    org:abbreviation "NSU"@en ; 
+    org:alternativeName "Nevada State College"@en ; 
+    schema:mainEntityOfPage <https://nevadastate.edu> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Nevada_State_College> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.454653.5> ;
+    schema:sameAs <http://isni.org/isni/0000000403954782> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/03sxdvx36> ;
+        rdfs:label "Nevada System of Higher Education" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-114.98194 36.0397)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-114.98194 36.0397)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Henderson" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/5505411/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000403954782> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1658675> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/5505411/> ;
+    ] ; 
     .

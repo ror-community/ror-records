@@ -1,0 +1,42 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/02f57qw79> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    org:status "active" ;
+    org:classification "other" ; 
+    dct:created "2024-12-09"^^xsd:date ;
+    dct:modified "2024-12-10"^^xsd:date ;
+    org:alternativeName "Nihon Naibunpi Gakkai"@ja ; 
+    org:alternativeName "にほんないぶんぴがっかい"@ja ; 
+    org:alternativeName "日本内分泌学会"@ja ; 
+    schema:url <http://j-endo.jp> ; 
+    schema:mainEntityOfPage <https://www.j-endo.jp> ;
+    owl:sameAs <https://ja.wikipedia.org/wiki/%E6%97%A5%E6%9C%AC%E5%86%85%E5%88%86%E6%B3%8C%E5%AD%A6%E4%BC%9A> ; 
+    schema:sameAs <http://isni.org/isni/0000000110100871> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(135.75385 35.02107)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Kyoto" ;
+            schema:addressCountry "JP" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Japan" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1857910/> ;
+    ] ; 
+    .

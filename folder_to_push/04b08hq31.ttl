@@ -1,0 +1,47 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/04b08hq31> a org:Organization ;
+    rdfs:label "Instituto Gulbenkian de Ciência" ;
+    schema:name "Instituto Gulbenkian de Ciência" ;
+    schema:foundingDate "1961"^^xsd:gYear ;
+    org:status "inactive" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-12-10"^^xsd:date ;
+    org:abbreviation "IGC"@None ; 
+    schema:mainEntityOfPage <http://www.igc.gulbenkian.pt> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Instituto_Gulbenkian_de_Ci%C3%AAncia> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.418346.c> ;
+    schema:sameAs <http://isni.org/isni/0000000121913202> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "successor" ;
+        org:member <https://ror.org/0346k0491> ;
+        rdfs:label "Gulbenkian Institute for Molecular Medicine" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-9.31085 38.69105)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Oeiras" ;
+            schema:addressCountry "PT" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Portugal" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2265464/> ;
+    ] ; 
+    .

@@ -4,27 +4,88 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01n002310> a org:Organization ;
     rdfs:label "Institute of Electrical and Electronics Engineers" ;
     schema:name "Institute of Electrical and Electronics Engineers" ;
     schema:foundingDate "1963"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "IEEE" ;
-    schema:url <https://www.ieee.org> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Institute_of_Electrical_and_Electronics_Engineers> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-12-10"^^xsd:date ;
+    org:abbreviation "IEEE"@None ; 
+    schema:mainEntityOfPage <https://www.ieee.org> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Institute_of_Electrical_and_Electronics_Engineers> ; 
+    schema:sameAs <https://api.crossref.org/funders/100006968> ;
+    schema:sameAs <https://grid.ac/institutions/grid.246210.3> ;
+    schema:sameAs <http://isni.org/isni/0000000404416628> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03btazg73> ;
+        rdfs:label "IEEE Industry Applications Society" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03z50d035> ;
+        rdfs:label "Actuated Medical (United States)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02nwsdc81> ;
+        rdfs:label "IEEE Photonics Society" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0173vvc25> ;
+        rdfs:label "IEEE Magnetics Society" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04fpxzg11> ;
+        rdfs:label "IEEE Communications Society" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00xrbvb54> ;
+        rdfs:label "IEEE Antennas and Propagation Society" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0220pja87> ;
+        rdfs:label "IEEE Microwave Theory and Techniques Society" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/023awsf17> ;
+        rdfs:label "IEEE Standards Association" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-74.39904 40.49927)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-74.39904 40.49927)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Piscataway" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/5102713/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000404416628> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q131566> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/5102713/> ;
+    ] ; 
     .

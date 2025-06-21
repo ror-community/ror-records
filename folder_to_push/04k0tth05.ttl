@@ -4,27 +4,53 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/04k0tth05> a org:Organization ;
-    rdfs:label "Air Force Test Center" ;
-    schema:name "Air Force Test Center" ;
+    rdfs:label "" ;
+    schema:name "" ;
     schema:foundingDate "1951"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Government" ; 
-    org:classification "Facility" ; 
-    org:abbreviation "AFTC" ;
-    org:alternativeName "U.S. Air Force Test Center" ;
-    schema:url <https://www.aftc.af.mil> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Air_Force_Test_Center> ;
+    org:classification "facility" ; 
+    org:classification "funder" ; 
+    org:classification "government" ; 
+    dct:created "2023-12-07"^^xsd:date ;
+    dct:modified "2024-12-10"^^xsd:date ;
+    org:alternativeName "412th Test Wing"@en ; 
+    org:abbreviation "AFFTC"@None ; 
+    org:abbreviation "AFTC"@None ; 
+    org:alternativeName "Air Force Test Center"@en ; 
+    org:alternativeName "U.S. Air Force 412th Test Wing"@en ; 
+    org:alternativeName "U.S. Air Force Flight Test Center"@en ; 
+    org:alternativeName "United States Air Force 412th Test Wing"@en ; 
+    org:alternativeName "United States Air Force Flight Test Center"@en ; 
+    org:alternativeName "United States Air Force Test Center"@en ; 
+    schema:mainEntityOfPage <https://www.aftc.af.mil> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Air_Force_Test_Center> ; 
+    schema:sameAs <https://api.crossref.org/funders/100014045> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02m4c1x70> ;
+        rdfs:label "U.S. Air Force Materiel Command" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-117.93535 34.91637)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-117.93535 34.91637)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Edwards Air Force Base" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/7261098/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://www.wikidata.org/entity/Q4697972> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/7261098/> ;
+    ] ; 
     .

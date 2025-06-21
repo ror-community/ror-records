@@ -4,25 +4,47 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/00bag6861> a org:Organization ;
-    rdfs:label "Air Force Research Laboratory Munitions Directorate" ;
-    schema:name "Air Force Research Laboratory Munitions Directorate" ;
+    rdfs:label "" ;
+    schema:name "" ;
     schema:foundingDate "1997"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Government" ; 
-    org:abbreviation "AFRL/RW" ;
-    org:alternativeName "United States Air Force Research Laboratory Munitions Directorate" ;
-    schema:url <https://www.afrl.af.mil/RW/> ; 
+    org:classification "government" ; 
+    dct:created "2023-11-08"^^xsd:date ;
+    dct:modified "2024-12-10"^^xsd:date ;
+    org:alternativeName "AFRL Munitions Directorate"@en ; 
+    org:abbreviation "AFRL/RW"@None ; 
+    org:alternativeName "AFRL/RW Munitions Directorate"@en ; 
+    org:alternativeName "Air Force Research Lab Munitions Directorate"@en ; 
+    org:alternativeName "Air Force Research Laboratory Munitions Directorate"@en ; 
+    org:alternativeName "United States Air Force Research Laboratory Munitions Directorate"@en ; 
+    schema:mainEntityOfPage <https://www.afrl.af.mil/RW/> ;
+    schema:sameAs <http://isni.org/isni/0000000406480498> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02e2egq70> ;
+        rdfs:label "United States Air Force Research Laboratory" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-86.51896 30.47527)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-86.51896 30.47527)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Eglin AFB" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/6301745/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000406480498> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/6301745/> ;
+    ] ; 
     .

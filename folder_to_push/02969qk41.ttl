@@ -4,27 +4,46 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02969qk41> a org:Organization ;
     rdfs:label "Swedish Agency for Economic and Regional Growth" ;
     schema:name "Swedish Agency for Economic and Regional Growth" ;
     schema:foundingDate "2009"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Government" ; 
-    org:alternativeName "Tillväxtverket" ;
-    schema:url <http://www.tillvaxtverket.se/sidhuvud/englishpages.4.21099e4211fdba8c87b800017332.html> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Swedish_Agency_for_Economic_and_Regional_Growth> ;
+    org:classification "funder" ; 
+    org:classification "government" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-12-10"^^xsd:date ;
+    org:alternativeName "Tillväxtverket"@sv ; 
+    schema:mainEntityOfPage <http://www.tillvaxtverket.se/sidhuvud/englishpages.4.21099e4211fdba8c87b800017332.html> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Swedish_Agency_for_Economic_and_Regional_Growth> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100012380> ;
+    schema:sameAs <https://grid.ac/institutions/grid.438261.a> ;
+    schema:sameAs <http://isni.org/isni/0000000105298545> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03wt3br81> ;
+        rdfs:label "Ministry of Climate and Enterprise" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(18.06871 59.32938)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(18.06871 59.32938)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Stockholm" ;
             schema:addressCountry "SE" ;
-            owl:sameAs <http://sws.geonames.org/2673730/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000105298545> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q3370919> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Sweden" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2673730/> ;
+    ] ; 
     .

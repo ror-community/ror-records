@@ -4,23 +4,37 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/03qhv9c02> a org:Organization ;
-    rdfs:label "Australian Earth-System Simulator" ;
-    schema:name "Australian Earth-System Simulator" ;
+    rdfs:label "" ;
+    schema:name "" ;
     schema:foundingDate "2021"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "ACCESS-NRI" ;
-    schema:url <https://www.access-nri.org.au> ; 
+    org:classification "facility" ; 
+    dct:created "2023-11-08"^^xsd:date ;
+    dct:modified "2024-12-10"^^xsd:date ;
+    org:abbreviation "ACCESS-NRI"@None ; 
+    org:alternativeName "Australian Community Climate and Earth System Simulator"@en ; 
+    org:alternativeName "Australian Earth-System Simulator"@en ; 
+    schema:mainEntityOfPage <https://www.access-nri.org.au> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(149.12807 -35.28346)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(149.12807 -35.28346)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Canberra" ;
             schema:addressCountry "AU" ;
-            owl:sameAs <http://sws.geonames.org/2172517/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Australia" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2172517/> ;
+    ] ; 
     .

@@ -1,0 +1,40 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/01nmbn403> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "2016"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2024-12-09"^^xsd:date ;
+    dct:modified "2024-12-10"^^xsd:date ;
+    schema:url <http://uotnowshera.edu.pk> ; 
+    schema:mainEntityOfPage <https://uotnowshera.edu.pk> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/University_of_Technology%2C_Nowshera> ; 
+    schema:sameAs <http://isni.org/isni/0000000465038499> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(71.98092 33.92538)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Nowshera" ;
+            schema:addressCountry "PK" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Pakistan" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/7419052/> ;
+    ] ; 
+    .

@@ -4,27 +4,94 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01cjash87> a org:Organization ;
     rdfs:label "Astellas Pharma (Japan)" ;
     schema:name "Astellas Pharma (Japan)" ;
     schema:foundingDate "2005"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Company" ; 
-    org:alternativeName "Asuterasu Seiyaku Kabushiki-gaisha" ;
-    schema:url <http://www.astellas.com/en/index.html> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Astellas_Pharma> ;
+    org:classification "company" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-12-10"^^xsd:date ;
+    org:alternativeName "Asuterasu Seiyaku Kabushiki-gaisha"@None ; 
+    schema:mainEntityOfPage <http://www.astellas.com/en/index.html> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Astellas_Pharma> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100004948> ;
+    schema:sameAs <https://grid.ac/institutions/grid.418042.b> ;
+    schema:sameAs <http://isni.org/isni/0000000417588699> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/008h8bh21> ;
+        rdfs:label "Astellas Pharma (China)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04bdk6464> ;
+        rdfs:label "Astellas Pharma (Germany)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/013eh1m30> ;
+        rdfs:label "Astellas Pharma (India)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04kyfd050> ;
+        rdfs:label "Astellas Pharma (Netherlands)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04pchp455> ;
+        rdfs:label "Astellas Pharma (South Korea)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/018788w33> ;
+        rdfs:label "Astellas Pharma (United Kingdom)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05pw69n24> ;
+        rdfs:label "Astellas Pharma (United States)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/041repn61> ;
+        rdfs:label "Astellas Pharma (Canada)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00btq2b69> ;
+        rdfs:label "Astellas Farma Lda (Portugal)" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(139.69171 35.6895)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(139.69171 35.6895)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Tokyo" ;
             schema:addressCountry "JP" ;
-            owl:sameAs <http://sws.geonames.org/1850147/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000417588699> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q528842> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Japan" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1850147/> ;
+    ] ; 
     .

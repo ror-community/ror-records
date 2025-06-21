@@ -1,0 +1,43 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/03cw6ep97> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "2005"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2024-12-09"^^xsd:date ;
+    dct:modified "2024-12-10"^^xsd:date ;
+    org:abbreviation "FRAPS"@fr ; 
+    org:abbreviation "FRAPS CVL"@fr ; 
+    org:alternativeName "FRAPS CVL - Fédération Régionale des Acteurs en Promotion de la Santé - Centre Val de Loire"@fr ; 
+    org:alternativeName "FRAPS Centre-Val de Loire"@fr ; 
+    org:alternativeName "FRAPS Promotion Santé"@fr ; 
+    schema:url <http://frapscentre.org> ; 
+    schema:mainEntityOfPage <https://frapscentre.org> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(0.70398 47.39484)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Tours" ;
+            schema:addressCountry "FR" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2972191/> ;
+    ] ; 
+    .

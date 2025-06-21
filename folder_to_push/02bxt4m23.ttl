@@ -4,27 +4,149 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02bxt4m23> a org:Organization ;
     rdfs:label "Northwell Health" ;
     schema:name "Northwell Health" ;
     schema:foundingDate "1997"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Healthcare" ; 
-    org:alternativeName "North Shore-LIJ Health System" ;
-    schema:url <https://www.northwell.edu/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Northwell_Health> ;
+    org:classification "funder" ; 
+    org:classification "healthcare" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-12-10"^^xsd:date ;
+    org:alternativeName "North Shore-LIJ Health System"@en ; 
+    org:alternativeName "North Shore-Long Island Jewish Health System"@en ; 
+    schema:mainEntityOfPage <https://www.northwell.edu/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Northwell_Health> ; 
+    schema:sameAs <https://api.crossref.org/funders/100019311> ;
+    schema:sameAs <https://grid.ac/institutions/grid.416477.7> ;
+    schema:sameAs <http://isni.org/isni/0000000121683646> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/028dac806> ;
+        rdfs:label "Arthur Smith Institute for Urology" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01phhgk62> ;
+        rdfs:label "Boca Raton Regional Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05a2agx14> ;
+        rdfs:label "Crouse Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01ff5td15> ;
+        rdfs:label "Donald & Barbara Zucker School of Medicine at Hofstra/Northwell" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05dnene97> ;
+        rdfs:label "Feinstein Institute for Medical Research" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/039dabd75> ;
+        rdfs:label "Huntington Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02p210k88> ;
+        rdfs:label "John T. Mather Memorial Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0231d2y50> ;
+        rdfs:label "Lenox Hill Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00c8v4891> ;
+        rdfs:label "Long Island Jewish Medical Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05m8d2x46> ;
+        rdfs:label "North Shore University Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05540q762> ;
+        rdfs:label "Northern Westchester Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01x29k385> ;
+        rdfs:label "Northwell Health Orthopaedic Institute" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05v6s8y05> ;
+        rdfs:label "Peconic Bay Medical Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04cap6186> ;
+        rdfs:label "Phelps Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04hjn8p44> ;
+        rdfs:label "Staten Island University Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/024gbbh50> ;
+        rdfs:label "Syosset Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05vh9vp33> ;
+        rdfs:label "Zucker Hillside Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02rymmk58> ;
+        rdfs:label "Nuvance Health" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-73.68791 40.7351)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-73.68791 40.7351)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "New Hyde Park" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/5128514/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000121683646> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q7056650> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/5128514/> ;
+    ] ; 
     .
