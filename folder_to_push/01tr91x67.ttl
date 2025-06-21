@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/01tr91x67> a org:Organization ;
+    rdfs:label "Newport Restoration Foundation" ;
+    schema:name "Newport Restoration Foundation" ;
+    schema:foundingDate "1968"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Nonprofit" ; 
+    org:abbreviation "NRF" ;
+    schema:url <https://www.newportrestoration.org/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Newport_Restoration_Foundation> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-71.28752 41.51579)"^^geo:wktLiteral ;
+            schema:addressLocality "Newport East" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/7257658/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000100180433> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q17058970> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

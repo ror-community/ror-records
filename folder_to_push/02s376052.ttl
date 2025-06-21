@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/02s376052> a org:Organization ;
+    rdfs:label "École Polytechnique Fédérale de Lausanne" ;
+    schema:name "École Polytechnique Fédérale de Lausanne" ;
+    schema:foundingDate "1853"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    org:abbreviation "EPFL" ;
+    schema:url <http://www.epfl.ch/index.en.html> ; 
+    owl:sameAs <http://en.wikipedia.org/wiki/%C3%89cole_Polytechnique_F%C3%A9d%C3%A9rale_de_Lausanne> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(6.63282 46.516)"^^geo:wktLiteral ;
+            schema:addressLocality "Lausanne" ;
+            schema:addressCountry "CH" ;
+            owl:sameAs <http://sws.geonames.org/2659994/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000121839049> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q262760> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

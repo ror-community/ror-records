@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/03rh3e906> a org:Organization ;
+    rdfs:label "TERI University" ;
+    schema:name "TERI University" ;
+    schema:foundingDate "1998"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    schema:url <http://www.teriuniversity.ac.in/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/TERI_University> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(77.22445 28.63576)"^^geo:wktLiteral ;
+            schema:addressLocality "New Delhi" ;
+            schema:addressCountry "IN" ;
+            owl:sameAs <http://sws.geonames.org/1261481/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/000000041764681X> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q7670026> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

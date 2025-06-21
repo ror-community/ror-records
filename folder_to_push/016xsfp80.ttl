@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/016xsfp80> a org:Organization ;
+    rdfs:label "Radboud University Nijmegen" ;
+    schema:name "Radboud University Nijmegen" ;
+    schema:foundingDate "1923"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:alternativeName "Katholieke Universiteit Nijmegen" ;
+    schema:url <http://www.ru.nl/english/> ; 
+    owl:sameAs <http://en.wikipedia.org/wiki/Radboud_University_Nijmegen> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(5.85278 51.8425)"^^geo:wktLiteral ;
+            schema:addressLocality "Nijmegen" ;
+            schema:addressCountry "NL" ;
+            owl:sameAs <http://sws.geonames.org/2750053/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000122931605> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q632004> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q2525766> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/05qvhy970> a org:Organization ;
+    rdfs:label "National Athletic Trainers Association" ;
+    schema:name "National Athletic Trainers Association" ;
+    schema:foundingDate "1950"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Other" ; 
+    org:abbreviation "NATA" ;
+    schema:url <https://www.nata.org/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/National_Athletic_Trainers'_Association> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-96.89028 32.95373)"^^geo:wktLiteral ;
+            schema:addressLocality "Carrollton" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/4679195/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/000000008773105X> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q6970817> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

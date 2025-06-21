@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/01sjwvz98> a org:Organization ;
+    rdfs:label "RIKEN" ;
+    schema:name "RIKEN" ;
+    schema:foundingDate "1917"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    org:alternativeName "Institute of Physical and Chemical Research" ;
+    schema:url <http://www.riken.jp/en/> ; 
+    owl:sameAs <http://en.wikipedia.org/wiki/RIKEN> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(139.62333 35.78944)"^^geo:wktLiteral ;
+            schema:addressLocality "Wako" ;
+            schema:addressCountry "JP" ;
+            owl:sameAs <http://sws.geonames.org/1907300/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000094465255> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q1153275> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

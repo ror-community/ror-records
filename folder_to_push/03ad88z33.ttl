@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/03ad88z33> a org:Organization ;
+    rdfs:label "State Scientific Center of the Russian Federation - Federal Medical Biophysical Center named after A.I. Burnazyan" ;
+    schema:name "State Scientific Center of the Russian Federation - Federal Medical Biophysical Center named after A.I. Burnazyan" ;
+    schema:foundingDate "1947"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    schema:url <http://www.fmbafmbc.ru/> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(37.61556 55.75222)"^^geo:wktLiteral ;
+            schema:addressLocality "Moscow" ;
+            schema:addressCountry "RU" ;
+            owl:sameAs <http://sws.geonames.org/524901/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/000000040478691X> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

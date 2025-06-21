@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/058aeep47> a org:Organization ;
+    rdfs:label "Mendel University in Brno" ;
+    schema:name "Mendel University in Brno" ;
+    schema:foundingDate "1919"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:alternativeName "Mendelova univerzita v Brně" ;
+    schema:url <http://mendelu.cz/en/> ; 
+    owl:sameAs <http://en.wikipedia.org/wiki/Mendel_University_Brno> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(16.60796 49.19522)"^^geo:wktLiteral ;
+            schema:addressLocality "Brno" ;
+            schema:addressCountry "CZ" ;
+            owl:sameAs <http://sws.geonames.org/3078610/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000122191520> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q1783765> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

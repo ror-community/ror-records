@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/02ehshm78> a org:Organization ;
+    rdfs:label "Eastern Michigan University" ;
+    schema:name "Eastern Michigan University" ;
+    schema:foundingDate "1849"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "EMU" ;
+    schema:url <http://www.emich.edu/> ; 
+    owl:sameAs <http://en.wikipedia.org/wiki/Eastern_Michigan_University> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-83.61299 42.24115)"^^geo:wktLiteral ;
+            schema:addressLocality "Ypsilanti" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/5015688/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000106743006> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q1278221> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

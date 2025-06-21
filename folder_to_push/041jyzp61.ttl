@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/041jyzp61> a org:Organization ;
+    rdfs:label "Yüzüncü Yıl University" ;
+    schema:name "Yüzüncü Yıl University" ;
+    schema:foundingDate "1982"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    schema:url <http://www.yyu.edu.tr/> ; 
+    owl:sameAs <http://en.wikipedia.org/wiki/Y%C3%BCz%C3%BCnc%C3%BC_Y%C4%B1l_University> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(43.38323 38.49457)"^^geo:wktLiteral ;
+            schema:addressLocality "Van" ;
+            schema:addressCountry "TR" ;
+            owl:sameAs <http://sws.geonames.org/298117/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000121646335> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q3671573> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

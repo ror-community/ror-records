@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/01x3p5p96> a org:Organization ;
+    rdfs:label "Rolls-Royce (Canada)" ;
+    schema:name "Rolls-Royce (Canada)" ;
+    schema:foundingDate "1904"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Company" ; 
+    schema:url <http://www.rolls-royce.com/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Rolls-Royce_Holdings> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-73.58781 45.50884)"^^geo:wktLiteral ;
+            schema:addressLocality "Montreal" ;
+            schema:addressCountry "CA" ;
+            owl:sameAs <http://sws.geonames.org/6077243/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000405676181> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q30338344> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

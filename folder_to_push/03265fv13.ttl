@@ -1,0 +1,32 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/03265fv13> a org:Organization ;
+    rdfs:label "University College Cork" ;
+    schema:name "University College Cork" ;
+    schema:foundingDate "1845"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "UCC" ;
+    org:alternativeName "Coláiste na hOllscoile Corcaigh" ;
+    schema:url <http://www.ucc.ie/en/> ; 
+    owl:sameAs <http://en.wikipedia.org/wiki/University_College_Cork> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-8.47061 51.89797)"^^geo:wktLiteral ;
+            schema:addressLocality "Cork" ;
+            schema:addressCountry "IE" ;
+            owl:sameAs <http://sws.geonames.org/2965140/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000123318773> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q1574185> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q16902157> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .
