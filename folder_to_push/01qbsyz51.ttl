@@ -1,0 +1,52 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/01qbsyz51> a org:Organization ;
+    rdfs:label "Ayub Agriculture Research Institute" ;
+    schema:name "Ayub Agriculture Research Institute" ;
+    schema:foundingDate "1962"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "government" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-04-05"^^xsd:date ;
+    org:abbreviation "AARI"@None ; 
+    schema:mainEntityOfPage <https://aari.punjab.gov.pk> ;
+    schema:sameAs <https://grid.ac/institutions/grid.464523.2> ;
+    schema:sameAs <http://isni.org/isni/0000000417612011> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/0262vjy29> ;
+        rdfs:label "Government of Punjab" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/054d77k59> ;
+        rdfs:label "University of Agriculture Faisalabad" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(73.08969 31.41554)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Faisalabad" ;
+            schema:addressCountry "PK" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Pakistan" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1179400/> ;
+    ] ; 
+    .

@@ -4,27 +4,39 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01dvabv26> a org:Organization ;
     rdfs:label "Bülent Ecevit University" ;
     schema:name "Bülent Ecevit University" ;
     schema:foundingDate "1992"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:alternativeName "Zonguldak Karaelmas University" ;
-    schema:url <http://eng.beun.edu.tr/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/B%C3%BClent_Ecevit_University> ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-04-05"^^xsd:date ;
+    org:alternativeName "Zonguldak Karaelmas University"@None ; 
+    schema:mainEntityOfPage <https://www.beun.edu.tr> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/B%C3%BClent_Ecevit_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100006002> ;
+    schema:sameAs <https://grid.ac/institutions/grid.411822.c> ;
+    schema:sameAs <http://isni.org/isni/0000000120336079> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(31.79305 41.45139)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(31.79305 41.45139)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Zonguldak" ;
             schema:addressCountry "TR" ;
-            owl:sameAs <http://sws.geonames.org/737022/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000120336079> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q5005278> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Turkey" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/737022/> ;
+    ] ; 
     .

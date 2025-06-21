@@ -4,27 +4,45 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/00sefv038> a org:Organization ;
     rdfs:label "Multimedia Nusantara University" ;
     schema:name "Multimedia Nusantara University" ;
     schema:foundingDate "2006"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "UMN" ;
-    schema:url <https://www.umn.ac.id/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Multimedia_Nusantara_University> ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2022-10-11"^^xsd:date ;
+    org:abbreviation "UMN"@None ; 
+    schema:mainEntityOfPage <https://www.umn.ac.id/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Multimedia_Nusantara_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/100019303> ;
+    schema:sameAs <https://grid.ac/institutions/grid.444545.0> ;
+    schema:sameAs <http://isni.org/isni/0000000403866774> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02w69ra18> ;
+        rdfs:label "Multimedia Nusantara Polytechnic" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(106.63 -6.17806)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(106.63 -6.17806)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Tangerang" ;
             schema:addressCountry "ID" ;
-            owl:sameAs <http://sws.geonames.org/1625084/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000403866774> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q2610734> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Indonesia" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1625084/> ;
+    ] ; 
     .

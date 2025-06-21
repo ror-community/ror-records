@@ -4,24 +4,48 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/010hz2d37> a org:Organization ;
     rdfs:label "Laboratoire d'Annecy-le-Vieux de Physique Théorique" ;
     schema:name "Laboratoire d'Annecy-le-Vieux de Physique Théorique" ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "LAPTh" ;
-    schema:url <http://lapth.cnrs.fr/> ; 
+    org:classification "facility" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-04-05"^^xsd:date ;
+    org:abbreviation "LAPTh"@None ; 
+    schema:mainEntityOfPage <https://www.lapp.in2p3.fr> ;
+    schema:sameAs <https://grid.ac/institutions/grid.462959.5> ;
+    schema:sameAs <http://isni.org/isni/0000000122244709> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02feahw73> ;
+        rdfs:label "French National Centre for Scientific Research" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/04gqg1a07> ;
+        rdfs:label "Université Savoie Mont Blanc" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(6.12565 45.90878)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(6.12565 45.90878)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Annecy" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/3037543/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000122244709> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3037543/> ;
+    ] ; 
     .

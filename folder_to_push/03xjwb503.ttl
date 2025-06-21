@@ -4,26 +4,578 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/03xjwb503> a org:Organization ;
     rdfs:label "University of Paris-Saclay" ;
     schema:name "University of Paris-Saclay" ;
     schema:foundingDate "2015"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    schema:url <http://www.universite-paris-saclay.fr/fr> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/University_of_Paris-Saclay> ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-03-28"^^xsd:date ;
+    schema:mainEntityOfPage <http://www.universite-paris-saclay.fr/fr> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/University_of_Paris-Saclay> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100007241> ;
+    schema:sameAs <https://grid.ac/institutions/grid.460789.4> ;
+    schema:sameAs <http://isni.org/isni/0000000449106535> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02kbmgc12> ;
+        rdfs:label "AgroParisTech" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05mfwtg94> ;
+        rdfs:label "Biologie de la Reproduction, Environnement, Epigénétique et Développement" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/019tcpt25> ;
+        rdfs:label "CentraleSupélec" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00zay3w86> ;
+        rdfs:label "Centre for Nanoscience and Nanotechnology" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01aqxgr98> ;
+        rdfs:label "Computer Science, Integrative Biology and Complex Systems" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03ka94606> ;
+        rdfs:label "Hemostase Inflammation Thrombosis" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04g9rt435> ;
+        rdfs:label "Institut des Cellules Souches pour le Traitement et l'Étude des Maladies Monogéniques" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00d0rke27> ;
+        rdfs:label "Institut d’Optique Graduate School" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0455wwj08> ;
+        rdfs:label "Laboratoire Génie Industriel" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03gc1p724> ;
+        rdfs:label "Laboratoire de Physique des 2 Infinis Irène Joliot-Curie" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04bgjpg77> ;
+        rdfs:label "Laboratoire de Physique des Gaz et des Plasmas" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01bn5c048> ;
+        rdfs:label "Laboratory of Quantum and Molecular Photonics" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04dy97z61> ;
+        rdfs:label "Laboratoire Interactions, Dynamiques et Lasers" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01fv25t22> ;
+        rdfs:label "Saclay Nuclear Research Centre" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00e96v939> ;
+        rdfs:label "University of Évry Val d'Essonne" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03mkjjy25> ;
+        rdfs:label "Université de Versailles Saint-Quentin-en-Yvelines" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01fz7mn40> ;
+        rdfs:label "École Nationale de la Statistique et de l'Administration Économique" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00hx6zz33> ;
+        rdfs:label "École Normale Supérieure Paris-Saclay" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0050cbz19> ;
+        rdfs:label "MoSAR - Modelisation Systemique Appliquee aux Ruminants" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05wjc8a85> ;
+        rdfs:label "Laboratoire Universitaire de Recherche en Production Automatisée" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01cmdgj85> ;
+        rdfs:label "SADAPT Science Action Développement - Activités Produits Territoires" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01t05f005> ;
+        rdfs:label "Laboratoire Structures, Propriétés et Modélisation des Solides" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04g0ktq11> ;
+        rdfs:label "Bibliothèque Jacques Hadamard" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03q29s414> ;
+        rdfs:label "Mathématiques et Informatique pour la Complexité et les Systèmes" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05kz79f96> ;
+        rdfs:label "Physiologie et Physiopathlogie Endocriniennes" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0266c5p67> ;
+        rdfs:label "Immunologie intégrative des tumeurs et immunothérapie du cancer" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01earvv39> ;
+        rdfs:label "Prédicteurs moléculaires et nouvelles cibles en oncologie" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00780az30> ;
+        rdfs:label "Mathématiques et Informatique Appliquées" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00jp5dw81> ;
+        rdfs:label "Radiothérapie Moléculaire et Innovation Thérapeutique" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01zrk7293> ;
+        rdfs:label "Physiopathogénèse et Traitement des Maladies du Foie" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00p73bw06> ;
+        rdfs:label "Contrôle transcriptionnel et épigénétique de l’hématopoïèse maligne" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02nfq1309> ;
+        rdfs:label "Chimie et Modélisation pour la Biologie du Cancer" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00az7j379> ;
+        rdfs:label "Le Laboratoire des Maladies Neurodégénératives" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00nvvw130> ;
+        rdfs:label "Stabilité Génétique, Cellules Souches et Radiations" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0449rap84> ;
+        rdfs:label "Laboratoire de Biologie de l'Exercice pour la Performance et la Santé" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/007y9b339> ;
+        rdfs:label "Centre de Recherche en Design" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/048d5xq24> ;
+        rdfs:label "Laboratoire Lumière, Matière et Interfaces" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03gmkya61> ;
+        rdfs:label "SayFood - Food and Bioproduct Engineering" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00rd81916> ;
+        rdfs:label "Laboratoire Interdisciplinaire des Sciences du Numérique" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00gdtta79> ;
+        rdfs:label "Laboratoire Méthodes Formelles" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01jvz7e61> ;
+        rdfs:label "Virologie et Immunologie Moléculaires" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01bbf9m56> ;
+        rdfs:label "Fédération Francilienne de Mécanique - Matériaux, Structures, Procédés" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05hb8m595> ;
+        rdfs:label "PHOTOSYNTHESE" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03qgfy688> ;
+        rdfs:label "Fédération Ile de France de recherche sur l'environnement" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01x6z5t49> ;
+        rdfs:label "Fédération de Recherche Spectroscopies de Photoémission" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01nrtdp55> ;
+        rdfs:label "GDR NBODY : Problème quantique à N corps en chimie et physique" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0459fdx51> ;
+        rdfs:label "Fédération de Recherche sur l'Energie Solaire" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02r1kz177> ;
+        rdfs:label "Bioinformatique Moléculaire" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04yem5s35> ;
+        rdfs:label "INFRANALYTICS" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05c95bg36> ;
+        rdfs:label "Laboratoire de Physique des Plasmas" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05r0mw364> ;
+        rdfs:label "Biomarqueurs et essais cliniques en Cancérologie et Onco-Hématologie" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0087n5v55> ;
+        rdfs:label "Centre d’histoire culturelle des sociétés contemporaines" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00ex3jm11> ;
+        rdfs:label "Cohortes épidémiologiques en population" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/023bv6t84> ;
+        rdfs:label "Equipe de recherche paramédicale sur le handicap neuromoteur" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/008hxwy89> ;
+        rdfs:label "Institut de recherches arctiques Jean Malaurie" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/023b2c435> ;
+        rdfs:label "Laboratoire Anthropologie, Archéologie, Biologie" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01jdptv64> ;
+        rdfs:label "Laboratoire interdisciplinaire sur les mutations des espaces économiques et politiques - Paris Saclay" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03jv6w209> ;
+        rdfs:label "Maison de la Simulation" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01b436806> ;
+        rdfs:label "CIRED" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/046hjmc37> ;
+        rdfs:label "Laboratoire Charles Fabry" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01ed4t417> ;
+        rdfs:label "Centre de recherche en Epidémiologie et Santé des Populations" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03ab0zs98> ;
+        rdfs:label "Laboratoire de Mathématiques d'Orsay" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02byv2846> ;
+        rdfs:label "Fluides, Automatique et Systèmes Thermiques" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01b5rtm37> ;
+        rdfs:label "Genome Integrity, RNA and Cancer" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/012fqzm33> ;
+        rdfs:label "Génétique Quantitative et Évolution Le Moulon" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05dy6wv04> ;
+        rdfs:label "Inflammation, Microbiome and Immunosurveillance" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02mnw9q71> ;
+        rdfs:label "Institut Galien Paris-Saclay" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/014p8mr66> ;
+        rdfs:label "Institut d'Astrophysique Spatiale" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05wzh1m37> ;
+        rdfs:label "Institut de Chimie Moléculaire et des Matériaux d'Orsay" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02st4q439> ;
+        rdfs:label "Institut de Chimie des Substances Naturelles" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0211r2z47> ;
+        rdfs:label "Institut des Sciences Moléculaires d'Orsay" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00ajjta07> ;
+        rdfs:label "Institut des Sciences des Plantes de Paris Saclay" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01fftxe08> ;
+        rdfs:label "Institute of Integrative Biology of the Cell" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05dpfhh73> ;
+        rdfs:label "Interactions Cellulaires et Physiopathologie Hépathique" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/021xexe56> ;
+        rdfs:label "Laboratoire Aimé Cotton" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00k3ph542> ;
+        rdfs:label "Complexité, Innovation et Activités Motrices et Sportives" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/016r2hq43> ;
+        rdfs:label "Laboratoire de Chimie Physique" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02xnnng09> ;
+        rdfs:label "Laboratoire de Génie Électrique et Électronique de Paris" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00skw9v43> ;
+        rdfs:label "Laboratoire des signaux et systèmes" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02dyaew97> ;
+        rdfs:label "Laboratoire de physique des Solides" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00w67e447> ;
+        rdfs:label "Laboratory of Theoretical Physics and Statistical Models" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/002v40q27> ;
+        rdfs:label "Institut des Neurosciences Paris-Saclay" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01et6g203> ;
+        rdfs:label "Hypertension pulmonaire : physiopathologie et innovation thérapeutique" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03sypqe31> ;
+        rdfs:label "Systèmes Membranaires, Photobiologie, Stress et Détoxication" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03vam5b06> ;
+        rdfs:label "Laboratoire des systèmes et applications des technologies de l'information et de l'énergie" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02erddr56> ;
+        rdfs:label "Laboratoire Albert Fert" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00kk89y84> ;
+        rdfs:label "Écologie, Systématique et Évolution" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/011abem59> ;
+        rdfs:label "Évolution, Génomes, Comportement, Écologie" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02cptmd52> ;
+        rdfs:label "Agronomie" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/035gq6r08> ;
+        rdfs:label "Laboratoire d'Excellence en Recherche sur le Médicament et l'Innovation Thérapeutique" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(2.13333 48.68333)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(2.13333 48.68333)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Gif-sur-Yvette" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/3016078/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000449106535> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q109409389> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3016078/> ;
+    ] ; 
     .

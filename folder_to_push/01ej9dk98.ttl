@@ -4,27 +4,195 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01ej9dk98> a org:Organization ;
     rdfs:label "University of Melbourne" ;
     schema:name "University of Melbourne" ;
     schema:foundingDate "1853"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:alternativeName "Melbourne University" ;
-    schema:url <http://www.unimelb.edu.au/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Melbourne> ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2023-12-07"^^xsd:date ;
+    org:alternativeName "Melbourne University"@None ; 
+    schema:mainEntityOfPage <http://www.unimelb.edu.au/> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Melbourne> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100001782> ;
+    schema:sameAs <https://grid.ac/institutions/grid.1008.9> ;
+    schema:sameAs <http://isni.org/isni/000000012179088X> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02gs3vg83> ;
+        rdfs:label "ARC Centre of Excellence for Coherent X-ray Science" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00cybsr61> ;
+        rdfs:label "ARC Centre of Excellence for Dark Matter Particle Physics" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02vcqg248> ;
+        rdfs:label "ARC Centre of Excellence for Mathematical and Statistical Frontiers" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01h06nz15> ;
+        rdfs:label "ARC Centre of Excellence for Particle Physics at the Terascale" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03a2tac74> ;
+        rdfs:label "Florey Institute of Neuroscience and Mental Health" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/016899r71> ;
+        rdfs:label "Peter Doherty Institute" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04fxxe129> ;
+        rdfs:label "Botany Foundation" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/04s1m4564> ;
+        rdfs:label "AuScope" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05dbj6g52> ;
+        rdfs:label "Austin Health" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/010mv7n52> ;
+        rdfs:label "Austin Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02c3nzd41> ;
+        rdfs:label "Australian Urban Research Infrastructure Network" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05e4f1b55> ;
+        rdfs:label "Bionics Institute" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05ktbsm52> ;
+        rdfs:label "Burnet Institute" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01sqdef20> ;
+        rdfs:label "Centre for Eye Research Australia" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02ett6548> ;
+        rdfs:label "Epworth Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00jrpxe15> ;
+        rdfs:label "Geelong Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/04z4kmw33> ;
+        rdfs:label "Melbourne Health" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/048fyec77> ;
+        rdfs:label "Murdoch Children's Research Institute" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05mjmsc11> ;
+        rdfs:label "Northern Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02rktxt32> ;
+        rdfs:label "Royal Children's Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03grnna41> ;
+        rdfs:label "Royal Women's Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/001kjn539> ;
+        rdfs:label "St Vincent's Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02k3cxs74> ;
+        rdfs:label "St Vincents Institute of Medical Research" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/008q4kt04> ;
+        rdfs:label "The Royal Victorian Eye & Ear Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00st91468> ;
+        rdfs:label "Victorian Comprehensive Cancer Centre" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/024jkkf40> ;
+        rdfs:label "Australian Centre for Excellence in Antarctic Science" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(144.96332 -37.814)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(144.96332 -37.814)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Melbourne" ;
             schema:addressCountry "AU" ;
-            owl:sameAs <http://sws.geonames.org/2158177/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/000000012179088X> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q319078> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Australia" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2158177/> ;
+    ] ; 
     .

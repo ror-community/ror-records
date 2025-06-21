@@ -4,24 +4,60 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/04mzqjs78> a org:Organization ;
     rdfs:label "Biogéosciences" ;
     schema:name "Biogéosciences" ;
     schema:foundingDate "2012"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    schema:url <http://biogeosciences.u-bourgogne.fr/en/> ; 
+    org:classification "facility" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2023-04-27"^^xsd:date ;
+    schema:mainEntityOfPage <http://biogeosciences.u-bourgogne.fr/en/> ;
+    schema:sameAs <https://grid.ac/institutions/grid.462242.4> ;
+    schema:sameAs <http://isni.org/isni/0000000404173208> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/03zek0r74> ;
+        rdfs:label "Institut Agro Dijon" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/01q76b368> ;
+        rdfs:label "Institut Écologie et Environnement" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/03k1bsr36> ;
+        rdfs:label "University of Burgundy" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/046b3cj80> ;
+        rdfs:label "École Pratique des Hautes Études" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(5.01667 47.31667)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(5.01667 47.31667)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Dijon" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/3021372/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000404173208> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3021372/> ;
+    ] ; 
     .

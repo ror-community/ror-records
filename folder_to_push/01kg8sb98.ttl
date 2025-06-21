@@ -4,27 +4,111 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01kg8sb98> a org:Organization ;
     rdfs:label "Indiana University" ;
     schema:name "Indiana University" ;
     schema:foundingDate "1820"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "IU" ;
-    schema:url <http://www.iu.edu/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Indiana_University> ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2023-12-20"^^xsd:date ;
+    org:abbreviation "IU"@None ; 
+    schema:mainEntityOfPage <http://www.iu.edu/> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Indiana_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/100006733> ;
+    schema:sameAs <https://grid.ac/institutions/grid.257410.5> ;
+    schema:sameAs <http://isni.org/isni/0000000404133089> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02k40bc56> ;
+        rdfs:label "Indiana University Bloomington" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/046z54t28> ;
+        rdfs:label "Indiana University East" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04wrhg795> ;
+        rdfs:label "Indiana University Fort Wayne" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04161kh40> ;
+        rdfs:label "Indiana University Kokomo" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00n9fkm63> ;
+        rdfs:label "Indiana University Northwest" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02s1hvj37> ;
+        rdfs:label "Indiana University South Bend" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02eak8n78> ;
+        rdfs:label "Indiana University Southeast" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00e0c0q64> ;
+        rdfs:label "Indiana University – Purdue University Columbus" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05gxnyn08> ;
+        rdfs:label "Indiana University – Purdue University Indianapolis" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03eftgw80> ;
+        rdfs:label "Indiana University Indianapolis" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00g1d7b60> ;
+        rdfs:label "Indiana University Melvin and Bren Simon Comprehensive Cancer Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02ets8c94> ;
+        rdfs:label "Indiana University School of Medicine" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-86.52639 39.16533)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-86.52639 39.16533)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Bloomington" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/4254679/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000404133089> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q6608367> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/4254679/> ;
+    ] ; 
     .

@@ -1,0 +1,92 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/00jwcjd97> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    org:status "active" ;
+    org:classification "facility" ; 
+    dct:created "2024-04-06"^^xsd:date ;
+    dct:modified "2024-04-06"^^xsd:date ;
+    org:alternativeName "NESP Marine Biodiversity Hub"@en ; 
+    org:alternativeName "National Environmental Science Program Marine Biodiversity Hub"@en ; 
+    schema:mainEntityOfPage <https://www.nespmarine.edu.au> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/01nfmeh72> ;
+        rdfs:label "University of Tasmania" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03x57gn41> ;
+        rdfs:label "Australian Institute of Marine Science" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/048zcaj52> ;
+        rdfs:label "Charles Darwin University" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03qn8fb07> ;
+        rdfs:label "Commonwealth Scientific and Industrial Research Organisation" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/04ge02x20> ;
+        rdfs:label "Geoscience Australia" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/04mf3mq37> ;
+        rdfs:label "Museums Victoria" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/050khh066> ;
+        rdfs:label "New South Wales Department of Primary Industries" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00ck0kh03> ;
+        rdfs:label "NSW Environment and Heritage" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/047272k79> ;
+        rdfs:label "University of Western Australia" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(147.32941 -42.87936)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Hobart" ;
+            schema:addressCountry "AU" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Australia" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2163355/> ;
+    ] ; 
+    .

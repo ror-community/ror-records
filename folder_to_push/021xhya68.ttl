@@ -1,0 +1,38 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/021xhya68> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "2022"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2024-04-06"^^xsd:date ;
+    dct:modified "2024-04-06"^^xsd:date ;
+    org:abbreviation "MBUST"@en ; 
+    schema:mainEntityOfPage <https://www.mbust.edu.np> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(85.16928 27.64754)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Chitlang" ;
+            schema:addressCountry "NP" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Nepal" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/7802044/> ;
+    ] ; 
+    .

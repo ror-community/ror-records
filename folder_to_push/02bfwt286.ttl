@@ -4,26 +4,122 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02bfwt286> a org:Organization ;
     rdfs:label "Monash University" ;
     schema:name "Monash University" ;
     schema:foundingDate "1958"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    schema:url <https://www.monash.edu> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Monash_University> ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-02-21"^^xsd:date ;
+    schema:mainEntityOfPage <https://www.monash.edu> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Monash_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100001779> ;
+    schema:sameAs <https://grid.ac/institutions/grid.1002.3> ;
+    schema:sameAs <http://isni.org/isni/0000000419367857> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02yasb727> ;
+        rdfs:label "ARC Centre of Excellence for Integrative Brain Function" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/051e7s436> ;
+        rdfs:label "ARC Centre of Excellence in Advanced Molecular Imaging" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02qa5kg76> ;
+        rdfs:label "Australian Regenerative Medicine Institute" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02r3nf527> ;
+        rdfs:label "IITB-Monash Research Academy" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/048t93218> ;
+        rdfs:label "National Trauma Research Institute" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0555x2b41> ;
+        rdfs:label "ANZCA Clinical Trials Network" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/0484pjq71> ;
+        rdfs:label "Box Hill Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05ktbsm52> ;
+        rdfs:label "Burnet Institute" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/051b68e86> ;
+        rdfs:label "Frankston Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00aeqjw83> ;
+        rdfs:label "Jessie McPherson Private Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05p96ba03> ;
+        rdfs:label "Monash Institute of Medical Research" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/036s9kg65> ;
+        rdfs:label "Monash Medical Centre" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01wddqe20> ;
+        rdfs:label "The Alfred Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/058xdtn86> ;
+        rdfs:label "ARC Centre of Excellence for Plant Success in Nature and Agriculture" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(144.96332 -37.814)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(144.96332 -37.814)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Melbourne" ;
             schema:addressCountry "AU" ;
-            owl:sameAs <http://sws.geonames.org/2158177/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000419367857> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q598841> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Australia" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2158177/> ;
+    ] ; 
     .

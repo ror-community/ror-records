@@ -1,0 +1,76 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/01fv25t22> a org:Organization ;
+    rdfs:label "Saclay Nuclear Research Centre" ;
+    schema:name "Saclay Nuclear Research Centre" ;
+    schema:foundingDate "1949"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "facility" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2021-09-23"^^xsd:date ;
+    schema:mainEntityOfPage <http://www.cea.fr/Pages/le-cea/les-centres-cea/paris-saclay.aspx> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Saclay_Nuclear_Research_Centre> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.462763.2> ;
+    schema:sameAs <http://isni.org/isni/0000000098532953> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/03n15ch10> ;
+        rdfs:label "CEA Saclay" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02feahw73> ;
+        rdfs:label "French National Centre for Scientific Research" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/0423jsj19> ;
+        rdfs:label "HEC Paris" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/05d5m2r55> ;
+        rdfs:label "Institut des Hautes Études Scientifiques" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/03xjwb503> ;
+        rdfs:label "University of Paris-Saclay" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/05hy3tk52> ;
+        rdfs:label "École Polytechnique" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(2.16923 48.7326)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Saclay" ;
+            schema:addressCountry "FR" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2982043/> ;
+    ] ; 
+    .

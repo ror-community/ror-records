@@ -1,0 +1,53 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/0378v2g76> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    org:status "active" ;
+    org:classification "facility" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-04-05"^^xsd:date ;
+    org:alternativeName "ATHENE"@en ; 
+    org:alternativeName "ATHENE Center"@en ; 
+    org:abbreviation "CRISP"@None ; 
+    org:alternativeName "Center for Research in Security and Privacy"@en ; 
+    schema:mainEntityOfPage <https://www.athene-center.de> ;
+    schema:sameAs <https://grid.ac/institutions/grid.500069.a> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "predecessor" ;
+        org:member <https://ror.org/043djah44> ;
+        rdfs:label "European Center for Security and Privacy by Design" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "predecessor" ;
+        org:member <https://ror.org/006q8y354> ;
+        rdfs:label "Center for Advanced Security Research Darmstadt" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(8.65027 49.87167)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Darmstadt" ;
+            schema:addressCountry "DE" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Germany" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2938913/> ;
+    ] ; 
+    .

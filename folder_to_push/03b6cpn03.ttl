@@ -4,28 +4,44 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/03b6cpn03> a org:Organization ;
-    rdfs:label "Odesa I.I.Mechnikov National University" ;
-    schema:name "Odesa I.I.Mechnikov National University" ;
+    rdfs:label "" ;
+    schema:name "" ;
     schema:foundingDate "1865"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "ONU" ;
-    org:alternativeName "Odessa University" ;
-    schema:url <http://onu.edu.ua> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Odessa_University> ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-04-05"^^xsd:date ;
+    org:alternativeName "Narodowy Uniwersytet Odeski im. Ilii Miecznikowa"@pl ; 
+    org:abbreviation "ONU"@None ; 
+    org:alternativeName "Odessa I. I. Mechnikov National University"@None ; 
+    org:alternativeName "Odessa National University"@None ; 
+    org:alternativeName "Odessa University"@None ; 
+    org:alternativeName "Одесский национальный университет имени И. И. Мечникова"@ru ; 
+    org:alternativeName "Одеського національного університету імені І. І. Мечникова"@uk ; 
+    schema:mainEntityOfPage <https://onu.edu.ua> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Odessa_University> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.440557.7> ;
+    schema:sameAs <http://isni.org/isni/0000000121710296> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(30.74383 46.48572)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(30.74383 46.48572)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Odesa" ;
             schema:addressCountry "UA" ;
-            owl:sameAs <http://sws.geonames.org/698740/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000121710296> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q85300> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Ukraine" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/698740/> ;
+    ] ; 
     .

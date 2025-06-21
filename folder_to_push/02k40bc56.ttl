@@ -1,0 +1,84 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/02k40bc56> a org:Organization ;
+    rdfs:label "Indiana University Bloomington" ;
+    schema:name "Indiana University Bloomington" ;
+    schema:foundingDate "1820"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-04-05"^^xsd:date ;
+    org:abbreviation "IU"@None ; 
+    schema:mainEntityOfPage <https://bloomington.iu.edu> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Indiana_University_Bloomington> ; 
+    schema:sameAs <https://api.crossref.org/funders/100005493> ;
+    schema:sameAs <https://grid.ac/institutions/grid.411377.7> ;
+    schema:sameAs <http://isni.org/isni/000000010790959X> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00pnhtk88> ;
+        rdfs:label "Indiana Geological and Water Survey" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/01kg8sb98> ;
+        rdfs:label "Indiana University" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05rbkcx47> ;
+        rdfs:label "Indiana University Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00g635h87> ;
+        rdfs:label "Methodist Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/043ckch24> ;
+        rdfs:label "Rehabilitation Hospital of Indiana" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01zpmbk67> ;
+        rdfs:label "Richard L. Roudebush VA Medical Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03vzvbw58> ;
+        rdfs:label "Riley Hospital for Children" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-86.52639 39.16533)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Bloomington" ;
+            schema:addressCountry "US" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/4254679/> ;
+    ] ; 
+    .

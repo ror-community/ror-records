@@ -4,27 +4,183 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01nfmeh72> a org:Organization ;
     rdfs:label "University of Tasmania" ;
     schema:name "University of Tasmania" ;
     schema:foundingDate "1890"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "UTAS" ;
-    schema:url <http://www.utas.edu.au/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Tasmania> ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-04-05"^^xsd:date ;
+    org:abbreviation "UTAS"@None ; 
+    schema:mainEntityOfPage <https://www.utas.edu.au> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Tasmania> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100001249> ;
+    schema:sameAs <https://grid.ac/institutions/grid.1009.8> ;
+    schema:sameAs <http://isni.org/isni/000000041936826X> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02xhx4j26> ;
+        rdfs:label "Centre for Marine Socioecology" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/04ymr6s03> ;
+        rdfs:label "Launceston General Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/031382m70> ;
+        rdfs:label "Royal Hobart Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00qq77n27> ;
+        rdfs:label "Consortium for Ocean-Sea Ice Modelling in Australia" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00arpt780> ;
+        rdfs:label "Institute for Marine and Antarctic Studies" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01ex21125> ;
+        rdfs:label "Tasmanian Institute of Agriculture" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04yvxvx65> ;
+        rdfs:label "Menzies Institute for Medical Research" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05n8cqa74> ;
+        rdfs:label "Wicking Dementia Centre" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05fqmdn41> ;
+        rdfs:label "Institute for Social Change" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/018kp7s70> ;
+        rdfs:label "Tasmania Law Reform Institute" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/058xdtn86> ;
+        rdfs:label "ARC Centre of Excellence for Plant Success in Nature and Agriculture" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/041njsz97> ;
+        rdfs:label "ARC Centre for Forest Value" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04jqtny57> ;
+        rdfs:label "ARC Research Hub for Sustainable Onshore Lobster Aquaculture" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00tfmma03> ;
+        rdfs:label "Australian Centre for Research on Separation Science" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01ff1ff64> ;
+        rdfs:label "Centre for Ore Deposit and Earth Sciences" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03r3cns79> ;
+        rdfs:label "Centre for Renewable Energy and Power Systems" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/033y4aw87> ;
+        rdfs:label "Centre for Sustainable Architecture with Wood" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00jwcjd97> ;
+        rdfs:label "Marine Biodiversity Hub" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04myefg51> ;
+        rdfs:label "Southern Skies Network" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/024jkkf40> ;
+        rdfs:label "Australian Centre for Excellence in Antarctic Science" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05xyr4058> ;
+        rdfs:label "Australian Institute of Health Service Management" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/026xeq875> ;
+        rdfs:label "Tasmanian Behavioural Lab" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05fv9c840> ;
+        rdfs:label "Australian Maritime College" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/010x3gp67> ;
+        rdfs:label "Integrated Marine Observing System" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(147.32941 -42.87936)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(147.32941 -42.87936)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Hobart" ;
             schema:addressCountry "AU" ;
-            owl:sameAs <http://sws.geonames.org/2163355/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/000000041936826X> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q962011> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Australia" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2163355/> ;
+    ] ; 
     .

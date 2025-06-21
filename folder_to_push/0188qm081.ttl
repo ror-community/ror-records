@@ -1,0 +1,42 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/0188qm081> a org:Organization ;
+    rdfs:label "Lilongwe University of Agriculture and Natural Resources" ;
+    schema:name "Lilongwe University of Agriculture and Natural Resources" ;
+    schema:foundingDate "2011"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-04-05"^^xsd:date ;
+    org:alternativeName "Bunda College of Agriculture"@None ; 
+    org:abbreviation "LUANAR"@None ; 
+    schema:mainEntityOfPage <https://luanar.ac.mw/luanar/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Lilongwe_University_of_Agriculture_and_Natural_Resources> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.459750.a> ;
+    schema:sameAs <http://isni.org/isni/0000000121764980> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(33.78725 -13.96692)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Lilongwe" ;
+            schema:addressCountry "MW" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Malawi" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/927967/> ;
+    ] ; 
+    .

@@ -1,0 +1,41 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/03rsp2g43> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "2015"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "healthcare" ; 
+    dct:created "2024-04-06"^^xsd:date ;
+    dct:modified "2024-04-06"^^xsd:date ;
+    org:abbreviation "MCV"@en ; 
+    org:alternativeName "Mehboob Charity Vision"@en ; 
+    org:alternativeName "Mehboob Charity Vision International Hospital"@en ; 
+    org:alternativeName "Mehboob International Eye and General Hospital"@en ; 
+    schema:mainEntityOfPage <https://mehboobcv.org> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(73.4647 34.64827)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Mansehra" ;
+            schema:addressCountry "PK" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Pakistan" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1170950/> ;
+    ] ; 
+    .

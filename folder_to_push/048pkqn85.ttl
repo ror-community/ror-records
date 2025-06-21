@@ -1,0 +1,38 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/048pkqn85> a org:Organization ;
+    rdfs:label "Microwave Medical Systems (United States)" ;
+    schema:name "Microwave Medical Systems (United States)" ;
+    schema:foundingDate "1985"^^xsd:gYear ;
+    org:status "inactive" ;
+    org:classification "company" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-04-05"^^xsd:date ;
+    org:abbreviation "MMS"@None ; 
+    schema:sameAs <https://grid.ac/institutions/grid.470887.4> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-71.43284 42.48509)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Acton" ;
+            schema:addressCountry "US" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/4928703/> ;
+    ] ; 
+    .

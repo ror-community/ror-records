@@ -4,27 +4,93 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/018906e22> a org:Organization ;
     rdfs:label "Erasmus MC" ;
     schema:name "Erasmus MC" ;
     schema:foundingDate "2011"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Healthcare" ; 
-    org:alternativeName "Erasmus University Medical Center" ;
-    schema:url <http://www.erasmusmc.nl/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Erasmus_MC> ;
+    org:classification "healthcare" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2023-12-20"^^xsd:date ;
+    org:alternativeName "Erasmus University Medical Center"@None ; 
+    schema:mainEntityOfPage <http://www.erasmusmc.nl/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Erasmus_MC> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100008039> ;
+    schema:sameAs <https://grid.ac/institutions/grid.5645.2> ;
+    schema:sameAs <http://isni.org/isni/000000040459992X> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/047afsm11> ;
+        rdfs:label "Erasmus MC - Sophia Children’s Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03r4m3349> ;
+        rdfs:label "Erasmus MC Cancer Institute" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0585v6057> ;
+        rdfs:label "Erasmus MC Transplant Institute" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00hjpwn75> ;
+        rdfs:label "Erasmus Optical Imaging Centre" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/004c11w41> ;
+        rdfs:label "Erasmus MC Hart en Vaat Instituut" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/057w15z03> ;
+        rdfs:label "Erasmus University Rotterdam" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/032gggv33> ;
+        rdfs:label "ERN CRANIO" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02h9n4675> ;
+        rdfs:label "ERNICA" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02ac58f22> ;
+        rdfs:label "Rotterdam Study" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(4.47917 51.9225)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(4.47917 51.9225)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Rotterdam" ;
             schema:addressCountry "NL" ;
-            owl:sameAs <http://sws.geonames.org/2747891/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/000000040459992X> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q3126873> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Netherlands" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2747891/> ;
+    ] ; 
     .

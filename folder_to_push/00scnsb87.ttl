@@ -1,0 +1,41 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/00scnsb87> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "1981"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2024-04-06"^^xsd:date ;
+    dct:modified "2024-04-06"^^xsd:date ;
+    org:abbreviation "ZYU"@en ; 
+    org:alternativeName "Zhejiang Yuexiu University of Foreign Languages"@en ; 
+    schema:mainEntityOfPage <https://www.zyufl.edu.cn> ;
+    owl:sameAs <https://zh.wikipedia.org/zh-cn/%E6%B5%99%E6%B1%9F%E8%B6%8A%E7%A7%80%E5%A4%96%E5%9B%BD%E8%AF%AD%E5%AD%A6%E9%99%A2> ; 
+    schema:sameAs <http://isni.org/isni/0000000417621882> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(120.57864 30.00237)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Shaoxing" ;
+            schema:addressCountry "CN" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "China" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1795855/> ;
+    ] ; 
+    .

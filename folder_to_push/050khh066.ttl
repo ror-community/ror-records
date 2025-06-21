@@ -4,26 +4,56 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/050khh066> a org:Organization ;
     rdfs:label "New South Wales Department of Primary Industries" ;
     schema:name "New South Wales Department of Primary Industries" ;
     schema:foundingDate "2004"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Government" ; 
-    schema:url <http://www.dpi.nsw.gov.au/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Department_of_Primary_Industries_(New_South_Wales)> ;
+    org:classification "government" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2023-08-30"^^xsd:date ;
+    schema:mainEntityOfPage <http://www.dpi.nsw.gov.au/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Department_of_Primary_Industries_(New_South_Wales)> ; 
+    schema:sameAs <https://api.crossref.org/funders/100010000> ;
+    schema:sameAs <https://grid.ac/institutions/grid.1680.f> ;
+    schema:sameAs <http://isni.org/isni/0000000405595189> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02fqdw168> ;
+        rdfs:label "WaterNSW" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/0067dvq63> ;
+        rdfs:label "Government of New South Wales" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00jwcjd97> ;
+        rdfs:label "Marine Biodiversity Hub" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(149.10018 -33.28397)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(149.10018 -33.28397)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Orange" ;
             schema:addressCountry "AU" ;
-            owl:sameAs <http://sws.geonames.org/2154219/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000405595189> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q5260456> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Australia" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2154219/> ;
+    ] ; 
     .

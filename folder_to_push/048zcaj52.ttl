@@ -1,0 +1,60 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/048zcaj52> a org:Organization ;
+    rdfs:label "Charles Darwin University" ;
+    schema:name "Charles Darwin University" ;
+    schema:foundingDate "2003"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2021-03-17"^^xsd:date ;
+    org:abbreviation "CDU"@None ; 
+    schema:mainEntityOfPage <http://www.cdu.edu.au/> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Charles_Darwin_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100001803> ;
+    schema:sameAs <https://grid.ac/institutions/grid.1043.6> ;
+    schema:sameAs <http://isni.org/isni/000000012157559X> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/04tn8zp39> ;
+        rdfs:label "Centre for Remote Health" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/04jq72f57> ;
+        rdfs:label "Royal Darwin Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00jwcjd97> ;
+        rdfs:label "Marine Biodiversity Hub" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(130.84185 -12.46113)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Darwin" ;
+            schema:addressCountry "AU" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Australia" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2073124/> ;
+    ] ; 
+    .

@@ -4,26 +4,40 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/00j9qzp88> a org:Organization ;
     rdfs:label "Nordic International University" ;
     schema:name "Nordic International University" ;
     schema:foundingDate "2022"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "NIU" ;
-    org:alternativeName "Nordic University" ;
-    schema:url <https://nordicuniversity.org> ; 
-    owl:sameAs <https://uz.wikipedia.org/wiki/Xalqaro_Nordik_Universiteti_%28XNU%2C_NIU%29> ;
+    org:classification "education" ; 
+    dct:created "2024-01-10"^^xsd:date ;
+    dct:modified "2024-04-05"^^xsd:date ;
+    org:abbreviation "NIU"@None ; 
+    org:alternativeName "Nordic University"@None ; 
+    org:abbreviation "XNU"@None ; 
+    org:abbreviation "МУН"@None ; 
+    schema:mainEntityOfPage <https://nordicuniversity.org> ;
+    owl:sameAs <https://uz.wikipedia.org/wiki/Xalqaro_Nordik_Universiteti_%28XNU%2C_NIU%29> ; 
+    schema:sameAs <http://isni.org/isni/0000000514020157> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(69.21627 41.26465)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(69.21627 41.26465)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Tashkent" ;
             schema:addressCountry "UZ" ;
-            owl:sameAs <http://sws.geonames.org/1512569/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://www.wikidata.org/entity/Q114076881> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Uzbekistan" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1512569/> ;
+    ] ; 
     .

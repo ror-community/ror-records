@@ -1,0 +1,44 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/02jv3k292> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "1888"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-04-05"^^xsd:date ;
+    org:alternativeName "Sofia University"@en ; 
+    org:alternativeName "Sofiyski universitet"@da ; 
+    org:alternativeName "Sofya Üniversitesi"@tr ; 
+    org:alternativeName "Софийски университет"@bg ; 
+    schema:mainEntityOfPage <https://www.uni-sofia.bg/> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Sofia_University> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.11355.33> ;
+    schema:sameAs <http://isni.org/isni/0000000121923275> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(23.32415 42.69751)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Sofia" ;
+            schema:addressCountry "BG" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Bulgaria" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/727011/> ;
+    ] ; 
+    .
