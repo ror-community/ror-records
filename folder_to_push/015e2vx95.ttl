@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/015e2vx95> a org:Organization ;
+    rdfs:label "Italian Cultural Institute, Tokyo" ;
+    schema:name "Italian Cultural Institute, Tokyo" ;
+    schema:foundingDate "1941"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    org:alternativeName "Istituto Italiano di Cultura Tokyo" ;
+    schema:url <https://iictokyo.esteri.it> ; 
+    owl:sameAs <https://ja.wikipedia.org/wiki/%E3%82%A4%E3%82%BF%E3%83%AA%E3%82%A2%E6%96%87%E5%8C%96%E4%BC%9A%E9%A4%A8> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(139.69171 35.6895)"^^geo:wktLiteral ;
+            schema:addressLocality "Tokyo" ;
+            schema:addressCountry "JP" ;
+            owl:sameAs <http://sws.geonames.org/1850147/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/020f9s554> a org:Organization ;
+    rdfs:label "Instituto de Pesquisa Ambiental da Amazônia" ;
+    schema:name "Instituto de Pesquisa Ambiental da Amazônia" ;
+    schema:foundingDate "1995"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Nonprofit" ; 
+    org:abbreviation "IPAM" ;
+    schema:url <http://ipam.org.br/> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-48.50444 -1.45583)"^^geo:wktLiteral ;
+            schema:addressLocality "Belém" ;
+            schema:addressCountry "BR" ;
+            owl:sameAs <http://sws.geonames.org/3405870/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000459032007> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q10302908> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

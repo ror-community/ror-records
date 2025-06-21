@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/00hevc163> a org:Organization ;
+    rdfs:label "Manz (Italy)" ;
+    schema:name "Manz (Italy)" ;
+    schema:foundingDate "1987"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Company" ; 
+    org:alternativeName "Manz Automation" ;
+    schema:url <https://www.manz.com/en/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Manz> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(11.25177 44.40064)"^^geo:wktLiteral ;
+            schema:addressLocality "Sasso Marconi" ;
+            schema:addressCountry "IT" ;
+            owl:sameAs <http://sws.geonames.org/3167062/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q30290215> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

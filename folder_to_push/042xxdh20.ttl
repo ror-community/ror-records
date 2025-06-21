@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/042xxdh20> a org:Organization ;
+    rdfs:label "Ludwigshafen University of Business and Society" ;
+    schema:name "Ludwigshafen University of Business and Society" ;
+    schema:foundingDate "1965"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:alternativeName "University of Applied Sciences Ludwigshafen am Rhein" ;
+    schema:url <https://www.hwg-lu.de> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Ludwigshafen_University_of_Applied_Sciences> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(8.44641 49.48121)"^^geo:wktLiteral ;
+            schema:addressLocality "Ludwigshafen am Rhein" ;
+            schema:addressCountry "DE" ;
+            owl:sameAs <http://sws.geonames.org/2875376/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000406474338> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q1622125> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

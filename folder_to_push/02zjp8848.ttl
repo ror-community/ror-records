@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/02zjp8848> a org:Organization ;
+    rdfs:label "Lesya Ukrainka Volyn National University" ;
+    schema:name "Lesya Ukrainka Volyn National University" ;
+    schema:foundingDate "1940"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    schema:url <https://vnu.edu.ua/en> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Lesya_Ukrainka_East_European_National_University> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(25.34244 50.75932)"^^geo:wktLiteral ;
+            schema:addressLocality "Lutsk" ;
+            schema:addressCountry "UA" ;
+            owl:sameAs <http://sws.geonames.org/702569/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000403998646> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q43659> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

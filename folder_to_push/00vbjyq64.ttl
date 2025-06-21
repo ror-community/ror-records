@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/00vbjyq64> a org:Organization ;
+    rdfs:label "Centre Intégré Universitaire de Santé et de Services Sociaux du Saguenay–Lac-Saint-Jean" ;
+    schema:name "Centre Intégré Universitaire de Santé et de Services Sociaux du Saguenay–Lac-Saint-Jean" ;
+    schema:foundingDate "2015"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Healthcare" ; 
+    org:abbreviation "CIUSSS" ;
+    schema:url <http://santesaglac.com> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-71.06573 48.41675)"^^geo:wktLiteral ;
+            schema:addressLocality "Saguenay" ;
+            schema:addressCountry "CA" ;
+            owl:sameAs <http://sws.geonames.org/6137270/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/000000040447190X> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

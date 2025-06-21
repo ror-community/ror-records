@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/02rrh0b30> a org:Organization ;
+    rdfs:label "Landesarchiv Baden Württemberg" ;
+    schema:name "Landesarchiv Baden Württemberg" ;
+    schema:foundingDate "2005"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Archive" ; 
+    schema:url <https://www.landesarchiv-bw.de> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(9.17702 48.78232)"^^geo:wktLiteral ;
+            schema:addressLocality "Stuttgart" ;
+            schema:addressCountry "DE" ;
+            owl:sameAs <http://sws.geonames.org/2825297/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000406223563> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

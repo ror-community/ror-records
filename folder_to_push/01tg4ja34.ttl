@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/01tg4ja34> a org:Organization ;
+    rdfs:label "Estación Experimental de Pastos y Forrajes Indio Hatuey" ;
+    schema:name "Estación Experimental de Pastos y Forrajes Indio Hatuey" ;
+    schema:foundingDate "1962"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    org:abbreviation "EEPFIH" ;
+    org:alternativeName "EEPF Indio Hatuey" ;
+    schema:url <https://www.ihatuey.cu> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-81.5775 23.04111)"^^geo:wktLiteral ;
+            schema:addressLocality "Matanzas" ;
+            schema:addressCountry "CU" ;
+            owl:sameAs <http://sws.geonames.org/3547398/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000449091441> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q52637565> ;
+    .
