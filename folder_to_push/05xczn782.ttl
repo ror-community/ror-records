@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/05xczn782> a org:Organization ;
+    rdfs:label "Corporación Ecuatoriana para el Desarrollo de la Investigación y la Academia" ;
+    schema:name "Corporación Ecuatoriana para el Desarrollo de la Investigación y la Academia" ;
+    schema:foundingDate "2003"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Other" ; 
+    org:abbreviation "CEDIA" ;
+    schema:url <https://www.cedia.org.ec> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-79.00453 -2.90055)"^^geo:wktLiteral ;
+            schema:addressLocality "Cuenca" ;
+            schema:addressCountry "EC" ;
+            owl:sameAs <http://sws.geonames.org/3658666/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000446878468> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q65557854> ;
+    .

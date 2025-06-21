@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/038hf8q48> a org:Organization ;
+    rdfs:label "NOAA National Weather Service Alaska Region" ;
+    schema:name "NOAA National Weather Service Alaska Region" ;
+    schema:foundingDate "1940"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Government" ; 
+    org:abbreviation "NOAA NWS AR" ;
+    org:alternativeName "National Oceanic and Atmospheric Administration National Weather Service Alaska Region" ;
+    schema:url <https://www.weather.gov/arh/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/List_of_National_Weather_Service_Weather_Forecast_Offices> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-149.90028 61.21806)"^^geo:wktLiteral ;
+            schema:addressLocality "Anchorage" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/5879400/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000404180918> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q6591593> ;
+    .

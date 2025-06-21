@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/04kfq3e26> a org:Organization ;
+    rdfs:label "NOAA National Weather Service Central Region" ;
+    schema:name "NOAA National Weather Service Central Region" ;
+    schema:foundingDate "1940"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Government" ; 
+    org:abbreviation "NOAA NWS CR" ;
+    org:alternativeName "National Oceanic and Atmospheric Administration National Weather Service Central Region" ;
+    schema:url <https://www.weather.gov/crh/> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-104.9847 39.73915)"^^geo:wktLiteral ;
+            schema:addressLocality "Denver" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/5419384/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q6591593> ;
+    .

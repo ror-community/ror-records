@@ -8,12 +8,15 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 
 <https://ror.org/00ndyev54> a org:Organization ;
-    rdfs:label "National Centers for Environmental Prediction" ;
-    schema:name "National Centers for Environmental Prediction" ;
+    rdfs:label "NOAA National Centers for Environmental Prediction" ;
+    schema:name "NOAA National Centers for Environmental Prediction" ;
+    schema:foundingDate "1994"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
+    org:classification "Government" ; 
     org:abbreviation "NCEP" ;
+    org:alternativeName "NOAA NWS National Centers for Environmental Prediction" ;
     schema:url <http://www.ncep.noaa.gov/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/National_Centers_for_Environmental_Prediction> ;
     schema:location [
             a schema:Place ;
             geo:asWKT "POINT(-76.93692 38.98067)"^^geo:wktLiteral ;
@@ -23,5 +26,6 @@
                 dct:license <http://creativecommons.org/licenses/by/3.0/> ;
             ] ; 
     schema:sameAs <http://isni.org/isni/0000000404329305> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q1966999> ;
     schema:sameAs <https://grid.ac/institutions/g> ;
     .

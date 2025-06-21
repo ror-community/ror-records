@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/03fy33a80> a org:Organization ;
+    rdfs:label "NOAA Office of Protected Resources" ;
+    schema:name "NOAA Office of Protected Resources" ;
+    org:status "active" ;
+    org:classification "Government" ; 
+    org:abbreviation "OPR" ;
+    org:alternativeName "National Oceanic and Atmospheric Administration Office of Protected Resources" ;
+    schema:url <https://www.fisheries.noaa.gov/about/office-protected-resources> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-77.02609 38.99067)"^^geo:wktLiteral ;
+            schema:addressLocality "Silver Spring" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/4369596/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000404308010> ;
+    .

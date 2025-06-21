@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/041nk4h53> a org:Organization ;
+    rdfs:label "Lawrence Livermore National Laboratory" ;
+    schema:name "Lawrence Livermore National Laboratory" ;
+    schema:foundingDate "1952"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    org:abbreviation "LLNL" ;
+    org:alternativeName "United States Department of Energy National Nuclear Security Administration Lawrence Livermore National Laboratory" ;
+    schema:url <https://www.llnl.gov/> ; 
+    owl:sameAs <http://en.wikipedia.org/wiki/Lawrence_Livermore_National_Laboratory> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-121.76801 37.68187)"^^geo:wktLiteral ;
+            schema:addressLocality "Livermore" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/5367440/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000121609702> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q519826> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

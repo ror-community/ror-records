@@ -1,0 +1,32 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/03jbkky50> a org:Organization ;
+    rdfs:label "Institut Sains dan Teknologi Terpadu Surabaya" ;
+    schema:name "Institut Sains dan Teknologi Terpadu Surabaya" ;
+    schema:foundingDate "1979"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "STTS" ;
+    org:alternativeName "Sekolah Tinggi Teknik Surabaya" ;
+    schema:url <https://www.stts.edu> ; 
+    owl:sameAs <https://id.wikipedia.org/wiki/Institut_Sains_dan_Teknologi_Terpadu_Surabaya> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(112.75083 -7.24917)"^^geo:wktLiteral ;
+            schema:addressLocality "Surabaya" ;
+            schema:addressCountry "ID" ;
+            owl:sameAs <http://sws.geonames.org/1625822/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000403857130> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q12513120> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q122761946> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

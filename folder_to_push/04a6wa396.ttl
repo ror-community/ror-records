@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/04a6wa396> a org:Organization ;
+    rdfs:label "Swedish Institute for Children's Books" ;
+    schema:name "Swedish Institute for Children's Books" ;
+    schema:foundingDate "1965"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Archive" ; 
+    org:abbreviation "SBI" ;
+    org:alternativeName "Svenska Barnboksinstitutet" ;
+    schema:url <https://www.barnboksinstitutet.se> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(18.06871 59.32938)"^^geo:wktLiteral ;
+            schema:addressLocality "Stockholm" ;
+            schema:addressCountry "SE" ;
+            owl:sameAs <http://sws.geonames.org/2673730/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000109402178> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q10684945> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

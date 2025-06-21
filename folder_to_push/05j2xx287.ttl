@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/05j2xx287> a org:Organization ;
+    rdfs:label "Brenner Children's Hospital" ;
+    schema:name "Brenner Children's Hospital" ;
+    schema:foundingDate "1986"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Healthcare" ; 
+    schema:url <https://www.brennerchildrens.org/index.htm> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Brenner_Children%27s_Hospital> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-80.24422 36.09986)"^^geo:wktLiteral ;
+            schema:addressLocality "Winston-Salem" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/4499612/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000404590909> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q4961269> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/03tpcfk14> a org:Organization ;
+    rdfs:label "Département Physiologie Animale et Systèmes d’Élevage" ;
+    schema:name "Département Physiologie Animale et Systèmes d’Élevage" ;
+    org:status "active" ;
+    org:classification "Government" ; 
+    org:abbreviation "PHASE" ;
+    org:alternativeName "Département PHASE" ;
+    schema:url <https://www.inrae.fr/departements/phase> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(0.74623 47.54499)"^^geo:wktLiteral ;
+            schema:addressLocality "Nouzilly" ;
+            schema:addressCountry "FR" ;
+            owl:sameAs <http://sws.geonames.org/2989945/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q30260871> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/02hhndj92> a org:Organization ;
+    rdfs:label "University of Michigan Biological Station" ;
+    schema:name "University of Michigan Biological Station" ;
+    schema:foundingDate "1909"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    org:abbreviation "UMBS" ;
+    schema:url <https://lsa.umich.edu/umbs> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/University_of_Michigan_Biological_Station> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-84.7854 45.5528)"^^geo:wktLiteral ;
+            schema:addressLocality "Pellston" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/5005247/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000122260194> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q7895751> ;
+    .
