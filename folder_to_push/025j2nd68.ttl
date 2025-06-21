@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/025j2nd68> a org:Organization ;
+    rdfs:label "The Lundquist Institute" ;
+    schema:name "The Lundquist Institute" ;
+    schema:foundingDate "1952"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Nonprofit" ; 
+    org:alternativeName "LA BioMed" ;
+    schema:url <https://lundquist.org> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-118.34063 33.83585)"^^geo:wktLiteral ;
+            schema:addressLocality "Torrance" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/5403022/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000405210744> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q121267479> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

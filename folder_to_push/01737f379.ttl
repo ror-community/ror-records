@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/01737f379> a org:Organization ;
+    rdfs:label "Universidade Federal do Sul e Sudeste do Pará" ;
+    schema:name "Universidade Federal do Sul e Sudeste do Pará" ;
+    schema:foundingDate "2013"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "UNIFESSPA" ;
+    schema:url <https://www.unifesspa.edu.br/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Federal_University_of_Southern_and_Southeastern_Par%C3%A1> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-49.13232 -5.38146)"^^geo:wktLiteral ;
+            schema:addressLocality "Marabá" ;
+            schema:addressCountry "BR" ;
+            owl:sameAs <http://sws.geonames.org/3395503/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000446841497> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q10387835> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

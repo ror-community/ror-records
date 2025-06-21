@@ -1,0 +1,25 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/0015pkk46> a org:Organization ;
+    rdfs:label "Cooperative Programs for the Advancement of Earth system science" ;
+    schema:name "Cooperative Programs for the Advancement of Earth system science" ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    org:abbreviation "CPAESS" ;
+    schema:url <https://cpaess.ucar.edu> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-105.27055 40.01499)"^^geo:wktLiteral ;
+            schema:addressLocality "Boulder" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/5574991/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    .

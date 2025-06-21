@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/04w7hre37> a org:Organization ;
+    rdfs:label "University of Puerto Rico at Aguadilla" ;
+    schema:name "University of Puerto Rico at Aguadilla" ;
+    schema:foundingDate "1972"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "UPRAG" ;
+    org:alternativeName "Colegio Regional de Aguadilla" ;
+    schema:url <https://www.uprag.edu/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/University_of_Puerto_Rico_at_Aguadilla> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-67.15407 18.42745)"^^geo:wktLiteral ;
+            schema:addressLocality "Aguadilla" ;
+            schema:addressCountry "PR" ;
+            owl:sameAs <http://sws.geonames.org/4562506/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000460391429> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q7896171> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

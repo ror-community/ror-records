@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/04tz64554> a org:Organization ;
+    rdfs:label "Defense Threat Reduction Agency" ;
+    schema:name "Defense Threat Reduction Agency" ;
+    schema:foundingDate "1998"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Government" ; 
+    org:abbreviation "DTRA" ;
+    schema:url <http://www.dtra.mil/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Defense_Threat_Reduction_Agency> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-77.14589 38.7119)"^^geo:wktLiteral ;
+            schema:addressLocality "Fort Belvoir" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/7257902/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000106942857> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q749381> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

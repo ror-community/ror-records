@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/01cm9aw18> a org:Organization ;
+    rdfs:label "Martin Marietta (United States)" ;
+    schema:name "Martin Marietta (United States)" ;
+    schema:foundingDate "1961"^^xsd:gYear ;
+    org:status "inactive" ;
+    org:classification "Company" ; 
+    org:alternativeName "Martin Marietta" ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Martin_Marietta> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-77.10026 38.98067)"^^geo:wktLiteral ;
+            schema:addressLocality "Bethesda" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/4348599/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q626800> ;
+    .

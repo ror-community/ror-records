@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/02x2gbe80> a org:Organization ;
+    rdfs:label "Hospital Universitário de Brasília" ;
+    schema:name "Hospital Universitário de Brasília" ;
+    schema:foundingDate "1972"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Healthcare" ; 
+    org:abbreviation "HUB" ;
+    schema:url <http://www.ebserh.gov.br/web/hub-unb> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-47.92972 -15.77972)"^^geo:wktLiteral ;
+            schema:addressLocality "Brasília" ;
+            schema:addressCountry "BR" ;
+            owl:sameAs <http://sws.geonames.org/3469058/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/01zvnr827> a org:Organization ;
+    rdfs:label "Dubai Police Academy" ;
+    schema:name "Dubai Police Academy" ;
+    schema:foundingDate "1987"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "DPA" ;
+    schema:url <https://dubaipolice.ac.ae/dpacademy/> ; 
+    owl:sameAs <https://ar.wikipedia.org/wiki/%D8%A3%D9%83%D8%A7%D8%AF%D9%8A%D9%85%D9%8A%D8%A9_%D8%B4%D8%B1%D8%B7%D8%A9_%D8%AF%D8%A8%D9%8A> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(55.30927 25.07725)"^^geo:wktLiteral ;
+            schema:addressLocality "Dubai" ;
+            schema:addressCountry "AE" ;
+            owl:sameAs <http://sws.geonames.org/292223/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000086087805> ;
+    .

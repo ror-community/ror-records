@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/03308db07> a org:Organization ;
+    rdfs:label "BT Research" ;
+    schema:name "BT Research" ;
+    schema:foundingDate "1921"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    org:alternativeName "British Telecom Research" ;
+    schema:url <https://www.bt.com/about/bt/research-and-development> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/BT_Research> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(1.15545 52.05917)"^^geo:wktLiteral ;
+            schema:addressLocality "Ipswich" ;
+            schema:addressCountry "GB" ;
+            owl:sameAs <http://sws.geonames.org/2646057/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000122885215> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q4836765> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

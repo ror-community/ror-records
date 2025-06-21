@@ -1,0 +1,25 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/05y2b6q82> a org:Organization ;
+    rdfs:label "Henan Provincial Department of Human Resources and Social Security" ;
+    schema:name "Henan Provincial Department of Human Resources and Social Security" ;
+    org:status "active" ;
+    org:classification "Government" ; 
+    org:alternativeName "Department of Human Resources and Social Security of Henan Province" ;
+    schema:url <https://hrss.henan.gov.cn> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(113.66667 34)"^^geo:wktLiteral ;
+            schema:addressLocality "Henan" ;
+            schema:addressCountry "CN" ;
+            owl:sameAs <http://sws.geonames.org/1808520/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    .

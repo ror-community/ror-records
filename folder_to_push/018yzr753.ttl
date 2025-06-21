@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/018yzr753> a org:Organization ;
+    rdfs:label "Hospital Universitário Regional do Norte do Paraná" ;
+    schema:name "Hospital Universitário Regional do Norte do Paraná" ;
+    schema:foundingDate "1971"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Healthcare" ; 
+    schema:url <http://www.uel.br/hu/portal/> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-51.16278 -23.31028)"^^geo:wktLiteral ;
+            schema:addressLocality "Londrina" ;
+            schema:addressCountry "BR" ;
+            owl:sameAs <http://sws.geonames.org/3458449/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000403701451> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q43896439> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .
