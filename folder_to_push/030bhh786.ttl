@@ -4,27 +4,41 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/030bhh786> a org:Organization ;
     rdfs:label "ShanghaiTech University" ;
     schema:name "ShanghaiTech University" ;
     schema:foundingDate "2013"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:alternativeName "上海科技大學" ;
-    schema:url <http://www.shanghaitech.edu.cn> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/ShanghaiTech_University> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:alternativeName "上海科技大學"@zh ; 
+    schema:url <http://shanghaitech.edu.cn> ; 
+    schema:mainEntityOfPage <https://www.shanghaitech.edu.cn> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/ShanghaiTech_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100012600> ;
+    schema:sameAs <https://grid.ac/institutions/grid.440637.2> ;
+    schema:sameAs <http://isni.org/isni/0000000446578879> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(121.45806 31.22222)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(121.45806 31.22222)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Shanghai" ;
             schema:addressCountry "CN" ;
-            owl:sameAs <http://sws.geonames.org/1796236/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000446578879> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q3817847> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "China" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1796236/> ;
+    ] ; 
     .

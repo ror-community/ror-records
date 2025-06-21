@@ -4,28 +4,54 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02c2kyt77> a org:Organization ;
     rdfs:label "Eindhoven University of Technology" ;
     schema:name "Eindhoven University of Technology" ;
     schema:foundingDate "1956"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "TU/e" ;
-    org:alternativeName "Technische Hogeschool Eindhoven" ;
-    schema:url <http://www.tue.nl/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Eindhoven_University_of_Technology> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "TU/e"@None ; 
+    org:alternativeName "Technische Hogeschool Eindhoven"@nl ; 
+    schema:url <http://tue.nl> ; 
+    schema:mainEntityOfPage <https://www.tue.nl> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Eindhoven_University_of_Technology> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100003005> ;
+    schema:sameAs <https://grid.ac/institutions/grid.6852.9> ;
+    schema:sameAs <http://isni.org/isni/0000000403988763> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03q7ay915> ;
+        rdfs:label "TIAS School for Business and Society" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03rsncr94> ;
+        rdfs:label "4TU" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(5.47778 51.44083)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(5.47778 51.44083)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Eindhoven" ;
             schema:addressCountry "NL" ;
-            owl:sameAs <http://sws.geonames.org/2756253/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000403988763> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q280824> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "The Netherlands" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2756253/> ;
+    ] ; 
     .

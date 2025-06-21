@@ -4,27 +4,77 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/04f0qj703> a org:Organization ;
     rdfs:label "Robert Gordon University" ;
     schema:name "Robert Gordon University" ;
     schema:foundingDate "1992"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "RGU" ;
-    schema:url <http://www.rgu.ac.uk/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Robert_Gordon_University> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "RGU"@None ; 
+    schema:url <http://rgu.ac.uk> ; 
+    schema:mainEntityOfPage <https://rgu.ac.uk> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Robert_Gordon_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/100009749> ;
+    schema:sameAs <https://grid.ac/institutions/grid.59490.31> ;
+    schema:sameAs <http://isni.org/isni/0000000123241681> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/0020hse07> ;
+        rdfs:label "Aberdeen Maternity Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02q49af68> ;
+        rdfs:label "Aberdeen Royal Infirmary" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00rv6r564> ;
+        rdfs:label "Balfour Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/0382m3r69> ;
+        rdfs:label "Dr Gray's Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00ggs5315> ;
+        rdfs:label "Woolmanhill Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03hkzcg46> ;
+        rdfs:label "Scottish Confederation of University and Research Libraries" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-2.09814 57.14369)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-2.09814 57.14369)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Aberdeen" ;
             schema:addressCountry "GB" ;
-            owl:sameAs <http://sws.geonames.org/2657832/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000123241681> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1788342> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United Kingdom" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2657832/> ;
+    ] ; 
     .

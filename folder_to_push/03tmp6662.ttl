@@ -4,28 +4,43 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/03tmp6662> a org:Organization ;
     rdfs:label "Weifang Medical University" ;
     schema:name "Weifang Medical University" ;
     schema:foundingDate "1951"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "WMU" ;
-    org:alternativeName "Changwei Medical School" ;
-    schema:url <http://www.wfmc.edu.cn/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Weifang_Medical_University> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:alternativeName "Changwei Medical College"@en ; 
+    org:alternativeName "Changwei Medical School"@en ; 
+    org:abbreviation "WMU"@None ; 
+    schema:url <http://wfmc.edu.cn> ; 
+    schema:mainEntityOfPage <https://www.wfmc.edu.cn> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Weifang_Medical_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100010886> ;
+    schema:sameAs <https://grid.ac/institutions/grid.268079.2> ;
+    schema:sameAs <http://isni.org/isni/0000000417906079> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(119.10194 36.71)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(119.10194 36.71)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Weifang" ;
             schema:addressCountry "CN" ;
-            owl:sameAs <http://sws.geonames.org/1791681/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000417906079> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q7979838> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "China" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1791681/> ;
+    ] ; 
     .

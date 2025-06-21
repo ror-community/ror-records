@@ -4,27 +4,83 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/03h2bxq36> a org:Organization ;
     rdfs:label "University of Dundee" ;
     schema:name "University of Dundee" ;
     schema:foundingDate "1881"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:alternativeName "Universitas Dundensis" ;
-    schema:url <http://www.dundee.ac.uk/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Dundee> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:alternativeName "Universitas Dundensis"@None ; 
+    schema:url <http://dundee.ac.uk> ; 
+    schema:mainEntityOfPage <https://www.dundee.ac.uk> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Dundee> ; 
+    schema:sameAs <https://api.crossref.org/funders/100008890> ;
+    schema:sameAs <https://grid.ac/institutions/grid.8241.f> ;
+    schema:sameAs <http://isni.org/isni/0000000403972876> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01zg1tt02> ;
+        rdfs:label "MRC Protein Phosphorylation and Ubiquitylation Unit" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02e6k9z27> ;
+        rdfs:label "Wellcome Centre for Anti-Infectives Research" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01ybj8n97> ;
+        rdfs:label "Dundee Dental Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03rzp5127> ;
+        rdfs:label "James Hutton Institute" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/039c6rk82> ;
+        rdfs:label "Ninewells Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05nstty25> ;
+        rdfs:label "Perth Royal Infirmary" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03hkzcg46> ;
+        rdfs:label "Scottish Confederation of University and Research Libraries" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-2.97489 56.46913)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-2.97489 56.46913)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Dundee" ;
             schema:addressCountry "GB" ;
-            owl:sameAs <http://sws.geonames.org/2650752/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000403972876> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1249005> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United Kingdom" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2650752/> ;
+    ] ; 
     .

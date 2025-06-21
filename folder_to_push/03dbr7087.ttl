@@ -4,28 +4,208 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/03dbr7087> a org:Organization ;
     rdfs:label "University of Toronto" ;
     schema:name "University of Toronto" ;
     schema:foundingDate "1827"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    schema:url <http://www.utoronto.ca/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/University_of_Toronto> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    schema:url <http://utoronto.ca> ; 
+    schema:mainEntityOfPage <https://www.utoronto.ca> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/University_of_Toronto> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100003579> ;
+    schema:sameAs <https://grid.ac/institutions/grid.17063.33> ;
+    schema:sameAs <http://isni.org/isni/0000000121572938> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0265wc016> ;
+        rdfs:label "Canadian Institute for Theoretical Astrophysics" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03zzj3f20> ;
+        rdfs:label "Fields Institute for Research in Mathematical Sciences" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00cgnj660> ;
+        rdfs:label "Ted Rogers Centre for Heart Research" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/037dt7852> ;
+        rdfs:label "AGE-WELL" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05n0tzs53> ;
+        rdfs:label "Sunnybrook Research Institute" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03gp5b411> ;
+        rdfs:label "Baycrest Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/022ave037> ;
+        rdfs:label "Campbellford Memorial Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03e71c577> ;
+        rdfs:label "Centre for Addiction and Mental Health" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02p6a3b37> ;
+        rdfs:label "Creative Destruction Lab" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03qea8398> ;
+        rdfs:label "Holland Bloorview Kids Rehabilitation Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/057q4rt57> ;
+        rdfs:label "Hospital for Sick Children" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02gj19t78> ;
+        rdfs:label "Humber River Regional Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/0390kp681> ;
+        rdfs:label "Institute for Circumpolar Health Research" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01s5axj25> ;
+        rdfs:label "Lunenfeld-Tanenbaum Research Institute" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05deks119> ;
+        rdfs:label "Mount Sinai Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05b3hqn14> ;
+        rdfs:label "North York General Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/04skqfp25> ;
+        rdfs:label "St. Michael's Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03wefcv03> ;
+        rdfs:label "Sunnybrook Health Science Centre" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/008kn1a71> ;
+        rdfs:label "Sunnybrook Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01tw7ew41> ;
+        rdfs:label "Surrey Place Centre" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/04pzgb662> ;
+        rdfs:label "The Scarborough Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03sm16s30> ;
+        rdfs:label "Toronto East General Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03v6a2j28> ;
+        rdfs:label "Trillium Health Centre" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/042xt5161> ;
+        rdfs:label "University Health Network" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/0548x8e24> ;
+        rdfs:label "Waypoint Centre for Mental Health Care" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/037y13578> ;
+        rdfs:label "West Park Healthcare Centre" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03cw63y62> ;
+        rdfs:label "Women's College Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/055a54548> ;
+        rdfs:label "Beaufort Lagoon Ecosystems Long Term Ecological Research Network" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-79.39864 43.70643)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-79.39864 43.70643)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Toronto" ;
             schema:addressCountry "CA" ;
-            owl:sameAs <http://sws.geonames.org/6167865/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000121572938> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q180865> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q6120110> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q3551675> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Canada" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/6167865/> ;
+    ] ; 
     .

@@ -4,25 +4,37 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/00f93gn72> a org:Organization ;
     rdfs:label "Suqian University" ;
     schema:name "Suqian University" ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:alternativeName "Suqian College" ;
-    schema:url <https://www.squ.edu.cn> ; 
-    owl:sameAs <https://zh.wikipedia.org/wiki/%E5%AE%BF%E8%BF%81%E5%AD%A6%E9%99%A2> ;
+    org:classification "education" ; 
+    dct:created "2023-05-25"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:alternativeName "Suqian College"@None ; 
+    schema:url <http://squ.edu.cn> ; 
+    schema:mainEntityOfPage <https://www.squ.edu.cn> ;
+    owl:sameAs <https://zh.wikipedia.org/wiki/%E5%AE%BF%E8%BF%81%E5%AD%A6%E9%99%A2> ; 
+    schema:sameAs <http://isni.org/isni/0000000417626472> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(118.29583 33.94917)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(118.29583 33.94917)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Suqian" ;
             schema:addressCountry "CN" ;
-            owl:sameAs <http://sws.geonames.org/1793771/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000417626472> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q10952382> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "China" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1793771/> ;
+    ] ; 
     .

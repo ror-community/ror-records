@@ -4,28 +4,43 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/04jcykh16> a org:Organization ;
     rdfs:label "Wuhan Institute of Technology" ;
     schema:name "Wuhan Institute of Technology" ;
     schema:foundingDate "1972"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "WIT" ;
-    org:alternativeName "Wǔhàn Gōngchéng Dàxué" ;
-    schema:url <http://www.wit.edu.cn/english/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Wuhan_Institute_of_Technology> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:alternativeName "Hubei Petrochemical Institute"@en ; 
+    org:abbreviation "WIT"@None ; 
+    org:alternativeName "Wǔhàn Gōngchéng Dàxué"@None ; 
+    schema:url <http://wit.edu.cn> ; 
+    schema:mainEntityOfPage <https://www.wit.edu.cn> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Wuhan_Institute_of_Technology> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100008869> ;
+    schema:sameAs <https://grid.ac/institutions/grid.433800.c> ;
+    schema:sameAs <http://isni.org/isni/0000000087751413> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(114.26667 30.58333)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(114.26667 30.58333)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Wuhan" ;
             schema:addressCountry "CN" ;
-            owl:sameAs <http://sws.geonames.org/1791247/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000087751413> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q5969811> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "China" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1791247/> ;
+    ] ; 
     .

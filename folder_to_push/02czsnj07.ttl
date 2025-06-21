@@ -4,27 +4,58 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02czsnj07> a org:Organization ;
     rdfs:label "Deakin University" ;
     schema:name "Deakin University" ;
     schema:foundingDate "1974"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    schema:url <http://www.deakin.edu.au/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Deakin_University> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    schema:url <http://deakin.edu.au> ; 
+    schema:mainEntityOfPage <https://www.deakin.edu.au> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Deakin_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100001778> ;
+    schema:sameAs <https://grid.ac/institutions/grid.1021.2> ;
+    schema:sameAs <http://isni.org/isni/0000000105267079> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/0484pjq71> ;
+        rdfs:label "Box Hill Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00jrpxe15> ;
+        rdfs:label "Geelong Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02ett6548> ;
+        rdfs:label "Epworth Hospital" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(145.11901 -37.84978)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(145.11901 -37.84978)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Burwood" ;
             schema:addressCountry "AU" ;
-            owl:sameAs <http://sws.geonames.org/7932622/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000105267079> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1180978> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q21973208> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Australia" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/7932622/> ;
+    ] ; 
     .

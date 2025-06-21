@@ -4,26 +4,46 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01tmqtf75> a org:Organization ;
     rdfs:label "University of Salford" ;
     schema:name "University of Salford" ;
     schema:foundingDate "1850"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    schema:url <http://www.salford.ac.uk/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Salford> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    schema:url <http://salford.ac.uk> ; 
+    schema:mainEntityOfPage <https://www.salford.ac.uk> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Salford> ; 
+    schema:sameAs <https://api.crossref.org/funders/100010055> ;
+    schema:sameAs <https://grid.ac/institutions/grid.8752.8> ;
+    schema:sameAs <http://isni.org/isni/0000000404605971> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03482ps02> ;
+        rdfs:label "National Institute of Airborne Acoustic Metrology" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-2.29042 53.48771)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-2.29042 53.48771)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Salford" ;
             schema:addressCountry "GB" ;
-            owl:sameAs <http://sws.geonames.org/2638671/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000404605971> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q2738622> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United Kingdom" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2638671/> ;
+    ] ; 
     .

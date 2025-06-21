@@ -4,27 +4,40 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01q349q17> a org:Organization ;
     rdfs:label "Hubei University for Nationalities" ;
     schema:name "Hubei University for Nationalities" ;
     schema:foundingDate "1998"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "HUN" ;
-    org:alternativeName "Hubei Institute for Nationalities and the former Enshi Medical Institute" ;
-    schema:url <https://www.hbmzu.edu.cn> ; 
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "HUN"@None ; 
+    org:alternativeName "Hubei Institute for Nationalities and the former Enshi Medical Institute"@en ; 
+    org:alternativeName "Hubei Minzu University"@None ; 
+    schema:url <http://hbmzu.edu.cn> ; 
+    schema:mainEntityOfPage <https://www.hbmzu.edu.cn> ;
+    schema:sameAs <https://grid.ac/institutions/grid.440771.1> ;
+    schema:sameAs <http://isni.org/isni/0000000088202504> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(109.48333 30.3)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(109.48333 30.3)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Enshi" ;
             schema:addressCountry "CN" ;
-            owl:sameAs <http://sws.geonames.org/1811720/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000088202504> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q17499225> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "China" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1811720/> ;
+    ] ; 
     .

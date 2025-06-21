@@ -15,9 +15,10 @@
     org:classification "funder" ; 
     org:classification "healthcare" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-08-21"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
     org:alternativeName "Charité"@en ; 
-    schema:mainEntityOfPage <https://www.charite.de/en/> ;
+    schema:url <http://charite.de> ; 
+    schema:mainEntityOfPage <https://www.charite.de> ;
     owl:sameAs <http://en.wikipedia.org/wiki/Charit%C3%A9> ; 
     schema:sameAs <https://api.crossref.org/funders/501100002839> ;
     schema:sameAs <https://grid.ac/institutions/grid.6363.0> ;
@@ -54,6 +55,12 @@
     ] ; 
     org:hasLink [
         a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05dsfb086> ;
+        rdfs:label "Berlin Institute for the Foundations of Learning and Data" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
         org:role "related" ;
         org:member <https://ror.org/044fhy270> ;
         rdfs:label "Carl-Thiem-Klinikum Cottbus" ;
@@ -81,12 +88,6 @@
         org:role "related" ;
         org:member <https://ror.org/008cfmj78> ;
         rdfs:label "Wyss Institute for Biologically Inspired Engineering" ;
-    ] ; 
-    org:hasLink [
-        a org:Membership ;
-        org:role "child" ;
-        org:member <https://ror.org/05dsfb086> ;
-        rdfs:label "Berlin Institute for the Foundations of Learning and Data" ;
     ] ; 
     org:hasLink [
         a org:Membership ;

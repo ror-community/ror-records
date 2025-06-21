@@ -4,27 +4,83 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01r9htc13> a org:Organization ;
     rdfs:label "Université Libre de Bruxelles" ;
     schema:name "Université Libre de Bruxelles" ;
     schema:foundingDate "1834"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "ULB" ;
-    schema:url <https://www.ulb.be> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Universit%C3%A9_libre_de_Bruxelles> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "ULB"@None ; 
+    schema:url <http://ulb.be> ; 
+    schema:mainEntityOfPage <https://www.ulb.be> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Universit%C3%A9_libre_de_Bruxelles> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100008367> ;
+    schema:sameAs <https://grid.ac/institutions/grid.4989.c> ;
+    schema:sameAs <http://isni.org/isni/0000000123486355> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/040w2dm02> ;
+        rdfs:label "Interuniversity Institute for High Energies" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/013ww9721> ;
+        rdfs:label "Wiener - Anspach Foundation" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/011apjk30> ;
+        rdfs:label "Centre Hospitalier Universitaire Brugmann" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05cmp5q80> ;
+        rdfs:label "Centre Hospitalier Universitaire de Saint-Pierre" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05j1gs298> ;
+        rdfs:label "Erasmus Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05e8s8534> ;
+        rdfs:label "Institut Jules Bordet" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01t5yh786> ;
+        rdfs:label "Queen Fabiola Children's University Hospital" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(4.34878 50.85045)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(4.34878 50.85045)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Brussels" ;
             schema:addressCountry "BE" ;
-            owl:sameAs <http://sws.geonames.org/2800866/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000123486355> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q574606> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Belgium" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2800866/> ;
+    ] ; 
     .

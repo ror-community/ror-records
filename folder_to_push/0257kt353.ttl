@@ -4,26 +4,39 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/0257kt353> a org:Organization ;
     rdfs:label "University West" ;
     schema:name "University West" ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:alternativeName "University College of Trollhättan/Uddevalla" ;
-    schema:url <http://www.hv.se/en> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/University_College_West> ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:alternativeName "University College West"@en ; 
+    org:alternativeName "University College of Trollhättan/Uddevalla"@en ; 
+    schema:url <http://hv.se> ; 
+    schema:mainEntityOfPage <https://www.hv.se> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_College_West> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.412716.7> ;
+    schema:sameAs <http://isni.org/isni/0000000089703706> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(12.28864 58.28365)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(12.28864 58.28365)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Trollhättan" ;
             schema:addressCountry "SE" ;
-            owl:sameAs <http://sws.geonames.org/2667303/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000089703706> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q7894643> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Sweden" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2667303/> ;
+    ] ; 
     .

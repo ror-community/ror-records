@@ -4,27 +4,47 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/038hzq450> a org:Organization ;
     rdfs:label "Xinxiang Medical University" ;
     schema:name "Xinxiang Medical University" ;
     schema:foundingDate "1950"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "XXMU" ;
-    schema:url <http://www.xxmu.edu.cn/english/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Xinxiang_Medical_University> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "XXMU"@None ; 
+    schema:url <http://xxmu.edu.cn> ; 
+    schema:mainEntityOfPage <https://www.xxmu.edu.cn> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Xinxiang_Medical_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100011841> ;
+    schema:sameAs <https://grid.ac/institutions/grid.412990.7> ;
+    schema:sameAs <http://isni.org/isni/000000041808322X> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/006zn6z18> ;
+        rdfs:label "Xinxiang Central Hospital" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(113.80151 35.19033)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(113.80151 35.19033)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Xinxiang" ;
             schema:addressCountry "CN" ;
-            owl:sameAs <http://sws.geonames.org/1788572/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/000000041808322X> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q8044666> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "China" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1788572/> ;
+    ] ; 
     .

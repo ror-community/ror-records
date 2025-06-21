@@ -1,0 +1,45 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/027sdcz20> a org:Organization ;
+    rdfs:label "Klaipėda University" ;
+    schema:name "Klaipėda University" ;
+    schema:foundingDate "1991"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "KU"@None ; 
+    org:alternativeName "Klaipėdos Universitetas"@lt ; 
+    schema:url <http://ku.lt> ; 
+    schema:mainEntityOfPage <https://www.ku.lt> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Klaip%C4%97da_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100004075> ;
+    schema:sameAs <https://grid.ac/institutions/grid.14329.3d> ;
+    schema:sameAs <http://isni.org/isni/0000000110112418> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(21.13912 55.7068)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Klaipėda" ;
+            schema:addressCountry "LT" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Lithuania" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/598098/> ;
+    ] ; 
+    .

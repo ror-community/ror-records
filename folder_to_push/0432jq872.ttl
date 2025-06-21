@@ -4,28 +4,60 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/0432jq872> a org:Organization ;
     rdfs:label "Mississippi State University" ;
     schema:name "Mississippi State University" ;
     schema:foundingDate "1878"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "MSU" ;
-    org:alternativeName "Mississippi State University of Agriculture and Applied Science" ;
-    schema:url <http://msstate.edu/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Mississippi_State_University> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "MSU"@None ; 
+    org:alternativeName "Mississippi State University of Agriculture and Applied Science"@en ; 
+    schema:url <http://msstate.edu> ; 
+    schema:mainEntityOfPage <https://www.msstate.edu> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Mississippi_State_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/100007250> ;
+    schema:sameAs <https://grid.ac/institutions/grid.260120.7> ;
+    schema:sameAs <http://isni.org/isni/0000000108168287> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/04kqgqa72> ;
+        rdfs:label "Mississippi Institutions of Higher Learning" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/04vzsq290> ;
+        rdfs:label "Mississippi Alabama Sea Grant Consortium" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/0249rpb20> ;
+        rdfs:label "Mississippi Space Grant Consortium" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-88.81961 33.45049)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-88.81961 33.45049)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Starkville" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/4447161/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000108168287> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1939211> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/4447161/> ;
+    ] ; 
     .

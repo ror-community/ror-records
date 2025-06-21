@@ -4,28 +4,88 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/0464eyp60> a org:Organization ;
     rdfs:label "University of Massachusetts Chan Medical School" ;
     schema:name "University of Massachusetts Chan Medical School" ;
     schema:foundingDate "1962"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "UMMS" ;
-    org:alternativeName "UMass Medical School" ;
-    schema:url <http://www.umassmed.edu/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/University_of_Massachusetts_Medical_School> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "UMCMS"@None ; 
+    org:abbreviation "UMMS"@None ; 
+    org:alternativeName "UMass Chan"@en ; 
+    org:alternativeName "UMass Chan Medical School"@en ; 
+    org:alternativeName "UMass Medical School"@en ; 
+    org:alternativeName "University of Massachusetts Medical School"@en ; 
+    schema:url <http://umassmed.edu> ; 
+    schema:mainEntityOfPage <https://www.umassmed.edu> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/University_of_Massachusetts_Medical_School> ; 
+    schema:sameAs <https://api.crossref.org/funders/100007920> ;
+    schema:sameAs <https://grid.ac/institutions/grid.168645.8> ;
+    schema:sameAs <http://isni.org/isni/0000000107420364> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01v2b1j25> ;
+        rdfs:label "Eunice Kennedy Shriver Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/0260j1g46> ;
+        rdfs:label "University of Massachusetts System" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/016c4a879> ;
+        rdfs:label "Berkshire Medical Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/039yfgp64> ;
+        rdfs:label "Greater Lawrence Family Health Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01w50jw95> ;
+        rdfs:label "New England Baptist Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/053v00853> ;
+        rdfs:label "UMass Memorial Medical Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/008cfmj78> ;
+        rdfs:label "Wyss Institute for Biologically Inspired Engineering" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-71.80229 42.26259)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-71.80229 42.26259)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Worcester" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/4956184/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000107420364> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q7895715> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/4956184/> ;
+    ] ; 
     .

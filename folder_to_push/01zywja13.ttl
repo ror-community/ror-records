@@ -4,26 +4,40 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01zywja13> a org:Organization ;
     rdfs:label "Kielce University of Technology" ;
     schema:name "Kielce University of Technology" ;
     schema:foundingDate "1965"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    schema:url <http://www.tu.kielce.pl/en/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Kielce_University_of_Technology> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    schema:url <http://tu.kielce.pl> ; 
+    schema:mainEntityOfPage <https://tu.kielce.pl> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Kielce_University_of_Technology> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100014428> ;
+    schema:sameAs <https://grid.ac/institutions/grid.445199.4> ;
+    schema:sameAs <http://isni.org/isni/0000000110128583> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(20.62752 50.87033)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(20.62752 50.87033)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Kielce" ;
             schema:addressCountry "PL" ;
-            owl:sameAs <http://sws.geonames.org/769250/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000110128583> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q2399303> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Poland" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/769250/> ;
+    ] ; 
     .

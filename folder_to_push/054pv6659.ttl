@@ -4,27 +4,47 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/054pv6659> a org:Organization ;
     rdfs:label "Universität Innsbruck" ;
     schema:name "Universität Innsbruck" ;
     schema:foundingDate "1669"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:alternativeName "Leopold-Franzens-Universität Innsbruck" ;
-    schema:url <http://www.uibk.ac.at/index.html.en> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Innsbruck> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:alternativeName "Leopold-Franzens-Universität Innsbruck"@de ; 
+    schema:url <http://uibk.ac.at> ; 
+    schema:mainEntityOfPage <https://www.uibk.ac.at> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Innsbruck> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100012163> ;
+    schema:sameAs <https://grid.ac/institutions/grid.5771.4> ;
+    schema:sameAs <http://isni.org/isni/0000000121518122> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05e03wj43> ;
+        rdfs:label "Austrian Drug Screening Institute (Austria)" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(11.39454 47.26266)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(11.39454 47.26266)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Innsbruck" ;
             schema:addressCountry "AT" ;
-            owl:sameAs <http://sws.geonames.org/2775220/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000121518122> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q875788> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Austria" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2775220/> ;
+    ] ; 
     .

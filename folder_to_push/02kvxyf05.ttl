@@ -15,10 +15,11 @@
     org:classification "funder" ; 
     org:classification "government" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-10-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
     org:abbreviation "INRIA"@None ; 
     org:alternativeName "Institut de recherche en informatique et en automatique"@fr ; 
-    schema:mainEntityOfPage <http://www.inria.fr/en/> ;
+    schema:url <http://inria.fr> ; 
+    schema:mainEntityOfPage <https://inria.fr> ;
     owl:sameAs <http://en.wikipedia.org/wiki/French_Institute_for_Research_in_Computer_Science_and_Automation> ; 
     schema:sameAs <https://api.crossref.org/funders/100012950> ;
     schema:sameAs <https://grid.ac/institutions/grid.5328.c> ;
@@ -265,6 +266,18 @@
     ] ; 
     org:hasLink [
         a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/017vwpy33> ;
+        rdfs:label "Méthodes basées sur les données et modèles en santé pour l'acquisition de connaissances" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01rrvyp50> ;
+        rdfs:label "Outils de Résolution Algébriques pour la Géométrie et ses Applications" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
         org:role "related" ;
         org:member <https://ror.org/05v727m31> ;
         rdfs:label "Communauté Université Grenoble Alpes" ;
@@ -280,18 +293,6 @@
         org:role "related" ;
         org:member <https://ror.org/01sgwka45> ;
         rdfs:label "Microscopie Fonctionnelle du Vivant" ;
-    ] ; 
-    org:hasLink [
-        a org:Membership ;
-        org:role "child" ;
-        org:member <https://ror.org/017vwpy33> ;
-        rdfs:label "Méthodes basées sur les données et modèles en santé pour l'acquisition de connaissances" ;
-    ] ; 
-    org:hasLink [
-        a org:Membership ;
-        org:role "child" ;
-        org:member <https://ror.org/01rrvyp50> ;
-        rdfs:label "Outils de Résolution Algébriques pour la Géométrie et ses Applications" ;
     ] ; 
     schema:location [
         a schema:Place ;

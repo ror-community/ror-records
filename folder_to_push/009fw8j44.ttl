@@ -4,27 +4,41 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/009fw8j44> a org:Organization ;
     rdfs:label "Hebei Agricultural University" ;
     schema:name "Hebei Agricultural University" ;
     schema:foundingDate "1902"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:alternativeName "Agricultural University of Hebei" ;
-    schema:url <http://www.hebau.edu.cn/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Agricultural_University_of_Hebei> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:alternativeName "Agricultural University of Hebei"@en ; 
+    schema:url <http://hebau.edu.cn> ; 
+    schema:mainEntityOfPage <https://www.hebau.edu.cn> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Agricultural_University_of_Hebei> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100008525> ;
+    schema:sameAs <https://grid.ac/institutions/grid.274504.0> ;
+    schema:sameAs <http://isni.org/isni/0000000122914530> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(115.49028 38.85111)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(115.46246 38.87288)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Baoding" ;
             schema:addressCountry "CN" ;
-            owl:sameAs <http://sws.geonames.org/1816971/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000122914530> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q4693944> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "China" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1816971/> ;
+    ] ; 
     .

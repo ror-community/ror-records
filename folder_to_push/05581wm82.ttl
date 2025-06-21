@@ -1,0 +1,44 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/05581wm82> a org:Organization ;
+    rdfs:label "Marine Institute" ;
+    schema:name "Marine Institute" ;
+    schema:foundingDate "1991"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "funder" ; 
+    org:classification "government" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:alternativeName "Foras na Mara"@ga ; 
+    schema:url <http://marine.ie> ; 
+    schema:mainEntityOfPage <https://www.marine.ie> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Marine_Institute_Ireland> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100001627> ;
+    schema:sameAs <https://grid.ac/institutions/grid.6408.a> ;
+    schema:sameAs <http://isni.org/isni/0000000405168160> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-8.92 53.26833)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Oranmore" ;
+            schema:addressCountry "IE" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Ireland" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2962153/> ;
+    ] ; 
+    .

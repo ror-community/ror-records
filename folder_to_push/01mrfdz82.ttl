@@ -4,28 +4,56 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01mrfdz82> a org:Organization ;
     rdfs:label "Texas A&M University – Corpus Christi" ;
     schema:name "Texas A&M University – Corpus Christi" ;
     schema:foundingDate "1947"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "TAMUCC" ;
-    org:alternativeName "Texas A&M–Corpus Christi" ;
-    schema:url <https://www.tamucc.edu/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Texas_A%26M_University%E2%80%93Corpus_Christi> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:alternativeName "A&M-CC"@en ; 
+    org:alternativeName "A&M-Corpus Christi"@None ; 
+    org:abbreviation "TAMUCC"@None ; 
+    org:alternativeName "Texas A&M–Corpus Christi"@en ; 
+    schema:url <http://tamucc.edu> ; 
+    schema:mainEntityOfPage <https://www.tamucc.edu/> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Texas_A%26M_University%E2%80%93Corpus_Christi> ; 
+    schema:sameAs <https://api.crossref.org/funders/100007809> ;
+    schema:sameAs <https://grid.ac/institutions/grid.264759.b> ;
+    schema:sameAs <http://isni.org/isni/0000000098807531> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04rpe5h19> ;
+        rdfs:label "Harte Research Institute for Gulf of Mexico Studies" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/0034eay46> ;
+        rdfs:label "Texas A&M University System" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-97.39638 27.80058)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-97.39638 27.80058)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Corpus Christi" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/4683416/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000098807531> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q634651> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/4683416/> ;
+    ] ; 
     .

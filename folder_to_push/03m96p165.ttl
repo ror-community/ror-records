@@ -1,0 +1,48 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/03m96p165> a org:Organization ;
+    rdfs:label "Nanjing Forestry University" ;
+    schema:name "Nanjing Forestry University" ;
+    schema:foundingDate "1902"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "NFU"@None ; 
+    org:abbreviation "NJFU"@None ; 
+    org:alternativeName "Nanjing Forestry College"@en ; 
+    org:alternativeName "Nanjing Technological College of Forest Products"@en ; 
+    org:alternativeName "Sanjiang Normal College"@en ; 
+    schema:url <http://njfu.edu.cn> ; 
+    schema:mainEntityOfPage <https://www.njfu.edu.cn/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Nanjing_Forestry_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/100010743> ;
+    schema:sameAs <https://grid.ac/institutions/grid.410625.4> ;
+    schema:sameAs <http://isni.org/isni/0000000122934910> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(118.77778 32.06167)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Nanjing" ;
+            schema:addressCountry "CN" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "China" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1799962/> ;
+    ] ; 
+    .

@@ -4,26 +4,64 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/010x8gc63> a org:Organization ;
     rdfs:label "University of Saskatchewan" ;
     schema:name "University of Saskatchewan" ;
     schema:foundingDate "1907"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    schema:url <https://www.usask.ca/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Saskatchewan> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    schema:url <http://usask.ca> ; 
+    schema:mainEntityOfPage <https://www.usask.ca/> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Saskatchewan> ; 
+    schema:sameAs <https://api.crossref.org/funders/100008920> ;
+    schema:sameAs <https://grid.ac/institutions/grid.25152.31> ;
+    schema:sameAs <http://isni.org/isni/000000012154235X> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01sjjfh02> ;
+        rdfs:label "Horizon College and Seminary" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04rm7h526> ;
+        rdfs:label "Global Water Futures" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05997db74> ;
+        rdfs:label "Global Institute for Water Security" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00wg2b048> ;
+        rdfs:label "Royal University Hospital" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-106.66892 52.13238)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-106.66892 52.13238)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Saskatoon" ;
             schema:addressCountry "CA" ;
-            owl:sameAs <http://sws.geonames.org/6141256/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/000000012154235X> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1514848> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Canada" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/6141256/> ;
+    ] ; 
     .

@@ -4,29 +4,73 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/016gb1631> a org:Organization ;
     rdfs:label "HUN-REN Szegedi Biológiai Kutatóközpont" ;
     schema:name "HUN-REN Szegedi Biológiai Kutatóközpont" ;
     schema:foundingDate "1971"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "BRC" ;
-    org:alternativeName "MTA Szegedi Biológiai Központ" ;
-    schema:url <https://www.brc.hu> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Biological_Research_Centre_(Hungarian_Academy_of_Sciences)> ;
+    org:classification "facility" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "BRC"@None ; 
+    org:alternativeName "Biological Research Centre"@en ; 
+    org:alternativeName "HUN-REN Biological Research Center"@en ; 
+    org:alternativeName "MTA Szegedi Biológiai Központ"@hu ; 
+    org:alternativeName "Szegedi Biológiai Kutatóközpont"@hu ; 
+    schema:url <http://brc.hu> ; 
+    schema:mainEntityOfPage <https://www.brc.hu> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Biological_Research_Centre_(Hungarian_Academy_of_Sciences)> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.418331.c> ;
+    schema:sameAs <http://isni.org/isni/0000000121959606> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/022dvs210> ;
+        rdfs:label "Institute of Biochemistry" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/038synb39> ;
+        rdfs:label "Institute of Biophysics" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04tjemt46> ;
+        rdfs:label "Institute of Genetics" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/039h1gd08> ;
+        rdfs:label "Institute of Plant Biology" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02ks8qq67> ;
+        rdfs:label "Hungarian Academy of Sciences" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(20.14824 46.253)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(20.14824 46.253)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Szeged" ;
             schema:addressCountry "HU" ;
-            owl:sameAs <http://sws.geonames.org/715429/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000121959606> ;
-    schema:sameAs <http://isni.org/isni/0000000406209788> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q4914963> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Hungary" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/715429/> ;
+    ] ; 
     .

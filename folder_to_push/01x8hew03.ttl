@@ -4,28 +4,288 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01x8hew03> a org:Organization ;
     rdfs:label "Bulgarian Academy of Sciences" ;
     schema:name "Bulgarian Academy of Sciences" ;
     schema:foundingDate "1869"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Government" ; 
-    org:abbreviation "BAS" ;
-    org:alternativeName "Balgarska Akademiya na Naukite" ;
-    schema:url <http://www.bas.bg/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Bulgarian_Academy_of_Sciences> ;
+    org:classification "funder" ; 
+    org:classification "government" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "BAS"@None ; 
+    org:alternativeName "Balgarska Akademiya na Naukite"@None ; 
+    schema:url <http://bas.bg> ; 
+    schema:mainEntityOfPage <https://www.bas.bg> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Bulgarian_Academy_of_Sciences> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100005995> ;
+    schema:sameAs <https://grid.ac/institutions/grid.410344.6> ;
+    schema:sameAs <http://isni.org/isni/0000000120973094> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04pavt865> ;
+        rdfs:label "Bulgarian Ship Hydrodynamics Centre" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05d74m226> ;
+        rdfs:label "Central Laboratory of General Ecology" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05c3m0811> ;
+        rdfs:label "Central Laboratory of Solar Energy and New Energy Sources" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03y2be923> ;
+        rdfs:label "Economic Research Institute" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02yjqcm66> ;
+        rdfs:label "Forest Research Institute" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/040458q49> ;
+        rdfs:label "Geological Institute Strashimir Dimitrov" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05t4n0c27> ;
+        rdfs:label "Georgi Nadjakov Institute of Solid State Physics" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0132ebm72> ;
+        rdfs:label "Institute for Balkan Studies and Centre for Thracology" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00f23qy62> ;
+        rdfs:label "Institute for Bulgarian Language" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00yfsan48> ;
+        rdfs:label "Institute for Literature" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0276rjc88> ;
+        rdfs:label "Institute for Nuclear Research and Nuclear Energy" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/047hhy227> ;
+        rdfs:label "Institute for Parallel Processing" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03tg0tp84> ;
+        rdfs:label "Institute for the Study of Societies and Knowledge" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03eywck07> ;
+        rdfs:label "Institute of Biodiversity and Ecosystem Research" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02c2e2v80> ;
+        rdfs:label "Institute of Biology and Immunology of Reproduction" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01dxqkr82> ;
+        rdfs:label "Institute of Biophysics and Biomedical Engineering" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/049sbzn78> ;
+        rdfs:label "Institute of Chemical Engineering" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00f8dwt44> ;
+        rdfs:label "Institute of Electrochemistry and Energy Systems" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0299eyn73> ;
+        rdfs:label "Institute of Electronics" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01b73x603> ;
+        rdfs:label "Institute of Ethnology and Folklore Studies with Ethnographic Museum" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00wekhx15> ;
+        rdfs:label "Institute of General and Inorganic Chemistry" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03ypsgm65> ;
+        rdfs:label "Institute of Information Technologies" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05fpsjc82> ;
+        rdfs:label "Institute of Information and Communication Technologies" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01b5dy719> ;
+        rdfs:label "Institute of Mathematics and Informatics" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03x78r446> ;
+        rdfs:label "Institute of Mechanics" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/056492z45> ;
+        rdfs:label "Institute of Metal Science, Equipment and Technologies" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00t7c6f62> ;
+        rdfs:label "Institute of Molecular Biology" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05q9yze82> ;
+        rdfs:label "Institute of Neurobiology" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/058sshm54> ;
+        rdfs:label "Institute of Oceanology" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/053833993> ;
+        rdfs:label "Institute of Optical Materials and Technologies Jordan Malinowski" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00jbx2e92> ;
+        rdfs:label "Institute of Organic Chemistry with Centre of Phytochemistry" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/023t1e924> ;
+        rdfs:label "Institute of Philosophy and Sociology" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00eb1e195> ;
+        rdfs:label "Institute of Physical Chemistry" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03gt88b08> ;
+        rdfs:label "Institute of Plant Physiology and Genetics" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/006ae1882> ;
+        rdfs:label "Institute of Polymers" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00gywet31> ;
+        rdfs:label "National Institute of Geophysics, Geodesy and Geography" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/021vn9c61> ;
+        rdfs:label "National Institute of Meteorology and Hydrology" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04a4v0j95> ;
+        rdfs:label "National Museum of Natural History" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03wye8c03> ;
+        rdfs:label "Space Research and Technology Institute" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01q8rrk81> ;
+        rdfs:label "Stephan Angeloff Institute of Microbiology" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/002cfhw56> ;
+        rdfs:label "Institute of Robotics" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(23.32415 42.69751)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(23.32415 42.69751)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Sofia" ;
             schema:addressCountry "BG" ;
-            owl:sameAs <http://sws.geonames.org/727011/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000120973094> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1003730> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Bulgaria" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/727011/> ;
+    ] ; 
     .

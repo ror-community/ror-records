@@ -4,26 +4,40 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/0131d6623> a org:Organization ;
     rdfs:label "Algoma University" ;
     schema:name "Algoma University" ;
     schema:foundingDate "1967"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    schema:url <http://www.algomau.ca/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Algoma_University> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    schema:url <http://algomau.ca> ; 
+    schema:mainEntityOfPage <https://algomau.ca> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Algoma_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/100011859> ;
+    schema:sameAs <https://grid.ac/institutions/grid.252019.d> ;
+    schema:sameAs <http://isni.org/isni/0000000100796027> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-84.33325 46.51677)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-84.33325 46.51677)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Sault Ste. Marie" ;
             schema:addressCountry "CA" ;
-            owl:sameAs <http://sws.geonames.org/6141439/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000100796027> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1261103> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Canada" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/6141439/> ;
+    ] ; 
     .

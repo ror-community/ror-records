@@ -1,0 +1,50 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/00ntfnx83> a org:Organization ;
+    rdfs:label "Waseda University" ;
+    schema:name "Waseda University" ;
+    schema:foundingDate "1882"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:alternativeName "Waseda Daigaku"@None ; 
+    schema:url <http://waseda.jp> ; 
+    schema:mainEntityOfPage <https://www.waseda.jp/top/> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Waseda_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100004423> ;
+    schema:sameAs <https://grid.ac/institutions/grid.5290.e> ;
+    schema:sameAs <http://isni.org/isni/0000000419369975> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01m343c98> ;
+        rdfs:label "Waseda Bioscience Research Institute in Singapore" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(139.69171 35.6895)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Tokyo" ;
+            schema:addressCountry "JP" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Japan" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1850147/> ;
+    ] ; 
+    .

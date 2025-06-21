@@ -4,27 +4,41 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/0096c7651> a org:Organization ;
     rdfs:label "North China Institute of Science and Technology" ;
     schema:name "North China Institute of Science and Technology" ;
     schema:foundingDate "1984"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "NCIST" ;
-    schema:url <http://www.ncist.edu.cn/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/North_China_Institute_of_Science_and_Technology> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "NCIST"@None ; 
+    schema:url <http://ncist.edu.cn> ; 
+    schema:mainEntityOfPage <https://www.ncist.edu.cn> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/North_China_Institute_of_Science_and_Technology> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100016343> ;
+    schema:sameAs <https://grid.ac/institutions/grid.443279.f> ;
+    schema:sameAs <http://isni.org/isni/0000000406323206> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(116.39723 39.9075)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(116.39723 39.9075)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Beijing" ;
             schema:addressCountry "CN" ;
-            owl:sameAs <http://sws.geonames.org/1816670/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000406323206> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q10905504> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "China" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1816670/> ;
+    ] ; 
     .

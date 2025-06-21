@@ -4,28 +4,47 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/00jeqjx33> a org:Organization ;
     rdfs:label "Kennesaw State University" ;
     schema:name "Kennesaw State University" ;
     schema:foundingDate "1963"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "KSU" ;
-    schema:url <https://www.kennesaw.edu/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Kennesaw_State_University> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "KSU"@None ; 
+    schema:url <http://kennesaw.edu> ; 
+    schema:mainEntityOfPage <https://www.kennesaw.edu/> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Kennesaw_State_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/100009792> ;
+    schema:sameAs <https://grid.ac/institutions/grid.258509.3> ;
+    schema:sameAs <http://isni.org/isni/0000000096208332> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/017wcm924> ;
+        rdfs:label "University System of Georgia" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-84.61549 34.02343)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-84.61549 34.02343)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Kennesaw" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/4203696/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000096208332> ;
-    schema:sameAs <http://isni.org/isni/0000000419370191> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1532470> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/4203696/> ;
+    ] ; 
     .

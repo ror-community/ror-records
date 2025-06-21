@@ -4,29 +4,54 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/04qr5t414> a org:Organization ;
     rdfs:label "North China Electric Power University" ;
     schema:name "North China Electric Power University" ;
     schema:foundingDate "1958"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "NCEPU" ;
-    org:alternativeName "Huáběi diànlì dàxué" ;
-    schema:url <http://english.ncepu.edu.cn/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/North_China_Electric_Power_University> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:alternativeName "Huáběi diànlì dàxué"@None ; 
+    org:abbreviation "NCEPU"@None ; 
+    schema:url <http://ncepu.edu.cn> ; 
+    schema:mainEntityOfPage <https://www.ncepu.edu.cn> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/North_China_Electric_Power_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100007845> ;
+    schema:sameAs <https://grid.ac/institutions/grid.261049.8> ;
+    schema:sameAs <http://isni.org/isni/0000000406454572> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02g5psh91> ;
+        rdfs:label "Suzhou Institute of North China Electric Power University" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/045hfth47> ;
+        rdfs:label "State Key Laboratory of Alternate Electrical Power System with Renewable Energy Sources" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(116.39723 39.9075)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(116.39723 39.9075)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Beijing" ;
             schema:addressCountry "CN" ;
-            owl:sameAs <http://sws.geonames.org/1816670/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000406454572> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q7054810> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q39944799> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "China" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1816670/> ;
+    ] ; 
     .

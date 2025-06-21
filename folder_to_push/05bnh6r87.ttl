@@ -15,9 +15,10 @@
     org:classification "education" ; 
     org:classification "funder" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-09-16"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
     org:abbreviation "CU"@None ; 
-    schema:mainEntityOfPage <http://www.cornell.edu/> ;
+    schema:url <http://cornell.edu> ; 
+    schema:mainEntityOfPage <https://www.cornell.edu> ;
     owl:sameAs <http://en.wikipedia.org/wiki/Cornell_University> ; 
     schema:sameAs <https://api.crossref.org/funders/100007231> ;
     schema:sameAs <https://grid.ac/institutions/grid.5386.8> ;
@@ -87,6 +88,12 @@
         org:role "child" ;
         org:member <https://ror.org/012qsrr25> ;
         rdfs:label "Cornell University Agricultural Experiment Station" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00m2zh467> ;
+        rdfs:label "arXiv" ;
     ] ; 
     org:hasLink [
         a org:Membership ;
@@ -183,12 +190,6 @@
         org:role "related" ;
         org:member <https://ror.org/05cshtm26> ;
         rdfs:label "Great Lakes Research Consortium" ;
-    ] ; 
-    org:hasLink [
-        a org:Membership ;
-        org:role "child" ;
-        org:member <https://ror.org/00m2zh467> ;
-        rdfs:label "arXiv" ;
     ] ; 
     schema:location [
         a schema:Place ;

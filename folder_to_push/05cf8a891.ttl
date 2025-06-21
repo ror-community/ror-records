@@ -4,28 +4,76 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/05cf8a891> a org:Organization ;
     rdfs:label "Albert Einstein College of Medicine" ;
     schema:name "Albert Einstein College of Medicine" ;
     schema:foundingDate "1953"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "AECOM" ;
-    org:alternativeName "Einstein" ;
-    schema:url <https://einsteinmed.edu> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Albert_Einstein_College_of_Medicine> ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "AECOM"@None ; 
+    org:alternativeName "Einstein"@None ; 
+    schema:url <http://einsteinmed.edu> ; 
+    schema:mainEntityOfPage <https://einsteinmed.edu> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Albert_Einstein_College_of_Medicine> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.251993.5> ;
+    schema:sameAs <http://isni.org/isni/0000000121791997> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00cea8r21> ;
+        rdfs:label "Montefiore Einstein Comprehensive Cancer Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/01x0e6k76> ;
+        rdfs:label "Montefiore Health System" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/0107ygt22> ;
+        rdfs:label "Bronx-Lebanon Hospital Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05hcfns23> ;
+        rdfs:label "Jacobi Medical Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00g651r29> ;
+        rdfs:label "Maimonides Medical Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/044ntvm43> ;
+        rdfs:label "Montefiore Medical Center" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-73.86641 40.84985)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-73.86641 40.84985)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Bronx" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/5110266/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000121791997> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q2030894> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/5110266/> ;
+    ] ; 
     .

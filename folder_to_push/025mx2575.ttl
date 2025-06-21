@@ -4,26 +4,46 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/025mx2575> a org:Organization ;
     rdfs:label "Yeditepe University" ;
     schema:name "Yeditepe University" ;
     schema:foundingDate "1996"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    schema:url <http://www.yeditepe.edu.tr/?&language_id=2> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Yeditepe_University> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    schema:url <http://yeditepe.edu.tr> ; 
+    schema:mainEntityOfPage <https://yeditepe.edu.tr> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Yeditepe_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100020043> ;
+    schema:sameAs <https://grid.ac/institutions/grid.32140.34> ;
+    schema:sameAs <http://isni.org/isni/0000000107444075> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05vzbfc95> ;
+        rdfs:label "Yeditepe University Hospital" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(28.94966 41.01384)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(28.94966 41.01384)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Istanbul" ;
             schema:addressCountry "TR" ;
-            owl:sameAs <http://sws.geonames.org/745044/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000107444075> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q478948> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Türkiye" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/745044/> ;
+    ] ; 
     .

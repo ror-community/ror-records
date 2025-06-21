@@ -1,0 +1,42 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/023372f11> a org:Organization ;
+    rdfs:label "Royal Northern College of Music" ;
+    schema:name "Royal Northern College of Music" ;
+    schema:foundingDate "1973"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "RNCM"@None ; 
+    schema:url <http://rncm.ac.uk> ; 
+    schema:mainEntityOfPage <http://www.rncm.ac.uk/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Royal_Northern_College_of_Music> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.437498.5> ;
+    schema:sameAs <http://isni.org/isni/0000000122977072> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-2.23743 53.48095)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Manchester" ;
+            schema:addressCountry "GB" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United Kingdom" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2643123/> ;
+    ] ; 
+    .

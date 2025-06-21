@@ -4,23 +4,42 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/012gfrj24> a org:Organization ;
     rdfs:label "Intercollege" ;
     schema:name "Intercollege" ;
     org:status "active" ;
-    org:classification "Education" ; 
-    schema:url <http://www.intercollege.ac.cy/> ; 
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    schema:url <http://intercollege.ac.cy> ; 
+    schema:mainEntityOfPage <https://intercollege.ac.cy> ;
+    schema:sameAs <https://grid.ac/institutions/grid.466006.2> ;
+    schema:sameAs <http://isni.org/isni/0000000406356024> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/04v18t651> ;
+        rdfs:label "University of Nicosia" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(33.3642 35.17531)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(33.3642 35.17531)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Nicosia" ;
             schema:addressCountry "CY" ;
-            owl:sameAs <http://sws.geonames.org/146268/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000406356024> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Cyprus" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/146268/> ;
+    ] ; 
     .

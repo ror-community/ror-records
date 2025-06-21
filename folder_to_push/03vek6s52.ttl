@@ -4,27 +4,280 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/03vek6s52> a org:Organization ;
     rdfs:label "Harvard University" ;
     schema:name "Harvard University" ;
     schema:foundingDate "1636"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    schema:url <http://www.harvard.edu/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Harvard_University> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    schema:url <http://harvard.edu> ; 
+    schema:mainEntityOfPage <https://www.harvard.edu> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Harvard_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/100007229> ;
+    schema:sameAs <https://grid.ac/institutions/grid.38142.3c> ;
+    schema:sameAs <http://isni.org/isni/000000041936754X> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/032q5ym94> ;
+        rdfs:label "Athinoula A. Martinos Center for Biomedical Imaging" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03hj6c016> ;
+        rdfs:label "Berenson Allen Center for Noninvasive Brain Stimulation" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03c3r2d17> ;
+        rdfs:label "Center for Astrophysics Harvard & Smithsonian" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05r3dyn47> ;
+        rdfs:label "Center for Systems Biology" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04wsv7966> ;
+        rdfs:label "Center for Vascular Biology Research" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/004y4rj95> ;
+        rdfs:label "Gordon Center for Medical Imaging" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04kj1hn59> ;
+        rdfs:label "Harvard Stem Cell Institute" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/006v7bf86> ;
+        rdfs:label "Harvard University Press" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/053tmcn30> ;
+        rdfs:label "MIT-Harvard Center for Ultracold Atoms" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/053r20n13> ;
+        rdfs:label "Ragon Institute of MGH, MIT and Harvard" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04r5ess67> ;
+        rdfs:label "Sleep and Human Health Institute" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04pvzz946> ;
+        rdfs:label "The NSF AI Institute for Artificial Intelligence and Fundamental Interactions" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05xsxgs79> ;
+        rdfs:label "Arnold Arboretum" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/059cpzx98> ;
+        rdfs:label "Harvard Forest Long Term Ecological Research" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/008cfmj78> ;
+        rdfs:label "Wyss Institute for Biologically Inspired Engineering" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03pvyf116> ;
+        rdfs:label "Dana-Farber/Harvard Cancer Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05b0g2v72> ;
+        rdfs:label "Real Colegio Complutense" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/04drvxt59> ;
+        rdfs:label "Beth Israel Deaconess Medical Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00dvg7y05> ;
+        rdfs:label "Boston Children's Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05xckek43> ;
+        rdfs:label "Boston IVF" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/04rkbns44> ;
+        rdfs:label "Botswana Harvard AIDS Institute Partnership" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03w44ff23> ;
+        rdfs:label "Brigham and Women's Faulkner Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/04b6nzv94> ;
+        rdfs:label "Brigham and Women's Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05a0ya142> ;
+        rdfs:label "Broad Institute" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/059c3mv67> ;
+        rdfs:label "Cambridge Health Alliance" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02jzgtq86> ;
+        rdfs:label "Dana-Farber Cancer Institute" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01zxdeg39> ;
+        rdfs:label "Harvard Pilgrim Health Care" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00jjeh629> ;
+        rdfs:label "Harvard–MIT Division of Health Sciences and Technology" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02vptss42> ;
+        rdfs:label "Hebrew SeniorLife" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/044hpwe09> ;
+        rdfs:label "IIT@Harvard" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/0280a3n32> ;
+        rdfs:label "Joslin Diabetes Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05tby3y60> ;
+        rdfs:label "Judge Baker Children's Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03mbq3y29> ;
+        rdfs:label "Lahey Hospital and Medical Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/04g3dn724> ;
+        rdfs:label "Massachusetts Eye and Ear Infirmary" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/002pd6e78> ;
+        rdfs:label "Massachusetts General Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05par7p11> ;
+        rdfs:label "Massachusetts Green High Performance Computing Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01kta7d96> ;
+        rdfs:label "McLean Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03hrxmf69> ;
+        rdfs:label "Newton Wellesley Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/023pf5e38> ;
+        rdfs:label "Somerville Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/011dvr318> ;
+        rdfs:label "Spaulding Rehabilitation Hospital" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-71.10561 42.3751)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-71.10561 42.3751)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Cambridge" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/4931972/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/000000041936754X> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q13371> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q5676556> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/4931972/> ;
+    ] ; 
     .

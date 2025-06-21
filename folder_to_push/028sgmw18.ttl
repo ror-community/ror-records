@@ -4,27 +4,48 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/028sgmw18> a org:Organization ;
     rdfs:label "Czech Academy of Sciences, Library" ;
     schema:name "Czech Academy of Sciences, Library" ;
     schema:foundingDate "1952"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Archive" ; 
-    org:abbreviation "KNAV AV ČR" ;
-    org:alternativeName "Library of the Czech Academy of Sciences" ;
-    schema:url <https://www.lib.cas.cz> ; 
+    org:classification "archive" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:alternativeName "Czech Acad Sci, Library"@en ; 
+    org:abbreviation "KNAV AV ČR"@None ; 
+    org:alternativeName "Knihovna AV ČR, v. v. i."@cs ; 
+    org:alternativeName "Knihovna AV ČR, veřejná výzkumná instituce"@cs ; 
+    org:alternativeName "Library of the Czech Academy of Sciences"@en ; 
+    schema:url <http://lib.cas.cz> ; 
+    schema:mainEntityOfPage <https://www.lib.cas.cz> ;
+    schema:sameAs <https://grid.ac/institutions/grid.447917.8> ;
+    schema:sameAs <http://isni.org/isni/0000000122253920> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/053avzc18> ;
+        rdfs:label "Czech Academy of Sciences" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(14.42076 50.08804)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(14.42076 50.08804)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Prague" ;
             schema:addressCountry "CZ" ;
-            owl:sameAs <http://sws.geonames.org/3067696/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000122253920> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q17138718> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Czechia" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3067696/> ;
+    ] ; 
     .

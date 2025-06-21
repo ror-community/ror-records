@@ -4,28 +4,40 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/030mqy313> a org:Organization ;
     rdfs:label "Bratislava International School of Liberal Arts" ;
     schema:name "Bratislava International School of Liberal Arts" ;
     schema:foundingDate "2006"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "BISLA" ;
-    org:alternativeName "Bratislavska Medzinarodna Skola Liberalnych Studii" ;
-    schema:url <http://www.bisla.sk/english/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Bratislava_International_School_of_Liberal_Arts> ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "BISLA"@None ; 
+    org:alternativeName "Bratislavska Medzinarodna Skola Liberalnych Studii"@sk ; 
+    schema:url <http://bisla.sk> ; 
+    schema:mainEntityOfPage <https://www.bisla.sk> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Bratislava_International_School_of_Liberal_Arts> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.455010.5> ;
+    schema:sameAs <http://isni.org/isni/0000000480037830> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(17.10674 48.14816)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(17.10674 48.14816)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Bratislava" ;
             schema:addressCountry "SK" ;
-            owl:sameAs <http://sws.geonames.org/3060972/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000480037830> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q17511819> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Slovakia" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3060972/> ;
+    ] ; 
     .

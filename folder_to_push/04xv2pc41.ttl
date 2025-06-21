@@ -4,27 +4,48 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/04xv2pc41> a org:Organization ;
     rdfs:label "Beijing Forestry University" ;
     schema:name "Beijing Forestry University" ;
     schema:foundingDate "1952"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "BFU" ;
-    schema:url <http://eng.bjfu.edu.cn/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Beijing_Forestry_University> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "BFU"@None ; 
+    org:abbreviation "BJFU"@None ; 
+    schema:url <http://bjfu.edu.cn> ; 
+    schema:mainEntityOfPage <https://www.bjfu.edu.cn> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Beijing_Forestry_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100012138> ;
+    schema:sameAs <https://grid.ac/institutions/grid.66741.32> ;
+    schema:sameAs <http://isni.org/isni/000000011456856X> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/01mv9t934> ;
+        rdfs:label "Ministry of Education of the People's Republic of China" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(116.39723 39.9075)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(116.39723 39.9075)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Beijing" ;
             schema:addressCountry "CN" ;
-            owl:sameAs <http://sws.geonames.org/1816670/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/000000011456856X> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q4881133> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "China" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1816670/> ;
+    ] ; 
     .

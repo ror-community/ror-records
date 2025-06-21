@@ -4,27 +4,41 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/03y71xh61> a org:Organization ;
     rdfs:label "University of Richmond" ;
     schema:name "University of Richmond" ;
     schema:foundingDate "1830"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "UR" ;
-    schema:url <http://www.richmond.edu/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Richmond> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "UR"@None ; 
+    schema:url <http://richmond.edu> ; 
+    schema:mainEntityOfPage <https://www.richmond.edu> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Richmond> ; 
+    schema:sameAs <https://api.crossref.org/funders/100017395> ;
+    schema:sameAs <https://grid.ac/institutions/grid.267065.0> ;
+    schema:sameAs <http://isni.org/isni/0000000096098938> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-77.46026 37.55376)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-77.46026 37.55376)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Richmond" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/4781708/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000096098938> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1115878> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/4781708/> ;
+    ] ; 
     .

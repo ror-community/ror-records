@@ -15,9 +15,10 @@
     org:classification "education" ; 
     org:classification "funder" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-07-11"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
     org:alternativeName "University of Minnesota, Twin Cities"@en ; 
-    schema:mainEntityOfPage <http://twin-cities.umn.edu/> ;
+    schema:url <http://umn.edu> ; 
+    schema:mainEntityOfPage <https://twin-cities.umn.edu> ;
     owl:sameAs <http://en.wikipedia.org/wiki/University_of_Minnesota> ; 
     schema:sameAs <https://api.crossref.org/funders/100007913> ;
     schema:sameAs <https://grid.ac/institutions/grid.17635.36> ;
@@ -63,6 +64,12 @@
         org:role "child" ;
         org:member <https://ror.org/05x083d20> ;
         rdfs:label "Masonic Cancer Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03d78qr79> ;
+        rdfs:label "University of Minnesota Libraries Publishing" ;
     ] ; 
     org:hasLink [
         a org:Membership ;
@@ -117,12 +124,6 @@
         org:role "related" ;
         org:member <https://ror.org/03e1ayz78> ;
         rdfs:label "University of Minnesota Medical Center" ;
-    ] ; 
-    org:hasLink [
-        a org:Membership ;
-        org:role "child" ;
-        org:member <https://ror.org/03d78qr79> ;
-        rdfs:label "University of Minnesota Libraries Publishing" ;
     ] ; 
     schema:location [
         a schema:Place ;

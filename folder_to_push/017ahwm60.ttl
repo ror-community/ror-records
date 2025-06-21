@@ -1,0 +1,41 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/017ahwm60> a org:Organization ;
+    rdfs:label "Preston's College" ;
+    schema:name "Preston's College" ;
+    schema:foundingDate "1974"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    schema:url <http://preston.ac.uk> ; 
+    schema:mainEntityOfPage <https://www.preston.ac.uk> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Preston%27s_College> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.469121.9> ;
+    schema:sameAs <http://isni.org/isni/0000000085585853> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-2.70452 53.76282)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Preston" ;
+            schema:addressCountry "GB" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United Kingdom" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2639912/> ;
+    ] ; 
+    .

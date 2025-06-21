@@ -4,27 +4,47 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/05k6m5t95> a org:Organization ;
     rdfs:label "National Institute of Polar Research" ;
     schema:name "National Institute of Polar Research" ;
     schema:foundingDate "1973"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Other" ; 
-    org:abbreviation "NIPR" ;
-    schema:url <http://www.nipr.ac.jp/english/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/National_Institute_of_Polar_Research_(Japan)> ;
+    org:classification "funder" ; 
+    org:classification "other" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "NIPR"@None ; 
+    schema:url <http://nipr.ac.jp> ; 
+    schema:mainEntityOfPage <https://www.nipr.ac.jp> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/National_Institute_of_Polar_Research_(Japan)> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100008957> ;
+    schema:sameAs <https://grid.ac/institutions/grid.410816.a> ;
+    schema:sameAs <http://isni.org/isni/0000000121615539> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/04p4e8t29> ;
+        rdfs:label "Research Organization of Information and Systems" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(139.69171 35.6895)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(139.69171 35.6895)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Tokyo" ;
             schema:addressCountry "JP" ;
-            owl:sameAs <http://sws.geonames.org/1850147/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000121615539> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1213729> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Japan" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1850147/> ;
+    ] ; 
     .

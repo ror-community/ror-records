@@ -1,0 +1,42 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/025y36b60> a org:Organization ;
+    rdfs:label "Ankara Sosyal Bilimler Üniversitesi" ;
+    schema:name "Ankara Sosyal Bilimler Üniversitesi" ;
+    schema:foundingDate "2013"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "ASBU"@None ; 
+    schema:url <http://asbu.edu.tr> ; 
+    schema:mainEntityOfPage <https://www.asbu.edu.tr/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Social_Sciences_University_of_Ankara> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.493075.c> ;
+    schema:sameAs <http://isni.org/isni/000000044657080X> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(32.85427 39.91987)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Ankara" ;
+            schema:addressCountry "TR" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Türkiye" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/323786/> ;
+    ] ; 
+    .

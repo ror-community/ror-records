@@ -1,0 +1,50 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/01cy0sz82> a org:Organization ;
+    rdfs:label "University of Suffolk" ;
+    schema:name "University of Suffolk" ;
+    schema:foundingDate "2007"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "UCS"@None ; 
+    org:alternativeName "University Campus Suffolk"@en ; 
+    schema:url <http://ucs.ac.uk> ; 
+    schema:url <http://uos.ac.uk> ; 
+    schema:mainEntityOfPage <https://www.uos.ac.uk> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/University_Campus_Suffolk> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.449668.1> ;
+    schema:sameAs <http://isni.org/isni/0000000406286070> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00nm7k655> ;
+        rdfs:label "James Paget University Hospital" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(1.15545 52.05917)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Ipswich" ;
+            schema:addressCountry "GB" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United Kingdom" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2646057/> ;
+    ] ; 
+    .

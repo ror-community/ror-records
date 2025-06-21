@@ -4,28 +4,54 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02egmk993> a org:Organization ;
     rdfs:label "University of Science and Technology Beijing" ;
     schema:name "University of Science and Technology Beijing" ;
     schema:foundingDate "1952"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "USTB" ;
-    org:alternativeName "Beijing Steel and Iron Institute" ;
-    schema:url <http://en.ustb.edu.cn/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Science_and_Technology_Beijing> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:alternativeName "Beijing Steel and Iron Institute"@en ; 
+    org:abbreviation "USTB"@None ; 
+    schema:url <http://ustb.edu.cn> ; 
+    schema:mainEntityOfPage <https://www.ustb.edu.cn> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Science_and_Technology_Beijing> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100008778> ;
+    schema:sameAs <https://grid.ac/institutions/grid.69775.3a> ;
+    schema:sameAs <http://isni.org/isni/0000000403690705> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01pvjzw40> ;
+        rdfs:label "State Key Laboratory of New Technology of Iron and Steel Metallurgy" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01f29ny64> ;
+        rdfs:label "State Key Laboratory for Advanced Metals and Materials" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(116.39723 39.9075)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(116.39723 39.9075)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Beijing" ;
             schema:addressCountry "CN" ;
-            owl:sameAs <http://sws.geonames.org/1816670/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000403690705> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1510516> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "China" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1816670/> ;
+    ] ; 
     .

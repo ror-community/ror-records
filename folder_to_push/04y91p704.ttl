@@ -1,0 +1,42 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/04y91p704> a org:Organization ;
+    rdfs:label "Vancouver Community College" ;
+    schema:name "Vancouver Community College" ;
+    schema:foundingDate "1965"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "VCC"@None ; 
+    schema:url <http://vcc.ca> ; 
+    schema:mainEntityOfPage <https://www.vcc.ca> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Vancouver_Community_College> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.454335.0> ;
+    schema:sameAs <http://isni.org/isni/0000000106210808> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-123.11934 49.24966)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Vancouver" ;
+            schema:addressCountry "CA" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Canada" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/6173331/> ;
+    ] ; 
+    .

@@ -15,9 +15,10 @@
     org:classification "education" ; 
     org:classification "funder" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-09-16"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
     org:abbreviation "UM"@None ; 
     org:alternativeName "UMich"@en ; 
+    schema:url <http://umich.edu> ; 
     schema:mainEntityOfPage <https://www.umich.edu> ;
     owl:sameAs <http://en.wikipedia.org/wiki/University_of_Michigan> ; 
     schema:sameAs <https://api.crossref.org/funders/100007270> ;
@@ -67,6 +68,12 @@
     ] ; 
     org:hasLink [
         a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04xgzv028> ;
+        rdfs:label "Cooperative Institute for Great Lakes Research" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
         org:role "related" ;
         org:member <https://ror.org/034npj057> ;
         rdfs:label "Hurley Medical Center" ;
@@ -82,12 +89,6 @@
         org:role "related" ;
         org:member <https://ror.org/04pk7zz41> ;
         rdfs:label "Arctic Long Term Ecological Research" ;
-    ] ; 
-    org:hasLink [
-        a org:Membership ;
-        org:role "child" ;
-        org:member <https://ror.org/04xgzv028> ;
-        rdfs:label "Cooperative Institute for Great Lakes Research" ;
     ] ; 
     schema:location [
         a schema:Place ;

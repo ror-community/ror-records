@@ -4,28 +4,54 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/03qp1eh12> a org:Organization ;
     rdfs:label "National Institute of Research in Tuberculosis" ;
     schema:name "National Institute of Research in Tuberculosis" ;
     schema:foundingDate "1956"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "NIRT" ;
-    org:alternativeName "Tuberculosis Chemotherapy Centre" ;
-    schema:url <http://www.nirt.res.in/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/National_Institute_for_Research_in_Tuberculosis> ;
+    org:classification "facility" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "NIRT"@None ; 
+    org:alternativeName "Tuberculosis Chemotherapy Centre"@en ; 
+    schema:url <http://nirt.res.in> ; 
+    schema:mainEntityOfPage <https://www.nirt.res.in> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/National_Institute_for_Research_in_Tuberculosis> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100015988> ;
+    schema:sameAs <https://grid.ac/institutions/grid.417330.2> ;
+    schema:sameAs <http://isni.org/isni/0000000417676138> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/0492wrx28> ;
+        rdfs:label "Indian Council of Medical Research" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/04jmt9361> ;
+        rdfs:label "University of Madras" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(80.27847 13.08784)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(80.27847 13.08784)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Chennai" ;
             schema:addressCountry "IN" ;
-            owl:sameAs <http://sws.geonames.org/1264527/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000417676138> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q18128555> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "India" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1264527/> ;
+    ] ; 
     .

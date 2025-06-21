@@ -4,28 +4,46 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/00tx98v53> a org:Organization ;
     rdfs:label "École Nationale Supérieure d’Informatique pour l’Industrie et l’Entreprise" ;
     schema:name "École Nationale Supérieure d’Informatique pour l’Industrie et l’Entreprise" ;
     schema:foundingDate "1968"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "ENSIIE" ;
-    org:alternativeName "Institut d'informatique d'entreprise" ;
-    schema:url <http://www.ensiie.fr/?lang=en> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/%C3%89cole_nationale_sup%C3%A9rieure_d%27informatique_pour_l%27industrie_et_l%27entreprise> ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "ENSIIE"@None ; 
+    org:alternativeName "Institut d'informatique d'entreprise"@fr ; 
+    schema:url <http://ensiie.fr> ; 
+    schema:mainEntityOfPage <https://www.ensiie.fr> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/%C3%89cole_nationale_sup%C3%A9rieure_d%27informatique_pour_l%27industrie_et_l%27entreprise> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.454350.3> ;
+    schema:sameAs <http://isni.org/isni/0000000406413447> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03jca6281> ;
+        rdfs:label "Laboratoire de Mathématiques et Modélisation d'Évry" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(2.44417 48.63389)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(2.44417 48.63389)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Évry-Courcouronnes" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/6454878/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000406413447> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q3578204> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/6454878/> ;
+    ] ; 
     .

@@ -4,27 +4,41 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/04exd0a76> a org:Organization ;
     rdfs:label "Jinggangshan University" ;
     schema:name "Jinggangshan University" ;
     schema:foundingDate "1958"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "JGSU" ;
-    schema:url <http://www.jgsu.edu.cn/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Jinggangshan_University> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "JGSU"@None ; 
+    schema:url <http://jgsu.edu.cn> ; 
+    schema:mainEntityOfPage <https://jgsu.edu.cn> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Jinggangshan_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100014769> ;
+    schema:sameAs <https://grid.ac/institutions/grid.440809.1> ;
+    schema:sameAs <http://isni.org/isni/0000000103175955> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(114.97927 27.11716)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(114.97927 27.11716)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Ji’an" ;
             schema:addressCountry "CN" ;
-            owl:sameAs <http://sws.geonames.org/1806445/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000103175955> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q6202313> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "China" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1806445/> ;
+    ] ; 
     .

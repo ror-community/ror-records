@@ -4,26 +4,40 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02ftvf862> a org:Organization ;
     rdfs:label "Sohar University" ;
     schema:name "Sohar University" ;
     schema:foundingDate "2001"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    schema:url <https://www.su.edu.om> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Sohar_University> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    schema:url <http://su.edu.om> ; 
+    schema:mainEntityOfPage <https://www.su.edu.om> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Sohar_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100006386> ;
+    schema:sameAs <https://grid.ac/institutions/grid.444763.6> ;
+    schema:sameAs <http://isni.org/isni/0000000404275968> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(56.70937 24.34745)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(56.70937 24.34745)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Sohar" ;
             schema:addressCountry "OM" ;
-            owl:sameAs <http://sws.geonames.org/286282/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000404275968> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q2496166> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Oman" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/286282/> ;
+    ] ; 
     .

@@ -1,0 +1,59 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/00t67pt25> a org:Organization ;
+    rdfs:label "Birmingham City University" ;
+    schema:name "Birmingham City University" ;
+    schema:foundingDate "1992"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "BCU"@None ; 
+    org:alternativeName "Birmingham College of Art"@en ; 
+    org:alternativeName "Birmingham Polytechnic"@en ; 
+    org:alternativeName "University of Central England in Birmingham"@en ; 
+    schema:url <http://bcu.ac.uk> ; 
+    schema:mainEntityOfPage <https://www.bcu.ac.uk> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Birmingham_City_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/100009537> ;
+    schema:sameAs <https://grid.ac/institutions/grid.19822.30> ;
+    schema:sameAs <http://isni.org/isni/0000000121802449> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05a9avq33> ;
+        rdfs:label "Centre for Printing History and Culture" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02smq5q54> ;
+        rdfs:label "Birmingham City Hospital" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-1.89983 52.48142)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Birmingham" ;
+            schema:addressCountry "GB" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United Kingdom" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2655603/> ;
+    ] ; 
+    .

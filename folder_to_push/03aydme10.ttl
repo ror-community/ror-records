@@ -4,27 +4,48 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/03aydme10> a org:Organization ;
     rdfs:label "Scuola Normale Superiore" ;
     schema:name "Scuola Normale Superiore" ;
     schema:foundingDate "1810"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "SNS" ;
-    org:alternativeName "Scuola Normale Superiore di Pisa" ;
-    schema:url <https://www.sns.it> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Scuola_Normale_Superiore_di_Pisa> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "SNS"@None ; 
+    org:alternativeName "Scuola Normale Superiore di Pisa"@it ; 
+    org:alternativeName "École Normale Supérieure de Pise"@fr ; 
+    schema:url <http://sns.it> ; 
+    schema:mainEntityOfPage <https://www.sns.it> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Scuola_Normale_Superiore_di_Pisa> ; 
+    schema:sameAs <https://api.crossref.org/funders/100009093> ;
+    schema:sameAs <https://grid.ac/institutions/grid.6093.c> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01sgfhb12> ;
+        rdfs:label "National Enterprise for NanoScience and NanoTechnology" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(10.4036 43.70853)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(10.4036 43.70853)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Pisa" ;
             schema:addressCountry "IT" ;
-            owl:sameAs <http://sws.geonames.org/3170647/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://www.wikidata.org/entity/Q672416> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Italy" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3170647/> ;
+    ] ; 
     .

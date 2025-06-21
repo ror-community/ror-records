@@ -4,28 +4,42 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02qkhhn56> a org:Organization ;
     rdfs:label "Indian Institute of Technology Ropar" ;
     schema:name "Indian Institute of Technology Ropar" ;
     schema:foundingDate "2008"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "IIT-RPR" ;
-    org:alternativeName "IIT Ropar" ;
-    schema:url <http://www.iitrpr.ac.in/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Indian_Institute_of_Technology_Ropar> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:alternativeName "IIT Ropar"@None ; 
+    org:abbreviation "IIT-RPR"@None ; 
+    schema:url <http://iitrpr.ac.in> ; 
+    schema:mainEntityOfPage <https://iitrpr.ac.in> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Indian_Institute_of_Technology_Ropar> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100018978> ;
+    schema:sameAs <https://grid.ac/institutions/grid.462391.b> ;
+    schema:sameAs <http://isni.org/isni/0000000417698011> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(76.52695 30.96896)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(76.52695 30.96896)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Ropar" ;
             schema:addressCountry "IN" ;
-            owl:sameAs <http://sws.geonames.org/1257951/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000417698011> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1814795> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "India" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1257951/> ;
+    ] ; 
     .

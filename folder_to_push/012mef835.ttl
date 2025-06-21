@@ -4,28 +4,66 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/012mef835> a org:Organization ;
     rdfs:label "Augusta University" ;
     schema:name "Augusta University" ;
     schema:foundingDate "1828"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "GRU" ;
-    org:alternativeName "Georgia Regents University" ;
-    schema:url <http://www.augusta.edu/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Augusta_University> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "GRU"@None ; 
+    org:alternativeName "Georgia Regents University"@en ; 
+    schema:url <http://augusta.edu> ; 
+    schema:mainEntityOfPage <https://www.augusta.edu> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Augusta_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/100008578> ;
+    schema:sameAs <https://grid.ac/institutions/grid.410427.4> ;
+    schema:sameAs <http://isni.org/isni/0000000122849329> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/017wcm924> ;
+        rdfs:label "University System of Georgia" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/007rawr89> ;
+        rdfs:label "Augusta University Health" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01ng1yh19> ;
+        rdfs:label "Charlie Norwood VA Medical Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01gtybw70> ;
+        rdfs:label "Georgia Regents Medical Center" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-81.97484 33.47097)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-81.97484 33.47097)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Augusta" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/4180531/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000122849329> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q5547686> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/4180531/> ;
+    ] ; 
     .

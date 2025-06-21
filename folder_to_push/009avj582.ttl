@@ -4,28 +4,97 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/009avj582> a org:Organization ;
     rdfs:label "Oregon Health & Science University" ;
     schema:name "Oregon Health & Science University" ;
     schema:foundingDate "1974"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "OHSU" ;
-    org:alternativeName "University of Oregon Health Sciences Center" ;
-    schema:url <http://www.ohsu.edu> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Oregon_Health_%26_Science_University> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "OHSU"@None ; 
+    org:alternativeName "Oregon Health Sciences University"@en ; 
+    org:alternativeName "University of Oregon Health Sciences Center"@en ; 
+    schema:url <http://ohsu.edu> ; 
+    schema:mainEntityOfPage <https://www.ohsu.edu> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Oregon_Health_%26_Science_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/100006668> ;
+    schema:sameAs <https://grid.ac/institutions/grid.5288.7> ;
+    schema:sameAs <http://isni.org/isni/0000000097585690> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/002shna07> ;
+        rdfs:label "OHSU Knight Cancer Institute" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00d4pqn65> ;
+        rdfs:label "Vaccine and Gene Therapy Institute" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/049w1th24> ;
+        rdfs:label "Doernbecher Children's Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/0488bnd65> ;
+        rdfs:label "Oregon Health and Science University Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05fcfqq67> ;
+        rdfs:label "Oregon National Primate Research Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02v3txv81> ;
+        rdfs:label "Portland VA Medical Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00rfgpg89> ;
+        rdfs:label "Salem Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00snwj435> ;
+        rdfs:label "Shriners Hospitals for Children - Portland" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/054hm6j14> ;
+        rdfs:label "Vollum Institute" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-122.67621 45.52345)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-122.67621 45.52345)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Portland" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/5746545/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000097585690> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q282097> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/5746545/> ;
+    ] ; 
     .

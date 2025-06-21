@@ -4,28 +4,49 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/0005w8d69> a org:Organization ;
     rdfs:label "Università di Camerino" ;
     schema:name "Università di Camerino" ;
     schema:foundingDate "1336"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "UNICAM" ;
-    org:alternativeName "University of Camerino" ;
-    schema:url <http://www.unicam.it/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Camerino> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "UNICAM"@None ; 
+    org:alternativeName "University of Camerino"@en ; 
+    org:alternativeName "Università degli Studi di Camerino"@it ; 
+    schema:url <http://unicam.it> ; 
+    schema:mainEntityOfPage <https://www.unicam.it> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Camerino> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100010739> ;
+    schema:sameAs <https://grid.ac/institutions/grid.5602.1> ;
+    schema:sameAs <http://isni.org/isni/0000000097456549> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/0038zss60> ;
+        rdfs:label "European Marine Biological Resource Centre" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(13.06785 43.13866)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(13.06785 43.13866)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Camerino" ;
             schema:addressCountry "IT" ;
-            owl:sameAs <http://sws.geonames.org/3181094/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000097456549> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q676817> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Italy" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3181094/> ;
+    ] ; 
     .

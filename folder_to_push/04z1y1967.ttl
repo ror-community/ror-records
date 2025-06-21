@@ -4,27 +4,39 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/04z1y1967> a org:Organization ;
     rdfs:label "National Film and Television School" ;
     schema:name "National Film and Television School" ;
     schema:foundingDate "1971"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "NFTS" ;
-    schema:url <https://nfts.co.uk/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/National_Film_and_Television_School> ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "NFTS"@None ; 
+    schema:url <http://nfts.co.uk> ; 
+    schema:mainEntityOfPage <https://nfts.co.uk/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/National_Film_and_Television_School> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.451095.c> ;
+    schema:sameAs <http://isni.org/isni/0000000403744435> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-0.64732 51.61219)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-0.64732 51.61219)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Beaconsfield" ;
             schema:addressCountry "GB" ;
-            owl:sameAs <http://sws.geonames.org/2656120/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000403744435> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q448807> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United Kingdom" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2656120/> ;
+    ] ; 
     .

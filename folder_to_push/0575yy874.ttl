@@ -4,28 +4,72 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/0575yy874> a org:Organization ;
     rdfs:label "University Medical Center Utrecht" ;
     schema:name "University Medical Center Utrecht" ;
     schema:foundingDate "1999"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Healthcare" ; 
-    org:abbreviation "UMC" ;
-    org:alternativeName "UMC Utrecht" ;
-    schema:url <http://www.umcutrecht.nl/nl/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/University_Medical_Center_Utrecht> ;
+    org:classification "funder" ; 
+    org:classification "healthcare" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "UMC"@None ; 
+    org:alternativeName "UMC Utrecht"@nl ; 
+    schema:url <http://umcutrecht.nl> ; 
+    schema:mainEntityOfPage <https://www.umcutrecht.nl> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_Medical_Center_Utrecht> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100003761> ;
+    schema:sameAs <https://grid.ac/institutions/grid.7692.a> ;
+    schema:sameAs <http://isni.org/isni/0000000090126352> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05fqypv61> ;
+        rdfs:label "Wilhelmina Children's Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/023qc4a07> ;
+        rdfs:label "Hubrecht Institute for Developmental Biology and Stem Cell Research" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02aj7yc53> ;
+        rdfs:label "Princess Máxima Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/04pp8hn57> ;
+        rdfs:label "Utrecht University" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/0208ges23> ;
+        rdfs:label "ERN RITA" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(5.12222 52.09083)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(5.12222 52.09083)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Utrecht" ;
             schema:addressCountry "NL" ;
-            owl:sameAs <http://sws.geonames.org/2745912/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000090126352> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q2456800> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "The Netherlands" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2745912/> ;
+    ] ; 
     .

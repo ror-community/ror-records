@@ -4,28 +4,54 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/03sd35x91> a org:Organization ;
     rdfs:label "Nanjing Tech University" ;
     schema:name "Nanjing Tech University" ;
     schema:foundingDate "1902"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "NJTech" ;
-    org:alternativeName "Nanjing University of Technology" ;
-    schema:url <http://en.njtech.edu.cn/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Nanjing_Tech_University> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "NJTech"@None ; 
+    org:alternativeName "Nanjing University of Technology"@en ; 
+    schema:url <http://njtech.edu.cn> ; 
+    schema:mainEntityOfPage <https://www.njtech.edu.cn> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Nanjing_Tech_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100008256> ;
+    schema:sameAs <https://grid.ac/institutions/grid.412022.7> ;
+    schema:sameAs <http://isni.org/isni/0000000093895210> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05nzc1r88> ;
+        rdfs:label "The Synergetic Innovation Center for Advanced Materials" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00s0wpd42> ;
+        rdfs:label "State Key Laboratory of Materials-Oriented Chemical Engineering" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(118.77778 32.06167)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(118.77778 32.06167)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Nanjing" ;
             schema:addressCountry "CN" ;
-            owl:sameAs <http://sws.geonames.org/1799962/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000093895210> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q10906760> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "China" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1799962/> ;
+    ] ; 
     .

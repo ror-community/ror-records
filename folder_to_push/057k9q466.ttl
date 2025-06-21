@@ -4,26 +4,69 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/057k9q466> a org:Organization ;
     rdfs:label "Centre for Agricultural Research" ;
     schema:name "Centre for Agricultural Research" ;
     schema:foundingDate "1996"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "ATK" ;
-    org:alternativeName "Magyar Tudományos Akadémia Agrártudományi Kutatóközpont" ;
-    schema:url <http://www.agrar.mta.hu/en> ; 
+    org:classification "facility" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "ATK"@None ; 
+    org:alternativeName "Magyar Tudományos Akadémia Agrártudományi Kutatóközpont"@hu ; 
+    schema:url <http://agrar.mta.hu> ; 
+    schema:mainEntityOfPage <http://agrar.mta.hu> ;
+    schema:sameAs <https://grid.ac/institutions/grid.425416.0> ;
+    schema:sameAs <http://isni.org/isni/0000000417944673> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05y1qcf54> ;
+        rdfs:label "Agricultural Institute" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/036eftk49> ;
+        rdfs:label "Institute for Soil Sciences" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/025m2a107> ;
+        rdfs:label "Institute for Veterinary Medical Research" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/052t9a145> ;
+        rdfs:label "Plant Protection Institute" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/04w6pnc49> ;
+        rdfs:label "Hungarian Research Network" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(18.79045 47.31601)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(18.79045 47.31601)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Martonvásár" ;
             schema:addressCountry "HU" ;
-            owl:sameAs <http://sws.geonames.org/3048326/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000417944673> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Hungary" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3048326/> ;
+    ] ; 
     .

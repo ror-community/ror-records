@@ -4,24 +4,60 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/03fgx6868> a org:Organization ;
     rdfs:label "South East Technological University" ;
     schema:name "South East Technological University" ;
     schema:foundingDate "2022"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    schema:url <https://www.setu.ie> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/South_East_Technological_University> ;
+    org:classification "education" ; 
+    dct:created "2023-01-26"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    schema:url <http://setu.ie> ; 
+    schema:mainEntityOfPage <https://www.setu.ie> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/South_East_Technological_University> ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05wvw0v54> ;
+        rdfs:label "Walton Institute for Information and Communications Systems Science" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "predecessor" ;
+        org:member <https://ror.org/03ypxwh20> ;
+        rdfs:label "Waterford Institute of Technology" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "predecessor" ;
+        org:member <https://ror.org/02frwys47> ;
+        rdfs:label "Institute of Technology Carlow" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05c347015> ;
+        rdfs:label "Irish Research eLibrary" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-7.11194 52.25833)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-7.11194 52.25833)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Waterford" ;
             schema:addressCountry "IE" ;
-            owl:sameAs <http://sws.geonames.org/2960992/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://www.wikidata.org/entity/Q55670387> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Ireland" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2960992/> ;
+    ] ; 
     .

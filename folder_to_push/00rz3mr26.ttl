@@ -1,0 +1,43 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/00rz3mr26> a org:Organization ;
+    rdfs:label "Riyadh Elm University" ;
+    schema:name "Riyadh Elm University" ;
+    schema:foundingDate "2004"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "RCsDP"@None ; 
+    org:alternativeName "Riyadh Colleges of Dentistry and Pharmacy"@en ; 
+    schema:url <http://riyadh.edu.sa> ; 
+    schema:mainEntityOfPage <https://www.riyadh.edu.sa> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Riyadh_College_of_Dentistry_and_Pharmacy> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.443356.3> ;
+    schema:sameAs <http://isni.org/isni/0000000417587661> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(46.72185 24.68773)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Riyadh" ;
+            schema:addressCountry "SA" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Saudi Arabia" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/108410/> ;
+    ] ; 
+    .

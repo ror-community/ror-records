@@ -4,28 +4,43 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/006teas31> a org:Organization ;
     rdfs:label "Shanghai University" ;
     schema:name "Shanghai University" ;
     schema:foundingDate "1922"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "SHU" ;
-    org:alternativeName "Shànghǎi Dàxué" ;
-    schema:url <http://en.shu.edu.cn/Default.aspx> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Shanghai_University> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "SHU"@None ; 
+    org:alternativeName "Shànghǎi Dàxué"@None ; 
+    org:alternativeName "上海大學"@zh ; 
+    schema:url <http://shu.edu.cn> ; 
+    schema:mainEntityOfPage <https://www.shu.edu.cn> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Shanghai_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100009002> ;
+    schema:sameAs <https://grid.ac/institutions/grid.39436.3b> ;
+    schema:sameAs <http://isni.org/isni/0000000123235732> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(121.45806 31.22222)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(121.45806 31.22222)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Shanghai" ;
             schema:addressCountry "CN" ;
-            owl:sameAs <http://sws.geonames.org/1796236/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000123235732> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1343386> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "China" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1796236/> ;
+    ] ; 
     .

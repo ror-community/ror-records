@@ -1,0 +1,42 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/03e096643> a org:Organization ;
+    rdfs:label "Institute of Rural Management Anand" ;
+    schema:name "Institute of Rural Management Anand" ;
+    schema:foundingDate "1979"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "IRMA"@None ; 
+    schema:url <http://irma.ac.in> ; 
+    schema:mainEntityOfPage <https://www.irma.ac.in/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Institute_of_Rural_Management_Anand> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.462428.e> ;
+    schema:sameAs <http://isni.org/isni/0000000405001504> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(72.9552 22.55251)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Anand" ;
+            schema:addressCountry "IN" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "India" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1278685/> ;
+    ] ; 
+    .

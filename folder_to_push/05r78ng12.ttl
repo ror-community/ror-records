@@ -4,27 +4,71 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/05r78ng12> a org:Organization ;
     rdfs:label "University of Castilla-La Mancha" ;
     schema:name "University of Castilla-La Mancha" ;
     schema:foundingDate "1982"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "UCLM" ;
-    schema:url <https://www.uclm.es> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Castilla%E2%80%93La_Mancha> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "UCLM"@None ; 
+    schema:url <http://uclm.es> ; 
+    schema:mainEntityOfPage <https://www.uclm.es> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Castilla%E2%80%93La_Mancha> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100007480> ;
+    schema:sameAs <https://grid.ac/institutions/grid.8048.4> ;
+    schema:sameAs <http://isni.org/isni/0000000121942329> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03xw5ev35> ;
+        rdfs:label "ORFEO-CINQA Research Network" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0140hpe71> ;
+        rdfs:label "Instituto de Investigación en Recursos Cinegéticos" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/04a5hr295> ;
+        rdfs:label "Complejo Hospitalario Universitario de Albacete" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/055p2yz63> ;
+        rdfs:label "Hospital General Universitario de Albacete" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02f30ff69> ;
+        rdfs:label "Hospital General Universitario de Ciudad Real" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-3.92907 38.98626)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-3.92907 38.98626)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Ciudad Real" ;
             schema:addressCountry "ES" ;
-            owl:sameAs <http://sws.geonames.org/2519402/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000121942329> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q941806> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Spain" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2519402/> ;
+    ] ; 
     .

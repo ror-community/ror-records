@@ -4,27 +4,59 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/008zs3103> a org:Organization ;
     rdfs:label "Rice University" ;
     schema:name "Rice University" ;
     schema:foundingDate "1912"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:alternativeName "William Marsh Rice University" ;
-    schema:url <http://www.rice.edu/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Rice_University> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:alternativeName "William Marsh Rice University"@en ; 
+    schema:url <http://rice.edu> ; 
+    schema:mainEntityOfPage <https://www.rice.edu> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Rice_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/100007863> ;
+    schema:sameAs <https://grid.ac/institutions/grid.21940.3e> ;
+    schema:sameAs <http://isni.org/isni/0000000419368278> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04hfg7v94> ;
+        rdfs:label "Center for Theoretical Biological Physics" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/017vyhs10> ;
+        rdfs:label "Moorea Coral Reef Long Term Ecological Research" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01qcacz92> ;
+        rdfs:label "Sevilleta Long Term Ecological Research" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-95.36327 29.76328)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-95.36327 29.76328)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Houston" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/4699066/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000419368278> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q842909> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/4699066/> ;
+    ] ; 
     .

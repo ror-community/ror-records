@@ -4,26 +4,52 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/0265d1010> a org:Organization ;
     rdfs:label "Shanxi Medical University" ;
     schema:name "Shanxi Medical University" ;
     schema:foundingDate "1919"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    schema:url <http://www.sxmu.edu.cn/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Shanxi_Medical_University> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    schema:url <http://sxmu.edu.cn> ; 
+    schema:mainEntityOfPage <https://www.sxmu.edu.cn> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Shanxi_Medical_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100008549> ;
+    schema:sameAs <https://grid.ac/institutions/grid.263452.4> ;
+    schema:sameAs <http://isni.org/isni/0000000417984018> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/057ckzt47> ;
+        rdfs:label "Shaanxi Provincial People's Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/050agvb10> ;
+        rdfs:label "Yuncheng Central Hospital" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(112.56028 37.86944)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(112.56028 37.86944)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Taiyuan" ;
             schema:addressCountry "CN" ;
-            owl:sameAs <http://sws.geonames.org/1793511/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000417984018> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q7489123> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "China" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1793511/> ;
+    ] ; 
     .

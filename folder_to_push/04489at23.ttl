@@ -15,9 +15,10 @@
     org:classification "education" ; 
     org:classification "funder" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-08-21"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
     org:alternativeName "City University London"@en ; 
-    schema:mainEntityOfPage <http://www.city.ac.uk> ;
+    schema:url <http://city.ac.uk> ; 
+    schema:mainEntityOfPage <https://www.city.ac.uk> ;
     owl:sameAs <http://en.wikipedia.org/wiki/City_University_London> ; 
     schema:sameAs <https://api.crossref.org/funders/100007566> ;
     schema:sameAs <https://grid.ac/institutions/grid.28577.3f> ;
@@ -30,15 +31,15 @@
     ] ; 
     org:hasLink [
         a org:Membership ;
-        org:role "related" ;
-        org:member <https://ror.org/03tb37539> ;
-        rdfs:label "Moorfields Eye Hospital" ;
-    ] ; 
-    org:hasLink [
-        a org:Membership ;
         org:role "parent" ;
         org:member <https://ror.org/047ybhc09> ;
         rdfs:label "City St George's, University of London" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03tb37539> ;
+        rdfs:label "Moorfields Eye Hospital" ;
     ] ; 
     schema:location [
         a schema:Place ;

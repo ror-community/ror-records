@@ -4,27 +4,47 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01tevnk56> a org:Organization ;
     rdfs:label "University of Siena" ;
     schema:name "University of Siena" ;
     schema:foundingDate "1240"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "UNISI" ;
-    schema:url <http://www.unisi.it/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Siena> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "UNISI"@None ; 
+    schema:url <http://unisi.it> ; 
+    schema:mainEntityOfPage <https://www.unisi.it> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Siena> ; 
+    schema:sameAs <https://api.crossref.org/funders/100012990> ;
+    schema:sameAs <https://grid.ac/institutions/grid.9024.f> ;
+    schema:sameAs <http://isni.org/isni/0000000417574641> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02s7et124> ;
+        rdfs:label "Azienda Ospedaliera Universitaria Senese" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(11.33064 43.31822)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(11.33064 43.31822)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Siena" ;
             schema:addressCountry "IT" ;
-            owl:sameAs <http://sws.geonames.org/3166548/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000417574641> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1245999> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Italy" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3166548/> ;
+    ] ; 
     .

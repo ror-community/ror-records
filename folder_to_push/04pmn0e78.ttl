@@ -4,27 +4,65 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/04pmn0e78> a org:Organization ;
     rdfs:label "Universidad de Alcalá" ;
     schema:name "Universidad de Alcalá" ;
     schema:foundingDate "1499"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "UAH" ;
-    schema:url <https://www.uah.es> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/University_of_Alcal%C3%A1> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "UAH"@None ; 
+    schema:url <http://uah.es> ; 
+    schema:mainEntityOfPage <https://uah.es> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/University_of_Alcal%C3%A1> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100006302> ;
+    schema:sameAs <https://grid.ac/institutions/grid.7159.a> ;
+    schema:sameAs <http://isni.org/isni/0000000419370239> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/050qbxj48> ;
+        rdfs:label "Hospital Central de la Defensa Gómez Ulla" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01az6dv73> ;
+        rdfs:label "Hospital Universitario Príncipe de Asturias" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/050eq1942> ;
+        rdfs:label "Hospital Universitario Ramón y Cajal" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00jkz9152> ;
+        rdfs:label "Hospital Universitario de Guadalajara" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-3.35996 40.48205)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-3.35996 40.48205)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Alcalá de Henares" ;
             schema:addressCountry "ES" ;
-            owl:sameAs <http://sws.geonames.org/3130616/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000419370239> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1243904> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Spain" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3130616/> ;
+    ] ; 
     .

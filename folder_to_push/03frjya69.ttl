@@ -4,27 +4,41 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/03frjya69> a org:Organization ;
     rdfs:label "Daegu Gyeongbuk Institute of Science and Technology" ;
     schema:name "Daegu Gyeongbuk Institute of Science and Technology" ;
     schema:foundingDate "2004"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "DGIST" ;
-    schema:url <http://en.dgist.ac.kr/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Daegu_Gyeongbuk_Institute_of_Science_and_Technology> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "DGIST"@None ; 
+    schema:url <http://dgist.ac.kr> ; 
+    schema:mainEntityOfPage <https://dgist.ac.kr> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Daegu_Gyeongbuk_Institute_of_Science_and_Technology> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100010274> ;
+    schema:sameAs <https://grid.ac/institutions/grid.417736.0> ;
+    schema:sameAs <http://isni.org/isni/0000000404386721> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(128.59111 35.87028)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(128.59111 35.87028)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Daegu" ;
             schema:addressCountry "KR" ;
-            owl:sameAs <http://sws.geonames.org/1835329/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000404386721> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q12591209> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "South Korea" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1835329/> ;
+    ] ; 
     .

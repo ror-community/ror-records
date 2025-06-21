@@ -4,25 +4,44 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/038kffh84> a org:Organization ;
     rdfs:label "Hellenic Centre for Marine Research" ;
     schema:name "Hellenic Centre for Marine Research" ;
     schema:foundingDate "1985"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "HCMR" ;
-    schema:url <http://www.hcmr.gr/en/> ; 
+    org:classification "facility" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "HCMR"@None ; 
+    schema:url <http://hcmr.gr> ; 
+    schema:mainEntityOfPage <https://www.hcmr.gr> ;
+    schema:sameAs <https://grid.ac/institutions/grid.410335.0> ;
+    schema:sameAs <http://isni.org/isni/0000000122887106> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/0038zss60> ;
+        rdfs:label "European Marine Biological Resource Centre" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(23.94389 37.73414)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(23.94389 37.73414)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Anavyssos" ;
             schema:addressCountry "GR" ;
-            owl:sameAs <http://sws.geonames.org/265100/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000122887106> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Greece" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/265100/> ;
+    ] ; 
     .

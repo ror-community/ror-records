@@ -15,10 +15,11 @@
     org:classification "education" ; 
     org:classification "funder" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-09-16"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
     org:abbreviation "UF"@None ; 
     org:alternativeName "University of the State of Florida"@en ; 
-    schema:mainEntityOfPage <http://www.ufl.edu/> ;
+    schema:url <http://ufl.edu> ; 
+    schema:mainEntityOfPage <https://www.ufl.edu> ;
     owl:sameAs <http://en.wikipedia.org/wiki/University_of_Florida> ; 
     schema:sameAs <https://api.crossref.org/funders/100007698> ;
     schema:sameAs <https://grid.ac/institutions/grid.15276.37> ;
@@ -49,6 +50,12 @@
     ] ; 
     org:hasLink [
         a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02pjdv450> ;
+        rdfs:label "Florida Museum of Natural History" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
         org:role "parent" ;
         org:member <https://ror.org/05sqd3t97> ;
         rdfs:label "State University System of Florida" ;
@@ -70,12 +77,6 @@
         org:role "related" ;
         org:member <https://ror.org/02wavzm11> ;
         rdfs:label "Konza Prairie Long Term Ecological Research" ;
-    ] ; 
-    org:hasLink [
-        a org:Membership ;
-        org:role "child" ;
-        org:member <https://ror.org/02pjdv450> ;
-        rdfs:label "Florida Museum of Natural History" ;
     ] ; 
     schema:location [
         a schema:Place ;

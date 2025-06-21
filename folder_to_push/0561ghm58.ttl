@@ -4,28 +4,42 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/0561ghm58> a org:Organization ;
     rdfs:label "Slovak University of Technology in Bratislava" ;
     schema:name "Slovak University of Technology in Bratislava" ;
     schema:foundingDate "1937"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "STU" ;
-    org:alternativeName "Slovenská Technická Univerzita v Bratislave" ;
-    schema:url <http://www.stuba.sk/english.html?page_id=132> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Slovak_University_of_Technology_in_Bratislava> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "STU"@None ; 
+    org:alternativeName "Slovenská Technická Univerzita v Bratislave"@sk ; 
+    schema:url <http://stuba.sk> ; 
+    schema:mainEntityOfPage <https://www.stuba.sk> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Slovak_University_of_Technology_in_Bratislava> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100020031> ;
+    schema:sameAs <https://grid.ac/institutions/grid.440789.6> ;
+    schema:sameAs <http://isni.org/isni/0000000122267046> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(17.10674 48.14816)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(17.10674 48.14816)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Bratislava" ;
             schema:addressCountry "SK" ;
-            owl:sameAs <http://sws.geonames.org/3060972/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000122267046> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1778355> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Slovakia" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3060972/> ;
+    ] ; 
     .

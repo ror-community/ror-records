@@ -1,0 +1,46 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/003s89n44> a org:Organization ;
+    rdfs:label "MacEwan University" ;
+    schema:name "MacEwan University" ;
+    schema:foundingDate "1971"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:alternativeName "Grant MacEwan College"@en ; 
+    org:alternativeName "Grant MacEwan Community College"@en ; 
+    org:alternativeName "Grant MacEwan University"@en ; 
+    schema:url <http://macewan.ca> ; 
+    schema:mainEntityOfPage <https://www.macewan.ca> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/MacEwan_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100003753> ;
+    schema:sameAs <https://grid.ac/institutions/grid.418296.0> ;
+    schema:sameAs <http://isni.org/isni/0000000403985853> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-113.46871 53.55014)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Edmonton" ;
+            schema:addressCountry "CA" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Canada" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/5946768/> ;
+    ] ; 
+    .

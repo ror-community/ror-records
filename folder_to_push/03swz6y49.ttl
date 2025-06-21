@@ -4,28 +4,60 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/03swz6y49> a org:Organization ;
     rdfs:label "National Council for Scientific and Technological Development" ;
     schema:name "National Council for Scientific and Technological Development" ;
     schema:foundingDate "1951"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Government" ; 
-    org:abbreviation "CNPq" ;
-    org:alternativeName "Conselho Nacional de Pesquisa" ;
-    schema:url <http://www.cnpq.br/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/National_Council_for_Scientific_and_Technological_Development> ;
+    org:classification "funder" ; 
+    org:classification "government" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "CNPq"@None ; 
+    org:alternativeName "Conselho Nacional de Pesquisa"@pt ; 
+    schema:url <http://cnpq.br> ; 
+    schema:mainEntityOfPage <https://www.gov.br/cnpq/pt-br> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/National_Council_for_Scientific_and_Technological_Development> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100003593> ;
+    schema:sameAs <https://grid.ac/institutions/grid.450640.3> ;
+    schema:sameAs <http://isni.org/isni/0000000121892026> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/045ydbe97> ;
+        rdfs:label "Institutos Nacionais de Ciência e Tecnologia" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/037pstq92> ;
+        rdfs:label "Instituto Nacional de Ciência e Tecnologia da Criosfera" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/050zdnc69> ;
+        rdfs:label "Ministry of Science, Technology and Innovation" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-47.92972 -15.77972)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-47.92972 -15.77972)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Brasília" ;
             schema:addressCountry "BR" ;
-            owl:sameAs <http://sws.geonames.org/3469058/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000121892026> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q2994429> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Brazil" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3469058/> ;
+    ] ; 
     .

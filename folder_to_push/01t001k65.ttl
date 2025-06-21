@@ -4,26 +4,40 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01t001k65> a org:Organization ;
     rdfs:label "Chongqing Jiaotong University" ;
     schema:name "Chongqing Jiaotong University" ;
     schema:foundingDate "1951"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    schema:url <http://www.cqjtu.edu.cn/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Chongqing_Jiaotong_University> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    schema:url <http://cqjtu.edu.cn> ; 
+    schema:mainEntityOfPage <https://www.cqjtu.edu.cn> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Chongqing_Jiaotong_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100011317> ;
+    schema:sameAs <https://grid.ac/institutions/grid.440679.8> ;
+    schema:sameAs <http://isni.org/isni/0000000096014335> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(106.55771 29.56026)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(106.55771 29.56026)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Chongqing" ;
             schema:addressCountry "CN" ;
-            owl:sameAs <http://sws.geonames.org/1814906/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000096014335> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q5104660> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "China" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1814906/> ;
+    ] ; 
     .

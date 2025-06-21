@@ -1,0 +1,44 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/050pq4m56> a org:Organization ;
+    rdfs:label "Universiti Tunku Abdul Rahman" ;
+    schema:name "Universiti Tunku Abdul Rahman" ;
+    schema:foundingDate "2002"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "UTAR"@None ; 
+    schema:url <http://utar.edu.my> ; 
+    schema:mainEntityOfPage <https://utar.edu.my> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Universiti_Tunku_Abdul_Rahman> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100002671> ;
+    schema:sameAs <https://grid.ac/institutions/grid.412261.2> ;
+    schema:sameAs <http://isni.org/isni/000000041798283X> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(101.15 4.3)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Kampar" ;
+            schema:addressCountry "MY" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Malaysia" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1735274/> ;
+    ] ; 
+    .

@@ -15,8 +15,9 @@
     org:classification "education" ; 
     org:classification "funder" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-10-14"^^xsd:date ;
-    schema:mainEntityOfPage <http://www.umontpellier.fr/en/> ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    schema:url <http://umontpellier.fr> ; 
+    schema:mainEntityOfPage <https://umontpellier.fr> ;
     owl:sameAs <https://en.wikipedia.org/wiki/University_of_Montpellier> ; 
     schema:sameAs <https://api.crossref.org/funders/501100008222> ;
     schema:sameAs <https://grid.ac/institutions/grid.121334.6> ;
@@ -491,6 +492,12 @@
     ] ; 
     org:hasLink [
         a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01jrr7w21> ;
+        rdfs:label "Montpellier Recherche en Management" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
         org:role "predecessor" ;
         org:member <https://ror.org/0227fbx80> ;
         rdfs:label "Université Montpellier 1" ;
@@ -536,12 +543,6 @@
         org:role "related" ;
         org:member <https://ror.org/01sgwka45> ;
         rdfs:label "Microscopie Fonctionnelle du Vivant" ;
-    ] ; 
-    org:hasLink [
-        a org:Membership ;
-        org:role "child" ;
-        org:member <https://ror.org/01jrr7w21> ;
-        rdfs:label "Montpellier Recherche en Management" ;
     ] ; 
     schema:location [
         a schema:Place ;

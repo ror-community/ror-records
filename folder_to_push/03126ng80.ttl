@@ -4,27 +4,45 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/03126ng80> a org:Organization ;
     rdfs:label "University of Aosta Valley" ;
     schema:name "University of Aosta Valley" ;
     schema:foundingDate "2000"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "UNIVDA" ;
-    schema:url <https://www.univda.it/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Aosta_Valley_University> ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "UNIVDA"@None ; 
+    schema:url <http://univda.it> ; 
+    schema:mainEntityOfPage <https://www.univda.it/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Aosta_Valley_University> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.449020.b> ;
+    schema:sameAs <http://isni.org/isni/0000000417925560> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/04hp1ky92> ;
+        rdfs:label "NODES S.c.a.r.l" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(7.31722 45.73764)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(7.31722 45.73764)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Aosta" ;
             schema:addressCountry "IT" ;
-            owl:sameAs <http://sws.geonames.org/3182997/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000417925560> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q2319621> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Italy" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3182997/> ;
+    ] ; 
     .

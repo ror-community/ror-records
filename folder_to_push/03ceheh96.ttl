@@ -4,27 +4,41 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/03ceheh96> a org:Organization ;
     rdfs:label "Qufu Normal University" ;
     schema:name "Qufu Normal University" ;
     schema:foundingDate "1955"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:alternativeName "Qūfù Shīfàn Dàxué" ;
-    schema:url <http://www.qfnu.edu.cn/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Qufu_Normal_University> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:alternativeName "Qūfù Shīfàn Dàxué"@None ; 
+    schema:url <http://qfnu.edu.cn> ; 
+    schema:mainEntityOfPage <https://www.qfnu.edu.cn> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Qufu_Normal_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/100016087> ;
+    schema:sameAs <https://grid.ac/institutions/grid.412638.a> ;
+    schema:sameAs <http://isni.org/isni/0000000102278151> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(116.99111 35.59667)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(116.99111 35.59667)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Qufu" ;
             schema:addressCountry "CN" ;
-            owl:sameAs <http://sws.geonames.org/1797333/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000102278151> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q3332415> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "China" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1797333/> ;
+    ] ; 
     .

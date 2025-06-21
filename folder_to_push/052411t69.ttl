@@ -1,0 +1,48 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/052411t69> a org:Organization ;
+    rdfs:label "Courtauld Institute of Art" ;
+    schema:name "Courtauld Institute of Art" ;
+    schema:foundingDate "1932"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:alternativeName "The Courtauld"@en ; 
+    schema:url <http://courtauld.ac.uk> ; 
+    schema:mainEntityOfPage <https://courtauld.ac.uk> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Courtauld_Institute_of_Art> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.424182.9> ;
+    schema:sameAs <http://isni.org/isni/000000041936850X> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/04cw6st05> ;
+        rdfs:label "University of London" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-0.12574 51.50853)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "London" ;
+            schema:addressCountry "GB" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United Kingdom" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2643743/> ;
+    ] ; 
+    .

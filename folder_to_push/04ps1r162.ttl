@@ -1,0 +1,49 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/04ps1r162> a org:Organization ;
+    rdfs:label "Lincoln University" ;
+    schema:name "Lincoln University" ;
+    schema:foundingDate "1878"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    schema:url <http://lincoln.ac.nz> ; 
+    schema:mainEntityOfPage <https://www.lincoln.ac.nz> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Lincoln_University_(New_Zealand)> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100004594> ;
+    schema:sameAs <https://grid.ac/institutions/grid.16488.33> ;
+    schema:sameAs <http://isni.org/isni/0000000403858571> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01qb09m39> ;
+        rdfs:label "Lincoln Agritech (New Zealand)" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(172.48333 -43.65)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Lincoln" ;
+            schema:addressCountry "NZ" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "New Zealand" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2188371/> ;
+    ] ; 
+    .

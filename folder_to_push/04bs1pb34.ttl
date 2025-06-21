@@ -1,0 +1,43 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/04bs1pb34> a org:Organization ;
+    rdfs:label "Hamburg University of Technology" ;
+    schema:name "Hamburg University of Technology" ;
+    schema:foundingDate "1978"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "TUHH"@None ; 
+    org:alternativeName "Technische Universität Hamburg-Harburg"@de ; 
+    schema:url <http://tuhh.de> ; 
+    schema:mainEntityOfPage <https://www.tuhh.de> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Hamburg_University_of_Technology> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.6884.2> ;
+    schema:sameAs <http://isni.org/isni/0000000405491777> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(9.99302 53.55073)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Hamburg" ;
+            schema:addressCountry "DE" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Germany" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2911298/> ;
+    ] ; 
+    .

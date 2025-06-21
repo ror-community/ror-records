@@ -1,0 +1,46 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/047h64h89> a org:Organization ;
+    rdfs:label "Lapland University of Applied Sciences" ;
+    schema:name "Lapland University of Applied Sciences" ;
+    schema:foundingDate "2014"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "AMK"@None ; 
+    org:alternativeName "Kemi-Tornio UAS"@fi ; 
+    org:alternativeName "Lapland UAS"@en ; 
+    org:alternativeName "Rovaniemi UAS"@en ; 
+    org:abbreviation "UAS"@None ; 
+    schema:url <http://lapinamk.fi> ; 
+    schema:mainEntityOfPage <https://www.lapinamk.fi> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Lapland_University_of_Applied_Sciences> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.448926.5> ;
+    schema:sameAs <http://isni.org/isni/0000000446491976> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(24.56371 65.73641)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Kemi" ;
+            schema:addressCountry "FI" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Finland" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/653281/> ;
+    ] ; 
+    .

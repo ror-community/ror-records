@@ -4,27 +4,53 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/05dfgh554> a org:Organization ;
     rdfs:label "Royal Netherlands Meteorological Institute" ;
     schema:name "Royal Netherlands Meteorological Institute" ;
     schema:foundingDate "1854"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Government" ; 
-    org:abbreviation "KNMI" ;
-    schema:url <http://www.knmi.nl/over-het-knmi/about> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Royal_Netherlands_Meteorological_Institute> ;
+    org:classification "funder" ; 
+    org:classification "government" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "KNMI"@None ; 
+    schema:url <http://knmi.nl> ; 
+    schema:mainEntityOfPage <https://www.knmi.nl> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Royal_Netherlands_Meteorological_Institute> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100014353> ;
+    schema:sameAs <https://grid.ac/institutions/grid.8653.8> ;
+    schema:sameAs <http://isni.org/isni/0000000122851082> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/056a6x975> ;
+        rdfs:label "Ministry of Infrastructure and the Environment" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/010bg5245> ;
+        rdfs:label "EC-Earth Consortium" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(5.18056 52.11)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(5.18056 52.11)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "De Bilt" ;
             schema:addressCountry "NL" ;
-            owl:sameAs <http://sws.geonames.org/2757783/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000122851082> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q516346> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "The Netherlands" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2757783/> ;
+    ] ; 
     .

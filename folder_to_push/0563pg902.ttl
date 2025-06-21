@@ -4,27 +4,42 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/0563pg902> a org:Organization ;
     rdfs:label "Lingnan University" ;
     schema:name "Lingnan University" ;
     schema:foundingDate "1888"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "LN" ;
-    schema:url <http://www.ln.edu.hk/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Lingnan_University_(Hong_Kong)> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "LN"@None ; 
+    org:abbreviation "LU"@None ; 
+    schema:url <http://ln.edu.hk> ; 
+    schema:mainEntityOfPage <https://www.ln.edu.hk> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Lingnan_University_(Hong_Kong)> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100014736> ;
+    schema:sameAs <https://grid.ac/institutions/grid.411382.d> ;
+    schema:sameAs <http://isni.org/isni/0000000417700716> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(113.97157 22.39175)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(113.97157 22.39175)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Tuen Mun" ;
             schema:addressCountry "HK" ;
-            owl:sameAs <http://sws.geonames.org/1818446/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000417700716> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1541161> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Hong Kong" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1818446/> ;
+    ] ; 
     .

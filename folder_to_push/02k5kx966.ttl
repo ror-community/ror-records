@@ -4,28 +4,42 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02k5kx966> a org:Organization ;
     rdfs:label "Universidad Politécnica de Cartagena" ;
     schema:name "Universidad Politécnica de Cartagena" ;
     schema:foundingDate "1998"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "UPCT" ;
-    org:alternativeName "Polytechnic University of Cartagena" ;
-    schema:url <https://www.upct.es/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Universidad_Polit%C3%A9cnica_de_Cartagena> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:alternativeName "Polytechnic University of Cartagena"@en ; 
+    org:abbreviation "UPCT"@None ; 
+    schema:url <http://upct.es> ; 
+    schema:mainEntityOfPage <https://www.upct.es/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Universidad_Polit%C3%A9cnica_de_Cartagena> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100005741> ;
+    schema:sameAs <https://grid.ac/institutions/grid.218430.c> ;
+    schema:sameAs <http://isni.org/isni/0000000121532602> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-0.98623 37.60512)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-0.98397 37.60197)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Cartagena" ;
             schema:addressCountry "ES" ;
-            owl:sameAs <http://sws.geonames.org/2520058/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000121532602> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q6156635> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Spain" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2520058/> ;
+    ] ; 
     .

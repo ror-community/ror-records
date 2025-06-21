@@ -4,26 +4,46 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/047g8vk19> a org:Organization ;
     rdfs:label "Erciyes University" ;
     schema:name "Erciyes University" ;
     schema:foundingDate "1978"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    schema:url <http://en.erciyes.edu.tr/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Erciyes_University> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    schema:url <http://erciyes.edu.tr> ; 
+    schema:mainEntityOfPage <https://erciyes.edu.tr> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Erciyes_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100003062> ;
+    schema:sameAs <https://grid.ac/institutions/grid.411739.9> ;
+    schema:sameAs <http://isni.org/isni/0000000123312603> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01vmfza15> ;
+        rdfs:label "Erciyes Üniversitesi Tıp Fakültesi Hastaneleri" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(35.48528 38.73222)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(35.48528 38.73222)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Kayseri" ;
             schema:addressCountry "TR" ;
-            owl:sameAs <http://sws.geonames.org/308464/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000123312603> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q4810943> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Türkiye" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/308464/> ;
+    ] ; 
     .

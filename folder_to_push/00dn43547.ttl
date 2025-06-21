@@ -4,28 +4,48 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/00dn43547> a org:Organization ;
     rdfs:label "King Faisal University" ;
     schema:name "King Faisal University" ;
     schema:foundingDate "1975"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "KFU" ;
-    org:alternativeName "Ğāmiʿat al-Malak Fayṣal" ;
-    schema:url <http://www.kfu.edu.sa/sites/Home/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/King_Faisal_University> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "KFU"@None ; 
+    org:alternativeName "Ğāmiʿat al-Malak Fayṣal"@None ; 
+    schema:url <http://kfu.edu.sa> ; 
+    schema:mainEntityOfPage <http://www.kfu.edu.sa/sites/Home/> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/King_Faisal_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100004686> ;
+    schema:sameAs <https://grid.ac/institutions/grid.412140.2> ;
+    schema:sameAs <http://isni.org/isni/0000000417559687> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/0230h1q47> ;
+        rdfs:label "King Fahd Hospital of the University" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(49.58764 25.36467)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(49.58764 25.36467)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Al Hufūf" ;
             schema:addressCountry "SA" ;
-            owl:sameAs <http://sws.geonames.org/109571/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000417559687> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q3070702> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Saudi Arabia" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/109571/> ;
+    ] ; 
     .

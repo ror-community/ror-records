@@ -4,28 +4,43 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/05ggn0a85> a org:Organization ;
     rdfs:label "University of Chemistry and Technology" ;
     schema:name "University of Chemistry and Technology" ;
     schema:foundingDate "1952"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "VŠCHT" ;
-    org:alternativeName "UCT Prague" ;
-    schema:url <http://www.vscht.cz/?jazyk=en> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/University_of_Chemistry_and_Technology,_Prague> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:alternativeName "UCT Prague"@en ; 
+    org:alternativeName "Vysoká škola chemicko-technologická"@cs ; 
+    org:abbreviation "VŠCHT"@None ; 
+    schema:url <http://vscht.cz> ; 
+    schema:mainEntityOfPage <https://www.vscht.cz> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/University_of_Chemistry_and_Technology,_Prague> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100016367> ;
+    schema:sameAs <https://grid.ac/institutions/grid.448072.d> ;
+    schema:sameAs <http://isni.org/isni/0000000406356059> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(14.42076 50.08804)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(14.42076 50.08804)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Prague" ;
             schema:addressCountry "CZ" ;
-            owl:sameAs <http://sws.geonames.org/3067696/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000406356059> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1476341> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Czechia" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3067696/> ;
+    ] ; 
     .

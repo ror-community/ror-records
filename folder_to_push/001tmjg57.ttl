@@ -15,9 +15,10 @@
     org:classification "education" ; 
     org:classification "funder" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-09-16"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
     org:abbreviation "KU"@None ; 
-    schema:mainEntityOfPage <http://www.ku.edu/> ;
+    schema:url <http://ku.edu> ; 
+    schema:mainEntityOfPage <https://ku.edu> ;
     owl:sameAs <http://en.wikipedia.org/wiki/University_of_Kansas> ; 
     schema:sameAs <https://api.crossref.org/funders/100007859> ;
     schema:sameAs <https://grid.ac/institutions/grid.266515.3> ;
@@ -33,6 +34,12 @@
         org:role "child" ;
         org:member <https://ror.org/04t2m2598> ;
         rdfs:label "Center for Remote Sensing and Integrated Systems" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04mxhn923> ;
+        rdfs:label "Kansas Geological Survey" ;
     ] ; 
     org:hasLink [
         a org:Membership ;
@@ -75,12 +82,6 @@
         org:role "related" ;
         org:member <https://ror.org/02wavzm11> ;
         rdfs:label "Konza Prairie Long Term Ecological Research" ;
-    ] ; 
-    org:hasLink [
-        a org:Membership ;
-        org:role "child" ;
-        org:member <https://ror.org/04mxhn923> ;
-        rdfs:label "Kansas Geological Survey" ;
     ] ; 
     schema:location [
         a schema:Place ;

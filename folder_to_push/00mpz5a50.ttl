@@ -4,26 +4,41 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/00mpz5a50> a org:Organization ;
     rdfs:label "Quinnipiac University" ;
     schema:name "Quinnipiac University" ;
     schema:foundingDate "1929"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    schema:url <https://www.quinnipiac.edu/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Quinnipiac_University> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    schema:url <http://qu.edu> ; 
+    schema:url <http://quinnipiac.edu> ; 
+    schema:mainEntityOfPage <https://www.qu.edu> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Quinnipiac_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/100019249> ;
+    schema:sameAs <https://grid.ac/institutions/grid.262285.9> ;
+    schema:sameAs <http://isni.org/isni/0000000088002297> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-72.89677 41.39593)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-72.89677 41.39593)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Hamden" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/4835654/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000088002297> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1030044> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/4835654/> ;
+    ] ; 
     .

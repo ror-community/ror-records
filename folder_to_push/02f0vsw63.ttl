@@ -4,28 +4,40 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02f0vsw63> a org:Organization ;
     rdfs:label "Indian Institute of Technology Jammu" ;
     schema:name "Indian Institute of Technology Jammu" ;
     schema:foundingDate "2016"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "IIT" ;
-    org:alternativeName "IIT Jammu" ;
-    schema:url <http://iitjammu.ac.in/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Indian_Institute_of_Technology_Jammu> ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "IIT"@None ; 
+    org:alternativeName "IIT Jammu"@None ; 
+    schema:url <http://iitjammu.ac.in> ; 
+    schema:mainEntityOfPage <https://iitjammu.ac.in> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Indian_Institute_of_Technology_Jammu> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.499272.3> ;
+    schema:sameAs <http://isni.org/isni/0000000474251072> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(74.86167 32.73528)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(74.86167 32.73528)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Jammu" ;
             schema:addressCountry "IN" ;
-            owl:sameAs <http://sws.geonames.org/1269321/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000474251072> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q24896549> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "India" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1269321/> ;
+    ] ; 
     .

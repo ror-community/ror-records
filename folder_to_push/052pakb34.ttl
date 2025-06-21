@@ -4,25 +4,37 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/052pakb34> a org:Organization ;
     rdfs:label "Changchun University of Technology" ;
     schema:name "Changchun University of Technology" ;
     schema:foundingDate "1952"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "CCUT" ;
-    schema:url <https://www.ccut.edu.cn> ; 
+    org:classification "education" ; 
+    dct:created "2023-07-06"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "CCUT"@None ; 
+    schema:url <http://ccut.edu.cn> ; 
+    schema:mainEntityOfPage <https://www.ccut.edu.cn> ;
+    schema:sameAs <http://isni.org/isni/0000000417616995> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(125.32278 43.88)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(125.32278 43.88)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Changchun" ;
             schema:addressCountry "CN" ;
-            owl:sameAs <http://sws.geonames.org/2038180/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000417616995> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q17030460> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "China" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2038180/> ;
+    ] ; 
     .

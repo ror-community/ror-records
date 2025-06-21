@@ -4,28 +4,48 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02e91jd64> a org:Organization ;
     rdfs:label "Universiti Putra Malaysia" ;
     schema:name "Universiti Putra Malaysia" ;
     schema:foundingDate "1931"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "UPM" ;
-    org:alternativeName "Universiti Pertanian Malaysia" ;
-    schema:url <http://www.upm.edu.my/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Universiti_Putra_Malaysia> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "UPM"@None ; 
+    org:alternativeName "Universiti Pertanian Malaysia"@ms ; 
+    schema:url <http://upm.edu.my> ; 
+    schema:mainEntityOfPage <https://upm.edu.my> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Universiti_Putra_Malaysia> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100004530> ;
+    schema:sameAs <https://grid.ac/institutions/grid.11142.37> ;
+    schema:sameAs <http://isni.org/isni/000000012231800X> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00g89bg08> ;
+        rdfs:label "Serdang Hospital" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(101.71667 3.03333)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(101.71667 3.03333)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Seri Kembangan" ;
             schema:addressCountry "MY" ;
-            owl:sameAs <http://sws.geonames.org/1744246/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/000000012231800X> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1458579> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Malaysia" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1744246/> ;
+    ] ; 
     .

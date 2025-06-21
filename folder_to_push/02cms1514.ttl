@@ -4,24 +4,37 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02cms1514> a org:Organization ;
     rdfs:label "CAMPUS 02 University for Applied Sciences" ;
     schema:name "CAMPUS 02 University for Applied Sciences" ;
     schema:foundingDate "1996"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    schema:url <https://campus02.at> ; 
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    schema:url <http://campus02.at> ; 
+    schema:mainEntityOfPage <https://www.campus02.at> ;
+    schema:sameAs <https://grid.ac/institutions/grid.454255.7> ;
+    schema:sameAs <http://isni.org/isni/0000000403895313> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(15.45 47.06667)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(15.45 47.06667)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Graz" ;
             schema:addressCountry "AT" ;
-            owl:sameAs <http://sws.geonames.org/2778067/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000403895313> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Austria" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2778067/> ;
+    ] ; 
     .

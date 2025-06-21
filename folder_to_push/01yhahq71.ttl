@@ -4,28 +4,40 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01yhahq71> a org:Organization ;
     rdfs:label "WHU – Otto Beisheim School of Management" ;
     schema:name "WHU – Otto Beisheim School of Management" ;
     schema:foundingDate "1984"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "WHU" ;
-    org:alternativeName "WHU Vallendar" ;
-    schema:url <https://www.whu.edu/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/WHU-Otto_Beisheim_School_of_Management> ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "WHU"@None ; 
+    org:alternativeName "WHU Vallendar"@de ; 
+    schema:url <http://whu.edu> ; 
+    schema:mainEntityOfPage <https://www.whu.edu/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/WHU-Otto_Beisheim_School_of_Management> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.454339.c> ;
+    schema:sameAs <http://isni.org/isni/0000000405086675> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(7.62427 50.39586)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(7.62427 50.39586)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Vallendar" ;
             schema:addressCountry "DE" ;
-            owl:sameAs <http://sws.geonames.org/2817909/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000405086675> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q316595> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Germany" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2817909/> ;
+    ] ; 
     .

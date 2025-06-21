@@ -4,25 +4,43 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01x6rgt30> a org:Organization ;
     rdfs:label "Xiamen Medical College" ;
     schema:name "Xiamen Medical College" ;
     schema:foundingDate "1953"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    schema:url <https://www.xmmc.edu.cn> ; 
-    owl:sameAs <https://zh.wikipedia.org/wiki/%E5%8E%A6%E9%97%A8%E5%8C%BB%E5%AD%A6%E9%99%A2> ;
-    schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(118.08187 24.47979)"^^geo:wktLiteral ;
-            schema:addressLocality "Amoy" ;
-            schema:addressCountry "CN" ;
-            owl:sameAs <http://sws.geonames.org/1790645/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
+    org:classification "education" ; 
+    dct:created "2023-08-30"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    schema:url <http://xmmc.edu.cn> ; 
+    schema:mainEntityOfPage <https://www.xmmc.edu.cn> ;
+    owl:sameAs <https://zh.wikipedia.org/wiki/%E5%8E%A6%E9%97%A8%E5%8C%BB%E5%AD%A6%E9%99%A2> ; 
     schema:sameAs <http://isni.org/isni/0000000465159661> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q17022954> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02j5n9e16> ;
+        rdfs:label "The Second Affiliated Hospital of Xiamen Medical College" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(118.08187 24.47979)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Xiamen" ;
+            schema:addressCountry "CN" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "China" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1790645/> ;
+    ] ; 
     .

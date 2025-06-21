@@ -4,29 +4,115 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/051fd9666> a org:Organization ;
     rdfs:label "Case Western Reserve University" ;
     schema:name "Case Western Reserve University" ;
     schema:foundingDate "1826"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "CWRU" ;
-    org:alternativeName "Case" ;
-    schema:url <http://www.case.edu/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Case_Western_Reserve_University> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "CWRU"@None ; 
+    org:alternativeName "Case"@en ; 
+    org:alternativeName "Case Western Reserve"@en ; 
+    schema:url <http://case.edu> ; 
+    schema:mainEntityOfPage <https://case.edu> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Case_Western_Reserve_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/100008136> ;
+    schema:sameAs <https://grid.ac/institutions/grid.67105.35> ;
+    schema:sameAs <http://isni.org/isni/0000000121643847> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00fpjq451> ;
+        rdfs:label "Case Comprehensive Cancer Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03keq4b73> ;
+        rdfs:label "Clinical and Translational Science Collaborative of Northern Ohio" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03xjacd83> ;
+        rdfs:label "Cleveland Clinic" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02x4b0932> ;
+        rdfs:label "Cleveland Clinic Lerner College of Medicine" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/053cbsa02> ;
+        rdfs:label "Cleveland Institute of Music" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01vrybr67> ;
+        rdfs:label "Louis Stokes Cleveland VA Medical Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/0377srw41> ;
+        rdfs:label "MetroHealth" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/04x495f64> ;
+        rdfs:label "Rainbow Babies & Children's Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00dbcz291> ;
+        rdfs:label "St. Vincent Charity Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01gc0wp38> ;
+        rdfs:label "University Hospitals Case Medical Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02kb97560> ;
+        rdfs:label "University Hospitals Seidman Cancer Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/0130jk839> ;
+        rdfs:label "University Hospitals of Cleveland" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-81.69541 41.4995)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-81.69541 41.4995)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Cleveland" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/5150529/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000121643847> ;
-    schema:sameAs <http://isni.org/isni/0000000419367865> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1047060> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/5150529/> ;
+    ] ; 
     .

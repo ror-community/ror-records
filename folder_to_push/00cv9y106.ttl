@@ -4,27 +4,95 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/00cv9y106> a org:Organization ;
     rdfs:label "Ghent University" ;
     schema:name "Ghent University" ;
     schema:foundingDate "1817"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:alternativeName "UGent" ;
-    schema:url <https://www.ugent.be/en> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Ghent_University> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:alternativeName "UGent"@None ; 
+    schema:url <http://ugent.be> ; 
+    schema:mainEntityOfPage <https://www.ugent.be> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Ghent_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100004385> ;
+    schema:sameAs <https://grid.ac/institutions/grid.5342.0> ;
+    schema:sameAs <http://isni.org/isni/0000000120697798> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/041bygf77> ;
+        rdfs:label "Ghent University Global Campus" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05bm1gr16> ;
+        rdfs:label "VIB - International Plant Biotechnology Outreach" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04q4ydz28> ;
+        rdfs:label "VIB-UGent Center for Inflammation Research" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04hbttm44> ;
+        rdfs:label "VIB-UGent Center for Medical Biotechnology" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01qnqmc89> ;
+        rdfs:label "VIB-UGent Center for Plant Systems Biology" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05y4fay10> ;
+        rdfs:label "VIB-VUB Laboratory Myeloid Cell Immunology" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00xmkp704> ;
+        rdfs:label "Ghent University Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/056t38c37> ;
+        rdfs:label "Vlerick Business School" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/0038zss60> ;
+        rdfs:label "European Marine Biological Resource Centre" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(3.71667 51.05)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(3.71667 51.05)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Ghent" ;
             schema:addressCountry "BE" ;
-            owl:sameAs <http://sws.geonames.org/2797656/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000120697798> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1137665> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Belgium" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2797656/> ;
+    ] ; 
     .

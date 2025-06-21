@@ -1,0 +1,56 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/04v2twj65> a org:Organization ;
+    rdfs:label "Oxford Brookes University" ;
+    schema:name "Oxford Brookes University" ;
+    schema:foundingDate "1865"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "OBU"@None ; 
+    schema:url <http://brookes.ac.uk> ; 
+    schema:mainEntityOfPage <https://www.brookes.ac.uk/> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Oxford_Brookes_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/100010053> ;
+    schema:sameAs <https://grid.ac/institutions/grid.7628.b> ;
+    schema:sameAs <http://isni.org/isni/0000000107268331> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/009vheq40> ;
+        rdfs:label "Churchill Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/0080acb59> ;
+        rdfs:label "John Radcliffe Hospital" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-1.25596 51.75222)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Oxford" ;
+            schema:addressCountry "GB" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United Kingdom" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2640729/> ;
+    ] ; 
+    .

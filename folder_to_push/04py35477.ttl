@@ -1,0 +1,53 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/04py35477> a org:Organization ;
+    rdfs:label "Max Planck Institute of Biochemistry" ;
+    schema:name "Max Planck Institute of Biochemistry" ;
+    schema:foundingDate "1973"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "facility" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    schema:url <http://biochem.mpg.de> ; 
+    schema:mainEntityOfPage <https://www.biochem.mpg.de> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Max_Planck_Institute_of_Biochemistry> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.418615.f> ;
+    schema:sameAs <http://isni.org/isni/000000040491845X> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/01hhn8329> ;
+        rdfs:label "Max Planck Society" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01qecd649> ;
+        rdfs:label "Max Planck Unit for Structural Molecular Biology" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(11.45196 48.10732)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Martinsried" ;
+            schema:addressCountry "DE" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Germany" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2873111/> ;
+    ] ; 
+    .

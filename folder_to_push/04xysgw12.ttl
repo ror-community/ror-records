@@ -4,30 +4,47 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/04xysgw12> a org:Organization ;
     rdfs:label "Pohang University of Science and Technology" ;
     schema:name "Pohang University of Science and Technology" ;
     schema:foundingDate "1986"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "POSTECH " ;
-    schema:url <http://www.postech.ac.kr/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Pohang_University_of_Science_and_Technology> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "POSTECH"@None ; 
+    schema:url <http://postech.ac.kr> ; 
+    schema:mainEntityOfPage <http://www.postech.ac.kr/> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Pohang_University_of_Science_and_Technology> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100002541> ;
+    schema:sameAs <https://grid.ac/institutions/grid.49100.3c> ;
+    schema:sameAs <http://isni.org/isni/0000000107424007> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02gntzb40> ;
+        rdfs:label "Pohang Accelerator Laboratory" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(129.36481 36.02917)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(129.36481 36.02917)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Pohang" ;
             schema:addressCountry "KR" ;
-            owl:sameAs <http://sws.geonames.org/1839071/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000107424007> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q40018> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q47522690> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q47520060> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q47495146> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "South Korea" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1839071/> ;
+    ] ; 
     .

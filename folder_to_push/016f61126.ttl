@@ -4,27 +4,47 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/016f61126> a org:Organization ;
     rdfs:label "Medical University of Lublin" ;
     schema:name "Medical University of Lublin" ;
     schema:foundingDate "1950"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "MUL" ;
-    schema:url <http://www.umlub.pl/en/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Medical_University_of_Lublin> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "MUL"@None ; 
+    schema:url <http://umlub.pl> ; 
+    schema:mainEntityOfPage <http://www.umlub.pl> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Medical_University_of_Lublin> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100010621> ;
+    schema:sameAs <https://grid.ac/institutions/grid.411484.c> ;
+    schema:sameAs <http://isni.org/isni/0000000110337158> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03dp8bn13> ;
+        rdfs:label "Kingsbrook Jewish Medical Center" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(22.56667 51.25)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(22.56667 51.25)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Lublin" ;
             schema:addressCountry "PL" ;
-            owl:sameAs <http://sws.geonames.org/765876/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000110337158> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1916610> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Poland" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/765876/> ;
+    ] ; 
     .

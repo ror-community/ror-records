@@ -4,27 +4,41 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/002qhr126> a org:Organization ;
     rdfs:label "New Bulgarian University" ;
     schema:name "New Bulgarian University" ;
     schema:foundingDate "1991"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "NBU" ;
-    schema:url <http://www.nbu.bg/entrance.php?lang=1> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/New_Bulgarian_University> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "NBU"@None ; 
+    schema:url <http://nbu.bg> ; 
+    schema:mainEntityOfPage <https://nbu.bg> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/New_Bulgarian_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100017032> ;
+    schema:sameAs <https://grid.ac/institutions/grid.5507.7> ;
+    schema:sameAs <http://isni.org/isni/0000000107405199> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(23.32415 42.69751)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(23.32415 42.69751)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Sofia" ;
             schema:addressCountry "BG" ;
-            owl:sameAs <http://sws.geonames.org/727011/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000107405199> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q370968> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Bulgaria" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/727011/> ;
+    ] ; 
     .

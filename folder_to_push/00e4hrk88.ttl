@@ -4,27 +4,47 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/00e4hrk88> a org:Organization ;
     rdfs:label "Wuhan University of Science and Technology" ;
     schema:name "Wuhan University of Science and Technology" ;
     schema:foundingDate "1898"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "WUST" ;
-    schema:url <http://www.wust.edu.cn/default.html> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Wuhan_University_of_Science_and_Technology> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "WUST"@None ; 
+    schema:url <http://wust.edu.cn> ; 
+    schema:mainEntityOfPage <https://www.wust.edu.cn> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Wuhan_University_of_Science_and_Technology> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100008860> ;
+    schema:sameAs <https://grid.ac/institutions/grid.412787.f> ;
+    schema:sameAs <http://isni.org/isni/000000009868173X> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01has8079> ;
+        rdfs:label "The Central Hospital of Xiao gan" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(114.26667 30.58333)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(114.26667 30.58333)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Wuhan" ;
             schema:addressCountry "CN" ;
-            owl:sameAs <http://sws.geonames.org/1791247/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/000000009868173X> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q6123855> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "China" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1791247/> ;
+    ] ; 
     .

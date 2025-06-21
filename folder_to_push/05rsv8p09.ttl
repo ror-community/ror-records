@@ -4,28 +4,49 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/05rsv8p09> a org:Organization ;
     rdfs:label "Çanakkale Onsekiz Mart Üniversitesi" ;
     schema:name "Çanakkale Onsekiz Mart Üniversitesi" ;
     schema:foundingDate "1992"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "COMU" ;
-    org:alternativeName "Canakkale Onsekiz Mart Universitesi" ;
-    schema:url <https://www.comu.edu.tr> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/%C3%87anakkale_Onsekiz_Mart_University> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "COMU"@None ; 
+    org:alternativeName "Canakkale Onsekiz Mart Universitesi"@tr ; 
+    org:abbreviation "ÇOMÜ"@None ; 
+    schema:url <http://comu.edu.tr> ; 
+    schema:mainEntityOfPage <https://www.comu.edu.tr> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/%C3%87anakkale_Onsekiz_Mart_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/100009055> ;
+    schema:sameAs <https://grid.ac/institutions/grid.412364.6> ;
+    schema:sameAs <http://isni.org/isni/0000000106807807> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00q74jp45> ;
+        rdfs:label "Canakkale Onsekiz Mart Universitesi Tip Fakultesi Hastanesi" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(26.41271 40.15552)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(26.41271 40.15552)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Çanakkale" ;
             schema:addressCountry "TR" ;
-            owl:sameAs <http://sws.geonames.org/749780/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000106807807> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q272576> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Türkiye" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/749780/> ;
+    ] ; 
     .

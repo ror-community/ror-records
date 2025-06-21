@@ -1,0 +1,49 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/044k0pw44> a org:Organization ;
+    rdfs:label "Korea Institute of Geoscience and Mineral Resources" ;
+    schema:name "Korea Institute of Geoscience and Mineral Resources" ;
+    schema:foundingDate "1918"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "facility" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "KIGAM"@None ; 
+    schema:url <http://kigam.re.kr> ; 
+    schema:mainEntityOfPage <https://www.kigam.re.kr> ;
+    schema:sameAs <https://api.crossref.org/funders/501100003700> ;
+    schema:sameAs <https://grid.ac/institutions/grid.410882.7> ;
+    schema:sameAs <http://isni.org/isni/0000000104361602> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/039fwba89> ;
+        rdfs:label "Korea Research Council for Industrial Science and Technology" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(127.38493 36.34913)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Daejeon" ;
+            schema:addressCountry "KR" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "South Korea" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1835235/> ;
+    ] ; 
+    .

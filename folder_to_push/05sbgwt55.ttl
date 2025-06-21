@@ -1,0 +1,46 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/05sbgwt55> a org:Organization ;
+    rdfs:label "Henan University of Technology" ;
+    schema:name "Henan University of Technology" ;
+    schema:foundingDate "1956"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "HAUT"@None ; 
+    org:abbreviation "HUT"@None ; 
+    org:alternativeName "Hénán Gōngyè Dàxué"@None ; 
+    schema:url <http://haut.edu.cn> ; 
+    schema:mainEntityOfPage <https://www.haut.edu.cn> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Henan_University_of_Technology> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100003489> ;
+    schema:sameAs <https://grid.ac/institutions/grid.412099.7> ;
+    schema:sameAs <http://isni.org/isni/0000000107037066> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(113.64861 34.75778)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Zhengzhou" ;
+            schema:addressCountry "CN" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "China" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1784658/> ;
+    ] ; 
+    .

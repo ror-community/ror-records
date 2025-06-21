@@ -4,28 +4,43 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/0262te083> a org:Organization ;
     rdfs:label "Krakow University of Economics" ;
     schema:name "Krakow University of Economics" ;
     schema:foundingDate "1925"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "CUE" ;
-    org:alternativeName "Kracow University of Economics" ;
-    schema:url <http://www.uek.krakow.pl/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Krak%C3%B3w_University_of_Economics> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "CUE"@None ; 
+    org:alternativeName "Cracow University of Economics"@en ; 
+    org:alternativeName "Kracow University of Economics"@en ; 
+    schema:url <http://uek.krakow.pl> ; 
+    schema:mainEntityOfPage <https://uek.krakow.pl> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Krak%C3%B3w_University_of_Economics> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100021536> ;
+    schema:sameAs <https://grid.ac/institutions/grid.435880.2> ;
+    schema:sameAs <http://isni.org/isni/0000000107290088> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(19.93658 50.06143)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(19.93658 50.06143)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Krakow" ;
             schema:addressCountry "PL" ;
-            owl:sameAs <http://sws.geonames.org/3094802/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000107290088> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1471879> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Poland" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3094802/> ;
+    ] ; 
     .

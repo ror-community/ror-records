@@ -4,27 +4,41 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/05d2kyx68> a org:Organization ;
     rdfs:label "Reykjavík University" ;
     schema:name "Reykjavík University" ;
     schema:foundingDate "1998"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "RU" ;
-    schema:url <http://en.ru.is/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Reykjav%C3%ADk_University> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "RU"@None ; 
+    schema:url <http://ru.is> ; 
+    schema:mainEntityOfPage <https://www.ru.is> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Reykjav%C3%ADk_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100014832> ;
+    schema:sameAs <https://grid.ac/institutions/grid.9580.4> ;
+    schema:sameAs <http://isni.org/isni/0000000406435232> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-21.89541 64.13548)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-21.89541 64.13548)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Reykjavik" ;
             schema:addressCountry "IS" ;
-            owl:sameAs <http://sws.geonames.org/3413829/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000406435232> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1542418> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Iceland" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3413829/> ;
+    ] ; 
     .

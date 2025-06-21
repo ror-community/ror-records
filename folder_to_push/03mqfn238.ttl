@@ -4,26 +4,46 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/03mqfn238> a org:Organization ;
     rdfs:label "University of South China" ;
     schema:name "University of South China" ;
     schema:foundingDate "2000"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    schema:url <http://english.usc.edu.cn/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/University_of_South_China> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    schema:url <http://usc.edu.cn> ; 
+    schema:mainEntityOfPage <https://www.usc.edu.cn> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_South_China> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100009020> ;
+    schema:sameAs <https://grid.ac/institutions/grid.412017.1> ;
+    schema:sameAs <http://isni.org/isni/0000000102668918> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/049z3cb60> ;
+        rdfs:label "First Affiliated Hospital of University of South China" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(112.61888 26.88946)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(112.61888 26.88946)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Hengyang" ;
             schema:addressCountry "CN" ;
-            owl:sameAs <http://sws.geonames.org/1808370/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000102668918> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q7896327> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "China" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1808370/> ;
+    ] ; 
     .

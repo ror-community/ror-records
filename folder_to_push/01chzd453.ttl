@@ -4,28 +4,42 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01chzd453> a org:Organization ;
     rdfs:label "University of Pardubice" ;
     schema:name "University of Pardubice" ;
     schema:foundingDate "1950"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "UPA" ;
-    org:alternativeName "Univerzita Pardubice" ;
-    schema:url <http://www.upce.cz/en/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Pardubice> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "UPA"@None ; 
+    org:alternativeName "Univerzita Pardubice"@cs ; 
+    schema:url <http://upce.cz> ; 
+    schema:mainEntityOfPage <https://www.upce.cz> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Pardubice> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100016365> ;
+    schema:sameAs <https://grid.ac/institutions/grid.11028.3a> ;
+    schema:sameAs <http://isni.org/isni/000000009050662X> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(15.77659 50.04075)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(15.77659 50.04075)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Pardubice" ;
             schema:addressCountry "CZ" ;
-            owl:sameAs <http://sws.geonames.org/3068582/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/000000009050662X> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q728840> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Czechia" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3068582/> ;
+    ] ; 
     .

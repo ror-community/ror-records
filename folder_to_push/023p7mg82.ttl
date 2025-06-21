@@ -4,26 +4,40 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/023p7mg82> a org:Organization ;
     rdfs:label "Lakehead University" ;
     schema:name "Lakehead University" ;
     schema:foundingDate "1965"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    schema:url <https://www.lakeheadu.ca/about> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Lakehead_University> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    schema:url <http://lakeheadu.ca> ; 
+    schema:mainEntityOfPage <https://www.lakeheadu.ca> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Lakehead_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/100012379> ;
+    schema:sameAs <https://grid.ac/institutions/grid.258900.6> ;
+    schema:sameAs <http://isni.org/isni/0000000106877127> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-89.25018 48.38202)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-89.25018 48.38202)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Thunder Bay" ;
             schema:addressCountry "CA" ;
-            owl:sameAs <http://sws.geonames.org/6166142/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000106877127> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1165215> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Canada" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/6166142/> ;
+    ] ; 
     .

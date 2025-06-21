@@ -4,27 +4,39 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/04etcj997> a org:Organization ;
     rdfs:label "Inter-University Centre for Astronomy and Astrophysics" ;
     schema:name "Inter-University Centre for Astronomy and Astrophysics" ;
     schema:foundingDate "1988"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "IUCAA" ;
-    schema:url <https://www.iucaa.in> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Inter-University_Centre_for_Astronomy_and_Astrophysics> ;
+    org:classification "facility" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "IUCAA"@None ; 
+    schema:url <http://iucaa.in> ; 
+    schema:mainEntityOfPage <https://www.iucaa.in> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Inter-University_Centre_for_Astronomy_and_Astrophysics> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.249801.6> ;
+    schema:sameAs <http://isni.org/isni/000000009280468X> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(73.85535 18.51957)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(73.85535 18.51957)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Pune" ;
             schema:addressCountry "IN" ;
-            owl:sameAs <http://sws.geonames.org/1259229/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/000000009280468X> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q3345391> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "India" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1259229/> ;
+    ] ; 
     .

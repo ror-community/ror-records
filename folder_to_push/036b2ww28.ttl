@@ -4,27 +4,59 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/036b2ww28> a org:Organization ;
     rdfs:label "Universidad de Málaga" ;
     schema:name "Universidad de Málaga" ;
     schema:foundingDate "1972"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "UMA" ;
-    schema:url <https://www.uma.es> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/University_of_M%C3%A1laga> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "UMA"@None ; 
+    schema:url <http://uma.es> ; 
+    schema:mainEntityOfPage <https://www.uma.es> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/University_of_M%C3%A1laga> ; 
+    schema:sameAs <https://api.crossref.org/funders/100009473> ;
+    schema:sameAs <https://grid.ac/institutions/grid.10215.37> ;
+    schema:sameAs <http://isni.org/isni/0000000122987828> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04nrv3s86> ;
+        rdfs:label "Instituto de Hortofruticultura Subtropical y Mediterránea "La Mayora"" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05xxs2z38> ;
+        rdfs:label "Hospital Clínico Universitario Virgen de la Victoria" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02x2fbb57> ;
+        rdfs:label "Red Española de Supercomputación" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-4.42034 36.72016)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-4.42034 36.72016)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Málaga" ;
             schema:addressCountry "ES" ;
-            owl:sameAs <http://sws.geonames.org/2514256/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000122987828> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q958650> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Spain" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2514256/> ;
+    ] ; 
     .

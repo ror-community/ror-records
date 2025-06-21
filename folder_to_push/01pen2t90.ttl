@@ -1,0 +1,41 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/01pen2t90> a org:Organization ;
+    rdfs:label "Wiltshire College" ;
+    schema:name "Wiltshire College" ;
+    schema:foundingDate "2002"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    schema:url <http://wiltshire.ac.uk> ; 
+    schema:mainEntityOfPage <https://www.wiltshire.ac.uk> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Wiltshire_College> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.469305.d> ;
+    schema:sameAs <http://isni.org/isni/0000000404743688> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-2.20861 51.31889)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Trowbridge" ;
+            schema:addressCountry "GB" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United Kingdom" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2635427/> ;
+    ] ; 
+    .

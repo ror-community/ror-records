@@ -1,0 +1,43 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/03arvv474> a org:Organization ;
+    rdfs:label "Anglo-American University" ;
+    schema:name "Anglo-American University" ;
+    schema:foundingDate "1990"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "AAU"@None ; 
+    org:alternativeName "The New Anglo-American College"@en ; 
+    schema:url <http://aauni.edu> ; 
+    schema:mainEntityOfPage <https://www.aauni.edu/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Anglo-American_University> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.445510.1> ;
+    schema:sameAs <http://isni.org/isni/0000000088298390> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(14.42076 50.08804)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Prague" ;
+            schema:addressCountry "CZ" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Czechia" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3067696/> ;
+    ] ; 
+    .

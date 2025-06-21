@@ -4,28 +4,43 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/049tv2d57> a org:Organization ;
     rdfs:label "Southern University of Science and Technology" ;
     schema:name "Southern University of Science and Technology" ;
     schema:foundingDate "2009"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "SUSTech" ;
-    org:alternativeName "South University of Science and Technology of China" ;
-    schema:url <http://www.sustech.edu.cn/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Southern_University_of_Science_and_Technology> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "SUSTC"@None ; 
+    org:abbreviation "SUSTech"@None ; 
+    org:alternativeName "South University of Science and Technology of China"@en ; 
+    schema:url <http://sustech.edu.cn> ; 
+    schema:mainEntityOfPage <https://sustech.edu.cn> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Southern_University_of_Science_and_Technology> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100008100> ;
+    schema:sameAs <https://grid.ac/institutions/grid.263817.9> ;
+    schema:sameAs <http://isni.org/isni/0000000417731790> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(114.0683 22.54554)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(114.0683 22.54554)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Shenzhen" ;
             schema:addressCountry "CN" ;
-            owl:sameAs <http://sws.geonames.org/1795565/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000417731790> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q7568723> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "China" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1795565/> ;
+    ] ; 
     .

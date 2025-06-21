@@ -4,26 +4,40 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02bzfsy61> a org:Organization ;
     rdfs:label "Bialystok University of Technology" ;
     schema:name "Bialystok University of Technology" ;
     schema:foundingDate "1949"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    schema:url <http://pb.edu.pl/en> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Bialystok_University_of_Technology> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    schema:url <http://pb.edu.pl> ; 
+    schema:mainEntityOfPage <https://pb.edu.pl> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Bialystok_University_of_Technology> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100005033> ;
+    schema:sameAs <https://grid.ac/institutions/grid.446127.2> ;
+    schema:sameAs <http://isni.org/isni/0000000097872307> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(23.16433 53.13333)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(23.16433 53.13333)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Bialystok" ;
             schema:addressCountry "PL" ;
-            owl:sameAs <http://sws.geonames.org/776069/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000097872307> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q4902926> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Poland" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/776069/> ;
+    ] ; 
     .

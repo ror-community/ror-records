@@ -1,0 +1,42 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/03efbq855> a org:Organization ;
+    rdfs:label "Károli Gáspár University of the Reformed Church in Hungary" ;
+    schema:name "Károli Gáspár University of the Reformed Church in Hungary" ;
+    schema:foundingDate "1855"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "KRE"@None ; 
+    schema:url <http://kre.hu> ; 
+    schema:mainEntityOfPage <http://www.kre.hu/english/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/K%C3%A1roli_G%C3%A1sp%C3%A1r_University_of_the_Reformed_Church_in_Hungary> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.445677.3> ;
+    schema:sameAs <http://isni.org/isni/0000000121086518> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(19.04045 47.49835)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Budapest" ;
+            schema:addressCountry "HU" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Hungary" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3054643/> ;
+    ] ; 
+    .

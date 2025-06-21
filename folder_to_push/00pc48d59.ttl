@@ -4,27 +4,53 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/00pc48d59> a org:Organization ;
     rdfs:label "Swiss Federal Institute of Aquatic Science and Technology" ;
     schema:name "Swiss Federal Institute of Aquatic Science and Technology" ;
     schema:foundingDate "1936"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "EAWAG" ;
-    schema:url <http://www.eawag.ch/en/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Swiss_Federal_Institute_of_Aquatic_Science_and_Technology> ;
+    org:classification "facility" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "EAWAG"@None ; 
+    schema:url <http://eawag.ch> ; 
+    schema:mainEntityOfPage <https://www.eawag.ch> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Swiss_Federal_Institute_of_Aquatic_Science_and_Technology> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100011718> ;
+    schema:sameAs <https://grid.ac/institutions/grid.418656.8> ;
+    schema:sameAs <http://isni.org/isni/0000000115510562> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/021f7p178> ;
+        rdfs:label "Lib4RI - Library for the Research Institutes within the ETH Domain: Eawag, Empa, PSI & WSL" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/01rvn4p91> ;
+        rdfs:label "Board of the Swiss Federal Institutes of Technology" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(8.61872 47.39724)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(8.61872 47.39724)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Dübendorf" ;
             schema:addressCountry "CH" ;
-            owl:sameAs <http://sws.geonames.org/2660971/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000115510562> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q678765> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Switzerland" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2660971/> ;
+    ] ; 
     .

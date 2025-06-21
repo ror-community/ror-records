@@ -1,0 +1,81 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/00rd5t069> a org:Organization ;
+    rdfs:label "Wenzhou Medical University" ;
+    schema:name "Wenzhou Medical University" ;
+    schema:foundingDate "1912"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "WMC"@None ; 
+    org:alternativeName "Wenzhou Yike Daxue"@None ; 
+    schema:url <http://wmu.edu.cn> ; 
+    schema:mainEntityOfPage <http://en.wmu.edu.cn/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Wenzhou_Medical_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/100009800> ;
+    schema:sameAs <https://grid.ac/institutions/grid.268099.c> ;
+    schema:sameAs <http://isni.org/isni/0000000103483990> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/000sxmx78> ;
+        rdfs:label "Affiliated Eye Hospital of Wenzhou Medical College" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/04fszpp16> ;
+        rdfs:label "Dongyang People's Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03cyvdv85> ;
+        rdfs:label "First Affiliated Hospital of Wenzhou Medical University" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/011b9vp56> ;
+        rdfs:label "Ruian People's Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/0156rhd17> ;
+        rdfs:label "Second Affiliated Hospital & Yuying Children's Hospital of Wenzhou Medical University" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05m0wv206> ;
+        rdfs:label "Zhejiang Taizhou Hospital" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(120.66682 27.99942)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Wenzhou" ;
+            schema:addressCountry "CN" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "China" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1791388/> ;
+    ] ; 
+    .

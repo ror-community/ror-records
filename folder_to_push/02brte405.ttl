@@ -1,0 +1,42 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/02brte405> a org:Organization ;
+    rdfs:label "Samsun University" ;
+    schema:name "Samsun University" ;
+    schema:foundingDate "2018"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2021-04-06"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "SAMÜ"@None ; 
+    schema:url <http://samsun.edu.tr> ; 
+    schema:mainEntityOfPage <https://samsun.edu.tr/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Samsun_University> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.510471.6> ;
+    schema:sameAs <http://isni.org/isni/0000000476849991> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(36.3361 41.27976)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Samsun" ;
+            schema:addressCountry "TR" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Türkiye" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/740264/> ;
+    ] ; 
+    .

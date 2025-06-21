@@ -1,0 +1,44 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/02bjnq803> a org:Organization ;
+    rdfs:label "Jazan University" ;
+    schema:name "Jazan University" ;
+    schema:foundingDate "2006"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:alternativeName "JazanU"@None ; 
+    schema:url <http://jazanu.edu.sa> ; 
+    schema:mainEntityOfPage <https://jazanu.edu.sa> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Jazan_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/100009388> ;
+    schema:sameAs <https://grid.ac/institutions/grid.411831.e> ;
+    schema:sameAs <http://isni.org/isni/0000000403981027> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(42.55111 16.88917)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Gazan" ;
+            schema:addressCountry "SA" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Saudi Arabia" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/105299/> ;
+    ] ; 
+    .

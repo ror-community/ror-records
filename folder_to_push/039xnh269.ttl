@@ -4,26 +4,40 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/039xnh269> a org:Organization ;
     rdfs:label "Yanbian University" ;
     schema:name "Yanbian University" ;
     schema:foundingDate "1949"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    schema:url <http://www.ybu.edu.cn/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Yanbian_University> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    schema:url <http://ybu.edu.cn> ; 
+    schema:mainEntityOfPage <https://ybu.edu.cn> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Yanbian_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100019594> ;
+    schema:sameAs <https://grid.ac/institutions/grid.440752.0> ;
+    schema:sameAs <http://isni.org/isni/0000000115812747> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(129.50241 42.88825)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(129.50241 42.88825)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Yanji" ;
             schema:addressCountry "CN" ;
-            owl:sameAs <http://sws.geonames.org/2033467/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000115812747> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q718332> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "China" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2033467/> ;
+    ] ; 
     .

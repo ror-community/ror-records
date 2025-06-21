@@ -1,0 +1,42 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/03dvp8k55> a org:Organization ;
+    rdfs:label "Oulu University of Applied Sciences" ;
+    schema:name "Oulu University of Applied Sciences" ;
+    schema:foundingDate "1996"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "Oamk"@None ; 
+    schema:url <http://oamk.fi> ; 
+    schema:mainEntityOfPage <https://oamk.fi> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Oulu_University_of_Applied_Sciences> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.445620.1> ;
+    schema:sameAs <http://isni.org/isni/0000000094586751> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(25.46816 65.01236)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Oulu" ;
+            schema:addressCountry "FI" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Finland" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/643492/> ;
+    ] ; 
+    .

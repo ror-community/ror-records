@@ -4,28 +4,66 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/022k4wk35> a org:Organization ;
     rdfs:label "Beijing Normal University" ;
     schema:name "Beijing Normal University" ;
     schema:foundingDate "1902"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "BNU" ;
-    org:alternativeName "Běijīng Shīfàn Dàxué" ;
-    schema:url <http://english.bnu.edu.cn/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Beijing_Normal_University> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "BNU"@None ; 
+    org:alternativeName "Běijīng Shīfàn Dàxué"@None ; 
+    schema:url <http://bnu.edu.cn> ; 
+    schema:mainEntityOfPage <https://www.bnu.edu.cn> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Beijing_Normal_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100002726> ;
+    schema:sameAs <https://grid.ac/institutions/grid.20513.35> ;
+    schema:sameAs <http://isni.org/isni/0000000417899964> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/059y0zb32> ;
+        rdfs:label "State Key Laboratory of Cognitive Neuroscience and Learning" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/050mxte83> ;
+        rdfs:label "State Key Laboratory of Earth Surface Processes and Resource Ecology" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05wzjqa24> ;
+        rdfs:label "State Key Laboratory of Remote Sensing Science" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/04snvc712> ;
+        rdfs:label "United International College" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(116.39723 39.9075)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(116.39723 39.9075)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Beijing" ;
             schema:addressCountry "CN" ;
-            owl:sameAs <http://sws.geonames.org/1816670/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000417899964> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1604022> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "China" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1816670/> ;
+    ] ; 
     .

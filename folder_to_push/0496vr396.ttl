@@ -4,27 +4,47 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/0496vr396> a org:Organization ;
     rdfs:label "Flanders Marine Institute" ;
     schema:name "Flanders Marine Institute" ;
     schema:foundingDate "1999"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Nonprofit" ; 
-    org:abbreviation "VLIZ" ;
-    schema:url <https://www.vliz.be> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Flanders_Marine_Institute> ;
+    org:classification "funder" ; 
+    org:classification "nonprofit" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "VLIZ"@None ; 
+    schema:url <http://vliz.be> ; 
+    schema:mainEntityOfPage <https://www.vliz.be> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Flanders_Marine_Institute> ; 
+    schema:sameAs <https://api.crossref.org/funders/100018447> ;
+    schema:sameAs <https://grid.ac/institutions/grid.426539.f> ;
+    schema:sameAs <http://isni.org/isni/0000000122309672> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/0038zss60> ;
+        rdfs:label "European Marine Biological Resource Centre" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(2.927 51.21551)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(2.927 51.21551)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Ostend" ;
             schema:addressCountry "BE" ;
-            owl:sameAs <http://sws.geonames.org/2789786/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000122309672> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q2297636> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Belgium" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2789786/> ;
+    ] ; 
     .

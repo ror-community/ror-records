@@ -4,26 +4,40 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/006x4sc24> a org:Organization ;
     rdfs:label "Gdańsk University of Technology" ;
     schema:name "Gdańsk University of Technology" ;
     schema:foundingDate "1904"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    schema:url <http://pg.edu.pl/en/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Gda%C5%84sk_University_of_Technology> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    schema:url <http://pg.edu.pl> ; 
+    schema:mainEntityOfPage <https://pg.edu.pl> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Gda%C5%84sk_University_of_Technology> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100006190> ;
+    schema:sameAs <https://grid.ac/institutions/grid.6868.0> ;
+    schema:sameAs <http://isni.org/isni/000000012187838X> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(18.64912 54.35227)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(18.64912 54.35227)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Gdansk" ;
             schema:addressCountry "PL" ;
-            owl:sameAs <http://sws.geonames.org/3099434/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/000000012187838X> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q465922> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Poland" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3099434/> ;
+    ] ; 
     .

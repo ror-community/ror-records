@@ -4,27 +4,41 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/03a1kt624> a org:Organization ;
     rdfs:label "Universidad de Huelva" ;
     schema:name "Universidad de Huelva" ;
     schema:foundingDate "1993"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "UHU" ;
-    schema:url <https://www.uhu.es> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/University_of_Huelva> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "UHU"@None ; 
+    schema:url <http://uhu.es> ; 
+    schema:mainEntityOfPage <https://www.uhu.es> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/University_of_Huelva> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100005604> ;
+    schema:sameAs <https://grid.ac/institutions/grid.18803.32> ;
+    schema:sameAs <http://isni.org/isni/0000000417698134> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-6.94004 37.26638)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-6.94004 37.26638)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Huelva" ;
             schema:addressCountry "ES" ;
-            owl:sameAs <http://sws.geonames.org/2516548/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000417698134> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q478464> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Spain" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2516548/> ;
+    ] ; 
     .

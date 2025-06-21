@@ -4,27 +4,41 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01x8m3269> a org:Organization ;
     rdfs:label "Hitit Üniversitesi" ;
     schema:name "Hitit Üniversitesi" ;
     schema:foundingDate "2006"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:alternativeName "Hittite University" ;
-    schema:url <https://www.hitit.edu.tr> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Hittite_University> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:alternativeName "Hittite University"@en ; 
+    schema:url <http://hitit.edu.tr> ; 
+    schema:mainEntityOfPage <https://www.hitit.edu.tr> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Hittite_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100020607> ;
+    schema:sameAs <https://grid.ac/institutions/grid.440466.4> ;
+    schema:sameAs <http://isni.org/isni/000000040369655X> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(34.95333 40.54889)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(34.95333 40.54889)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Çorum" ;
             schema:addressCountry "TR" ;
-            owl:sameAs <http://sws.geonames.org/748879/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/000000040369655X> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q6103572> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Türkiye" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/748879/> ;
+    ] ; 
     .

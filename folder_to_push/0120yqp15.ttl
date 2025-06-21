@@ -1,0 +1,43 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/0120yqp15> a org:Organization ;
+    rdfs:label "Solihull College" ;
+    schema:name "Solihull College" ;
+    schema:foundingDate "1954"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:alternativeName "Solihull College & University Centre"@en ; 
+    org:alternativeName "Solihull College of Technology"@en ; 
+    schema:url <http://solihull.ac.uk> ; 
+    schema:mainEntityOfPage <https://www.solihull.ac.uk> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Solihull_College> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.469222.9> ;
+    schema:sameAs <http://isni.org/isni/0000000404647987> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-1.78094 52.41426)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Solihull" ;
+            schema:addressCountry "GB" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United Kingdom" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2637546/> ;
+    ] ; 
+    .

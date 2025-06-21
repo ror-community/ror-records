@@ -4,27 +4,71 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02j46qs45> a org:Organization ;
     rdfs:label "Masaryk University" ;
     schema:name "Masaryk University" ;
     schema:foundingDate "1919"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "MU" ;
-    schema:url <http://www.muni.cz/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Masaryk_University> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "MU"@None ; 
+    schema:url <http://muni.cz> ; 
+    schema:mainEntityOfPage <https://www.muni.cz> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Masaryk_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100010653> ;
+    schema:sameAs <https://grid.ac/institutions/grid.10267.32> ;
+    schema:sameAs <http://isni.org/isni/0000000121940956> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/009nz6031> ;
+        rdfs:label "Central European Institute of Technology – Masaryk University" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/032hzqh22> ;
+        rdfs:label "RECETOX" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01p7k1986> ;
+        rdfs:label "Central European Institute of Technology" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/049bjee35> ;
+        rdfs:label "St. Anne´s University Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00qq1fp34> ;
+        rdfs:label "University Hospital Brno" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(16.60796 49.19522)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(16.60796 49.19522)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Brno" ;
             schema:addressCountry "CZ" ;
-            owl:sameAs <http://sws.geonames.org/3078610/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000121940956> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q763586> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Czechia" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3078610/> ;
+    ] ; 
     .

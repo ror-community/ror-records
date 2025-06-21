@@ -4,27 +4,53 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/00h2vm590> a org:Organization ;
     rdfs:label "University of the Western Cape" ;
     schema:name "University of the Western Cape" ;
     schema:foundingDate "1959"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "UWC" ;
-    schema:url <http://www.uwc.ac.za/Pages/default.aspx> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/University_of_the_Western_Cape> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "UWC"@None ; 
+    schema:url <http://uwc.ac.za> ; 
+    schema:mainEntityOfPage <https://www.uwc.ac.za> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_the_Western_Cape> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100003504> ;
+    schema:sameAs <https://grid.ac/institutions/grid.8974.2> ;
+    schema:sameAs <http://isni.org/isni/0000000121568226> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01edhwb26> ;
+        rdfs:label "Inter-university Institute for Data Intensive Astronomy" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/04d6eav07> ;
+        rdfs:label "Red Cross War Memorial Children's Hospital" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(18.42322 -33.92584)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(18.42322 -33.92584)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Cape Town" ;
             schema:addressCountry "ZA" ;
-            owl:sameAs <http://sws.geonames.org/3369157/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000121568226> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q475700> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "South Africa" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3369157/> ;
+    ] ; 
     .

@@ -15,10 +15,11 @@
     org:classification "funder" ; 
     org:classification "nonprofit" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-10-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
     org:alternativeName "Carlos III Health Institute"@en ; 
     org:abbreviation "ISCIII"@None ; 
-    schema:mainEntityOfPage <http://www.isciii.es/> ;
+    schema:url <http://isciii.es> ; 
+    schema:mainEntityOfPage <https://www.isciii.es> ;
     owl:sameAs <https://en.wikipedia.org/wiki/Carlos_III_Health_Institute> ; 
     schema:sameAs <https://api.crossref.org/funders/501100004587> ;
     schema:sameAs <https://grid.ac/institutions/grid.413448.e> ;
@@ -139,15 +140,15 @@
     ] ; 
     org:hasLink [
         a org:Membership ;
-        org:role "parent" ;
-        org:member <https://ror.org/05r0vyz12> ;
-        rdfs:label "Ministerio de Ciencia, Innovación y Universidades" ;
-    ] ; 
-    org:hasLink [
-        a org:Membership ;
         org:role "child" ;
         org:member <https://ror.org/05mwdqq98> ;
         rdfs:label "Instituto de Investigación de Enfermedades Raras" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/05r0vyz12> ;
+        rdfs:label "Ministerio de Ciencia, Innovación y Universidades" ;
     ] ; 
     schema:location [
         a schema:Place ;

@@ -4,27 +4,41 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/0396bvs97> a org:Organization ;
     rdfs:label "Truman State University" ;
     schema:name "Truman State University" ;
     schema:foundingDate "1867"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "TSU" ;
-    schema:url <http://www.truman.edu/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Truman_State_University> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "TSU"@None ; 
+    schema:url <http://truman.edu> ; 
+    schema:mainEntityOfPage <https://www.truman.edu> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Truman_State_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/100010924> ;
+    schema:sameAs <https://grid.ac/institutions/grid.265193.a> ;
+    schema:sameAs <http://isni.org/isni/0000000110887969> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-92.58325 40.19475)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-92.58325 40.19475)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Kirksville" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/5055787/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000110887969> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q7847734> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/5055787/> ;
+    ] ; 
     .

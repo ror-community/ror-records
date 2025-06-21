@@ -4,27 +4,53 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/04mxxkb11> a org:Organization ;
     rdfs:label "Universidad de Cádiz" ;
     schema:name "Universidad de Cádiz" ;
     schema:foundingDate "1979"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "UCA" ;
-    schema:url <https://www.uca.es> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/University_of_C%C3%A1diz> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "UCA"@None ; 
+    schema:url <http://uca.es> ; 
+    schema:mainEntityOfPage <https://www.uca.es> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/University_of_C%C3%A1diz> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100008723> ;
+    schema:sameAs <https://grid.ac/institutions/grid.7759.c> ;
+    schema:sameAs <http://isni.org/isni/0000000103580096> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/040xzg562> ;
+        rdfs:label "Hospital Universitario Puerta del Mar" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/04fbqvq73> ;
+        rdfs:label "Hospital Universitario Puerto Real" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-6.2891 36.52672)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-6.2891 36.52672)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Cadiz" ;
             schema:addressCountry "ES" ;
-            owl:sameAs <http://sws.geonames.org/2520600/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000103580096> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q2000065> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Spain" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2520600/> ;
+    ] ; 
     .

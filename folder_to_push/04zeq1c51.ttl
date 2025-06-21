@@ -4,26 +4,38 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/04zeq1c51> a org:Organization ;
     rdfs:label "Cyceron" ;
     schema:name "Cyceron" ;
     schema:foundingDate "1985"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:alternativeName "Imaging and Therapeutical Strategies in Cerebral and Tumoral Pathologies" ;
-    schema:url <http://www.cyceron.fr/index.php/en/> ; 
+    org:classification "facility" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:alternativeName "Imaging and Therapeutical Strategies in Cerebral and Tumoral Pathologies"@en ; 
+    schema:url <http://cyceron.fr> ; 
+    schema:mainEntityOfPage <https://www.cyceron.fr> ;
+    schema:sameAs <https://grid.ac/institutions/grid.417831.8> ;
+    schema:sameAs <http://isni.org/isni/000000040640679X> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-0.35912 49.18585)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-0.35912 49.18585)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Caen" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/3029241/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/000000040640679X> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q3008228> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3029241/> ;
+    ] ; 
     .

@@ -4,28 +4,76 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/041nk4h53> a org:Organization ;
     rdfs:label "Lawrence Livermore National Laboratory" ;
     schema:name "Lawrence Livermore National Laboratory" ;
     schema:foundingDate "1952"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "LLNL" ;
-    org:alternativeName "United States Department of Energy National Nuclear Security Administration Lawrence Livermore National Laboratory" ;
-    schema:url <https://www.llnl.gov> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Lawrence_Livermore_National_Laboratory> ;
+    org:classification "facility" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "LLL"@None ; 
+    org:abbreviation "LLNL"@None ; 
+    org:alternativeName "U.S. Department of Energy Lawrence Livermore National Laboratory"@en ; 
+    org:alternativeName "U.S. Department of Energy National Nuclear Security Administration Lawrence Livermore National Laboratory"@en ; 
+    org:alternativeName "United States Department of Energy Lawrence Livermore National Laboratory"@en ; 
+    org:alternativeName "United States Department of Energy National Nuclear Security Administration Lawrence Livermore National Laboratory"@en ; 
+    schema:url <http://llnl.gov> ; 
+    schema:mainEntityOfPage <https://www.llnl.gov> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Lawrence_Livermore_National_Laboratory> ; 
+    schema:sameAs <https://api.crossref.org/funders/100006227> ;
+    schema:sameAs <https://grid.ac/institutions/grid.250008.f> ;
+    schema:sameAs <http://isni.org/isni/0000000121609702> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/035cj2961> ;
+        rdfs:label "National Ignition Facility" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/03z21mf61> ;
+        rdfs:label "Lawrence Livermore National Security" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/03sk1we31> ;
+        rdfs:label "National Nuclear Security Administration" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01dvj3d25> ;
+        rdfs:label "Atmospheric Radiation Measurement User Facility" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/04n07f274> ;
+        rdfs:label "Materials Science in Extreme Environments University Research Alliance" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-121.76801 37.68187)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-121.76801 37.68187)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Livermore" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/5367440/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000121609702> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q519826> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/5367440/> ;
+    ] ; 
     .

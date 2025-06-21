@@ -1,0 +1,43 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/00qjgza05> a org:Organization ;
+    rdfs:label "University of Chieti-Pescara" ;
+    schema:name "University of Chieti-Pescara" ;
+    schema:foundingDate "1960"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    schema:url <http://unich.it> ; 
+    schema:mainEntityOfPage <https://www.unich.it> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Chieti-Pescara> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100005874> ;
+    schema:sameAs <https://grid.ac/institutions/grid.412451.7> ;
+    schema:sameAs <http://isni.org/isni/0000000121814941> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(14.16494 42.34827)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Chieti" ;
+            schema:addressCountry "IT" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Italy" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3178796/> ;
+    ] ; 
+    .

@@ -4,28 +4,78 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02mh8wx89> a org:Organization ;
     rdfs:label "Tianjin Medical University" ;
     schema:name "Tianjin Medical University" ;
     schema:foundingDate "1951"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "TMU" ;
-    org:alternativeName "Tiānjīn Yīkē Dàxué" ;
-    schema:url <http://www.tmu.edu.cn/s/2/t/250/p/3/c/1080/list.htm> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Tianjin_Medical_University> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "TMU"@None ; 
+    org:alternativeName "Tiānjīn Yīkē Dàxué"@None ; 
+    schema:url <http://tmu.edu.cn> ; 
+    schema:mainEntityOfPage <https://www.tmu.edu.cn> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Tianjin_Medical_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100010104> ;
+    schema:sameAs <https://grid.ac/institutions/grid.265021.2> ;
+    schema:sameAs <http://isni.org/isni/0000000097921228> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03rc99w60> ;
+        rdfs:label "Second Hospital of Tianjin Medical University" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02ch1zb66> ;
+        rdfs:label "Tianjin First Center Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/04j2cfe69> ;
+        rdfs:label "Tianjin Medical University Eye Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/003sav965> ;
+        rdfs:label "Tianjin Medical University General Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00911j719> ;
+        rdfs:label "Tianjin Third Central Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00k5k8k03> ;
+        rdfs:label "Tianjin Tianhe Hospital" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(117.17667 39.14222)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(117.17667 39.14222)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Tianjin" ;
             schema:addressCountry "CN" ;
-            owl:sameAs <http://sws.geonames.org/1792947/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000097921228> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q834827> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "China" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1792947/> ;
+    ] ; 
     .

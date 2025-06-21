@@ -4,28 +4,42 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01n2bd587> a org:Organization ;
     rdfs:label "Liaoning Technical University" ;
     schema:name "Liaoning Technical University" ;
     schema:foundingDate "1949"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "LNTU" ;
-    org:alternativeName "Liaoning University of Engineering and Technology" ;
-    schema:url <https://en.lntu.edu.cn> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Liaoning_Technical_University> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "LNTU"@None ; 
+    org:alternativeName "Liaoning University of Engineering and Technology"@en ; 
+    schema:url <http://lntu.edu.cn> ; 
+    schema:mainEntityOfPage <https://en.lntu.edu.cn> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Liaoning_Technical_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100009015> ;
+    schema:sameAs <https://grid.ac/institutions/grid.464369.a> ;
+    schema:sameAs <http://isni.org/isni/000000011122661X> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(121.65889 42.01556)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(121.65889 42.01556)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Fuxin" ;
             schema:addressCountry "CN" ;
-            owl:sameAs <http://sws.geonames.org/2037346/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/000000011122661X> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q6540150> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "China" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2037346/> ;
+    ] ; 
     .

@@ -4,26 +4,82 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/045ntgf29> a org:Organization ;
     rdfs:label "Oklahoma State University System" ;
     schema:name "Oklahoma State University System" ;
     schema:foundingDate "1890"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    schema:url <http://www.system.okstate.edu/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Oklahoma_State_University_System> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    schema:url <http://okstate.edu> ; 
+    schema:mainEntityOfPage <https://go.okstate.edu> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Oklahoma_State_University_System> ; 
+    schema:sameAs <https://api.crossref.org/funders/100007069> ;
+    schema:sameAs <https://grid.ac/institutions/grid.411363.2> ;
+    schema:sameAs <http://isni.org/isni/0000000104490631> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01g9vbr38> ;
+        rdfs:label "Oklahoma State University" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02mfxdp77> ;
+        rdfs:label "Oklahoma State University Center for Health Sciences" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04eqy7d03> ;
+        rdfs:label "Oklahoma State University Institute of Technology" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/003jx1781> ;
+        rdfs:label "Oklahoma State University Medical Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03y1zyv86> ;
+        rdfs:label "Oklahoma State University Oklahoma City" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/045zgf584> ;
+        rdfs:label "Oklahoma State University at Tulsa" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00a6cxf28> ;
+        rdfs:label "OU Health" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-97.05837 36.11561)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-97.05837 36.11561)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Stillwater" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/4552215/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000104490631> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q2017355> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/4552215/> ;
+    ] ; 
     .

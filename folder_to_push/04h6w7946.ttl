@@ -4,28 +4,43 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/04h6w7946> a org:Organization ;
     rdfs:label "University of the Fraser Valley" ;
     schema:name "University of the Fraser Valley" ;
     schema:foundingDate "1974"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "UFV" ;
-    org:alternativeName "University College of the Fraser Valley" ;
-    schema:url <http://www.ufv.ca/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/University_of_the_Fraser_Valley> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:alternativeName "Fraser Valley College"@en ; 
+    org:abbreviation "UFV"@None ; 
+    org:alternativeName "University College of the Fraser Valley"@en ; 
+    schema:url <http://ufv.ca> ; 
+    schema:mainEntityOfPage <https://ufv.ca> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_the_Fraser_Valley> ; 
+    schema:sameAs <https://api.crossref.org/funders/100011794> ;
+    schema:sameAs <https://grid.ac/institutions/grid.292498.c> ;
+    schema:sameAs <http://isni.org/isni/000000008723466X> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-122.25257 49.05798)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-122.25257 49.05798)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Abbotsford" ;
             schema:addressCountry "CA" ;
-            owl:sameAs <http://sws.geonames.org/5881791/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/000000008723466X> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q2495961> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Canada" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/5881791/> ;
+    ] ; 
     .

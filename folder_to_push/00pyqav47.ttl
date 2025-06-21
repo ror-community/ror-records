@@ -4,26 +4,46 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/00pyqav47> a org:Organization ;
     rdfs:label "University of Ostrava" ;
     schema:name "University of Ostrava" ;
     schema:foundingDate "1991"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    schema:url <http://www.osu.cz/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Ostrava> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    schema:url <http://osu.cz> ; 
+    schema:mainEntityOfPage <https://www.osu.cz> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Ostrava> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100006704> ;
+    schema:sameAs <https://grid.ac/institutions/grid.412684.d> ;
+    schema:sameAs <http://isni.org/isni/0000000121554545> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00a6yph09> ;
+        rdfs:label "University Hospital Ostrava" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(18.28204 49.83465)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(18.28204 49.83465)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Ostrava" ;
             schema:addressCountry "CZ" ;
-            owl:sameAs <http://sws.geonames.org/3068799/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000121554545> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1783294> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Czechia" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3068799/> ;
+    ] ; 
     .

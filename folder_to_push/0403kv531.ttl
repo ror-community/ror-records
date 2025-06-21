@@ -1,0 +1,44 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/0403kv531> a org:Organization ;
+    rdfs:label "City of Glasgow College" ;
+    schema:name "City of Glasgow College" ;
+    schema:foundingDate "2010"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:alternativeName "Central College, Glasgow"@en ; 
+    org:alternativeName "Glasgow College of Nautical Studies"@en ; 
+    org:alternativeName "Glasgow Metropolitan College"@en ; 
+    schema:url <http://cityofglasgowcollege.ac.uk> ; 
+    schema:mainEntityOfPage <https://www.cityofglasgowcollege.ac.uk/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/City_of_Glasgow_College> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.418233.f> ;
+    schema:sameAs <http://isni.org/isni/0000000085427126> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-4.25763 55.86515)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Glasgow" ;
+            schema:addressCountry "GB" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United Kingdom" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2648579/> ;
+    ] ; 
+    .

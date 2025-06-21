@@ -4,30 +4,209 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/013meh722> a org:Organization ;
     rdfs:label "University of Cambridge" ;
     schema:name "University of Cambridge" ;
     schema:foundingDate "1209"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:alternativeName "Cambridge University" ;
-    schema:url <http://www.cam.ac.uk/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Cambridge> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:alternativeName "Cambridge University"@en ; 
+    schema:url <http://cam.ac.uk> ; 
+    schema:mainEntityOfPage <https://www.cam.ac.uk> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Cambridge> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100000735> ;
+    schema:sameAs <https://grid.ac/institutions/grid.5335.0> ;
+    schema:sameAs <http://isni.org/isni/0000000121885934> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03jsdjx34> ;
+        rdfs:label "Cambridge University Press" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00rj4dg52> ;
+        rdfs:label "Cambridge–MIT Institute" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0068m0j38> ;
+        rdfs:label "Cancer Research UK Cambridge Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/047d2d387> ;
+        rdfs:label "Centre for the Observation and Modelling of Earthquakes, Volcanoes and Tectonics" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01ajt3179> ;
+        rdfs:label "Hutchison/MRC Research Centre" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/046vje122> ;
+        rdfs:label "MRC Biostatistics Unit" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/055bpw879> ;
+        rdfs:label "MRC Cognition and Brain Sciences Unit" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/052578691> ;
+        rdfs:label "MRC Epidemiology Unit" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/050pqs331> ;
+        rdfs:label "MRC Human Nutrition Research" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01vdt8f48> ;
+        rdfs:label "MRC Mitochondrial Biology Unit" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05362x394> ;
+        rdfs:label "MRC Toxicology Unit" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02x42kc45> ;
+        rdfs:label "Sedgwick Museum of Earth Sciences" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02f3vh107> ;
+        rdfs:label "The Cambridge Centre for Advanced Research and Education in Singapore" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00fp3ce15> ;
+        rdfs:label "Wellcome/Cancer Research UK Gurdon Institute" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05nz0zp31> ;
+        rdfs:label "Wellcome/MRC Cambridge Stem Cell Institute" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0264dxb48> ;
+        rdfs:label "Wellcome/MRC Institute of Metabolic Science" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/037a8w620> ;
+        rdfs:label "MRC Metabolic Diseases Unit" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05m8dr349> ;
+        rdfs:label "NIHR Cambridge Biomedical Research Centre" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/023a2er20> ;
+        rdfs:label "Cancer Imaging Centre" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/055vbxf86> ;
+        rdfs:label "Addenbrooke's Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01ym47j46> ;
+        rdfs:label "Fulbourn Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/033sn5p83> ;
+        rdfs:label "Gates Cambridge Trust" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05m3qrs33> ;
+        rdfs:label "Ipswich Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02d2g0205> ;
+        rdfs:label "NIHR Cambridge Dementia Biomedical Research Unit" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05mqgrb58> ;
+        rdfs:label "Papworth Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03npxtg86> ;
+        rdfs:label "Queen Elizabeth Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01ncx3917> ;
+        rdfs:label "Rosie Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00gnxy738> ;
+        rdfs:label "UK Web Archive" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(0.11667 52.2)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(0.11667 52.2)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Cambridge" ;
             schema:addressCountry "GB" ;
-            owl:sameAs <http://sws.geonames.org/2653941/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000121885934> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q35794> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q181892> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q24679079> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q10899168> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United Kingdom" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2653941/> ;
+    ] ; 
     .

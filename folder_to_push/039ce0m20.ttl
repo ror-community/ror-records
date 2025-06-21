@@ -1,0 +1,49 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/039ce0m20> a org:Organization ;
+    rdfs:label "Hellenic Mediterranean University" ;
+    schema:name "Hellenic Mediterranean University" ;
+    schema:foundingDate "1983"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "HMU"@None ; 
+    org:alternativeName "TEI Crete"@None ; 
+    schema:url <http://hmu.gr> ; 
+    schema:mainEntityOfPage <https://www.hmu.gr/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Technological_Educational_Institute_of_Crete> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.419879.a> ;
+    schema:sameAs <http://isni.org/isni/0000000403938299> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01bkx5q50> ;
+        rdfs:label "Centre for Technological Research of Crete" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(25.14341 35.32787)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Heraklion" ;
+            schema:addressCountry "GR" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Greece" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/261745/> ;
+    ] ; 
+    .

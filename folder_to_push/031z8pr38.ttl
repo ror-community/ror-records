@@ -4,28 +4,47 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/031z8pr38> a org:Organization ;
     rdfs:label "Mount Holyoke College" ;
     schema:name "Mount Holyoke College" ;
     schema:foundingDate "1837"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "MHC" ;
-    org:alternativeName "Mount Holyoke Female Seminary" ;
-    schema:url <https://www.mtholyoke.edu/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Mount_Holyoke_College> ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "MHC"@None ; 
+    org:alternativeName "Mount Holyoke Female Seminary"@en ; 
+    org:alternativeName "Wheaton Female Seminary"@en ; 
+    schema:url <http://mtholyoke.edu> ; 
+    schema:mainEntityOfPage <https://www.mtholyoke.edu/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Mount_Holyoke_College> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.260293.c> ;
+    schema:sameAs <http://isni.org/isni/0000000121624400> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/006e48x19> ;
+        rdfs:label "Five Colleges" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-72.57453 42.25842)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-72.57453 42.25842)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "South Hadley" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/4951397/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000121624400> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1140542> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/4951397/> ;
+    ] ; 
     .

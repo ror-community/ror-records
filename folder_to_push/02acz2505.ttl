@@ -4,23 +4,38 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02acz2505> a org:Organization ;
     rdfs:label "Cenaero (Belgium)" ;
     schema:name "Cenaero (Belgium)" ;
     schema:foundingDate "2002"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Company" ; 
-    schema:url <http://www.cenaero.be/> ; 
+    org:classification "company" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    schema:url <http://cenaero.be> ; 
+    schema:mainEntityOfPage <https://www.cenaero.be> ;
+    schema:sameAs <https://api.crossref.org/funders/501100014541> ;
+    schema:sameAs <https://grid.ac/institutions/grid.423651.7> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(4.44448 50.41136)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(4.44448 50.41136)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Charleroi" ;
             schema:addressCountry "BE" ;
-            owl:sameAs <http://sws.geonames.org/2800481/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Belgium" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2800481/> ;
+    ] ; 
     .

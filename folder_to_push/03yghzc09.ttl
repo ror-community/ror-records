@@ -4,26 +4,76 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/03yghzc09> a org:Organization ;
     rdfs:label "University of Exeter" ;
     schema:name "University of Exeter" ;
     schema:foundingDate "1955"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    schema:url <http://www.exeter.ac.uk/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Exeter> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    schema:url <http://exeter.ac.uk> ; 
+    schema:mainEntityOfPage <https://www.exeter.ac.uk> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Exeter> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100000737> ;
+    schema:sameAs <https://grid.ac/institutions/grid.8391.3> ;
+    schema:sameAs <http://isni.org/isni/0000000419368024> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00rbqbc98> ;
+        rdfs:label "Wellcome Centre of Cultures and Environments of Health" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00vbzva31> ;
+        rdfs:label "MRC Centre for Medical Mycology" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00v5h4y49> ;
+        rdfs:label "Derriford Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03jrh3t05> ;
+        rdfs:label "Royal Devon and Exeter Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/022p86748> ;
+        rdfs:label "GW4 Facility for High-Resolution Electron Cryo-Microscopy" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/000vekr11> ;
+        rdfs:label "GW4" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-3.52751 50.7236)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-3.52751 50.7236)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Exeter" ;
             schema:addressCountry "GB" ;
-            owl:sameAs <http://sws.geonames.org/2649808/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000419368024> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1414861> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United Kingdom" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2649808/> ;
+    ] ; 
     .

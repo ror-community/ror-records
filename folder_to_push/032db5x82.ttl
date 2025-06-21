@@ -1,0 +1,98 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/032db5x82> a org:Organization ;
+    rdfs:label "University of South Florida" ;
+    schema:name "University of South Florida" ;
+    schema:foundingDate "1956"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "USF"@None ; 
+    schema:url <http://usf.edu> ; 
+    schema:mainEntityOfPage <http://www.usf.edu/> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_South_Florida> ; 
+    schema:sameAs <https://api.crossref.org/funders/100008900> ;
+    schema:sameAs <https://grid.ac/institutions/grid.170693.a> ;
+    schema:sameAs <http://isni.org/isni/000000012353285X> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/05sqd3t97> ;
+        rdfs:label "State University System of Florida" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01wdckv42> ;
+        rdfs:label "Bayfront Medical Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/002jd6n35> ;
+        rdfs:label "Gulf of Mexico University Research Collaborative" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/013x5cp73> ;
+        rdfs:label "Johns Hopkins All Children's Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03h4fx826> ;
+        rdfs:label "Lehigh Valley Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01xf75524> ;
+        rdfs:label "Moffitt Cancer Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05rd7y749> ;
+        rdfs:label "Seamester" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02w8sz675> ;
+        rdfs:label "Shriners Hospitals for Children - Tampa" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03tj5qd85> ;
+        rdfs:label "Tampa General Hospital" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-82.45843 27.94752)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Tampa" ;
+            schema:addressCountry "US" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/4174757/> ;
+    ] ; 
+    .

@@ -4,28 +4,42 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/046pqvy32> a org:Organization ;
     rdfs:label "University of the Visual & Performing Arts" ;
     schema:name "University of the Visual & Performing Arts" ;
     schema:foundingDate "1893"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "UVPA" ;
-    org:alternativeName "Government College of Fine Arts" ;
-    schema:url <https://www.vpa.ac.lk/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/University_of_the_Visual_and_Performing_Arts> ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:alternativeName "Government College of Fine Arts"@en ; 
+    org:alternativeName "Heywood Institute of Art"@en ; 
+    org:alternativeName "Institute of Aesthetic Studies of the University of Ceylon"@en ; 
+    org:abbreviation "UVPA"@None ; 
+    schema:url <http://vpa.ac.lk> ; 
+    schema:mainEntityOfPage <https://www.vpa.ac.lk/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/University_of_the_Visual_and_Performing_Arts> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.449756.d> ;
+    schema:sameAs <http://isni.org/isni/0000000404751506> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(79.84868 6.93548)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(79.84868 6.93548)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Colombo" ;
             schema:addressCountry "LK" ;
-            owl:sameAs <http://sws.geonames.org/1248991/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000404751506> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q7896783> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Sri Lanka" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1248991/> ;
+    ] ; 
     .

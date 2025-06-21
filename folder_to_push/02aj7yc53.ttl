@@ -4,23 +4,49 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02aj7yc53> a org:Organization ;
     rdfs:label "Princess Máxima Center" ;
     schema:name "Princess Máxima Center" ;
     org:status "active" ;
-    org:classification "Healthcare" ; 
-    schema:url <http://www.prinsesmaximacentrum.nl/> ; 
+    org:classification "funder" ; 
+    org:classification "healthcare" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    schema:url <http://prinsesmaximacentrum.nl> ; 
+    schema:mainEntityOfPage <https://www.prinsesmaximacentrum.nl> ;
+    schema:sameAs <https://api.crossref.org/funders/501100021801> ;
+    schema:sameAs <https://grid.ac/institutions/grid.487647.e> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/0575yy874> ;
+        rdfs:label "University Medical Center Utrecht" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05fqypv61> ;
+        rdfs:label "Wilhelmina Children's Hospital" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(5.12222 52.09083)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(5.12222 52.09083)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Utrecht" ;
             schema:addressCountry "NL" ;
-            owl:sameAs <http://sws.geonames.org/2745912/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://www.wikidata.org/entity/Q97496397> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "The Netherlands" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2745912/> ;
+    ] ; 
     .

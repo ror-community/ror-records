@@ -4,27 +4,89 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/050qj5m48> a org:Organization ;
     rdfs:label "University of Maine System" ;
     schema:name "University of Maine System" ;
     schema:foundingDate "1968"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "UMS" ;
-    schema:url <http://www.maine.edu/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/University_of_Maine_System> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "UMS"@None ; 
+    schema:url <http://maine.edu> ; 
+    schema:mainEntityOfPage <https://www.maine.edu> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/University_of_Maine_System> ; 
+    schema:sameAs <https://api.crossref.org/funders/100010066> ;
+    schema:sameAs <https://grid.ac/institutions/grid.411025.3> ;
+    schema:sameAs <http://isni.org/isni/0000000099054447> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01adr0w49> ;
+        rdfs:label "University of Maine" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04625j688> ;
+        rdfs:label "University of Maine School of Law" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/041gqhg24> ;
+        rdfs:label "University of Maine at Augusta" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00ydm0027> ;
+        rdfs:label "University of Maine at Farmington" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/038s91v75> ;
+        rdfs:label "University of Maine at Fort Kent" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00e9xa106> ;
+        rdfs:label "University of Maine at Machias" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00nk17n43> ;
+        rdfs:label "University of Maine at Presque Isle" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03ke6tv85> ;
+        rdfs:label "University of Southern Maine" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-68.77265 44.79884)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-68.77265 44.79884)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Bangor" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/4957280/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000099054447> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q2495861> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/4957280/> ;
+    ] ; 
     .

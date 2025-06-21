@@ -4,27 +4,39 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/00kgrkn83> a org:Organization ;
     rdfs:label "University of Lucerne" ;
     schema:name "University of Lucerne" ;
     schema:foundingDate "2000"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "UNILU" ;
-    schema:url <http://www.unilu.ch/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/University_of_Lucerne> ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "UNILU"@None ; 
+    schema:url <http://unilu.ch> ; 
+    schema:mainEntityOfPage <https://www.unilu.ch> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/University_of_Lucerne> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.449852.6> ;
+    schema:sameAs <http://isni.org/isni/0000000114567938> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(8.30635 47.05048)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(8.30635 47.05048)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Lucerne" ;
             schema:addressCountry "CH" ;
-            owl:sameAs <http://sws.geonames.org/2659811/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000114567938> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q673308> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Switzerland" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2659811/> ;
+    ] ; 
     .

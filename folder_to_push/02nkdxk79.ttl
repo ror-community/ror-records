@@ -4,27 +4,83 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02nkdxk79> a org:Organization ;
     rdfs:label "Virginia Commonwealth University" ;
     schema:name "Virginia Commonwealth University" ;
     schema:foundingDate "1838"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "VCU" ;
-    schema:url <http://www.vcu.edu/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Virginia_Commonwealth_University> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "VCU"@None ; 
+    schema:url <http://vcu.edu> ; 
+    schema:mainEntityOfPage <https://vcu.edu> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Virginia_Commonwealth_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/100009238> ;
+    schema:sameAs <https://grid.ac/institutions/grid.224260.0> ;
+    schema:sameAs <http://isni.org/isni/0000000404588737> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00k6x1e94> ;
+        rdfs:label "VCUQatar" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0173y3036> ;
+        rdfs:label "VCU Massey Comprehensive Cancer Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/04fp78s33> ;
+        rdfs:label "Hunter Holmes McGuire VA Medical Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/0212h5y77> ;
+        rdfs:label "Inova Fairfax Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/057xmsr27> ;
+        rdfs:label "Virginia Commonwealth University Medical Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/013zder45> ;
+        rdfs:label "Virginia Coast Reserve Long Term Ecological Research" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/04n07f274> ;
+        rdfs:label "Materials Science in Extreme Environments University Research Alliance" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-77.46026 37.55376)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-77.46026 37.55376)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Richmond" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/4781708/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000404588737> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q2303536> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/4781708/> ;
+    ] ; 
     .

@@ -15,10 +15,11 @@
     org:classification "education" ; 
     org:classification "funder" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-05-02"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
     org:abbreviation "UC"@None ; 
-    org:alternativeName "UChicago"@None ; 
-    schema:mainEntityOfPage <http://www.uchicago.edu/> ;
+    org:alternativeName "UChicago"@en ; 
+    schema:url <http://uchicago.edu> ; 
+    schema:mainEntityOfPage <https://www.uchicago.edu> ;
     owl:sameAs <http://en.wikipedia.org/wiki/University_of_Chicago> ; 
     schema:sameAs <https://api.crossref.org/funders/100007234> ;
     schema:sameAs <https://grid.ac/institutions/grid.170205.1> ;
@@ -34,6 +35,12 @@
         org:role "child" ;
         org:member <https://ror.org/02nh10f55> ;
         rdfs:label "Evanston Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/014nxkk19> ;
+        rdfs:label "Chan Zuckerberg Biohub Chicago" ;
     ] ; 
     org:hasLink [
         a org:Membership ;
@@ -88,12 +95,6 @@
         org:role "related" ;
         org:member <https://ror.org/052tfzs89> ;
         rdfs:label "Plum Island Ecosystems Long Term Ecological Research" ;
-    ] ; 
-    org:hasLink [
-        a org:Membership ;
-        org:role "child" ;
-        org:member <https://ror.org/014nxkk19> ;
-        rdfs:label "Chan Zuckerberg Biohub Chicago" ;
     ] ; 
     schema:location [
         a schema:Place ;

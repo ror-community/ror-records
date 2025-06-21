@@ -4,26 +4,42 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/0066qbn28> a org:Organization ;
     rdfs:label "Inter-University Accelerator Centre" ;
     schema:name "Inter-University Accelerator Centre" ;
     schema:foundingDate "1984"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "IUAC" ;
-    org:alternativeName "Nuclear Science Centre" ;
-    schema:url <http://www.iuac.res.in/> ; 
+    org:classification "facility" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "IUAC"@None ; 
+    org:alternativeName "Inter-University Centre"@en ; 
+    org:alternativeName "Nuclear Science Centre"@en ; 
+    schema:url <http://iuac.res.in> ; 
+    schema:mainEntityOfPage <https://iuac.res.in> ;
+    schema:sameAs <https://api.crossref.org/funders/501100013777> ;
+    schema:sameAs <https://grid.ac/institutions/grid.440694.b> ;
+    schema:sameAs <http://isni.org/isni/0000000417963049> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(77.22445 28.63576)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(77.2148 28.62137)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "New Delhi" ;
             schema:addressCountry "IN" ;
-            owl:sameAs <http://sws.geonames.org/1261481/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000417963049> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "India" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1261481/> ;
+    ] ; 
     .

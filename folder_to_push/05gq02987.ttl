@@ -1,0 +1,109 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/05gq02987> a org:Organization ;
+    rdfs:label "Brown University" ;
+    schema:name "Brown University" ;
+    schema:foundingDate "1764"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    schema:url <http://brown.edu> ; 
+    schema:mainEntityOfPage <https://www.brown.edu> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Brown_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/100006418> ;
+    schema:sameAs <https://grid.ac/institutions/grid.40263.33> ;
+    schema:sameAs <http://isni.org/isni/0000000419369094> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04jrbrj58> ;
+        rdfs:label "Rhode Island Space Grant Consortium" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02mx8nz45> ;
+        rdfs:label "Bradley Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00z9zsj19> ;
+        rdfs:label "Butler Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01xq02v66> ;
+        rdfs:label "Hasbro Children's Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/0274ane14> ;
+        rdfs:label "John Carter Brown Library" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/04c0a2j77> ;
+        rdfs:label "Memorial Hospital of Rhode Island" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/053exzj86> ;
+        rdfs:label "Miriam Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/0597nct77> ;
+        rdfs:label "Morton Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/041m0cc93> ;
+        rdfs:label "Providence VA Medical Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01aw9fv09> ;
+        rdfs:label "Rhode Island Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03z8sn326> ;
+        rdfs:label "Women & Infants Hospital of Rhode Island" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-71.41283 41.82399)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Providence" ;
+            schema:addressCountry "US" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/5224151/> ;
+    ] ; 
+    .

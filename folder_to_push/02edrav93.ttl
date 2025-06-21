@@ -1,0 +1,42 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/02edrav93> a org:Organization ;
+    rdfs:label "Vermont State Colleges" ;
+    schema:name "Vermont State Colleges" ;
+    schema:foundingDate "1961"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "VSC"@None ; 
+    schema:url <http://vsc.edu> ; 
+    schema:mainEntityOfPage <https://www.vsc.edu> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Vermont_State_Colleges> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.420563.6> ;
+    schema:sameAs <http://isni.org/isni/0000000405886197> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-72.57539 44.26006)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Montpelier" ;
+            schema:addressCountry "US" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/5238685/> ;
+    ] ; 
+    .

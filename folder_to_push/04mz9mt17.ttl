@@ -4,25 +4,45 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/04mz9mt17> a org:Organization ;
     rdfs:label "University of Nottingham Malaysia Campus" ;
     schema:name "University of Nottingham Malaysia Campus" ;
     schema:foundingDate "2000"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    schema:url <http://www.nottingham.edu.my/index.aspx> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/University_of_Nottingham_Malaysia_Campus> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    schema:url <http://nottingham.edu.my> ; 
+    schema:mainEntityOfPage <https://www.nottingham.edu.my> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/University_of_Nottingham_Malaysia_Campus> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100010702> ;
+    schema:sameAs <https://grid.ac/institutions/grid.440435.2> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/01ee9ar58> ;
+        rdfs:label "University of Nottingham" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(101.843 2.9516)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(101.843 2.9516)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Semenyih" ;
             schema:addressCountry "MY" ;
-            owl:sameAs <http://sws.geonames.org/1734798/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://www.wikidata.org/entity/Q4327703> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Malaysia" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1734798/> ;
+    ] ; 
     .

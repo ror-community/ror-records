@@ -4,27 +4,54 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/041m9xr71> a org:Organization ;
     rdfs:label "Ames National Laboratory" ;
     schema:name "Ames National Laboratory" ;
     schema:foundingDate "1947"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:alternativeName "Ames Laboratory" ;
-    schema:url <https://www.ameslab.gov/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Ames_Laboratory> ;
+    org:classification "facility" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:alternativeName "Ames Laboratory"@en ; 
+    org:alternativeName "United States Department of Energy Office of Science Ames National Laboratory"@en ; 
+    schema:url <http://ameslab.gov> ; 
+    schema:mainEntityOfPage <https://www.ameslab.gov/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Ames_Laboratory> ; 
+    schema:sameAs <https://api.crossref.org/funders/100011659> ;
+    schema:sameAs <https://grid.ac/institutions/grid.451319.b> ;
+    schema:sameAs <http://isni.org/isni/000000010690157X> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/04rswrd78> ;
+        rdfs:label "Iowa State University" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/00mmn6b08> ;
+        rdfs:label "Office of Science" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-93.61994 42.03471)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-93.61994 42.03471)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Ames" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/4846834/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/000000010690157X> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q4745875> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/4846834/> ;
+    ] ; 
     .

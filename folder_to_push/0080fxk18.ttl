@@ -1,0 +1,63 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/0080fxk18> a org:Organization ;
+    rdfs:label "California State University, Long Beach" ;
+    schema:name "California State University, Long Beach" ;
+    schema:foundingDate "1949"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "CSULB"@None ; 
+    org:alternativeName "Cal State Long Beach"@en ; 
+    schema:url <http://csulb.edu> ; 
+    schema:mainEntityOfPage <https://www.csulb.edu> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/California_State_University,_Long_Beach> ; 
+    schema:sameAs <https://api.crossref.org/funders/100008135> ;
+    schema:sameAs <https://grid.ac/institutions/grid.213902.b> ;
+    schema:sameAs <http://isni.org/isni/0000000090936830> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0230s3k26> ;
+        rdfs:label "METRANS Transportation Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/020qm1538> ;
+        rdfs:label "California State University System" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/058p1kn93> ;
+        rdfs:label "VA Long Beach Healthcare System" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-118.18923 33.76696)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Long Beach" ;
+            schema:addressCountry "US" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/5367929/> ;
+    ] ; 
+    .

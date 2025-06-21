@@ -1,0 +1,57 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/0145fw131> a org:Organization ;
+    rdfs:label "Hong Kong Baptist University" ;
+    schema:name "Hong Kong Baptist University" ;
+    schema:foundingDate "1956"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "HKBU"@None ; 
+    org:alternativeName "Hong Kong Baptist College"@en ; 
+    schema:url <http://hkbu.edu.hk> ; 
+    schema:mainEntityOfPage <https://www.hkbu.edu.hk> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Hong_Kong_Baptist_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100001747> ;
+    schema:sameAs <https://grid.ac/institutions/grid.221309.b> ;
+    schema:sameAs <http://isni.org/isni/0000000417645980> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00qfke340> ;
+        rdfs:label "Institute of Molecular Functional Materials" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/04snvc712> ;
+        rdfs:label "United International College" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(114.17469 22.27832)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Hong Kong" ;
+            schema:addressCountry "HK" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Hong Kong" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1819729/> ;
+    ] ; 
+    .

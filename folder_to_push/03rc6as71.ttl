@@ -4,27 +4,96 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/03rc6as71> a org:Organization ;
     rdfs:label "Tongji University" ;
     schema:name "Tongji University" ;
     schema:foundingDate "1907"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:alternativeName "Tóngjì Dàxué" ;
-    schema:url <http://www.tongji.edu.cn/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Tongji_University> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:alternativeName "Tóngjì Dàxué"@None ; 
+    org:alternativeName "同濟大學"@zh ; 
+    schema:url <http://tongji.edu.cn> ; 
+    schema:mainEntityOfPage <https://www.tongji.edu.cn> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Tongji_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100004204> ;
+    schema:sameAs <https://grid.ac/institutions/grid.24516.34> ;
+    schema:sameAs <http://isni.org/isni/0000000123704535> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05pzhab84> ;
+        rdfs:label "ENN-Tongji Advanced Institute of Clean Energy" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00073tb80> ;
+        rdfs:label "State Key Laboratory of Pollution Control and Resource Reuse" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03m2x2m55> ;
+        rdfs:label "State Key Laboratory of Concrete Materials Research" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02r92js74> ;
+        rdfs:label "State Key Laboratory of Civil Engineering Disaster Prevention" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02bxj9z30> ;
+        rdfs:label "State Key Laboratory of Marine Geology" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/038xmzj21> ;
+        rdfs:label "Shanghai East Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/033nbnf69> ;
+        rdfs:label "Shanghai Pulmonary Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03gqsr633> ;
+        rdfs:label "Shanghai Sunshine Rehabilitation Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03vjkf643> ;
+        rdfs:label "Shanghai Tenth People's Hospital" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(121.45806 31.22222)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(121.45806 31.22222)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Shanghai" ;
             schema:addressCountry "CN" ;
-            owl:sameAs <http://sws.geonames.org/1796236/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000123704535> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q16947> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "China" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1796236/> ;
+    ] ; 
     .

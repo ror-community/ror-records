@@ -4,28 +4,42 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/00ay9v204> a org:Organization ;
     rdfs:label "University of Shanghai for Science and Technology" ;
     schema:name "University of Shanghai for Science and Technology" ;
     schema:foundingDate "1906"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "USST" ;
-    org:alternativeName "上海理工大學" ;
-    schema:url <http://en.usst.edu.cn/index1.htm> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Shanghai_for_Science_and_Technology> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "USST"@None ; 
+    org:alternativeName "上海理工大學"@zh ; 
+    schema:url <http://usst.edu.cn> ; 
+    schema:mainEntityOfPage <https://www.usst.edu.cn> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Shanghai_for_Science_and_Technology> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100008050> ;
+    schema:sameAs <https://grid.ac/institutions/grid.267139.8> ;
+    schema:sameAs <http://isni.org/isni/000000009188055X> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(121.45806 31.22222)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(121.45806 31.22222)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Shanghai" ;
             schema:addressCountry "CN" ;
-            owl:sameAs <http://sws.geonames.org/1796236/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/000000009188055X> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q864879> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "China" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1796236/> ;
+    ] ; 
     .

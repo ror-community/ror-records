@@ -4,27 +4,45 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01apwkd48> a org:Organization ;
     rdfs:label "École Supérieure d'Ingénieurs en Génie Électrique" ;
     schema:name "École Supérieure d'Ingénieurs en Génie Électrique" ;
     schema:foundingDate "1901"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "ESIGELEC" ;
-    schema:url <http://www.esigelec.fr/en> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/ESIGELEC> ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "ESIGELEC"@None ; 
+    schema:url <http://esigelec.fr> ; 
+    schema:mainEntityOfPage <https://esigelec.fr> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/ESIGELEC> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.466386.9> ;
+    schema:sameAs <http://isni.org/isni/000000012177584X> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00y3jmn59> ;
+        rdfs:label "Institut de Recherche en Systèmes Electroniques Embarqués" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(1.10467 49.37794)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(1.10467 49.37794)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Saint-Étienne-du-Rouvray" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2980236/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/000000012177584X> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q17672767> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2980236/> ;
+    ] ; 
     .

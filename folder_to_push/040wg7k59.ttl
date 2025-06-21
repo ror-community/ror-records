@@ -4,28 +4,66 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/040wg7k59> a org:Organization ;
     rdfs:label "Chalmers University of Technology" ;
     schema:name "Chalmers University of Technology" ;
     schema:foundingDate "1829"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:alternativeName "Chalmers" ;
-    schema:url <https://www.chalmers.se> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Chalmers_University_of_Technology> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:alternativeName "Chalmers"@en ; 
+    org:alternativeName "Chalmers Tekniska Högskola"@sv ; 
+    schema:url <http://chalmers.se> ; 
+    schema:mainEntityOfPage <https://www.chalmers.se> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Chalmers_University_of_Technology> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100002835> ;
+    schema:sameAs <https://grid.ac/institutions/grid.5371.0> ;
+    schema:sameAs <http://isni.org/isni/0000000107756028> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/039qvmf95> ;
+        rdfs:label "Wallenberg Wood Science Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00enajs79> ;
+        rdfs:label "National Bioinformatics Infrastructure Sweden" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00acv8d41> ;
+        rdfs:label "Chalmers Industriteknik" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00ancw882> ;
+        rdfs:label "Swedish National Data Service" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(11.96679 57.70716)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(11.96679 57.70716)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Gothenburg" ;
             schema:addressCountry "SE" ;
-            owl:sameAs <http://sws.geonames.org/2711537/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000107756028> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q836805> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q929994> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Sweden" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2711537/> ;
+    ] ; 
     .

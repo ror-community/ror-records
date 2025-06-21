@@ -4,28 +4,42 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/05kf5z787> a org:Organization ;
     rdfs:label "Shanghai Business School" ;
     schema:name "Shanghai Business School" ;
     schema:foundingDate "1950"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "SBS" ;
-    org:alternativeName "East China Branch of the Tax Administration School of the Central Government" ;
-    schema:url <http://www.sbs.edu.cn/en_01/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Shanghai_Business_School> ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:alternativeName "East China Branch of the Tax Administration School of the Central Government"@en ; 
+    org:abbreviation "SBS"@None ; 
+    org:alternativeName "上海商學院"@zh ; 
+    org:alternativeName "中央税务学校华东分校"@zh ; 
+    schema:url <http://sbs.edu.cn> ; 
+    schema:mainEntityOfPage <https://www.sbs.edu.cn> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Shanghai_Business_School> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.469163.f> ;
+    schema:sameAs <http://isni.org/isni/0000000404316539> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(121.45806 31.22222)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(121.45806 31.22222)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Shanghai" ;
             schema:addressCountry "CN" ;
-            owl:sameAs <http://sws.geonames.org/1796236/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000404316539> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q7488406> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "China" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1796236/> ;
+    ] ; 
     .

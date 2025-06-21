@@ -4,28 +4,43 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/03zsxkw25> a org:Organization ;
     rdfs:label "Harbin University of Commerce" ;
     schema:name "Harbin University of Commerce" ;
     schema:foundingDate "1952"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "HUC" ;
-    org:alternativeName "Harbin Commercial University" ;
-    schema:url <http://en.hrbcu.edu.cn/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Harbin_University_of_Commerce> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "HUC"@None ; 
+    org:alternativeName "Harbin Commercial University"@en ; 
+    org:alternativeName "Hāěrbīn Shāngyè Dàxué"@None ; 
+    schema:url <http://hrbcu.edu.cn> ; 
+    schema:mainEntityOfPage <https://www.hrbcu.edu.cn> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Harbin_University_of_Commerce> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100014889> ;
+    schema:sameAs <https://grid.ac/institutions/grid.411992.6> ;
+    schema:sameAs <http://isni.org/isni/0000000091240480> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(126.65 45.75)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(126.65 45.75)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Harbin" ;
             schema:addressCountry "CN" ;
-            owl:sameAs <http://sws.geonames.org/2037013/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000091240480> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q5654449> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "China" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2037013/> ;
+    ] ; 
     .

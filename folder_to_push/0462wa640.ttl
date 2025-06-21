@@ -4,28 +4,42 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/0462wa640> a org:Organization ;
     rdfs:label "Guangdong Ocean University" ;
     schema:name "Guangdong Ocean University" ;
     schema:foundingDate "1997"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "GDOU" ;
-    org:alternativeName "Guǎngdōng hǎiyáng dàxué" ;
-    schema:url <http://www.gdou.edu.cn/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Guangdong_Ocean_University> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "GDOU"@None ; 
+    org:alternativeName "Guǎngdōng hǎiyáng dàxué"@None ; 
+    schema:url <http://gdou.edu.cn> ; 
+    schema:mainEntityOfPage <https://www.gdou.edu.cn> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Guangdong_Ocean_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100015600> ;
+    schema:sameAs <https://grid.ac/institutions/grid.411846.e> ;
+    schema:sameAs <http://isni.org/isni/000000010685868X> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(110.38749 21.23391)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(110.38749 21.23391)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Zhanjiang" ;
             schema:addressCountry "CN" ;
-            owl:sameAs <http://sws.geonames.org/1784990/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/000000010685868X> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q5613641> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "China" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1784990/> ;
+    ] ; 
     .

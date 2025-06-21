@@ -4,27 +4,39 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02v7trd43> a org:Organization ;
     rdfs:label "Indian Institute of Technology Goa" ;
     schema:name "Indian Institute of Technology Goa" ;
     schema:foundingDate "2016"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "IIT Goa" ;
-    schema:url <https://iitgoa.ac.in> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Indian_Institute_of_Technology_Goa> ;
+    org:classification "education" ; 
+    dct:created "2019-02-17"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "IIT Goa"@None ; 
+    schema:url <http://iitgoa.ac.in> ; 
+    schema:mainEntityOfPage <https://iitgoa.ac.in> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Indian_Institute_of_Technology_Goa> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.503024.0> ;
+    schema:sameAs <http://isni.org/isni/0000000468283019> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(74.01519 15.40341)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(74.01519 15.40341)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Ponda" ;
             schema:addressCountry "IN" ;
-            owl:sameAs <http://sws.geonames.org/1259429/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000468283019> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q24884248> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "India" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1259429/> ;
+    ] ; 
     .

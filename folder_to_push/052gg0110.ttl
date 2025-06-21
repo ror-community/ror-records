@@ -15,9 +15,10 @@
     org:classification "education" ; 
     org:classification "funder" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-06-20"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
     org:alternativeName "Oxford University"@en ; 
-    schema:mainEntityOfPage <http://www.ox.ac.uk/> ;
+    schema:url <http://ox.ac.uk> ; 
+    schema:mainEntityOfPage <https://www.ox.ac.uk> ;
     owl:sameAs <http://en.wikipedia.org/wiki/University_of_Oxford> ; 
     schema:sameAs <https://api.crossref.org/funders/501100000769> ;
     schema:sameAs <https://grid.ac/institutions/grid.4991.5> ;
@@ -120,6 +121,12 @@
     ] ; 
     org:hasLink [
         a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00wgpgb78> ;
+        rdfs:label "John Adams Institute for Accelerator Science" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
         org:role "related" ;
         org:member <https://ror.org/009vheq40> ;
         rdfs:label "Churchill Hospital" ;
@@ -159,12 +166,6 @@
         org:role "related" ;
         org:member <https://ror.org/00gnxy738> ;
         rdfs:label "UK Web Archive" ;
-    ] ; 
-    org:hasLink [
-        a org:Membership ;
-        org:role "child" ;
-        org:member <https://ror.org/00wgpgb78> ;
-        rdfs:label "John Adams Institute for Accelerator Science" ;
     ] ; 
     schema:location [
         a schema:Place ;

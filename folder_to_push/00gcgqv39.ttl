@@ -4,25 +4,39 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/00gcgqv39> a org:Organization ;
     rdfs:label "Eskisehir Technical University" ;
     schema:name "Eskisehir Technical University" ;
     schema:foundingDate "2018"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    schema:url <https://www.eskisehir.edu.tr/en> ; 
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2019-02-17"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    schema:url <http://eskisehir.edu.tr> ; 
+    schema:mainEntityOfPage <https://eskisehir.edu.tr> ;
+    schema:sameAs <https://api.crossref.org/funders/100018388> ;
+    schema:sameAs <https://grid.ac/institutions/grid.502985.3> ;
+    schema:sameAs <http://isni.org/isni/0000000468814051> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(30.52056 39.77667)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(30.52056 39.77667)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Eskişehir" ;
             schema:addressCountry "TR" ;
-            owl:sameAs <http://sws.geonames.org/315202/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000468814051> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q52162261> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Türkiye" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/315202/> ;
+    ] ; 
     .

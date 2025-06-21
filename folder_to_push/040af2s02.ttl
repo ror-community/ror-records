@@ -4,27 +4,107 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/040af2s02> a org:Organization ;
     rdfs:label "University of Helsinki" ;
     schema:name "University of Helsinki" ;
     schema:foundingDate "1640"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "UH" ;
-    schema:url <https://www.helsinki.fi/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Helsinki> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "UH"@None ; 
+    schema:url <http://helsinki.fi> ; 
+    schema:mainEntityOfPage <https://www.helsinki.fi/> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Helsinki> ; 
+    schema:sameAs <https://api.crossref.org/funders/100007797> ;
+    schema:sameAs <https://grid.ac/institutions/grid.7737.4> ;
+    schema:sameAs <http://isni.org/isni/0000000404102071> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03tcx6c30> ;
+        rdfs:label "Finnish Museum of Natural History" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05kph4940> ;
+        rdfs:label "Helsinki Institute for Information Technology" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01x2x1522> ;
+        rdfs:label "Helsinki Institute of Physics" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/030sbze61> ;
+        rdfs:label "Institute for Molecular Medicine Finland" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04xpj5302> ;
+        rdfs:label "National Consumer Research Centre" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/018bh0m68> ;
+        rdfs:label "HiLIFE – Elämäntieteiden Instituutti" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03qr6jw57> ;
+        rdfs:label "National Library of Finland" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00dqfzf20> ;
+        rdfs:label "Helsinki Children's Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02e8hzf44> ;
+        rdfs:label "Helsinki University Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/020cpqb94> ;
+        rdfs:label "Hospital District of Helsinki and Uusimaa" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01c0yey93> ;
+        rdfs:label "Finnish Biodiversity Information Facility" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(24.93545 60.16952)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(24.93545 60.16952)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Helsinki" ;
             schema:addressCountry "FI" ;
-            owl:sameAs <http://sws.geonames.org/658225/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000404102071> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q28695> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Finland" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/658225/> ;
+    ] ; 
     .

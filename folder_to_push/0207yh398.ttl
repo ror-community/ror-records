@@ -4,29 +4,84 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/0207yh398> a org:Organization ;
     rdfs:label "Shandong University" ;
     schema:name "Shandong University" ;
     schema:foundingDate "1901"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "SDU" ;
-    org:alternativeName "Shāndōng Dàxué," ;
-    schema:url <http://en.sdu.edu.cn/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Shandong_University> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "SDU"@None ; 
+    org:alternativeName "Shāndōng Dàxué,"@None ; 
+    schema:url <http://sdu.edu.cn> ; 
+    schema:mainEntityOfPage <https://www.sdu.edu.cn> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Shandong_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/100009108> ;
+    schema:sameAs <https://grid.ac/institutions/grid.27255.37> ;
+    schema:sameAs <http://isni.org/isni/0000000417611174> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01jjraa45> ;
+        rdfs:label "State Key Laboratory of Crystal Materials" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03x08qn04> ;
+        rdfs:label "State Key Laboratory of Microbial Technology" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01fr19c68> ;
+        rdfs:label "Jinan Central Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05mp6hg50> ;
+        rdfs:label "Jinan Infectious Disease Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01fd86n56> ;
+        rdfs:label "Second Hospital of Shandong University" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/024x8v141> ;
+        rdfs:label "Shandong Mental Health Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02ar2nf05> ;
+        rdfs:label "Shandong Provincial Hospital" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(116.99722 36.66833)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(116.99722 36.66833)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Jinan" ;
             schema:addressCountry "CN" ;
-            owl:sameAs <http://sws.geonames.org/1805753/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000417611174> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q604470> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q39654170> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "China" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1805753/> ;
+    ] ; 
     .

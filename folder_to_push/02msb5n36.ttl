@@ -4,27 +4,41 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02msb5n36> a org:Organization ;
     rdfs:label "National University of Distance Education" ;
     schema:name "National University of Distance Education" ;
     schema:foundingDate "1972"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "UNED" ;
-    schema:url <https://www.uned.es> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/National_University_of_Distance_Education> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "UNED"@None ; 
+    schema:url <http://uned.es> ; 
+    schema:mainEntityOfPage <https://www.uned.es> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/National_University_of_Distance_Education> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100005367> ;
+    schema:sameAs <https://grid.ac/institutions/grid.10702.34> ;
+    schema:sameAs <http://isni.org/isni/0000000123088920> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-3.70256 40.4165)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-3.70256 40.4165)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Madrid" ;
             schema:addressCountry "ES" ;
-            owl:sameAs <http://sws.geonames.org/3117735/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000123088920> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q421739> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Spain" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3117735/> ;
+    ] ; 
     .

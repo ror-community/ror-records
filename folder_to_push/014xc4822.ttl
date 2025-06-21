@@ -4,25 +4,38 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/014xc4822> a org:Organization ;
     rdfs:label "University of Teacher Education Styria" ;
     schema:name "University of Teacher Education Styria" ;
     schema:foundingDate "2007"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "PHSt" ;
-    schema:url <http://phst.at/internationales/international/?L=1> ; 
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "PHSt"@None ; 
+    schema:url <http://phst.at> ; 
+    schema:mainEntityOfPage <https://www.phst.at/home> ;
+    schema:sameAs <https://grid.ac/institutions/grid.466213.4> ;
+    schema:sameAs <http://isni.org/isni/000000045899735X> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(15.45 47.06667)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(15.45 47.06667)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Graz" ;
             schema:addressCountry "AT" ;
-            owl:sameAs <http://sws.geonames.org/2778067/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/000000045899735X> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Austria" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2778067/> ;
+    ] ; 
     .

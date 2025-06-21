@@ -4,27 +4,83 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/00ysfqy60> a org:Organization ;
     rdfs:label "Oregon State University" ;
     schema:name "Oregon State University" ;
     schema:foundingDate "1868"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "OSU" ;
-    schema:url <http://oregonstate.edu/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Oregon_State_University> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "OSU"@None ; 
+    schema:url <http://oregonstate.edu> ; 
+    schema:mainEntityOfPage <https://oregonstate.edu> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Oregon_State_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/100009612> ;
+    schema:sameAs <https://grid.ac/institutions/grid.4391.f> ;
+    schema:sameAs <http://isni.org/isni/0000000121121969> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/046107075> ;
+        rdfs:label "Oregon Sea Grant" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01w1q7x19> ;
+        rdfs:label "Oregon Space Grant Consortium" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/026jqvs13> ;
+        rdfs:label "Andrews Forest Long Term Ecological Research" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/055a54548> ;
+        rdfs:label "Beaufort Lagoon Ecosystems Long Term Ecological Research Network" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02wavzm11> ;
+        rdfs:label "Konza Prairie Long Term Ecological Research" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/017vyhs10> ;
+        rdfs:label "Moorea Coral Reef Long Term Ecological Research" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00vnfmn19> ;
+        rdfs:label "Ocean Observatories Initiative" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-123.26204 44.56457)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-123.26204 44.56457)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Corvallis" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/5720727/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000121121969> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q861888> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/5720727/> ;
+    ] ; 
     .

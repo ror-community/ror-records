@@ -4,26 +4,40 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/019bzvf55> a org:Organization ;
     rdfs:label "Kurukshetra University" ;
     schema:name "Kurukshetra University" ;
     schema:foundingDate "1957"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    schema:url <http://www.kuk.ac.in/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Kurukshetra_University,_Kurukshetra> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    schema:url <http://kuk.ac.in> ; 
+    schema:mainEntityOfPage <https://kuk.ac.in> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Kurukshetra_University,_Kurukshetra> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100009395> ;
+    schema:sameAs <https://grid.ac/institutions/grid.411194.8> ;
+    schema:sameAs <http://isni.org/isni/0000000107073796> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(76.75 30)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(76.75 30)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Kurukshetra" ;
             schema:addressCountry "IN" ;
-            owl:sameAs <http://sws.geonames.org/1265468/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000107073796> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q6447364> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "India" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1265468/> ;
+    ] ; 
     .

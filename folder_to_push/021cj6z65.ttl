@@ -4,27 +4,59 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/021cj6z65> a org:Organization ;
     rdfs:label "Qingdao University" ;
     schema:name "Qingdao University" ;
     schema:foundingDate "1909"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:alternativeName "Qīngdǎo Dàxué" ;
-    schema:url <http://english.qdu.edu.cn/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Qingdao_University> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:alternativeName "Qīngdǎo Dàxué"@None ; 
+    schema:url <http://qdu.edu.cn> ; 
+    schema:mainEntityOfPage <https://www.qdu.edu.cn> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Qingdao_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100011324> ;
+    schema:sameAs <https://grid.ac/institutions/grid.410645.2> ;
+    schema:sameAs <http://isni.org/isni/0000000104550905> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/026e9yy16> ;
+        rdfs:label "Affiliated Hospital of Qingdao University" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02jqapy19> ;
+        rdfs:label "Qingdao Municipal Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05pwzcb81> ;
+        rdfs:label "Qingdao Women and Children's Hospital" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(120.38042 36.06488)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(120.38042 36.06488)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Qingdao" ;
             schema:addressCountry "CN" ;
-            owl:sameAs <http://sws.geonames.org/1797929/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000104550905> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q82267> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "China" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1797929/> ;
+    ] ; 
     .

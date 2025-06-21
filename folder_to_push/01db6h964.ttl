@@ -4,26 +4,46 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01db6h964> a org:Organization ;
     rdfs:label "University of Iceland" ;
     schema:name "University of Iceland" ;
     schema:foundingDate "1911"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    schema:url <http://english.hi.is/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Iceland> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    schema:url <http://hi.is> ; 
+    schema:mainEntityOfPage <https://www.hi.is> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Iceland> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100005415> ;
+    schema:sameAs <https://grid.ac/institutions/grid.14013.37> ;
+    schema:sameAs <http://isni.org/isni/0000000406400021> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/011k7k191> ;
+        rdfs:label "National University Hospital of Iceland" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-21.89541 64.13548)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-21.89541 64.13548)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Reykjavik" ;
             schema:addressCountry "IS" ;
-            owl:sameAs <http://sws.geonames.org/3413829/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000406400021> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q196559> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Iceland" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3413829/> ;
+    ] ; 
     .

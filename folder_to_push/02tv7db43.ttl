@@ -1,0 +1,43 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/02tv7db43> a org:Organization ;
+    rdfs:label "Balıkesir University" ;
+    schema:name "Balıkesir University" ;
+    schema:foundingDate "1992"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    schema:url <http://balikesir.edu.tr> ; 
+    schema:mainEntityOfPage <https://balikesir.edu.tr> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Bal%C4%B1kesir_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100004491> ;
+    schema:sameAs <https://grid.ac/institutions/grid.411506.7> ;
+    schema:sameAs <http://isni.org/isni/0000000405962188> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(27.88611 39.64917)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Balıkesir" ;
+            schema:addressCountry "TR" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Türkiye" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/322165/> ;
+    ] ; 
+    .

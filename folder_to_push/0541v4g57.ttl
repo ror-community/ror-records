@@ -1,0 +1,44 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/0541v4g57> a org:Organization ;
+    rdfs:label "University of Music and Performing Arts Graz" ;
+    schema:name "University of Music and Performing Arts Graz" ;
+    schema:foundingDate "1815"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "KUG"@None ; 
+    org:alternativeName "Kunstuniversität"@de ; 
+    org:alternativeName "University of the Arts"@en ; 
+    schema:url <http://kug.ac.at> ; 
+    schema:mainEntityOfPage <https://www.kug.ac.at> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/University_of_Music_and_Performing_Arts,_Graz> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.440500.5> ;
+    schema:sameAs <http://isni.org/isni/000000008646069X> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(15.45 47.06667)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Graz" ;
+            schema:addressCountry "AT" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Austria" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2778067/> ;
+    ] ; 
+    .

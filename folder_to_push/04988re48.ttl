@@ -4,28 +4,47 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/04988re48> a org:Organization ;
     rdfs:label "Polytechnic Institute of Porto" ;
     schema:name "Polytechnic Institute of Porto" ;
     schema:foundingDate "1985"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:alternativeName "Porto Polytechnic" ;
-    schema:url <https://www.ipp.pt/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Polytechnic_Institute_of_Porto> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:alternativeName "Porto Polytechnic"@en ; 
+    schema:url <http://ipp.pt> ; 
+    schema:mainEntityOfPage <https://www.ipp.pt/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Polytechnic_Institute_of_Porto> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100007157> ;
+    schema:sameAs <https://grid.ac/institutions/grid.410926.8> ;
+    schema:sameAs <http://isni.org/isni/0000000121918636> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04h7zpy51> ;
+        rdfs:label "Instituto Superior de Engenharia do Porto" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-8.61099 41.14961)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-8.61099 41.14961)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Porto" ;
             schema:addressCountry "PT" ;
-            owl:sameAs <http://sws.geonames.org/2735943/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000121918636> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q4348556> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q3152860> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Portugal" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2735943/> ;
+    ] ; 
     .

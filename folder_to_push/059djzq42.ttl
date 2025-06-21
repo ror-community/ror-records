@@ -1,0 +1,44 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/059djzq42> a org:Organization ;
+    rdfs:label "Wuyi University" ;
+    schema:name "Wuyi University" ;
+    schema:foundingDate "1958"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "WYU"@None ; 
+    schema:url <http://wuyiu.edu.cn> ; 
+    schema:mainEntityOfPage <https://www.wuyiu.edu.cn> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Wuyi_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100007310> ;
+    schema:sameAs <https://grid.ac/institutions/grid.443414.2> ;
+    schema:sameAs <http://isni.org/isni/0000000123775798> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(117.81138 28.00473)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Wuyishan" ;
+            schema:addressCountry "CN" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "China" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/7066209/> ;
+    ] ; 
+    .

@@ -4,27 +4,39 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/00jrpyg10> a org:Organization ;
     rdfs:label "Atlântica Instituto Universitário" ;
     schema:name "Atlântica Instituto Universitário" ;
     schema:foundingDate "1996"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:alternativeName "Universidade Atlântica" ;
-    schema:url <https://www.uatlantica.pt> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Universidade_Atl%C3%A2ntica> ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:alternativeName "Universidade Atlântica"@pt ; 
+    schema:url <http://uatlantica.pt> ; 
+    schema:mainEntityOfPage <https://www.uatlantica.pt> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Universidade_Atl%C3%A2ntica> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.410920.e> ;
+    schema:sameAs <http://isni.org/isni/0000000093764587> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-9.28 38.73245)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-9.28 38.73245)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Barcarena" ;
             schema:addressCountry "PT" ;
-            owl:sameAs <http://sws.geonames.org/2271140/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000093764587> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q10387774> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Portugal" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2271140/> ;
+    ] ; 
     .

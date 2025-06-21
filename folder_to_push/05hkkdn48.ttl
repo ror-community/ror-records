@@ -4,27 +4,569 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/05hkkdn48> a org:Organization ;
     rdfs:label "Fraunhofer Society" ;
     schema:name "Fraunhofer Society" ;
     schema:foundingDate "1949"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Government" ; 
-    org:abbreviation "FHG" ;
-    schema:url <http://www.fraunhofer.de/en.html> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Fraunhofer_Society> ;
+    org:classification "funder" ; 
+    org:classification "government" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "FHG"@None ; 
+    schema:url <http://fraunhofer.de> ; 
+    schema:mainEntityOfPage <https://www.fraunhofer.de> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Fraunhofer_Society> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100003185> ;
+    schema:sameAs <https://grid.ac/institutions/grid.4561.6> ;
+    schema:sameAs <http://isni.org/isni/0000000092613939> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/054zhq066> ;
+        rdfs:label "Bonn Aachen International Center for Information Technology" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/038bzrc91> ;
+        rdfs:label "Fraunhofer Austria" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03h61ra63> ;
+        rdfs:label "Fraunhofer Center for International Management and Knowledge Economy" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0525gz420> ;
+        rdfs:label "Fraunhofer Center for Maritime Logistics and Services" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03tqh5n18> ;
+        rdfs:label "Fraunhofer Chalmers Research Centre for Industrial Mathematics" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00h0my365> ;
+        rdfs:label "Fraunhofer Chile Research Foundation" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0128qg670> ;
+        rdfs:label "Fraunhofer Group for Microelectronics" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01kjych06> ;
+        rdfs:label "Fraunhofer ICT Group" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01yrp7892> ;
+        rdfs:label "Fraunhofer Information Center for Planning and Building" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00trw9c49> ;
+        rdfs:label "Fraunhofer Institute for Algorithms and Scientific Computing" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01ak24c12> ;
+        rdfs:label "Fraunhofer Institute for Applied Information Technology" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02afjh072> ;
+        rdfs:label "Fraunhofer Institute for Applied Optics and Precision Engineering" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02yhs7m71> ;
+        rdfs:label "Fraunhofer Institute for Applied Polymer Research" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0083ncs46> ;
+        rdfs:label "Fraunhofer Institute for Applied Solid State Physics" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03w0bbr97> ;
+        rdfs:label "Fraunhofer Institute for Applied and Integrated Security" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05tpsgh61> ;
+        rdfs:label "Fraunhofer Institute for Biomedical Engineering" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04y8p0f91> ;
+        rdfs:label "Fraunhofer Institute for Building Physics" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04x45f476> ;
+        rdfs:label "Fraunhofer Institute for Cell Therapy and Immunology" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0448sak71> ;
+        rdfs:label "Fraunhofer Institute for Ceramic Technologies and Systems" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03nb1x490> ;
+        rdfs:label "Fraunhofer Institute for Chemical Technology" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02fez3815> ;
+        rdfs:label "Fraunhofer Institute for Cognitive Systems" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05nn0gw40> ;
+        rdfs:label "Fraunhofer Institute for Communication, Information Processing and Ergonomics" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04gmsar03> ;
+        rdfs:label "Fraunhofer Institute for Computer Graphics Research" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04gp0yb49> ;
+        rdfs:label "Fraunhofer Institute for Digital Media Technology" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04farme71> ;
+        rdfs:label "Fraunhofer Institute for Digital Medicine" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02h12bg79> ;
+        rdfs:label "Fraunhofer Institute for Electronic Nano Systems" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05ptp9d64> ;
+        rdfs:label "Fraunhofer Institute for Energy Economics and Energy System Technology" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00nj8ry09> ;
+        rdfs:label "Fraunhofer Institute for Environmental, Safety and Energy Technology UMSICHT" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00r1wdc11> ;
+        rdfs:label "Fraunhofer Institute for Experimental Software Engineering" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04qfaak15> ;
+        rdfs:label "Fraunhofer Institute for Factory Operation and Automation" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00a6rw165> ;
+        rdfs:label "Fraunhofer Institute for High Frequency Physics and Radar Techniques" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00csq2k70> ;
+        rdfs:label "Fraunhofer Institute for High-Speed Dynamics, Ernst-Mach-Institut" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01nh64743> ;
+        rdfs:label "Fraunhofer Institute for Industrial Engineering" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/019hjw009> ;
+        rdfs:label "Fraunhofer Institute for Industrial Mathematics" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/024ape423> ;
+        rdfs:label "Fraunhofer Institute for Integrated Circuits" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04q5rka56> ;
+        rdfs:label "Fraunhofer Institute for Integrated Systems and Device Technology" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04nc32781> ;
+        rdfs:label "Fraunhofer Institute for Intelligent Analysis and Information Systems" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0131dra29> ;
+        rdfs:label "Fraunhofer Institute for Interfacial Engineering and Biotechnology" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03ebbfh95> ;
+        rdfs:label "Fraunhofer Institute for Laser Technology" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/026taa863> ;
+        rdfs:label "Fraunhofer Institute for Machine Tools and Forming Technology" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01rvqha10> ;
+        rdfs:label "Fraunhofer Institute for Manufacturing Engineering and Automation" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03pwyy961> ;
+        rdfs:label "Fraunhofer Institute for Manufacturing Technology and Advanced Materials" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00z7dje19> ;
+        rdfs:label "Fraunhofer Institute for Material Flow and Logistics" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05h8wjh50> ;
+        rdfs:label "Fraunhofer Institute for Material and Beam Technology" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04hm8eb66> ;
+        rdfs:label "Fraunhofer Institute for Mechanics of Materials" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/004nttc42> ;
+        rdfs:label "Fraunhofer Institute for Mechatronic Systems Design" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01243c877> ;
+        rdfs:label "Fraunhofer Institute for Microelectronic Circuits and Systems" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00bkxry42> ;
+        rdfs:label "Fraunhofer Institute for Microengineering and Microsystems" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/050mbz718> ;
+        rdfs:label "Fraunhofer Institute for Microstructure of Materials and Systems" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03j85fc72> ;
+        rdfs:label "Fraunhofer Institute for Molecular Biology and Applied Ecology" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03wq67h32> ;
+        rdfs:label "Fraunhofer Institute for Nondestructive Testing" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00px80p03> ;
+        rdfs:label "Fraunhofer Institute for Open Communication Systems" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03vvewn46> ;
+        rdfs:label "Fraunhofer Institute for Organic Electronics, Electron Beam and Plasma Technology" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/020n3fw10> ;
+        rdfs:label "Fraunhofer Institute for Photonic Microsystems" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/004n2nr09> ;
+        rdfs:label "Fraunhofer Institute for Physical Measurement Techniques" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02at7zv53> ;
+        rdfs:label "Fraunhofer Institute for Process Engineering and Packaging" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/045eg9c12> ;
+        rdfs:label "Fraunhofer Institute for Production Systems and Design Technology" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00t0rcy29> ;
+        rdfs:label "Fraunhofer Institute for Production Technology IPT" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/031aqk326> ;
+        rdfs:label "Fraunhofer Institute for Reliability and Microintegration" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03qt2gs44> ;
+        rdfs:label "Fraunhofer Institute for Secure Information Technology" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05gnv4a66> ;
+        rdfs:label "Fraunhofer Institute for Silicate Research" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/024p6aq98> ;
+        rdfs:label "Fraunhofer Institute for Silicon Technology" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/058kjq542> ;
+        rdfs:label "Fraunhofer Institute for Software and Systems Engineering" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02kfzvh91> ;
+        rdfs:label "Fraunhofer Institute for Solar Energy Systems" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00gt16g40> ;
+        rdfs:label "Fraunhofer Institute for Structural Durability and System Reliability" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/048vzmn57> ;
+        rdfs:label "Fraunhofer Institute for Surface Engineering and Thin Films" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03vyq6t71> ;
+        rdfs:label "Fraunhofer Institute for Systems and Innovation Research" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02sm4kj57> ;
+        rdfs:label "Fraunhofer Institute for Technological Trend Analysis" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02tbr6331> ;
+        rdfs:label "Fraunhofer Institute for Telecommunications, Heinrich Hertz Institute" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02byjcr11> ;
+        rdfs:label "Fraunhofer Institute for Toxicology and Experimental Medicine" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01s1h3j07> ;
+        rdfs:label "Fraunhofer Institute for Translational Medicine and Pharmacology" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01nqmht92> ;
+        rdfs:label "Fraunhofer Institute for Transportation and Infrastructure Systems" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02phevt59> ;
+        rdfs:label "Fraunhofer Institute for Wind Energy Systems" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/015cbgt79> ;
+        rdfs:label "Fraunhofer Institute for Wood Research Wilhelm-Klauditz-Institut" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01zx97922> ;
+        rdfs:label "Fraunhofer Institute of Optronics, System Technologies and Image Exploitation" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/015hz7767> ;
+        rdfs:label "Fraunhofer Italia Research" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05eqk2j25> ;
+        rdfs:label "Fraunhofer Portugal Research" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03jgt3n70> ;
+        rdfs:label "Fraunhofer Project Centre Wolfsburg" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/059ne2r23> ;
+        rdfs:label "Fraunhofer Research Institution for Additive Manufacturing Technologies IAPT" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05xp9bk66> ;
+        rdfs:label "Fraunhofer Institute for Casting, Composite and Processing Technology IGCV" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00y718461> ;
+        rdfs:label "Fraunhofer Research Institution for Energy Infrastructures and Geothermal Systems" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03tevfg71> ;
+        rdfs:label "Fraunhofer Institute for Large Structures in Production Engineering IGP" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/039c0bt50> ;
+        rdfs:label "Fraunhofer Research Institution for Individualized and Cell-Based Medical Engineering" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02hm5m482> ;
+        rdfs:label "Fraunhofer Research Institution for Microsystems and Solid State Technologies" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00yqed873> ;
+        rdfs:label "Fraunhofer Singapore" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02dfg5n73> ;
+        rdfs:label "Fraunhofer UK Research" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05aah2q92> ;
+        rdfs:label "Fraunhofer USA" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0118xsm53> ;
+        rdfs:label "Fraunhofer Research Institution for Battery Cell Production" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(11.57549 48.13743)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(11.57549 48.13743)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Munich" ;
             schema:addressCountry "DE" ;
-            owl:sameAs <http://sws.geonames.org/2867714/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000092613939> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q161057> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Germany" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2867714/> ;
+    ] ; 
     .

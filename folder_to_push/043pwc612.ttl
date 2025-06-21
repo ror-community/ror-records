@@ -15,8 +15,9 @@
     org:classification "education" ; 
     org:classification "funder" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-10-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
     org:alternativeName "U.Porto"@pt ; 
+    schema:url <http://up.pt> ; 
     schema:mainEntityOfPage <https://www.up.pt> ;
     owl:sameAs <http://en.wikipedia.org/wiki/University_of_Porto> ; 
     schema:sameAs <https://api.crossref.org/funders/501100006752> ;
@@ -60,6 +61,18 @@
     ] ; 
     org:hasLink [
         a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03emnsk32> ;
+        rdfs:label "Instituto de Ciências da Terra" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04kc6j250> ;
+        rdfs:label "Instituto da Construção" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
         org:role "related" ;
         org:member <https://ror.org/04qsnc772> ;
         rdfs:label "Hospital de São João" ;
@@ -81,18 +94,6 @@
         org:role "related" ;
         org:member <https://ror.org/0476hs695> ;
         rdfs:label "Centro de Investigação em Biodiversidade e Recursos Genéticos" ;
-    ] ; 
-    org:hasLink [
-        a org:Membership ;
-        org:role "child" ;
-        org:member <https://ror.org/03emnsk32> ;
-        rdfs:label "Instituto de Ciências da Terra" ;
-    ] ; 
-    org:hasLink [
-        a org:Membership ;
-        org:role "child" ;
-        org:member <https://ror.org/04kc6j250> ;
-        rdfs:label "Instituto da Construção" ;
     ] ; 
     schema:location [
         a schema:Place ;

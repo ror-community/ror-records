@@ -4,27 +4,53 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02m44ak47> a org:Organization ;
     rdfs:label "Instituto Nacional de Técnica Aeroespacial" ;
     schema:name "Instituto Nacional de Técnica Aeroespacial" ;
     schema:foundingDate "1942"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Government" ; 
-    org:abbreviation "INTA" ;
-    schema:url <https://www.inta.es> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Instituto_Nacional_de_T%C3%A9cnica_Aeroespacial> ;
+    org:classification "funder" ; 
+    org:classification "government" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "INTA"@None ; 
+    schema:url <http://inta.es> ; 
+    schema:mainEntityOfPage <https://www.inta.es> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Instituto_Nacional_de_T%C3%A9cnica_Aeroespacial> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100010687> ;
+    schema:sameAs <https://grid.ac/institutions/grid.15312.34> ;
+    schema:sameAs <http://isni.org/isni/0000000417941528> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04j5n8f24> ;
+        rdfs:label "Canal de Experiencias Hidrodinámicas de El Pardo (Spain)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/038szmr31> ;
+        rdfs:label "Centro de Astrobiología" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-3.70256 40.4165)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-3.70256 40.4165)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Madrid" ;
             schema:addressCountry "ES" ;
-            owl:sameAs <http://sws.geonames.org/3117735/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000417941528> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1421312> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Spain" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3117735/> ;
+    ] ; 
     .

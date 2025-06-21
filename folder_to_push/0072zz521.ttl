@@ -4,27 +4,71 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/0072zz521> a org:Organization ;
     rdfs:label "University of Massachusetts Amherst" ;
     schema:name "University of Massachusetts Amherst" ;
     schema:foundingDate "1863"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:alternativeName "UMass Amherst" ;
-    schema:url <http://www.umass.edu/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Massachusetts_Amherst> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:alternativeName "UMass Amherst"@en ; 
+    schema:url <http://umass.edu> ; 
+    schema:mainEntityOfPage <https://www.umass.edu> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Massachusetts_Amherst> ; 
+    schema:sameAs <https://api.crossref.org/funders/100008975> ;
+    schema:sameAs <https://grid.ac/institutions/grid.266683.f> ;
+    schema:sameAs <http://isni.org/isni/0000000121665835> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/0260j1g46> ;
+        rdfs:label "University of Massachusetts System" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/043trmd87> ;
+        rdfs:label "Center for Hierarchical Manufacturing" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/055a54548> ;
+        rdfs:label "Beaufort Lagoon Ecosystems Long Term Ecological Research Network" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/020zjmd13> ;
+        rdfs:label "Central Arizona–Phoenix Long Term Ecological Research" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/006e48x19> ;
+        rdfs:label "Five Colleges" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-72.51925 42.37537)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-72.51925 42.37537)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Amherst Center" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/4929023/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000121665835> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q15142> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/4929023/> ;
+    ] ; 
     .

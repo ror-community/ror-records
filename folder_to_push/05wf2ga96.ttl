@@ -4,27 +4,41 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/05wf2ga96> a org:Organization ;
     rdfs:label "New York Genome Center" ;
     schema:name "New York Genome Center" ;
     schema:foundingDate "2011"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "NYGC" ;
-    schema:url <https://www.nygenome.org/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/New_York_Genome_Center> ;
+    org:classification "facility" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "NYGC"@None ; 
+    schema:url <http://nygenome.org> ; 
+    schema:mainEntityOfPage <https://www.nygenome.org/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/New_York_Genome_Center> ; 
+    schema:sameAs <https://api.crossref.org/funders/100016149> ;
+    schema:sameAs <https://grid.ac/institutions/grid.429884.b> ;
+    schema:sameAs <http://isni.org/isni/0000000417910895> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-74.00597 40.71427)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-74.00597 40.71427)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "New York" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/5128581/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000417910895> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q28136204> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/5128581/> ;
+    ] ; 
     .

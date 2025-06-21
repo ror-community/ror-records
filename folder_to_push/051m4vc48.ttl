@@ -4,28 +4,47 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/051m4vc48> a org:Organization ;
     rdfs:label "Appalachian State University" ;
     schema:name "Appalachian State University" ;
     schema:foundingDate "1899"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "ASU" ;
-    schema:url <http://www.appstate.edu/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Appalachian_State_University> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "ASU"@None ; 
+    schema:url <http://appstate.edu> ; 
+    schema:mainEntityOfPage <https://www.appstate.edu> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Appalachian_State_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/100009708> ;
+    schema:sameAs <https://grid.ac/institutions/grid.252323.7> ;
+    schema:sameAs <http://isni.org/isni/0000000121793802> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/0566a8c54> ;
+        rdfs:label "University of North Carolina System" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-81.67455 36.21679)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-81.67455 36.21679)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Boone" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/4456703/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000121793802> ;
-    schema:sameAs <http://isni.org/isni/0000000419367523> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q620640> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/4456703/> ;
+    ] ; 
     .

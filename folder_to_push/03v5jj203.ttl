@@ -4,27 +4,47 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/03v5jj203> a org:Organization ;
     rdfs:label "Stazione Zoologica Anton Dohrn" ;
     schema:name "Stazione Zoologica Anton Dohrn" ;
     schema:foundingDate "1872"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:alternativeName "Stazione Zoologica" ;
-    schema:url <http://www.szn.it/index.php/it/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Stazione_Zoologica> ;
+    org:classification "facility" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:alternativeName "Stazione Zoologica"@it ; 
+    schema:url <http://szn.it> ; 
+    schema:mainEntityOfPage <https://www.szn.it> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Stazione_Zoologica> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100010685> ;
+    schema:sameAs <https://grid.ac/institutions/grid.6401.3> ;
+    schema:sameAs <http://isni.org/isni/0000000417580806> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/0038zss60> ;
+        rdfs:label "European Marine Biological Resource Centre" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(14.26811 40.85216)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(14.26811 40.85216)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Naples" ;
             schema:addressCountry "IT" ;
-            owl:sameAs <http://sws.geonames.org/3172394/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000417580806> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q220221> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Italy" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3172394/> ;
+    ] ; 
     .

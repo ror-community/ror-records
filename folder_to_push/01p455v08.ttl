@@ -1,0 +1,70 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/01p455v08> a org:Organization ;
+    rdfs:label "Xinjiang Medical University" ;
+    schema:name "Xinjiang Medical University" ;
+    schema:foundingDate "1956"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:alternativeName "Shinjang Tibbiy Universitet"@None ; 
+    org:abbreviation "XMU"@None ; 
+    org:alternativeName "Xinjiang Medical College"@en ; 
+    schema:url <http://xjmu.edu.cn> ; 
+    schema:mainEntityOfPage <https://xjmu.edu.cn> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Xinjiang_Medical_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100004880> ;
+    schema:sameAs <https://grid.ac/institutions/grid.13394.3c> ;
+    schema:sameAs <http://isni.org/isni/0000000417993993> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/04f970v93> ;
+        rdfs:label "Fifth Affiliated Hospital of Xinjiang Medical University" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02qx1ae98> ;
+        rdfs:label "First Affiliated Hospital of Xinjiang Medical University" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01w3v1s67> ;
+        rdfs:label "Second Affiliated Hospital of Xinjiang Medical University" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03r4az639> ;
+        rdfs:label "Sixth Affiliated Hospital of Xinjiang Medical University" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(87.60046 43.80096)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Ürümqi" ;
+            schema:addressCountry "CN" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "China" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1529102/> ;
+    ] ; 
+    .

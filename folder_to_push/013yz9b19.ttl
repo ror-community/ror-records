@@ -1,0 +1,42 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/013yz9b19> a org:Organization ;
+    rdfs:label "Korea Institute of Fusion Energy" ;
+    schema:name "Korea Institute of Fusion Energy" ;
+    schema:foundingDate "1995"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "facility" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "KFE"@None ; 
+    schema:url <http://kfe.re.kr> ; 
+    schema:mainEntityOfPage <https://www.kfe.re.kr/> ;
+    schema:sameAs <https://api.crossref.org/funders/501100003721> ;
+    schema:sameAs <https://grid.ac/institutions/grid.419380.7> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(127.38493 36.34913)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Daejeon" ;
+            schema:addressCountry "KR" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "South Korea" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1835235/> ;
+    ] ; 
+    .

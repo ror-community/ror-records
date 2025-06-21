@@ -4,29 +4,84 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02t274463> a org:Organization ;
     rdfs:label "University of California, Santa Barbara" ;
     schema:name "University of California, Santa Barbara" ;
     schema:foundingDate "1891"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "UCSB" ;
-    org:alternativeName "UC Santa Barbara" ;
-    schema:url <http://www.ucsb.edu/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/University_of_California,_Santa_Barbara> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:alternativeName "UC Santa Barbara"@en ; 
+    org:abbreviation "UCSB"@None ; 
+    schema:url <http://ucsb.edu> ; 
+    schema:mainEntityOfPage <https://www.ucsb.edu> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_California,_Santa_Barbara> ; 
+    schema:sameAs <https://api.crossref.org/funders/100007183> ;
+    schema:sameAs <https://grid.ac/institutions/grid.133342.4> ;
+    schema:sameAs <http://isni.org/isni/0000000419369676> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00q7fqf35> ;
+        rdfs:label "California NanoSystems Institute" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0146z4r19> ;
+        rdfs:label "National Center for Ecological Analysis and Synthesis" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/017vyhs10> ;
+        rdfs:label "Moorea Coral Reef Long Term Ecological Research" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05hnkta08> ;
+        rdfs:label "Santa Barbara Coastal Long Term Ecological Research" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04kz4p343> ;
+        rdfs:label "Institute for Collaborative Biotechnologies" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/00pjdza24> ;
+        rdfs:label "University of California System" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/039kwqk96> ;
+        rdfs:label "Long Term Ecological Research Network" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-119.69819 34.42083)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-119.69819 34.42083)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Santa Barbara" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/5392952/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000419369676> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q263064> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1295525> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/5392952/> ;
+    ] ; 
     .

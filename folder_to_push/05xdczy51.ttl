@@ -1,0 +1,47 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/05xdczy51> a org:Organization ;
+    rdfs:label "German Institute of Human Nutrition" ;
+    schema:name "German Institute of Human Nutrition" ;
+    schema:foundingDate "1946"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "facility" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "DIfE"@None ; 
+    schema:url <http://dife.de> ; 
+    schema:mainEntityOfPage <https://www.dife.de> ;
+    schema:sameAs <https://grid.ac/institutions/grid.418213.d> ;
+    schema:sameAs <http://isni.org/isni/0000000403900098> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/01n6r0e97> ;
+        rdfs:label "Leibniz Association" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(13.06566 52.39886)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Potsdam" ;
+            schema:addressCountry "DE" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Germany" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2852458/> ;
+    ] ; 
+    .

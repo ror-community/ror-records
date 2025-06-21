@@ -4,27 +4,47 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02yhrrk59> a org:Organization ;
     rdfs:label "University of Derby" ;
     schema:name "University of Derby" ;
     schema:foundingDate "1851"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:alternativeName "Derby College of Art and Technology" ;
-    schema:url <http://www.derby.ac.uk/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Derby> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:alternativeName "Derby College of Art and Technology"@en ; 
+    schema:url <http://derby.ac.uk> ; 
+    schema:mainEntityOfPage <https://www.derby.ac.uk> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Derby> ; 
+    schema:sameAs <https://api.crossref.org/funders/100010025> ;
+    schema:sameAs <https://grid.ac/institutions/grid.57686.3a> ;
+    schema:sameAs <http://isni.org/isni/0000000122324004> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/000t8h611> ;
+        rdfs:label "Al Rayyan International University College" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-1.47663 52.92277)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-1.47663 52.92277)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Derby" ;
             schema:addressCountry "GB" ;
-            owl:sameAs <http://sws.geonames.org/2651347/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000122324004> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q3183295> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United Kingdom" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2651347/> ;
+    ] ; 
     .

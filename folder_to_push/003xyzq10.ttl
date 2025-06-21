@@ -4,27 +4,47 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/003xyzq10> a org:Organization ;
     rdfs:label "Henan University" ;
     schema:name "Henan University" ;
     schema:foundingDate "1912"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:alternativeName "Hénán Dàxué" ;
-    schema:url <http://www.henu.edu.cn/en/front/index.php> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Henan_University> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:alternativeName "Hénán Dàxué"@None ; 
+    schema:url <http://henu.edu.cn> ; 
+    schema:mainEntityOfPage <https://www.henu.edu.cn> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Henan_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100004773> ;
+    schema:sameAs <https://grid.ac/institutions/grid.256922.8> ;
+    schema:sameAs <http://isni.org/isni/000000009139560X> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/055akgr63> ;
+        rdfs:label "State Key Laboratory of Cotton Biology" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(114.30742 34.7986)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(114.30742 34.7986)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Kaifeng" ;
             schema:addressCountry "CN" ;
-            owl:sameAs <http://sws.geonames.org/1804879/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/000000009139560X> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q391150> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "China" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1804879/> ;
+    ] ; 
     .

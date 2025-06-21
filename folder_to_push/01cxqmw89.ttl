@@ -4,28 +4,42 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01cxqmw89> a org:Organization ;
     rdfs:label "Shanghai Normal University" ;
     schema:name "Shanghai Normal University" ;
     schema:foundingDate "1954"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "SHNU" ;
-    org:alternativeName "上海師範大學" ;
-    schema:url <http://www.shnu.edu.cn/Default.aspx?alias=www.shnu.edu.cn/shnuen> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Shanghai_Normal_University> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "SHNU"@None ; 
+    org:alternativeName "上海師範大學"@zh ; 
+    schema:url <http://shnu.edu.cn> ; 
+    schema:mainEntityOfPage <https://www.shnu.edu.cn> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Shanghai_Normal_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100004110> ;
+    schema:sameAs <https://grid.ac/institutions/grid.412531.0> ;
+    schema:sameAs <http://isni.org/isni/0000000107011077> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(121.45806 31.22222)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(121.45806 31.22222)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Shanghai" ;
             schema:addressCountry "CN" ;
-            owl:sameAs <http://sws.geonames.org/1796236/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000107011077> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q839020> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "China" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1796236/> ;
+    ] ; 
     .

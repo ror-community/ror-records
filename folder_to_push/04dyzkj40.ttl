@@ -4,28 +4,48 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/04dyzkj40> a org:Organization ;
     rdfs:label "Texas Woman's University" ;
     schema:name "Texas Woman's University" ;
     schema:foundingDate "1901"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "TWU" ;
-    org:alternativeName "Texas State College for Women" ;
-    schema:url <http://www.twu.edu/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Texas_Woman's_University> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "TWU"@None ; 
+    org:alternativeName "Texas State College for Women"@en ; 
+    schema:url <http://twu.edu> ; 
+    schema:mainEntityOfPage <https://twu.edu> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Texas_Woman's_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/100009177> ;
+    schema:sameAs <https://grid.ac/institutions/grid.264797.9> ;
+    schema:sameAs <http://isni.org/isni/0000000100168186> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01nzxq896> ;
+        rdfs:label "VA North Texas Health Care System" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-97.13307 33.21484)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-97.13307 33.21484)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Denton" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/4685907/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000100168186> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q3468361> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/4685907/> ;
+    ] ; 
     .

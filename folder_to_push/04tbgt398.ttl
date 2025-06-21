@@ -4,27 +4,41 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/04tbgt398> a org:Organization ;
     rdfs:label "Jandarma ve Sahil Güvenlik Akademisi" ;
     schema:name "Jandarma ve Sahil Güvenlik Akademisi" ;
     schema:foundingDate "1937"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "JSGA" ;
-    org:alternativeName "Jandarma ve Sahil Guvenlik Akademisi" ;
-    schema:url <http://www.jsga.edu.tr> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Gendarmerie_and_Coast_Guard_Academy> ;
+    org:classification "education" ; 
+    dct:created "2023-05-11"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "JSGA"@None ; 
+    org:alternativeName "Jandarma ve Sahil Guvenlik Akademisi"@tr ; 
+    org:alternativeName "T.C. İçişleri Bakanlığı Jandarma ve Sahil Güvenlik Akademisi"@tr ; 
+    org:alternativeName "Türkiye Cumhuriyeti İçişleri Bakanlığı Jandarma ve Sahil Güvenlik Akademisi"@tr ; 
+    schema:url <http://jsga.edu.tr> ; 
+    schema:mainEntityOfPage <https://jsga.edu.tr> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Gendarmerie_and_Coast_Guard_Academy> ; 
+    schema:sameAs <http://isni.org/isni/0000000463626094> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(32.85427 39.91987)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(32.85427 39.91987)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Ankara" ;
             schema:addressCountry "TR" ;
-            owl:sameAs <http://sws.geonames.org/323786/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000463626094> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q31190877> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Türkiye" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/323786/> ;
+    ] ; 
     .

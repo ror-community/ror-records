@@ -4,27 +4,41 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01nztpc84> a org:Organization ;
     rdfs:label "Canarie" ;
     schema:name "Canarie" ;
     schema:foundingDate "1993"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Nonprofit" ; 
-    org:alternativeName "Canadian Network for the Advancement of Research, Industry and Education" ;
-    schema:url <http://www.canarie.ca/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/CANARIE> ;
+    org:classification "funder" ; 
+    org:classification "nonprofit" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:alternativeName "Canadian Network for the Advancement of Research, Industry and Education"@en ; 
+    schema:url <http://canarie.ca> ; 
+    schema:mainEntityOfPage <https://www.canarie.ca> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/CANARIE> ; 
+    schema:sameAs <https://api.crossref.org/funders/100008313> ;
+    schema:sameAs <https://grid.ac/institutions/grid.468488.e> ;
+    schema:sameAs <http://isni.org/isni/0000000459058805> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-75.69812 45.41117)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-75.69812 45.41117)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Ottawa" ;
             schema:addressCountry "CA" ;
-            owl:sameAs <http://sws.geonames.org/6094817/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000459058805> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q178959> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Canada" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/6094817/> ;
+    ] ; 
     .

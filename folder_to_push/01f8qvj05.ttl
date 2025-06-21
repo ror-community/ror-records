@@ -1,0 +1,49 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/01f8qvj05> a org:Organization ;
+    rdfs:label "Bengbu Medical College" ;
+    schema:name "Bengbu Medical College" ;
+    schema:foundingDate "1958"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    schema:url <http://bbmc.edu.cn> ; 
+    schema:mainEntityOfPage <https://www.bbmc.edu.cn> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Bengbu_Medical_College> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100007924> ;
+    schema:sameAs <https://grid.ac/institutions/grid.252957.e> ;
+    schema:sameAs <http://isni.org/isni/0000000114845512> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/04v043n92> ;
+        rdfs:label "First Affiliated Hospital of Bengbu Medical College" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(117.36083 32.94083)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Bengbu" ;
+            schema:addressCountry "CN" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "China" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1816440/> ;
+    ] ; 
+    .

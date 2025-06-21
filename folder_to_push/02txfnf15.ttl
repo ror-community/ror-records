@@ -4,28 +4,48 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02txfnf15> a org:Organization ;
     rdfs:label "Yanshan University" ;
     schema:name "Yanshan University" ;
     schema:foundingDate "1920"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "YSU" ;
-    org:alternativeName "Yānshān dàxué" ;
-    schema:url <http://english.ysu.edu.cn/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Yanshan_University> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "YSU"@None ; 
+    org:alternativeName "Yānshān dàxué"@None ; 
+    schema:url <http://ysu.edu.cn> ; 
+    schema:mainEntityOfPage <http://english.ysu.edu.cn/> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Yanshan_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100008095> ;
+    schema:sameAs <https://grid.ac/institutions/grid.413012.5> ;
+    schema:sameAs <http://isni.org/isni/0000000089540417> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00g51hv48> ;
+        rdfs:label "State Key Laboratory of Metastable Materials Science and Technology" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(119.58833 39.93167)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(119.58936 39.94104)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Qinhuangdao" ;
             schema:addressCountry "CN" ;
-            owl:sameAs <http://sws.geonames.org/1797595/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000089540417> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q832792> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "China" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1797595/> ;
+    ] ; 
     .

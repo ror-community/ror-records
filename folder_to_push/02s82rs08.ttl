@@ -4,24 +4,38 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02s82rs08> a org:Organization ;
     rdfs:label "Konya Technical University" ;
     schema:name "Konya Technical University" ;
     schema:foundingDate "2018"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    schema:url <http://ktun.edu.tr/> ; 
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2019-05-06"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    schema:url <http://ktun.edu.tr> ; 
+    schema:mainEntityOfPage <https://ktun.edu.tr> ;
+    schema:sameAs <https://api.crossref.org/funders/100019308> ;
+    schema:sameAs <https://grid.ac/institutions/grid.505922.9> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(32.52863 37.86726)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(32.52863 37.86726)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Karatay" ;
             schema:addressCountry "TR" ;
-            owl:sameAs <http://sws.geonames.org/6692058/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://www.wikidata.org/entity/Q52236385> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Türkiye" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/6692058/> ;
+    ] ; 
     .

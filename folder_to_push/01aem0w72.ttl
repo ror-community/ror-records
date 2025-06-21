@@ -4,26 +4,46 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01aem0w72> a org:Organization ;
     rdfs:label "Sophiahemmet University College" ;
     schema:name "Sophiahemmet University College" ;
     schema:foundingDate "1884"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    schema:url <https://www.shh.se/sv/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Sophiahemmet_University_College> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    schema:url <http://shh.se> ; 
+    schema:mainEntityOfPage <https://www.shh.se> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Sophiahemmet_University_College> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100009785> ;
+    schema:sameAs <https://grid.ac/institutions/grid.445308.e> ;
+    schema:sameAs <http://isni.org/isni/0000000404603941> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05t65ke24> ;
+        rdfs:label "Sophiahemmet Hospital" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(18.06871 59.32938)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(18.06871 59.32938)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Stockholm" ;
             schema:addressCountry "SE" ;
-            owl:sameAs <http://sws.geonames.org/2673730/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000404603941> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q7562940> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Sweden" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2673730/> ;
+    ] ; 
     .

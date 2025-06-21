@@ -4,28 +4,47 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02wc0kq10> a org:Organization ;
     rdfs:label "SRON Netherlands Institute for Space Research" ;
     schema:name "SRON Netherlands Institute for Space Research" ;
     schema:foundingDate "1983"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "SRON" ;
-    org:alternativeName "Space Research Organisation Netherlands" ;
-    schema:url <https://www.sron.nl> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Netherlands_Institute_for_Space_Research> ;
+    org:classification "facility" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:alternativeName "Netherlands Institute for Space Research"@en ; 
+    org:abbreviation "SRON"@None ; 
+    org:alternativeName "Space Research Organisation Netherlands"@en ; 
+    schema:url <http://sron.nl> ; 
+    schema:mainEntityOfPage <https://www.sron.nl> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Netherlands_Institute_for_Space_Research> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.451248.e> ;
+    schema:sameAs <http://isni.org/isni/0000000406462222> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/04jsz6e67> ;
+        rdfs:label "Dutch Research Council" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(5.12222 52.09083)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(5.12222 52.09083)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Utrecht" ;
             schema:addressCountry "NL" ;
-            owl:sameAs <http://sws.geonames.org/2745912/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000406462222> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1840606> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "The Netherlands" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2745912/> ;
+    ] ; 
     .

@@ -15,8 +15,9 @@
     org:classification "education" ; 
     org:classification "funder" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-10-14"^^xsd:date ;
-    schema:mainEntityOfPage <http://www.ulisboa.pt/> ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    schema:url <http://ulisboa.pt> ; 
+    schema:mainEntityOfPage <https://www.ulisboa.pt> ;
     owl:sameAs <http://en.wikipedia.org/wiki/University_of_Lisbon> ; 
     schema:sameAs <https://api.crossref.org/funders/501100005765> ;
     schema:sameAs <https://grid.ac/institutions/grid.9983.b> ;
@@ -65,6 +66,18 @@
     ] ; 
     org:hasLink [
         a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03k2k6011> ;
+        rdfs:label "ISEG - Instituto Superior de Economia e Gestão" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/030qxym25> ;
+        rdfs:label "Museu Nacional de História Natural e da Ciência" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
         org:role "related" ;
         org:member <https://ror.org/04jq4p608> ;
         rdfs:label "Hospital Garcia de Orta" ;
@@ -86,18 +99,6 @@
         org:role "related" ;
         org:member <https://ror.org/05bz1tw26> ;
         rdfs:label "Hospital de Santa Maria" ;
-    ] ; 
-    org:hasLink [
-        a org:Membership ;
-        org:role "child" ;
-        org:member <https://ror.org/03k2k6011> ;
-        rdfs:label "ISEG - Instituto Superior de Economia e Gestão" ;
-    ] ; 
-    org:hasLink [
-        a org:Membership ;
-        org:role "child" ;
-        org:member <https://ror.org/030qxym25> ;
-        rdfs:label "Museu Nacional de História Natural e da Ciência" ;
     ] ; 
     schema:location [
         a schema:Place ;

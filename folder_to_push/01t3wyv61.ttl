@@ -4,27 +4,53 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01t3wyv61> a org:Organization ;
     rdfs:label "National Institute for Fusion Science" ;
     schema:name "National Institute for Fusion Science" ;
     schema:foundingDate "1989"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "NIFS" ;
-    org:alternativeName "NINS National Institute for Fusion Science" ;
-    schema:url <https://www.nifs.ac.jp> ; 
+    org:classification "facility" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:alternativeName "Kakuyugo Kagaku Kenkyujo"@None ; 
+    org:alternativeName "Kakuyugou Kagaku Kenkyuujo"@None ; 
+    org:alternativeName "Kakuyūgō Kagaku Kenkyūjo"@None ; 
+    org:abbreviation "NIFS"@None ; 
+    org:alternativeName "NINS National Institute for Fusion Science"@en ; 
+    org:alternativeName "National Institutes of Natural Sciences National Institute for Fusion Science"@en ; 
+    org:alternativeName "かくゆうごうかがくけんきゅうじょ"@ja ; 
+    org:alternativeName "カクユウゴウカガクケンキュウジョ"@ja ; 
+    schema:url <http://nifs.ac.jp> ; 
+    schema:mainEntityOfPage <https://www.nifs.ac.jp> ;
+    schema:sameAs <https://api.crossref.org/funders/501100006325> ;
+    schema:sameAs <https://grid.ac/institutions/grid.419418.1> ;
+    schema:sameAs <http://isni.org/isni/0000000406323468> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/055n47h92> ;
+        rdfs:label "National Institutes of Natural Sciences" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(137.18333 35.35)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(137.18333 35.35)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Toki" ;
             schema:addressCountry "JP" ;
-            owl:sameAs <http://sws.geonames.org/1850207/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000406323468> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q11536220> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Japan" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1850207/> ;
+    ] ; 
     .

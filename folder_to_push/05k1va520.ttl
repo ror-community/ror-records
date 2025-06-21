@@ -4,25 +4,47 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/05k1va520> a org:Organization ;
     rdfs:label "National NanoFab Center" ;
     schema:name "National NanoFab Center" ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "NNFC" ;
-    org:alternativeName "NanoFab Center" ;
-    schema:url <https://www.nnfc.re.kr/> ; 
+    org:classification "facility" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "NNFC"@None ; 
+    org:alternativeName "Nano Synthesis Institute"@en ; 
+    org:alternativeName "NanoFab Center"@None ; 
+    schema:url <http://nnfc.re.kr> ; 
+    schema:mainEntityOfPage <https://www.nnfc.re.kr/> ;
+    schema:sameAs <https://api.crossref.org/funders/501100019956> ;
+    schema:sameAs <https://grid.ac/institutions/grid.496766.c> ;
+    schema:sameAs <http://isni.org/isni/0000000405460225> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/05apxxy63> ;
+        rdfs:label "Korea Advanced Institute of Science and Technology" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(127.38493 36.34913)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(127.38493 36.34913)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Daejeon" ;
             schema:addressCountry "KR" ;
-            owl:sameAs <http://sws.geonames.org/1835235/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000405460225> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "South Korea" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1835235/> ;
+    ] ; 
     .

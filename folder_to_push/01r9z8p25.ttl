@@ -4,28 +4,60 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01r9z8p25> a org:Organization ;
     rdfs:label "Universidad de La Laguna" ;
     schema:name "Universidad de La Laguna" ;
     schema:foundingDate "1927"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "ULL" ;
-    org:alternativeName "University of San Fernando de La Laguna" ;
-    schema:url <https://www.ull.es> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/University_of_La_Laguna> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "ULL"@None ; 
+    org:alternativeName "University of San Fernando de La Laguna"@en ; 
+    schema:url <http://ull.es> ; 
+    schema:mainEntityOfPage <https://www.ull.es> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/University_of_La_Laguna> ; 
+    schema:sameAs <https://api.crossref.org/funders/100015528> ;
+    schema:sameAs <https://grid.ac/institutions/grid.10041.34> ;
+    schema:sameAs <http://isni.org/isni/0000000121060879> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03cmntr54> ;
+        rdfs:label "Instituto de Astrofísica de Canarias" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05qndj312> ;
+        rdfs:label "Hospital Universitario de Canarias" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/005a3p084> ;
+        rdfs:label "Hospital Universitario Nuestra Señora de Candelaria" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-16.32014 28.4853)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-16.32014 28.4853)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "San Cristóbal de La Laguna" ;
             schema:addressCountry "ES" ;
-            owl:sameAs <http://sws.geonames.org/2511401/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000121060879> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q539881> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Spain" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2511401/> ;
+    ] ; 
     .

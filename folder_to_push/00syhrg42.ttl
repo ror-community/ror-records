@@ -4,25 +4,38 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/00syhrg42> a org:Organization ;
     rdfs:label "Zentral und Hochschulbibliothek Luzern" ;
     schema:name "Zentral und Hochschulbibliothek Luzern" ;
     schema:foundingDate "1973"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Archive" ; 
-    schema:url <http://www.zhbluzern.ch/home/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Zentral-_und_Hochschulbibliothek_Luzern> ;
+    org:classification "archive" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    schema:url <http://zhbluzern.ch> ; 
+    schema:mainEntityOfPage <https://www.zhbluzern.ch> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Zentral-_und_Hochschulbibliothek_Luzern> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.483326.8> ;
+    schema:sameAs <http://isni.org/isni/0000000107081438> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(8.30635 47.05048)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(8.30635 47.05048)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Lucerne" ;
             schema:addressCountry "CH" ;
-            owl:sameAs <http://sws.geonames.org/2659811/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000107081438> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Switzerland" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2659811/> ;
+    ] ; 
     .

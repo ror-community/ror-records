@@ -4,27 +4,41 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/04cyy9943> a org:Organization ;
     rdfs:label "Northwest Minzu University" ;
     schema:name "Northwest Minzu University" ;
     schema:foundingDate "1950"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:alternativeName "Northwest University for Nationalities" ;
-    schema:url <https://www.xbmu.edu.cn> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Northwest_University_for_Nationalities> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:alternativeName "Northwest University for Nationalities"@en ; 
+    schema:url <http://xbmu.edu.cn> ; 
+    schema:mainEntityOfPage <https://www.xbmu.edu.cn> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Northwest_University_for_Nationalities> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100009060> ;
+    schema:sameAs <https://grid.ac/institutions/grid.412264.7> ;
+    schema:sameAs <http://isni.org/isni/0000000101083408> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(103.83987 36.05701)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(103.83987 36.05701)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Lanzhou" ;
             schema:addressCountry "CN" ;
-            owl:sameAs <http://sws.geonames.org/1804430/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000101083408> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q7060264> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "China" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1804430/> ;
+    ] ; 
     .

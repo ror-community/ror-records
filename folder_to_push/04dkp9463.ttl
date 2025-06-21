@@ -4,29 +4,83 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/04dkp9463> a org:Organization ;
     rdfs:label "University of Amsterdam" ;
     schema:name "University of Amsterdam" ;
     schema:foundingDate "1632"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "UvA" ;
-    schema:url <http://www.uva.nl/en/home> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Amsterdam> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "UvA"@None ; 
+    schema:url <http://uva.nl> ; 
+    schema:mainEntityOfPage <https://www.uva.nl> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Amsterdam> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100001827> ;
+    schema:sameAs <https://grid.ac/institutions/grid.7177.6> ;
+    schema:sameAs <http://isni.org/isni/0000000084992262> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04xe7ws48> ;
+        rdfs:label "Advanced Research Center for Nanolithography (Netherlands)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/022gvqh28> ;
+        rdfs:label "Amsterdam Institute for Addiction Research" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01x2d9f70> ;
+        rdfs:label "Amsterdam Neuroscience" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01yx4wq53> ;
+        rdfs:label "Delta Institute for Theoretical Physics" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/013rctf62> ;
+        rdfs:label "Van Leeuwenhoek Centre for Advanced Microscopy" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03t4gr691> ;
+        rdfs:label "Academic Medical Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05kgbsy64> ;
+        rdfs:label "Spinoza Centre for Neuroimaging" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(4.88969 52.37403)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(4.88969 52.37403)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Amsterdam" ;
             schema:addressCountry "NL" ;
-            owl:sameAs <http://sws.geonames.org/2759794/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000084992262> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q214341> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q56648966> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q2017571> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "The Netherlands" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2759794/> ;
+    ] ; 
     .

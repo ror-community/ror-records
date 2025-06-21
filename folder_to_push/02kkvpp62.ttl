@@ -15,9 +15,10 @@
     org:classification "education" ; 
     org:classification "funder" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-10-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
     org:abbreviation "TUM"@None ; 
-    schema:mainEntityOfPage <https://www.tum.de/en/> ;
+    schema:url <http://tum.de> ; 
+    schema:mainEntityOfPage <https://www.tum.de> ;
     owl:sameAs <http://en.wikipedia.org/wiki/Technische_Universit%C3%A4t_M%C3%BCnchen> ; 
     schema:sameAs <https://api.crossref.org/funders/501100005713> ;
     schema:sameAs <https://grid.ac/institutions/grid.6936.a> ;
@@ -60,6 +61,12 @@
     ] ; 
     org:hasLink [
         a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02nfy3535> ;
+        rdfs:label "Munich Center for Machine Learning" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
         org:role "related" ;
         org:member <https://ror.org/01fgmnw14> ;
         rdfs:label "Berufsgenossenschaftliche Unfallklinik Murnau" ;
@@ -69,12 +76,6 @@
         org:role "related" ;
         org:member <https://ror.org/02nx8n605> ;
         rdfs:label "TU9" ;
-    ] ; 
-    org:hasLink [
-        a org:Membership ;
-        org:role "child" ;
-        org:member <https://ror.org/02nfy3535> ;
-        rdfs:label "Munich Center for Machine Learning" ;
     ] ; 
     schema:location [
         a schema:Place ;

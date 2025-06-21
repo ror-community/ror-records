@@ -1,0 +1,42 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/05ndh7v49> a org:Organization ;
+    rdfs:label "Saudi Electronic University" ;
+    schema:name "Saudi Electronic University" ;
+    schema:foundingDate "2011"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "SEU"@None ; 
+    schema:url <http://seu.edu.sa> ; 
+    schema:mainEntityOfPage <https://seu.edu.sa> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Saudi_Electronic_University> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.449598.d> ;
+    schema:sameAs <http://isni.org/isni/0000000446599645> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(46.72185 24.68773)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Riyadh" ;
+            schema:addressCountry "SA" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Saudi Arabia" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/108410/> ;
+    ] ; 
+    .

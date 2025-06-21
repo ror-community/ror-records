@@ -1,0 +1,48 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/04rjxzd30> a org:Organization ;
+    rdfs:label "CPB Netherlands Bureau for Economic Policy Analysis" ;
+    schema:name "CPB Netherlands Bureau for Economic Policy Analysis" ;
+    schema:foundingDate "1945"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "government" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "CPB"@None ; 
+    schema:url <http://cpb.nl> ; 
+    schema:mainEntityOfPage <https://www.cpb.nl> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Bureau_for_Economic_Policy_Analysis> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.423770.5> ;
+    schema:sameAs <http://isni.org/isni/0000000110923202> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/00bc6bw85> ;
+        rdfs:label "Ministry of Economic Affairs and Climate Policy" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(4.29861 52.07667)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "The Hague" ;
+            schema:addressCountry "NL" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "The Netherlands" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2747373/> ;
+    ] ; 
+    .

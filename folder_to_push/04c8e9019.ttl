@@ -1,0 +1,45 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/04c8e9019> a org:Organization ;
+    rdfs:label "Madurai Kamaraj University" ;
+    schema:name "Madurai Kamaraj University" ;
+    schema:foundingDate "1966"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "MKU"@None ; 
+    schema:url <http://mkuniversity.ac.in> ; 
+    schema:url <http://mkuniversity.org> ; 
+    schema:mainEntityOfPage <https://mkuniversity.ac.in> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Madurai_Kamaraj_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100008228> ;
+    schema:sameAs <https://grid.ac/institutions/grid.10214.36> ;
+    schema:sameAs <http://isni.org/isni/0000000121867912> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(78.11953 9.919)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Madurai" ;
+            schema:addressCountry "IN" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "India" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1264521/> ;
+    ] ; 
+    .

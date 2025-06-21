@@ -4,27 +4,45 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02z749649> a org:Organization ;
     rdfs:label "Universidad Pablo de Olavide" ;
     schema:name "Universidad Pablo de Olavide" ;
     schema:foundingDate "1997"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "UPO" ;
-    schema:url <https://www.upo.es> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Pablo_de_Olavide_University> ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "UPO"@None ; 
+    schema:url <http://upo.es> ; 
+    schema:mainEntityOfPage <https://www.upo.es> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Pablo_de_Olavide_University> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.15449.3d> ;
+    schema:sameAs <http://isni.org/isni/0000000122002355> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01v5e3436> ;
+        rdfs:label "Centro Andaluz de Biología del Desarrollo" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-5.97317 37.38283)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-5.97317 37.38283)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Seville" ;
             schema:addressCountry "ES" ;
-            owl:sameAs <http://sws.geonames.org/2510911/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000122002355> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q477988> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Spain" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2510911/> ;
+    ] ; 
     .

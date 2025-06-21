@@ -1,0 +1,42 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/0047q0d34> a org:Organization ;
+    rdfs:label "South African Theological Seminary" ;
+    schema:name "South African Theological Seminary" ;
+    schema:foundingDate "1996"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "SATS"@None ; 
+    schema:url <http://sats.edu.za> ; 
+    schema:mainEntityOfPage <https://sats.ac.za> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/South_African_Theological_Seminary> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.487036.e> ;
+    schema:sameAs <http://isni.org/isni/0000000403714076> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(28.04363 -26.20227)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Johannesburg" ;
+            schema:addressCountry "ZA" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "South Africa" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/993800/> ;
+    ] ; 
+    .

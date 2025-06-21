@@ -4,27 +4,47 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/03zn9gq54> a org:Organization ;
     rdfs:label "Jining Medical University" ;
     schema:name "Jining Medical University" ;
     schema:foundingDate "1952"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:alternativeName "Jining Medical College" ;
-    schema:url <http://www.jnmc.edu.cn/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Jining_Medical_University> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:alternativeName "Jining Medical College"@en ; 
+    schema:url <http://jnmc.edu.cn> ; 
+    schema:mainEntityOfPage <https://www.jnmc.edu.cn> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Jining_Medical_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100008853> ;
+    schema:sameAs <https://grid.ac/institutions/grid.449428.7> ;
+    schema:sameAs <http://isni.org/isni/0000000417977280> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05e8kbn88> ;
+        rdfs:label "Affiliated Hospital of Jining Medical University" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(116.58139 35.405)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(116.58139 35.405)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Jining" ;
             schema:addressCountry "CN" ;
-            owl:sameAs <http://sws.geonames.org/1805518/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000417977280> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q11148222> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "China" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1805518/> ;
+    ] ; 
     .

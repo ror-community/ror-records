@@ -4,28 +4,66 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/0530pts50> a org:Organization ;
     rdfs:label "South China University of Technology" ;
     schema:name "South China University of Technology" ;
     schema:foundingDate "1952"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "SCUT" ;
-    org:alternativeName "Huánán Lǐgōng Dàxué" ;
-    schema:url <http://en.scut.edu.cn/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/South_China_University_of_Technology> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:alternativeName "Huánán Lǐgōng Dàxué"@None ; 
+    org:abbreviation "SCUT"@None ; 
+    schema:url <http://scut.edu.cn> ; 
+    schema:mainEntityOfPage <http://www.scut.edu.cn> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/South_China_University_of_Technology> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100005015> ;
+    schema:sameAs <https://grid.ac/institutions/grid.79703.3a> ;
+    schema:sameAs <http://isni.org/isni/0000000417643838> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04jnpk588> ;
+        rdfs:label "South China Institute of Collaborative Innovation" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/020bzb737> ;
+        rdfs:label "State Key Laboratory of Subtropical Building Science" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02gxm3r19> ;
+        rdfs:label "State Key Laboratory of Pulp and Paper Engineering" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03d61dw70> ;
+        rdfs:label "State Key Laboratory of Luminescent Materials and Devices" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(113.25 23.11667)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(113.25 23.11667)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Guangzhou" ;
             schema:addressCountry "CN" ;
-            owl:sameAs <http://sws.geonames.org/1809858/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000417643838> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q835366> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "China" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1809858/> ;
+    ] ; 
     .

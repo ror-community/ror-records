@@ -1,0 +1,48 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/03e21z229> a org:Organization ;
+    rdfs:label "Max Planck Computing and Data Facility" ;
+    schema:name "Max Planck Computing and Data Facility" ;
+    schema:foundingDate "1960"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "facility" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "MPCDF"@None ; 
+    org:abbreviation "RZG"@None ; 
+    schema:url <http://mpcdf.mpg.de> ; 
+    schema:mainEntityOfPage <https://www.mpcdf.mpg.de> ;
+    schema:sameAs <https://grid.ac/institutions/grid.470196.d> ;
+    schema:sameAs <http://isni.org/isni/0000000474748855> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/03taest98> ;
+        rdfs:label "Max Planck Institute for Plasma Physics" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(11.65101 48.24896)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Garching" ;
+            schema:addressCountry "DE" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Germany" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2922582/> ;
+    ] ; 
+    .

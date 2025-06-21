@@ -1,0 +1,39 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/01a5ke137> a org:Organization ;
+    rdfs:label "Nemocnice Pardubického Kraje" ;
+    schema:name "Nemocnice Pardubického Kraje" ;
+    schema:foundingDate "2014"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "healthcare" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    schema:url <http://nempk.cz> ; 
+    schema:mainEntityOfPage <https://www.nempk.cz> ;
+    schema:sameAs <https://grid.ac/institutions/grid.447963.b> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(15.77659 50.04075)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Pardubice" ;
+            schema:addressCountry "CZ" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Czechia" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3068582/> ;
+    ] ; 
+    .

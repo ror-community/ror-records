@@ -4,25 +4,38 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/0075rz071> a org:Organization ;
     rdfs:label "Arthur C. Clarke Centre for Modern Technologies" ;
     schema:name "Arthur C. Clarke Centre for Modern Technologies" ;
     schema:foundingDate "1984"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "ACCIMT" ;
+    org:classification "facility" ; 
+    dct:created "2023-10-12"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "ACCIMT"@None ; 
     schema:url <http://accmt.ac.lk> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Arthur_C._Clarke_Institute_for_Modern_Technologies> ;
+    schema:mainEntityOfPage <http://accmt.ac.lk> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Arthur_C._Clarke_Institute_for_Modern_Technologies> ; 
+    schema:sameAs <http://isni.org/isni/0000000105723417> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(79.8816 6.773)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(79.8816 6.773)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Moratuwa" ;
             schema:addressCountry "LK" ;
-            owl:sameAs <http://sws.geonames.org/1234633/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000105723417> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Sri Lanka" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1234633/> ;
+    ] ; 
     .

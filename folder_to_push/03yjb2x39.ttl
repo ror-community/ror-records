@@ -4,28 +4,89 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/03yjb2x39> a org:Organization ;
     rdfs:label "University of Calgary" ;
     schema:name "University of Calgary" ;
     schema:foundingDate "1966"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "UoC" ;
-    schema:url <https://www.ucalgary.ca> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Calgary> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "UoC"@None ; 
+    schema:url <http://ucalgary.ca> ; 
+    schema:mainEntityOfPage <https://www.ucalgary.ca> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Calgary> ; 
+    schema:sameAs <https://api.crossref.org/funders/100008459> ;
+    schema:sameAs <https://grid.ac/institutions/grid.22072.35> ;
+    schema:sameAs <http://isni.org/isni/0000000419367697> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/030ykd126> ;
+        rdfs:label "Alberta Gambling Research Institute" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/039cthy03> ;
+        rdfs:label "Bamfield Marine Sciences Centre" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00gmyvv50> ;
+        rdfs:label "Alberta Children's Hospital Research Institute" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00sx29x36> ;
+        rdfs:label "Alberta Children's Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/04me72w78> ;
+        rdfs:label "Chinook Regional Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/020wfrz93> ;
+        rdfs:label "Foothills Medical Centre" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01z6vsq11> ;
+        rdfs:label "Heritage Medical Research Clinic" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/040pmw620> ;
+        rdfs:label "Medicine Hat Regional Hospital" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-114.08529 51.05011)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-114.08529 51.05011)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Calgary" ;
             schema:addressCountry "CA" ;
-            owl:sameAs <http://sws.geonames.org/5913490/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000419367697> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1067471> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q59635553> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Canada" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/5913490/> ;
+    ] ; 
     .

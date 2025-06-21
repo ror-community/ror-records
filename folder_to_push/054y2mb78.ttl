@@ -4,27 +4,41 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/054y2mb78> a org:Organization ;
     rdfs:label "Ağrı İbrahim Çeçen University" ;
     schema:name "Ağrı İbrahim Çeçen University" ;
     schema:foundingDate "2007"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "ICUA" ;
-    schema:url <https://www.agri.edu.tr> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Ağrı_İbrahim_Çeçen_University> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "ICUA"@None ; 
+    schema:url <http://agri.edu.tr> ; 
+    schema:mainEntityOfPage <https://www.agri.edu.tr> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Ağrı_İbrahim_Çeçen_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/100019131> ;
+    schema:sameAs <https://grid.ac/institutions/grid.448590.4> ;
+    schema:sameAs <http://isni.org/isni/0000000403992543> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(43.04015 39.71467)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(43.04015 39.71467)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Ağrı" ;
             schema:addressCountry "TR" ;
-            owl:sameAs <http://sws.geonames.org/309647/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000403992543> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q3674354> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Türkiye" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/309647/> ;
+    ] ; 
     .

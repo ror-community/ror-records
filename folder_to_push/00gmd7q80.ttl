@@ -1,0 +1,42 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/00gmd7q80> a org:Organization ;
+    rdfs:label "Indian Institute of Information Technology Design and Manufacturing Jabalpur" ;
+    schema:name "Indian Institute of Information Technology Design and Manufacturing Jabalpur" ;
+    schema:foundingDate "2005"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:alternativeName "IIITD&M Jabalpur"@None ; 
+    org:abbreviation "IIITDM"@None ; 
+    schema:url <http://iiitdmj.ac.in> ; 
+    schema:mainEntityOfPage <https://iiitdmj.ac.in> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Indian_Institute_of_Information_Technology,_Design_and_Manufacturing,_Jabalpur> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.444467.1> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(79.95006 23.16697)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Jabalpur" ;
+            schema:addressCountry "IN" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "India" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1269633/> ;
+    ] ; 
+    .

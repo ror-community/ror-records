@@ -4,25 +4,40 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/04t79ze18> a org:Organization ;
     rdfs:label "Karl Landsteiner University of Health Sciences" ;
     schema:name "Karl Landsteiner University of Health Sciences" ;
     schema:foundingDate "2013"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "KL" ;
-    schema:url <http://www.kl.ac.at/en/> ; 
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "KL"@None ; 
+    schema:url <http://kl.ac.at> ; 
+    schema:mainEntityOfPage <https://www.kl.ac.at> ;
+    schema:sameAs <https://api.crossref.org/funders/501100022308> ;
+    schema:sameAs <https://grid.ac/institutions/grid.459693.4> ;
+    schema:sameAs <http://isni.org/isni/0000000459290057> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(15.61415 48.40921)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(15.61415 48.40921)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Krems" ;
             schema:addressCountry "AT" ;
-            owl:sameAs <http://sws.geonames.org/2773549/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000459290057> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Austria" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2773549/> ;
+    ] ; 
     .

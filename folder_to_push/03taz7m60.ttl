@@ -15,9 +15,10 @@
     org:classification "education" ; 
     org:classification "funder" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-05-02"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
     org:abbreviation "USC"@None ; 
-    schema:mainEntityOfPage <http://www.usc.edu/> ;
+    schema:url <http://usc.edu> ; 
+    schema:mainEntityOfPage <https://usc.edu> ;
     owl:sameAs <http://en.wikipedia.org/wiki/University_of_Southern_California> ; 
     schema:sameAs <https://api.crossref.org/funders/100006034> ;
     schema:sameAs <https://grid.ac/institutions/grid.42505.36> ;
@@ -39,6 +40,12 @@
         org:role "child" ;
         org:member <https://ror.org/03hjhvn29> ;
         rdfs:label "USC Institute for Creative Technologies" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/001zwgm84> ;
+        rdfs:label "CI Compass" ;
     ] ; 
     org:hasLink [
         a org:Membership ;
@@ -99,12 +106,6 @@
         org:role "related" ;
         org:member <https://ror.org/030wr4654> ;
         rdfs:label "Graduate Fellowships for STEM Diversity" ;
-    ] ; 
-    org:hasLink [
-        a org:Membership ;
-        org:role "child" ;
-        org:member <https://ror.org/001zwgm84> ;
-        rdfs:label "CI Compass" ;
     ] ; 
     schema:location [
         a schema:Place ;

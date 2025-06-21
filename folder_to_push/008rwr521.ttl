@@ -4,26 +4,39 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/008rwr521> a org:Organization ;
     rdfs:label "Istanbul Health and Technology University" ;
     schema:name "Istanbul Health and Technology University" ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "İSTÜN" ;
-    org:alternativeName "Istanbul Saglik ve Teknoloji Universitesi" ;
-    schema:url <https://www.istun.edu.tr> ; 
-    owl:sameAs <https://tr.wikipedia.org/wiki/%C4%B0stanbul_Sa%C4%9Fl%C4%B1k_ve_Teknoloji_%C3%9Cniversitesi> ;
+    org:classification "education" ; 
+    dct:created "2023-05-11"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "ISTUN"@None ; 
+    org:alternativeName "Istanbul Saglik ve Teknoloji Universitesi"@tr ; 
+    org:abbreviation "İSTÜN"@None ; 
+    schema:url <http://istun.edu.tr> ; 
+    schema:mainEntityOfPage <https://www.istun.edu.tr> ;
+    owl:sameAs <https://tr.wikipedia.org/wiki/%C4%B0stanbul_Sa%C4%9Fl%C4%B1k_ve_Teknoloji_%C3%9Cniversitesi> ; 
+    schema:sameAs <http://isni.org/isni/0000000492436353> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(28.94966 41.01384)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(28.94966 41.01384)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Istanbul" ;
             schema:addressCountry "TR" ;
-            owl:sameAs <http://sws.geonames.org/745044/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000492436353> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q97320401> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Türkiye" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/745044/> ;
+    ] ; 
     .

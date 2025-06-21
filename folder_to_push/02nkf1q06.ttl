@@ -1,0 +1,49 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/02nkf1q06> a org:Organization ;
+    rdfs:label "University of Essex" ;
+    schema:name "University of Essex" ;
+    schema:foundingDate "1963"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    schema:url <http://essex.ac.uk> ; 
+    schema:mainEntityOfPage <https://www.essex.ac.uk> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Essex> ; 
+    schema:sameAs <https://api.crossref.org/funders/100010046> ;
+    schema:sameAs <https://grid.ac/institutions/grid.8356.8> ;
+    schema:sameAs <http://isni.org/isni/0000000109426946> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05m3qrs33> ;
+        rdfs:label "Ipswich Hospital" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(0.90421 51.88921)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Colchester" ;
+            schema:addressCountry "GB" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United Kingdom" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2652618/> ;
+    ] ; 
+    .

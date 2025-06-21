@@ -4,27 +4,59 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02f81g417> a org:Organization ;
     rdfs:label "King Saud University" ;
     schema:name "King Saud University" ;
     schema:foundingDate "1957"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "KSU" ;
-    schema:url <http://ksu.edu.sa/en/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/King_Saud_University> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "KSU"@None ; 
+    schema:url <http://ksu.edu.sa> ; 
+    schema:mainEntityOfPage <https://ksu.edu.sa> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/King_Saud_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100002383> ;
+    schema:sameAs <https://grid.ac/institutions/grid.56302.32> ;
+    schema:sameAs <http://isni.org/isni/0000000417735396> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01vv03303> ;
+        rdfs:label "King Abdul Aziz University Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/053vynf43> ;
+        rdfs:label "King Khaled Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03aj9rj02> ;
+        rdfs:label "King Saud Medical City" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(46.72185 24.68773)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(46.72185 24.68773)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Riyadh" ;
             schema:addressCountry "SA" ;
-            owl:sameAs <http://sws.geonames.org/108410/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000417735396> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1752043> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Saudi Arabia" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/108410/> ;
+    ] ; 
     .

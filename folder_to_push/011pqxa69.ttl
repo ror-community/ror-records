@@ -4,28 +4,48 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/011pqxa69> a org:Organization ;
     rdfs:label "Université du Québec en Outaouais" ;
     schema:name "Université du Québec en Outaouais" ;
     schema:foundingDate "1981"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "UQO" ;
-    org:alternativeName "Université du Québec à Hull" ;
-    schema:url <http://uqo.ca/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Universit%C3%A9_du_Qu%C3%A9bec_en_Outaouais> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "UQO"@None ; 
+    org:alternativeName "Université du Québec à Hull"@fr ; 
+    schema:url <http://uqo.ca> ; 
+    schema:mainEntityOfPage <https://uqo.ca> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Universit%C3%A9_du_Qu%C3%A9bec_en_Outaouais> ; 
+    schema:sameAs <https://api.crossref.org/funders/100012376> ;
+    schema:sameAs <https://grid.ac/institutions/grid.265705.3> ;
+    schema:sameAs <http://isni.org/isni/0000000121121125> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/010gxg263> ;
+        rdfs:label "Université du Québec" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-75.70164 45.47723)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-75.70164 45.47723)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Gatineau" ;
             schema:addressCountry "CA" ;
-            owl:sameAs <http://sws.geonames.org/5959974/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000121121125> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q2562148> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Canada" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/5959974/> ;
+    ] ; 
     .

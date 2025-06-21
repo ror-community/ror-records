@@ -1,0 +1,43 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/03te4vd35> a org:Organization ;
+    rdfs:label "Bartin University" ;
+    schema:name "Bartin University" ;
+    schema:foundingDate "2009"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    schema:url <http://bartin.edu.tr> ; 
+    schema:mainEntityOfPage <https://w3.bartin.edu.tr> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Bart%C4%B1n_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100007111> ;
+    schema:sameAs <https://grid.ac/institutions/grid.449350.f> ;
+    schema:sameAs <http://isni.org/isni/000000040369647X> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(32.3375 41.63583)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Bartın" ;
+            schema:addressCountry "TR" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Türkiye" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/751057/> ;
+    ] ; 
+    .

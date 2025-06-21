@@ -4,26 +4,46 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/028vqfs63> a org:Organization ;
     rdfs:label "Amherst College" ;
     schema:name "Amherst College" ;
     schema:foundingDate "1821"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    schema:url <https://www.amherst.edu/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Amherst_College> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    schema:url <http://amherst.edu> ; 
+    schema:mainEntityOfPage <https://www.amherst.edu/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Amherst_College> ; 
+    schema:sameAs <https://api.crossref.org/funders/100013070> ;
+    schema:sameAs <https://grid.ac/institutions/grid.252152.3> ;
+    schema:sameAs <http://isni.org/isni/0000000419367320> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/006e48x19> ;
+        rdfs:label "Five Colleges" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-72.51925 42.37537)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-72.51925 42.37537)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Amherst Center" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/4929023/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000419367320> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q49165> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/4929023/> ;
+    ] ; 
     .

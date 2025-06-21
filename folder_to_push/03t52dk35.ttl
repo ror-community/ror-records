@@ -13,15 +13,23 @@
     schema:foundingDate "1891"^^xsd:gYear ;
     org:status "active" ;
     org:classification "education" ; 
+    org:classification "funder" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2023-02-16"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
     org:abbreviation "UWS"@None ; 
-    org:alternativeName "University of Western Sydney"@None ; 
+    org:alternativeName "University of Western Sydney"@en ; 
+    schema:url <http://westernsydney.edu.au> ; 
     schema:mainEntityOfPage <https://www.westernsydney.edu.au/> ;
     owl:sameAs <https://en.wikipedia.org/wiki/Western_Sydney_University> ; 
     schema:sameAs <https://api.crossref.org/funders/501100008342> ;
     schema:sameAs <https://grid.ac/institutions/grid.1029.a> ;
     schema:sameAs <http://isni.org/isni/0000000099395719> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/058xdtn86> ;
+        rdfs:label "ARC Centre of Excellence for Plant Success in Nature and Agriculture" ;
+    ] ; 
     org:hasLink [
         a org:Membership ;
         org:role "related" ;
@@ -51,12 +59,6 @@
         org:role "related" ;
         org:member <https://ror.org/00p6her27> ;
         rdfs:label "Sydney College of Divinity" ;
-    ] ; 
-    org:hasLink [
-        a org:Membership ;
-        org:role "child" ;
-        org:member <https://ror.org/058xdtn86> ;
-        rdfs:label "ARC Centre of Excellence for Plant Success in Nature and Agriculture" ;
     ] ; 
     schema:location [
         a schema:Place ;

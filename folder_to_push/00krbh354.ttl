@@ -4,28 +4,43 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/00krbh354> a org:Organization ;
     rdfs:label "Jan Kochanowski University" ;
     schema:name "Jan Kochanowski University" ;
     schema:foundingDate "1969"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "JKU" ;
-    org:alternativeName "Świętokrzyska Academy" ;
-    schema:url <http://www.ujk.edu.pl/index_en.php> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Jan_Kochanowski_University> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:alternativeName "Akademia Świętokrzyska"@pl ; 
+    org:abbreviation "JKU"@None ; 
+    org:alternativeName "Świętokrzyska Academy"@en ; 
+    schema:url <http://ujk.edu.pl> ; 
+    schema:mainEntityOfPage <https://ujk.edu.pl> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Jan_Kochanowski_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100006334> ;
+    schema:sameAs <https://grid.ac/institutions/grid.411821.f> ;
+    schema:sameAs <http://isni.org/isni/0000000122929126> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(20.62752 50.87033)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(20.62752 50.87033)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Kielce" ;
             schema:addressCountry "PL" ;
-            owl:sameAs <http://sws.geonames.org/769250/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000122929126> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q3551420> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Poland" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/769250/> ;
+    ] ; 
     .

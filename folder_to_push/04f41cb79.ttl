@@ -1,0 +1,43 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/04f41cb79> a org:Organization ;
+    rdfs:label "Hubei University of Education" ;
+    schema:name "Hubei University of Education" ;
+    schema:foundingDate "1931"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "HUE"@None ; 
+    schema:url <http://hue.edu.cn> ; 
+    schema:mainEntityOfPage <http://www.hue.edu.cn> ;
+    schema:sameAs <https://api.crossref.org/funders/501100008044> ;
+    schema:sameAs <https://grid.ac/institutions/grid.440776.6> ;
+    schema:sameAs <http://isni.org/isni/0000000417575919> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(114.26667 30.58333)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Wuhan" ;
+            schema:addressCountry "CN" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "China" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1791247/> ;
+    ] ; 
+    .

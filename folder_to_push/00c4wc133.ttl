@@ -4,28 +4,54 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/00c4wc133> a org:Organization ;
     rdfs:label "Florida Agricultural and Mechanical University" ;
     schema:name "Florida Agricultural and Mechanical University" ;
     schema:foundingDate "1887"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "FAMU" ;
-    org:alternativeName "Florida A&M University" ;
-    schema:url <http://www.famu.edu/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Florida_A%26M_University> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "FAMU"@None ; 
+    org:alternativeName "Florida A&M University"@en ; 
+    schema:url <http://famu.edu> ; 
+    schema:mainEntityOfPage <https://www.famu.edu> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Florida_A%26M_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/100016743> ;
+    schema:sameAs <https://grid.ac/institutions/grid.255948.7> ;
+    schema:sameAs <http://isni.org/isni/0000000122149445> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01v4tq883> ;
+        rdfs:label "Florida A&M University - Florida State University College of Engineering" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/05sqd3t97> ;
+        rdfs:label "State University System of Florida" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-84.28073 30.43826)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-84.28073 30.43826)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Tallahassee" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/4174715/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000122149445> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1430048> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/4174715/> ;
+    ] ; 
     .

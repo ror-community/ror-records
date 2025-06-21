@@ -4,27 +4,59 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02xrw9r68> a org:Organization ;
     rdfs:label "Université du Québec à Trois-Rivières" ;
     schema:name "Université du Québec à Trois-Rivières" ;
     schema:foundingDate "1969"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "UQTR" ;
-    schema:url <http://www.uqtr.ca/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Universit%C3%A9_du_Qu%C3%A9bec_%C3%A0_Trois-Rivi%C3%A8res> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "UQTR"@None ; 
+    schema:url <http://uqtr.ca> ; 
+    schema:mainEntityOfPage <https://www.uqtr.ca> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Universit%C3%A9_du_Qu%C3%A9bec_%C3%A0_Trois-Rivi%C3%A8res> ; 
+    schema:sameAs <https://api.crossref.org/funders/100009850> ;
+    schema:sameAs <https://grid.ac/institutions/grid.265703.5> ;
+    schema:sameAs <http://isni.org/isni/0000000121978284> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/010gxg263> ;
+        rdfs:label "Université du Québec" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03wx0vn75> ;
+        rdfs:label "CentrEau - Quebec Water Management Research Centre" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03wfagk22> ;
+        rdfs:label "St. Lawrence Global Observatory" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-72.5477 46.34515)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-72.5477 46.34515)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Trois-Rivières" ;
             schema:addressCountry "CA" ;
-            owl:sameAs <http://sws.geonames.org/6169141/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000121978284> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q919256> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Canada" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/6169141/> ;
+    ] ; 
     .

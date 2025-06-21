@@ -1,0 +1,42 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/03hdaef25> a org:Organization ;
+    rdfs:label "Helsinki Metropolia University of Applied Sciences" ;
+    schema:name "Helsinki Metropolia University of Applied Sciences" ;
+    schema:foundingDate "2007"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:alternativeName "Metropolia Ammattikorkeakoulu"@fi ; 
+    schema:url <http://metropolia.fi> ; 
+    schema:mainEntityOfPage <https://www.metropolia.fi> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Helsinki_Metropolia_University_of_Applied_Sciences> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.425628.f> ;
+    schema:sameAs <http://isni.org/isni/0000000119134955> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(24.93545 60.16952)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Helsinki" ;
+            schema:addressCountry "FI" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Finland" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/658225/> ;
+    ] ; 
+    .

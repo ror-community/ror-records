@@ -4,28 +4,48 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/03y3e3s17> a org:Organization ;
     rdfs:label "Shanxi University" ;
     schema:name "Shanxi University" ;
     schema:foundingDate "1902"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "SXU" ;
-    org:alternativeName "Shānxī Dàxué" ;
-    schema:url <http://english.sxu.edu.cn/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Shanxi_University> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "SXU"@None ; 
+    org:alternativeName "Shānxī Dàxué"@None ; 
+    schema:url <http://sxu.edu.cn> ; 
+    schema:mainEntityOfPage <https://www.sxu.edu.cn> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Shanxi_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100004311> ;
+    schema:sameAs <https://grid.ac/institutions/grid.163032.5> ;
+    schema:sameAs <http://isni.org/isni/0000000417602008> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/035z18f46> ;
+        rdfs:label "State Key Laboratory of Quantum Optics and Quantum Optics Devices" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(112.56028 37.86944)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(112.56028 37.86944)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Taiyuan" ;
             schema:addressCountry "CN" ;
-            owl:sameAs <http://sws.geonames.org/1793511/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000417602008> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q7489128> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "China" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1793511/> ;
+    ] ; 
     .

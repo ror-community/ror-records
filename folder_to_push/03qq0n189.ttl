@@ -4,26 +4,45 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/03qq0n189> a org:Organization ;
     rdfs:label "Czech Academy of Sciences, Institute of Slavonic Studies" ;
     schema:name "Czech Academy of Sciences, Institute of Slavonic Studies" ;
     schema:foundingDate "1922"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "SLÚ AV ČR" ;
-    org:alternativeName "Institute of Slavonic Studies of the Czech Academy of Sciences" ;
-    schema:url <http://www.slu.cas.cz/> ; 
+    org:classification "facility" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:alternativeName "Institute of Slavonic Studies of the Czech Academy of Sciences"@en ; 
+    org:abbreviation "SLÚ AV ČR"@None ; 
+    schema:url <http://slu.cas.cz> ; 
+    schema:mainEntityOfPage <http://www.slu.cas.cz/> ;
+    schema:sameAs <https://grid.ac/institutions/grid.448289.b> ;
+    schema:sameAs <http://isni.org/isni/0000000404287272> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/053avzc18> ;
+        rdfs:label "Czech Academy of Sciences" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(14.42076 50.08804)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(14.42076 50.08804)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Prague" ;
             schema:addressCountry "CZ" ;
-            owl:sameAs <http://sws.geonames.org/3067696/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000404287272> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Czechia" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3067696/> ;
+    ] ; 
     .

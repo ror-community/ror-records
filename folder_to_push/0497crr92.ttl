@@ -4,26 +4,46 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/0497crr92> a org:Organization ;
     rdfs:label "Smith College" ;
     schema:name "Smith College" ;
     schema:foundingDate "1871"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    schema:url <http://www.smith.edu/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Smith_College> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    schema:url <http://smith.edu> ; 
+    schema:mainEntityOfPage <https://www.smith.edu> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Smith_College> ; 
+    schema:sameAs <https://api.crossref.org/funders/100011066> ;
+    schema:sameAs <https://grid.ac/institutions/grid.263724.6> ;
+    schema:sameAs <http://isni.org/isni/0000000119454190> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/006e48x19> ;
+        rdfs:label "Five Colleges" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-72.6412 42.32509)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-72.6412 42.32509)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Northampton" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/4945819/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000119454190> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q49204> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/4945819/> ;
+    ] ; 
     .

@@ -4,23 +4,44 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/00vya8493> a org:Organization ;
     rdfs:label "Tokyo Metropolitan Institute of Medical Science" ;
     schema:name "Tokyo Metropolitan Institute of Medical Science" ;
     schema:foundingDate "2011"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    schema:url <http://www.igakuken.or.jp/english/> ; 
+    org:classification "facility" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    schema:url <http://igakuken.or.jp> ; 
+    schema:mainEntityOfPage <https://igakuken.or.jp> ;
+    schema:sameAs <https://api.crossref.org/funders/100016589> ;
+    schema:sameAs <https://grid.ac/institutions/grid.272456.0> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/007c88108> ;
+        rdfs:label "Tokyo Institute of Psychiatry" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(139.69171 35.6895)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(139.69171 35.6895)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Tokyo" ;
             schema:addressCountry "JP" ;
-            owl:sameAs <http://sws.geonames.org/1850147/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Japan" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1850147/> ;
+    ] ; 
     .

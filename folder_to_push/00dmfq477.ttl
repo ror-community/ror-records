@@ -4,23 +4,44 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/00dmfq477> a org:Organization ;
     rdfs:label "University of California Office of the President" ;
     schema:name "University of California Office of the President" ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "UCOP" ;
-    schema:url <https://www.ucop.edu> ; 
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2023-03-16"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "UCOP"@None ; 
+    schema:url <http://ucop.edu> ; 
+    schema:mainEntityOfPage <https://www.ucop.edu> ;
+    schema:sameAs <https://api.crossref.org/funders/100014576> ;
+    schema:sameAs <http://isni.org/isni/0000000406154051> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/00pjdza24> ;
+        rdfs:label "University of California System" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-122.2708 37.80437)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-122.2708 37.80437)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Oakland" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/5378538/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000406154051> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/5378538/> ;
+    ] ; 
     .

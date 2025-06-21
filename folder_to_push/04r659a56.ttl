@@ -1,0 +1,57 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/04r659a56> a org:Organization ;
+    rdfs:label "University of New England" ;
+    schema:name "University of New England" ;
+    schema:foundingDate "1938"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:alternativeName "New England University College of the University of Sydney"@en ; 
+    org:abbreviation "UNE"@None ; 
+    schema:url <http://une.edu.au> ; 
+    schema:mainEntityOfPage <https://www.une.edu.au> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_New_England_(Australia)> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100001772> ;
+    schema:sameAs <https://grid.ac/institutions/grid.1020.3> ;
+    schema:sameAs <http://isni.org/isni/0000000419367371> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0238awh09> ;
+        rdfs:label "UNE Partnerships (Australia)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01jg3a168> ;
+        rdfs:label "Gosford Hospital" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(151.66553 -30.50123)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Armidale" ;
+            schema:addressCountry "AU" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Australia" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2177671/> ;
+    ] ; 
+    .

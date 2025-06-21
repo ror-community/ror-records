@@ -4,28 +4,45 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/05e74xb87> a org:Organization ;
     rdfs:label "New Jersey Institute of Technology" ;
     schema:name "New Jersey Institute of Technology" ;
     schema:foundingDate "1881"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "NJIT" ;
-    schema:url <http://www.njit.edu/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/New_Jersey_Institute_of_Technology> ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "NJIT"@None ; 
+    schema:url <http://njit.edu> ; 
+    schema:mainEntityOfPage <https://www.njit.edu> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/New_Jersey_Institute_of_Technology> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.260896.3> ;
+    schema:sameAs <http://isni.org/isni/0000000121664955> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/04n07f274> ;
+        rdfs:label "Materials Science in Extreme Environments University Research Alliance" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-74.17237 40.73566)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-74.17237 40.73566)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Newark" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/5101798/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000121664955> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q3272013> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q37877933> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/5101798/> ;
+    ] ; 
     .

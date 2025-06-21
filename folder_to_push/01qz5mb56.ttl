@@ -4,29 +4,97 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01qz5mb56> a org:Organization ;
     rdfs:label "Oak Ridge National Laboratory" ;
     schema:name "Oak Ridge National Laboratory" ;
     schema:foundingDate "1943"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "ORNL" ;
-    org:alternativeName "United States Department of Energy Office of Science Oak Ridge National Laboratory" ;
-    schema:url <https://www.ornl.gov> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Oak_Ridge_National_Laboratory> ;
+    org:classification "facility" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "ORNL"@None ; 
+    org:alternativeName "Office of Science Oak Ridge National Laboratory"@en ; 
+    org:alternativeName "United States Department of Energy Office of Science Oak Ridge National Laboratory"@en ; 
+    schema:url <http://ornl.gov> ; 
+    schema:mainEntityOfPage <https://www.ornl.gov> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Oak_Ridge_National_Laboratory> ; 
+    schema:sameAs <https://api.crossref.org/funders/100006228> ;
+    schema:sameAs <https://grid.ac/institutions/grid.135519.a> ;
+    schema:sameAs <http://isni.org/isni/0000000404462659> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05277x335> ;
+        rdfs:label "Joint Institute for Computational Sciences" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01dvj3d25> ;
+        rdfs:label "Atmospheric Radiation Measurement User Facility" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01wass480> ;
+        rdfs:label "Center for Nanophase Materials Sciences" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02xn1ny06> ;
+        rdfs:label "High Flux Isotope Reactor" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05p915b28> ;
+        rdfs:label "Oak Ridge Leadership Computing Facility" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00q6v6102> ;
+        rdfs:label "Spallation Neutron Source" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/00mmn6b08> ;
+        rdfs:label "Office of Science" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/04nza6677> ;
+        rdfs:label "UT-Battelle" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05cwx3318> ;
+        rdfs:label "National Microbiome Data Collaborative" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-84.26964 36.01036)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-84.26964 36.01036)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Oak Ridge" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/4646571/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000404462659> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q714439> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q6971313> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/4646571/> ;
+    ] ; 
     .

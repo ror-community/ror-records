@@ -4,26 +4,40 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/05jzt8766> a org:Organization ;
     rdfs:label "University of Lapland" ;
     schema:name "University of Lapland" ;
     schema:foundingDate "1979"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    schema:url <http://www.ulapland.fi/InEnglish> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Lapland> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    schema:url <http://ulapland.fi> ; 
+    schema:mainEntityOfPage <https://www.ulapland.fi> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Lapland> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100011588> ;
+    schema:sameAs <https://grid.ac/institutions/grid.37430.33> ;
+    schema:sameAs <http://isni.org/isni/000000010744995X> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(25.71667 66.5)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(25.71667 66.5)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Rovaniemi" ;
             schema:addressCountry "FI" ;
-            owl:sameAs <http://sws.geonames.org/638936/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/000000010744995X> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1742604> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Finland" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/638936/> ;
+    ] ; 
     .

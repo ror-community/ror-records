@@ -4,27 +4,41 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/046fkpt18> a org:Organization ;
     rdfs:label "Xi'an University of Science and Technology" ;
     schema:name "Xi'an University of Science and Technology" ;
     schema:foundingDate "1895"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "XUST" ;
-    schema:url <http://en.xust.edu.cn/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Xi%27an_University_of_Science_and_Technology> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "XUST"@None ; 
+    schema:url <http://xust.edu.cn> ; 
+    schema:mainEntityOfPage <https://www.xust.edu.cn> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Xi%27an_University_of_Science_and_Technology> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100008849> ;
+    schema:sameAs <https://grid.ac/institutions/grid.440720.5> ;
+    schema:sameAs <http://isni.org/isni/0000000417590801> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(108.92861 34.25833)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(108.92861 34.25833)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Xi'an" ;
             schema:addressCountry "CN" ;
-            owl:sameAs <http://sws.geonames.org/1790630/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000417590801> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q8044029> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "China" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1790630/> ;
+    ] ; 
     .

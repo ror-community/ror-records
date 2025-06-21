@@ -4,26 +4,76 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/00kx1jb78> a org:Organization ;
     rdfs:label "Temple University" ;
     schema:name "Temple University" ;
     schema:foundingDate "1884"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    schema:url <http://www.temple.edu/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Temple_University> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    schema:url <http://temple.edu> ; 
+    schema:mainEntityOfPage <https://www.temple.edu> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Temple_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/100005806> ;
+    schema:sameAs <https://grid.ac/institutions/grid.264727.2> ;
+    schema:sameAs <http://isni.org/isni/0000000122483398> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04zzmzt85> ;
+        rdfs:label "Temple University Ambler" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02gy6qp39> ;
+        rdfs:label "Allegheny General Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05t3ett24> ;
+        rdfs:label "St. Christopher's Hospital for Children" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02fhvxj45> ;
+        rdfs:label "Temple University Health System" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/028rvnd71> ;
+        rdfs:label "Temple University Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02yhx1447> ;
+        rdfs:label "Western Pennsylvania Hospital" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-75.16362 39.95238)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-75.16362 39.95238)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Philadelphia" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/4560349/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000122483398> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1420239> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/4560349/> ;
+    ] ; 
     .

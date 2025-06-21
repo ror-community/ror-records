@@ -4,28 +4,72 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/00mcjh785> a org:Organization ;
     rdfs:label "Xiamen University" ;
     schema:name "Xiamen University" ;
     schema:foundingDate "1921"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "XMU" ;
-    org:alternativeName "Xiàmén Dàxué" ;
-    schema:url <http://std.xmu.edu.cn/std_en/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Xiamen_University> ;
-    schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(118.08187 24.47979)"^^geo:wktLiteral ;
-            schema:addressLocality "Amoy" ;
-            schema:addressCountry "CN" ;
-            owl:sameAs <http://sws.geonames.org/1790645/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "XMU"@None ; 
+    org:alternativeName "Xiàmén Dàxué"@zh ; 
+    schema:url <http://xmu.edu.cn> ; 
+    schema:mainEntityOfPage <https://www.xmu.edu.cn> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Xiamen_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100008865> ;
+    schema:sameAs <https://grid.ac/institutions/grid.12955.3a> ;
     schema:sameAs <http://isni.org/isni/0000000122647233> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1153539> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0331wa828> ;
+        rdfs:label "Xiamen University Malaysia" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02x1xke62> ;
+        rdfs:label "State Key Laboratory of Cell Stress Biology" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04em2sh18> ;
+        rdfs:label "State Key Laboratory of Marine Environmental Science" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/0006swh35> ;
+        rdfs:label "First Affiliated Hospital of Xiamen University" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02z125451> ;
+        rdfs:label "Zhongshan Hospital of Xiamen University" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(118.08187 24.47979)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Xiamen" ;
+            schema:addressCountry "CN" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "China" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1790645/> ;
+    ] ; 
     .

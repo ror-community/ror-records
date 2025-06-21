@@ -4,27 +4,41 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/04gq0w522> a org:Organization ;
     rdfs:label "Flemish Institute for Technological Research" ;
     schema:name "Flemish Institute for Technological Research" ;
     schema:foundingDate "1991"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "VITO" ;
-    schema:url <https://vito.be/en> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Flemish_Institute_for_Technological_Research> ;
+    org:classification "facility" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "VITO"@None ; 
+    schema:url <http://vito.be> ; 
+    schema:mainEntityOfPage <https://vito.be> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Flemish_Institute_for_Technological_Research> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100007610> ;
+    schema:sameAs <https://grid.ac/institutions/grid.6717.7> ;
+    schema:sameAs <http://isni.org/isni/0000000120341548> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(5.11662 51.19188)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(5.11662 51.19188)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Mol" ;
             schema:addressCountry "BE" ;
-            owl:sameAs <http://sws.geonames.org/2791067/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000120341548> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1863267> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Belgium" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2791067/> ;
+    ] ; 
     .

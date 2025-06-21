@@ -4,29 +4,52 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/05751b994> a org:Organization ;
     rdfs:label "Mahindra University" ;
     schema:name "Mahindra University" ;
     schema:foundingDate "2013"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "MEC" ;
-    org:alternativeName "Mahindra École Centrale" ;
-    schema:url <https://www.mahindrauniversity.edu.in> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Mahindra_%C3%89cole_Centrale> ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "MEC"@None ; 
+    org:alternativeName "Mahindra École Centrale"@None ; 
+    schema:url <http://mahindrauniversity.edu.in> ; 
+    schema:mainEntityOfPage <https://www.mahindrauniversity.edu.in> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Mahindra_%C3%89cole_Centrale> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.495553.b> ;
+    schema:sameAs <http://isni.org/isni/0000000459433695> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/019tcpt25> ;
+        rdfs:label "CentraleSupélec" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/002tchr49> ;
+        rdfs:label "Jawaharlal Nehru Technological University, Hyderabad" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(78.45636 17.38405)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(78.45636 17.38405)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Hyderabad" ;
             schema:addressCountry "IN" ;
-            owl:sameAs <http://sws.geonames.org/1269843/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000459433695> ;
-    schema:sameAs <http://isni.org/isni/0000000493320387> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q16894499> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "India" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1269843/> ;
+    ] ; 
     .

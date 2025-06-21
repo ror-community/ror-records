@@ -4,27 +4,39 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/00xa57a59> a org:Organization ;
     rdfs:label "University of Novi Sad" ;
     schema:name "University of Novi Sad" ;
     schema:foundingDate "1960"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:alternativeName "Univerzitet u Novom Sadu" ;
-    schema:url <https://www.uns.ac.rs> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Novi_Sad> ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:alternativeName "Univerzitet u Novom Sadu"@None ; 
+    schema:url <http://uns.ac.rs> ; 
+    schema:mainEntityOfPage <https://www.uns.ac.rs> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Novi_Sad> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.10822.39> ;
+    schema:sameAs <http://isni.org/isni/000000012149743X> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(19.83694 45.25167)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(19.83694 45.25167)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Novi Sad" ;
             schema:addressCountry "RS" ;
-            owl:sameAs <http://sws.geonames.org/3194360/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/000000012149743X> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1263535> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Serbia" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3194360/> ;
+    ] ; 
     .

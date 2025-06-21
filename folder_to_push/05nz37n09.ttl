@@ -4,26 +4,40 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/05nz37n09> a org:Organization ;
     rdfs:label "Anadolu University" ;
     schema:name "Anadolu University" ;
     schema:foundingDate "1958"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    schema:url <https://www.anadolu.edu.tr/en> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Anadolu_University> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    schema:url <http://anadolu.edu.tr> ; 
+    schema:mainEntityOfPage <https://anadolu.edu.tr> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Anadolu_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100008770> ;
+    schema:sameAs <https://grid.ac/institutions/grid.41206.31> ;
+    schema:sameAs <http://isni.org/isni/0000000110099807> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(30.52056 39.77667)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(30.52056 39.77667)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Eskişehir" ;
             schema:addressCountry "TR" ;
-            owl:sameAs <http://sws.geonames.org/315202/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000110099807> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q483758> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Türkiye" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/315202/> ;
+    ] ; 
     .

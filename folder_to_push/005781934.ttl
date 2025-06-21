@@ -1,0 +1,49 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/005781934> a org:Organization ;
+    rdfs:label "Baylor University" ;
+    schema:name "Baylor University" ;
+    schema:foundingDate "1845"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    schema:url <http://baylor.edu> ; 
+    schema:mainEntityOfPage <https://www.baylor.edu> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Baylor_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/100007492> ;
+    schema:sameAs <https://grid.ac/institutions/grid.252890.4> ;
+    schema:sameAs <http://isni.org/isni/0000000121112894> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05nf32076> ;
+        rdfs:label "McLennan Community College" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-97.14667 31.54933)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Waco" ;
+            schema:addressCountry "US" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/4739526/> ;
+    ] ; 
+    .

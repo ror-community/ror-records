@@ -1,0 +1,43 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/04x0kvm78> a org:Organization ;
+    rdfs:label "Shihezi University" ;
+    schema:name "Shihezi University" ;
+    schema:foundingDate "1996"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    schema:url <http://shzu.edu.cn> ; 
+    schema:mainEntityOfPage <https://www.shzu.edu.cn> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Shihezi_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100004317> ;
+    schema:sameAs <https://grid.ac/institutions/grid.411680.a> ;
+    schema:sameAs <http://isni.org/isni/0000000105144044> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(86.03694 44.3023)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Shihezi" ;
+            schema:addressCountry "CN" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "China" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1529195/> ;
+    ] ; 
+    .

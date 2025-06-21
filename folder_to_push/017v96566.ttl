@@ -4,27 +4,39 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/017v96566> a org:Organization ;
     rdfs:label "Bakırçay Üniversitesi" ;
     schema:name "Bakırçay Üniversitesi" ;
     schema:foundingDate "2016"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "İZBÜ" ;
-    org:alternativeName "Bakırçay University" ;
-    schema:url <https://bakircay.edu.tr> ; 
-    owl:sameAs <https://tr.wikipedia.org/wiki/Bak%C4%B1r%C3%A7ay_%C3%9Cniversitesi> ;
+    org:classification "education" ; 
+    dct:created "2022-09-29"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:alternativeName "Bakırçay University"@en ; 
+    org:abbreviation "İZBÜ"@None ; 
+    schema:url <http://bakircay.edu.tr> ; 
+    schema:mainEntityOfPage <https://bakircay.edu.tr> ;
+    owl:sameAs <https://tr.wikipedia.org/wiki/Bak%C4%B1r%C3%A7ay_%C3%9Cniversitesi> ; 
+    schema:sameAs <http://isni.org/isni/0000000464125697> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(27.13838 38.41273)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(27.13838 38.41273)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Izmir" ;
             schema:addressCountry "TR" ;
-            owl:sameAs <http://sws.geonames.org/311046/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000464125697> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q28054180> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Türkiye" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/311046/> ;
+    ] ; 
     .

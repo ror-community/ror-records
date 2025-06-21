@@ -4,27 +4,42 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/046awyn59> a org:Organization ;
     rdfs:label "Częstochowa University of Technology" ;
     schema:name "Częstochowa University of Technology" ;
     schema:foundingDate "1949"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "CUT" ;
-    schema:url <http://www.pcz.pl/english/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Cz%C4%99stochowa_University_of_Technology> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "CUT"@None ; 
+    org:abbreviation "PCz"@None ; 
+    schema:url <http://pcz.pl> ; 
+    schema:mainEntityOfPage <https://pcz.pl> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Cz%C4%99stochowa_University_of_Technology> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100004506> ;
+    schema:sameAs <https://grid.ac/institutions/grid.34197.38> ;
+    schema:sameAs <http://isni.org/isni/0000000103969608> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(19.12409 50.79646)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(19.12409 50.79646)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Częstochowa" ;
             schema:addressCountry "PL" ;
-            owl:sameAs <http://sws.geonames.org/3100946/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000103969608> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q2399276> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Poland" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3100946/> ;
+    ] ; 
     .

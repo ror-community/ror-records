@@ -4,27 +4,47 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02ws1xc11> a org:Organization ;
     rdfs:label "Universitat Jaume I" ;
     schema:name "Universitat Jaume I" ;
     schema:foundingDate "1991"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "UJI" ;
-    schema:url <https://www.uji.es> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Jaume_I_University> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "UJI"@None ; 
+    schema:url <http://uji.es> ; 
+    schema:mainEntityOfPage <https://www.uji.es> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Jaume_I_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100004834> ;
+    schema:sameAs <https://grid.ac/institutions/grid.9612.c> ;
+    schema:sameAs <http://isni.org/isni/0000000119579153> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03xw5ev35> ;
+        rdfs:label "ORFEO-CINQA Research Network" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-0.04935 39.98567)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-0.04935 39.98567)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Castellon" ;
             schema:addressCountry "ES" ;
-            owl:sameAs <http://sws.geonames.org/2519752/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000119579153> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q29718> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Spain" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2519752/> ;
+    ] ; 
     .

@@ -1,0 +1,47 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/034td6c88> a org:Organization ;
+    rdfs:label "Leeds College of Music" ;
+    schema:name "Leeds College of Music" ;
+    schema:foundingDate "1965"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    schema:url <http://lcm.ac.uk> ; 
+    schema:mainEntityOfPage <https://lcm.ac.uk> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Leeds_College_of_Music> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.450940.c> ;
+    schema:sameAs <http://isni.org/isni/0000000107002138> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/03sptdk90> ;
+        rdfs:label "Leeds City College" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-1.54785 53.79648)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Leeds" ;
+            schema:addressCountry "GB" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United Kingdom" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2644688/> ;
+    ] ; 
+    .

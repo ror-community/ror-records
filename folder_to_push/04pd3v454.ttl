@@ -4,26 +4,40 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/04pd3v454> a org:Organization ;
     rdfs:label "Atilim University" ;
     schema:name "Atilim University" ;
     schema:foundingDate "1996"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    schema:url <http://www.atilim.edu.tr/?lang=en> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/At%C4%B1l%C4%B1m_University> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    schema:url <http://atilim.edu.tr> ; 
+    schema:mainEntityOfPage <https://www.atilim.edu.tr> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/At%C4%B1l%C4%B1m_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100005183> ;
+    schema:sameAs <https://grid.ac/institutions/grid.440424.2> ;
+    schema:sameAs <http://isni.org/isni/0000000405954604> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(32.85427 39.91987)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(32.85427 39.91987)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Ankara" ;
             schema:addressCountry "TR" ;
-            owl:sameAs <http://sws.geonames.org/323786/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000405954604> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q3321507> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Türkiye" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/323786/> ;
+    ] ; 
     .

@@ -4,27 +4,39 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/0583a0t97> a org:Organization ;
     rdfs:label "West University of Timişoara" ;
     schema:name "West University of Timişoara" ;
     schema:foundingDate "1962"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "WUT" ;
-    schema:url <http://www.uvt.ro/en/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/West_University_of_Timi%C8%99oara> ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "WUT"@None ; 
+    schema:url <http://uvt.ro> ; 
+    schema:mainEntityOfPage <https://www.uvt.ro> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/West_University_of_Timi%C8%99oara> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.14004.31> ;
+    schema:sameAs <http://isni.org/isni/0000000121820073> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(21.22571 45.75372)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(21.22571 45.75372)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Timișoara" ;
             schema:addressCountry "RO" ;
-            owl:sameAs <http://sws.geonames.org/665087/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000121820073> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q837657> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Romania" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/665087/> ;
+    ] ; 
     .

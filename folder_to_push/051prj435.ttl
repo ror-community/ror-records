@@ -1,0 +1,43 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/051prj435> a org:Organization ;
+    rdfs:label "Bishop's University" ;
+    schema:name "Bishop's University" ;
+    schema:foundingDate "1843"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    schema:url <http://ubishops.ca> ; 
+    schema:mainEntityOfPage <https://www.ubishops.ca> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Bishop's_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/100009538> ;
+    schema:sameAs <https://grid.ac/institutions/grid.253135.3> ;
+    schema:sameAs <http://isni.org/isni/000000041936842X> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-71.89908 45.40008)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Sherbrooke" ;
+            schema:addressCountry "CA" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Canada" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/6146143/> ;
+    ] ; 
+    .

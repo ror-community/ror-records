@@ -4,27 +4,52 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/05htk5m33> a org:Organization ;
     rdfs:label "Hunan University" ;
     schema:name "Hunan University" ;
     schema:foundingDate "976"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:alternativeName "Húnán Dàxué" ;
-    schema:url <http://www-en.hnu.edu.cn/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Hunan_University> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:alternativeName "Húnán Dàxué"@None ; 
+    schema:url <http://hnu.edu.cn> ; 
+    schema:mainEntityOfPage <https://www.hnu.edu.cn> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Hunan_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100003824> ;
+    schema:sameAs <https://grid.ac/institutions/grid.67293.39> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02xrb7c43> ;
+        rdfs:label "State Key Laboratory of Advanced Design and Manufacturing of Automobile Body" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05vg20182> ;
+        rdfs:label "State Key Laboratory of Chemobiosensing and Chemometrics" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(112.97087 28.19874)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(112.97087 28.19874)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Changsha" ;
             schema:addressCountry "CN" ;
-            owl:sameAs <http://sws.geonames.org/1815577/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://www.wikidata.org/entity/Q649868> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q17023539> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "China" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1815577/> ;
+    ] ; 
     .

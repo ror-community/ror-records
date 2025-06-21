@@ -1,0 +1,42 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/05jdsfp91> a org:Organization ;
+    rdfs:label "Sheridan College" ;
+    schema:name "Sheridan College" ;
+    schema:foundingDate "1967"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:alternativeName "Sheridan College Institute of Technology and Advanced Learning"@en ; 
+    schema:url <http://sheridancollege.ca> ; 
+    schema:mainEntityOfPage <https://www.sheridancollege.ca/> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Sheridan_College> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.422161.2> ;
+    schema:sameAs <http://isni.org/isni/0000000104198964> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-79.68292 43.45011)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Oakville" ;
+            schema:addressCountry "CA" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Canada" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/6092122/> ;
+    ] ; 
+    .

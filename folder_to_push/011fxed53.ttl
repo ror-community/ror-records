@@ -4,26 +4,38 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/011fxed53> a org:Organization ;
     rdfs:label "Estonian Academy of Security Sciences" ;
     schema:name "Estonian Academy of Security Sciences" ;
     schema:foundingDate "1992"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    schema:url <http://www.sisekaitse.ee/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Estonian_Academy_of_Security_Sciences> ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    schema:url <http://sisekaitse.ee> ; 
+    schema:mainEntityOfPage <https://sisekaitse.ee> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Estonian_Academy_of_Security_Sciences> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.462244.2> ;
+    schema:sameAs <http://isni.org/isni/0000000102480798> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(24.75353 59.43696)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(24.75353 59.43696)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Tallinn" ;
             schema:addressCountry "EE" ;
-            owl:sameAs <http://sws.geonames.org/588409/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000102480798> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q10932366> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Estonia" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/588409/> ;
+    ] ; 
     .

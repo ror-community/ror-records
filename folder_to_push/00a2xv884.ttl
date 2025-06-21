@@ -4,28 +4,187 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/00a2xv884> a org:Organization ;
     rdfs:label "Zhejiang University" ;
     schema:name "Zhejiang University" ;
     schema:foundingDate "1897"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "ZJU" ;
-    org:alternativeName "Chekiang University" ;
-    schema:url <http://www.zju.edu.cn/english/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Zhejiang_University> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:alternativeName "Chekiang University"@en ; 
+    org:abbreviation "ZJU"@None ; 
+    org:alternativeName "Zheda"@None ; 
+    schema:url <http://zju.edu.cn> ; 
+    schema:mainEntityOfPage <https://www.zju.edu.cn> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Zhejiang_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100004835> ;
+    schema:sameAs <https://grid.ac/institutions/grid.13402.34> ;
+    schema:sameAs <http://isni.org/isni/000000041759700X> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04ttadj76> ;
+        rdfs:label "Collaborative Innovation Center of Advanced Microstructures" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01czx1v82> ;
+        rdfs:label "Huzhou Central Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05nzc1r88> ;
+        rdfs:label "The Synergetic Innovation Center for Advanced Materials" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05m0wv206> ;
+        rdfs:label "Zhejiang Taizhou Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04jth1r26> ;
+        rdfs:label "Zhejiang University-University of Edinburgh Institute" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00325dg83> ;
+        rdfs:label "State Key Laboratory of Diagnosis and Treatment of Infectious Diseases" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01h0g5x34> ;
+        rdfs:label "State Key Laboratory Fluid Power and Mechatronic Systems" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01mx22g67> ;
+        rdfs:label "State Key Laboratory of Clean Energy Utilization" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02dmmay61> ;
+        rdfs:label "State Key Laboratory of Silicon Materials" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04jwqm611> ;
+        rdfs:label "State Key Laboratory of Computer Aided Design and Graphics" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/018fpas51> ;
+        rdfs:label "State Key Laboratory of Modern Optical Instruments" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03a33a786> ;
+        rdfs:label "State Key Laboratory of Industrial Control Technology" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05s5qx907> ;
+        rdfs:label "State Key Laboratory of Rice Biology" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02yjhrp74> ;
+        rdfs:label "State Key Laboratory of Plant Physiology and Biochemistry" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/025fyfd20> ;
+        rdfs:label "Children's Hospital of Zhejiang University" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05m1p5x56> ;
+        rdfs:label "First Affiliated Hospital Zhejiang University" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/0310dsa24> ;
+        rdfs:label "Hangzhou Seventh Peoples Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/04zkkh342> ;
+        rdfs:label "Hangzhou Xixi hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/023e72x78> ;
+        rdfs:label "Lishui Central Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/059cjpv64> ;
+        rdfs:label "Second Affiliated Hospital of Zhejiang University" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00ka6rp58> ;
+        rdfs:label "Sir Run Run Shaw Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02sysn258> ;
+        rdfs:label "Third People's Hospital of Hangzhou" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/042t7yh44> ;
+        rdfs:label "Women's Hospital, School of Medicine, Zhejiang University" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/0144s0951> ;
+        rdfs:label "Zhejiang Cancer Hospital" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(120.16142 30.29365)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(120.16142 30.29365)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Hangzhou" ;
             schema:addressCountry "CN" ;
-            owl:sameAs <http://sws.geonames.org/1808926/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/000000041759700X> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q197543> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "China" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1808926/> ;
+    ] ; 
     .

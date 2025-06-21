@@ -4,27 +4,53 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02956yf07> a org:Organization ;
     rdfs:label "University of Tsukuba" ;
     schema:name "University of Tsukuba" ;
     schema:foundingDate "1973"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:alternativeName "Tsukuba daigaku" ;
-    schema:url <http://www.tsukuba.ac.jp/english/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Tsukuba> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:alternativeName "Tsukuba daigaku"@None ; 
+    schema:url <http://tsukuba.ac.jp> ; 
+    schema:mainEntityOfPage <https://www.tsukuba.ac.jp> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Tsukuba> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100006559> ;
+    schema:sameAs <https://grid.ac/institutions/grid.20515.33> ;
+    schema:sameAs <http://isni.org/isni/0000000123694728> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04br41767> ;
+        rdfs:label "Life Science Center for Survival Dynamics, Tsukuba Advanced Research Alliance (TARA)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/028fz3b89> ;
+        rdfs:label "University of Tsukuba Hospital" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(140.1 36.2)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(140.1 36.2)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Tsukuba" ;
             schema:addressCountry "JP" ;
-            owl:sameAs <http://sws.geonames.org/2110683/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000123694728> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q743615> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Japan" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2110683/> ;
+    ] ; 
     .

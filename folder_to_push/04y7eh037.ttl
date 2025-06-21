@@ -1,0 +1,43 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/04y7eh037> a org:Organization ;
+    rdfs:label "Vytautas Magnus University" ;
+    schema:name "Vytautas Magnus University" ;
+    schema:foundingDate "1922"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "VDU"@None ; 
+    org:alternativeName "Vytauto Didžiojo Universitetas"@lt ; 
+    schema:url <http://vdu.lt> ; 
+    schema:mainEntityOfPage <https://www.vdu.lt> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Vytautas_Magnus_University> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.19190.30> ;
+    schema:sameAs <http://isni.org/isni/0000000123250545> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(23.90961 54.90272)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Kaunas" ;
+            schema:addressCountry "LT" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Lithuania" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/598316/> ;
+    ] ; 
+    .

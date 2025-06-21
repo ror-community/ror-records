@@ -1,0 +1,92 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/04yrkc140> a org:Organization ;
+    rdfs:label "University of Nebraska at Omaha" ;
+    schema:name "University of Nebraska at Omaha" ;
+    schema:foundingDate "1908"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "UNO"@None ; 
+    schema:url <http://unomaha.edu> ; 
+    schema:mainEntityOfPage <https://www.unomaha.edu> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Nebraska_Omaha> ; 
+    schema:sameAs <https://api.crossref.org/funders/100009499> ;
+    schema:sameAs <https://grid.ac/institutions/grid.266815.e> ;
+    schema:sameAs <http://isni.org/isni/0000000107755412> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03kd4bc94> ;
+        rdfs:label "National Space Grant Alliance" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02w20cr42> ;
+        rdfs:label "Nebraska Space Grant Consortium" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/0238rvs44> ;
+        rdfs:label "University of Nebraska System" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01q9r1072> ;
+        rdfs:label "Boys Town National Research Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/04j36h363> ;
+        rdfs:label "Children's Hospital & Medical Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02sz71d65> ;
+        rdfs:label "Methodist Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00nsz0a92> ;
+        rdfs:label "Omaha VA Medical Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00thqtb16> ;
+        rdfs:label "University of Nebraska Medical Center" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-95.94043 41.25626)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Omaha" ;
+            schema:addressCountry "US" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/5074472/> ;
+    ] ; 
+    .

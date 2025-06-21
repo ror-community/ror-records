@@ -4,26 +4,44 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/04z6gwv56> a org:Organization ;
     rdfs:label "National Museum" ;
     schema:name "National Museum" ;
     schema:foundingDate "1796"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Archive" ; 
-    schema:url <http://www.nm.cz/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/National_Museum_(Prague)> ;
+    org:classification "archive" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    schema:url <http://nm.cz> ; 
+    schema:mainEntityOfPage <https://www.nm.cz> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/National_Museum_(Prague)> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.425401.6> ;
+    schema:sameAs <http://isni.org/isni/0000000122431723> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02jq72y97> ;
+        rdfs:label "Czechoslovak Documentation Centre" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(14.42076 50.08804)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(14.42076 50.08804)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Prague" ;
             schema:addressCountry "CZ" ;
-            owl:sameAs <http://sws.geonames.org/3067696/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000122431723> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q188112> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Czechia" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3067696/> ;
+    ] ; 
     .

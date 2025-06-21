@@ -4,26 +4,52 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/006hf6230> a org:Organization ;
     rdfs:label "University of Twente" ;
     schema:name "University of Twente" ;
     schema:foundingDate "1961"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    schema:url <http://www.utwente.nl/en/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Twente> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    schema:url <http://utwente.nl> ; 
+    schema:mainEntityOfPage <https://www.utwente.nl> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Twente> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100001834> ;
+    schema:sameAs <https://grid.ac/institutions/grid.6214.1> ;
+    schema:sameAs <http://isni.org/isni/0000000403998953> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02n9d1732> ;
+        rdfs:label "Max Planck University of Twente Center for Complex Fluid Dynamics" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03rsncr94> ;
+        rdfs:label "4TU" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(6.89583 52.21833)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(6.89583 52.21833)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Enschede" ;
             schema:addressCountry "NL" ;
-            owl:sameAs <http://sws.geonames.org/2756071/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000403998953> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1547084> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "The Netherlands" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2756071/> ;
+    ] ; 
     .

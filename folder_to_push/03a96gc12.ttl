@@ -4,28 +4,48 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/03a96gc12> a org:Organization ;
     rdfs:label "ZBW – Leibniz-Informationszentrum Wirtschaft" ;
     schema:name "ZBW – Leibniz-Informationszentrum Wirtschaft" ;
     schema:foundingDate "1919"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "ZBW" ;
-    org:alternativeName "Deutsche Zentralbibliothek für Wirtschaftswissenschaften (ZBW) - Leibniz Informationszentrum Wirtschaft" ;
-    schema:url <http://www.zbw.eu> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/German_National_Library_of_Economics> ;
+    org:classification "facility" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:alternativeName "Deutsche Zentralbibliothek für Wirtschaftswissenschaften (ZBW) - Leibniz Informationszentrum Wirtschaft"@de ; 
+    org:alternativeName "German National Library of Economics"@en ; 
+    org:alternativeName "German National Library of Economics (ZBW) - Leibniz Information Centre for Economics"@en ; 
+    org:abbreviation "ZBW"@None ; 
+    schema:url <http://zbw.eu> ; 
+    schema:mainEntityOfPage <https://www.zbw.eu> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/German_National_Library_of_Economics> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.461649.8> ;
+    schema:sameAs <http://isni.org/isni/0000000110190408> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/01n6r0e97> ;
+        rdfs:label "Leibniz Association" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(10.13489 54.32133)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(10.13489 54.32133)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Kiel" ;
             schema:addressCountry "DE" ;
-            owl:sameAs <http://sws.geonames.org/2891122/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000110190408> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q317179> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Germany" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2891122/> ;
+    ] ; 
     .

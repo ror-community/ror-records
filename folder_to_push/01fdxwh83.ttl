@@ -4,27 +4,41 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01fdxwh83> a org:Organization ;
     rdfs:label "University of Borås" ;
     schema:name "University of Borås" ;
     schema:foundingDate "1977"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:alternativeName "Borås University College" ;
-    schema:url <http://www.hb.se/en/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Bor%C3%A5s> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:alternativeName "Borås University College"@en ; 
+    schema:url <http://hb.se> ; 
+    schema:mainEntityOfPage <https://www.hb.se> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Bor%C3%A5s> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100016226> ;
+    schema:sameAs <https://grid.ac/institutions/grid.412442.5> ;
+    schema:sameAs <http://isni.org/isni/0000000094777523> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(12.9401 57.72101)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(12.9401 57.72101)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Borås" ;
             schema:addressCountry "SE" ;
-            owl:sameAs <http://sws.geonames.org/2720501/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000094777523> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1622088> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Sweden" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2720501/> ;
+    ] ; 
     .

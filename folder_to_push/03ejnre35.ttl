@@ -4,27 +4,42 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/03ejnre35> a org:Organization ;
     rdfs:label "Niğde Ömer Halisdemir Üniversitesi" ;
     schema:name "Niğde Ömer Halisdemir Üniversitesi" ;
     schema:foundingDate "1992"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:alternativeName "Niğde Ömer Halisdemir University" ;
-    schema:url <https://www.ohu.edu.tr> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Ni%C4%9Fde_University> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:alternativeName "Niğde University"@en ; 
+    org:alternativeName "Niğde Ömer Halisdemir University"@en ; 
+    schema:url <http://ohu.edu.tr> ; 
+    schema:mainEntityOfPage <https://www.ohu.edu.tr> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Ni%C4%9Fde_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100010625> ;
+    schema:sameAs <https://grid.ac/institutions/grid.412173.2> ;
+    schema:sameAs <http://isni.org/isni/0000000107008038> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(34.67935 37.96583)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(34.67935 37.96583)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Niğde" ;
             schema:addressCountry "TR" ;
-            owl:sameAs <http://sws.geonames.org/303827/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000107008038> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q7042323> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Türkiye" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/303827/> ;
+    ] ; 
     .

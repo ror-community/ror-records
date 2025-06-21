@@ -1,0 +1,49 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/0263v9e25> a org:Organization ;
+    rdfs:label "Tarleton State University" ;
+    schema:name "Tarleton State University" ;
+    schema:foundingDate "1899"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:alternativeName "John Tarleton Agricultural College"@en ; 
+    org:abbreviation "TSU"@None ; 
+    schema:url <http://tarleton.edu> ; 
+    schema:mainEntityOfPage <https://www.tarleton.edu> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Tarleton_State_University> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.264601.7> ;
+    schema:sameAs <http://isni.org/isni/0000000121777378> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/0034eay46> ;
+        rdfs:label "Texas A&M University System" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-98.20226 32.2207)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Stephenville" ;
+            schema:addressCountry "US" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/4734350/> ;
+    ] ; 
+    .

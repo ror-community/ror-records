@@ -1,0 +1,42 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/00fy5v859> a org:Organization ;
+    rdfs:label "University College West Flanders" ;
+    schema:name "University College West Flanders" ;
+    schema:foundingDate "1995"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "HOWEST"@None ; 
+    schema:url <http://howest.be> ; 
+    schema:mainEntityOfPage <https://www.howest.be> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Hogeschool_West-Vlaanderen> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.464568.d> ;
+    schema:sameAs <http://isni.org/isni/000000040633057X> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(3.26487 50.82803)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Kortrijk" ;
+            schema:addressCountry "BE" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Belgium" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2794055/> ;
+    ] ; 
+    .

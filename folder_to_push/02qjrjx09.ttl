@@ -4,27 +4,47 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02qjrjx09> a org:Organization ;
     rdfs:label "University of Cyprus" ;
     schema:name "University of Cyprus" ;
     schema:foundingDate "1989"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "UCY" ;
-    schema:url <http://www.ucy.ac.cy/en/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Cyprus> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "UCY"@None ; 
+    schema:url <http://ucy.ac.cy> ; 
+    schema:mainEntityOfPage <https://www.ucy.ac.cy> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Cyprus> ; 
+    schema:sameAs <https://api.crossref.org/funders/100012996> ;
+    schema:sameAs <https://grid.ac/institutions/grid.6603.3> ;
+    schema:sameAs <http://isni.org/isni/0000000121167908> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01ggsp920> ;
+        rdfs:label "Cyprus Institute of Neurology and Genetics" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(33.3642 35.17531)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(33.3642 35.17531)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Nicosia" ;
             schema:addressCountry "CY" ;
-            owl:sameAs <http://sws.geonames.org/146268/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000121167908> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1520608> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Cyprus" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/146268/> ;
+    ] ; 
     .

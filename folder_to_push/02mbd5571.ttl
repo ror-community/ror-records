@@ -4,28 +4,42 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02mbd5571> a org:Organization ;
     rdfs:label "University of Bergamo" ;
     schema:name "University of Bergamo" ;
     schema:foundingDate "1968"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "UniBg" ;
-    org:alternativeName "Bergamo University" ;
-    schema:url <http://www.unibg.it/en_index.asp> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Bergamo> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:alternativeName "Bergamo University"@en ; 
+    org:abbreviation "UniBg"@None ; 
+    schema:url <http://unibg.it> ; 
+    schema:mainEntityOfPage <https://www.unibg.it> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Bergamo> ; 
+    schema:sameAs <https://api.crossref.org/funders/100015968> ;
+    schema:sameAs <https://grid.ac/institutions/grid.33236.37> ;
+    schema:sameAs <http://isni.org/isni/0000000106929556> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(9.66721 45.69601)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(9.66721 45.69601)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Bergamo" ;
             schema:addressCountry "IT" ;
-            owl:sameAs <http://sws.geonames.org/3182164/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000106929556> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q45855> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Italy" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3182164/> ;
+    ] ; 
     .

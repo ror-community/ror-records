@@ -4,28 +4,58 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02vwzrd76> a org:Organization ;
     rdfs:label "Thomas Jefferson National Accelerator Facility" ;
     schema:name "Thomas Jefferson National Accelerator Facility" ;
     schema:foundingDate "1984"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "TJNAF" ;
-    org:alternativeName "Jefferson Lab" ;
-    schema:url <https://www.jlab.org> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Thomas_Jefferson_National_Accelerator_Facility> ;
+    org:classification "facility" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:alternativeName "JLab"@None ; 
+    org:alternativeName "Jefferson Lab"@en ; 
+    org:alternativeName "Office of Science Thomas Jefferson National Accelerator Facility"@en ; 
+    org:abbreviation "TJNAF"@None ; 
+    org:alternativeName "U.S. Department of Energy Office of Science Thomas Jefferson National Accelerator Facility"@en ; 
+    org:alternativeName "United States Department of Energy Office of Science Thomas Jefferson National Accelerator Facility"@en ; 
+    schema:url <http://jlab.org> ; 
+    schema:mainEntityOfPage <https://www.jlab.org> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Thomas_Jefferson_National_Accelerator_Facility> ; 
+    schema:sameAs <https://api.crossref.org/funders/100011665> ;
+    schema:sameAs <https://grid.ac/institutions/grid.450315.6> ;
+    schema:sameAs <http://isni.org/isni/0000000122361964> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/033wxpt21> ;
+        rdfs:label "Continuous Electron Beam Accelerator Facility" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/00mmn6b08> ;
+        rdfs:label "Office of Science" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-76.46965 37.08339)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-76.42975 36.98038)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Newport News" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/4776024/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000122361964> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1540109> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/4776024/> ;
+    ] ; 
     .

@@ -1,0 +1,42 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/05xv2md42> a org:Organization ;
+    rdfs:label "Humber College" ;
+    schema:name "Humber College" ;
+    schema:foundingDate "1968"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:alternativeName "Humber College Institute of Technology and Advanced Learning"@en ; 
+    schema:url <http://humber.ca> ; 
+    schema:mainEntityOfPage <https://humber.ca> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Humber_College> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.420778.e> ;
+    schema:sameAs <http://isni.org/isni/0000000098085532> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-79.39864 43.70643)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Toronto" ;
+            schema:addressCountry "CA" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Canada" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/6167865/> ;
+    ] ; 
+    .

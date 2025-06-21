@@ -4,27 +4,53 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/04w9fbh59> a org:Organization ;
     rdfs:label "Beijing University of Posts and Telecommunications" ;
     schema:name "Beijing University of Posts and Telecommunications" ;
     schema:foundingDate "1955"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "BUPT" ;
-    schema:url <http://www.bupt.edu.cn/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Beijing_University_of_Posts_and_Telecommunications> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "BUPT"@None ; 
+    schema:url <http://bupt.edu.cn> ; 
+    schema:mainEntityOfPage <https://www.bupt.edu.cn> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Beijing_University_of_Posts_and_Telecommunications> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100002766> ;
+    schema:sameAs <https://grid.ac/institutions/grid.31880.32> ;
+    schema:sameAs <http://isni.org/isni/0000000087801230> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02v9wg343> ;
+        rdfs:label "State Key Laboratory of Information Photonics and Optical Communications" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00qtv5q45> ;
+        rdfs:label "State Key Laboratory of Networking and Switching Technology" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(116.39723 39.9075)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(116.39723 39.9075)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Beijing" ;
             schema:addressCountry "CN" ;
-            owl:sameAs <http://sws.geonames.org/1816670/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000087801230> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q4881210> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "China" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1816670/> ;
+    ] ; 
     .

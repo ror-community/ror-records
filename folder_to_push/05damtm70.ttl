@@ -4,27 +4,65 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/05damtm70> a org:Organization ;
     rdfs:label "Beijing University of Chinese Medicine" ;
     schema:name "Beijing University of Chinese Medicine" ;
     schema:foundingDate "1956"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "BUCM" ;
-    schema:url <http://www.bucm.edu.cn/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Beijing_University_of_Chinese_Medicine> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:abbreviation "BUCM"@None ; 
+    schema:url <http://bucm.edu.cn> ; 
+    schema:mainEntityOfPage <https://www.bucm.edu.cn> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Beijing_University_of_Chinese_Medicine> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100004846> ;
+    schema:sameAs <https://grid.ac/institutions/grid.24695.3c> ;
+    schema:sameAs <http://isni.org/isni/0000000114319176> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02yjx5e75> ;
+        rdfs:label "Beijing Xuanwu Traditional Chinese Medicine Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02yacz525> ;
+        rdfs:label "Dongzhimen Hospital Affiliated to Beijing University of Chinese Medicine" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02fn8j763> ;
+        rdfs:label "Wangjing Hospital of China Academy of Chinese Medical Sciences" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02y0vze35> ;
+        rdfs:label "Xiyuan Hospital" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(116.39723 39.9075)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(116.39723 39.9075)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Beijing" ;
             schema:addressCountry "CN" ;
-            owl:sameAs <http://sws.geonames.org/1816670/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000114319176> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1039400> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "China" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1816670/> ;
+    ] ; 
     .

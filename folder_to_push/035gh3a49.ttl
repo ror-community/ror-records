@@ -4,27 +4,43 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/035gh3a49> a org:Organization ;
     rdfs:label "IMT School for Advanced Studies Lucca" ;
     schema:name "IMT School for Advanced Studies Lucca" ;
     schema:foundingDate "2005"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:alternativeName "Institutions, Markets, Technologies Institute for Advanced Studies" ;
-    schema:url <https://www.imtlucca.it/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/IMT_School_for_Advanced_Studies_Lucca> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:alternativeName "IMT Institute for Advanced Studies Lucca"@en ; 
+    org:alternativeName "Institute for Advanced Studies Lucca"@en ; 
+    org:alternativeName "Institutions, Markets, Technologies Institute for Advanced Studies"@en ; 
+    schema:url <http://imtlucca.it> ; 
+    schema:mainEntityOfPage <https://www.imtlucca.it/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/IMT_School_for_Advanced_Studies_Lucca> ; 
+    schema:sameAs <https://api.crossref.org/funders/100015963> ;
+    schema:sameAs <https://grid.ac/institutions/grid.462365.0> ;
+    schema:sameAs <http://isni.org/isni/0000000417909464> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(10.50447 43.84369)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(10.50447 43.84369)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Lucca" ;
             schema:addressCountry "IT" ;
-            owl:sameAs <http://sws.geonames.org/3174530/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000417909464> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q3788629> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Italy" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3174530/> ;
+    ] ; 
     .

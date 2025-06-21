@@ -4,28 +4,95 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/05krs5044> a org:Organization ;
     rdfs:label "University of Sheffield" ;
     schema:name "University of Sheffield" ;
     schema:foundingDate "1828"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:alternativeName "Sheffield University" ;
-    schema:url <http://www.sheffield.ac.uk/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Sheffield> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-21"^^xsd:date ;
+    org:alternativeName "Sheffield University"@en ; 
+    schema:url <http://sheffield.ac.uk> ; 
+    schema:mainEntityOfPage <https://www.sheffield.ac.uk> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Sheffield> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100000858> ;
+    schema:sameAs <https://grid.ac/institutions/grid.11835.3e> ;
+    schema:sameAs <http://isni.org/isni/0000000419369262> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04tym5d37> ;
+        rdfs:label "Leverhulme Centre for Climate Change Mitigation" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/055k7j239> ;
+        rdfs:label "Grantham Centre for Sustainable Futures" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/036g3b009> ;
+        rdfs:label "NERC Environmental Omics Facility" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05f2xwq77> ;
+        rdfs:label "Charles Clifford Dental Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03wc8tg09> ;
+        rdfs:label "Jessop Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05r409z22> ;
+        rdfs:label "Northern General Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00514rc81> ;
+        rdfs:label "Royal Hallamshire Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05mshxb09> ;
+        rdfs:label "Sheffield Children's Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/042gs1a72> ;
+        rdfs:label "Weston Park Cancer Centre" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-1.4659 53.38297)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-1.4659 53.38297)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Sheffield" ;
             schema:addressCountry "GB" ;
-            owl:sameAs <http://sws.geonames.org/2638077/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000419369262> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q823917> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q371969> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United Kingdom" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2638077/> ;
+    ] ; 
     .
