@@ -4,24 +4,50 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/05hessd06> a org:Organization ;
     rdfs:label "Sekisui Chemical (Japan)" ;
     schema:name "Sekisui Chemical (Japan)" ;
     schema:foundingDate "1947"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Company" ; 
-    schema:url <http://www.sekisuichemical.com/> ; 
+    org:classification "company" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-09-16"^^xsd:date ;
+    schema:mainEntityOfPage <http://www.sekisuichemical.com/> ;
+    schema:sameAs <https://api.crossref.org/funders/501100012020> ;
+    schema:sameAs <https://grid.ac/institutions/grid.471315.5> ;
+    schema:sameAs <http://isni.org/isni/000000041770184X> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/036w79395> ;
+        rdfs:label "Sekisui Kasei (Japan)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02deetg88> ;
+        rdfs:label "Sekisui Medical (Japan)" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(135.50218 34.69374)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(135.50107 34.69379)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Osaka" ;
             schema:addressCountry "JP" ;
-            owl:sameAs <http://sws.geonames.org/1853909/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/000000041770184X> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Japan" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1853909/> ;
+    ] ; 
     .

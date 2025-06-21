@@ -4,26 +4,45 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/0566bfb96> a org:Organization ;
     rdfs:label "Naturalis Biodiversity Center" ;
     schema:name "Naturalis Biodiversity Center" ;
     schema:foundingDate "1820"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Archive" ; 
-    schema:url <http://www.naturalis.nl/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Naturalis_Biodiversity_Center> ;
+    org:classification "archive" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-09-16"^^xsd:date ;
+    schema:mainEntityOfPage <http://www.naturalis.nl/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Naturalis_Biodiversity_Center> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100013345> ;
+    schema:sameAs <https://grid.ac/institutions/grid.425948.6> ;
+    schema:sameAs <http://isni.org/isni/000000012159802X> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02wddde16> ;
+        rdfs:label "Distributed System of Scientific Collections" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(4.49306 52.15833)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(4.49306 52.15833)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Leiden" ;
             schema:addressCountry "NL" ;
-            owl:sameAs <http://sws.geonames.org/2751773/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/000000012159802X> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q641676> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "The Netherlands" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2751773/> ;
+    ] ; 
     .

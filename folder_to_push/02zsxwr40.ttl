@@ -4,27 +4,64 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02zsxwr40> a org:Organization ;
     rdfs:label "University of Alabama in Huntsville" ;
     schema:name "University of Alabama in Huntsville" ;
     schema:foundingDate "1950"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "UAH" ;
-    schema:url <http://www.uah.edu/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Alabama_in_Huntsville> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-09-16"^^xsd:date ;
+    org:abbreviation "UAH"@None ; 
+    schema:mainEntityOfPage <http://www.uah.edu/> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Alabama_in_Huntsville> ; 
+    schema:sameAs <https://api.crossref.org/funders/100011479> ;
+    schema:sameAs <https://grid.ac/institutions/grid.265893.3> ;
+    schema:sameAs <http://isni.org/isni/0000000087964945> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02rj8cx55> ;
+        rdfs:label "Alabama Space Grant Consortium" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01s3dpm97> ;
+        rdfs:label "National Space Science and Technology Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/051fvmk98> ;
+        rdfs:label "University of Alabama System" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02abb9a79> ;
+        rdfs:label "Severe Weather Institute - Radar & Lightning Laboratory" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-86.58594 34.7304)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-86.58594 34.7304)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Huntsville" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/4068590/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000087964945> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1783148> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/4068590/> ;
+    ] ; 
     .

@@ -4,24 +4,50 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/03z942k20> a org:Organization ;
     rdfs:label "Department of Education" ;
     schema:name "Department of Education" ;
     org:status "active" ;
-    org:classification "Government" ; 
-    org:alternativeName "Australian Department of Education" ;
-    schema:url <https://www.education.gov.au> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Department_of_Education_%28Australia%29> ;
+    org:classification "funder" ; 
+    org:classification "government" ; 
+    dct:created "2023-11-21"^^xsd:date ;
+    dct:modified "2024-09-16"^^xsd:date ;
+    org:alternativeName "Australian Department of Education"@en ; 
+    org:alternativeName "Department of Education, Australian Government"@en ; 
+    schema:mainEntityOfPage <https://www.education.gov.au> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Department_of_Education_%28Australia%29> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100003521> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01rde0531> ;
+        rdfs:label "Therapeutic Innovation Australia" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/000dfsq72> ;
+        rdfs:label "Office for Learning and Teaching" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(149.12807 -35.28346)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(149.12807 -35.28346)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Canberra" ;
             schema:addressCountry "AU" ;
-            owl:sameAs <http://sws.geonames.org/2172517/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://www.wikidata.org/entity/Q45134155> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Australia" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2172517/> ;
+    ] ; 
     .

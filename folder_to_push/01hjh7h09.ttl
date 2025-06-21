@@ -4,23 +4,42 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01hjh7h09> a org:Organization ;
     rdfs:label "Tecnológico de Estudios Superiores de Cuautitlán Izcalli" ;
     schema:name "Tecnológico de Estudios Superiores de Cuautitlán Izcalli" ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:alternativeName "TecNM Cuautitlán Izcalli" ;
-    schema:url <https://tesci.edomex.gob.mx> ; 
+    org:classification "education" ; 
+    dct:created "2024-03-28"^^xsd:date ;
+    dct:modified "2024-09-16"^^xsd:date ;
+    org:alternativeName "TecNM Cuautitlán Izcalli"@es ; 
+    org:alternativeName "Technology and Higher Education of Cuautitlan Izcalli"@en ; 
+    schema:mainEntityOfPage <https://tesci.edomex.gob.mx> ;
+    schema:sameAs <http://isni.org/isni/000000041770504X> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/00davry38> ;
+        rdfs:label "Tecnológico Nacional de México" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-99.21598 19.64388)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-99.21598 19.64388)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Cuautitlán Izcalli" ;
             schema:addressCountry "MX" ;
-            owl:sameAs <http://sws.geonames.org/3515807/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/000000041770504X> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Mexico" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3515807/> ;
+    ] ; 
     .

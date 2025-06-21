@@ -4,25 +4,38 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/04rtjaj74> a org:Organization ;
     rdfs:label "Health Data Research UK" ;
     schema:name "Health Data Research UK" ;
     schema:foundingDate "2017"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Nonprofit" ; 
-    org:abbreviation "HDRUK" ;
-    schema:url <https://www.hdruk.ac.uk> ; 
+    org:classification "nonprofit" ; 
+    dct:created "2019-11-07"^^xsd:date ;
+    dct:modified "2024-09-16"^^xsd:date ;
+    org:abbreviation "HDRUK"@None ; 
+    schema:mainEntityOfPage <https://www.hdruk.ac.uk> ;
+    schema:sameAs <https://api.crossref.org/funders/501100023699> ;
+    schema:sameAs <https://grid.ac/institutions/grid.507332.0> ;
+    schema:sameAs <http://isni.org/isni/000000049548940X> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-0.12574 51.50853)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-0.12574 51.50853)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "London" ;
             schema:addressCountry "GB" ;
-            owl:sameAs <http://sws.geonames.org/2643743/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/000000049548940X> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United Kingdom" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2643743/> ;
+    ] ; 
     .

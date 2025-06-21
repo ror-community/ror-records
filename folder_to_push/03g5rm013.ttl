@@ -1,0 +1,50 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/03g5rm013> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2024-09-14"^^xsd:date ;
+    dct:modified "2024-09-16"^^xsd:date ;
+    org:alternativeName "ATC Zaria"@en ; 
+    org:alternativeName "Advance Teachers' College Zaria"@en ; 
+    org:alternativeName "FCE Zaria"@en ; 
+    org:abbreviation "FCEZ"@en ; 
+    org:alternativeName "Northern Secondary Teachers’ College"@en ; 
+    schema:url <http://fcezaria.edu.ng> ; 
+    schema:mainEntityOfPage <https://fcezaria.edu.ng> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Federal_College_of_Education%2C_Zaria> ; 
+    schema:sameAs <http://isni.org/isni/0000000505244239> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/019apvn83> ;
+        rdfs:label "Ahmadu Bello University" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(8.59928 11.28272)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Tudun Wada" ;
+            schema:addressCountry "NG" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Nigeria" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/8633726/> ;
+    ] ; 
+    .

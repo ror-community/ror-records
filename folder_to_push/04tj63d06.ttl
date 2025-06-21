@@ -4,27 +4,100 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/04tj63d06> a org:Organization ;
     rdfs:label "North Carolina State University" ;
     schema:name "North Carolina State University" ;
     schema:foundingDate "1887"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "NCSU" ;
-    schema:url <https://www.ncsu.edu/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/North_Carolina_State_University> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-09-16"^^xsd:date ;
+    org:abbreviation "NCSU"@None ; 
+    schema:mainEntityOfPage <https://www.ncsu.edu/> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/North_Carolina_State_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/100007703> ;
+    schema:sameAs <https://grid.ac/institutions/grid.40803.3f> ;
+    schema:sameAs <http://isni.org/isni/0000000121736074> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04nv7tt16> ;
+        rdfs:label "Center for Dielectrics & Piezoelectrics" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01kgxxx41> ;
+        rdfs:label "North Carolina Sea Grant" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/058465397> ;
+        rdfs:label "North Carolina Space Grant Consortium" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03hakdk41> ;
+        rdfs:label "UNC/NCSU Joint Department of Biomedical Engineering" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02yjqwr70> ;
+        rdfs:label "Triangle Center for Evolutionary Medicine" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/009hmnr85> ;
+        rdfs:label "Southeast Climate Adaptation Science Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01s91ey96> ;
+        rdfs:label "Renaissance Computing Institute" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0568g2481> ;
+        rdfs:label "The Nonwovens Institute" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/0566a8c54> ;
+        rdfs:label "University of North Carolina System" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03mpd4h52> ;
+        rdfs:label "North Carolina State Climate Office" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-78.63861 35.7721)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-78.63861 35.7721)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Raleigh" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/4487042/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000121736074> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1132346> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/4487042/> ;
+    ] ; 
     .

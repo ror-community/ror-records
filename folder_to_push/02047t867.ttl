@@ -4,23 +4,43 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02047t867> a org:Organization ;
     rdfs:label "New Phytologist Foundation" ;
     schema:name "New Phytologist Foundation" ;
     org:status "active" ;
-    org:classification "Nonprofit" ; 
-    org:alternativeName "New Phytologist Trust" ;
-    schema:url <https://www.newphytologist.org> ; 
+    org:classification "funder" ; 
+    org:classification "nonprofit" ; 
+    dct:created "2023-08-30"^^xsd:date ;
+    dct:modified "2024-09-16"^^xsd:date ;
+    org:alternativeName "New Phytologist"@en ; 
+    org:alternativeName "New Phytologist Trust"@en ; 
+    schema:mainEntityOfPage <https://www.newphytologist.org> ;
+    schema:sameAs <https://api.crossref.org/funders/100014621> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/04f2nsd36> ;
+        rdfs:label "Lancaster University" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-2.79988 54.04649)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-2.79988 54.04649)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Lancaster" ;
             schema:addressCountry "GB" ;
-            owl:sameAs <http://sws.geonames.org/2644972/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://www.wikidata.org/entity/Q74530629> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United Kingdom" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2644972/> ;
+    ] ; 
     .

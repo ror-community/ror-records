@@ -1,0 +1,47 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/05jyayj71> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    org:status "active" ;
+    org:classification "healthcare" ; 
+    dct:created "2024-09-14"^^xsd:date ;
+    dct:modified "2024-09-16"^^xsd:date ;
+    org:alternativeName "NHO Saitama Hospital"@en ; 
+    org:alternativeName "Saitama Hospital"@en ; 
+    org:alternativeName "埼玉病院"@ja ; 
+    schema:url <http://saitama.hosp.go.jp> ; 
+    schema:mainEntityOfPage <https://saitama.hosp.go.jp> ;
+    owl:sameAs <https://ja.wikipedia.org/wiki/%E5%9B%BD%E7%AB%8B%E7%97%85%E9%99%A2%E6%A9%9F%E6%A7%8B%E5%9F%BC%E7%8E%89%E7%97%85%E9%99%A2> ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/03ntccx93> ;
+        rdfs:label "National Hospital Organization" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(139.65657 35.90807)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Saitama" ;
+            schema:addressCountry "JP" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Japan" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/6940394/> ;
+    ] ; 
+    .

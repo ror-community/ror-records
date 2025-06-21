@@ -4,22 +4,44 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/029r1ks56> a org:Organization ;
-    rdfs:label "Forestry Corporation" ;
-    schema:name "Forestry Corporation" ;
+    rdfs:label "" ;
+    schema:name "" ;
     org:status "active" ;
-    org:classification "Government" ; 
-    schema:url <http://www.forestrycorporation.com.au/> ; 
+    org:classification "funder" ; 
+    org:classification "government" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-09-16"^^xsd:date ;
+    org:alternativeName "Forestry Corporation"@en ; 
+    org:alternativeName "New South Wales Forestry Corporation"@en ; 
+    schema:mainEntityOfPage <http://www.forestrycorporation.com.au/> ;
+    schema:sameAs <https://api.crossref.org/funders/501100021781> ;
+    schema:sameAs <https://grid.ac/institutions/grid.473907.e> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/0067dvq63> ;
+        rdfs:label "Government of New South Wales" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(153.11351 -30.29626)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(153.11351 -30.29626)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Coffs Harbour" ;
             schema:addressCountry "AU" ;
-            owl:sameAs <http://sws.geonames.org/2171085/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Australia" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2171085/> ;
+    ] ; 
     .

@@ -4,27 +4,81 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01js2sh04> a org:Organization ;
     rdfs:label "Deutsches Elektronen-Synchrotron DESY" ;
     schema:name "Deutsches Elektronen-Synchrotron DESY" ;
     schema:foundingDate "1959"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    schema:url <http://www.desy.de/index_eng.html> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/DESY> ;
+    org:classification "facility" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-09-16"^^xsd:date ;
+    schema:mainEntityOfPage <http://www.desy.de/index_eng.html> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/DESY> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100001647> ;
+    schema:sameAs <https://grid.ac/institutions/grid.7683.a> ;
+    schema:sameAs <http://isni.org/isni/0000000404920453> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04fme8709> ;
+        rdfs:label "Center for Free-Electron Laser Science" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02zmk8084> ;
+        rdfs:label "John von Neumann Institute for Computing" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04fhwda97> ;
+        rdfs:label "Centre for Structural Systems Biology" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01wp2jz98> ;
+        rdfs:label "European X-Ray Free-Electron Laser" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/0281dp749> ;
+        rdfs:label "Helmholtz Association of German Research Centres" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/04wcn4e27> ;
+        rdfs:label "LEAPS" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02w0r2764> ;
+        rdfs:label "MAGIC Telescopes" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(9.99302 53.55073)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(9.99302 53.55073)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Hamburg" ;
             schema:addressCountry "DE" ;
-            owl:sameAs <http://sws.geonames.org/2911298/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000404920453> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q311801> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q39901428> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Germany" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2911298/> ;
+    ] ; 
     .

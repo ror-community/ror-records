@@ -1,0 +1,41 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/027xab135> a org:Organization ;
+    rdfs:label "Low Carbon Living CRC (Australia)" ;
+    schema:name "Low Carbon Living CRC (Australia)" ;
+    schema:foundingDate "2012"^^xsd:gYear ;
+    org:status "inactive" ;
+    org:classification "company" ; 
+    dct:created "2020-07-06"^^xsd:date ;
+    dct:modified "2024-09-16"^^xsd:date ;
+    org:abbreviation "CRCLCL"@None ; 
+    schema:mainEntityOfPage <http://www.lowcarbonlivingcrc.com.au/> ;
+    schema:sameAs <https://api.crossref.org/funders/100013336> ;
+    schema:sameAs <https://grid.ac/institutions/grid.507920.9> ;
+    schema:sameAs <http://isni.org/isni/0000000478603725> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(151.20732 -33.86785)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Sydney" ;
+            schema:addressCountry "AU" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Australia" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2147714/> ;
+    ] ; 
+    .

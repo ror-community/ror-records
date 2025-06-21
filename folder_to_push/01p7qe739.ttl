@@ -4,27 +4,64 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01p7qe739> a org:Organization ;
     rdfs:label "Tokai University" ;
     schema:name "Tokai University" ;
     schema:foundingDate "1942"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:alternativeName "Tōkai Daigaku" ;
-    schema:url <https://www.u-tokai.ac.jp> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Tokai_University> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-09-16"^^xsd:date ;
+    org:alternativeName "Tōkai Daigaku"@None ; 
+    schema:mainEntityOfPage <https://www.u-tokai.ac.jp> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Tokai_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100010655> ;
+    schema:sameAs <https://grid.ac/institutions/grid.265061.6> ;
+    schema:sameAs <http://isni.org/isni/0000000115166626> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00gr1q288> ;
+        rdfs:label "Tokai University Hachioji Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01gvmn480> ;
+        rdfs:label "Tokai University Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/034kd8j82> ;
+        rdfs:label "Tokai University Tokyo Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02w0r2764> ;
+        rdfs:label "MAGIC Telescopes" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(139.69171 35.6895)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(139.69171 35.6895)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Tokyo" ;
             schema:addressCountry "JP" ;
-            owl:sameAs <http://sws.geonames.org/1850147/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000115166626> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q963709> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Japan" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1850147/> ;
+    ] ; 
     .

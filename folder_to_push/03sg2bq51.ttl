@@ -4,28 +4,48 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/03sg2bq51> a org:Organization ;
     rdfs:label "Empire State University" ;
     schema:name "Empire State University" ;
     schema:foundingDate "1971"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "ESC" ;
-    org:alternativeName "SUNY Empire State University" ;
-    schema:url <https://www.sunyempire.edu> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Empire_State_College> ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-09-16"^^xsd:date ;
+    org:abbreviation "ESC"@None ; 
+    org:alternativeName "Empire State College"@en ; 
+    org:alternativeName "SUNY Empire State"@en ; 
+    org:alternativeName "SUNY Empire State University"@en ; 
+    org:alternativeName "State University of New York Empire State University"@en ; 
+    schema:mainEntityOfPage <https://www.sunyempire.edu> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Empire_State_College> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.451721.4> ;
+    schema:sameAs <http://isni.org/isni/0000000094089050> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/01q1z8k08> ;
+        rdfs:label "State University of New York" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-73.78457 43.08313)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-73.78457 43.08313)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Saratoga Springs" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/5136334/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000094089050> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q5374138> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/5136334/> ;
+    ] ; 
     .

@@ -1,0 +1,47 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/00nx0vn86> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "1995"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-09-16"^^xsd:date ;
+    org:abbreviation "IFT"@en ; 
+    org:abbreviation "IFTM"@en ; 
+    org:alternativeName "Institute for Tourism Studies"@en ; 
+    org:alternativeName "Instituto de Formação Turística"@pt ; 
+    org:abbreviation "UTM"@pt ; 
+    org:alternativeName "旅遊學院"@zh ; 
+    schema:url <http://utm.edu.mo> ; 
+    schema:mainEntityOfPage <https://www.utm.edu.mo> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Institute_for_Tourism_Studies> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.445016.2> ;
+    schema:sameAs <http://isni.org/isni/0000000406050308> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(113.54611 22.20056)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Macao" ;
+            schema:addressCountry "MO" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Macao" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1821274/> ;
+    ] ; 
+    .

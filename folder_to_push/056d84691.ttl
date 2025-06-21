@@ -4,28 +4,84 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/056d84691> a org:Organization ;
-    rdfs:label "Karolinska Institutet" ;
-    schema:name "Karolinska Institutet" ;
+    rdfs:label "" ;
+    schema:name "" ;
     schema:foundingDate "1810"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "KI" ;
-    org:alternativeName "Royal Caroline Institute" ;
-    schema:url <https://ki.se> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Karolinska_Institutet> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-09-16"^^xsd:date ;
+    org:abbreviation "KI"@None ; 
+    org:alternativeName "Karolinska Institute"@en ; 
+    org:alternativeName "Royal Caroline Institute"@en ; 
+    schema:mainEntityOfPage <https://ki.se> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Karolinska_Institutet> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100004047> ;
+    schema:sameAs <https://grid.ac/institutions/grid.4714.6> ;
+    schema:sameAs <http://isni.org/isni/0000000419370626> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01pgex273> ;
+        rdfs:label "Integrated Cardio Metabolic Centre" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03j0jxk49> ;
+        rdfs:label "Ming Wai Lau Centre for Reparative Medicine" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00dgqhm63> ;
+        rdfs:label "Center for Innovative Medicine" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00m8d6786> ;
+        rdfs:label "Karolinska University Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00enajs79> ;
+        rdfs:label "National Bioinformatics Infrastructure Sweden" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00ancw882> ;
+        rdfs:label "Swedish National Data Service" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/0221pcv84> ;
+        rdfs:label "Swedish Biodiversity Data Infrastructure" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(18.06871 59.32938)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(18.06871 59.32938)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Stockholm" ;
             schema:addressCountry "SE" ;
-            owl:sameAs <http://sws.geonames.org/2673730/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000419370626> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q219564> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Sweden" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2673730/> ;
+    ] ; 
     .

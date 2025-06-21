@@ -10,14 +10,20 @@
 <https://ror.org/01beh4y53> a org:Organization ;
     rdfs:label "" ;
     schema:name "" ;
-    org:status "active" ;
+    org:status "withdrawn" ;
     org:classification "company" ; 
     dct:created "2024-08-19"^^xsd:date ;
-    dct:modified "2024-08-21"^^xsd:date ;
+    dct:modified "2024-09-16"^^xsd:date ;
     org:alternativeName "Franklin Resources Inc"@en ; 
     schema:url <http://franklinresources.com> ; 
     schema:mainEntityOfPage <https://www.franklinresources.com> ;
     schema:sameAs <http://isni.org/isni/0000000115164647> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "successor" ;
+        org:member <https://ror.org/05ctx1h60> ;
+        rdfs:label "Franklin Templeton (United States)" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(-122.32553 37.56299)"^^geo:wktLiteral ;

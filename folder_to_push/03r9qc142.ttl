@@ -4,26 +4,57 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/03r9qc142> a org:Organization ;
     rdfs:label "UCL Biomedical Research Centre" ;
     schema:name "UCL Biomedical Research Centre" ;
     schema:foundingDate "2007"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Healthcare" ; 
-    org:alternativeName "NIHR Biomedical Research Centre at University College London Hospitals NHS Foundation Trust and University College London" ;
-    schema:url <http://www.uclhospitals.brc.nihr.ac.uk/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/UCLH/UCL_Biomedical_Research_Centre> ;
+    org:classification "funder" ; 
+    org:classification "healthcare" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-09-16"^^xsd:date ;
+    org:alternativeName "NIHR Biomedical Research Centre at University College London Hospitals NHS Foundation Trust and University College London"@en ; 
+    schema:mainEntityOfPage <http://www.uclhospitals.brc.nihr.ac.uk/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/UCLH/UCL_Biomedical_Research_Centre> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100012317> ;
+    schema:sameAs <https://grid.ac/institutions/grid.485385.7> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/0187kwz08> ;
+        rdfs:label "National Institute for Health Research" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02jx3x895> ;
+        rdfs:label "University College London" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/042fqyp44> ;
+        rdfs:label "University College London Hospitals NHS Foundation Trust" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-0.12574 51.50853)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-0.12574 51.50853)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "London" ;
             schema:addressCountry "GB" ;
-            owl:sameAs <http://sws.geonames.org/2643743/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://www.wikidata.org/entity/Q7864056> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United Kingdom" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2643743/> ;
+    ] ; 
     .

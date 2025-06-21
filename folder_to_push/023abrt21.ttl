@@ -1,0 +1,42 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/023abrt21> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "2004"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-09-16"^^xsd:date ;
+    org:abbreviation "AAU"@None ; 
+    org:alternativeName "Al Ain University of Science and Technology"@en ; 
+    schema:mainEntityOfPage <http://aau.ac.ae/en/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Al_Ain_University_of_Science_and_Technology> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.444473.4> ;
+    schema:sameAs <http://isni.org/isni/0000000417629411> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(55.76056 24.19167)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Al Ain" ;
+            schema:addressCountry "AE" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United Arab Emirates" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/292913/> ;
+    ] ; 
+    .

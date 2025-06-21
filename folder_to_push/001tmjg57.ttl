@@ -4,27 +4,100 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/001tmjg57> a org:Organization ;
     rdfs:label "University of Kansas" ;
     schema:name "University of Kansas" ;
     schema:foundingDate "1865"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "KU" ;
-    schema:url <http://www.ku.edu/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Kansas> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-09-16"^^xsd:date ;
+    org:abbreviation "KU"@None ; 
+    schema:mainEntityOfPage <http://www.ku.edu/> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Kansas> ; 
+    schema:sameAs <https://api.crossref.org/funders/100007859> ;
+    schema:sameAs <https://grid.ac/institutions/grid.266515.3> ;
+    schema:sameAs <http://isni.org/isni/0000000121060692> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05g3bg079> ;
+        rdfs:label "KU Endowment" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04t2m2598> ;
+        rdfs:label "Center for Remote Sensing and Integrated Systems" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/04zfmcq84> ;
+        rdfs:label "Children's Mercy Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03jb9b006> ;
+        rdfs:label "Dwight D. Eisenhower VA Medical Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/050mdr969> ;
+        rdfs:label "Kansas City VA Medical Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05kg11974> ;
+        rdfs:label "The University of Kansas Health System" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/036c9yv20> ;
+        rdfs:label "University of Kansas Medical Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00ftebr67> ;
+        rdfs:label "Wesley Medical Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02wavzm11> ;
+        rdfs:label "Konza Prairie Long Term Ecological Research" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04mxhn923> ;
+        rdfs:label "Kansas Geological Survey" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-95.23525 38.97167)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-95.23525 38.97167)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Lawrence" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/4274277/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000121060692> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q52413> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/4274277/> ;
+    ] ; 
     .

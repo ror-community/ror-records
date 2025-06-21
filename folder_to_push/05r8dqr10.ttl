@@ -4,26 +4,50 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/05r8dqr10> a org:Organization ;
     rdfs:label "University of Rijeka" ;
     schema:name "University of Rijeka" ;
     schema:foundingDate "1973"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    schema:url <https://www.uniri.hr/index.php?lang=en> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Rijeka> ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-09-16"^^xsd:date ;
+    schema:mainEntityOfPage <https://www.uniri.hr/index.php?lang=en> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Rijeka> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100023652> ;
+    schema:sameAs <https://grid.ac/institutions/grid.22939.33> ;
+    schema:sameAs <http://isni.org/isni/0000000122361630> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/027wyhf03> ;
+        rdfs:label "Klinički Bolnički Centar Rijeka" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02w0r2764> ;
+        rdfs:label "MAGIC Telescopes" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(14.44241 45.32673)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(14.44241 45.32673)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Rijeka" ;
             schema:addressCountry "HR" ;
-            owl:sameAs <http://sws.geonames.org/3191648/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000122361630> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q787388> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Croatia" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3191648/> ;
+    ] ; 
     .

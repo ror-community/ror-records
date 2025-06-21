@@ -1,0 +1,61 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/05nne8c43> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "2015"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "funder" ; 
+    org:classification "government" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-09-16"^^xsd:date ;
+    org:alternativeName "Department of Education"@en ; 
+    org:alternativeName "NSW Technical and Further Education"@en ; 
+    org:alternativeName "New South Wales Department of Education"@en ; 
+    org:alternativeName "New South Wales Technical and Further Education"@en ; 
+    org:abbreviation "TAFE"@None ; 
+    org:alternativeName "Technical and Further Education"@en ; 
+    schema:url <http://education.nsw.gov.au> ; 
+    schema:mainEntityOfPage <https://education.nsw.gov.au> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Department_of_Education_(New_South_Wales)> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100001101> ;
+    schema:sameAs <https://grid.ac/institutions/grid.461941.f> ;
+    schema:sameAs <http://isni.org/isni/0000000107038464> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/0067dvq63> ;
+        rdfs:label "Government of New South Wales" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/025rgte66> ;
+        rdfs:label "NSW Office for Learning and Teaching" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(151.20732 -33.86785)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Sydney" ;
+            schema:addressCountry "AU" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Australia" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2147714/> ;
+    ] ; 
+    .

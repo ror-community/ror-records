@@ -4,31 +4,88 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02ryfmr77> a org:Organization ;
     rdfs:label "Université des Antilles" ;
     schema:name "Université des Antilles" ;
     schema:foundingDate "1850"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "UAG" ;
-    org:alternativeName "University of the French West Indies" ;
-    schema:url <http://www.univ-ag.fr/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/University_of_the_French_Antilles> ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-09-16"^^xsd:date ;
+    org:abbreviation "UAG"@None ; 
+    org:alternativeName "University of the French West Indies"@en ; 
+    org:alternativeName "University of the French West Indies and Guiana"@en ; 
+    schema:mainEntityOfPage <http://www.univ-ag.fr/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/University_of_the_French_Antilles> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.412130.5> ;
+    schema:sameAs <http://isni.org/isni/0000000121973053> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/048cbmc89> ;
+        rdfs:label "Biologie Intégrée du Globule Rouge" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01tp1c480> ;
+        rdfs:label "Biologie des Organismes et Écosystèmes Aquatiques" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/024gts110> ;
+        rdfs:label "Géosciences Montpellier" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00srrcb42> ;
+        rdfs:label "Laboratoire Caribéen de Sciences Sociales" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/029hdt144> ;
+        rdfs:label "Centre d'Investigation Clinique Antilles Guyane" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01z485314> ;
+        rdfs:label "UMR Espace-Dev" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01dadvw90> ;
+        rdfs:label "Institut de Systématique, Évolution, Biodiversité" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01yw9jt43> ;
+        rdfs:label "Pathogenesis and Control of Chronic and Emerging Infections" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-61.53614 16.24125)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-61.53614 16.24125)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Pointe-à-Pitre" ;
             schema:addressCountry "GP" ;
-            owl:sameAs <http://sws.geonames.org/3578599/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000121973053> ;
-    schema:sameAs <http://isni.org/isni/0000000405935227> ;
-    schema:sameAs <http://isni.org/isni/0000000494712972> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q829169> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q16682075> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Guadeloupe" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3578599/> ;
+    ] ; 
     .

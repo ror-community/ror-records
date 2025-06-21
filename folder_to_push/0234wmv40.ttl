@@ -4,26 +4,50 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/0234wmv40> a org:Organization ;
     rdfs:label "University of Bayreuth" ;
     schema:name "University of Bayreuth" ;
     schema:foundingDate "1975"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    schema:url <http://www.en.uni-bayreuth.de/home/index.html> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Bayreuth> ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-09-16"^^xsd:date ;
+    schema:mainEntityOfPage <http://www.en.uni-bayreuth.de/home/index.html> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Bayreuth> ; 
+    schema:sameAs <https://api.crossref.org/funders/100020618> ;
+    schema:sameAs <https://grid.ac/institutions/grid.7384.8> ;
+    schema:sameAs <http://isni.org/isni/0000000404676972> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/054zwas39> ;
+        rdfs:label "Bavarian Polymer Institute" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03z8vj775> ;
+        rdfs:label "BF/M-Bayreuth" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(11.57893 49.94782)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(11.57893 49.94782)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Bayreuth" ;
             schema:addressCountry "DE" ;
-            owl:sameAs <http://sws.geonames.org/2951825/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000404676972> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q702482> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Germany" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2951825/> ;
+    ] ; 
     .

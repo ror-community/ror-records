@@ -1,0 +1,46 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/03csmp942> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "1966"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2024-09-14"^^xsd:date ;
+    dct:modified "2024-09-16"^^xsd:date ;
+    org:abbreviation "NIAMT"@en ; 
+    org:abbreviation "NIFFT"@en ; 
+    org:alternativeName "National Institute of Foundry and Forge Technology"@en ; 
+    org:abbreviation "एनआईएएमटी"@hi ; 
+    org:alternativeName "नेशनल इंस्टीट्यूट ऑफ फाउंड्री एंड फोर्ज टेक्नोलॉजी"@hi ; 
+    schema:url <http://niamt.ac.in> ; 
+    schema:url <http://nifft.ac.in> ; 
+    schema:mainEntityOfPage <https://www.niamt.ac.in> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/National_Institute_of_Advanced_Manufacturing_Technology> ; 
+    schema:sameAs <http://isni.org/isni/0000000404975614> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(85.3094 23.34316)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Ranchi" ;
+            schema:addressCountry "IN" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "India" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1258526/> ;
+    ] ; 
+    .

@@ -1,0 +1,61 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/03t78wx29> a org:Organization ;
+    rdfs:label "Hiroshima University" ;
+    schema:name "Hiroshima University" ;
+    schema:foundingDate "1929"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-09-16"^^xsd:date ;
+    org:alternativeName "Hiroshima Daigaku"@None ; 
+    schema:mainEntityOfPage <http://www.hiroshima-u.ac.jp/index.html> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Hiroshima_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100003790> ;
+    schema:sameAs <https://grid.ac/institutions/grid.257022.0> ;
+    schema:sameAs <http://isni.org/isni/0000000087113200> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01rrd4612> ;
+        rdfs:label "Hiroshima Prefectural Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/038dg9e86> ;
+        rdfs:label "Hiroshima University Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02w0r2764> ;
+        rdfs:label "MAGIC Telescopes" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(132.45 34.4)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Hiroshima" ;
+            schema:addressCountry "JP" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Japan" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1862415/> ;
+    ] ; 
+    .

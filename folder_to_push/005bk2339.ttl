@@ -4,26 +4,55 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/005bk2339> a org:Organization ;
     rdfs:label "Max Planck Institute for Solid State Research" ;
     schema:name "Max Planck Institute for Solid State Research" ;
     schema:foundingDate "1969"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    schema:url <http://www.fkf.mpg.de/en> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Max_Planck_Institute_for_Solid_State_Research> ;
+    org:classification "facility" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-09-16"^^xsd:date ;
+    schema:mainEntityOfPage <http://www.fkf.mpg.de/en> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Max_Planck_Institute_for_Solid_State_Research> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.419552.e> ;
+    schema:sameAs <http://isni.org/isni/0000000110156736> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01z25am55> ;
+        rdfs:label "Center for Integrated Quantum Science and Technology" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/010c2rf19> ;
+        rdfs:label "Max Planck Institutes for Intelligent Systems & Solid State Research Library" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/01hhn8329> ;
+        rdfs:label "Max Planck Society" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(9.17702 48.78232)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(9.17702 48.78232)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Stuttgart" ;
             schema:addressCountry "DE" ;
-            owl:sameAs <http://sws.geonames.org/2825297/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000110156736> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q835529> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Germany" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2825297/> ;
+    ] ; 
     .

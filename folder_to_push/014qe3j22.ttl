@@ -4,24 +4,43 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/014qe3j22> a org:Organization ;
     rdfs:label "Stanford Cancer Institute" ;
     schema:name "Stanford Cancer Institute" ;
     schema:foundingDate "2003"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Healthcare" ; 
-    schema:url <https://med.stanford.edu/cancer.html> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Stanford_Cancer_Institute> ;
+    org:classification "healthcare" ; 
+    dct:created "2023-12-20"^^xsd:date ;
+    dct:modified "2024-09-16"^^xsd:date ;
+    schema:mainEntityOfPage <https://med.stanford.edu/cancer.html> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Stanford_Cancer_Institute> ; 
+    schema:sameAs <https://api.crossref.org/funders/100014549> ;
+    schema:sameAs <http://isni.org/isni/0000000406378186> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/03mtd9a03> ;
+        rdfs:label "Stanford Medicine" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-122.14302 37.44188)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-122.14302 37.44188)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Palo Alto" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/5380748/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000406378186> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/5380748/> ;
+    ] ; 
     .

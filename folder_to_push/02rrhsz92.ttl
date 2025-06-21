@@ -4,27 +4,48 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02rrhsz92> a org:Organization ;
-    rdfs:label "SUNY College at Old Westbury" ;
-    schema:name "SUNY College at Old Westbury" ;
+    rdfs:label "" ;
+    schema:name "" ;
     schema:foundingDate "1965"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:alternativeName "State University of New York College at Old Westbury" ;
-    schema:url <http://www.oldwestbury.edu/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/State_University_of_New_York_at_Old_Westbury> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-09-16"^^xsd:date ;
+    org:alternativeName "SUNY College at Old Westbury"@en ; 
+    org:alternativeName "State University of New York College at Old Westbury"@en ; 
+    schema:url <http://oldwestbury.edu> ; 
+    schema:mainEntityOfPage <https://www.oldwestbury.edu> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/State_University_of_New_York_at_Old_Westbury> ; 
+    schema:sameAs <https://api.crossref.org/funders/100010964> ;
+    schema:sameAs <https://grid.ac/institutions/grid.264271.4> ;
+    schema:sameAs <http://isni.org/isni/0000000098277702> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/01q1z8k08> ;
+        rdfs:label "State University of New York" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-73.59957 40.78871)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-73.59957 40.78871)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Old Westbury" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/5129770/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000098277702> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q7603624> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/5129770/> ;
+    ] ; 
     .

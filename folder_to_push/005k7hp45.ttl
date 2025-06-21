@@ -4,28 +4,59 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/005k7hp45> a org:Organization ;
     rdfs:label "Medical University of Silesia" ;
     schema:name "Medical University of Silesia" ;
     schema:foundingDate "1948"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "SUM" ;
-    org:alternativeName "Śląski Uniwersytet Medyczny" ;
-    schema:url <http://www.sum.edu.pl/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Medical_University_of_Silesia> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-09-16"^^xsd:date ;
+    org:abbreviation "SUM"@None ; 
+    org:alternativeName "Śląski Uniwersytet Medyczny"@pl ; 
+    schema:mainEntityOfPage <http://www.sum.edu.pl/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Medical_University_of_Silesia> ; 
+    schema:sameAs <https://api.crossref.org/funders/100007771> ;
+    schema:sameAs <https://grid.ac/institutions/grid.411728.9> ;
+    schema:sameAs <http://isni.org/isni/0000000121980923> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/0110em457> ;
+        rdfs:label "Górnośląskie Centrum Medyczne" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03dp8bn13> ;
+        rdfs:label "Kingsbrook Jewish Medical Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00f5hjx88> ;
+        rdfs:label "Górnośląskie Centrum Zdrowia Dziecka w Katowicach" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(19.02754 50.25841)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(19.02754 50.25841)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Katowice" ;
             schema:addressCountry "PL" ;
-            owl:sameAs <http://sws.geonames.org/3096472/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000121980923> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q2239217> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Poland" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3096472/> ;
+    ] ; 
     .

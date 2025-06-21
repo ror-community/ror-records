@@ -4,27 +4,47 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/051awsb83> a org:Organization ;
     rdfs:label "Tompkins Cortland Community College" ;
     schema:name "Tompkins Cortland Community College" ;
     schema:foundingDate "1968"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "TC3" ;
-    schema:url <http://www.tc3.edu/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Tompkins_Cortland_Community_College> ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-09-16"^^xsd:date ;
+    org:alternativeName "SUNY Tompkins Cortland Community College"@en ; 
+    org:alternativeName "State University of New York Tompkins Cortland Community College"@en ; 
+    org:abbreviation "TC3"@None ; 
+    schema:url <http://tompkinscortland.edu> ; 
+    schema:mainEntityOfPage <https://www.tompkinscortland.edu> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Tompkins_Cortland_Community_College> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.427619.f> ;
+    schema:sameAs <http://isni.org/isni/0000000403884235> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/01q1z8k08> ;
+        rdfs:label "State University of New York" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-76.29716 42.49091)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-76.29716 42.49091)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Dryden" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/5115374/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000403884235> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q7820362> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/5115374/> ;
+    ] ; 
     .

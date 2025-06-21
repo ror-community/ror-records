@@ -1,0 +1,73 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/02we8vm03> a org:Organization ;
+    rdfs:label "Fiat Chrysler Automobiles (United Kingdom)" ;
+    schema:name "Fiat Chrysler Automobiles (United Kingdom)" ;
+    schema:foundingDate "2014"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "company" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-09-16"^^xsd:date ;
+    org:abbreviation "FCA"@None ; 
+    org:alternativeName "Fiat Group Automobiles"@None ; 
+    schema:mainEntityOfPage <https://www.fcagroup.com/en-US/Pages/home.aspx> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Fiat_Chrysler_Automobiles> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100019240> ;
+    schema:sameAs <https://grid.ac/institutions/grid.497108.3> ;
+    schema:sameAs <http://isni.org/isni/0000000449019482> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04fyd6s73> ;
+        rdfs:label "Fiat Chrysler Automobiles (France)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03n3c3r21> ;
+        rdfs:label "Fiat Chrysler Automobiles (Germany)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/005m6rn77> ;
+        rdfs:label "Fiat Chrysler Automobiles (Italy)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/058zth179> ;
+        rdfs:label "Fiat Chrysler Automobiles (Japan)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03qxrge70> ;
+        rdfs:label "Fiat Chrysler Automobiles (United States)" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-0.12574 51.50853)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "London" ;
+            schema:addressCountry "GB" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United Kingdom" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2643743/> ;
+    ] ; 
+    .

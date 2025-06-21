@@ -4,27 +4,58 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/037cnag11> a org:Organization ;
     rdfs:label "University of Missouri–St. Louis" ;
     schema:name "University of Missouri–St. Louis" ;
     schema:foundingDate "1960"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "UMSL" ;
-    schema:url <http://www.umsl.edu/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Missouri%E2%80%93St._Louis> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-09-16"^^xsd:date ;
+    org:abbreviation "UMSL"@None ; 
+    schema:mainEntityOfPage <http://www.umsl.edu/> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Missouri%E2%80%93St._Louis> ; 
+    schema:sameAs <https://api.crossref.org/funders/100006818> ;
+    schema:sameAs <https://grid.ac/institutions/grid.266757.7> ;
+    schema:sameAs <http://isni.org/isni/0000000114809378> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04e6zkc05> ;
+        rdfs:label "Whitney R. Harris World Ecology Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/032va1j59> ;
+        rdfs:label "University of Missouri System" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/0573j3j10> ;
+        rdfs:label "Taylor Geospatial Institute" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-90.19789 38.62727)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-90.19789 38.62727)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "St Louis" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/4407066/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000114809378> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q625103> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/4407066/> ;
+    ] ; 
     .

@@ -1,0 +1,45 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/02egcpy68> a org:Organization ;
+    rdfs:label "Indian Institute of Management Ahmedabad" ;
+    schema:name "Indian Institute of Management Ahmedabad" ;
+    schema:foundingDate "1961"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-09-16"^^xsd:date ;
+    org:alternativeName "IIM Ahmedabad"@None ; 
+    org:abbreviation "IIMA"@None ; 
+    schema:url <http://iima.ac.in> ; 
+    schema:mainEntityOfPage <https://www.iima.ac.in> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Indian_Institute_of_Management_Ahmedabad> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100002381> ;
+    schema:sameAs <https://grid.ac/institutions/grid.418226.b> ;
+    schema:sameAs <http://isni.org/isni/0000000092441719> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(72.58727 23.02579)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Ahmedabad" ;
+            schema:addressCountry "IN" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "India" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1279233/> ;
+    ] ; 
+    .

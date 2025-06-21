@@ -4,27 +4,46 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/03w9e3r89> a org:Organization ;
     rdfs:label "Rockland Community College" ;
     schema:name "Rockland Community College" ;
     schema:foundingDate "1959"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "RCC" ;
-    schema:url <http://www.sunyrockland.edu/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Rockland_Community_College> ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-09-16"^^xsd:date ;
+    org:abbreviation "RCC"@None ; 
+    org:alternativeName "SUNY Rockland Community College"@en ; 
+    org:alternativeName "State University of New York Rockland Community College"@en ; 
+    schema:mainEntityOfPage <http://www.sunyrockland.edu/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Rockland_Community_College> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.447338.f> ;
+    schema:sameAs <http://isni.org/isni/000000009201678X> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/01q1z8k08> ;
+        rdfs:label "State University of New York" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-74.14959 41.11482)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-74.14959 41.11482)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Suffern" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/5140072/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/000000009201678X> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q7355439> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/5140072/> ;
+    ] ; 
     .

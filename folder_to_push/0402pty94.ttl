@@ -4,25 +4,41 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/0402pty94> a org:Organization ;
     rdfs:label "University of Chemical Technology and Metallurgy" ;
     schema:name "University of Chemical Technology and Metallurgy" ;
     schema:foundingDate "1945"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "UCTM" ;
-    schema:url <http://dl.uctm.edu/en/> ; 
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-09-16"^^xsd:date ;
+    org:abbreviation "UCTM"@en ; 
+    org:abbreviation "ХТМУ"@bg ; 
+    schema:url <http://uctm.edu> ; 
+    schema:mainEntityOfPage <https://uctm.edu> ;
+    schema:sameAs <https://api.crossref.org/funders/501100010597> ;
+    schema:sameAs <https://grid.ac/institutions/grid.8905.4> ;
+    schema:sameAs <http://isni.org/isni/0000000110154247> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(23.32415 42.69751)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(23.32415 42.69751)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Sofia" ;
             schema:addressCountry "BG" ;
-            owl:sameAs <http://sws.geonames.org/727011/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000110154247> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Bulgaria" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/727011/> ;
+    ] ; 
     .

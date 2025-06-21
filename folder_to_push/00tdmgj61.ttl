@@ -4,27 +4,47 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/00tdmgj61> a org:Organization ;
     rdfs:label "SUNY Canton" ;
     schema:name "SUNY Canton" ;
     schema:foundingDate "1906"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:alternativeName "State University of New York at Canton" ;
-    schema:url <http://www.canton.edu/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/State_University_of_New_York_at_Canton> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-09-16"^^xsd:date ;
+    org:alternativeName "State University of New York at Canton"@en ; 
+    schema:url <http://canton.edu> ; 
+    schema:mainEntityOfPage <https://www.canton.edu> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/State_University_of_New_York_at_Canton> ; 
+    schema:sameAs <https://api.crossref.org/funders/100010960> ;
+    schema:sameAs <https://grid.ac/institutions/grid.430477.3> ;
+    schema:sameAs <http://isni.org/isni/0000000403877959> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/01q1z8k08> ;
+        rdfs:label "State University of New York" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-75.16909 44.59562)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-75.16909 44.59562)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Canton" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/5111484/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000403877959> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q7603620> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/5111484/> ;
+    ] ; 
     .

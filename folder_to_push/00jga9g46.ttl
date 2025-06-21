@@ -4,27 +4,46 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/00jga9g46> a org:Organization ;
-    rdfs:label "T.C. Millî Eğitim Bakanlığı" ;
-    schema:name "T.C. Millî Eğitim Bakanlığı" ;
+    rdfs:label "" ;
+    schema:name "" ;
     schema:foundingDate "1920"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Government" ; 
-    org:alternativeName "T.C. Milli Egitim Bakanligi" ;
-    schema:url <https://www.meb.gov.tr> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Ministry_of_National_Education_(Turkey)> ;
+    org:classification "funder" ; 
+    org:classification "government" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-09-16"^^xsd:date ;
+    org:alternativeName "Milli Egitim Bakanligi"@tr ; 
+    org:alternativeName "Ministry of National Education"@en ; 
+    org:alternativeName "T.C. Milli Egitim Bakanligi"@tr ; 
+    org:alternativeName "T.C. Millî Eğitim Bakanlığı"@tr ; 
+    org:alternativeName "Turkish Ministry of National Education"@en ; 
+    org:alternativeName "Türkiye Cumhuriyeti Millî Eğitim Bakanlığı"@tr ; 
+    schema:url <http://meb.gov.tr> ; 
+    schema:mainEntityOfPage <https://www.meb.gov.tr> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Ministry_of_National_Education_(Turkey)> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100013898> ;
+    schema:sameAs <https://grid.ac/institutions/grid.436380.a> ;
+    schema:sameAs <http://isni.org/isni/0000000121794856> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(32.85427 39.91987)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(32.85427 39.91987)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Ankara" ;
             schema:addressCountry "TR" ;
-            owl:sameAs <http://sws.geonames.org/323786/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000121794856> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1359675> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Türkiye" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/323786/> ;
+    ] ; 
     .

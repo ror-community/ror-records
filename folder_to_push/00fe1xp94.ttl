@@ -1,0 +1,51 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/00fe1xp94> a org:Organization ;
+    rdfs:label "Alfred State College" ;
+    schema:name "Alfred State College" ;
+    schema:foundingDate "1908"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-09-16"^^xsd:date ;
+    org:alternativeName "Alfred State College of Technology"@en ; 
+    org:alternativeName "SUNY Alfred"@en ; 
+    org:alternativeName "SUNY College of Technology at Alfred"@en ; 
+    org:alternativeName "State University of New York College of Technology at Alfred"@en ; 
+    schema:url <http://alfredstate.edu> ; 
+    schema:mainEntityOfPage <https://www.alfredstate.edu> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Alfred_State_College> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.422692.9> ;
+    schema:sameAs <http://isni.org/isni/000000040387677X> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/01q1z8k08> ;
+        rdfs:label "State University of New York" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-77.79055 42.25424)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Alfred" ;
+            schema:addressCountry "US" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/5106955/> ;
+    ] ; 
+    .

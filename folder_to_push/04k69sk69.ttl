@@ -1,0 +1,42 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/04k69sk69> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "2019"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2024-09-14"^^xsd:date ;
+    dct:modified "2024-09-16"^^xsd:date ;
+    org:alternativeName "Charutar Vidya Mandal University"@en ; 
+    org:alternativeName "The CVM University"@en ; 
+    org:alternativeName "ધ ચારુતર વિદ્યા મંડળ યુનિવર્સિટી"@gu ; 
+    schema:url <http://cvmu.edu.in> ; 
+    schema:mainEntityOfPage <https://www.cvmu.edu.in> ;
+    schema:sameAs <http://isni.org/isni/0000000417761690> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(72.9 22.53333)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Vallabh Vidyanagar" ;
+            schema:addressCountry "IN" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "India" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1253482/> ;
+    ] ; 
+    .

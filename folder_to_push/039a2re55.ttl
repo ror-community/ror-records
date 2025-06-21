@@ -4,27 +4,47 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/039a2re55> a org:Organization ;
     rdfs:label "St. Pölten University of Applied Sciences" ;
     schema:name "St. Pölten University of Applied Sciences" ;
     schema:foundingDate "1993"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:alternativeName "St. Pölten UAS" ;
-    schema:url <http://english.fhstp.ac.at/index> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/St._P%C3%B6lten_University_of_Applied_Sciences> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-09-16"^^xsd:date ;
+    org:alternativeName "St. Pölten UAS"@de ; 
+    schema:url <http://fhstp.ac.at> ; 
+    schema:mainEntityOfPage <https://www.fhstp.ac.at> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/St._P%C3%B6lten_University_of_Applied_Sciences> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100018801> ;
+    schema:sameAs <https://grid.ac/institutions/grid.434096.c> ;
+    schema:sameAs <http://isni.org/isni/0000000121909211> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04rq2jb11> ;
+        rdfs:label "Carl Ritter von Ghega Institute for Integrated Mobility Research" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(15.63333 48.2)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(15.63333 48.2)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "St. Pölten" ;
             schema:addressCountry "AT" ;
-            owl:sameAs <http://sws.geonames.org/2766429/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000121909211> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1391228> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Austria" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2766429/> ;
+    ] ; 
     .

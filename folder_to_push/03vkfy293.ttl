@@ -1,0 +1,48 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/03vkfy293> a org:Organization ;
+    rdfs:label "Central Institute of Mining and Fuel Research" ;
+    schema:name "Central Institute of Mining and Fuel Research" ;
+    org:status "active" ;
+    org:classification "facility" ; 
+    dct:created "2019-05-06"^^xsd:date ;
+    dct:modified "2024-09-16"^^xsd:date ;
+    org:abbreviation "CIMFR"@None ; 
+    org:alternativeName "Central Fuel Research Institute"@en ; 
+    org:alternativeName "Central Mining Research Institute"@en ; 
+    schema:mainEntityOfPage <http://cimfr.nic.in/profileglance.html> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Central_Institute_of_Mining_and_Fuel_Research> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100010062> ;
+    schema:sameAs <https://grid.ac/institutions/grid.505934.e> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/021wm7p51> ;
+        rdfs:label "Council of Scientific and Industrial Research" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(86.42992 23.79759)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Dhanbad" ;
+            schema:addressCountry "IN" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "India" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1272979/> ;
+    ] ; 
+    .

@@ -4,27 +4,54 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/05a4pj207> a org:Organization ;
-    rdfs:label "State University of New York College at Cortland" ;
-    schema:name "State University of New York College at Cortland" ;
+    rdfs:label "" ;
+    schema:name "" ;
     schema:foundingDate "1868"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:alternativeName "SUNY Cortland" ;
-    schema:url <http://www2.cortland.edu/home/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/State_University_of_New_York_at_Cortland> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-09-16"^^xsd:date ;
+    org:alternativeName "SUNY Cortland"@en ; 
+    org:alternativeName "State University of New York College at Cortland"@en ; 
+    schema:url <http://cortland.edu> ; 
+    schema:mainEntityOfPage <https://www2.cortland.edu> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/State_University_of_New_York_at_Cortland> ; 
+    schema:sameAs <https://api.crossref.org/funders/100010962> ;
+    schema:sameAs <https://grid.ac/institutions/grid.264266.2> ;
+    schema:sameAs <http://isni.org/isni/0000000093400716> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/01q1z8k08> ;
+        rdfs:label "State University of New York" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05cshtm26> ;
+        rdfs:label "Great Lakes Research Consortium" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-76.18048 42.60118)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-76.18048 42.60118)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Cortland" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/5113790/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000093400716> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q7603623> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/5113790/> ;
+    ] ; 
     .

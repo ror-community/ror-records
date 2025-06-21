@@ -4,27 +4,56 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/03g1q6c06> a org:Organization ;
-    rdfs:label "State University of New York at Geneseo" ;
-    schema:name "State University of New York at Geneseo" ;
+    rdfs:label "" ;
+    schema:name "" ;
     schema:foundingDate "1871"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:alternativeName "State University of New York-College at Geneseo" ;
-    schema:url <http://www.geneseo.edu/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/State_University_of_New_York_at_Geneseo> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-09-16"^^xsd:date ;
+    org:alternativeName "SUNY Geneseo"@en ; 
+    org:alternativeName "State University of New York at Geneseo"@en ; 
+    org:alternativeName "State University of New York-College at Geneseo"@en ; 
+    org:alternativeName "Wadsworth Normal and Training School"@en ; 
+    schema:url <http://geneseo.edu> ; 
+    schema:mainEntityOfPage <https://www.geneseo.edu> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/State_University_of_New_York_at_Geneseo> ; 
+    schema:sameAs <https://api.crossref.org/funders/100008679> ;
+    schema:sameAs <https://grid.ac/institutions/grid.264269.d> ;
+    schema:sameAs <http://isni.org/isni/0000000101510940> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/01q1z8k08> ;
+        rdfs:label "State University of New York" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05cshtm26> ;
+        rdfs:label "Great Lakes Research Consortium" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-77.81695 42.7959)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-77.81695 42.7959)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Geneseo" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/5118394/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000101510940> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q6149540> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/5118394/> ;
+    ] ; 
     .

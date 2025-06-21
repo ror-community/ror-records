@@ -1,0 +1,41 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/04yqcxp07> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "2021"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "company" ; 
+    dct:created "2024-09-14"^^xsd:date ;
+    dct:modified "2024-09-16"^^xsd:date ;
+    org:alternativeName "QS Labs"@en ; 
+    org:alternativeName "Quantum Source Labs"@en ; 
+    org:alternativeName "קוואנטום סורס לאבס בע"מ"@he ; 
+    schema:url <http://qs-labs.com> ; 
+    schema:mainEntityOfPage <https://www.qs-labs.com> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(34.79868 31.92933)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Ness Ziona" ;
+            schema:addressCountry "IL" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Israel" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/294074/> ;
+    ] ; 
+    .

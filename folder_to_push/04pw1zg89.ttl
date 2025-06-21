@@ -14,10 +14,10 @@
     org:status "active" ;
     org:classification "facility" ; 
     dct:created "2023-09-21"^^xsd:date ;
-    dct:modified "2024-05-02"^^xsd:date ;
+    dct:modified "2024-09-16"^^xsd:date ;
     org:abbreviation "PARADIM MIP"@None ; 
-    org:alternativeName "PARADIM Materials Innovation Platform"@None ; 
-    org:alternativeName "Platform for the Accelerated Realization, Analysis, and Discovery of Interface Materials"@None ; 
+    org:alternativeName "PARADIM Materials Innovation Platform"@en ; 
+    org:alternativeName "Platform for the Accelerated Realization, Analysis, and Discovery of Interface Materials"@en ; 
     schema:mainEntityOfPage <https://paradim.org> ;
     org:hasLink [
         a org:Membership ;
@@ -36,6 +36,24 @@
         org:role "parent" ;
         org:member <https://ror.org/00za53h95> ;
         rdfs:label "Johns Hopkins University" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-76.61219 39.29038)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Baltimore" ;
+            schema:addressCountry "US" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/4347778/> ;
     ] ; 
     schema:location [
         a schema:Place ;

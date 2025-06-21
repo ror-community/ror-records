@@ -1,0 +1,40 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/000865z52> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    org:status "active" ;
+    org:classification "government" ; 
+    dct:created "2024-09-14"^^xsd:date ;
+    dct:modified "2024-09-16"^^xsd:date ;
+    org:alternativeName "Regiao Autonoma da Madeira"@pt ; 
+    org:alternativeName "Região Autónoma da Madeira"@pt ; 
+    schema:url <http://madeira.gov.pt> ; 
+    schema:mainEntityOfPage <https://www.madeira.gov.pt> ;
+    schema:sameAs <http://isni.org/isni/0000000094518468> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-16.92547 32.66568)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Funchal" ;
+            schema:addressCountry "PT" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Portugal" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2267827/> ;
+    ] ; 
+    .

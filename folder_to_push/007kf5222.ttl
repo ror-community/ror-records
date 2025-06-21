@@ -4,28 +4,46 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/007kf5222> a org:Organization ;
-    rdfs:label "Centro Universitário da FEI" ;
-    schema:name "Centro Universitário da FEI" ;
+    rdfs:label "" ;
+    schema:name "" ;
     schema:foundingDate "1941"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "FEI" ;
-    org:alternativeName "Faculty of Industrial Engineering" ;
-    schema:url <http://portal.fei.edu.br/en-us/Pages/home.aspx> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Centro_Universit%C3%A1rio_da_FEI> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-09-16"^^xsd:date ;
+    org:alternativeName "Centro Universitário da FEI"@pt ; 
+    org:abbreviation "ESAN"@None ; 
+    org:abbreviation "FCI"@None ; 
+    org:abbreviation "FEI"@None ; 
+    org:alternativeName "Faculty of Industrial Engineering"@en ; 
+    org:alternativeName "Faculty of Information Technology"@en ; 
+    org:alternativeName "Superior School of Business Administration"@en ; 
+    schema:mainEntityOfPage <https://portal.fei.edu.br> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Centro_Universit%C3%A1rio_da_FEI> ; 
+    schema:sameAs <https://api.crossref.org/funders/100017232> ;
+    schema:sameAs <https://grid.ac/institutions/grid.440589.4> ;
+    schema:sameAs <http://isni.org/isni/0000000086077447> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-46.565 -23.69389)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-46.565 -23.69389)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "São Bernardo do Campo" ;
             schema:addressCountry "BR" ;
-            owl:sameAs <http://sws.geonames.org/3449344/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000086077447> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q16836504> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Brazil" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3449344/> ;
+    ] ; 
     .

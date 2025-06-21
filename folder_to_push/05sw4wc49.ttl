@@ -4,27 +4,53 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/05sw4wc49> a org:Organization ;
     rdfs:label "University of Osijek" ;
     schema:name "University of Osijek" ;
     schema:foundingDate "1975"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:alternativeName "Josip Juraj Strossmayer University of Osijek" ;
-    schema:url <http://www.unios.hr/?english&i=1004> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Osijek> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-09-16"^^xsd:date ;
+    org:alternativeName "Josip Juraj Strossmayer University of Osijek"@hr ; 
+    org:alternativeName "Sveučilište J.J. Strossmayera"@hr ; 
+    schema:mainEntityOfPage <http://www.unios.hr/?english&i=1004> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Osijek> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100009390> ;
+    schema:sameAs <https://grid.ac/institutions/grid.412680.9> ;
+    schema:sameAs <http://isni.org/isni/000000011015399X> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/046g5hb52> ;
+        rdfs:label "Andrija Stampar Teaching Institute of Public Health" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02w0r2764> ;
+        rdfs:label "MAGIC Telescopes" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(18.69389 45.55111)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(18.69389 45.55111)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Osijek" ;
             schema:addressCountry "HR" ;
-            owl:sameAs <http://sws.geonames.org/3193935/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/000000011015399X> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1708709> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Croatia" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3193935/> ;
+    ] ; 
     .

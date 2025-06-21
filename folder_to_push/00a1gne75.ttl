@@ -1,0 +1,76 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/00a1gne75> a org:Organization ;
+    rdfs:label "Teledyne Technologies (United States)" ;
+    schema:name "Teledyne Technologies (United States)" ;
+    schema:foundingDate "1960"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "company" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-09-16"^^xsd:date ;
+    schema:mainEntityOfPage <http://www.teledyne.com/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Teledyne_Technologies> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.421352.3> ;
+    schema:sameAs <http://isni.org/isni/0000000406344795> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00ma0s885> ;
+        rdfs:label "Teledyne Technologies (Australia)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0335wvc55> ;
+        rdfs:label "Teledyne Technologies (Canada)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01h5zkn46> ;
+        rdfs:label "Teledyne Technologies (Denmark)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/049b5zq94> ;
+        rdfs:label "Teledyne Technologies (France)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00e1g8a02> ;
+        rdfs:label "Teledyne e2v (United Kingdom)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01j1gwp17> ;
+        rdfs:label "Teledyne FLIR (United States)" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-118.83759 34.17056)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Thousand Oaks" ;
+            schema:addressCountry "US" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/5402405/> ;
+    ] ; 
+    .

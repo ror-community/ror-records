@@ -1,0 +1,41 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/02a22tx41> a org:Organization ;
+    rdfs:label "Haute École Provinciale de Hainaut Condorcet" ;
+    schema:name "Haute École Provinciale de Hainaut Condorcet" ;
+    schema:foundingDate "2009"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-09-16"^^xsd:date ;
+    org:abbreviation "HEPH"@None ; 
+    org:alternativeName "HEPH Condorcet"@fr ; 
+    schema:url <http://condorcet.be> ; 
+    schema:mainEntityOfPage <https://www.condorcet.be> ;
+    schema:sameAs <https://grid.ac/institutions/grid.466353.1> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(3.95229 50.45413)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Mons" ;
+            schema:addressCountry "BE" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Belgium" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2790869/> ;
+    ] ; 
+    .

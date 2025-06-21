@@ -4,28 +4,78 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/00cfam450> a org:Organization ;
     rdfs:label "Helmholtz Zentrum München" ;
     schema:name "Helmholtz Zentrum München" ;
     schema:foundingDate "1964"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "HMGU" ;
-    org:alternativeName "German Research Center for Environmental Health" ;
-    schema:url <http://www.helmholtz-muenchen.de> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Helmholtz_Zentrum_M%C3%BCnchen> ;
+    org:classification "facility" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-09-16"^^xsd:date ;
+    org:alternativeName "GSF - Gesellschaft für Strahlen- und Umweltforschung"@de ; 
+    org:alternativeName "German Research Center for Environmental Health"@en ; 
+    org:abbreviation "HMGU"@None ; 
+    schema:mainEntityOfPage <http://www.helmholtz-muenchen.de> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Helmholtz_Zentrum_M%C3%BCnchen> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100013295> ;
+    schema:sameAs <https://grid.ac/institutions/grid.4567.0> ;
+    schema:sameAs <http://isni.org/isni/0000000404832525> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04s64z252> ;
+        rdfs:label "Helmholtz Alliance Imaging and Curing Environmental Metabolic Diseases" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0127fwn18> ;
+        rdfs:label "Institute of Bioinformatics and Systems Biology" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05ke5hb07> ;
+        rdfs:label "Paul Langerhans Institute Dresden" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05g95eg64> ;
+        rdfs:label "Institute of Biological and Medical Imaging" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0278hns33> ;
+        rdfs:label "Institute of Diabetes Research" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/0281dp749> ;
+        rdfs:label "Helmholtz Association of German Research Centres" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(11.57549 48.13743)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(11.57549 48.13743)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Munich" ;
             schema:addressCountry "DE" ;
-            owl:sameAs <http://sws.geonames.org/2867714/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000404832525> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q878592> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Germany" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2867714/> ;
+    ] ; 
     .

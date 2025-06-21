@@ -4,26 +4,226 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/0038zss60> a org:Organization ;
     rdfs:label "European Marine Biological Resource Centre" ;
     schema:name "European Marine Biological Resource Centre" ;
     schema:foundingDate "2018"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "EMBRC" ;
-    org:alternativeName "European Marine Biological Resource Centre - European Research Infrastructure Consortium" ;
-    schema:url <https://www.embrc.eu> ; 
+    org:classification "facility" ; 
+    org:classification "funder" ; 
+    dct:created "2022-08-03"^^xsd:date ;
+    dct:modified "2024-09-16"^^xsd:date ;
+    org:abbreviation "EMBRC"@None ; 
+    org:abbreviation "EMBRC-ERIC"@None ; 
+    org:alternativeName "European Marine Biological Resource Centre - European Research Infrastructure Consortium"@en ; 
+    schema:mainEntityOfPage <https://www.embrc.eu> ;
+    schema:sameAs <https://api.crossref.org/funders/501100015737> ;
+    schema:sameAs <http://isni.org/isni/0000000492260431> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00cv9y106> ;
+        rdfs:label "Ghent University" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/0496vr396> ;
+        rdfs:label "Flanders Marine Institute" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02y22ws83> ;
+        rdfs:label "Institute of Natural Sciences" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/04nbhqj75> ;
+        rdfs:label "Hasselt University" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05f950310> ;
+        rdfs:label "KU Leuven" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05rdf8595> ;
+        rdfs:label "Universidade de Vigo" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/000xsnr85> ;
+        rdfs:label "University of the Basque Country" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01teme464> ;
+        rdfs:label "Universidad de Las Palmas de Gran Canaria" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05r5y6641> ;
+        rdfs:label "Laboratoire d’Océanographie de Villefranche" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05gz4kr37> ;
+        rdfs:label "Observatoire Océanologique de Banyuls-sur-Mer" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03s0pzj56> ;
+        rdfs:label "Station Biologique de Roscoff" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02en5vm52> ;
+        rdfs:label "Sorbonne Université" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/038kffh84> ;
+        rdfs:label "Hellenic Centre for Marine Research" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00pvs0d78> ;
+        rdfs:label "Interuniversity Institute for Marine Sciences in Eilat" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03v5jj203> ;
+        rdfs:label "Stazione Zoologica Anton Dohrn" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00240q980> ;
+        rdfs:label "University of Padua" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/0005w8d69> ;
+        rdfs:label "Università di Camerino" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/04q4kt073> ;
+        rdfs:label "University of Urbino" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02hdf6119> ;
+        rdfs:label "Institute of Marine Science" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/04y4t7k95> ;
+        rdfs:label "National Institute of Oceanography and Applied Geophysics" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05vg74d16> ;
+        rdfs:label "Norwegian Institute of Marine Research" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03hrf8236> ;
+        rdfs:label "Norwegian Institute for Water Research" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02v1rsx93> ;
+        rdfs:label "Nofima" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05xg72x27> ;
+        rdfs:label "Norwegian University of Science and Technology" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03zga2b32> ;
+        rdfs:label "University of Bergen" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00wge5k78> ;
+        rdfs:label "UiT The Arctic University of Norway" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01xtthb56> ;
+        rdfs:label "University of Oslo" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/014g34x36> ;
+        rdfs:label "University of Algarve" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/043pwc612> ;
+        rdfs:label "Universidade do Porto" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03r8hgy04> ;
+        rdfs:label "Institute of Marine Research" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00me37y22> ;
+        rdfs:label "Centro de Ciências do Mar do Algarve" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(2.3488 48.85341)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(2.3488 48.85341)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Paris" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2988507/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000492260431> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q113551509> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2988507/> ;
+    ] ; 
     .

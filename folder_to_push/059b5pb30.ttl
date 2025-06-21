@@ -1,0 +1,48 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/059b5pb30> a org:Organization ;
+    rdfs:label "Konan University" ;
+    schema:name "Konan University" ;
+    schema:foundingDate "1919"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-09-16"^^xsd:date ;
+    org:alternativeName "Konan Gakuen Middle School"@en ; 
+    org:alternativeName "Konan University opens"@en ; 
+    schema:mainEntityOfPage <https://www.konan-u.ac.jp/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Konan_University> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.258669.6> ;
+    schema:sameAs <http://isni.org/isni/0000000085655938> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02w0r2764> ;
+        rdfs:label "MAGIC Telescopes" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(135.183 34.6913)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Kobe" ;
+            schema:addressCountry "JP" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Japan" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1859171/> ;
+    ] ; 
+    .

@@ -4,23 +4,41 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/008p7mq56> a org:Organization ;
     rdfs:label "Équipe Monde Arabe Méditerranée" ;
     schema:name "Équipe Monde Arabe Méditerranée" ;
     org:status "active" ;
-    org:classification "Other" ; 
-    org:abbreviation "EMAM" ;
-    schema:url <https://emam.revues.org/> ; 
+    org:classification "other" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-09-16"^^xsd:date ;
+    org:abbreviation "EMAM"@None ; 
+    schema:mainEntityOfPage <https://citeres.univ-tours.fr/emam/> ;
+    schema:sameAs <https://grid.ac/institutions/grid.463838.2> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/04ahza989> ;
+        rdfs:label "CItés, Territoires, Environnement et Sociétés" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(0.70398 47.39484)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(0.70398 47.39484)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Tours" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2972191/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2972191/> ;
+    ] ; 
     .

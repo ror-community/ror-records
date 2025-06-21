@@ -1,0 +1,53 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/05kyy7d06> a org:Organization ;
+    rdfs:label "Saab (Sweden)" ;
+    schema:name "Saab (Sweden)" ;
+    schema:foundingDate "1937"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "company" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-09-16"^^xsd:date ;
+    schema:mainEntityOfPage <http://saabgroup.com/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Saab> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100018891> ;
+    schema:sameAs <https://grid.ac/institutions/grid.5595.c> ;
+    schema:sameAs <http://isni.org/isni/0000000110145201> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/045rgx026> ;
+        rdfs:label "Saab (Switzerland)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0533jxz69> ;
+        rdfs:label "Saab (United States)" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(17.94 59.34)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Bromma" ;
+            schema:addressCountry "SE" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Sweden" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2719111/> ;
+    ] ; 
+    .
