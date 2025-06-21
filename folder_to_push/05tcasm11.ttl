@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/05tcasm11> a org:Organization ;
+    rdfs:label "National Infrastructures for Research and Technology -  GRNET S.A" ;
+    schema:name "National Infrastructures for Research and Technology -  GRNET S.A" ;
+    schema:foundingDate "1998"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Company" ; 
+    org:abbreviation "GRNET" ;
+    org:alternativeName "National Infrastructures for Research and Technology" ;
+    schema:url <https://www.grnet.gr> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Greek_Research_and_Technology_Network> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(23.72784 37.98376)"^^geo:wktLiteral ;
+            schema:addressLocality "Athens" ;
+            schema:addressCountry "GR" ;
+            owl:sameAs <http://sws.geonames.org/264371/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q5601873> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

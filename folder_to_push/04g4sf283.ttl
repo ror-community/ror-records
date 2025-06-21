@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/04g4sf283> a org:Organization ;
+    rdfs:label "Office of Data Science Strategy" ;
+    schema:name "Office of Data Science Strategy" ;
+    schema:foundingDate "2018"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Government" ; 
+    org:abbreviation "ODSS" ;
+    org:alternativeName "National Institutes of Health Office of Data Science Strategy" ;
+    schema:url <https://datascience.nih.gov> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-77.10026 38.98067)"^^geo:wktLiteral ;
+            schema:addressLocality "Bethesda" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/4348599/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    .

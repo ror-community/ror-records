@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/04x6jg419> a org:Organization ;
+    rdfs:label "Laboratoire de Conception, Optimisation et Modélisation des Systèmes" ;
+    schema:name "Laboratoire de Conception, Optimisation et Modélisation des Systèmes" ;
+    schema:foundingDate "2013"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    org:abbreviation "LCOMS" ;
+    org:alternativeName "Laboratoire LCOMS" ;
+    schema:url <https://lcoms.univ-lorraine.fr> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(6.17269 49.11911)"^^geo:wktLiteral ;
+            schema:addressLocality "Metz" ;
+            schema:addressCountry "FR" ;
+            owl:sameAs <http://sws.geonames.org/2994160/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q51781710> ;
+    .
