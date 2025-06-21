@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/0256kw398> a org:Organization ;
+    rdfs:label "Birzeit University" ;
+    schema:name "Birzeit University" ;
+    schema:foundingDate "1924"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "BZU" ;
+    schema:url <http://www.birzeit.edu/> ; 
+    owl:sameAs <http://en.wikipedia.org/wiki/Birzeit_University> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(35.19408 31.96959)"^^geo:wktLiteral ;
+            schema:addressLocality "Bīr Zayt" ;
+            schema:addressCountry "PS" ;
+            owl:sameAs <http://sws.geonames.org/284237/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000405752412> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q510029> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

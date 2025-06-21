@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/05f5b3h44> a org:Organization ;
+    rdfs:label "Hawaii Pacific Health" ;
+    schema:name "Hawaii Pacific Health" ;
+    org:status "active" ;
+    org:classification "Healthcare" ; 
+    schema:url <https://www.hawaiipacifichealth.org> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Hawaii_Pacific_Health> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-157.85833 21.30694)"^^geo:wktLiteral ;
+            schema:addressLocality "Honolulu" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/5856195/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000404458377> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q5684342> ;
+    .

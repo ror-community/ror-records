@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/0578qbf69> a org:Organization ;
+    rdfs:label "Pancreatic Cancer Action" ;
+    schema:name "Pancreatic Cancer Action" ;
+    schema:foundingDate "2009"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Nonprofit" ; 
+    schema:url <https://pancreaticcanceraction.org/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Pancreatic_Cancer_Action> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-0.86245 51.11357)"^^geo:wktLiteral ;
+            schema:addressLocality "Bordon" ;
+            schema:addressCountry "GB" ;
+            owl:sameAs <http://sws.geonames.org/6693242/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

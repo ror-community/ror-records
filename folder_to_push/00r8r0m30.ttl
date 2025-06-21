@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/00r8r0m30> a org:Organization ;
+    rdfs:label "State Archives in Pazin" ;
+    schema:name "State Archives in Pazin" ;
+    schema:foundingDate "1958"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Archive" ; 
+    org:abbreviation "DAPA" ;
+    schema:url <https://www.dapa.hr> ; 
+    owl:sameAs <https://hr.wikipedia.org/wiki/Dr%C5%BEavni_arhiv_u_Pazinu> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(13.93667 45.24028)"^^geo:wktLiteral ;
+            schema:addressLocality "Pazin" ;
+            schema:addressCountry "HR" ;
+            owl:sameAs <http://sws.geonames.org/3193561/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000121118321> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q12630183> ;
+    .

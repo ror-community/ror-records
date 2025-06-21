@@ -1,0 +1,25 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/00dhpdx54> a org:Organization ;
+    rdfs:label "Guangxi Science and Technology Department" ;
+    schema:name "Guangxi Science and Technology Department" ;
+    org:status "active" ;
+    org:classification "Government" ; 
+    schema:url <http://www.gxst.gov.cn/index.shtml> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(108.31667 22.81667)"^^geo:wktLiteral ;
+            schema:addressLocality "Nanning" ;
+            schema:addressCountry "CN" ;
+            owl:sameAs <http://sws.geonames.org/1799869/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

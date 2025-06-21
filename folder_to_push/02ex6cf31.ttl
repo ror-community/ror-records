@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/02ex6cf31> a org:Organization ;
+    rdfs:label "Brookhaven National Laboratory" ;
+    schema:name "Brookhaven National Laboratory" ;
+    schema:foundingDate "1947"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    org:abbreviation "BNL" ;
+    schema:url <http://www.bnl.gov/world/> ; 
+    owl:sameAs <http://en.wikipedia.org/wiki/Brookhaven_National_Laboratory> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-72.88677 40.86954)"^^geo:wktLiteral ;
+            schema:addressLocality "Upton" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/5142042/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000121884229> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q585777> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q5059647> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .
