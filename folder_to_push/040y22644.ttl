@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/040y22644> a org:Organization ;
+    rdfs:label "Institut Luxembourgeois de la Normalisation, de l'Accréditation, de la Sécurité et qualité des produits et services" ;
+    schema:name "Institut Luxembourgeois de la Normalisation, de l'Accréditation, de la Sécurité et qualité des produits et services" ;
+    schema:foundingDate "2008"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Government" ; 
+    org:abbreviation "ILNAS" ;
+    schema:url <https://portail-qualite.public.lu> ; 
+    owl:sameAs <https://fr.wikipedia.org/wiki/Institut_luxembourgeois_de_la_normalisation,_de_l%27accr%C3%A9ditation,_de_la_s%C3%A9curit%C3%A9_et_qualit%C3%A9_des_produits_et_services> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(5.92414 49.51014)"^^geo:wktLiteral ;
+            schema:addressLocality "Belvaux" ;
+            schema:addressCountry "LU" ;
+            owl:sameAs <http://sws.geonames.org/2960800/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q16643250> ;
+    .

@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/04q4kt073> a org:Organization ;
+    rdfs:label "University of Urbino" ;
+    schema:name "University of Urbino" ;
+    schema:foundingDate "1506"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "UNIURB" ;
+    schema:url <http://www.uniurb.it/it/portale/index.php?mist_id=0&lang=IT&tipo=IST&page=0> ; 
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Urbino> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(12.63633 43.72621)"^^geo:wktLiteral ;
+            schema:addressLocality "Urbino" ;
+            schema:addressCountry "IT" ;
+            owl:sameAs <http://sws.geonames.org/3165035/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000123697670> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q2119752> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

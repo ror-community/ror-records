@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/02fez3815> a org:Organization ;
+    rdfs:label "Fraunhofer Institute for Cognitive Systems" ;
+    schema:name "Fraunhofer Institute for Cognitive Systems" ;
+    schema:foundingDate "1999"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    org:abbreviation "IKS" ;
+    org:alternativeName "Fraunhofer Institute for Embedded Systems and Communication Technologies ESK" ;
+    schema:url <https://www.iks.fraunhofer.de/> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(11.57549 48.13743)"^^geo:wktLiteral ;
+            schema:addressLocality "Munich" ;
+            schema:addressCountry "DE" ;
+            owl:sameAs <http://sws.geonames.org/2867714/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000404943815> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q1451979> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

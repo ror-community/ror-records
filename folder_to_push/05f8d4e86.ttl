@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/05f8d4e86> a org:Organization ;
+    rdfs:label "Polytechnique Montréal" ;
+    schema:name "Polytechnique Montréal" ;
+    schema:foundingDate "1873"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:alternativeName "École Polytechnique de Montréal" ;
+    schema:url <http://www.polymtl.ca/> ; 
+    owl:sameAs <http://en.wikipedia.org/wiki/%C3%89cole_Polytechnique_de_Montr%C3%A9al> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-73.58781 45.50884)"^^geo:wktLiteral ;
+            schema:addressLocality "Montreal" ;
+            schema:addressCountry "CA" ;
+            owl:sameAs <http://sws.geonames.org/6077243/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000404353292> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q273619> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

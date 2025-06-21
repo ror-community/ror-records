@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/03vs03g62> a org:Organization ;
+    rdfs:label "Montreal Heart Institute" ;
+    schema:name "Montreal Heart Institute" ;
+    schema:foundingDate "1954"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Healthcare" ; 
+    org:abbreviation "ICM" ;
+    schema:url <http://www.icm-mhi.org/en/index.html> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Montreal_Heart_Institute> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-73.58781 45.50884)"^^geo:wktLiteral ;
+            schema:addressLocality "Montreal" ;
+            schema:addressCountry "CA" ;
+            owl:sameAs <http://sws.geonames.org/6077243/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000089959090> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q3151984> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

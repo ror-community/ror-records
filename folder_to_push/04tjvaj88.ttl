@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/04tjvaj88> a org:Organization ;
+    rdfs:label "Instituto Universitario de Innovación Ciencia y Tecnología Inudi Perú" ;
+    schema:name "Instituto Universitario de Innovación Ciencia y Tecnología Inudi Perú" ;
+    schema:foundingDate "2018"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "INUDI PERÚ" ;
+    org:alternativeName "Instituto Universitario de Investigación Inudi Perú" ;
+    schema:url <https://inudi.edu.pe> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-70.0199 -15.8422)"^^geo:wktLiteral ;
+            schema:addressLocality "Puno" ;
+            schema:addressCountry "PE" ;
+            owl:sameAs <http://sws.geonames.org/3931276/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q74434752> ;
+    .

@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/04rp40h82> a org:Organization ;
+    rdfs:label "World Association of Theoretical and Computational Chemists" ;
+    schema:name "World Association of Theoretical and Computational Chemists" ;
+    schema:foundingDate "1982"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Other" ; 
+    org:abbreviation "WATOC" ;
+    schema:url <https://watoc.net> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/World_Association_of_Theoretical_and_Computational_Chemists> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(12.00052 50.8617)"^^geo:wktLiteral ;
+            schema:addressLocality "Geißen" ;
+            schema:addressCountry "DE" ;
+            owl:sameAs <http://sws.geonames.org/2921605/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q3569947> ;
+    .

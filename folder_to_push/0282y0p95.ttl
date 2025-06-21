@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/0282y0p95> a org:Organization ;
+    rdfs:label "Science for All" ;
+    schema:name "Science for All" ;
+    schema:foundingDate "2018"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Nonprofit" ; 
+    org:abbreviation "SFA" ;
+    org:alternativeName "SciFall" ;
+    schema:url <https://scienceforall.world> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(144.96332 -37.814)"^^geo:wktLiteral ;
+            schema:addressLocality "Melbourne" ;
+            schema:addressCountry "AU" ;
+            owl:sameAs <http://sws.geonames.org/2158177/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    .

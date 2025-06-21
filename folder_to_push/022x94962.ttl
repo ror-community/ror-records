@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/022x94962> a org:Organization ;
+    rdfs:label "Global Campus of Human Rights" ;
+    schema:name "Global Campus of Human Rights" ;
+    schema:foundingDate "2002"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "EIUC" ;
+    org:alternativeName "European Inter-University Centre for Human Rights and Democratisation - EIUC" ;
+    schema:url <https://gchumanrights.org> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/European_Inter-University_Centre_for_Human_Rights_and_Democratisation> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(12.33265 45.43713)"^^geo:wktLiteral ;
+            schema:addressLocality "Venice" ;
+            schema:addressCountry "IT" ;
+            owl:sameAs <http://sws.geonames.org/3164603/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000417630965> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q1376705> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .
