@@ -47,7 +47,6 @@ def list_json_files_in_releases(releases_root, output_dir):
                 exit(1)
             
             print(f"\n✓ Release {release} poussée avec succès. Attente de 15 secondes...")
-            # time.sleep(30)
 
 if __name__ == "__main__":
     root_dir = Path(__file__).parent.parent
