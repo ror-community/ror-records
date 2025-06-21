@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/02zda6x08> a org:Organization ;
+    rdfs:label "Carl R. Darnall Army Medical Center" ;
+    schema:name "Carl R. Darnall Army Medical Center" ;
+    schema:foundingDate "1965"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Healthcare" ; 
+    org:abbreviation "CRDAMC" ;
+    org:alternativeName "Darnall Army Community Hospital" ;
+    schema:url <https://darnall.tricare.mil> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Carl_R._Darnall_Army_Medical_Center> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-97.77561 31.13489)"^^geo:wktLiteral ;
+            schema:addressLocality "Fort Hood" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/7261291/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/000000040418891X> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q5040673> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

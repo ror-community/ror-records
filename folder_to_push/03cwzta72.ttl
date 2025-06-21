@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/03cwzta72> a org:Organization ;
+    rdfs:label "Direction des énergies" ;
+    schema:name "Direction des énergies" ;
+    org:status "active" ;
+    org:classification "Government" ; 
+    org:abbreviation "CEA DEN" ;
+    org:alternativeName "Direction de L'Énergie Nucléaire" ;
+    schema:url <https://www.cea.fr/Pages/domaines-recherche/energies.aspx> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(2.13333 48.68333)"^^geo:wktLiteral ;
+            schema:addressLocality "Gif-sur-Yvette" ;
+            schema:addressCountry "FR" ;
+            owl:sameAs <http://sws.geonames.org/3016078/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000121804137> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q30299415> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q121913443> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

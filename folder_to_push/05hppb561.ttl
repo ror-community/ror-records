@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/05hppb561> a org:Organization ;
+    rdfs:label "Finnish Meteorological Institute" ;
+    schema:name "Finnish Meteorological Institute" ;
+    schema:foundingDate "1838"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Government" ; 
+    org:abbreviation "FMI" ;
+    schema:url <http://en.ilmatieteenlaitos.fi/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Finnish_Meteorological_Institute> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(24.93545 60.16952)"^^geo:wktLiteral ;
+            schema:addressLocality "Helsinki" ;
+            schema:addressCountry "FI" ;
+            owl:sameAs <http://sws.geonames.org/658225/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000122538678> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q3266959> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

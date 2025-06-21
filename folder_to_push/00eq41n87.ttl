@@ -1,0 +1,26 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/00eq41n87> a org:Organization ;
+    rdfs:label "InLeaVe" ;
+    schema:name "InLeaVe" ;
+    org:status "active" ;
+    org:classification "Other" ; 
+    org:alternativeName "Institut für Leadership & Veränderung" ;
+    schema:url <http://www.inleave.de/> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(8.57747 50.20731)"^^geo:wktLiteral ;
+            schema:addressLocality "Oberursel" ;
+            schema:addressCountry "DE" ;
+            owl:sameAs <http://sws.geonames.org/2858738/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

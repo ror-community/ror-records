@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/04zza3s31> a org:Organization ;
+    rdfs:label "Risques Travail Marchés Etat" ;
+    schema:name "Risques Travail Marchés Etat" ;
+    schema:foundingDate "2010"^^xsd:gYear ;
+    org:status "inactive" ;
+    org:classification "Facility" ; 
+    org:abbreviation "RiTME" ;
+    schema:url <http://www6.paris.inra.fr/ritme_eng> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(2.38487 48.81568)"^^geo:wktLiteral ;
+            schema:addressLocality "Ivry-sur-Seine" ;
+            schema:addressCountry "FR" ;
+            owl:sameAs <http://sws.geonames.org/3012621/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

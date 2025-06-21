@@ -1,0 +1,25 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/0154y7z37> a org:Organization ;
+    rdfs:label "Miyama Composites Materials (Greece)" ;
+    schema:name "Miyama Composites Materials (Greece)" ;
+    org:status "active" ;
+    org:classification "Company" ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(23.60284 38.46354)"^^geo:wktLiteral ;
+            schema:addressLocality "Chalcis" ;
+            schema:addressCountry "GR" ;
+            owl:sameAs <http://sws.geonames.org/260133/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q30290616> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

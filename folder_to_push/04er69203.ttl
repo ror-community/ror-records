@@ -1,0 +1,24 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/04er69203> a org:Organization ;
+    rdfs:label "Regional Health Administration of Thessaly" ;
+    schema:name "Regional Health Administration of Thessaly" ;
+    org:status "active" ;
+    org:classification "Healthcare" ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(22.41761 39.63689)"^^geo:wktLiteral ;
+            schema:addressLocality "Larissa" ;
+            schema:addressCountry "GR" ;
+            owl:sameAs <http://sws.geonames.org/258576/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

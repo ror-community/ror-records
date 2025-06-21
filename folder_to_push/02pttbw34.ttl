@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/02pttbw34> a org:Organization ;
+    rdfs:label "Baylor College of Medicine" ;
+    schema:name "Baylor College of Medicine" ;
+    schema:foundingDate "1900"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "BCM" ;
+    schema:url <https://www.bcm.edu/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Baylor_College_of_Medicine> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-95.36327 29.76328)"^^geo:wktLiteral ;
+            schema:addressLocality "Houston" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/4699066/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/000000012160926X> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q2892284> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

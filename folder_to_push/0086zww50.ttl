@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/0086zww50> a org:Organization ;
+    rdfs:label "Research Group in Theoretical and Applied Economics" ;
+    schema:name "Research Group in Theoretical and Applied Economics" ;
+    schema:foundingDate "2007"^^xsd:gYear ;
+    org:status "inactive" ;
+    org:classification "Facility" ; 
+    org:abbreviation "GREThA" ;
+    schema:url <http://gretha.u-bordeaux.fr/fr> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-0.6324 44.80565)"^^geo:wktLiteral ;
+            schema:addressLocality "Pessac" ;
+            schema:addressCountry "FR" ;
+            owl:sameAs <http://sws.geonames.org/2987805/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000104578668> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

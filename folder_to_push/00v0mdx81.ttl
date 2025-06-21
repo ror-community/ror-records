@@ -1,0 +1,25 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/00v0mdx81> a org:Organization ;
+    rdfs:label "Forest City People's Hospital" ;
+    schema:name "Forest City People's Hospital" ;
+    org:status "active" ;
+    org:classification "Healthcare" ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(109.40698 24.32405)"^^geo:wktLiteral ;
+            schema:addressLocality "Liuzhou" ;
+            schema:addressCountry "CN" ;
+            owl:sameAs <http://sws.geonames.org/1803300/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q30293475> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

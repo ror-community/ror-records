@@ -1,0 +1,25 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/041bvb021> a org:Organization ;
+    rdfs:label "Technological University Monywa" ;
+    schema:name "Technological University Monywa" ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(95.13583 22.10856)"^^geo:wktLiteral ;
+            schema:addressLocality "Monywa" ;
+            schema:addressCountry "MM" ;
+            owl:sameAs <http://sws.geonames.org/1308522/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q7692499> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

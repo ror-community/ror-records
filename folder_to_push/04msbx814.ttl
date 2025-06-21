@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/04msbx814> a org:Organization ;
+    rdfs:label "University of Music and Theatre Leipzig" ;
+    schema:name "University of Music and Theatre Leipzig" ;
+    schema:foundingDate "1843"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "HMT" ;
+    schema:url <http://www.hmt-leipzig.de/en/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/University_of_Music_and_Theatre_Leipzig> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(12.37129 51.33962)"^^geo:wktLiteral ;
+            schema:addressLocality "Leipzig" ;
+            schema:addressCountry "DE" ;
+            owl:sameAs <http://sws.geonames.org/2879139/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/000000012293251X> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q312578> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

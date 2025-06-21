@@ -1,0 +1,24 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/03kv8xc26> a org:Organization ;
+    rdfs:label "Peterborough and Stamford Hospitals NHS Foundation Trust" ;
+    schema:name "Peterborough and Stamford Hospitals NHS Foundation Trust" ;
+    org:status "active" ;
+    org:classification "Healthcare" ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-0.24777 52.57364)"^^geo:wktLiteral ;
+            schema:addressLocality "Peterborough" ;
+            schema:addressCountry "GB" ;
+            owl:sameAs <http://sws.geonames.org/2640354/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

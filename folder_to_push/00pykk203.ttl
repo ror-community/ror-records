@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/00pykk203> a org:Organization ;
+    rdfs:label "Laboratoire Ingénierie, Procédés, Aliments" ;
+    schema:name "Laboratoire Ingénierie, Procédés, Aliments" ;
+    schema:foundingDate "2009"^^xsd:gYear ;
+    org:status "inactive" ;
+    org:classification "Facility" ; 
+    org:alternativeName "Genial" ;
+    schema:url <https://www6.jouy.inrae.fr/umr-genial/> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(2.28301 48.72692)"^^geo:wktLiteral ;
+            schema:addressLocality "Massy" ;
+            schema:addressCountry "FR" ;
+            owl:sameAs <http://sws.geonames.org/2995206/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q30262478> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

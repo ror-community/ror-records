@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/05jadkj46> a org:Organization ;
+    rdfs:label "University of Missouri Hospital" ;
+    schema:name "University of Missouri Hospital" ;
+    schema:foundingDate "1956"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Healthcare" ; 
+    schema:url <https://stage.muhealth.org/locations/university-hospital/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/University_of_Missouri_Hospital> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-92.33407 38.95171)"^^geo:wktLiteral ;
+            schema:addressLocality "Columbia" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/4381982/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/000000010245694X> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q7895835> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q5365883> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

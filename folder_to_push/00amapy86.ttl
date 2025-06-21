@@ -1,0 +1,24 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/00amapy86> a org:Organization ;
+    rdfs:label "Universidad Galilea" ;
+    schema:name "Universidad Galilea" ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-102.28259 21.88234)"^^geo:wktLiteral ;
+            schema:addressLocality "Aguascalientes" ;
+            schema:addressCountry "MX" ;
+            owl:sameAs <http://sws.geonames.org/4019233/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

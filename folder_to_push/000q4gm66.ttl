@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/000q4gm66> a org:Organization ;
+    rdfs:label "Instituto de Biocomputación y Física de Sistemas Complejos" ;
+    schema:name "Instituto de Biocomputación y Física de Sistemas Complejos" ;
+    schema:foundingDate "2002"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    org:abbreviation "BIFI" ;
+    schema:url <https://bifi.es> ; 
+    owl:sameAs <https://es.wikipedia.org/wiki/Instituto_de_Biocomputaci%C3%B3n_y_F%C3%ADsica_de_Sistemas_Complejos> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-0.88303 41.64829)"^^geo:wktLiteral ;
+            schema:addressLocality "Zaragoza Municipality" ;
+            schema:addressCountry "ES" ;
+            owl:sameAs <http://sws.geonames.org/6362983/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q6039187> ;
+    .

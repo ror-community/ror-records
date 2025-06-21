@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/006hf6230> a org:Organization ;
+    rdfs:label "University of Twente" ;
+    schema:name "University of Twente" ;
+    schema:foundingDate "1961"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    schema:url <http://www.utwente.nl/en/> ; 
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Twente> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(6.89583 52.21833)"^^geo:wktLiteral ;
+            schema:addressLocality "Enschede" ;
+            schema:addressCountry "NL" ;
+            owl:sameAs <http://sws.geonames.org/2756071/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000403998953> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q1547084> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

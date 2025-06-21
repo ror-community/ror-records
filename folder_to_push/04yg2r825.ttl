@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/04yg2r825> a org:Organization ;
+    rdfs:label "Migrant Assistance Program Foundation" ;
+    schema:name "Migrant Assistance Program Foundation" ;
+    org:status "active" ;
+    org:classification "Nonprofit" ; 
+    org:abbreviation "MAP" ;
+    org:alternativeName "Foundation for the Health and Knowledge of Ethnic Labour" ;
+    schema:url <http://www.mapfoundationcm.org/> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(98.98468 18.79038)"^^geo:wktLiteral ;
+            schema:addressLocality "Chiang Mai" ;
+            schema:addressCountry "TH" ;
+            owl:sameAs <http://sws.geonames.org/1153671/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

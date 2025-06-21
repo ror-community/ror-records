@@ -1,0 +1,24 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/02r5r0c98> a org:Organization ;
+    rdfs:label "Instituto Universitario Centro de Docencia, Investigación e Información en Aprendizaje" ;
+    schema:name "Instituto Universitario Centro de Docencia, Investigación e Información en Aprendizaje" ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-56.18816 -34.90328)"^^geo:wktLiteral ;
+            schema:addressLocality "Montevideo" ;
+            schema:addressCountry "UY" ;
+            owl:sameAs <http://sws.geonames.org/3441575/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

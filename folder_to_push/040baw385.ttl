@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/040baw385> a org:Organization ;
+    rdfs:label "Centrale Marseille" ;
+    schema:name "Centrale Marseille" ;
+    schema:foundingDate "1890"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:alternativeName "École Centrale de Marseille" ;
+    schema:url <https://www.centrale-marseille.fr/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/%C3%89cole_centrale_de_Marseille> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(5.38107 43.29695)"^^geo:wktLiteral ;
+            schema:addressLocality "Marseille" ;
+            schema:addressCountry "FR" ;
+            owl:sameAs <http://sws.geonames.org/2995469/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q273454> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

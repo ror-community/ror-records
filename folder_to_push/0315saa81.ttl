@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/0315saa81> a org:Organization ;
+    rdfs:label "Peer Community In" ;
+    schema:name "Peer Community In" ;
+    schema:foundingDate "2016"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Nonprofit" ; 
+    org:abbreviation "PCI" ;
+    schema:url <https://peercommunityin.org> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Peer_Community_in> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(7.26608 43.70313)"^^geo:wktLiteral ;
+            schema:addressLocality "Nice" ;
+            schema:addressCountry "FR" ;
+            owl:sameAs <http://sws.geonames.org/2990440/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q97368331> ;
+    .

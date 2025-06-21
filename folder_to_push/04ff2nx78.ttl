@@ -1,0 +1,25 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/04ff2nx78> a org:Organization ;
+    rdfs:label "Tajikistan–Russian Modern University" ;
+    schema:name "Tajikistan–Russian Modern University" ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(68.77905 38.53575)"^^geo:wktLiteral ;
+            schema:addressLocality "Dushanbe" ;
+            schema:addressCountry "TJ" ;
+            owl:sameAs <http://sws.geonames.org/1221874/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q16873393> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .
