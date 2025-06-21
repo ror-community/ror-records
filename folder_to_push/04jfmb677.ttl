@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/04jfmb677> a org:Organization ;
+    rdfs:label "Art Institute of Fort Lauderdale" ;
+    schema:name "Art Institute of Fort Lauderdale" ;
+    org:status "withdrawn" ;
+    org:classification "Education" ; 
+    org:abbreviation "AiFL" ;
+    schema:url <https://www.artinstitutes.edu/fort-lauderdale> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/The_Art_Institute_of_Fort_Lauderdale> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-80.14338 26.12231)"^^geo:wktLiteral ;
+            schema:addressLocality "Fort Lauderdale" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/4155966/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000089520117> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q7714375> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

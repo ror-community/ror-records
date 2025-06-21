@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/0260anr77> a org:Organization ;
+    rdfs:label "Western Michigan University Homer Stryker M.D. School of Medicine" ;
+    schema:name "Western Michigan University Homer Stryker M.D. School of Medicine" ;
+    schema:foundingDate "2012"^^xsd:gYear ;
+    org:status "withdrawn" ;
+    org:classification "Education" ; 
+    org:abbreviation "WMed" ;
+    org:alternativeName "Michigan State University Kalamazoo Center for Medical Studies" ;
+    schema:url <http://med.wmich.edu/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Western_Michigan_University_Homer_Stryker_M.D._School_of_Medicine> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-85.58723 42.29171)"^^geo:wktLiteral ;
+            schema:addressLocality "Kalamazoo" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/4997787/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000406292075> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q16983311> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

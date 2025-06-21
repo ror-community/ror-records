@@ -1,0 +1,26 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/006hksj32> a org:Organization ;
+    rdfs:label "North China Coal Medical University" ;
+    schema:name "North China Coal Medical University" ;
+    org:status "withdrawn" ;
+    org:classification "Education" ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/North_China_Coal_Medical_University> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(118.18333 39.63333)"^^geo:wktLiteral ;
+            schema:addressLocality "Tangshan" ;
+            schema:addressCountry "CN" ;
+            owl:sameAs <http://sws.geonames.org/1793346/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q7054804> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

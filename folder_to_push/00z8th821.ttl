@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/00z8th821> a org:Organization ;
+    rdfs:label "Oceanographic Observatory in Banyuls-sur-Mer" ;
+    schema:name "Oceanographic Observatory in Banyuls-sur-Mer" ;
+    org:status "withdrawn" ;
+    org:classification "Facility" ; 
+    org:alternativeName "Arago Laboratory" ;
+    schema:url <http://www.obs-banyuls.fr/en/oceanological_observatory.html> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(3.12897 42.48375)"^^geo:wktLiteral ;
+            schema:addressLocality "Banyuls de la Marenda" ;
+            schema:addressCountry "FR" ;
+            owl:sameAs <http://sws.geonames.org/3035092/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q30293588> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

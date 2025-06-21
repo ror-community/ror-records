@@ -1,0 +1,26 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/04m61gs59> a org:Organization ;
+    rdfs:label "General Cable (United States)" ;
+    schema:name "General Cable (United States)" ;
+    org:status "withdrawn" ;
+    org:classification "Company" ; 
+    schema:url <http://www.generalcable.com/na/us-can> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/General_Cable> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-84.45189 39.03312)"^^geo:wktLiteral ;
+            schema:addressLocality "Highland Heights" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/4294788/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

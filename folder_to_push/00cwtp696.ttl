@@ -1,0 +1,26 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/00cwtp696> a org:Organization ;
+    rdfs:label "Bard (France)" ;
+    schema:name "Bard (France)" ;
+    org:status "inactive" ;
+    org:classification "Company" ; 
+    schema:url <http://www.bardfrance.fr/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/C._R._Bard> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(2.05137 48.75793)"^^geo:wktLiteral ;
+            schema:addressLocality "Voisins-le-Bretonneux" ;
+            schema:addressCountry "FR" ;
+            owl:sameAs <http://sws.geonames.org/2967745/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

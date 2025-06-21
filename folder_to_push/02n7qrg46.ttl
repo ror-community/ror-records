@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/02n7qrg46> a org:Organization ;
+    rdfs:label "Paris Diderot University" ;
+    schema:name "Paris Diderot University" ;
+    org:status "inactive" ;
+    org:classification "Education" ; 
+    org:alternativeName "Université Paris Diderot - Paris 7" ;
+    schema:url <http://www.univ-paris-diderot.fr/sc/site.php?bc=accueil&np=accueil> ; 
+    owl:sameAs <http://en.wikipedia.org/wiki/Paris_Diderot_University> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(2.3488 48.85341)"^^geo:wktLiteral ;
+            schema:addressLocality "Paris" ;
+            schema:addressCountry "FR" ;
+            owl:sameAs <http://sws.geonames.org/2988507/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000122170017> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q1235608> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

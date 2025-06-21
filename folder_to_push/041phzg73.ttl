@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/041phzg73> a org:Organization ;
+    rdfs:label "Raymond and Ruth Perelman School of Medicine at the University of Pennsylvania" ;
+    schema:name "Raymond and Ruth Perelman School of Medicine at the University of Pennsylvania" ;
+    schema:foundingDate "1765"^^xsd:gYear ;
+    org:status "withdrawn" ;
+    org:classification "Other" ; 
+    org:alternativeName "Perelman School of Medicine" ;
+    schema:url <http://www.med.upenn.edu/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Perelman_School_of_Medicine_at_the_University_of_Pennsylvania> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-75.16362 39.95238)"^^geo:wktLiteral ;
+            schema:addressLocality "Philadelphia" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/4560349/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000123012088> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q4120165> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

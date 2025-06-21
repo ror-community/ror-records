@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/00zcwgt52> a org:Organization ;
+    rdfs:label "Pierce College" ;
+    schema:name "Pierce College" ;
+    org:status "withdrawn" ;
+    org:classification "Education" ; 
+    schema:url <https://www.pierce.ctc.edu/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Pierce_College> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-122.51846 47.17176)"^^geo:wktLiteral ;
+            schema:addressLocality "Lakewood" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/5800420/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000405885274> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q50573109> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

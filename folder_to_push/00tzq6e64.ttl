@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/00tzq6e64> a org:Organization ;
+    rdfs:label "Long Island University Hudson at Westchester" ;
+    schema:name "Long Island University Hudson at Westchester" ;
+    org:status "withdrawn" ;
+    org:classification "Education" ; 
+    org:alternativeName "LIU Hudson at Westchester" ;
+    schema:url <http://www.liu.edu/Hudson/About/Visit/Westchester> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-73.71457 41.04093)"^^geo:wktLiteral ;
+            schema:addressLocality "Purchase" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/5133135/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000406335469> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

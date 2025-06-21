@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/04k59bg10> a org:Organization ;
+    rdfs:label "Department of Jobs and Small Business" ;
+    schema:name "Department of Jobs and Small Business" ;
+    org:status "inactive" ;
+    org:classification "Government" ; 
+    org:alternativeName "Department of Employment" ;
+    schema:url <https://www.jobs.gov.au/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Department_of_Jobs_and_Small_Business_(Australia)> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(149.12807 -35.28346)"^^geo:wktLiteral ;
+            schema:addressLocality "Canberra" ;
+            schema:addressCountry "AU" ;
+            owl:sameAs <http://sws.geonames.org/2172517/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000403857034> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q16257333> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

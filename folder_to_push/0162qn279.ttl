@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/0162qn279> a org:Organization ;
+    rdfs:label "Qamcom Research & Technology (Sweden)" ;
+    schema:name "Qamcom Research & Technology (Sweden)" ;
+    schema:foundingDate "2001"^^xsd:gYear ;
+    org:status "withdrawn" ;
+    org:classification "Company" ; 
+    schema:url <https://www.qamcom.se/> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(17.34762 64.16026)"^^geo:wktLiteral ;
+            schema:addressLocality "Åsele" ;
+            schema:addressCountry "SE" ;
+            owl:sameAs <http://sws.geonames.org/2724958/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000493367505> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q61932261> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

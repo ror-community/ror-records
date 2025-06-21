@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/02q34ka72> a org:Organization ;
+    rdfs:label "International Institute of Tropical Agriculture" ;
+    schema:name "International Institute of Tropical Agriculture" ;
+    org:status "withdrawn" ;
+    org:classification "Facility" ; 
+    org:abbreviation "IITA" ;
+    org:alternativeName "IITA-Benin" ;
+    schema:url <http://www.iita.org/iita-benin> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/International_Institute_of_Tropical_Agriculture> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(2.41833 6.36536)"^^geo:wktLiteral ;
+            schema:addressLocality "Cotonou" ;
+            schema:addressCountry "BJ" ;
+            owl:sameAs <http://sws.geonames.org/2394819/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q50376881> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

@@ -1,0 +1,26 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/00dw1pp06> a org:Organization ;
+    rdfs:label "Iveco (United Kingdom)" ;
+    schema:name "Iveco (United Kingdom)" ;
+    org:status "withdrawn" ;
+    org:classification "Company" ; 
+    schema:url <http://www.iveco.com/uk/Pages/Home-Page.aspx> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Iveco> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(0.45782 51.56844)"^^geo:wktLiteral ;
+            schema:addressLocality "Basildon" ;
+            schema:addressCountry "GB" ;
+            owl:sameAs <http://sws.geonames.org/2656194/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

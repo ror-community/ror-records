@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/00n4jr633> a org:Organization ;
+    rdfs:label "Western Sussex Hospitals NHS Foundation Trust" ;
+    schema:name "Western Sussex Hospitals NHS Foundation Trust" ;
+    org:status "withdrawn" ;
+    org:classification "Healthcare" ; 
+    schema:url <http://www.westernsussexhospitals.nhs.uk/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Western_Sussex_Hospitals_NHS_Foundation_Trust> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-0.37538 50.81795)"^^geo:wktLiteral ;
+            schema:addressLocality "Worthing" ;
+            schema:addressCountry "GB" ;
+            owl:sameAs <http://sws.geonames.org/2633521/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q16940041> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/011qzf880> a org:Organization ;
+    rdfs:label "Austrian Excellence Center for Tribology" ;
+    schema:name "Austrian Excellence Center for Tribology" ;
+    org:status "withdrawn" ;
+    org:classification "Facility" ; 
+    org:abbreviation "AC²T" ;
+    org:alternativeName "Austrian Tribology Society" ;
+    schema:url <http://www.ac2t.at/en/> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(16.23196 47.80485)"^^geo:wktLiteral ;
+            schema:addressLocality "Wiener Neustadt" ;
+            schema:addressCountry "AT" ;
+            owl:sameAs <http://sws.geonames.org/2761353/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000405344099> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

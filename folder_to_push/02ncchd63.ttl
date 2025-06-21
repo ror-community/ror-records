@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/02ncchd63> a org:Organization ;
+    rdfs:label "Hebrew Union College - Jewish Institute of Religion" ;
+    schema:name "Hebrew Union College - Jewish Institute of Religion" ;
+    org:status "withdrawn" ;
+    org:classification "Education" ; 
+    org:abbreviation "HUC" ;
+    org:alternativeName "The College-Institute" ;
+    schema:url <http://huc.edu/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Hebrew_Union_College-Jewish_Institute_of_Religion> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-84.51439 39.12711)"^^geo:wktLiteral ;
+            schema:addressLocality "Cincinnati" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/4508722/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000121515212> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q1526305> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

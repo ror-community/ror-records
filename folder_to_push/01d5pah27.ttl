@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/01d5pah27> a org:Organization ;
+    rdfs:label "Direction des Applications Militaires" ;
+    schema:name "Direction des Applications Militaires" ;
+    org:status "withdrawn" ;
+    org:classification "Government" ; 
+    org:abbreviation "DAM" ;
+    schema:url <http://www-dam.cea.fr/dynamique/accueil/accueil.asp> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(2.18991 48.58868)"^^geo:wktLiteral ;
+            schema:addressLocality "Bruyères-le-Châtel" ;
+            schema:addressCountry "FR" ;
+            owl:sameAs <http://sws.geonames.org/3029717/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q41566944> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

@@ -1,0 +1,24 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/05raz7j17> a org:Organization ;
+    rdfs:label "GE Renewable Energy (Germany)" ;
+    schema:name "GE Renewable Energy (Germany)" ;
+    org:status "withdrawn" ;
+    org:classification "Company" ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(7.35 52.33333)"^^geo:wktLiteral ;
+            schema:addressLocality "Salzbergen" ;
+            schema:addressCountry "DE" ;
+            owl:sameAs <http://sws.geonames.org/2842175/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

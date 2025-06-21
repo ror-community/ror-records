@@ -1,0 +1,26 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/04z8v6e48> a org:Organization ;
+    rdfs:label "Sheffield Teaching Hospital" ;
+    schema:name "Sheffield Teaching Hospital" ;
+    org:status "withdrawn" ;
+    org:classification "Healthcare" ; 
+    schema:url <http://www.sth.nhs.uk/> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-1.4659 53.38297)"^^geo:wktLiteral ;
+            schema:addressLocality "Sheffield" ;
+            schema:addressCountry "GB" ;
+            owl:sameAs <http://sws.geonames.org/2638077/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q50575534> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

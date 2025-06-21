@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/02dc3yz72> a org:Organization ;
+    rdfs:label "Penn State Worthington Scranton" ;
+    schema:name "Penn State Worthington Scranton" ;
+    schema:foundingDate "1923"^^xsd:gYear ;
+    org:status "withdrawn" ;
+    org:classification "Education" ; 
+    schema:url <http://www.sn.psu.edu/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Penn_State_Worthington_Scranton> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-75.63241 41.4198)"^^geo:wktLiteral ;
+            schema:addressLocality "Dunmore" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/5187542/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000097010280> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q7163304> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

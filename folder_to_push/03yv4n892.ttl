@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/03yv4n892> a org:Organization ;
+    rdfs:label "Vanderbilt University School of Medicine" ;
+    schema:name "Vanderbilt University School of Medicine" ;
+    schema:foundingDate "1875"^^xsd:gYear ;
+    org:status "withdrawn" ;
+    org:classification "Other" ; 
+    schema:url <https://medschool.vanderbilt.edu/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Vanderbilt_University_School_of_Medicine> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-86.78444 36.16589)"^^geo:wktLiteral ;
+            schema:addressLocality "Nashville" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/4644585/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000122939172> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q7914466> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

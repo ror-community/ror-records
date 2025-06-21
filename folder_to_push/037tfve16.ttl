@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/037tfve16> a org:Organization ;
+    rdfs:label "Lamar State College–Orange" ;
+    schema:name "Lamar State College–Orange" ;
+    org:status "withdrawn" ;
+    org:classification "Education" ; 
+    org:abbreviation "LSC-O" ;
+    org:alternativeName "Lamar University-Orange" ;
+    schema:url <http://www.lsco.edu/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Lamar_State_College%E2%80%93Orange> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-93.73655 30.09299)"^^geo:wktLiteral ;
+            schema:addressLocality "Orange" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/4716805/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000086822072> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q6480920> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

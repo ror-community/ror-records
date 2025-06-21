@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/041nhzq95> a org:Organization ;
+    rdfs:label "Penn State Berks" ;
+    schema:name "Penn State Berks" ;
+    schema:foundingDate "1958"^^xsd:gYear ;
+    org:status "withdrawn" ;
+    org:classification "Education" ; 
+    schema:url <http://www.bk.psu.edu/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Penn_State_Berks> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-75.92687 40.33565)"^^geo:wktLiteral ;
+            schema:addressLocality "Reading" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/5207728/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000093616170> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q15265894> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

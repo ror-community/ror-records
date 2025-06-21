@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/03km47c80> a org:Organization ;
+    rdfs:label "Future Generations Graduate School" ;
+    schema:name "Future Generations Graduate School" ;
+    org:status "withdrawn" ;
+    org:classification "Education" ; 
+    org:alternativeName "Future.Edu: A University Of the World" ;
+    schema:url <https://future.edu/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Future_Generations_Graduate_School> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-79.33115 38.64289)"^^geo:wktLiteral ;
+            schema:addressLocality "Franklin" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/4806504/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000404786469> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

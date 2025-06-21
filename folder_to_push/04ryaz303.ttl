@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/04ryaz303> a org:Organization ;
+    rdfs:label "South Ural State Humanitarian Pedagogical University" ;
+    schema:name "South Ural State Humanitarian Pedagogical University" ;
+    org:status "withdrawn" ;
+    org:classification "Education" ; 
+    org:abbreviation "SUSHPU" ;
+    org:alternativeName "Chelyabinsk Pedagogical Institute" ;
+    schema:url <http://en.cspu.ru/> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(61.42915 55.15402)"^^geo:wktLiteral ;
+            schema:addressLocality "Chelyabinsk" ;
+            schema:addressCountry "RU" ;
+            owl:sameAs <http://sws.geonames.org/1508291/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

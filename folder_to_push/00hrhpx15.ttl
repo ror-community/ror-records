@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/00hrhpx15> a org:Organization ;
+    rdfs:label "United Technologies (Germany)" ;
+    schema:name "United Technologies (Germany)" ;
+    schema:foundingDate "1934"^^xsd:gYear ;
+    org:status "inactive" ;
+    org:classification "Company" ; 
+    org:abbreviation "UTC" ;
+    org:alternativeName "United Aircraft Corporation" ;
+    schema:url <https://www.utc.com/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/United_Technologies> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(13.41053 52.52437)"^^geo:wktLiteral ;
+            schema:addressLocality "Berlin" ;
+            schema:addressCountry "DE" ;
+            owl:sameAs <http://sws.geonames.org/2950159/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q30290818> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

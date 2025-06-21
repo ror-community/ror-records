@@ -1,0 +1,25 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/001rf1g63> a org:Organization ;
+    rdfs:label "Bashkir Academy of Public Administration and Management" ;
+    schema:name "Bashkir Academy of Public Administration and Management" ;
+    org:status "withdrawn" ;
+    org:classification "Education" ; 
+    schema:url <http://www.bagsurb.ru/> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(55.96779 54.74306)"^^geo:wktLiteral ;
+            schema:addressLocality "Ufa" ;
+            schema:addressCountry "RU" ;
+            owl:sameAs <http://sws.geonames.org/479561/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

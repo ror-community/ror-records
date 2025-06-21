@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/02az3ec29> a org:Organization ;
+    rdfs:label "Velikolukskaya State Agricultural Academy" ;
+    schema:name "Velikolukskaya State Agricultural Academy" ;
+    org:status "withdrawn" ;
+    org:classification "Education" ; 
+    org:alternativeName "Velikiye Luki Agricultural Institute" ;
+    schema:url <http://www.vgsa.ru/> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(30.54517 56.34)"^^geo:wktLiteral ;
+            schema:addressLocality "Velikiye Luki" ;
+            schema:addressCountry "RU" ;
+            owl:sameAs <http://sws.geonames.org/476077/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q30257818> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

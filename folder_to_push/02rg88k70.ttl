@@ -1,0 +1,24 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/02rg88k70> a org:Organization ;
+    rdfs:label "Ministry of Fisheries and Coastal Affairs" ;
+    schema:name "Ministry of Fisheries and Coastal Affairs" ;
+    org:status "withdrawn" ;
+    org:classification "Government" ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(6.15492 62.47225)"^^geo:wktLiteral ;
+            schema:addressLocality "Ålesund" ;
+            schema:addressCountry "NO" ;
+            owl:sameAs <http://sws.geonames.org/3163392/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

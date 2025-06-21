@@ -1,0 +1,26 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/01dgqsa10> a org:Organization ;
+    rdfs:label "Esterline (United Kingdom)" ;
+    schema:name "Esterline (United Kingdom)" ;
+    org:status "withdrawn" ;
+    org:classification "Company" ; 
+    schema:url <https://www.esterline.com/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Esterline> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-2.55054 51.85501)"^^geo:wktLiteral ;
+            schema:addressLocality "Ruardean" ;
+            schema:addressCountry "GB" ;
+            owl:sameAs <http://sws.geonames.org/6940298/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

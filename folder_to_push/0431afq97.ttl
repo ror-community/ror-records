@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/0431afq97> a org:Organization ;
+    rdfs:label "Penn State Great Valley" ;
+    schema:name "Penn State Great Valley" ;
+    schema:foundingDate "1963"^^xsd:gYear ;
+    org:status "withdrawn" ;
+    org:classification "Education" ; 
+    org:alternativeName "Penn State Great Valley School of Graduate Professional Studies" ;
+    schema:url <https://greatvalley.psu.edu/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Penn_State_Great_Valley_School_of_Graduate_Professional_Studies> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-75.51381 40.03622)"^^geo:wktLiteral ;
+            schema:addressLocality "Malvern" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/5199600/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/000000009497755X> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q15265897> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

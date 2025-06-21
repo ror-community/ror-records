@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/03xa45x83> a org:Organization ;
+    rdfs:label "National American University" ;
+    schema:name "National American University" ;
+    org:status "withdrawn" ;
+    org:classification "Education" ; 
+    org:abbreviation "NAU" ;
+    schema:url <http://www.national.edu/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/National_American_University> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-94.57857 39.09973)"^^geo:wktLiteral ;
+            schema:addressLocality "Kansas City" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/4393217/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000405397123> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q6970347> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

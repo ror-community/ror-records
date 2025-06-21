@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/04m1p5n74> a org:Organization ;
+    rdfs:label "University of Wisconsin Green Bay – Sheboygan" ;
+    schema:name "University of Wisconsin Green Bay – Sheboygan" ;
+    org:status "withdrawn" ;
+    org:classification "Education" ; 
+    org:abbreviation "UW–Green Bay" ;
+    org:alternativeName "UW–Sheboygan" ;
+    schema:url <https://www.uwgb.edu/sheboygan/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/UW%E2%80%93Green_Bay,_Sheboygan_Campus> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-87.71453 43.75083)"^^geo:wktLiteral ;
+            schema:addressLocality "Sheboygan" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/5272893/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q7896665> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

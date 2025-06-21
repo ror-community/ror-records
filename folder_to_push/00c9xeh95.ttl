@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/00c9xeh95> a org:Organization ;
+    rdfs:label "National Agricultural Research Center for Tohoku Region" ;
+    schema:name "National Agricultural Research Center for Tohoku Region" ;
+    org:status "withdrawn" ;
+    org:classification "Facility" ; 
+    org:abbreviation "NARCT" ;
+    schema:url <http://www.naro.affrc.go.jp/english/tarc/> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(141.15 39.7)"^^geo:wktLiteral ;
+            schema:addressLocality "Morioka" ;
+            schema:addressCountry "JP" ;
+            owl:sameAs <http://sws.geonames.org/2111834/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000122207617> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

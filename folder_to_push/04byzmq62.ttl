@@ -1,0 +1,24 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/04byzmq62> a org:Organization ;
+    rdfs:label "United Nations Population Fund" ;
+    schema:name "United Nations Population Fund" ;
+    org:status "withdrawn" ;
+    org:classification "Government" ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(21.43141 41.99646)"^^geo:wktLiteral ;
+            schema:addressLocality "Skopje" ;
+            schema:addressCountry "MK" ;
+            owl:sameAs <http://sws.geonames.org/785842/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

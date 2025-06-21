@@ -1,0 +1,26 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/037kf1624> a org:Organization ;
+    rdfs:label "Art Institute of Fort Worth" ;
+    schema:name "Art Institute of Fort Worth" ;
+    org:status "withdrawn" ;
+    org:classification "Education" ; 
+    schema:url <https://www.artinstitutes.edu/fort-worth> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-97.32085 32.72541)"^^geo:wktLiteral ;
+            schema:addressLocality "Fort Worth" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/4691930/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000404729915> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

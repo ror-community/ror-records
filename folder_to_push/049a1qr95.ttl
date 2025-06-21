@@ -1,0 +1,26 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/049a1qr95> a org:Organization ;
+    rdfs:label "Consultores De Automatización Y Robótica" ;
+    schema:name "Consultores De Automatización Y Robótica" ;
+    org:status "withdrawn" ;
+    org:classification "Other" ; 
+    org:abbreviation "CARSA" ;
+    schema:url <http://www.carsa.es/en/index.php> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-3.01146 43.35689)"^^geo:wktLiteral ;
+            schema:addressLocality "Getxo" ;
+            schema:addressCountry "ES" ;
+            owl:sameAs <http://sws.geonames.org/3121007/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .
