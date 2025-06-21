@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/00mcdyn90> a org:Organization ;
+    rdfs:label "Institut de Robòtica i Informàtica Industrial" ;
+    schema:name "Institut de Robòtica i Informàtica Industrial" ;
+    schema:foundingDate "1995"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    org:abbreviation "IRII" ;
+    org:alternativeName "Institute of Robotics and Industrial Informatics" ;
+    schema:url <https://www.iri.upc.edu> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Institut_de_Rob%C3%B2tica_i_Inform%C3%A0tica_Industrial> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(2.15899 41.38879)"^^geo:wktLiteral ;
+            schema:addressLocality "Barcelona" ;
+            schema:addressCountry "ES" ;
+            owl:sameAs <http://sws.geonames.org/3128760/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000417632928> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q3815300> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/02dbwrk72> a org:Organization ;
+    rdfs:label "Naval Medical Research Unit Six" ;
+    schema:name "Naval Medical Research Unit Six" ;
+    schema:foundingDate "1983"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Healthcare" ; 
+    org:abbreviation "NAMRU-6" ;
+    schema:url <http://www.med.navy.mil/sites/NAMRU6/Pages/namru6.htm> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Naval_Medical_Research_Unit_Six> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-77.02824 -12.04318)"^^geo:wktLiteral ;
+            schema:addressLocality "Lima" ;
+            schema:addressCountry "PE" ;
+            owl:sameAs <http://sws.geonames.org/3936456/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000404866610> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q6981864> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

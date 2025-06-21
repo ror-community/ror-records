@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/00ae13b94> a org:Organization ;
+    rdfs:label "Instituto de Estudios Gallegos Padre Sarmiento" ;
+    schema:name "Instituto de Estudios Gallegos Padre Sarmiento" ;
+    schema:foundingDate "1943"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    org:abbreviation "IEGPS" ;
+    org:alternativeName "Padre Sarmiento Institute of Galician Studies" ;
+    schema:url <https://iegps.csic.es> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-8.54569 42.88052)"^^geo:wktLiteral ;
+            schema:addressLocality "Santiago de Compostela" ;
+            schema:addressCountry "ES" ;
+            owl:sameAs <http://sws.geonames.org/3109642/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000121697116> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q9008730> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

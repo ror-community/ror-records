@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/01ffvgk12> a org:Organization ;
+    rdfs:label "Hospital Metropolitano Dr. Pila" ;
+    schema:name "Hospital Metropolitano Dr. Pila" ;
+    schema:foundingDate "1925"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Healthcare" ; 
+    org:alternativeName "Hospital Dr. Pila" ;
+    schema:url <http://www.metropavia.com/DrPila.cfm> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Hospital_Metropolitano_Dr._Pila> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-66.62398 18.01031)"^^geo:wktLiteral ;
+            schema:addressLocality "Ponce" ;
+            schema:addressCountry "PR" ;
+            owl:sameAs <http://sws.geonames.org/4566880/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q5908483> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

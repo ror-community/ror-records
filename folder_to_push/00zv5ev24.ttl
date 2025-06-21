@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/00zv5ev24> a org:Organization ;
+    rdfs:label "Puerto Rico Administration of Mental Health and Anti-Addiction Services" ;
+    schema:name "Puerto Rico Administration of Mental Health and Anti-Addiction Services" ;
+    org:status "active" ;
+    org:classification "Government" ; 
+    schema:url <http://www.assmca.pr.gov/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Puerto_Rico_Administration_of_Mental_Health_and_Anti-Addiction_Services> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-66.15572 18.39856)"^^geo:wktLiteral ;
+            schema:addressLocality "Bayamón" ;
+            schema:addressCountry "PR" ;
+            owl:sameAs <http://sws.geonames.org/4562831/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000460725038> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

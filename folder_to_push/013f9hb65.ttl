@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/013f9hb65> a org:Organization ;
+    rdfs:label "Mahatma Gandhi Central University" ;
+    schema:name "Mahatma Gandhi Central University" ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "MGCU" ;
+    org:alternativeName "Mahatma Gandhi Central University, Motihari" ;
+    schema:url <https://mgcub.ac.in> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Mahatma_Gandhi_Central_University> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(84.91656 26.64862)"^^geo:wktLiteral ;
+            schema:addressLocality "Mothīhāri" ;
+            schema:addressCountry "IN" ;
+            owl:sameAs <http://sws.geonames.org/1262710/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    .

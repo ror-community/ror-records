@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/002ty1h48> a org:Organization ;
+    rdfs:label "Laboratoire pour l'Utilisation des Lasers Intenses" ;
+    schema:name "Laboratoire pour l'Utilisation des Lasers Intenses" ;
+    schema:foundingDate "1960"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    org:abbreviation "LULI" ;
+    schema:url <https://portail.polytechnique.edu/luli/en> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(2.2498 48.71828)"^^geo:wktLiteral ;
+            schema:addressLocality "Palaiseau" ;
+            schema:addressCountry "FR" ;
+            owl:sameAs <http://sws.geonames.org/2988758/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000090295703> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q3214506> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

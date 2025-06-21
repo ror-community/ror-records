@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/01w1erp60> a org:Organization ;
+    rdfs:label "Couplage Multi-physiques et Multi-échelles en mécanique géo-environnemental" ;
+    schema:name "Couplage Multi-physiques et Multi-échelles en mécanique géo-environnemental" ;
+    schema:foundingDate "2008"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Other" ; 
+    org:abbreviation "MeGe" ;
+    org:alternativeName "GDR Couplage Multi-physiques et Multi-échelles en mécanique géo-environnemental" ;
+    schema:url <http://gdr-mege.univ-lr.fr> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-1.15222 46.16308)"^^geo:wktLiteral ;
+            schema:addressLocality "La Rochelle" ;
+            schema:addressCountry "FR" ;
+            owl:sameAs <http://sws.geonames.org/3006787/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q51782215> ;
+    .

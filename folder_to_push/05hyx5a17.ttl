@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/05hyx5a17> a org:Organization ;
+    rdfs:label "Laboratoire de Génie Électrique de Grenoble" ;
+    schema:name "Laboratoire de Génie Électrique de Grenoble" ;
+    schema:foundingDate "2007"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    org:abbreviation "G2ELab" ;
+    schema:url <http://www.g2elab.grenoble-inp.fr/> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(5.71479 45.17869)"^^geo:wktLiteral ;
+            schema:addressLocality "Grenoble" ;
+            schema:addressCountry "FR" ;
+            owl:sameAs <http://sws.geonames.org/3014728/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000092773238> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

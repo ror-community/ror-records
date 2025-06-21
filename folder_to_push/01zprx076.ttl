@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/01zprx076> a org:Organization ;
+    rdfs:label "Office of Federal Energy Management Programs" ;
+    schema:name "Office of Federal Energy Management Programs" ;
+    org:status "active" ;
+    org:classification "Government" ; 
+    org:abbreviation "FEMP" ;
+    org:alternativeName "United States Department of Energy Office of Energy Efficiency Under Secretary for Infrastructure Office of Federal Energy Management Programs" ;
+    schema:url <https://www.energy.gov/femp/federal-energy-management-program> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Federal_Energy_Management_Program> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-77.03637 38.89511)"^^geo:wktLiteral ;
+            schema:addressLocality "Washington" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/4140963/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000458975484> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q5440208> ;
+    .

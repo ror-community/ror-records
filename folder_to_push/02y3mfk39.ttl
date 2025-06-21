@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/02y3mfk39> a org:Organization ;
+    rdfs:label "Biologie des Oiseaux et Aviculture" ;
+    schema:name "Biologie des Oiseaux et Aviculture" ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    org:abbreviation "BOA" ;
+    schema:url <https://www6.val-de-loire.inrae.fr/boa> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(0.74623 47.54499)"^^geo:wktLiteral ;
+            schema:addressLocality "Nouzilly" ;
+            schema:addressCountry "FR" ;
+            owl:sameAs <http://sws.geonames.org/2989945/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q52557888> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

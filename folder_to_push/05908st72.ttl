@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/05908st72> a org:Organization ;
+    rdfs:label "Hospital Damas" ;
+    schema:name "Hospital Damas" ;
+    schema:foundingDate "1863"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Healthcare" ; 
+    org:alternativeName "Santo Asilo de Damas" ;
+    schema:url <http://www.hospitaldamas.com/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Hospital_Damas> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-66.62398 18.01031)"^^geo:wktLiteral ;
+            schema:addressLocality "Ponce" ;
+            schema:addressCountry "PR" ;
+            owl:sameAs <http://sws.geonames.org/4566880/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q5908680> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

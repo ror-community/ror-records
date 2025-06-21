@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/05pfy5w65> a org:Organization ;
+    rdfs:label "Gastroenterology Hospital "Saverio de Bellis"" ;
+    schema:name "Gastroenterology Hospital "Saverio de Bellis"" ;
+    org:status "active" ;
+    org:classification "Healthcare" ; 
+    org:alternativeName "IRCCS de Bellis" ;
+    schema:url <https://www.sanita.puglia.it/web/debellis/> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(17.16549 40.88643)"^^geo:wktLiteral ;
+            schema:addressLocality "Castellana Grotte" ;
+            schema:addressCountry "IT" ;
+            owl:sameAs <http://sws.geonames.org/3179656/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000101626994> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q50035526> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

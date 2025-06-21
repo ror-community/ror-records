@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/03bczw616> a org:Organization ;
+    rdfs:label "Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing" ;
+    schema:name "Federal Service for Surveillance on Consumer Rights Protection and Human Wellbeing" ;
+    schema:foundingDate "2004"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Government" ; 
+    org:alternativeName "Rospotrebnadzor" ;
+    schema:url <https://rospotrebnadzor.ru/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Federal_Service_for_Surveillance_on_Consumer_Rights_Protection_and_Human_Wellbeing> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(37.61556 55.75222)"^^geo:wktLiteral ;
+            schema:addressLocality "Moscow" ;
+            schema:addressCountry "RU" ;
+            owl:sameAs <http://sws.geonames.org/524901/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000403811300> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q4736878> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

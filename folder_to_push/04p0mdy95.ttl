@@ -1,0 +1,25 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/04p0mdy95> a org:Organization ;
+    rdfs:label "Office of Spent Fuel and Waste Science and Technology" ;
+    schema:name "Office of Spent Fuel and Waste Science and Technology" ;
+    org:status "active" ;
+    org:classification "Government" ; 
+    org:alternativeName "United States Department of Energy Office of Nuclear Energy Office of Spent Fuel and Waste Science and Technology" ;
+    schema:url <https://www.energy.gov/ne/office-nuclear-energy> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-77.03637 38.89511)"^^geo:wktLiteral ;
+            schema:addressLocality "Washington" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/4140963/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    .

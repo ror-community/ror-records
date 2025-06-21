@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/05jpad840> a org:Organization ;
+    rdfs:label "Institut de la Mer de Villefranche" ;
+    schema:name "Institut de la Mer de Villefranche" ;
+    schema:foundingDate "1800"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Other" ; 
+    org:abbreviation "IMEV" ;
+    org:alternativeName "Villefranche Sea Institute" ;
+    schema:url <https://www.imev-mer.fr> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(7.31088 43.70392)"^^geo:wktLiteral ;
+            schema:addressLocality "Villefranche-sur-Mer" ;
+            schema:addressCountry "FR" ;
+            owl:sameAs <http://sws.geonames.org/2968749/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    .

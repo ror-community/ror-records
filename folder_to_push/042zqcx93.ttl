@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/042zqcx93> a org:Organization ;
+    rdfs:label "Northern Marianas College" ;
+    schema:name "Northern Marianas College" ;
+    schema:foundingDate "1981"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "NMC" ;
+    schema:url <http://www.marianas.edu/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Northern_Marianas_College> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(145.7545 15.21233)"^^geo:wktLiteral ;
+            schema:addressLocality "Saipan" ;
+            schema:addressCountry "MP" ;
+            owl:sameAs <http://sws.geonames.org/7828758/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000099806100> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q11400830> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

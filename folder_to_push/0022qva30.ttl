@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/0022qva30> a org:Organization ;
+    rdfs:label "Ponce Health Sciences University" ;
+    schema:name "Ponce Health Sciences University" ;
+    schema:foundingDate "1977"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "PSM" ;
+    org:alternativeName "Ponce School of Medicine & Health Sciences" ;
+    schema:url <http://psm.edu/home.html> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Ponce_Health_Sciences_University> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-66.62398 18.01031)"^^geo:wktLiteral ;
+            schema:addressLocality "Ponce" ;
+            schema:addressCountry "PR" ;
+            owl:sameAs <http://sws.geonames.org/4566880/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q5839196> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

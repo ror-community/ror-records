@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/00wsjvg44> a org:Organization ;
+    rdfs:label "U.S. Army Corp of Engineers Waterways Experiment Station" ;
+    schema:name "U.S. Army Corp of Engineers Waterways Experiment Station" ;
+    schema:foundingDate "1930"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Government" ; 
+    org:classification "Facility" ; 
+    org:abbreviation "WES" ;
+    org:alternativeName "United States Army Corps of Engineers Waterways Experiment Station" ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Waterways_Experiment_Station> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-90.87788 32.35265)"^^geo:wktLiteral ;
+            schema:addressLocality "Vicksburg" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/4449620/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q7974570> ;
+    .

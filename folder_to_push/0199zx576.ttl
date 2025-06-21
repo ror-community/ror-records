@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/0199zx576> a org:Organization ;
+    rdfs:label "Instituto Nacional del Carbón" ;
+    schema:name "Instituto Nacional del Carbón" ;
+    schema:foundingDate "1947"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    org:abbreviation "INCAR" ;
+    org:alternativeName "Carbon Science and Technology Institute" ;
+    schema:url <https://www.incar.csic.es> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-5.84476 43.36029)"^^geo:wktLiteral ;
+            schema:addressLocality "Oviedo" ;
+            schema:addressCountry "ES" ;
+            owl:sameAs <http://sws.geonames.org/3114711/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000417624944> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q5917603> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/041re0e60> a org:Organization ;
+    rdfs:label "R.V. College of Engineering" ;
+    schema:name "R.V. College of Engineering" ;
+    schema:foundingDate "1963"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "RVCE" ;
+    org:alternativeName "Rashtreeya Vidyalaya College of Engineering" ;
+    schema:url <https://rvce.edu.in> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/R.V._College_of_Engineering> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(77.59369 12.97194)"^^geo:wktLiteral ;
+            schema:addressLocality "Bengaluru" ;
+            schema:addressCountry "IN" ;
+            owl:sameAs <http://sws.geonames.org/1277333/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q7273419> ;
+    .

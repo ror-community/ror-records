@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/01rhba952> a org:Organization ;
+    rdfs:label "BAE Systems Electronic Systems (United States)" ;
+    schema:name "BAE Systems Electronic Systems (United States)" ;
+    schema:foundingDate "2005"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Company" ; 
+    org:alternativeName "BAE Systems Electronic Systems" ;
+    schema:url <https://www.baesystems.com/en-us/our-company/inc-businesses/electronic-systems> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/BAE_Systems_Electronic_Systems> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-71.46757 42.76537)"^^geo:wktLiteral ;
+            schema:addressLocality "Nashua" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/5090046/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000404726159> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q4834520> ;
+    .

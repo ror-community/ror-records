@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/008yfsh88> a org:Organization ;
+    rdfs:label "National Museum of Japanese History" ;
+    schema:name "National Museum of Japanese History" ;
+    schema:foundingDate "1981"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Archive" ; 
+    org:alternativeName "Rekihaku" ;
+    schema:url <https://www.rekihaku.ac.jp> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/National_Museum_of_Japanese_History> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(140.23333 35.71667)"^^geo:wktLiteral ;
+            schema:addressLocality "Sakura" ;
+            schema:addressCountry "JP" ;
+            owl:sameAs <http://sws.geonames.org/2111220/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000406204645> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q3330690> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

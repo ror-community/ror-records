@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/01nrtdp55> a org:Organization ;
+    rdfs:label "GDR NBODY : Problème quantique à N corps en chimie et physique" ;
+    schema:name "GDR NBODY : Problème quantique à N corps en chimie et physique" ;
+    schema:foundingDate "2011"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    org:abbreviation "GDR NBODY" ;
+    org:alternativeName "Groupement de Recherche NBODY: Quantum n-body problem in chemistry and physics" ;
+    schema:url <https://wiki.lct.jussieu.fr/gdrnbody/> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(2.3488 48.85341)"^^geo:wktLiteral ;
+            schema:addressLocality "Paris" ;
+            schema:addressCountry "FR" ;
+            owl:sameAs <http://sws.geonames.org/2988507/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    .

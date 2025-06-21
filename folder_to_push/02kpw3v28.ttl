@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/02kpw3v28> a org:Organization ;
+    rdfs:label "Naval Ordnance Laboratory" ;
+    schema:name "Naval Ordnance Laboratory" ;
+    schema:foundingDate "1944"^^xsd:gYear ;
+    org:status "inactive" ;
+    org:classification "Government" ; 
+    org:classification "Facility" ; 
+    org:abbreviation "NOL" ;
+    org:alternativeName "United States Dept. of the Navy Bureau of Ordnance Naval Ordnance Laboratory" ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Naval_Ordnance_Laboratory> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-76.99303 39.03983)"^^geo:wktLiteral ;
+            schema:addressLocality "White Oak" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/4373449/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000121763048> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q6981883> ;
+    .

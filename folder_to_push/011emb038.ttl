@@ -1,0 +1,26 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/011emb038> a org:Organization ;
+    rdfs:label "Département Mathématiques et Informatique Appliquées" ;
+    schema:name "Département Mathématiques et Informatique Appliquées" ;
+    org:status "active" ;
+    org:classification "Government" ; 
+    schema:url <https://www.inrae.fr/actualites?inrae_prod%5bsortBy%5d=inrae_prod_created_date_desc&inrae_prod%5brefinementList%5d%5bname_department%5d%5b0%5d=NUMM> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(2.3488 48.85341)"^^geo:wktLiteral ;
+            schema:addressLocality "Paris" ;
+            schema:addressCountry "FR" ;
+            owl:sameAs <http://sws.geonames.org/2988507/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q30259303> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .
