@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/04af7ga89> a org:Organization ;
+    rdfs:label "Nanyang Polytechnic" ;
+    schema:name "Nanyang Polytechnic" ;
+    schema:foundingDate "1992"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "NYP" ;
+    org:alternativeName "Politeknik Nanyang" ;
+    schema:url <http://www.nyp.edu.sg/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Nanyang_Polytechnic> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(103.85007 1.28967)"^^geo:wktLiteral ;
+            schema:addressLocality "Singapore" ;
+            schema:addressCountry "SG" ;
+            owl:sameAs <http://sws.geonames.org/1880252/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000090223419> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q6964469> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/00yqxd286> a org:Organization ;
+    rdfs:label "Sichuan College of Architectural Technology" ;
+    schema:name "Sichuan College of Architectural Technology" ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "SCAT" ;
+    schema:url <https://www.scac.edu.cn> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(104.38198 31.13019)"^^geo:wktLiteral ;
+            schema:addressLocality "Deyang" ;
+            schema:addressCountry "CN" ;
+            owl:sameAs <http://sws.geonames.org/1812961/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000483470111> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q112677148> ;
+    .

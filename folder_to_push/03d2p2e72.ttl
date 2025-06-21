@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/03d2p2e72> a org:Organization ;
+    rdfs:label "University of Technology Sarawak" ;
+    schema:name "University of Technology Sarawak" ;
+    schema:foundingDate "2013"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "UTS" ;
+    org:alternativeName "University College of Technology Sarawak" ;
+    schema:url <https://www.uts.edu.my> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/University_of_Technology_Sarawak> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(111.81667 2.3)"^^geo:wktLiteral ;
+            schema:addressLocality "Sibu" ;
+            schema:addressCountry "MY" ;
+            owl:sameAs <http://sws.geonames.org/1735902/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000446837818> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q19600080> ;
+    .

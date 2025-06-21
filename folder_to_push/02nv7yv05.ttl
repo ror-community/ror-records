@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/02nv7yv05> a org:Organization ;
+    rdfs:label "Forschungszentrum Jülich" ;
+    schema:name "Forschungszentrum Jülich" ;
+    schema:foundingDate "1956"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    org:abbreviation "FZJ" ;
+    schema:url <https://www.fz-juelich.de> ; 
+    owl:sameAs <http://en.wikipedia.org/wiki/Forschungszentrum_J%C3%BClich> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(6.36267 50.92149)"^^geo:wktLiteral ;
+            schema:addressLocality "Jülich" ;
+            schema:addressCountry "DE" ;
+            owl:sameAs <http://sws.geonames.org/2894553/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/000000012297375X> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q697111> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

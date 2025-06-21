@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/045v4z873> a org:Organization ;
+    rdfs:label "Chittagong Veterinary and Animal Sciences University" ;
+    schema:name "Chittagong Veterinary and Animal Sciences University" ;
+    schema:foundingDate "2006"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "CVASU" ;
+    schema:url <http://cvasu.ac.bd/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Chittagong_Veterinary_and_Animal_Sciences_University> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(91.83168 22.3384)"^^geo:wktLiteral ;
+            schema:addressLocality "Chittagong" ;
+            schema:addressCountry "BD" ;
+            owl:sameAs <http://sws.geonames.org/1205733/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q5102412> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/03tmpzb72> a org:Organization ;
+    rdfs:label "State Library of Victoria" ;
+    schema:name "State Library of Victoria" ;
+    schema:foundingDate "1854"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Archive" ; 
+    schema:url <http://www.slv.vic.gov.au/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/State_Library_of_Victoria> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(144.96332 -37.814)"^^geo:wktLiteral ;
+            schema:addressLocality "Melbourne" ;
+            schema:addressCountry "AU" ;
+            owl:sameAs <http://sws.geonames.org/2158177/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000404325689> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q1200052> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

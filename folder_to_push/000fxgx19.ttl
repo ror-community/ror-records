@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/000fxgx19> a org:Organization ;
+    rdfs:label "SUNY Polytechnic Institute" ;
+    schema:name "SUNY Polytechnic Institute" ;
+    schema:foundingDate "1966"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "SUNY Poly" ;
+    org:alternativeName "State University of New York Polytechnic Institute" ;
+    schema:url <https://sunypoly.edu/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/SUNY_Polytechnic_Institute> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-75.23266 43.1009)"^^geo:wktLiteral ;
+            schema:addressLocality "Utica" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/5142056/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q18155496> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

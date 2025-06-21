@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/04kt5vk53> a org:Organization ;
+    rdfs:label "Obninsk Institute for Nuclear Power Engineering" ;
+    schema:name "Obninsk Institute for Nuclear Power Engineering" ;
+    schema:foundingDate "1953"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "OINPE" ;
+    schema:url <http://www.iate.obninsk.ru> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Obninsk_Institute_for_Nuclear_Power_Engineering> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(36.61006 55.09681)"^^geo:wktLiteral ;
+            schema:addressLocality "Obninsk" ;
+            schema:addressCountry "RU" ;
+            owl:sameAs <http://sws.geonames.org/516436/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000107441907> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q976613> ;
+    .

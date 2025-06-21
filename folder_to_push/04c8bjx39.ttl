@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/04c8bjx39> a org:Organization ;
+    rdfs:label "Oxford Health NHS Foundation Trust" ;
+    schema:name "Oxford Health NHS Foundation Trust" ;
+    org:status "active" ;
+    org:classification "Healthcare" ; 
+    org:alternativeName "Oxfordshire and Buckinghamshire Mental Health Trust" ;
+    schema:url <http://www.oxfordhealth.nhs.uk/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Oxford_Health_NHS_Foundation_Trust> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-1.25596 51.75222)"^^geo:wktLiteral ;
+            schema:addressLocality "Oxford" ;
+            schema:addressCountry "GB" ;
+            owl:sameAs <http://sws.geonames.org/2640729/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/000000040573576X> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q17018025> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .
