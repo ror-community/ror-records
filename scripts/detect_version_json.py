@@ -20,14 +20,14 @@ def detect_ror_version(json_file_path):
         
         try:
             validate(data, schema_v2_1)
-            return "2.1"
+            return "2_1"
         except ValidationError:
             try:
                 validate(data, schema_v2_0)
-                return "2.0"
+                return "2_0"
             except ValidationError:
                 validate(data, schema_v1)  
-                return "1.0"
+                return "1_0"
                 
     except FileNotFoundError as e:
         print(f"Erreur: Fichier non trouvé - {e.filename}")
@@ -42,27 +42,27 @@ def detect_ror_version(json_file_path):
         print(f"Erreur inattendue: {str(e)}")
         return None
 
-if __name__ == "__main__":
-    test_file_2_1 = Path("../releases/v1.66/00b3mhg89.json") 
-    test_file_2_0 = Path("../releases/v1.66/00b3mhg89.json") 
-    test_file_1_0 = Path("../releases/v1.0/000ccd270.json") 
+# if __name__ == "__main__":
+#     test_file_2_1 = Path("../releases/v1.66/00b3mhg89.json") 
+#     test_file_2_0 = Path("../releases/v1.66/00b3mhg89.json") 
+#     test_file_1_0 = Path("../releases/v1.0/000ccd270.json") 
     
-    test_file = Path("../releases/v1.66/00b3mhg89.json")
+#     test_file = Path("../releases/v1.66/00b3mhg89.json")
 
-    choice_version = 1.0
+#     choice_version = 1.0
 
-    if choice_version == 1.0:
-        test_file = test_file_1_0
-    elif choice_version == 2.0:
-        test_file_2_0 = test_file_2_0
-    elif choice_version == 2.1:
-        test_file = test_file_2_1
-    else:
-        print("error de version")
+#     if choice_version == 1.0:
+#         test_file = test_file_1_0
+#     elif choice_version == 2.0:
+#         test_file_2_0 = test_file_2_0
+#     elif choice_version == 2.1:
+#         test_file = test_file_2_1
+#     else:
+#         print("error de version")
 
-    if not test_file.exists():
-        print(f"Erreur: Le fichier {test_file} n'existe pas")
-    else:
-        version = detect_ror_version(test_file)
-        if version:
-            print(f"Version détectée : {version}")
+#     if not test_file.exists():
+#         print(f"Erreur: Le fichier {test_file} n'existe pas")
+#     else:
+#         version = detect_ror_version(test_file)
+#         if version:
+#             print(f"Version détectée : {version}")

@@ -4,98 +4,64 @@ import os
 from pathlib import Path
 
 def git_push_existing_ttl(repo_dir, target_dir, version_name, tag_version=None):
-    
     try:
         repo_dir = Path(repo_dir).absolute()
         target_path = repo_dir / target_dir
-        
-        print(f"\nVérification du dépôt dans : {repo_dir}")
+        original_branch = subprocess.check_output(['git', 'rev-parse', '--abbrev-ref', 'HEAD'], cwd=repo_dir).decode().strip()
+        status_output = subprocess.check_output(['git', 'status', '--porcelain'], cwd=repo_dir).decode()
 
-        if not (repo_dir / ".git").exists():
-            raise FileNotFoundError("ERREUR : Aucun dossier .git trouvé (ce n'est pas un dépôt Git valide)")
+        print(f"\n=== Traitement de la release {version_name} ===")
 
-        remote_url = subprocess.check_output(
-            ["git", "remote", "get-url", "origin"],
-            cwd=repo_dir,
-            stderr=subprocess.PIPE
-        ).decode().strip()
+        if status_output:
+            print("\n⚠️ Attention : Votre dépôt contient des modifications non commitées :")
+            print(status_output)
+            confirm = input("Voulez-vous continuer ? Ces modifications ne seront pas affectées (y/n): ")
+            if confirm.lower() != 'y':
+                print("Annulation par l'utilisateur")
+                return False
 
-        print(f"URL distante détectée : {remote_url}")
+        temp_branch = f"temp/rdf-release-{version_name}"
+        subprocess.run(['git', 'checkout', '-b', temp_branch], cwd=repo_dir, check=True)
+        print(f"✓ Branche temporaire créée : {temp_branch}")
 
-        if "kgFixed/store_ror.org" not in remote_url:
-            raise ValueError(
-                f"ERREUR : Ce dépôt pointe vers '{remote_url}'\n"
-                f"Attendu : 'kgFixed/store_ror.org'"
-            )
-
-        if not target_path.exists():
-            raise FileNotFoundError(f"ERREUR : Dossier introuvable - {target_path}")
-
-        ttl_files = list(target_path.glob("*.ttl"))
-        if not ttl_files:
-            print(f"ATTENTION : Aucun fichier .ttl trouvé dans {target_dir}")
-        else:
-            print(f"Fichiers TTL trouvés ({len(ttl_files)}): {', '.join(f.name for f in ttl_files[:3])}...")
-
-        os.chdir(repo_dir)
-        
-        print("\nExécution des commandes Git...")
-
-        subprocess.run(["git", "stash", "push", "--include-untracked"], check=True)
-        print("✓ Working directory nettoyé (stash)")
-        
-        subprocess.run(["git", "add", f"{target_dir}/*.ttl"], check=True)
-        print("✓ Fichiers ajoutés au staging")
-        
-        commit_msg = f"RDF update {version_name}"
         try:
-            subprocess.run(["git", "commit", "-m", commit_msg], check=True)
-        except subprocess.CalledProcessError as e:
-            print("⚠️ Aucun changement à commiter (peut-être que les fichiers étaient déjà indexés)")
-            print(f"Message Git : {e.output.decode() if e.output else 'Pas de message'}")
-            return True  # Ce n'est pas une erreur critique
-        
-        print(f"✓ Commit créé : '{commit_msg}'")
-        
-        if tag_version is None:
-            tag_version = version_name
+            subprocess.run(['git', 'add', f'{target_dir}/*.ttl'], cwd=repo_dir, check=True)
             
-        subprocess.run(["git", "tag", "-a", tag_version, "-m", f"Version {tag_version}"], check=True)
-        print(f"✓ Tag créé : {tag_version}")
-        
-        subprocess.run(["git", "push", "origin", "main"], check=True)
-        subprocess.run(["git", "push", "origin", "--tags"], check=True)
-        
-        print(f"\nSUCCÈS : Poussé vers {remote_url}")
-        print(f"→ Dossier : {target_dir}")
-        print(f"→ Tag : {tag_version}")
-        
-        try:
-            shutil.rmtree(target_path)
-            print(f"✓ Dossier {target_dir} supprimé avec succès")
-        except Exception as e:
-            print(f"⚠️ Erreur lors de la suppression : {str(e)}")
-        
-        return True
-        
-    except subprocess.CalledProcessError as e:
-        print(f"\nERREUR Git (code {e.returncode}): {e.stderr.decode().strip()}")
-        return False
-    except Exception as e:
-        print(f"\nERREUR : {str(e)}")
-        return False
+            diff_output = subprocess.check_output(['git', 'diff', '--cached', '--name-only'], cwd=repo_dir).decode()
+            
+            if not diff_output:
+                print("Aucun changement TTL à commiter - peut-être que les fichiers étaient déjà indexés")
+                return True
 
-# if __name__ == "__main__":
-#     repo_dir = Path(__file__).parent.parent
-#     target_dir = "folder_to_push"  
-    
-#     success = git_push_existing_ttl(
-#         repo_dir=repo_dir,
-#         target_dir=target_dir,
-#         version_name="Release v1.0",
-#         tag_version="v1.0"
-#     )
-    
-#     if not success:
-#         print("\n✗ Échec de l'opération. Voir les messages ci-dessus.")
-#         exit(1)
+            commit_msg = f"[RDF-AUTO] Update {version_name}"
+            subprocess.run(['git', 'commit', '-m', commit_msg], cwd=repo_dir, check=True)
+            print(f"✓ Commit créé : {commit_msg}")
+
+            tag_name = tag_version if tag_version else version_name
+            subprocess.run(['git', 'tag', '-a', tag_name, '-m', f"RDF Release {tag_name}"], cwd=repo_dir, check=True)
+            print(f"✓ Tag créé : {tag_name}")
+
+            subprocess.run(['git', 'push', 'origin', f'{temp_branch}:main', '--tags'], cwd=repo_dir, check=True)
+            print("✓ Push réussi vers main")
+
+            subprocess.run(['git', 'checkout', original_branch], cwd=repo_dir, check=True)
+            subprocess.run(['git', 'branch', '-D', temp_branch], cwd=repo_dir, check=True)
+            
+            if target_path.exists():
+                shutil.rmtree(target_path)
+                print(f"✓ Dossier {target_dir} nettoyé")
+            else:
+                print(f"Le dossier {target_dir} était déjà absent")
+
+            return True
+
+        except Exception as e:
+            print(f"⚠️ Erreur durant le processus : {str(e)}")
+            print("Nettoyage de la branche temporaire...")
+            subprocess.run(['git', 'checkout', original_branch], cwd=repo_dir)
+            subprocess.run(['git', 'branch', '-D', temp_branch], cwd=repo_dir, stderr=subprocess.DEVNULL)
+            return False
+
+    except Exception as e:
+        print(f"\n❌ ERREUR CRITIQUE : {str(e)}")
+        return False

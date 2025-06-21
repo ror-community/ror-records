@@ -2,11 +2,9 @@ import os
 import time
 import re
 from pathlib import Path
-from create_rdf_file import json_to_individual_rdf
 from detect_version_json import detect_ror_version
 from git_commit_push import git_push_existing_ttl
 from template_to_try import process_ror_file
-import shutil
 
 def version_key(version_str):
     version_parts = version_str[1:].split('.')
