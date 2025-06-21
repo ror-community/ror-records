@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/04gw4zv66> a org:Organization ;
+    rdfs:label "Landmark University" ;
+    schema:name "Landmark University" ;
+    schema:foundingDate "2011"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "LMU" ;
+    schema:url <https://lmu.edu.ng/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Landmark_University> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(5.10029 8.13385)"^^geo:wktLiteral ;
+            schema:addressLocality "Omu-Aran" ;
+            schema:addressCountry "NG" ;
+            owl:sameAs <http://sws.geonames.org/2326200/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000417676410> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q16733756> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

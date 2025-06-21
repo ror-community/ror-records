@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/052rpwb50> a org:Organization ;
+    rdfs:label "Yamashita Thyroid Hospital" ;
+    schema:name "Yamashita Thyroid Hospital" ;
+    schema:foundingDate "2006"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Healthcare" ; 
+    org:abbreviation "YTH" ;
+    org:alternativeName "Yamashita Kojosen Byouin" ;
+    schema:url <https://www.kojosen.com> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(130.41667 33.6)"^^geo:wktLiteral ;
+            schema:addressLocality "Fukuoka" ;
+            schema:addressCountry "JP" ;
+            owl:sameAs <http://sws.geonames.org/1863967/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000511724722> ;
+    .

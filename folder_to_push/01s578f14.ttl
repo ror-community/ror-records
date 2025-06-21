@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/01s578f14> a org:Organization ;
+    rdfs:label "Arnold-Bergstraesser-Institut" ;
+    schema:name "Arnold-Bergstraesser-Institut" ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    org:abbreviation "ABI" ;
+    org:alternativeName "Arnold-Bergstraesser-Institut für kulturwissenschaftliche Forschung" ;
+    schema:url <https://www.arnold-bergstraesser.de> ; 
+    owl:sameAs <https://de.wikipedia.org/wiki/Arnold-Bergstraesser-Institut> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(7.85222 47.9959)"^^geo:wktLiteral ;
+            schema:addressLocality "Freiburg im Breisgau" ;
+            schema:addressCountry "DE" ;
+            owl:sameAs <http://sws.geonames.org/2925177/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000121602412> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q694711> ;
+    .

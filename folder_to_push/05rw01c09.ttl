@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/05rw01c09> a org:Organization ;
+    rdfs:label "Institut für Oberflächen- und Schichtanalytik GmbH" ;
+    schema:name "Institut für Oberflächen- und Schichtanalytik GmbH" ;
+    schema:foundingDate "1989"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    org:abbreviation "IFOS" ;
+    org:alternativeName "Institut für Oberflächen- und Schichtanalytik" ;
+    schema:url <https://www.ifos.uni-kl.de> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(7.77161 49.443)"^^geo:wktLiteral ;
+            schema:addressLocality "Kaiserslautern" ;
+            schema:addressCountry "DE" ;
+            owl:sameAs <http://sws.geonames.org/2894003/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000474346696> ;
+    .

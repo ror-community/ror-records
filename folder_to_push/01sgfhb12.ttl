@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/01sgfhb12> a org:Organization ;
+    rdfs:label "National Enterprise for NanoScience and NanoTechnology" ;
+    schema:name "National Enterprise for NanoScience and NanoTechnology" ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    org:abbreviation "NEST" ;
+    org:alternativeName "Laboratorio NEST" ;
+    schema:url <http://www.laboratorionest.it/> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(10.4036 43.70853)"^^geo:wktLiteral ;
+            schema:addressLocality "Pisa" ;
+            schema:addressCountry "IT" ;
+            owl:sameAs <http://sws.geonames.org/3170647/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

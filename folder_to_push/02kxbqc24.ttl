@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/02kxbqc24> a org:Organization ;
+    rdfs:label "Kerman University of Medical Sciences" ;
+    schema:name "Kerman University of Medical Sciences" ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:alternativeName "Kerman Medical University" ;
+    schema:url <https://kmu.ac.ir> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Kerman_University_of_Medical_Sciences> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(57.07879 30.28321)"^^geo:wktLiteral ;
+            schema:addressLocality "Kerman" ;
+            schema:addressCountry "IR" ;
+            owl:sameAs <http://sws.geonames.org/128234/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000120929755> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q6393984> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

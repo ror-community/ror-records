@@ -1,0 +1,26 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/05bt3je48> a org:Organization ;
+    rdfs:label "SAXSLAB (Denmark)" ;
+    schema:name "SAXSLAB (Denmark)" ;
+    schema:foundingDate "2004"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Company" ; 
+    org:alternativeName "SAXSLAB" ;
+    schema:url <http://saxslab.com> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-72.6412 42.32509)"^^geo:wktLiteral ;
+            schema:addressLocality "Northampton" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/4945819/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    .

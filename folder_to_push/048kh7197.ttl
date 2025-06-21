@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/048kh7197> a org:Organization ;
+    rdfs:label "Department of Science and Technology" ;
+    schema:name "Department of Science and Technology" ;
+    org:status "active" ;
+    org:classification "Government" ; 
+    org:abbreviation "DST" ;
+    schema:url <http://www.dst.gov.za/> ; 
+    owl:sameAs <http://en.wikipedia.org/wiki/Department_of_Science_and_Technology_(South_Africa)> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(28.18783 -25.74486)"^^geo:wktLiteral ;
+            schema:addressLocality "Pretoria" ;
+            schema:addressCountry "ZA" ;
+            owl:sameAs <http://sws.geonames.org/964137/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000406483402> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q4294475> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

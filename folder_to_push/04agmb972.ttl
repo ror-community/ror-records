@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/04agmb972> a org:Organization ;
+    rdfs:label "Georgia Southern University" ;
+    schema:name "Georgia Southern University" ;
+    schema:foundingDate "1906"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    schema:url <http://www.georgiasouthern.edu/> ; 
+    owl:sameAs <http://en.wikipedia.org/wiki/Georgia_Southern_University> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-81.78317 32.44879)"^^geo:wktLiteral ;
+            schema:addressLocality "Statesboro" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/4224413/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/000000010657525X> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q624959> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

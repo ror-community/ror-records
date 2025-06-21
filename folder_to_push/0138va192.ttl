@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/0138va192> a org:Organization ;
+    rdfs:label "Royal Society for the Protection of Birds" ;
+    schema:name "Royal Society for the Protection of Birds" ;
+    schema:foundingDate "1889"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Nonprofit" ; 
+    org:abbreviation "RSPB" ;
+    schema:url <http://www.rspb.org.uk/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Royal_Society_for_the_Protection_of_Birds> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-0.28925 52.12927)"^^geo:wktLiteral ;
+            schema:addressLocality "Sandy" ;
+            schema:addressCountry "GB" ;
+            owl:sameAs <http://sws.geonames.org/2638530/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000121103189> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q1892802> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

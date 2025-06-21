@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/01a5y6f48> a org:Organization ;
+    rdfs:label "Bibliothek für Bildungsgeschichtliche Forschung des DIPF" ;
+    schema:name "Bibliothek für Bildungsgeschichtliche Forschung des DIPF" ;
+    org:status "active" ;
+    org:classification "Archive" ; 
+    org:alternativeName "Bibliothek für Bildungsgeschichtliche Forschung" ;
+    schema:url <https://bbf.dipf.de> ; 
+    owl:sameAs <https://de.wikipedia.org/wiki/Bibliothek_f%C3%BCr_Bildungsgeschichtliche_Forschung> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(13.41053 52.52437)"^^geo:wktLiteral ;
+            schema:addressLocality "Berlin" ;
+            schema:addressCountry "DE" ;
+            owl:sameAs <http://sws.geonames.org/2950159/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000117035398> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q856552> ;
+    .

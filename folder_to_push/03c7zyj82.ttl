@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/03c7zyj82> a org:Organization ;
+    rdfs:label "Sciences Po Grenoble" ;
+    schema:name "Sciences Po Grenoble" ;
+    schema:foundingDate "1948"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    org:abbreviation "IEPG" ;
+    org:alternativeName "Institut d'études politiques de Grenoble" ;
+    schema:url <http://www.sciencespo-grenoble.fr> ; 
+    owl:sameAs <https://fr.wikipedia.org/wiki/Institut_d%27%C3%A9tudes_politiques_de_Grenoble> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(5.76472 45.16639)"^^geo:wktLiteral ;
+            schema:addressLocality "Saint-Martin-d'Hères" ;
+            schema:addressCountry "FR" ;
+            owl:sameAs <http://sws.geonames.org/6433367/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000121902626> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q3151959> ;
+    .

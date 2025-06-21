@@ -1,0 +1,26 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/05bphc025> a org:Organization ;
+    rdfs:label "Customcells Itzehoe GmbH (Germany)" ;
+    schema:name "Customcells Itzehoe GmbH (Germany)" ;
+    org:status "active" ;
+    org:classification "Company" ; 
+    org:alternativeName "Customcells Itzehoe GmbH" ;
+    schema:url <https://www.customcells.de> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(9.51529 53.92099)"^^geo:wktLiteral ;
+            schema:addressLocality "Itzehoe" ;
+            schema:addressCountry "DE" ;
+            owl:sameAs <http://sws.geonames.org/2895569/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q120784603> ;
+    .

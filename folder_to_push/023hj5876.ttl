@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/023hj5876> a org:Organization ;
+    rdfs:label "Dalian University of Technology" ;
+    schema:name "Dalian University of Technology" ;
+    schema:foundingDate "1949"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "DUT" ;
+    org:alternativeName "Dàlián Lǐgōng Dàxué" ;
+    schema:url <http://en.dlut.edu.cn/> ; 
+    owl:sameAs <http://en.wikipedia.org/wiki/Dalian_University_of_Technology> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(121.60222 38.91222)"^^geo:wktLiteral ;
+            schema:addressLocality "Dalian" ;
+            schema:addressCountry "CN" ;
+            owl:sameAs <http://sws.geonames.org/1814087/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000092477930> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q1477368> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

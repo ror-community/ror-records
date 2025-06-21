@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/01h531d29> a org:Organization ;
+    rdfs:label "Natural Sciences and Engineering Research Council" ;
+    schema:name "Natural Sciences and Engineering Research Council" ;
+    schema:foundingDate "1978"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Government" ; 
+    org:abbreviation "NSERC" ;
+    schema:url <http://www.nserc-crsng.gc.ca/index_eng.asp> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Natural_Sciences_and_Engineering_Research_Council> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-75.69812 45.41117)"^^geo:wktLiteral ;
+            schema:addressLocality "Ottawa" ;
+            schema:addressCountry "CA" ;
+            owl:sameAs <http://sws.geonames.org/6094817/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000404082381> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q2993807> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

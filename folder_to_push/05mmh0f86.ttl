@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/05mmh0f86> a org:Organization ;
+    rdfs:label "Australian Research Council" ;
+    schema:name "Australian Research Council" ;
+    schema:foundingDate "2001"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Government" ; 
+    org:abbreviation "ARC" ;
+    schema:url <http://www.arc.gov.au/> ; 
+    owl:sameAs <http://en.wikipedia.org/wiki/Australian_Research_Council> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(149.12807 -35.28346)"^^geo:wktLiteral ;
+            schema:addressLocality "Canberra" ;
+            schema:addressCountry "AU" ;
+            owl:sameAs <http://sws.geonames.org/2172517/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000406119213> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q4824612> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

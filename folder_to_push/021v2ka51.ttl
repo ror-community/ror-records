@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/021v2ka51> a org:Organization ;
+    rdfs:label "Institut national supérieur de formation et de recherche pour l'éducation des jeunes handicapés et les enseignements adaptés" ;
+    schema:name "Institut national supérieur de formation et de recherche pour l'éducation des jeunes handicapés et les enseignements adaptés" ;
+    schema:foundingDate "2005"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    org:abbreviation "INSHEA" ;
+    schema:url <https://www.inshea.fr> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Institut_national_sup%C3%A9rieur_de_formation_et_de_recherche_pour_l%27%C3%A9ducation_des_jeunes_handicap%C3%A9s_et_les_enseignements_adapt%C3%A9s> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(2.22929 48.87143)"^^geo:wktLiteral ;
+            schema:addressLocality "Suresnes" ;
+            schema:addressCountry "FR" ;
+            owl:sameAs <http://sws.geonames.org/2973675/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000121919209> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q3152454> ;
+    .

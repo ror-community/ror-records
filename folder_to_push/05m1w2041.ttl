@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/05m1w2041> a org:Organization ;
+    rdfs:label "Court of Justice of the European Union" ;
+    schema:name "Court of Justice of the European Union" ;
+    schema:foundingDate "1952"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Government" ; 
+    org:abbreviation "CURIA" ;
+    org:alternativeName "European Court of Justice" ;
+    schema:url <https://curia.europa.eu> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/European_Court_of_Justice> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(6.13 49.61167)"^^geo:wktLiteral ;
+            schema:addressLocality "Luxembourg" ;
+            schema:addressCountry "LU" ;
+            owl:sameAs <http://sws.geonames.org/2960316/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000123752086> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q1518827> ;
+    .
