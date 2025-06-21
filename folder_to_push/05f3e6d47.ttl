@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/05f3e6d47> a org:Organization ;
+    rdfs:label "National AIDS Control Organisation" ;
+    schema:name "National AIDS Control Organisation" ;
+    schema:foundingDate "1992"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Government" ; 
+    org:abbreviation "NACO" ;
+    schema:url <http://www.naco.gov.in/NACO/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/National_AIDS_Control_Organisation> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(77.22445 28.63576)"^^geo:wktLiteral ;
+            schema:addressLocality "New Delhi" ;
+            schema:addressCountry "IN" ;
+            owl:sameAs <http://sws.geonames.org/1261481/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q6970085> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/056ksgr44> a org:Organization ;
+    rdfs:label "PTT Public Company Limited (Thailand)" ;
+    schema:name "PTT Public Company Limited (Thailand)" ;
+    schema:foundingDate "1978"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Company" ; 
+    org:abbreviation "PTT" ;
+    org:alternativeName "Petroleum Authority of Thailand" ;
+    schema:url <https://www.pttplc.com/th/Home.aspx> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/PTT_Public_Company_Limited> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(100.50144 13.75398)"^^geo:wktLiteral ;
+            schema:addressLocality "Bangkok" ;
+            schema:addressCountry "TH" ;
+            owl:sameAs <http://sws.geonames.org/1609350/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000095446400> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q1810389> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/01wka8n18> a org:Organization ;
+    rdfs:label "Royal Veterinary College" ;
+    schema:name "Royal Veterinary College" ;
+    schema:foundingDate "1791"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "RVC" ;
+    schema:url <http://www.rvc.ac.uk/> ; 
+    owl:sameAs <http://en.wikipedia.org/wiki/Royal_Veterinary_College> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-0.12574 51.50853)"^^geo:wktLiteral ;
+            schema:addressLocality "London" ;
+            schema:addressCountry "GB" ;
+            owl:sameAs <http://sws.geonames.org/2643743/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/000000040425573X> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q268411> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

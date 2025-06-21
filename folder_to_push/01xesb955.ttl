@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/01xesb955> a org:Organization ;
+    rdfs:label "BC Children's Hospital Foundation" ;
+    schema:name "BC Children's Hospital Foundation" ;
+    schema:foundingDate "1982"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Nonprofit" ; 
+    org:abbreviation "BCCHF" ;
+    schema:url <http://www.bcchf.ca/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/BC_Children%27s_Hospital_Foundation> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-123.11934 49.24966)"^^geo:wktLiteral ;
+            schema:addressLocality "Vancouver" ;
+            schema:addressCountry "CA" ;
+            owl:sameAs <http://sws.geonames.org/6173331/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000114320695> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q4835281> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

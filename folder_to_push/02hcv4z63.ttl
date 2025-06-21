@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/02hcv4z63> a org:Organization ;
+    rdfs:label "Minia University" ;
+    schema:name "Minia University" ;
+    schema:foundingDate "1976"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    schema:url <http://www.minia.edu.eg/> ; 
+    owl:sameAs <http://en.wikipedia.org/wiki/Minia_University> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(30.75813 28.09193)"^^geo:wktLiteral ;
+            schema:addressLocality "Minya" ;
+            schema:addressCountry "EG" ;
+            owl:sameAs <http://sws.geonames.org/360686/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000089994945> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q6865113> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

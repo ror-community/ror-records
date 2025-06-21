@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/04wsqd844> a org:Organization ;
+    rdfs:label "Direction Générale de l'Armement" ;
+    schema:name "Direction Générale de l'Armement" ;
+    schema:foundingDate "1961"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Government" ; 
+    org:abbreviation "DGA" ;
+    schema:url <http://www.defense.gouv.fr/dga> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Direction_g%C3%A9n%C3%A9rale_de_l%27armement> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(2.3488 48.85341)"^^geo:wktLiteral ;
+            schema:addressLocality "Paris" ;
+            schema:addressCountry "FR" ;
+            owl:sameAs <http://sws.geonames.org/2988507/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000106718206> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q3029559> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

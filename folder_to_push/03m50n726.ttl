@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/03m50n726> a org:Organization ;
+    rdfs:label "Patuakhali Science and Technology University" ;
+    schema:name "Patuakhali Science and Technology University" ;
+    schema:foundingDate "2000"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "PSTU" ;
+    schema:url <http://www.pstu.ac.bd/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Patuakhali_Science_and_Technology_University> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(90.33333 22.33333)"^^geo:wktLiteral ;
+            schema:addressLocality "Patuakhali" ;
+            schema:addressCountry "BD" ;
+            owl:sameAs <http://sws.geonames.org/1337216/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000404893643> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q7148748> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/034b53w38> a org:Organization ;
+    rdfs:label "Chinese Academy of Meteorological Sciences" ;
+    schema:name "Chinese Academy of Meteorological Sciences" ;
+    schema:foundingDate "1978"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    org:abbreviation "CAMS" ;
+    schema:url <http://www.camscma.cn/en.html> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(116.39723 39.9075)"^^geo:wktLiteral ;
+            schema:addressLocality "Beijing" ;
+            schema:addressCountry "CN" ;
+            owl:sameAs <http://sws.geonames.org/1816670/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q97041677> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

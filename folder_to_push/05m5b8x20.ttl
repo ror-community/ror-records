@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/05m5b8x20> a org:Organization ;
+    rdfs:label "Sidney Kimmel Comprehensive Cancer Center" ;
+    schema:name "Sidney Kimmel Comprehensive Cancer Center" ;
+    schema:foundingDate "1973"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    org:abbreviation "SKCCC" ;
+    schema:url <https://www.hopkinsmedicine.org/kimmel_cancer_center> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Sidney_Kimmel_Comprehensive_Cancer_Center> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-76.61219 39.29038)"^^geo:wktLiteral ;
+            schema:addressLocality "Baltimore" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/4347778/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000087413625> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q28406744> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

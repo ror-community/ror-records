@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/043yykt67> a org:Organization ;
+    rdfs:label "Wayamba University of Sri Lanka" ;
+    schema:name "Wayamba University of Sri Lanka" ;
+    schema:foundingDate "1999"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "WUSL" ;
+    schema:url <http://www.wyb.ac.lk/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Wayamba_University_of_Sri_Lanka> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(80.0401 7.4688)"^^geo:wktLiteral ;
+            schema:addressLocality "Kuliyapitiya" ;
+            schema:addressCountry "LK" ;
+            owl:sameAs <http://sws.geonames.org/1238427/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000094199778> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q7975840> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

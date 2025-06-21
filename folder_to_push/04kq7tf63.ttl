@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/04kq7tf63> a org:Organization ;
+    rdfs:label "Mount Kenya University" ;
+    schema:name "Mount Kenya University" ;
+    schema:foundingDate "1996"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "MKU" ;
+    schema:url <https://www.mku.ac.ke> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Mount_Kenya_University> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(37.06933 -1.03326)"^^geo:wktLiteral ;
+            schema:addressLocality "Thika" ;
+            schema:addressCountry "KE" ;
+            owl:sameAs <http://sws.geonames.org/179330/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000417552784> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q15045626> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/03hre7f61> a org:Organization ;
+    rdfs:label "Hospital Regional de Alta Especialidad del Bajío" ;
+    schema:name "Hospital Regional de Alta Especialidad del Bajío" ;
+    org:status "active" ;
+    org:classification "Healthcare" ; 
+    org:abbreviation "HRAEB" ;
+    schema:url <http://www.hraeb.salud.gob.mx/> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-101.2591 21.01858)"^^geo:wktLiteral ;
+            schema:addressLocality "Guanajuato City" ;
+            schema:addressCountry "MX" ;
+            owl:sameAs <http://sws.geonames.org/4005270/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000404265591> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

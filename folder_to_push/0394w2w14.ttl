@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/0394w2w14> a org:Organization ;
+    rdfs:label "Chettinad Academy of Research and Education" ;
+    schema:name "Chettinad Academy of Research and Education" ;
+    schema:foundingDate "2008"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "CU" ;
+    org:alternativeName "Chettinad University" ;
+    schema:url <https://care.edu.in/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Chettinad_University> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(80.27847 13.08784)"^^geo:wktLiteral ;
+            schema:addressLocality "Chennai" ;
+            schema:addressCountry "IN" ;
+            owl:sameAs <http://sws.geonames.org/1264527/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q5094206> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

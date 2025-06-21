@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/025mg0739> a org:Organization ;
+    rdfs:label "American Society for Biochemistry and Molecular Biology" ;
+    schema:name "American Society for Biochemistry and Molecular Biology" ;
+    schema:foundingDate "1906"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Other" ; 
+    org:abbreviation "ASBMB" ;
+    org:alternativeName "American Society of Biological Chemists" ;
+    schema:url <http://www.asbmb.org/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/American_Society_for_Biochemistry_and_Molecular_Biology> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-77.15276 39.084)"^^geo:wktLiteral ;
+            schema:addressLocality "Rockville" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/4367175/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000109432254> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q4745009> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

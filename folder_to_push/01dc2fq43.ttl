@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/01dc2fq43> a org:Organization ;
+    rdfs:label "New Mexico Academy of Science" ;
+    schema:name "New Mexico Academy of Science" ;
+    schema:foundingDate "1960"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Other" ; 
+    org:abbreviation "NMAS" ;
+    org:alternativeName "NM Science Teachers Association" ;
+    schema:url <http://www.nmas.org/> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-106.65114 35.08449)"^^geo:wktLiteral ;
+            schema:addressLocality "Albuquerque" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/5454711/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000094060602> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

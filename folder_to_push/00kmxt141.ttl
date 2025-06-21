@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/00kmxt141> a org:Organization ;
+    rdfs:label "Winona State University" ;
+    schema:name "Winona State University" ;
+    schema:foundingDate "1858"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "WSU" ;
+    schema:url <https://www.winona.edu/> ; 
+    owl:sameAs <http://en.wikipedia.org/wiki/Winona_State_University> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-91.63932 44.04996)"^^geo:wktLiteral ;
+            schema:addressLocality "Winona" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/5053156/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000090702866> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q3233786> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

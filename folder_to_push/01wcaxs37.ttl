@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/01wcaxs37> a org:Organization ;
+    rdfs:label "St. Francis Xavier University" ;
+    schema:name "St. Francis Xavier University" ;
+    schema:foundingDate "1853"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    schema:url <http://www.stfx.ca/> ; 
+    owl:sameAs <http://en.wikipedia.org/wiki/St._Francis_Xavier_University> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-61.99858 45.61685)"^^geo:wktLiteral ;
+            schema:addressLocality "Antigonish" ;
+            schema:addressCountry "CA" ;
+            owl:sameAs <http://sws.geonames.org/5886182/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000419367363> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q2038889> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/00gdzqq03> a org:Organization ;
+    rdfs:label "American Society of Addiction Medicine" ;
+    schema:name "American Society of Addiction Medicine" ;
+    schema:foundingDate "1954"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Nonprofit" ; 
+    org:abbreviation "ASAM" ;
+    schema:url <http://www.asam.org/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/American_Society_of_Addiction_Medicine> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-77.07115 39.00287)"^^geo:wktLiteral ;
+            schema:addressLocality "Chevy Chase" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/4351335/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000107890323> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q4745042> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

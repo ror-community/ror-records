@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/03r9qc142> a org:Organization ;
+    rdfs:label "UCL Biomedical Research Centre" ;
+    schema:name "UCL Biomedical Research Centre" ;
+    schema:foundingDate "2007"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Healthcare" ; 
+    org:alternativeName "NIHR Biomedical Research Centre at University College London Hospitals NHS Foundation Trust and University College London" ;
+    schema:url <http://www.uclhospitals.brc.nihr.ac.uk/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/UCLH/UCL_Biomedical_Research_Centre> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-0.12574 51.50853)"^^geo:wktLiteral ;
+            schema:addressLocality "London" ;
+            schema:addressCountry "GB" ;
+            owl:sameAs <http://sws.geonames.org/2643743/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q7864056> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/01kzjg088> a org:Organization ;
+    rdfs:label "Omsk State Technical University" ;
+    schema:name "Omsk State Technical University" ;
+    schema:foundingDate "1942"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "OmSTU" ;
+    org:alternativeName "Izdatelstvo Omskogo Gosudarstvennogo Tekhnicheskogo Universiteta" ;
+    schema:url <http://omgtu.ru/english/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Omsk_State_Technical_University> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(73.36859 54.99244)"^^geo:wktLiteral ;
+            schema:addressLocality "Omsk" ;
+            schema:addressCountry "RU" ;
+            owl:sameAs <http://sws.geonames.org/1496153/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/000000010138661X> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q257249> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

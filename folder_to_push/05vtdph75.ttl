@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/05vtdph75> a org:Organization ;
+    rdfs:label "Chartered Institute of Building" ;
+    schema:name "Chartered Institute of Building" ;
+    schema:foundingDate "1834"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Other" ; 
+    org:abbreviation "CIOB" ;
+    schema:url <http://www.ciob.org/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Chartered_Institute_of_Building> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-0.75054 51.41363)"^^geo:wktLiteral ;
+            schema:addressLocality "Bracknell" ;
+            schema:addressCountry "GB" ;
+            owl:sameAs <http://sws.geonames.org/2655009/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000406017225> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q5086806> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

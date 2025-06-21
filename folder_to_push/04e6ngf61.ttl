@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/04e6ngf61> a org:Organization ;
+    rdfs:label "Hood College" ;
+    schema:name "Hood College" ;
+    schema:foundingDate "1893"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    schema:url <http://www.hood.edu/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Hood_College> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-77.41054 39.41427)"^^geo:wktLiteral ;
+            schema:addressLocality "Frederick" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/4355585/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000100890929> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q5897438> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

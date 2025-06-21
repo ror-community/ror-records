@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/01rw3qm79> a org:Organization ;
+    rdfs:label "Hanoi University of Mining and Geology" ;
+    schema:name "Hanoi University of Mining and Geology" ;
+    schema:foundingDate "1966"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "HUMG" ;
+    org:alternativeName "Trường Đại học Mỏ - Địa chất Hà Nội" ;
+    schema:url <http://www.humg.edu.vn/vi/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Hanoi_University_of_Mining_and_Geology> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(105.84117 21.0245)"^^geo:wktLiteral ;
+            schema:addressLocality "Hanoi" ;
+            schema:addressCountry "VN" ;
+            owl:sameAs <http://sws.geonames.org/1581130/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/000000040470390X> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q10829093> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

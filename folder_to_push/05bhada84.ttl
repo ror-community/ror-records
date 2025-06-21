@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/05bhada84> a org:Organization ;
+    rdfs:label "Nara Institute of Science and Technology" ;
+    schema:name "Nara Institute of Science and Technology" ;
+    schema:foundingDate "1991"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "NAIST" ;
+    org:alternativeName "Nara Sentan Kagaku Gijutsu Daigakuin Daigaku" ;
+    schema:url <http://www.naist.jp/en/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Nara_Institute_of_Science_and_Technology> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(135.7 34.68333)"^^geo:wktLiteral ;
+            schema:addressLocality "Ikoma" ;
+            schema:addressCountry "JP" ;
+            owl:sameAs <http://sws.geonames.org/1861749/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000092272257> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q843253> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

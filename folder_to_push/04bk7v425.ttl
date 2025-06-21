@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/04bk7v425> a org:Organization ;
+    rdfs:label "Mercer University" ;
+    schema:name "Mercer University" ;
+    schema:foundingDate "1833"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    schema:url <http://www.mercer.edu/> ; 
+    owl:sameAs <http://en.wikipedia.org/wiki/Mercer_University> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-83.6324 32.84069)"^^geo:wktLiteral ;
+            schema:addressLocality "Macon" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/4207400/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000121629738> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q1798612> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

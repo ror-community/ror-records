@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/04jwepe89> a org:Organization ;
+    rdfs:label "Council for British Archaeology" ;
+    schema:name "Council for British Archaeology" ;
+    schema:foundingDate "1944"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Nonprofit" ; 
+    org:abbreviation "CBA" ;
+    schema:url <http://new.archaeologyuk.org> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Council_for_British_Archaeology> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-1.08271 53.95763)"^^geo:wktLiteral ;
+            schema:addressLocality "York" ;
+            schema:addressCountry "GB" ;
+            owl:sameAs <http://sws.geonames.org/2633352/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000109432510> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q2998867> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

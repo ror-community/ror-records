@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/02njz9p87> a org:Organization ;
+    rdfs:label "Fuyang Normal University" ;
+    schema:name "Fuyang Normal University" ;
+    schema:foundingDate "1956"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    schema:url <http://www.fync.edu.cn/ch2009/index.html> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Fuyang_Normal_University> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(115.81667 32.9)"^^geo:wktLiteral ;
+            schema:addressLocality "Fuyang" ;
+            schema:addressCountry "CN" ;
+            owl:sameAs <http://sws.geonames.org/1810845/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000104698037> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q19856365> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

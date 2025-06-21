@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/048vche49> a org:Organization ;
+    rdfs:label "Islamic Azad University Sanandaj Branch" ;
+    schema:name "Islamic Azad University Sanandaj Branch" ;
+    schema:foundingDate "1983"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:alternativeName "Azad University of Sanandaj" ;
+    schema:url <http://www.iausdj.ac.ir/english/Pages/default.aspx> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Islamic_Azad_University_Kurdistan_Province> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(46.99883 35.31495)"^^geo:wktLiteral ;
+            schema:addressLocality "Sanandij" ;
+            schema:addressCountry "IR" ;
+            owl:sameAs <http://sws.geonames.org/117574/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000404942337> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q23043421> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

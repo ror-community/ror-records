@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/0004vyj87> a org:Organization ;
+    rdfs:label "Arab Academy for Science, Technology and Maritime Transport" ;
+    schema:name "Arab Academy for Science, Technology and Maritime Transport" ;
+    schema:foundingDate "1972"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "AASTMT" ;
+    schema:url <http://www.aast.edu> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Arab_Academy_for_Science,_Technology_%26_Maritime_Transport> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(29.91582 31.20176)"^^geo:wktLiteral ;
+            schema:addressLocality "Alexandria" ;
+            schema:addressCountry "EG" ;
+            owl:sameAs <http://sws.geonames.org/361058/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000090155153> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q4116239> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

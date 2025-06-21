@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/01qf95793> a org:Organization ;
+    rdfs:label "Lindenwood University" ;
+    schema:name "Lindenwood University" ;
+    schema:foundingDate "1827"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "LU" ;
+    org:alternativeName "Lindenwood" ;
+    schema:url <http://www.lindenwood.edu/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Lindenwood_University> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-90.48123 38.78394)"^^geo:wktLiteral ;
+            schema:addressLocality "Saint Charles" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/4406831/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000085390749> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q5617088> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

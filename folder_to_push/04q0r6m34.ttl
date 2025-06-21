@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/04q0r6m34> a org:Organization ;
+    rdfs:label "Universidad Autónoma de la Ciudad de México" ;
+    schema:name "Universidad Autónoma de la Ciudad de México" ;
+    schema:foundingDate "2001"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "UACM" ;
+    org:alternativeName "Universidad de la Ciudad de México" ;
+    schema:url <https://www.uacm.edu.mx/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Universidad_Aut%C3%B3noma_de_la_Ciudad_de_M%C3%A9xico> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-99.12766 19.42847)"^^geo:wktLiteral ;
+            schema:addressLocality "Mexico City" ;
+            schema:addressCountry "MX" ;
+            owl:sameAs <http://sws.geonames.org/3530597/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000121167545> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q7894243> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

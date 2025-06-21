@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/019tgvf94> a org:Organization ;
+    rdfs:label "Université Côte d'Azur" ;
+    schema:name "Université Côte d'Azur" ;
+    schema:foundingDate "2015"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "UCA" ;
+    schema:url <https://univ-cotedazur.fr/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/University_of_C%C3%B4te_d%27Azur> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(7.26608 43.70313)"^^geo:wktLiteral ;
+            schema:addressLocality "Nice" ;
+            schema:addressCountry "FR" ;
+            owl:sameAs <http://sws.geonames.org/2990440/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000449106551> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q19370961> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

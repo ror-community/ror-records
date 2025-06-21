@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/04qjh2h11> a org:Organization ;
+    rdfs:label "Xinjiang Agricultural University" ;
+    schema:name "Xinjiang Agricultural University" ;
+    schema:foundingDate "1952"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:alternativeName "Xīnjiāng Nóngyè Dàxué" ;
+    schema:url <http://www.xjau.edu.cn/> ; 
+    owl:sameAs <http://en.wikipedia.org/wiki/Xinjiang_Agricultural_University> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(87.60046 43.80096)"^^geo:wktLiteral ;
+            schema:addressLocality "Ürümqi" ;
+            schema:addressCountry "CN" ;
+            owl:sameAs <http://sws.geonames.org/1529102/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000093549799> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q8044607> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

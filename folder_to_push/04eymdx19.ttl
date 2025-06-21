@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/04eymdx19> a org:Organization ;
+    rdfs:label "Hebei Medical University" ;
+    schema:name "Hebei Medical University" ;
+    schema:foundingDate "1894"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "HMU" ;
+    schema:url <http://en.hebmu.edu.cn/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Hebei_Medical_University> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(114.47861 38.04139)"^^geo:wktLiteral ;
+            schema:addressLocality "Shijiazhuang" ;
+            schema:addressCountry "CN" ;
+            owl:sameAs <http://sws.geonames.org/1795270/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000417608442> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q5695499> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

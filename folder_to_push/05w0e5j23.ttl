@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/05w0e5j23> a org:Organization ;
+    rdfs:label "Wuhan Polytechnic University" ;
+    schema:name "Wuhan Polytechnic University" ;
+    schema:foundingDate "1951"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:alternativeName "Wuhan QingGong DaXue" ;
+    schema:url <http://www.whpu.edu.cn/EN/> ; 
+    owl:sameAs <http://en.wikipedia.org/wiki/Wuhan_Polytechnic_University> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(114.26667 30.58333)"^^geo:wktLiteral ;
+            schema:addressLocality "Wuhan" ;
+            schema:addressCountry "CN" ;
+            owl:sameAs <http://sws.geonames.org/1791247/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000417981968> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q3615960> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

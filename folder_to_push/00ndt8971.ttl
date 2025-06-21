@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/00ndt8971> a org:Organization ;
+    rdfs:label "California Botanical Society" ;
+    schema:name "California Botanical Society" ;
+    schema:foundingDate "1913"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Archive" ; 
+    schema:url <http://calbotsoc.org/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/California_Botanical_Society> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-122.27275 37.87159)"^^geo:wktLiteral ;
+            schema:addressLocality "Berkeley" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/5327684/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000106612313> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

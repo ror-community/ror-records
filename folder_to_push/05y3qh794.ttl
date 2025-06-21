@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/05y3qh794> a org:Organization ;
+    rdfs:label "Nottingham University Hospitals NHS Trust" ;
+    schema:name "Nottingham University Hospitals NHS Trust" ;
+    schema:foundingDate "2006"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Healthcare" ; 
+    org:abbreviation "NUH" ;
+    schema:url <http://www.nuh.nhs.uk/> ; 
+    owl:sameAs <http://en.wikipedia.org/wiki/Nottingham_University_Hospitals_NHS_Trust> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-1.15047 52.9536)"^^geo:wktLiteral ;
+            schema:addressLocality "Nottingham" ;
+            schema:addressCountry "GB" ;
+            owl:sameAs <http://sws.geonames.org/2641170/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000104401889> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q7063709> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

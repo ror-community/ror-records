@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/02dy0mv77> a org:Organization ;
+    rdfs:label "Challenger Society for Marine Science" ;
+    schema:name "Challenger Society for Marine Science" ;
+    schema:foundingDate "1903"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Nonprofit" ; 
+    org:alternativeName "Challenger Society" ;
+    schema:url <https://www.challenger-society.org.uk> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Challenger_Society_for_Marine_Science> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-5.47184 56.41535)"^^geo:wktLiteral ;
+            schema:addressLocality "Oban" ;
+            schema:addressCountry "GB" ;
+            owl:sameAs <http://sws.geonames.org/2641108/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q5068963> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

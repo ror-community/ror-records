@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/048a3wm97> a org:Organization ;
+    rdfs:label "Australian Communications and Media Authority" ;
+    schema:name "Australian Communications and Media Authority" ;
+    schema:foundingDate "2005"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Government" ; 
+    org:abbreviation "ACMA" ;
+    schema:url <https://www.acma.gov.au/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Australian_Communications_and_Media_Authority> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(149.06627 -35.23798)"^^geo:wktLiteral ;
+            schema:addressLocality "Belconnen" ;
+            schema:addressCountry "AU" ;
+            owl:sameAs <http://sws.geonames.org/2176373/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000121050697> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q4056115> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

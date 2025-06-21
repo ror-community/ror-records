@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/03tghng59> a org:Organization ;
+    rdfs:label "Southwest Research Institute" ;
+    schema:name "Southwest Research Institute" ;
+    schema:foundingDate "1947"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Nonprofit" ; 
+    org:abbreviation "SwRI" ;
+    schema:url <http://www.swri.org/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Southwest_Research_Institute> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-98.49363 29.42412)"^^geo:wktLiteral ;
+            schema:addressLocality "San Antonio" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/4726206/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000103214125> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q1509357> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

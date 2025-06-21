@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/018gpkq23> a org:Organization ;
+    rdfs:label "Amigos Library Services" ;
+    schema:name "Amigos Library Services" ;
+    schema:foundingDate "1974"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Nonprofit" ; 
+    schema:url <http://www.amigos.org/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Amigos_Library_Services> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-96.80667 32.78306)"^^geo:wktLiteral ;
+            schema:addressLocality "Dallas" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/4684888/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000405960852> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

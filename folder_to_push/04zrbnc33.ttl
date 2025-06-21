@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/04zrbnc33> a org:Organization ;
+    rdfs:label "Multimedia University" ;
+    schema:name "Multimedia University" ;
+    schema:foundingDate "1996"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "MMU" ;
+    org:alternativeName "Universiti Multimedia" ;
+    schema:url <https://www.mmu.edu.my/> ; 
+    owl:sameAs <http://en.wikipedia.org/wiki/Multimedia_University> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(102.2405 2.196)"^^geo:wktLiteral ;
+            schema:addressLocality "Malacca" ;
+            schema:addressCountry "MY" ;
+            owl:sameAs <http://sws.geonames.org/1734759/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000086106308> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q1421182> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

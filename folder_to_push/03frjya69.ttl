@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/03frjya69> a org:Organization ;
+    rdfs:label "Daegu Gyeongbuk Institute of Science and Technology" ;
+    schema:name "Daegu Gyeongbuk Institute of Science and Technology" ;
+    schema:foundingDate "2004"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "DGIST" ;
+    schema:url <http://en.dgist.ac.kr/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Daegu_Gyeongbuk_Institute_of_Science_and_Technology> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(128.59111 35.87028)"^^geo:wktLiteral ;
+            schema:addressLocality "Daegu" ;
+            schema:addressCountry "KR" ;
+            owl:sameAs <http://sws.geonames.org/1835329/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000404386721> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q12591209> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/00s3fdw25> a org:Organization ;
+    rdfs:label "Telekom Malaysia Berhad (Malaysia)" ;
+    schema:name "Telekom Malaysia Berhad (Malaysia)" ;
+    schema:foundingDate "1984"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Company" ; 
+    org:abbreviation "TM" ;
+    schema:url <https://www.tm.com.my/AboutTM/CorporateInformation/Pages/AboutUs.aspx> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Telekom_Malaysia> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(101.68653 3.1412)"^^geo:wktLiteral ;
+            schema:addressLocality "Kuala Lumpur" ;
+            schema:addressCountry "MY" ;
+            owl:sameAs <http://sws.geonames.org/1735161/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000404072079> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q1640639> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

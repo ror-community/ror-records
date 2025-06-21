@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/03rq9c547> a org:Organization ;
+    rdfs:label "Gdansk University of Physical Education and Sport" ;
+    schema:name "Gdansk University of Physical Education and Sport" ;
+    schema:foundingDate "1969"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "AWFiS" ;
+    schema:url <http://www.en.awf.gda.pl/> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(18.64912 54.35227)"^^geo:wktLiteral ;
+            schema:addressLocality "Gdansk" ;
+            schema:addressCountry "PL" ;
+            owl:sameAs <http://sws.geonames.org/3099434/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000113598636> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

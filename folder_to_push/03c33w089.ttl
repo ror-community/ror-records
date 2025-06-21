@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/03c33w089> a org:Organization ;
+    rdfs:label "Dr. Yashwant Singh Parmar University of Horticulture and Forestry" ;
+    schema:name "Dr. Yashwant Singh Parmar University of Horticulture and Forestry" ;
+    schema:foundingDate "1985"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "YSP UHF" ;
+    org:alternativeName "Dr. Y. S. Parmar University of Horticulture and Forestry" ;
+    schema:url <http://www.yspuniversity.ac.in/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Dr._Yashwant_Singh_Parmar_University_of_Horticulture_and_Forestry> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(77.10869 30.90908)"^^geo:wktLiteral ;
+            schema:addressLocality "Solan" ;
+            schema:addressCountry "IN" ;
+            owl:sameAs <http://sws.geonames.org/1255850/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000405005898> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q5304488> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

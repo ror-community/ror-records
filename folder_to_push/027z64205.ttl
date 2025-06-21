@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/027z64205> a org:Organization ;
+    rdfs:label "Open University of Israel" ;
+    schema:name "Open University of Israel" ;
+    schema:foundingDate "1974"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:alternativeName "HaUniversita HaPtukha" ;
+    schema:url <http://www-e.openu.ac.il/> ; 
+    owl:sameAs <http://en.wikipedia.org/wiki/Open_University_of_Israel> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(34.87386 32.1836)"^^geo:wktLiteral ;
+            schema:addressLocality "Raanana" ;
+            schema:addressCountry "IL" ;
+            owl:sameAs <http://sws.geonames.org/293807/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000406047424> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q1423960> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

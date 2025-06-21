@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/028dyak29> a org:Organization ;
+    rdfs:label "Aja University of Medical Sciences" ;
+    schema:name "Aja University of Medical Sciences" ;
+    schema:foundingDate "1993"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    schema:url <http://ajaums.ac.ir/homepage.aspx?lang=en-US&site=AjaPortal&tabid=1> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/AJA_University_of_Medical_Sciences> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(51.42151 35.69439)"^^geo:wktLiteral ;
+            schema:addressLocality "Tehran" ;
+            schema:addressCountry "IR" ;
+            owl:sameAs <http://sws.geonames.org/112931/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000092860323> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q5913556> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

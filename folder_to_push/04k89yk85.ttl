@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/04k89yk85> a org:Organization ;
+    rdfs:label "University of Kurdistan" ;
+    schema:name "University of Kurdistan" ;
+    schema:foundingDate "1974"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    schema:url <http://www.uok.ac.ir/> ; 
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Kurdistan_(Iran)> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(46.99883 35.31495)"^^geo:wktLiteral ;
+            schema:addressLocality "Sanandij" ;
+            schema:addressCountry "IR" ;
+            owl:sameAs <http://sws.geonames.org/117574/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000093529878> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q42238> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q56649152> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/01n2bd587> a org:Organization ;
+    rdfs:label "Liaoning Technical University" ;
+    schema:name "Liaoning Technical University" ;
+    schema:foundingDate "1949"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "LNTU" ;
+    org:alternativeName "Liaoning University of Engineering and Technology" ;
+    schema:url <http://202.199.224.4/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Liaoning_Technical_University> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(121.65889 42.01556)"^^geo:wktLiteral ;
+            schema:addressLocality "Fuxin" ;
+            schema:addressCountry "CN" ;
+            owl:sameAs <http://sws.geonames.org/2037346/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/000000011122661X> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q6540150> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

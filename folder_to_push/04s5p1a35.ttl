@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/04s5p1a35> a org:Organization ;
+    rdfs:label "Instituto Chico Mendes de Conservação da Biodiversidade" ;
+    schema:name "Instituto Chico Mendes de Conservação da Biodiversidade" ;
+    schema:foundingDate "2007"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Government" ; 
+    org:alternativeName "ICMBio" ;
+    schema:url <http://www.icmbio.gov.br/portal/quem-somos/o-instituto.html> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Chico_Mendes_Institute_for_Biodiversity_Conservation> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-47.92972 -15.77972)"^^geo:wktLiteral ;
+            schema:addressLocality "Brasília" ;
+            schema:addressCountry "BR" ;
+            owl:sameAs <http://sws.geonames.org/3469058/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000092180782> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

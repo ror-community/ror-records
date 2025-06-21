@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/02k1cnv49> a org:Organization ;
+    rdfs:label "Deutsche Gesellschaft für Zahn-, Mund- und Kieferheilkunde" ;
+    schema:name "Deutsche Gesellschaft für Zahn-, Mund- und Kieferheilkunde" ;
+    schema:foundingDate "1859"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Other" ; 
+    org:abbreviation "DGZMK" ;
+    schema:url <http://www.dgzmk.de/> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(6.77616 51.22172)"^^geo:wktLiteral ;
+            schema:addressLocality "Düsseldorf" ;
+            schema:addressCountry "DE" ;
+            owl:sameAs <http://sws.geonames.org/2934246/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000109414929> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

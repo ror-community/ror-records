@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/00engpz63> a org:Organization ;
+    rdfs:label "University of Sharjah" ;
+    schema:name "University of Sharjah" ;
+    schema:foundingDate "1997"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "UOS" ;
+    org:alternativeName "Sharjah University" ;
+    schema:url <http://www.sharjah.ac.ae/en/Pages/default.aspx> ; 
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Sharjah> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(55.41206 25.33737)"^^geo:wktLiteral ;
+            schema:addressLocality "Sharjah" ;
+            schema:addressCountry "AE" ;
+            owl:sameAs <http://sws.geonames.org/292672/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000446865317> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q7896294> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .
