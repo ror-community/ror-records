@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/007j2dm88> a org:Organization ;
+    rdfs:label "Instituto do Cérebro" ;
+    schema:name "Instituto do Cérebro" ;
+    org:status "active" ;
+    org:classification "Nonprofit" ; 
+    org:abbreviation "InsCer" ;
+    org:alternativeName "Brain Institute of Rio Grande do Sul – PUCRS" ;
+    schema:url <https://inscer.pucrs.br> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-51.23019 -30.03283)"^^geo:wktLiteral ;
+            schema:addressLocality "Porto Alegre" ;
+            schema:addressCountry "BR" ;
+            owl:sameAs <http://sws.geonames.org/3452925/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

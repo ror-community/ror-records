@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/0398a1r53> a org:Organization ;
+    rdfs:label "National metrology institute VTT MIKES" ;
+    schema:name "National metrology institute VTT MIKES" ;
+    schema:foundingDate "1991"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    org:abbreviation "MIKES" ;
+    org:alternativeName "Centre for Metrology" ;
+    schema:url <https://www.vttresearch.com/en/industries/metrology-vtt-mikes> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Centre_for_Metrology_and_Accreditation> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(24.6522 60.2052)"^^geo:wktLiteral ;
+            schema:addressLocality "Espoo" ;
+            schema:addressCountry "FI" ;
+            owl:sameAs <http://sws.geonames.org/660158/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000404485893> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q4354916> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

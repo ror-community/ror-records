@@ -1,0 +1,25 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/00g9zze16> a org:Organization ;
+    rdfs:label "Tashenev University" ;
+    schema:name "Tashenev University" ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "TU" ;
+    schema:url <https://tashenev.edu.kz> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(69.6 42.3)"^^geo:wktLiteral ;
+            schema:addressLocality "Shymkent" ;
+            schema:addressCountry "KZ" ;
+            owl:sameAs <http://sws.geonames.org/1518980/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    .

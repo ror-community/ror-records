@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/0281pgk04> a org:Organization ;
+    rdfs:label "AAA College of Engineering and Technology" ;
+    schema:name "AAA College of Engineering and Technology" ;
+    schema:foundingDate "2013"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:alternativeName "AAA College of Engineering & Technology" ;
+    schema:url <https://www.aaaenggcoll.ac.in> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(77.79797 9.44999)"^^geo:wktLiteral ;
+            schema:addressLocality "Sivakasi" ;
+            schema:addressCountry "IN" ;
+            owl:sameAs <http://sws.geonames.org/1255947/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000459379932> ;
+    .

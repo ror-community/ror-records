@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/01gmrmd93> a org:Organization ;
+    rdfs:label "Anderson University - South Carolina" ;
+    schema:name "Anderson University - South Carolina" ;
+    schema:foundingDate "1911"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "AU" ;
+    schema:url <http://www.andersonuniversity.edu/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Anderson_University_(South_Carolina)> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-82.65013 34.50344)"^^geo:wktLiteral ;
+            schema:addressLocality "Anderson" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/4569298/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000404445162> ;
+    schema:sameAs <http://isni.org/isni/0000000405839235> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q4754215> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

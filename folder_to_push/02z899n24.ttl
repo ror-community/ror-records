@@ -1,0 +1,26 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/02z899n24> a org:Organization ;
+    rdfs:label "Novartis Gene Therapies Switzerland GmbH" ;
+    schema:name "Novartis Gene Therapies Switzerland GmbH" ;
+    org:status "active" ;
+    org:classification "Company" ; 
+    org:abbreviation "NGT" ;
+    schema:url <https://www.novartis.com/about/novartis-gene-therapies> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Novartis_Gene_Therapies> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(8.4314 47.14283)"^^geo:wktLiteral ;
+            schema:addressLocality "Rotkreuz" ;
+            schema:addressCountry "CH" ;
+            owl:sameAs <http://sws.geonames.org/2658950/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    .

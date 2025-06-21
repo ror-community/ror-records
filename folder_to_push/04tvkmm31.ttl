@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/04tvkmm31> a org:Organization ;
+    rdfs:label "Meridian Behavioral Health" ;
+    schema:name "Meridian Behavioral Health" ;
+    org:status "active" ;
+    org:classification "Healthcare" ; 
+    org:abbreviation "MBH" ;
+    org:alternativeName "Meridian Behavioral Health LLC" ;
+    schema:url <https://www.meridianprograms.com> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Meridian_Behavioral_Health> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-93.20189 45.06552)"^^geo:wktLiteral ;
+            schema:addressLocality "New Brighton" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/5039080/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q124024706> ;
+    .

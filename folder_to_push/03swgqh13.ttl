@@ -1,0 +1,25 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/03swgqh13> a org:Organization ;
+    rdfs:label "Southern Marine Science and Engineering Guangdong Laboratory (Zhuhai)" ;
+    schema:name "Southern Marine Science and Engineering Guangdong Laboratory (Zhuhai)" ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    org:alternativeName "SML-Zhuhai" ;
+    schema:url <https://www.sml-zhuhai.cn> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(113.56778 22.27694)"^^geo:wktLiteral ;
+            schema:addressLocality "Zhuhai" ;
+            schema:addressCountry "CN" ;
+            owl:sameAs <http://sws.geonames.org/1790437/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    .
