@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/00v4yjm67> a org:Organization ;
+    rdfs:label "Cihan University Sulaimaniya" ;
+    schema:name "Cihan University Sulaimaniya" ;
+    schema:foundingDate "2011"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "CUS" ;
+    org:alternativeName "Cihan University of Sulaimaniya" ;
+    schema:url <https://sulicihan.edu.krd> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(45.4329 35.56496)"^^geo:wktLiteral ;
+            schema:addressLocality "Sulaymaniyah" ;
+            schema:addressCountry "IQ" ;
+            owl:sameAs <http://sws.geonames.org/98463/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000493337998> ;
+    .

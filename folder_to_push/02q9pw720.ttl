@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/02q9pw720> a org:Organization ;
+    rdfs:label "Rome Laboratory" ;
+    schema:name "Rome Laboratory" ;
+    org:status "inactive" ;
+    org:classification "Government" ; 
+    org:classification "Facility" ; 
+    org:alternativeName "Griffiss Air Force Base Rome Laboratory" ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Rome_Laboratory> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-75.45573 43.21285)"^^geo:wktLiteral ;
+            schema:addressLocality "Rome" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/5134295/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000121634748> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q14707242> ;
+    .

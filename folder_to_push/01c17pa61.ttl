@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/01c17pa61> a org:Organization ;
+    rdfs:label "Rockingham General Hospital" ;
+    schema:name "Rockingham General Hospital" ;
+    org:status "active" ;
+    org:classification "Healthcare" ; 
+    org:alternativeName "Rockingham Hospital" ;
+    schema:url <https://www.rkpg.health.wa.gov.au> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Rockingham_General_Hospital> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(115.72978 -32.27682)"^^geo:wktLiteral ;
+            schema:addressLocality "Rockingham" ;
+            schema:addressCountry "AU" ;
+            owl:sameAs <http://sws.geonames.org/2062338/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000406414810> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q17025694> ;
+    .

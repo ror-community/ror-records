@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/047t1ev07> a org:Organization ;
+    rdfs:label "Indian Society of Remote Sensing" ;
+    schema:name "Indian Society of Remote Sensing" ;
+    schema:foundingDate "1969"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Other" ; 
+    org:abbreviation "ISRS" ;
+    schema:url <https://www.isrs-india.org> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Indian_Society_of_Remote_Sensing> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(78.03392 30.32443)"^^geo:wktLiteral ;
+            schema:addressLocality "Dehradun" ;
+            schema:addressCountry "IN" ;
+            owl:sameAs <http://sws.geonames.org/1273313/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000106688940> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q104845185> ;
+    .
