@@ -4,28 +4,47 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/05rpr6785> a org:Organization ;
     rdfs:label "Landstuhl Regional Medical Center" ;
     schema:name "Landstuhl Regional Medical Center" ;
     schema:foundingDate "1953"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Healthcare" ; 
-    org:abbreviation "LRMC" ;
-    org:alternativeName "2nd General Hospital" ;
-    schema:url <https://landstuhl.tricare.mil> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Landstuhl_Regional_Medical_Center> ;
+    org:classification "funder" ; 
+    org:classification "healthcare" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-05-20"^^xsd:date ;
+    org:alternativeName "2nd General Hospital"@en ; 
+    org:abbreviation "LRMC"@None ; 
+    schema:mainEntityOfPage <https://landstuhl.tricare.mil> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Landstuhl_Regional_Medical_Center> ; 
+    schema:sameAs <https://api.crossref.org/funders/100010192> ;
+    schema:sameAs <https://grid.ac/institutions/grid.415784.b> ;
+    schema:sameAs <http://isni.org/isni/0000000404641526> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/04vrzee53> ;
+        rdfs:label "United States Army Medical Command" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(7.57021 49.41306)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(7.57021 49.41306)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Landstuhl" ;
             schema:addressCountry "DE" ;
-            owl:sameAs <http://sws.geonames.org/2881477/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000404641526> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q778782> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "Rheinland-Pfalz" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Germany" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2881477/> ;
+    ] ; 
     .

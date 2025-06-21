@@ -1,0 +1,42 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/00jxdjq56> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2025-05-19"^^xsd:date ;
+    dct:modified "2025-05-20"^^xsd:date ;
+    org:abbreviation "RLBCAU"@en ; 
+    org:alternativeName "Rani Lakshmi Bai Central Agricultural University"@en ; 
+    org:alternativeName "रानी लक्ष्मीबाई केन्द्रीय कृषि विश्वविद्यालय"@hi ; 
+    schema:url <http://rlbcau.ac.in> ; 
+    schema:mainEntityOfPage <https://rlbcau.ac.in> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Rani_Lakshmi_Bai_Central_Agricultural_University> ; 
+    schema:sameAs <http://isni.org/isni/0000000483387406> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(78.42523 25.35523)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Jhansi" ;
+            schema:addressCountry "IN" ;
+            schema:addressRegion "Uttar Pradesh" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "India" ;
+                schema:containedInPlace [
+                    schema:name "Asia" ;
+                    schema:identifier "AS"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/12683094/> ;
+    ] ; 
+    .

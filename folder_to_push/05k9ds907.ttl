@@ -1,0 +1,45 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/05k9ds907> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2025-05-19"^^xsd:date ;
+    dct:modified "2025-05-20"^^xsd:date ;
+    org:alternativeName "ISITCOM de Sousse"@fr ; 
+    org:alternativeName "ISITCom"@fr ; 
+    schema:url <http://isitcom.rnu.tn> ; 
+    schema:mainEntityOfPage <https://isitcom.rnu.tn> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/00dmpgj58> ;
+        rdfs:label "University of Sousse" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(10.63699 35.82539)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Sousse" ;
+            schema:addressCountry "TN" ;
+            schema:addressRegion "Sousse Governorate" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Tunisia" ;
+                schema:containedInPlace [
+                    schema:name "Africa" ;
+                    schema:identifier "AF"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2464915/> ;
+    ] ; 
+    .

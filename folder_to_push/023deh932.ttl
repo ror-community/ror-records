@@ -1,0 +1,40 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/023deh932> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "1995"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2025-05-19"^^xsd:date ;
+    dct:modified "2025-05-20"^^xsd:date ;
+    org:alternativeName "Ambrosiana University"@en ; 
+    org:alternativeName "Unambro"@it ; 
+    schema:url <http://unmabro.it> ; 
+    schema:mainEntityOfPage <https://www.unambro.it/html/index.html> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(9.19199 45.46416)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Milan" ;
+            schema:addressCountry "IT" ;
+            schema:addressRegion "Lombardy" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Italy" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/6542283/> ;
+    ] ; 
+    .

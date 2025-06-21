@@ -1,0 +1,42 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/02n9j6f76> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "1851"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-05-20"^^xsd:date ;
+    org:abbreviation "UOP"@None ; 
+    schema:url <http://unipacifico.edu.co> ; 
+    schema:mainEntityOfPage <https://www.unipacifico.edu.co> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/University_of_the_Pacific_(United_States)> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.442206.6> ;
+    schema:sameAs <http://isni.org/isni/0000000404670028> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-77.03116 3.8801)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Buenaventura" ;
+            schema:addressCountry "CO" ;
+            schema:addressRegion "Valle del Cauca Department" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Colombia" ;
+                schema:containedInPlace [
+                    schema:name "South America" ;
+                    schema:identifier "SA"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3688451/> ;
+    ] ; 
+    .

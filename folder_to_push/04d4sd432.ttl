@@ -15,7 +15,7 @@
     org:classification "education" ; 
     org:classification "funder" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-11-19"^^xsd:date ;
+    dct:modified "2025-05-20"^^xsd:date ;
     schema:mainEntityOfPage <https://univ-sfax.tn> ;
     owl:sameAs <http://en.wikipedia.org/wiki/University_of_Sfax> ; 
     schema:sameAs <https://api.crossref.org/funders/501100016206> ;
@@ -39,19 +39,25 @@
         org:member <https://ror.org/049d1x723> ;
         rdfs:label "Faculté des Lettres et des Sciences Humaines de Sfax" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03jd7xe26> ;
+        rdfs:label "Faculty of Economics and Management of Sfax" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(10.76028 34.74056)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Sfax" ;
             schema:addressCountry "TN" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Sfax Governorate" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "Tunisia" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Africa" ;
+                    schema:identifier "AF"
                 ]
             ]
         ] ;

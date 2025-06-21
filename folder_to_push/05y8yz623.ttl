@@ -1,0 +1,50 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/05y8yz623> a org:Organization ;
+    rdfs:label "Bayworld Centre for Research and Education" ;
+    schema:name "Bayworld Centre for Research and Education" ;
+    schema:foundingDate "2004"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "funder" ; 
+    org:classification "nonprofit" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-05-20"^^xsd:date ;
+    org:abbreviation "BCRE"@None ; 
+    org:alternativeName "Bayworld Centre For Research & Education"@en ; 
+    schema:url <http://bcre.org.za> ; 
+    schema:mainEntityOfPage <https://bcre.org.za/index1.php> ;
+    schema:sameAs <https://api.crossref.org/funders/501100007307> ;
+    schema:sameAs <https://grid.ac/institutions/grid.469369.7> ;
+    schema:sameAs <http://isni.org/isni/000000010690173X> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02vfy7g92> ;
+        rdfs:label "Bayworld" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(18.42322 -33.92584)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Cape Town" ;
+            schema:addressCountry "ZA" ;
+            schema:addressRegion "Western Cape" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "South Africa" ;
+                schema:containedInPlace [
+                    schema:name "Africa" ;
+                    schema:identifier "AF"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3369157/> ;
+    ] ; 
+    .

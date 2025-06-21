@@ -4,30 +4,66 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/0561n6946> a org:Organization ;
     rdfs:label "Romanian Academy" ;
     schema:name "Romanian Academy" ;
     schema:foundingDate "1866"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Archive" ; 
-    org:alternativeName "Academia Română" ;
-    schema:url <http://www.academiaromana.ro/def2002eng.htm> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Romanian_Academy> ;
+    org:classification "archive" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-05-20"^^xsd:date ;
+    org:alternativeName "Academia Română"@ro ; 
+    org:alternativeName "Societatea Academică Romînă"@ro ; 
+    org:alternativeName "Societatea Literară Română"@ro ; 
+    schema:mainEntityOfPage <http://www.academiaromana.ro/def2002eng.htm> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Romanian_Academy> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100006476> ;
+    schema:sameAs <https://grid.ac/institutions/grid.418333.e> ;
+    schema:sameAs <http://isni.org/isni/0000000419371389> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04kddtt70> ;
+        rdfs:label "Institutul National de Cercetari Economice "Costin C. Kiritescu"" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0340mea86> ;
+        rdfs:label "Institutul de Chimie Macromoleculară Petru Poni" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/007bytg49> ;
+        rdfs:label "Institutul de Studii Sud-Est Europene" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01s1hnr07> ;
+        rdfs:label "Academia Română, Filiala Iași" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(26.10626 44.43225)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(26.10626 44.43225)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Bucharest" ;
             schema:addressCountry "RO" ;
-            owl:sameAs <http://sws.geonames.org/683506/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000419371389> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q901677> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q10302891> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q26690209> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q39418041> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "București" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Romania" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/683506/> ;
+    ] ; 
     .

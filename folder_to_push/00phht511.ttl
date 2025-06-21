@@ -1,0 +1,45 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/00phht511> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "1991"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-05-20"^^xsd:date ;
+    org:abbreviation "TAQI"@None ; 
+    org:abbreviation "TASI"@None ; 
+    org:alternativeName "Tashkent Institute of Architecture and Construction"@en ; 
+    org:alternativeName "Ташкентский Архитектурно-Строительный Институт"@ru ; 
+    schema:url <http://taqu.uz> ; 
+    schema:mainEntityOfPage <http://taqu.uz> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Tashkent_Institute_of_Architecture_and_Civil_Engineering> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.444811.c> ;
+    schema:sameAs <http://isni.org/isni/000000040403227X> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(69.21627 41.26465)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Tashkent" ;
+            schema:addressCountry "UZ" ;
+            schema:addressRegion "Tashkent" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Uzbekistan" ;
+                schema:containedInPlace [
+                    schema:name "Asia" ;
+                    schema:identifier "AS"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1512569/> ;
+    ] ; 
+    .

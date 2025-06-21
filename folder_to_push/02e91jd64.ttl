@@ -15,7 +15,7 @@
     org:classification "education" ; 
     org:classification "funder" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-10-21"^^xsd:date ;
+    dct:modified "2025-05-20"^^xsd:date ;
     org:abbreviation "UPM"@None ; 
     org:alternativeName "Universiti Pertanian Malaysia"@ms ; 
     schema:url <http://upm.edu.my> ; 
@@ -30,19 +30,25 @@
         org:member <https://ror.org/00g89bg08> ;
         rdfs:label "Serdang Hospital" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02re7jk37> ;
+        rdfs:label "Putra Business School" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(101.71667 3.03333)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Seri Kembangan" ;
             schema:addressCountry "MY" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Selangor" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "Malaysia" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Asia" ;
+                    schema:identifier "AS"
                 ]
             ]
         ] ;

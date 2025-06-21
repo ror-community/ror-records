@@ -15,7 +15,7 @@
     org:classification "education" ; 
     org:classification "funder" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-06-20"^^xsd:date ;
+    dct:modified "2025-05-20"^^xsd:date ;
     schema:mainEntityOfPage <https://www.univ-angers.fr> ;
     owl:sameAs <http://en.wikipedia.org/wiki/University_of_Angers> ; 
     schema:sameAs <https://api.crossref.org/funders/501100008280> ;
@@ -107,12 +107,6 @@
     ] ; 
     org:hasLink [
         a org:Membership ;
-        org:role "related" ;
-        org:member <https://ror.org/0250ngj72> ;
-        rdfs:label "Centre Hospitalier Universitaire d'Angers" ;
-    ] ; 
-    org:hasLink [
-        a org:Membership ;
         org:role "child" ;
         org:member <https://ror.org/04fm0sh33> ;
         rdfs:label "Laboratoire de Planétologie et Géosciences" ;
@@ -123,19 +117,31 @@
         org:member <https://ror.org/02w0vb190> ;
         rdfs:label "Observatoire des Sciences de l'Univers Nantes Atlantique" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/0250ngj72> ;
+        rdfs:label "Centre Hospitalier Universitaire d'Angers" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02xq0x374> ;
+        rdfs:label "Institut de Recherche en Horticulture et Semences" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(-0.55202 47.47156)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Angers" ;
             schema:addressCountry "FR" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Pays de la Loire" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "France" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

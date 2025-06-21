@@ -14,7 +14,7 @@
     org:status "active" ;
     org:classification "facility" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-06-20"^^xsd:date ;
+    dct:modified "2025-05-20"^^xsd:date ;
     org:abbreviation "GSMA"@None ; 
     schema:mainEntityOfPage <http://www.univ-reims.fr/site/laboratoire-labellise/groupe-de-spectrometrie-moleculaire-et-atmospherique-umr-cnrs-6089/actualites,9553.html?> ;
     schema:sameAs <https://grid.ac/institutions/grid.462314.6> ;
@@ -31,19 +31,25 @@
         org:member <https://ror.org/03hypw319> ;
         rdfs:label "Université de Reims Champagne-Ardenne" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01k6wxv57> ;
+        rdfs:label "ROMEO" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(4.02853 49.26526)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Reims" ;
             schema:addressCountry "FR" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Grand Est" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "France" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

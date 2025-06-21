@@ -14,7 +14,7 @@
     org:status "active" ;
     org:classification "education" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-10-21"^^xsd:date ;
+    dct:modified "2025-05-20"^^xsd:date ;
     org:alternativeName "Saint Teresa of Jesus Catholic University"@en ; 
     org:abbreviation "UCAV"@None ; 
     schema:url <http://ucavila.es> ; 
@@ -22,19 +22,25 @@
     owl:sameAs <https://en.wikipedia.org/wiki/Catholic_University_of_%C3%81vila> ; 
     schema:sameAs <https://grid.ac/institutions/grid.448685.3> ;
     schema:sameAs <http://isni.org/isni/0000000086534417> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/055j2zg87> ;
+        rdfs:label "Escuela Universitaria de Magisterio Fray Luis de León" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(-4.69951 40.65724)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Ávila" ;
             schema:addressCountry "ES" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Castille and León" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "Spain" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

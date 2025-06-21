@@ -1,0 +1,45 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/03f0nev63> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "2012"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "facility" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-05-20"^^xsd:date ;
+    org:alternativeName "Danish e Infrastructure Cooperation"@en ; 
+    org:alternativeName "Danish e-infrastructure Consortium"@en ; 
+    org:abbreviation "DeiC"@en ; 
+    schema:url <http://deic.dk> ; 
+    schema:mainEntityOfPage <https://www.deic.dk> ;
+    owl:sameAs <https://da.wikipedia.org/wiki/Danish_e-Infrastructure_Cooperation> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100004893> ;
+    schema:sameAs <https://grid.ac/institutions/grid.480658.7> ;
+    schema:sameAs <http://isni.org/isni/0000000459058514> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(12.50378 55.77044)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Kongens Lyngby" ;
+            schema:addressCountry "DK" ;
+            schema:addressRegion "Capital Region" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Denmark" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2618468/> ;
+    ] ; 
+    .

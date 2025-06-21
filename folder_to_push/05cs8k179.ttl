@@ -4,27 +4,41 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/05cs8k179> a org:Organization ;
-    rdfs:label "Wroclaw University of Environmental and Life Sciences" ;
-    schema:name "Wroclaw University of Environmental and Life Sciences" ;
+    rdfs:label "" ;
+    schema:name "" ;
     schema:foundingDate "1951"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "WUELS" ;
-    schema:url <http://www.up.wroc.pl/en/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Wroclaw_University_of_Environmental_and_Life_Sciences> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-05-20"^^xsd:date ;
+    org:abbreviation "WUELS"@None ; 
+    schema:url <http://upwr.edu.pl> ; 
+    schema:mainEntityOfPage <https://upwr.edu.pl> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Wroclaw_University_of_Environmental_and_Life_Sciences> ; 
+    schema:sameAs <https://api.crossref.org/funders/100016247> ;
+    schema:sameAs <https://grid.ac/institutions/grid.411200.6> ;
+    schema:sameAs <http://isni.org/isni/0000000106946014> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(17.03333 51.1)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(17.03333 51.1)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Wroclaw" ;
             schema:addressCountry "PL" ;
-            owl:sameAs <http://sws.geonames.org/3081368/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000106946014> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q4121030> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "Lower Silesia" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Poland" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3081368/> ;
+    ] ; 
     .

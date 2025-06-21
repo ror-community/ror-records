@@ -15,27 +15,34 @@
     org:classification "funder" ; 
     org:classification "government" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-06-20"^^xsd:date ;
+    dct:modified "2025-05-20"^^xsd:date ;
     org:abbreviation "CIRC"@None ; 
     org:abbreviation "IARC"@None ; 
-    schema:mainEntityOfPage <http://www.iarc.fr/> ;
+    schema:url <http://iarc.who.int> ; 
+    schema:mainEntityOfPage <https://www.iarc.who.int> ;
     owl:sameAs <https://en.wikipedia.org/wiki/International_Agency_for_Research_on_Cancer> ; 
     schema:sameAs <https://api.crossref.org/funders/100008700> ;
     schema:sameAs <https://grid.ac/institutions/grid.17703.32> ;
     schema:sameAs <http://isni.org/isni/0000000405980095> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/01f80g185> ;
+        rdfs:label "World Health Organization" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(4.84671 45.74846)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Lyon" ;
             schema:addressCountry "FR" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Auvergne-Rhône-Alpes" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "France" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

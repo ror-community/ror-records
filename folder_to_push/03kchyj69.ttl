@@ -14,26 +14,32 @@
     org:status "active" ;
     org:classification "facility" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-09-16"^^xsd:date ;
-    org:abbreviation "TWI"@None ; 
-    schema:mainEntityOfPage <http://www.twi-global.com/> ;
+    dct:modified "2025-05-20"^^xsd:date ;
+    schema:url <http://theweldinginstitute.com> ; 
+    schema:mainEntityOfPage <https://theweldinginstitute.com> ;
     owl:sameAs <http://en.wikipedia.org/wiki/The_Welding_Institute> ; 
     schema:sameAs <https://api.crossref.org/funders/501100023376> ;
     schema:sameAs <https://grid.ac/institutions/grid.4843.b> ;
     schema:sameAs <http://isni.org/isni/000000011703001X> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03h5jx394> ;
+        rdfs:label "TWI (United Kingdom)" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(0.11667 52.2)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Cambridge" ;
             schema:addressCountry "GB" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "England" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "United Kingdom" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

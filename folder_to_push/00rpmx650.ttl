@@ -1,0 +1,45 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/00rpmx650> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "1657"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    org:classification "government" ; 
+    dct:created "2025-05-19"^^xsd:date ;
+    dct:modified "2025-05-20"^^xsd:date ;
+    org:abbreviation "ENP"@es ; 
+    org:abbreviation "ESNA"@es ; 
+    org:alternativeName "Peruvian Naval Academy"@en ; 
+    org:alternativeName "Peruvian Naval School"@en ; 
+    schema:url <http://escuelanaval.edu.pe> ; 
+    schema:mainEntityOfPage <https://escuelanaval.edu.pe> ;
+    owl:sameAs <https://es.wikipedia.org/wiki/Escuela_Naval_del_Per%C3%BA> ; 
+    schema:sameAs <http://isni.org/isni/0000000460206975> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-77.10365 -11.94753)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Callao" ;
+            schema:addressCountry "PE" ;
+            schema:addressRegion "Callao" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Peru" ;
+                schema:containedInPlace [
+                    schema:name "South America" ;
+                    schema:identifier "SA"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/8349600/> ;
+    ] ; 
+    .

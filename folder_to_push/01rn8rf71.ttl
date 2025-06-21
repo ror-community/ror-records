@@ -10,12 +10,18 @@
 <https://ror.org/01rn8rf71> a org:Organization ;
     rdfs:label "" ;
     schema:name "" ;
-    org:status "active" ;
+    org:status "withdrawn" ;
     org:classification "company" ; 
     dct:created "2025-03-26"^^xsd:date ;
-    dct:modified "2025-03-26"^^xsd:date ;
+    dct:modified "2025-05-20"^^xsd:date ;
     schema:url <http://kla.com> ; 
     schema:mainEntityOfPage <https://www.kla.com> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "successor" ;
+        org:member <https://ror.org/02rqhpa98> ;
+        rdfs:label "KLA (United States)" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(-121.90662 37.42827)"^^geo:wktLiteral ;

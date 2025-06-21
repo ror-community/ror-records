@@ -1,0 +1,48 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/03h4rc418> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "2006"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2025-05-19"^^xsd:date ;
+    dct:modified "2025-05-20"^^xsd:date ;
+    org:abbreviation "DIEPO"@es ; 
+    org:abbreviation "DINAE"@es ; 
+    org:alternativeName "Dirección de Educación Policial"@es ; 
+    org:alternativeName "Dirección de Educación Policial de la Policía Nacional de Colombia"@es ; 
+    org:alternativeName "Dirección de Educación Policial, Policía Nacional de Colombia"@es ; 
+    org:alternativeName "Institución Universitaria de la Policía Nacional"@es ; 
+    org:alternativeName "Policía Nacional de Colombia, Dirección Nacional de Escuelas"@es ; 
+    org:alternativeName "Policía Nacional de Colombia, Dirección de Educación Policial"@es ; 
+    org:alternativeName "Universidad Dirección Nacional de Escuelas y Educación Policial"@es ; 
+    schema:url <http://policia.edu.co> ; 
+    schema:mainEntityOfPage <https://policia.edu.co> ;
+    owl:sameAs <https://es.wikipedia.org/wiki/Direcci%C3%B3n_de_Educaci%C3%B3n_Policial> ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-74.18077 4.31465)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Bogotá  D.C." ;
+            schema:addressCountry "CO" ;
+            schema:addressRegion "Bogota D.C." ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Colombia" ;
+                schema:containedInPlace [
+                    schema:name "South America" ;
+                    schema:identifier "SA"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/9609540/> ;
+    ] ; 
+    .

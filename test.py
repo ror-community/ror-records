@@ -1,59 +1,72 @@
+import shutil
+import subprocess
 import os
-import time
-import re
 from pathlib import Path
-from create_rdf_file import json_to_individual_rdf
-from detect_version_json import detect_ror_version
-from template_to_try import process_ror_file
 
-def version_key(version_str):
-    version_parts = version_str[1:].split('.')
-    return tuple(int(part) if part.isdigit() else 0 for part in version_parts)
+def git_push_existing_ttl(repo_dir, target_dir, version_name, tag_version=None):
+    try:
+        repo_dir = Path(repo_dir).absolute()
+        target_path = repo_dir / target_dir
+        original_branch = subprocess.check_output(['git', 'rev-parse', '--abbrev-ref', 'HEAD'], cwd=repo_dir).decode().strip()
+        status_output = subprocess.check_output(['git', 'status', '--porcelain'], cwd=repo_dir).decode()
 
-def list_json_files_in_releases(releases_root, output_dir):
+        print(f"\n=== Traitement de la release {version_name} ===")
 
-    release_folders = [d for d in os.listdir(releases_root) 
-                      if os.path.isdir(os.path.join(releases_root, d)) and d.startswith('v')]
-    
-    release_folders.sort(key=version_key)
+        if status_output:
+            print("\n⚠️ Attention : Votre dépôt contient des modifications non commitées :")
+            print(status_output)
+            confirm = input("Voulez-vous continuer ? Ces modifications ne seront pas affectées (y/n): ")
+            if confirm.lower() != 'y':
+                print("Annulation par l'utilisateur")
+                return False
 
-    for release in release_folders:
-        release_path = os.path.join(releases_root, release)
+        safe_version = version_name.replace(' ', '-').replace('/', '-')[:30]
+        temp_branch = f"temp-rdf-{safe_version}"
 
-        print(f"\n=== Traitement de la release {release} ===")
-        json_files = [f for f in os.listdir(release_path) if f.endswith('.json')]
+        if any(c in temp_branch for c in [' ', '~', '^', ':', '\\']):
+            raise ValueError(f"Nom de branche invalide : {temp_branch}")
 
-        if not json_files:
-            print(f"Aucun fichier JSON trouvé dans {release}")
-        else:
-            print("Fichiers JSON trouvés:")
-            for json_file in json_files:
-                json_path = os.path.join(release_path, json_file)
-                print(f"Traitement du fichier: {json_path}")
+        subprocess.run(['git', 'checkout', '-b', temp_branch], cwd=repo_dir, check=True)
+        print(f"✓ Branche temporaire créée : {temp_branch}")
 
-                # version = detect_ror_version(json_path)
-                # used_template = "template_" + version + ".ttl" # si version = None
-                # path_used_template = Path(__file__).parent.parent / f"template/{used_template}"
+        try:
+            subprocess.run(['git', 'add', f'{target_dir}/*.ttl'], cwd=repo_dir, check=True)
+            
+            diff_output = subprocess.check_output(['git', 'diff', '--cached', '--name-only'], cwd=repo_dir).decode()
+            
+            if not diff_output:
+                print("Aucun changement TTL à commiter - peut-être que les fichiers étaient déjà indexés")
+                return True
 
-                # json_to_individual_rdf(
-                #     # json_path=Path(__file__).parent.parent / "releases/v1.66/00b3mhg89.json",
-                #     json_path= json_path,
-                #     template_path= path_used_template,
-                #     output_dir=output_dir
-                # )
+            commit_msg = f"[RDF-AUTO] Update {version_name}"
+            subprocess.run(['git', 'commit', '-m', commit_msg], cwd=repo_dir, check=True)
+            print(f"✓ Commit créé : {commit_msg}")
 
-                process_ror_file(json_path, output_dir)
+            tag_name = tag_version if tag_version else version_name
+            subprocess.run(['git', 'tag', '-a', tag_name, '-m', f"RDF Release {tag_name}"], cwd=repo_dir, check=True)
+            print(f"✓ Tag créé : {tag_name}")
 
-        if release != release_folders[-1]:
-            print("\nAttente de 15 secondes avant la release suivante...")
-            # time.sleep(15)
+            subprocess.run(['git', 'push', 'origin', f'{temp_branch}:main', '--tags'], cwd=repo_dir, check=True)
+            print("✓ Push réussi vers main")
 
-if __name__ == "__main__":
-    root_dir = Path(__file__).parent.parent
-    releases_dir = root_dir / "releases"
-    output_dir = root_dir / "folder_to_push"
-    
-    if not releases_dir.exists():
-        print(f"Erreur: Le dossier {releases_dir} n'existe pas")
-    else:
-        list_json_files_in_releases(releases_dir, output_dir)
+            subprocess.run(['git', 'checkout', original_branch], cwd=repo_dir, check=True)
+            subprocess.run(['git', 'branch', '-D', temp_branch], cwd=repo_dir, check=True)
+            
+            if target_path.exists():
+                shutil.rmtree(target_path)
+                print(f"✓ Dossier {target_dir} nettoyé")
+            else:
+                print(f"Le dossier {target_dir} était déjà absent")
+
+            return True
+
+        except Exception as e:
+            print(f"⚠️ Erreur durant le processus : {str(e)}")
+            print("Nettoyage de la branche temporaire...")
+            subprocess.run(['git', 'checkout', original_branch], cwd=repo_dir)
+            subprocess.run(['git', 'branch', '-D', temp_branch], cwd=repo_dir, stderr=subprocess.DEVNULL)
+            return False
+
+    except Exception as e:
+        print(f"\n❌ ERREUR CRITIQUE : {str(e)}")
+        return False

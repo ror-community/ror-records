@@ -14,10 +14,16 @@
     org:classification "funder" ; 
     org:classification "healthcare" ; 
     dct:created "2025-01-21"^^xsd:date ;
-    dct:modified "2025-01-22"^^xsd:date ;
+    dct:modified "2025-05-20"^^xsd:date ;
     org:abbreviation "LHSCRI"@en ; 
     schema:url <http://lhscri.ca> ; 
     schema:mainEntityOfPage <https://www.lhscri.ca> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/037tz0e16> ;
+        rdfs:label "London Health Sciences Centre" ;
+    ] ; 
     org:hasLink [
         a org:Membership ;
         org:role "predecessor" ;
@@ -26,9 +32,15 @@
     ] ; 
     org:hasLink [
         a org:Membership ;
-        org:role "parent" ;
-        org:member <https://ror.org/037tz0e16> ;
-        rdfs:label "London Health Sciences Centre" ;
+        org:role "child" ;
+        org:member <https://ror.org/038pa9k74> ;
+        rdfs:label "Children’s Health Research Institute" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02grkyz14> ;
+        rdfs:label "Western University" ;
     ] ; 
     schema:location [
         a schema:Place ;

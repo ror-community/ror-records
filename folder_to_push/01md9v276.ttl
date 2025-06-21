@@ -4,27 +4,44 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01md9v276> a org:Organization ;
     rdfs:label "U.S. Army Intelligence Center of Excellence" ;
     schema:name "U.S. Army Intelligence Center of Excellence" ;
     schema:foundingDate "1971"^^xsd:gYear ;
-    org:status "inactive" ;
-    org:classification "Government" ; 
-    org:classification "Facility" ; 
-    org:abbreviation "USAICoE" ;
-    org:alternativeName "United States Army Intelligence Center" ;
-    schema:url <https://www.army.mil/USAICoE> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/United_States_Army_Intelligence_Center> ;
+    org:status "active" ;
+    org:classification "facility" ; 
+    org:classification "government" ; 
+    dct:created "2023-12-07"^^xsd:date ;
+    dct:modified "2025-05-20"^^xsd:date ;
+    org:abbreviation "USAICoE"@None ; 
+    org:alternativeName "United States Army Intelligence Center"@en ; 
+    schema:mainEntityOfPage <https://www.army.mil/USAICoE> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/United_States_Army_Intelligence_Center> ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02t7y5s37> ;
+        rdfs:label "U.S. Army Training and Doctrine Command" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-110.34732 31.56161)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-110.34732 31.56161)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Fort Huachuca" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/7267473/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://www.wikidata.org/entity/Q1526892> ;
+            schema:addressRegion "Arizona" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "North America" ;
+                    schema:identifier "NA"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/7267473/> ;
+    ] ; 
     .

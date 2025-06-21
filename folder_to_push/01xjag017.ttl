@@ -1,0 +1,42 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/01xjag017> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    org:status "active" ;
+    org:classification "government" ; 
+    dct:created "2025-05-19"^^xsd:date ;
+    dct:modified "2025-05-20"^^xsd:date ;
+    org:abbreviation "ARC"@es ; 
+    org:alternativeName "Armada Nacional Colombia"@es ; 
+    org:alternativeName "Armada Nacional de Colombia"@es ; 
+    org:alternativeName "Armada Nacional de la República de Colombia"@es ; 
+    schema:url <http://armada.mil.co> ; 
+    schema:mainEntityOfPage <https://www.armada.mil.co> ;
+    owl:sameAs <https://es.wikipedia.org/wiki/Armada_de_la_Rep%C3%BAblica_de_Colombia> ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-74.08175 4.60971)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Bogotá" ;
+            schema:addressCountry "CO" ;
+            schema:addressRegion "Bogota D.C." ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Colombia" ;
+                schema:containedInPlace [
+                    schema:name "South America" ;
+                    schema:identifier "SA"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3688689/> ;
+    ] ; 
+    .

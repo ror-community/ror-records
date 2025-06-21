@@ -15,7 +15,7 @@
     org:classification "funder" ; 
     org:classification "government" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-08-21"^^xsd:date ;
+    dct:modified "2025-05-20"^^xsd:date ;
     org:abbreviation "SEP"@None ; 
     schema:mainEntityOfPage <http://www.sep.gob.mx/> ;
     owl:sameAs <https://en.wikipedia.org/wiki/Secretariat_of_Public_Education_(Mexico)> ; 
@@ -28,19 +28,25 @@
         org:member <https://ror.org/00davry38> ;
         rdfs:label "Tecnológico Nacional de México" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05whw7f42> ;
+        rdfs:label "Universitario Tecnológico Universitam" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(-99.12766 19.42847)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Mexico City" ;
             schema:addressCountry "MX" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Mexico City" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "Mexico" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "North America" ;
+                    schema:identifier "NA"
                 ]
             ]
         ] ;

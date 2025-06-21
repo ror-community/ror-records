@@ -14,25 +14,31 @@
     org:status "active" ;
     org:classification "education" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-11-19"^^xsd:date ;
+    dct:modified "2025-05-20"^^xsd:date ;
     org:abbreviation "UEM"@None ; 
     schema:url <http://uem.edu.in> ; 
     schema:mainEntityOfPage <https://uem.edu.in> ;
     owl:sameAs <https://en.wikipedia.org/wiki/University_of_Engineering_&_Management_(UEM),_Kolkata> ; 
     schema:sameAs <https://grid.ac/institutions/grid.464589.2> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05p2t3578> ;
+        rdfs:label "University of Engineering & Management, Jaipur" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(88.36304 22.56263)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Kolkata" ;
             schema:addressCountry "IN" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "West Bengal" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "India" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Asia" ;
+                    schema:identifier "AS"
                 ]
             ]
         ] ;

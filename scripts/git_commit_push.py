@@ -1,67 +1,91 @@
-import shutil
-import subprocess
 import os
+import subprocess
+import shutil
+import re
 from pathlib import Path
 
+def normalize_name(name):
+    """Normalise les noms pour Git (branches/tags)"""
+    return re.sub(r'[^\w-]', '-', name).lower()[:40]
+
 def git_push_existing_ttl(repo_dir, target_dir, version_name, tag_version=None):
+    """Version finale avec gestion robuste des tags"""
     try:
-        repo_dir = Path(repo_dir).absolute()
-        target_path = repo_dir / target_dir
-        original_branch = subprocess.check_output(['git', 'rev-parse', '--abbrev-ref', 'HEAD'], cwd=repo_dir).decode().strip()
-        status_output = subprocess.check_output(['git', 'status', '--porcelain'], cwd=repo_dir).decode()
+        # Configuration des chemins
+        repo_path = Path(repo_dir).absolute()
+        target_path = (repo_path / target_dir).absolute()
+        
+        # Vérifications
+        if not target_path.exists():
+            raise FileNotFoundError(f"ERREUR : Dossier {target_path} introuvable")
+        
+        ttl_files = [f for f in target_path.glob('*.ttl') if f.is_file()]
+        if not ttl_files:
+            raise FileNotFoundError(f"ERREUR : Aucun fichier .ttl dans {target_path}")
 
-        print(f"\n=== Traitement de la release {version_name} ===")
+        print(f"\n=== Traitement de {len(ttl_files)} fichiers ===")
 
-        if status_output:
-            print("\n⚠️ Attention : Votre dépôt contient des modifications non commitées :")
-            print(status_output)
-            confirm = input("Voulez-vous continuer ? Ces modifications ne seront pas affectées (y/n): ")
-            if confirm.lower() != 'y':
-                print("Annulation par l'utilisateur")
-                return False
+        # Gestion du tag
+        tag_name = tag_version if tag_version else version_name.replace(' ', '-')
+        
+        # Vérification si le tag existe déjà
+        tag_exists = subprocess.run(
+            ['git', 'show-ref', '--tags', f'refs/tags/{tag_name}'],
+            cwd=str(repo_path),
+            capture_output=True
+        ).returncode == 0
 
-        temp_branch = f"temp/rdf-release-{version_name}"
-        subprocess.run(['git', 'checkout', '-b', temp_branch], cwd=repo_dir, check=True)
-        print(f"✓ Branche temporaire créée : {temp_branch}")
+        if tag_exists:
+            # Option 1 : Suppression du tag existant
+            subprocess.run(
+                ['git', 'tag', '-d', tag_name],
+                cwd=str(repo_path),
+                check=True
+            )
+            print(f"✓ Tag existant {tag_name} supprimé")
+            
+            # Option 2 : Vous pouvez aussi choisir de ne rien faire et utiliser un nom différent
+            # tag_name = f"{tag_name}-new"
+            # print(f"✓ Utilisation du nouveau tag {tag_name}")
 
+        # Fichier batch temporaire (méthode infaillible sous Windows)
+        batch_file = repo_path / "git_operations.bat"
         try:
-            subprocess.run(['git', 'add', f'{target_dir}/*.ttl'], cwd=repo_dir, check=True)
-            
-            diff_output = subprocess.check_output(['git', 'diff', '--cached', '--name-only'], cwd=repo_dir).decode()
-            
-            if not diff_output:
-                print("Aucun changement TTL à commiter - peut-être que les fichiers étaient déjà indexés")
-                return True
+            with open(batch_file, 'w', encoding='utf-8') as f:
+                f.write("@echo off\n")
+                for ttl_file in ttl_files:
+                    rel_path = ttl_file.relative_to(repo_path)
+                    f.write(f'git add "{rel_path}"\n')
+                f.write(f'git commit -m "[RDF] {version_name}"\n')
+                f.write(f'git tag -a {tag_name} -m "Version {tag_name}"\n')
+                f.write('git push origin main --tags\n')
 
-            commit_msg = f"[RDF-AUTO] Update {version_name}"
-            subprocess.run(['git', 'commit', '-m', commit_msg], cwd=repo_dir, check=True)
-            print(f"✓ Commit créé : {commit_msg}")
+            # Exécution
+            subprocess.run(
+                ['cmd', '/c', str(batch_file)],
+                cwd=str(repo_path),
+                shell=True,
+                check=True
+            )
 
-            tag_name = tag_version if tag_version else version_name
-            subprocess.run(['git', 'tag', '-a', tag_name, '-m', f"RDF Release {tag_name}"], cwd=repo_dir, check=True)
-            print(f"✓ Tag créé : {tag_name}")
+            print(f"\n✅ Succès : {len(ttl_files)} fichiers poussés avec tag {tag_name}")
 
-            subprocess.run(['git', 'push', 'origin', f'{temp_branch}:main', '--tags'], cwd=repo_dir, check=True)
-            print("✓ Push réussi vers main")
-
-            subprocess.run(['git', 'checkout', original_branch], cwd=repo_dir, check=True)
-            subprocess.run(['git', 'branch', '-D', temp_branch], cwd=repo_dir, check=True)
-            
-            if target_path.exists():
-                shutil.rmtree(target_path)
+            # Nettoyage
+            try:
+                shutil.rmtree(target_path, ignore_errors=True)
                 print(f"✓ Dossier {target_dir} nettoyé")
-            else:
-                print(f"Le dossier {target_dir} était déjà absent")
+            except Exception as e:
+                print(f"⚠️ Erreur nettoyage : {str(e)}")
 
             return True
 
-        except Exception as e:
-            print(f"⚠️ Erreur durant le processus : {str(e)}")
-            print("Nettoyage de la branche temporaire...")
-            subprocess.run(['git', 'checkout', original_branch], cwd=repo_dir)
-            subprocess.run(['git', 'branch', '-D', temp_branch], cwd=repo_dir, stderr=subprocess.DEVNULL)
-            return False
+        finally:
+            if batch_file.exists():
+                os.remove(batch_file)
 
+    except subprocess.CalledProcessError as e:
+        print(f"\n❌ Erreur Git (code {e.returncode}): {e.stderr.decode().strip()}")
+        return False
     except Exception as e:
-        print(f"\n❌ ERREUR CRITIQUE : {str(e)}")
+        print(f"\n❌ ERREUR : {str(e)}")
         return False

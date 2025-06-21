@@ -14,7 +14,7 @@
     org:classification "facility" ; 
     org:classification "government" ; 
     dct:created "2024-09-14"^^xsd:date ;
-    dct:modified "2024-12-10"^^xsd:date ;
+    dct:modified "2025-05-20"^^xsd:date ;
     org:abbreviation "AFLCMC"@en ; 
     org:alternativeName "Air Force Life Cycle Management Center"@en ; 
     schema:mainEntityOfPage <https://www.aflcmc.af.mil> ;
@@ -25,19 +25,37 @@
         org:member <https://ror.org/02m4c1x70> ;
         rdfs:label "U.S. Air Force Materiel Command" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "predecessor" ;
+        org:member <https://ror.org/002v1jc79> ;
+        rdfs:label "United States Air Force Electronic Systems Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "predecessor" ;
+        org:member <https://ror.org/0563ebm96> ;
+        rdfs:label "United States Air Force Air Armament Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "predecessor" ;
+        org:member <https://ror.org/00nj2dc54> ;
+        rdfs:label "United States Air Force Aeronautical Systems Center" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(-84.0368 39.82201)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Wright-Patterson Air Force Base" ;
             schema:addressCountry "US" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Ohio" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "United States" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "North America" ;
+                    schema:identifier "NA"
                 ]
             ]
         ] ;

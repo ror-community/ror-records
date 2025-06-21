@@ -15,7 +15,7 @@
     org:classification "education" ; 
     org:classification "funder" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-10-21"^^xsd:date ;
+    dct:modified "2025-05-20"^^xsd:date ;
     org:abbreviation "BUET"@None ; 
     schema:url <http://buet.ac.bd> ; 
     schema:mainEntityOfPage <https://www.buet.ac.bd> ;
@@ -23,19 +23,25 @@
     schema:sameAs <https://api.crossref.org/funders/501100009500> ;
     schema:sameAs <https://grid.ac/institutions/grid.411512.2> ;
     schema:sameAs <http://isni.org/isni/0000000122230518> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01y5nr239> ;
+        rdfs:label "International Training Network, Bangladesh University of Engineering and Technology" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(90.40744 23.7104)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Dhaka" ;
             schema:addressCountry "BD" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Dhaka Division" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "Bangladesh" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Asia" ;
+                    schema:identifier "AS"
                 ]
             ]
         ] ;

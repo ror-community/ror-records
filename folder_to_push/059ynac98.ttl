@@ -14,9 +14,10 @@
     org:status "active" ;
     org:classification "facility" ; 
     dct:created "2023-05-11"^^xsd:date ;
-    dct:modified "2024-07-11"^^xsd:date ;
+    dct:modified "2025-05-20"^^xsd:date ;
     org:abbreviation "CAPHI"@None ; 
-    schema:mainEntityOfPage <http://caphi.univ-nantes.fr> ;
+    schema:url <http://caphi-philo.fr> ; 
+    schema:mainEntityOfPage <https://www.caphi-philo.fr> ;
     org:hasLink [
         a org:Membership ;
         org:role "parent" ;
@@ -29,25 +30,19 @@
         org:member <https://ror.org/03gnr7b55> ;
         rdfs:label "Nantes Université" ;
     ] ; 
-    org:hasLink [
-        a org:Membership ;
-        org:role "parent" ;
-        org:member <https://ror.org/01b8h3982> ;
-        rdfs:label "Université de Bretagne Occidentale" ;
-    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(-1.55336 47.21725)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Nantes" ;
             schema:addressCountry "FR" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Pays de la Loire" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "France" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

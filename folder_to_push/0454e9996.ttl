@@ -1,0 +1,44 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/0454e9996> a org:Organization ;
+    rdfs:label "Institut für Arbeitsschutz der Deutschen Gesetzlichen Unfallversicherung" ;
+    schema:name "Institut für Arbeitsschutz der Deutschen Gesetzlichen Unfallversicherung" ;
+    org:status "active" ;
+    org:classification "facility" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-05-20"^^xsd:date ;
+    org:abbreviation "IFA"@None ; 
+    schema:mainEntityOfPage <http://www.dguv.de/ifa/index-2.jsp> ;
+    schema:sameAs <https://grid.ac/institutions/grid.432763.7> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03pcpfy27> ;
+        rdfs:label "DGUV Hochschule - Hochschule der Gesetzlichen Unfallversicherung (HGU)" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(7.197 50.77538)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Sankt Augustin" ;
+            schema:addressCountry "DE" ;
+            schema:addressRegion "North Rhine-Westphalia" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Germany" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2841648/> ;
+    ] ; 
+    .

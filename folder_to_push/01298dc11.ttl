@@ -1,0 +1,48 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/01298dc11> a org:Organization ;
+    rdfs:label "Chuiko Institute of Surface Chemistry" ;
+    schema:name "Chuiko Institute of Surface Chemistry" ;
+    schema:foundingDate "1986"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "facility" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-05-20"^^xsd:date ;
+    org:alternativeName "Chuiko Institute of Surface Chemistry of National Academy of Sciences of Ukraine"@en ; 
+    org:alternativeName "Інститут хімії поверхні ім. О.О. Чуйка Національної академії наук України"@uk ; 
+    org:alternativeName "Институт химии поверхности им. А.А. Чуйко"@uk ; 
+    schema:mainEntityOfPage <https://isc.gov.ua/index.php/ua/> ;
+    schema:sameAs <https://grid.ac/institutions/grid.464622.0> ;
+    schema:sameAs <http://isni.org/isni/0000000404974881> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/00je4t102> ;
+        rdfs:label "National Academy of Sciences of Ukraine" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(30.5238 50.45466)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Kyiv" ;
+            schema:addressCountry "UA" ;
+            schema:addressRegion "Kyiv City" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Ukraine" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/703448/> ;
+    ] ; 
+    .

@@ -1,0 +1,48 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/02yjrws02> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "1997"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2025-05-19"^^xsd:date ;
+    dct:modified "2025-05-20"^^xsd:date ;
+    org:abbreviation "JIMS"@en ; 
+    org:alternativeName "JIMS Delhi"@en ; 
+    org:alternativeName "Jagannath International Management School, Delhi"@en ; 
+    schema:url <http://jagannath.org> ; 
+    schema:mainEntityOfPage <https://www.jagannath.org> ;
+    schema:sameAs <http://isni.org/isni/0000000417693165> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/034q1za58> ;
+        rdfs:label "Guru Gobind Singh Indraprastha University" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(77.26724 28.52326)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Kalkaji" ;
+            schema:addressCountry "IN" ;
+            schema:addressRegion "Delhi" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "India" ;
+                schema:containedInPlace [
+                    schema:name "Asia" ;
+                    schema:identifier "AS"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/12682403/> ;
+    ] ; 
+    .
