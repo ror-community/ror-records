@@ -14,7 +14,7 @@
     org:status "active" ;
     org:classification "education" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-10-31"^^xsd:date ;
+    dct:modified "2025-01-22"^^xsd:date ;
     org:abbreviation "EPHE"@None ; 
     schema:mainEntityOfPage <http://www.ephe.fr/> ;
     owl:sameAs <https://en.wikipedia.org/wiki/%C3%89cole_pratique_des_hautes_%C3%A9tudes> ; 
@@ -194,19 +194,25 @@
         org:member <https://ror.org/03qgfy688> ;
         rdfs:label "Fédération Ile de France de recherche sur l'environnement" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04d70nb60> ;
+        rdfs:label "Centre de recherche Translationnelle en Médecine moléculaire" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(2.3488 48.85341)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Paris" ;
             schema:addressCountry "FR" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Île-de-France" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "France" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

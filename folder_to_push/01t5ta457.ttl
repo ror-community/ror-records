@@ -13,25 +13,32 @@
     org:status "active" ;
     org:classification "education" ; 
     dct:created "2024-12-09"^^xsd:date ;
-    dct:modified "2024-12-10"^^xsd:date ;
+    dct:modified "2025-01-22"^^xsd:date ;
+    org:abbreviation "CIBB"@pt ; 
     org:abbreviation "UC CIBB"@pt ; 
     org:alternativeName "Universidade de Coimbra Centro de Inovação em Biomedicina e Biotecnologia"@pt ; 
     schema:url <http://cibb.uc.pt> ; 
     schema:mainEntityOfPage <https://cibb.uc.pt> ;
     schema:sameAs <http://isni.org/isni/0000000510942314> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/04z8k9a98> ;
+        rdfs:label "University of Coimbra" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(-8.41955 40.20564)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Coimbra" ;
             schema:addressCountry "PT" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Coimbra" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "Portugal" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

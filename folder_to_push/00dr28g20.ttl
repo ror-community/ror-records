@@ -15,7 +15,7 @@
     org:classification "education" ; 
     org:classification "funder" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-10-21"^^xsd:date ;
+    dct:modified "2025-01-22"^^xsd:date ;
     org:abbreviation "UOC"@None ; 
     schema:url <http://uoc.gr> ; 
     schema:mainEntityOfPage <https://www.uoc.gr> ;
@@ -35,16 +35,34 @@
         schema:address [
             schema:addressLocality "Rethymno" ;
             schema:addressCountry "GR" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Crete" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "Greece" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;
         owl:sameAs <http://sws.geonames.org/254352/> ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(25.14341 35.32787)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Heraklion" ;
+            schema:addressCountry "GR" ;
+            schema:addressRegion "Crete" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Greece" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/261745/> ;
     ] ; 
     .

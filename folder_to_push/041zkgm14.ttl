@@ -15,19 +15,13 @@
     org:classification "education" ; 
     org:classification "funder" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-10-21"^^xsd:date ;
+    dct:modified "2025-01-22"^^xsd:date ;
     schema:url <http://unife.it> ; 
     schema:mainEntityOfPage <https://www.unife.it> ;
     owl:sameAs <http://en.wikipedia.org/wiki/University_of_Ferrara> ; 
     schema:sameAs <https://api.crossref.org/funders/501100007109> ;
     schema:sameAs <https://grid.ac/institutions/grid.8484.0> ;
     schema:sameAs <http://isni.org/isni/0000000417572064> ;
-    org:hasLink [
-        a org:Membership ;
-        org:role "child" ;
-        org:member <https://ror.org/00zs3y046> ;
-        rdfs:label "Istituto Nazionale di Fisica Nucleare, Sezione di Ferrara" ;
-    ] ; 
     org:hasLink [
         a org:Membership ;
         org:role "child" ;
@@ -40,19 +34,25 @@
         org:member <https://ror.org/026yzxh70> ;
         rdfs:label "Arcispedale Sant'Anna" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00zs3y046> ;
+        rdfs:label "Istituto Nazionale di Fisica Nucleare, Sezione di Ferrara" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(11.62057 44.83804)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Ferrara" ;
             schema:addressCountry "IT" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Emilia-Romagna" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "Italy" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

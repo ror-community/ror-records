@@ -15,12 +15,19 @@
     org:classification "education" ; 
     org:classification "funder" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-07-29"^^xsd:date ;
-    schema:mainEntityOfPage <http://wwwen.uni.lu/> ;
+    dct:modified "2025-01-22"^^xsd:date ;
+    schema:url <http://uni.lu> ; 
+    schema:mainEntityOfPage <https://www.uni.lu> ;
     owl:sameAs <http://en.wikipedia.org/wiki/University_of_Luxembourg> ; 
     schema:sameAs <https://api.crossref.org/funders/100008665> ;
     schema:sameAs <https://grid.ac/institutions/grid.16008.3f> ;
     schema:sameAs <http://isni.org/isni/0000000122959843> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/054b6pr16> ;
+        rdfs:label "Luxembourg Centre for Contemporary and Digital History" ;
+    ] ; 
     org:hasLink [
         a org:Membership ;
         org:role "related" ;
@@ -30,8 +37,8 @@
     org:hasLink [
         a org:Membership ;
         org:role "child" ;
-        org:member <https://ror.org/054b6pr16> ;
-        rdfs:label "Luxembourg Centre for Contemporary and Digital History" ;
+        org:member <https://ror.org/051tr1y59> ;
+        rdfs:label "Luxembourg Centre for Systems Biomedicine" ;
     ] ; 
     schema:location [
         a schema:Place ;
@@ -39,13 +46,13 @@
         schema:address [
             schema:addressLocality "Luxembourg" ;
             schema:addressCountry "LU" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Luxembourg" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "Luxembourg" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

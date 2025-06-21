@@ -15,7 +15,7 @@
     org:classification "education" ; 
     org:classification "funder" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-10-21"^^xsd:date ;
+    dct:modified "2025-01-22"^^xsd:date ;
     org:abbreviation "UCA"@None ; 
     schema:url <http://uca.es> ; 
     schema:mainEntityOfPage <https://www.uca.es> ;
@@ -35,19 +35,25 @@
         org:member <https://ror.org/04fbqvq73> ;
         rdfs:label "Hospital Universitario Puerto Real" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01fyp5w42> ;
+        rdfs:label "Hospital Universitario de Jerez" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(-6.2891 36.52672)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Cadiz" ;
             schema:addressCountry "ES" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Andalusia" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "Spain" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

@@ -1,0 +1,38 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/04aywby51> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    org:status "active" ;
+    org:classification "facility" ; 
+    dct:created "2025-01-12"^^xsd:date ;
+    dct:modified "2025-01-22"^^xsd:date ;
+    org:alternativeName "Toyamaken Kankyo Kagaku Senta"@ja ; 
+    org:alternativeName "トヤマケン カンキョウ カガク センター"@ja ; 
+    schema:mainEntityOfPage <https://www.pref.toyama.jp/1730/kensei/kenseiunei/kensei/soshiki/17/1730.html> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(137.12572 36.76835)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Imizu" ;
+            schema:addressCountry "JP" ;
+            schema:addressRegion "Toyama" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Japan" ;
+                schema:containedInPlace [
+                    schema:name "Asia" ;
+                    schema:identifier "AS"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/6822125/> ;
+    ] ; 
+    .

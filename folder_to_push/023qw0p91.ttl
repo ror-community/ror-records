@@ -1,0 +1,37 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/023qw0p91> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    org:status "active" ;
+    org:classification "facility" ; 
+    dct:created "2025-01-12"^^xsd:date ;
+    dct:modified "2025-01-22"^^xsd:date ;
+    schema:url <http://food-tokachi.com> ; 
+    schema:mainEntityOfPage <https://www.food-tokachi.com> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(143.20444 42.91722)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Obihiro" ;
+            schema:addressCountry "JP" ;
+            schema:addressRegion "Hokkaido" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Japan" ;
+                schema:containedInPlace [
+                    schema:name "Asia" ;
+                    schema:identifier "AS"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2128815/> ;
+    ] ; 
+    .

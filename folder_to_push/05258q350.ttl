@@ -14,8 +14,9 @@
     org:status "active" ;
     org:classification "facility" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-06-20"^^xsd:date ;
+    dct:modified "2025-01-22"^^xsd:date ;
     org:abbreviation "MIO"@None ; 
+    org:abbreviation "UMR MIO"@fr ; 
     schema:mainEntityOfPage <http://www.mio.univ-amu.fr/?lang=fr> ;
     schema:sameAs <https://grid.ac/institutions/grid.500499.1> ;
     schema:sameAs <http://isni.org/isni/0000000417586271> ;
@@ -24,12 +25,6 @@
         org:role "parent" ;
         org:member <https://ror.org/035xkbk20> ;
         rdfs:label "Aix-Marseille Université" ;
-    ] ; 
-    org:hasLink [
-        a org:Membership ;
-        org:role "parent" ;
-        org:member <https://ror.org/049qgqg40> ;
-        rdfs:label "Délégation Provence et Corse" ;
     ] ; 
     org:hasLink [
         a org:Membership ;
@@ -43,19 +38,31 @@
         org:member <https://ror.org/02m9kbe37> ;
         rdfs:label "Université de Toulon" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/04kdfz702> ;
+        rdfs:label "Institut National des Sciences de l'Univers" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/00f945z63> ;
+        rdfs:label "Institut Pythéas Observatoire des Sciences de l’Univers" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(5.38107 43.29695)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Marseille" ;
             schema:addressCountry "FR" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Provence-Alpes-Côte d'Azur" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "France" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

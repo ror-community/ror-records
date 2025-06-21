@@ -11,11 +11,11 @@
     rdfs:label "" ;
     schema:name "" ;
     schema:foundingDate "1995"^^xsd:gYear ;
-    org:status "active" ;
+    org:status "inactive" ;
     org:classification "funder" ; 
     org:classification "healthcare" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-05-30"^^xsd:date ;
+    dct:modified "2025-01-22"^^xsd:date ;
     org:abbreviation "CHUQ"@None ; 
     schema:mainEntityOfPage <https://www.chudequebec.ca> ;
     owl:sameAs <https://en.wikipedia.org/wiki/Centre_hospitalier_universitaire_de_Qu%C3%A9bec> ; 
@@ -24,27 +24,9 @@
     schema:sameAs <http://isni.org/isni/0000000094711794> ;
     org:hasLink [
         a org:Membership ;
-        org:role "child" ;
-        org:member <https://ror.org/02r1pzn16> ;
-        rdfs:label "Hôpital Saint-François d'Assise" ;
-    ] ; 
-    org:hasLink [
-        a org:Membership ;
-        org:role "child" ;
-        org:member <https://ror.org/002zghs56> ;
-        rdfs:label "Hôpital du Saint-Sacrement" ;
-    ] ; 
-    org:hasLink [
-        a org:Membership ;
-        org:role "related" ;
-        org:member <https://ror.org/04sjchr03> ;
-        rdfs:label "Université Laval" ;
-    ] ; 
-    org:hasLink [
-        a org:Membership ;
-        org:role "child" ;
-        org:member <https://ror.org/041v96n47> ;
-        rdfs:label "Centre hospitalier de l'Université Laval" ;
+        org:role "successor" ;
+        org:member <https://ror.org/05qn5kv73> ;
+        rdfs:label "CHU de Québec-Université Laval" ;
     ] ; 
     schema:location [
         a schema:Place ;
@@ -52,13 +34,13 @@
         schema:address [
             schema:addressLocality "Québec" ;
             schema:addressCountry "CA" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Quebec" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "Canada" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "North America" ;
+                    schema:identifier "NA"
                 ]
             ]
         ] ;

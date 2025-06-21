@@ -15,7 +15,7 @@
     org:classification "facility" ; 
     org:classification "funder" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-11-19"^^xsd:date ;
+    dct:modified "2025-01-22"^^xsd:date ;
     org:alternativeName "German Center for Integrative Biodiversity Research"@en ; 
     org:abbreviation "iDiv"@None ; 
     schema:url <http://idiv.de> ; 
@@ -24,19 +24,43 @@
     schema:sameAs <https://api.crossref.org/funders/501100020056> ;
     schema:sameAs <https://grid.ac/institutions/grid.421064.5> ;
     schema:sameAs <http://isni.org/isni/0000000474703956> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03s7gtk40> ;
+        rdfs:label "Leipzig University" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05gqaka33> ;
+        rdfs:label "Martin Luther University Halle-Wittenberg" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05qpz1x62> ;
+        rdfs:label "Friedrich Schiller University Jena" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/000h6jb29> ;
+        rdfs:label "Helmholtz Centre for Environmental Research" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(12.37129 51.33962)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Leipzig" ;
             schema:addressCountry "DE" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Saxony" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "Germany" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

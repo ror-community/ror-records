@@ -1,0 +1,46 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/04yndey86> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    org:status "active" ;
+    org:classification "nonprofit" ; 
+    dct:created "2025-01-21"^^xsd:date ;
+    dct:modified "2025-01-22"^^xsd:date ;
+    org:abbreviation "SSC"@en ; 
+    org:alternativeName "Species Survival Commission"@en ; 
+    schema:mainEntityOfPage <https://iucn.org/our-union/commissions/species-survival-commission> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/IUCN_Species_Survival_Commission> ; 
+    schema:sameAs <http://isni.org/isni/0000000121137960> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/04tehfn33> ;
+        rdfs:label "International Union for Conservation of Nature" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(6.2701 46.42082)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Gland" ;
+            schema:addressCountry "CH" ;
+            schema:addressRegion "Vaud" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Switzerland" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2660600/> ;
+    ] ; 
+    .

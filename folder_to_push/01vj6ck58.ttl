@@ -13,7 +13,7 @@
     org:status "active" ;
     org:classification "facility" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-10-31"^^xsd:date ;
+    dct:modified "2025-01-22"^^xsd:date ;
     org:alternativeName "INFN Sezione di Torino"@it ; 
     org:alternativeName "INFN Torino"@it ; 
     org:alternativeName "INFN Turin"@en ; 
@@ -25,15 +25,15 @@
     schema:sameAs <http://isni.org/isni/0000000474719712> ;
     org:hasLink [
         a org:Membership ;
-        org:role "parent" ;
-        org:member <https://ror.org/005ta0471> ;
-        rdfs:label "Istituto Nazionale di Fisica Nucleare" ;
+        org:role "child" ;
+        org:member <https://ror.org/0479kf329> ;
+        rdfs:label "Istituto Nazionale di Fisica Nucleare, Gruppo Collegato di Alessandria" ;
     ] ; 
     org:hasLink [
         a org:Membership ;
         org:role "parent" ;
-        org:member <https://ror.org/04387x656> ;
-        rdfs:label "Università degli Studi del Piemonte Orientale “Amedeo Avogadro”" ;
+        org:member <https://ror.org/005ta0471> ;
+        rdfs:label "Istituto Nazionale di Fisica Nucleare" ;
     ] ; 
     org:hasLink [
         a org:Membership ;
@@ -43,9 +43,15 @@
     ] ; 
     org:hasLink [
         a org:Membership ;
-        org:role "child" ;
-        org:member <https://ror.org/0479kf329> ;
-        rdfs:label "Istituto Nazionale di Fisica Nucleare, Gruppo Collegato di Alessandria" ;
+        org:role "related" ;
+        org:member <https://ror.org/04387x656> ;
+        rdfs:label "Università degli Studi del Piemonte Orientale “Amedeo Avogadro”" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/048tbm396> ;
+        rdfs:label "University of Turin" ;
     ] ; 
     schema:location [
         a schema:Place ;
@@ -53,13 +59,13 @@
         schema:address [
             schema:addressLocality "Turin" ;
             schema:addressCountry "IT" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Piedmont" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "Italy" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

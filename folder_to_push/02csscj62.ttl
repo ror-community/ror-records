@@ -13,24 +13,30 @@
     org:status "active" ;
     org:classification "government" ; 
     dct:created "2024-12-09"^^xsd:date ;
-    dct:modified "2024-12-10"^^xsd:date ;
+    dct:modified "2025-01-22"^^xsd:date ;
     org:abbreviation "SESARAM"@pt ; 
     schema:url <http://sesaram.pt> ; 
     schema:mainEntityOfPage <https://www.sesaram.pt> ;
     schema:sameAs <http://isni.org/isni/0000000406088760> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/054qyrd12> ;
+        rdfs:label "Hospital Dr. Nélio Mendonça" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(-16.92547 32.66568)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Funchal" ;
             schema:addressCountry "PT" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Madeira" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "Portugal" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

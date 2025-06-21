@@ -1,0 +1,49 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/0554aam39> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "1974"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "company" ; 
+    dct:created "2025-01-21"^^xsd:date ;
+    dct:modified "2025-01-22"^^xsd:date ;
+    org:alternativeName "Biokit"@en ; 
+    org:alternativeName "Biokit Research & Development"@en ; 
+    org:alternativeName "Werfen OEM"@en ; 
+    org:alternativeName "Werfen, OEM Headquarters and Technology Center"@en ; 
+    schema:mainEntityOfPage <https://www.werfen.com/oem/> ;
+    owl:sameAs <https://ca.wikipedia.org/wiki/Biokit> ; 
+    schema:sameAs <http://isni.org/isni/0000000417566916> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/04h9yzf84> ;
+        rdfs:label "Werfen (Spain)" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(2.22015 41.60743)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Lliçà d'Amunt" ;
+            schema:addressCountry "ES" ;
+            schema:addressRegion "Catalonia" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Spain" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/6356137/> ;
+    ] ; 
+    .

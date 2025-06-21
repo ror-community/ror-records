@@ -15,13 +15,19 @@
     org:classification "education" ; 
     org:classification "funder" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-05-30"^^xsd:date ;
+    dct:modified "2025-01-22"^^xsd:date ;
     org:abbreviation "FSU"@None ; 
     schema:mainEntityOfPage <https://www.uni-jena.de/en> ;
     owl:sameAs <http://en.wikipedia.org/wiki/University_of_Jena> ; 
     schema:sameAs <https://api.crossref.org/funders/100012957> ;
     schema:sameAs <https://grid.ac/institutions/grid.9613.d> ;
     schema:sameAs <http://isni.org/isni/0000000119392794> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0493yt138> ;
+        rdfs:label "Thüringer Universitäts- und Landesbibliothek" ;
+    ] ; 
     org:hasLink [
         a org:Membership ;
         org:role "related" ;
@@ -36,9 +42,9 @@
     ] ; 
     org:hasLink [
         a org:Membership ;
-        org:role "child" ;
-        org:member <https://ror.org/0493yt138> ;
-        rdfs:label "Thüringer Universitäts- und Landesbibliothek" ;
+        org:role "related" ;
+        org:member <https://ror.org/01jty7g66> ;
+        rdfs:label "German Centre for Integrative Biodiversity Research" ;
     ] ; 
     schema:location [
         a schema:Place ;
@@ -46,13 +52,13 @@
         schema:address [
             schema:addressLocality "Jena" ;
             schema:addressCountry "DE" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Thuringia" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "Germany" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

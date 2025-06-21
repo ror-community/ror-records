@@ -14,7 +14,7 @@
     org:status "active" ;
     org:classification "healthcare" ; 
     dct:created "2024-12-09"^^xsd:date ;
-    dct:modified "2024-12-10"^^xsd:date ;
+    dct:modified "2025-01-22"^^xsd:date ;
     org:alternativeName "AGS de Jerez, Costa Noroeste y Sierra de Cádiz"@es ; 
     org:alternativeName "AGSJerez"@es ; 
     org:alternativeName "Hospital SAS Jerez"@es ; 
@@ -29,19 +29,31 @@
         org:member <https://ror.org/047pymx40> ;
         rdfs:label "Consejería de Salud y Consumo" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/03q4c3e69> ;
+        rdfs:label "Andalusian Health Service" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/04mxxkb11> ;
+        rdfs:label "Universidad de Cádiz" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(-6.13606 36.68645)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Jerez de la Frontera" ;
             schema:addressCountry "ES" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Andalusia" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "Spain" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

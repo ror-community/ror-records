@@ -15,7 +15,7 @@
     org:classification "education" ; 
     org:classification "funder" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-11-19"^^xsd:date ;
+    dct:modified "2025-01-22"^^xsd:date ;
     org:abbreviation "UNIPMN"@None ; 
     org:alternativeName "University of Eastern Piedmont"@en ; 
     org:alternativeName "University of Eastern Piedmont Amadeo Avogadro"@en ; 
@@ -25,12 +25,6 @@
     schema:sameAs <https://api.crossref.org/funders/501100005699> ;
     schema:sameAs <https://grid.ac/institutions/grid.16563.37> ;
     schema:sameAs <http://isni.org/isni/0000000121663741> ;
-    org:hasLink [
-        a org:Membership ;
-        org:role "child" ;
-        org:member <https://ror.org/01vj6ck58> ;
-        rdfs:label "Istituto Nazionale di Fisica Nucleare, Sezione di Torino" ;
-    ] ; 
     org:hasLink [
         a org:Membership ;
         org:role "related" ;
@@ -43,19 +37,25 @@
         org:member <https://ror.org/04hp1ky92> ;
         rdfs:label "NODES S.c.a.r.l" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01vj6ck58> ;
+        rdfs:label "Istituto Nazionale di Fisica Nucleare, Sezione di Torino" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(8.41989 45.32163)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Vercelli" ;
             schema:addressCountry "IT" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Piedmont" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "Italy" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

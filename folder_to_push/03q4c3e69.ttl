@@ -4,26 +4,111 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/03q4c3e69> a org:Organization ;
     rdfs:label "Andalusian Health Service" ;
     schema:name "Andalusian Health Service" ;
     schema:foundingDate "1986"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Healthcare" ; 
-    org:abbreviation "SAS" ;
-    schema:url <https://www.juntadeandalucia.es/servicioandaluzdesalud/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Andalusian_Health_Service> ;
+    org:classification "funder" ; 
+    org:classification "healthcare" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-01-22"^^xsd:date ;
+    org:abbreviation "SAS"@None ; 
+    schema:mainEntityOfPage <https://www.juntadeandalucia.es/servicioandaluzdesalud/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Andalusian_Health_Service> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100018780> ;
+    schema:sameAs <https://grid.ac/institutions/grid.418355.e> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04v91tb50> ;
+        rdfs:label "Complejo Hospitalario Torrecárdenas" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02ecxgj38> ;
+        rdfs:label "Complejo Hospitalario de Jaén" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05xxs2z38> ;
+        rdfs:label "Hospital Clínico Universitario Virgen de la Victoria" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03fpqn433> ;
+        rdfs:label "Hospital Juan Ramón Jiménez" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02pyb2233> ;
+        rdfs:label "Hospital La Inmaculada" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/038152964> ;
+        rdfs:label "Hospital Riotinto" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/000n8re15> ;
+        rdfs:label "Hospital San Juan de la Cruz" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/040xzg562> ;
+        rdfs:label "Hospital Universitario Puerta del Mar" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04fbqvq73> ;
+        rdfs:label "Hospital Universitario Puerto Real" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02vtd2q19> ;
+        rdfs:label "Hospital Universitario Reina Sofía" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/031zwx660> ;
+        rdfs:label "Instituto de Biomedicina de Sevilla" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01fyp5w42> ;
+        rdfs:label "Hospital Universitario de Jerez" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-5.97317 37.38283)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-5.97317 37.38283)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Seville" ;
             schema:addressCountry "ES" ;
-            owl:sameAs <http://sws.geonames.org/2510911/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://www.wikidata.org/entity/Q4753529> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "Andalusia" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Spain" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2510911/> ;
+    ] ; 
     .

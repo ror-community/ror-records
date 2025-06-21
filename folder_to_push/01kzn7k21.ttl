@@ -15,7 +15,7 @@
     org:classification "education" ; 
     org:classification "funder" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-10-14"^^xsd:date ;
+    dct:modified "2025-01-22"^^xsd:date ;
     org:alternativeName "Azad University"@en ; 
     org:alternativeName "Dāneshgāh-e Āzād-e Eslāmi"@None ; 
     org:abbreviation "IAU"@None ; 
@@ -702,19 +702,25 @@
         org:member <https://ror.org/05mzta732> ;
         rdfs:label "Islamic Azad University, Ashkezar" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03n56e796> ;
+        rdfs:label "Islamic Azad University, Shahrebabak" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(51.42151 35.69439)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Tehran" ;
             schema:addressCountry "IR" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Tehran" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "Iran" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Asia" ;
+                    schema:identifier "AS"
                 ]
             ]
         ] ;

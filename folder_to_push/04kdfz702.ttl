@@ -15,7 +15,7 @@
     org:classification "facility" ; 
     org:classification "funder" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-06-20"^^xsd:date ;
+    dct:modified "2025-01-22"^^xsd:date ;
     org:alternativeName "CNRS Earth & Universe"@en ; 
     org:alternativeName "CNRS Terre et Univers"@fr ; 
     org:abbreviation "INSU"@None ; 
@@ -33,7 +33,7 @@
         a org:Membership ;
         org:role "child" ;
         org:member <https://ror.org/032582s48> ;
-        rdfs:label "Observatoire de Besançon" ;
+        rdfs:label "Observatoire des Sciences de l’Univers Terre Homme Environnement Temps Astronomie" ;
     ] ; 
     org:hasLink [
         a org:Membership ;
@@ -337,12 +337,6 @@
     ] ; 
     org:hasLink [
         a org:Membership ;
-        org:role "parent" ;
-        org:member <https://ror.org/02feahw73> ;
-        rdfs:label "Centre National de la Recherche Scientifique" ;
-    ] ; 
-    org:hasLink [
-        a org:Membership ;
         org:role "child" ;
         org:member <https://ror.org/005fjj927> ;
         rdfs:label "Ecosystèmes, Biodiversité, Evolution" ;
@@ -425,19 +419,31 @@
         org:member <https://ror.org/02w0vb190> ;
         rdfs:label "Observatoire des Sciences de l'Univers Nantes Atlantique" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02feahw73> ;
+        rdfs:label "Centre National de la Recherche Scientifique" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05258q350> ;
+        rdfs:label "Institut Méditerranéen d’Océanologie" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(2.3488 48.85341)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Paris" ;
             schema:addressCountry "FR" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Île-de-France" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "France" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

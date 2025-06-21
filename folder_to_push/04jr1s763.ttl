@@ -15,7 +15,7 @@
     org:classification "education" ; 
     org:classification "funder" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-10-21"^^xsd:date ;
+    dct:modified "2025-01-22"^^xsd:date ;
     org:alternativeName "UniFI"@it ; 
     schema:url <http://unifi.it> ; 
     schema:mainEntityOfPage <https://www.unifi.it> ;
@@ -28,12 +28,6 @@
         org:role "child" ;
         org:member <https://ror.org/030ws5c69> ;
         rdfs:label "Istituto Nazionale di Fisica Nucleare, Galileo Galilei Institute for Theoretical Physics" ;
-    ] ; 
-    org:hasLink [
-        a org:Membership ;
-        org:role "child" ;
-        org:member <https://ror.org/02vv5y108> ;
-        rdfs:label "Istituto Nazionale di Fisica Nucleare, Sezione di Firenze" ;
     ] ; 
     org:hasLink [
         a org:Membership ;
@@ -59,19 +53,25 @@
         org:member <https://ror.org/02crev113> ;
         rdfs:label "Azienda Ospedaliero-Universitaria Careggi" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02vv5y108> ;
+        rdfs:label "Istituto Nazionale di Fisica Nucleare, Sezione di Firenze" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(11.24626 43.77925)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Florence" ;
             schema:addressCountry "IT" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Tuscany" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "Italy" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

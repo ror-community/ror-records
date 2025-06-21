@@ -1,0 +1,51 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/04pzmmv39> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "1936"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "funder" ; 
+    org:classification "government" ; 
+    dct:created "2025-01-21"^^xsd:date ;
+    dct:modified "2025-01-22"^^xsd:date ;
+    org:alternativeName "Eidgenössisches Institut für Schnee- und Lawinenforschung"@de ; 
+    org:abbreviation "SLF"@de ; 
+    org:abbreviation "WSL"@de ; 
+    schema:url <http://slf.ch> ; 
+    schema:mainEntityOfPage <https://www.slf.ch> ;
+    owl:sameAs <https://de.wikipedia.org/wiki/WSL-Institut_f%C3%BCr_Schnee-_und_Lawinenforschung_SLF> ; 
+    schema:sameAs <https://api.crossref.org/funders/100016052> ;
+    schema:sameAs <http://isni.org/isni/0000000110193166> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/04bs5yc70> ;
+        rdfs:label "Swiss Federal Institute for Forest, Snow and Landscape Research" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(9.83723 46.80429)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Davos" ;
+            schema:addressCountry "CH" ;
+            schema:addressRegion "Grisons" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Switzerland" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2661039/> ;
+    ] ; 
+    .

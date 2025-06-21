@@ -14,7 +14,7 @@
     org:classification "funder" ; 
     org:classification "government" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-12-10"^^xsd:date ;
+    dct:modified "2025-01-22"^^xsd:date ;
     org:abbreviation "TecNM"@None ; 
     schema:url <http://tecnm.mx> ; 
     schema:mainEntityOfPage <https://www.tecnm.mx> ;
@@ -245,12 +245,6 @@
     ] ; 
     org:hasLink [
         a org:Membership ;
-        org:role "parent" ;
-        org:member <https://ror.org/02e1c4h55> ;
-        rdfs:label "Secretariat of Public Education" ;
-    ] ; 
-    org:hasLink [
-        a org:Membership ;
         org:role "child" ;
         org:member <https://ror.org/04m28hd07> ;
         rdfs:label "Instituto Tecnológico de Tlalnepantla" ;
@@ -261,19 +255,31 @@
         org:member <https://ror.org/04f6z5785> ;
         rdfs:label "Instituto Tecnológico Superior de Salvatierra" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02e1c4h55> ;
+        rdfs:label "Secretariat of Public Education" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/056rez340> ;
+        rdfs:label "Instituto Tecnológico de Agua Prieta" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(-99.12766 19.42847)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Mexico City" ;
             schema:addressCountry "MX" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Mexico City" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "Mexico" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "North America" ;
+                    schema:identifier "NA"
                 ]
             ]
         ] ;

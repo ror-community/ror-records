@@ -14,26 +14,34 @@
     org:status "active" ;
     org:classification "healthcare" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-07-11"^^xsd:date ;
+    dct:modified "2025-01-22"^^xsd:date ;
+    org:alternativeName "Daini Osaka Police Hospital"@en ; 
     org:alternativeName "Osaka Keisatsu Hospital"@en ; 
     org:alternativeName "医療法人警和会大阪警察病院"@ja ; 
-    schema:url <http://oph.gr.jp> ; 
-    schema:mainEntityOfPage <https://www.oph.gr.jp> ;
+    org:alternativeName "医療法人警和会第二大阪警察病院"@ja ; 
+    schema:url <http://oim.or.jp> ; 
+    schema:mainEntityOfPage <https://oim.or.jp> ;
     schema:sameAs <https://grid.ac/institutions/grid.416980.2> ;
     schema:sameAs <http://isni.org/isni/0000000417748373> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "predecessor" ;
+        org:member <https://ror.org/01bfp5e25> ;
+        rdfs:label "NTT WEST Osaka Hospital" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(135.50107 34.69379)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Osaka" ;
             schema:addressCountry "JP" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Osaka" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "Japan" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Asia" ;
+                    schema:identifier "AS"
                 ]
             ]
         ] ;

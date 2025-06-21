@@ -1,0 +1,49 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/056rez340> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "1996"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2025-01-21"^^xsd:date ;
+    dct:modified "2025-01-22"^^xsd:date ;
+    org:alternativeName "IT Agua Prieta"@es ; 
+    org:abbreviation "ITAP"@None ; 
+    org:alternativeName "TecNM Agua Prieta"@es ; 
+    org:alternativeName "TecNM Campus Agua Prieta"@es ; 
+    org:alternativeName "Tecnológico Nacional de México, Instituto Tecnológico de Agua Prieta"@es ; 
+    schema:url <http://aguaprieta.tecnm.mx> ; 
+    schema:mainEntityOfPage <https://aguaprieta.tecnm.mx> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/00davry38> ;
+        rdfs:label "Tecnológico Nacional de México" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-109.54876 31.33071)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Agua Prieta" ;
+            schema:addressCountry "MX" ;
+            schema:addressRegion "Sonora" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Mexico" ;
+                schema:containedInPlace [
+                    schema:name "North America" ;
+                    schema:identifier "NA"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/4019260/> ;
+    ] ; 
+    .

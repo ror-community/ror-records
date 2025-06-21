@@ -1,0 +1,45 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/051tr1y59> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "2009"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2025-01-21"^^xsd:date ;
+    dct:modified "2025-01-22"^^xsd:date ;
+    org:abbreviation "LCSB"@en ; 
+    schema:mainEntityOfPage <https://www.uni.lu/lcsb-en/> ;
+    owl:sameAs <https://lb.wikipedia.org/wiki/Luxembourg_Centre_for_Systems_Biomedicine> ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/036x5ad56> ;
+        rdfs:label "University of Luxembourg" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(5.98056 49.49583)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Esch-sur-Alzette" ;
+            schema:addressCountry "LU" ;
+            schema:addressRegion "Esch-sur-Alzette" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Luxembourg" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2960596/> ;
+    ] ; 
+    .

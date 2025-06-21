@@ -14,7 +14,7 @@
     org:status "active" ;
     org:classification "education" ; 
     dct:created "2020-03-15"^^xsd:date ;
-    dct:modified "2024-12-10"^^xsd:date ;
+    dct:modified "2025-01-22"^^xsd:date ;
     schema:mainEntityOfPage <https://www.u-cergy.fr/> ;
     owl:sameAs <https://en.wikipedia.org/wiki/CY_Cergy_Paris_University> ; 
     schema:sameAs <https://grid.ac/institutions/grid.507676.5> ;
@@ -86,6 +86,12 @@
     ] ; 
     org:hasLink [
         a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05mzs1s34> ;
+        rdfs:label "Centre de recherche multidisciplinaire en sciences humaines et sociales" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
         org:role "related" ;
         org:member <https://ror.org/01nrtdp55> ;
         rdfs:label "GDR NBODY : Problème quantique à N corps en chimie et physique" ;
@@ -93,8 +99,20 @@
     org:hasLink [
         a org:Membership ;
         org:role "child" ;
-        org:member <https://ror.org/05mzs1s34> ;
-        rdfs:label "Centre de recherche multidisciplinaire en sciences humaines et sociales" ;
+        org:member <https://ror.org/0347ywk92> ;
+        rdfs:label "Bien-être, Organisations, Numérique, Habitabilité, Éducation, Universalité, Relations, Savoirs - BONHEURS" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/053t9n429> ;
+        rdfs:label "Biomolécules : Conception, Isolement, Synthèse" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/044yw8e10> ;
+        rdfs:label "Centre de Philosophie Juridique et Politique" ;
     ] ; 
     schema:location [
         a schema:Place ;
@@ -102,13 +120,13 @@
         schema:address [
             schema:addressLocality "Cergy-Pontoise" ;
             schema:addressCountry "FR" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Île-de-France" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "France" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

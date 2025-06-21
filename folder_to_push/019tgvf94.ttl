@@ -15,7 +15,7 @@
     org:classification "education" ; 
     org:classification "funder" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-10-31"^^xsd:date ;
+    dct:modified "2025-01-22"^^xsd:date ;
     org:alternativeName "UniCA"@fr ; 
     schema:mainEntityOfPage <https://univ-cotedazur.fr/> ;
     owl:sameAs <https://en.wikipedia.org/wiki/University_of_C%C3%B4te_d%27Azur> ; 
@@ -33,12 +33,6 @@
         org:role "child" ;
         org:member <https://ror.org/03mmb0d82> ;
         rdfs:label "Bases, Corpus, Langage" ;
-    ] ; 
-    org:hasLink [
-        a org:Membership ;
-        org:role "child" ;
-        org:member <https://ror.org/05qsjq305> ;
-        rdfs:label "Centre Hospitalier Universitaire de Nice" ;
     ] ; 
     org:hasLink [
         a org:Membership ;
@@ -346,19 +340,25 @@
         org:member <https://ror.org/01sgwka45> ;
         rdfs:label "Microscopie Fonctionnelle du Vivant" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05qsjq305> ;
+        rdfs:label "Centre Hospitalier Universitaire de Nice" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(7.26608 43.70313)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Nice" ;
             schema:addressCountry "FR" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Provence-Alpes-Côte d'Azur" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "France" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

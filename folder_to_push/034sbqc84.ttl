@@ -11,10 +11,10 @@
     rdfs:label "Hôtel-Dieu de Québec" ;
     schema:name "Hôtel-Dieu de Québec" ;
     schema:foundingDate "1637"^^xsd:gYear ;
-    org:status "active" ;
+    org:status "inactive" ;
     org:classification "healthcare" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-12-10"^^xsd:date ;
+    dct:modified "2025-01-22"^^xsd:date ;
     schema:mainEntityOfPage <https://www.chudequebec.ca/centre-hospitaliers/l%e2%80%99hotel-dieu-de-quebec.aspx> ;
     owl:sameAs <http://en.wikipedia.org/wiki/H%C3%B4tel-Dieu_de_Qu%C3%A9bec> ; 
     schema:sameAs <https://grid.ac/institutions/grid.417661.3> ;
@@ -25,19 +25,25 @@
         org:member <https://ror.org/04sjchr03> ;
         rdfs:label "Université Laval" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "successor" ;
+        org:member <https://ror.org/05qn5kv73> ;
+        rdfs:label "CHU de Québec-Université Laval" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(-71.21454 46.81228)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Québec" ;
             schema:addressCountry "CA" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Quebec" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "Canada" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "North America" ;
+                    schema:identifier "NA"
                 ]
             ]
         ] ;

@@ -1,0 +1,40 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/009pyrv87> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    org:status "active" ;
+    org:classification "healthcare" ; 
+    dct:created "2019-05-06"^^xsd:date ;
+    dct:modified "2025-01-22"^^xsd:date ;
+    org:alternativeName "Ehara Tsukusen Seisen Hospital"@en ; 
+    org:alternativeName "江原積善会積善病院"@ja ; 
+    schema:url <http://sekizen.or.jp> ; 
+    schema:mainEntityOfPage <https://www.sekizen.or.jp> ;
+    schema:sameAs <https://grid.ac/institutions/grid.505901.8> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(133.99885 35.05215)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Tsuyama" ;
+            schema:addressCountry "JP" ;
+            schema:addressRegion "Okayama" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Japan" ;
+                schema:containedInPlace [
+                    schema:name "Asia" ;
+                    schema:identifier "AS"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1849519/> ;
+    ] ; 
+    .

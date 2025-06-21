@@ -15,7 +15,7 @@
     org:classification "education" ; 
     org:classification "funder" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-10-21"^^xsd:date ;
+    dct:modified "2025-01-22"^^xsd:date ;
     schema:url <http://york.ac.uk> ; 
     schema:mainEntityOfPage <https://www.york.ac.uk> ;
     owl:sameAs <http://en.wikipedia.org/wiki/University_of_York> ; 
@@ -52,19 +52,25 @@
         org:member <https://ror.org/0003zy991> ;
         rdfs:label "York Hospital" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/0251f2x81> ;
+        rdfs:label "White Rose University Consortium" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(-1.08271 53.95763)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "York" ;
             schema:addressCountry "GB" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "England" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "United Kingdom" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

@@ -1,0 +1,38 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/031sr5j33> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    org:status "active" ;
+    org:classification "facility" ; 
+    dct:created "2025-01-12"^^xsd:date ;
+    dct:modified "2025-01-22"^^xsd:date ;
+    org:alternativeName "Mieken Kogyo Kenkyujo"@ja ; 
+    org:alternativeName "ミエケン コウギョウ ケンキュウジョ"@ja ; 
+    schema:mainEntityOfPage <https://www.pref.mie.lg.jp/kougi/hp/> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(136.51667 34.73333)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Tsu" ;
+            schema:addressCountry "JP" ;
+            schema:addressRegion "Mie" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Japan" ;
+                schema:containedInPlace [
+                    schema:name "Asia" ;
+                    schema:identifier "AS"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1849796/> ;
+    ] ; 
+    .

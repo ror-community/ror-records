@@ -15,7 +15,7 @@
     org:classification "education" ; 
     org:classification "funder" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-12-10"^^xsd:date ;
+    dct:modified "2025-01-22"^^xsd:date ;
     schema:mainEntityOfPage <http://www.universite-paris-saclay.fr/fr> ;
     owl:sameAs <https://en.wikipedia.org/wiki/University_of_Paris-Saclay> ; 
     schema:sameAs <https://api.crossref.org/funders/501100007241> ;
@@ -603,19 +603,25 @@
         org:member <https://ror.org/01x6z5t49> ;
         rdfs:label "Fédération de Recherche Spectroscopies de Photoémission" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/053t9n429> ;
+        rdfs:label "Biomolécules : Conception, Isolement, Synthèse" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(2.13333 48.68333)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Gif-sur-Yvette" ;
             schema:addressCountry "FR" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Île-de-France" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "France" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

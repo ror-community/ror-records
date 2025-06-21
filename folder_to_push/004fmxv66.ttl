@@ -14,7 +14,7 @@
     org:status "active" ;
     org:classification "facility" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-06-20"^^xsd:date ;
+    dct:modified "2025-01-22"^^xsd:date ;
     org:abbreviation "FEMTO-ST"@None ; 
     schema:mainEntityOfPage <http://www.femto-st.fr/> ;
     owl:sameAs <https://en.wikipedia.org/wiki/FEMTO-ST_Institute> ; 
@@ -44,19 +44,25 @@
         org:member <https://ror.org/05813w841> ;
         rdfs:label "École Nationale Supérieure de Mécanique et des Microtechniques" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/032582s48> ;
+        rdfs:label "Observatoire des Sciences de l’Univers Terre Homme Environnement Temps Astronomie" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(6.01815 47.24878)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Besançon" ;
             schema:addressCountry "FR" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Bourgogne-Franche-Comté" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "France" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

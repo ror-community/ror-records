@@ -1,0 +1,40 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/056m9zn95> a org:Organization ;
+    rdfs:label "Institut für Biotechnologie und Wirkstoff-Forschung" ;
+    schema:name "Institut für Biotechnologie und Wirkstoff-Forschung" ;
+    schema:foundingDate "1998"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "nonprofit" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-01-22"^^xsd:date ;
+    org:abbreviation "IBWF"@None ; 
+    schema:mainEntityOfPage <http://www.ibwf.de/> ;
+    schema:sameAs <https://grid.ac/institutions/grid.482707.e> ;
+    schema:sameAs <http://isni.org/isni/0000000404733359> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(7.77161 49.443)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Kaiserslautern" ;
+            schema:addressCountry "DE" ;
+            schema:addressRegion "Rheinland-Pfalz" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Germany" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2894003/> ;
+    ] ; 
+    .

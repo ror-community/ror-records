@@ -15,7 +15,7 @@
     org:classification "funder" ; 
     org:classification "healthcare" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-10-14"^^xsd:date ;
+    dct:modified "2025-01-22"^^xsd:date ;
     org:abbreviation "AP-HP"@None ; 
     schema:mainEntityOfPage <http://www.aphp.fr/> ;
     owl:sameAs <https://en.wikipedia.org/wiki/Assistance_Publique_%E2%80%93_H%C3%B4pitaux_de_Paris> ; 
@@ -292,19 +292,25 @@
         org:member <https://ror.org/03wy09077> ;
         rdfs:label "Groupe Hospitalo-Universitaire Paris Nord" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/037y9hb39> ;
+        rdfs:label "Centre d'Investigation Clinique - Innovation Technologique de Garches" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(2.3488 48.85341)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Paris" ;
             schema:addressCountry "FR" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Île-de-France" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "France" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

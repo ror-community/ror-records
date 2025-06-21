@@ -14,9 +14,13 @@
     org:status "active" ;
     org:classification "facility" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-12-10"^^xsd:date ;
+    dct:modified "2025-01-22"^^xsd:date ;
+    org:abbreviation "CTM"@fr ; 
     org:abbreviation "LNC"@None ; 
     org:alternativeName "Lipides, Nutrition, Cancer"@fr ; 
+    org:alternativeName "UMR1231 - CTM"@None ; 
+    org:alternativeName "UMR1231- LNC"@None ; 
+    org:alternativeName "UMR866"@None ; 
     schema:url <http://ctm.u-bourgogne.fr> ; 
     schema:mainEntityOfPage <https://ctm.u-bourgogne.fr> ;
     schema:sameAs <https://grid.ac/institutions/grid.462571.3> ;
@@ -38,22 +42,28 @@
         org:member <https://ror.org/03zek0r74> ;
         rdfs:label "Institut Agro Dijon" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/046b3cj80> ;
+        rdfs:label "École Pratique des Hautes Études" ;
+    ] ; 
     schema:location [
         a schema:Place ;
-        geo:asWKT "POINT(2.3488 48.85341)"^^geo:wktLiteral ;
+        geo:asWKT "POINT(5.01667 47.31667)"^^geo:wktLiteral ;
         schema:address [
-            schema:addressLocality "Paris" ;
+            schema:addressLocality "Dijon" ;
             schema:addressCountry "FR" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Bourgogne-Franche-Comté" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "France" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;
-        owl:sameAs <http://sws.geonames.org/2988507/> ;
+        owl:sameAs <http://sws.geonames.org/3021372/> ;
     ] ; 
     .

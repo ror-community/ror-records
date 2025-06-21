@@ -1,0 +1,49 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/00kc4c253> a org:Organization ;
+    rdfs:label "Information Technology Association of America" ;
+    schema:name "Information Technology Association of America" ;
+    schema:foundingDate "1962"^^xsd:gYear ;
+    org:status "inactive" ;
+    org:classification "other" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-01-22"^^xsd:date ;
+    org:abbreviation "ADAPSO"@None ; 
+    org:alternativeName "Association of Data Processing Service Organizations"@en ; 
+    org:abbreviation "ITAA"@None ; 
+    schema:mainEntityOfPage <https://www.comptia.org/advocacy> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Information_Technology_Association_of_America> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.432348.a> ;
+    schema:sameAs <http://isni.org/isni/0000000087810508> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "successor" ;
+        org:member <https://ror.org/04jm7vd23> ;
+        rdfs:label "Computing Technology Industry Association" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-122.67065 45.42067)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Lake Oswego" ;
+            schema:addressCountry "US" ;
+            schema:addressRegion "Oregon" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "North America" ;
+                    schema:identifier "NA"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/5735724/> ;
+    ] ; 
+    .

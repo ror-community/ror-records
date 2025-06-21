@@ -15,7 +15,7 @@
     org:classification "education" ; 
     org:classification "funder" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-10-21"^^xsd:date ;
+    dct:modified "2025-01-22"^^xsd:date ;
     org:alternativeName "Imperial College of Science, Technology and Medicine"@en ; 
     schema:url <http://imperial.ac.uk> ; 
     schema:mainEntityOfPage <https://www.imperial.ac.uk> ;
@@ -131,19 +131,25 @@
         org:member <https://ror.org/023331s46> ;
         rdfs:label "The George Institute for Global Health" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/037ez2r19> ;
+        rdfs:label "KIOS Research and Innovation Center of Excellence" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(-0.12574 51.50853)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "London" ;
             schema:addressCountry "GB" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "England" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "United Kingdom" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

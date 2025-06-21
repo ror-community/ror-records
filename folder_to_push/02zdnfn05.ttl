@@ -1,0 +1,49 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/02zdnfn05> a org:Organization ;
+    rdfs:label "Institut National Agronomique de Tunisie" ;
+    schema:name "Institut National Agronomique de Tunisie" ;
+    schema:foundingDate "1898"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-01-22"^^xsd:date ;
+    org:abbreviation "INAT"@None ; 
+    org:abbreviation "NAIT"@en ; 
+    org:alternativeName "National Agronomic Institute of Tunisia"@en ; 
+    schema:url <http://inat.tn> ; 
+    schema:mainEntityOfPage <http://www.inat.tn> ;
+    schema:sameAs <https://grid.ac/institutions/grid.424653.2> ;
+    schema:sameAs <http://isni.org/isni/0000000121562481> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/057x6za15> ;
+        rdfs:label "University of Carthage" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(10.16579 36.81897)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Tunis" ;
+            schema:addressCountry "TN" ;
+            schema:addressRegion "Tunis Governorate" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Tunisia" ;
+                schema:containedInPlace [
+                    schema:name "Africa" ;
+                    schema:identifier "AF"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2464470/> ;
+    ] ; 
+    .

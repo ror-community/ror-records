@@ -15,26 +15,32 @@
     org:classification "education" ; 
     org:classification "facility" ; 
     dct:created "2024-12-09"^^xsd:date ;
-    dct:modified "2024-12-10"^^xsd:date ;
+    dct:modified "2025-01-22"^^xsd:date ;
     org:abbreviation "CMA"@fr ; 
     org:alternativeName "Center for Applied Mathematics"@en ; 
     org:alternativeName "Centre de Mathématiques Appliquées"@fr ; 
     org:alternativeName "Centre for Applied Mathematics"@en ; 
     schema:url <http://cma.mines-paristech.fr> ; 
     schema:mainEntityOfPage <https://www.cma.mines-paristech.fr> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/04y8cs423> ;
+        rdfs:label "École Nationale Supérieure des Mines de Paris" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(7.04721 43.62235)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Sophia Antipolis" ;
             schema:addressCountry "FR" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Provence-Alpes-Côte d'Azur" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "France" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

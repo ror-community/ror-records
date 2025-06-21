@@ -14,9 +14,17 @@
     org:status "active" ;
     org:classification "facility" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-06-20"^^xsd:date ;
+    dct:modified "2025-01-22"^^xsd:date ;
+    org:alternativeName "Besançon Astronomical Observatory"@en ; 
     org:alternativeName "Besançon Observatory"@fr ; 
+    org:abbreviation "OSU THETA"@fr ; 
+    org:alternativeName "OSU Théta"@fr ; 
+    org:alternativeName "Observatoire de Besançon"@fr ; 
     org:alternativeName "Observatoire des sciences de l'Univers de Besançon"@fr ; 
+    org:alternativeName "Observatory for Universe Sciences of Franche-Comté Burgundy"@en ; 
+    org:abbreviation "THETA"@fr ; 
+    org:alternativeName "UMS 3245"@None ; 
+    org:alternativeName "Unité d'Appui et de Recherche THETA"@fr ; 
     schema:mainEntityOfPage <http://theta.obs-besancon.fr/?lang=en> ;
     owl:sameAs <https://en.wikipedia.org/wiki/Besan%C3%A7on_Astronomical_Observatory> ; 
     schema:sameAs <https://grid.ac/institutions/grid.440396.c> ;
@@ -27,19 +35,31 @@
         org:member <https://ror.org/04kdfz702> ;
         rdfs:label "Institut National des Sciences de l'Univers" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02b6c1039> ;
+        rdfs:label "Laboratoire Interdisciplinaire Carnot de Bourgogne" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/004fmxv66> ;
+        rdfs:label "Franche-Comté Électronique Mécanique Thermique et Optique - Sciences et Technologies" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(6.01815 47.24878)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Besançon" ;
             schema:addressCountry "FR" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Bourgogne-Franche-Comté" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "France" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

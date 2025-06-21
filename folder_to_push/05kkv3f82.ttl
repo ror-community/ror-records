@@ -14,7 +14,7 @@
     org:status "active" ;
     org:classification "education" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-10-31"^^xsd:date ;
+    dct:modified "2025-01-22"^^xsd:date ;
     org:abbreviation "UniBw M"@None ; 
     org:alternativeName "Universitaet Der Bundeswehr Muenchen"@de ; 
     schema:url <http://unibw.de> ; 
@@ -28,19 +28,25 @@
         org:member <https://ror.org/00nmgny79> ;
         rdfs:label "Bundeswehr" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/03g7eh380> ;
+        rdfs:label "Federal Ministry of Defence" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(11.57549 48.13743)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Munich" ;
             schema:addressCountry "DE" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Bavaria" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "Germany" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

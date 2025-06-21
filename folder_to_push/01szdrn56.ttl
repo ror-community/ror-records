@@ -1,0 +1,49 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/01szdrn56> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "1948"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "nonprofit" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-01-22"^^xsd:date ;
+    org:abbreviation "IUCN"@None ; 
+    org:alternativeName "IUCN Bangladesh Country Office"@en ; 
+    org:alternativeName "International Union for Conservation of Nature"@en ; 
+    org:alternativeName "International Union for Conservation of Nature and Natural Resources"@en ; 
+    schema:mainEntityOfPage <http://www.iucn.org/about/union/secretariat/offices/asia/asia_where_work/bangladesh/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/International_Union_for_Conservation_of_Nature> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.466867.d> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/04tehfn33> ;
+        rdfs:label "International Union for Conservation of Nature" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(90.40744 23.7104)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Dhaka" ;
+            schema:addressCountry "BD" ;
+            schema:addressRegion "Dhaka Division" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Bangladesh" ;
+                schema:containedInPlace [
+                    schema:name "Asia" ;
+                    schema:identifier "AS"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1185241/> ;
+    ] ; 
+    .

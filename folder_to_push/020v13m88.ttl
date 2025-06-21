@@ -1,0 +1,48 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/020v13m88> a org:Organization ;
+    rdfs:label "Universidade Paulista" ;
+    schema:name "Universidade Paulista" ;
+    schema:foundingDate "1988"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-01-22"^^xsd:date ;
+    org:alternativeName "Paulista University"@en ; 
+    org:abbreviation "UNIP"@None ; 
+    schema:url <http://unip.br> ; 
+    schema:mainEntityOfPage <https://www.unip.br> ;
+    schema:sameAs <https://grid.ac/institutions/grid.412401.2> ;
+    schema:sameAs <http://isni.org/isni/0000000086457167> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00q3c5d02> ;
+        rdfs:label "Universidade Paulista Campinas" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-46.63611 -23.5475)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "São Paulo" ;
+            schema:addressCountry "BR" ;
+            schema:addressRegion "São Paulo" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Brazil" ;
+                schema:containedInPlace [
+                    schema:name "South America" ;
+                    schema:identifier "SA"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3448439/> ;
+    ] ; 
+    .

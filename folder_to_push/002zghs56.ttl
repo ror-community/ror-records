@@ -10,18 +10,18 @@
 <https://ror.org/002zghs56> a org:Organization ;
     rdfs:label "Hôpital du Saint-Sacrement" ;
     schema:name "Hôpital du Saint-Sacrement" ;
-    org:status "active" ;
+    org:status "inactive" ;
     org:classification "healthcare" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-05-30"^^xsd:date ;
+    dct:modified "2025-01-22"^^xsd:date ;
     schema:mainEntityOfPage <https://www.chudequebec.ca/centre-hospitaliers/hopital-du-saint-sacrement.aspx> ;
     schema:sameAs <https://grid.ac/institutions/grid.416673.1> ;
     schema:sameAs <http://isni.org/isni/0000000404573535> ;
     org:hasLink [
         a org:Membership ;
-        org:role "parent" ;
-        org:member <https://ror.org/006a7pj43> ;
-        rdfs:label "Centre hospitalier universitaire de Québec" ;
+        org:role "successor" ;
+        org:member <https://ror.org/05qn5kv73> ;
+        rdfs:label "CHU de Québec-Université Laval" ;
     ] ; 
     schema:location [
         a schema:Place ;
@@ -29,13 +29,13 @@
         schema:address [
             schema:addressLocality "Québec" ;
             schema:addressCountry "CA" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Quebec" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "Canada" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "North America" ;
+                    schema:identifier "NA"
                 ]
             ]
         ] ;

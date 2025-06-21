@@ -15,19 +15,13 @@
     org:classification "education" ; 
     org:classification "funder" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-10-21"^^xsd:date ;
+    dct:modified "2025-01-22"^^xsd:date ;
     org:alternativeName "Università degli Studi di Roma "La Sapienza""@it ; 
     schema:url <http://uniroma1.it> ; 
     schema:mainEntityOfPage <https://www.uniroma1.it> ;
     owl:sameAs <http://en.wikipedia.org/wiki/Sapienza_University_of_Rome> ; 
     schema:sameAs <https://api.crossref.org/funders/501100004271> ;
     schema:sameAs <https://grid.ac/institutions/grid.7841.a> ;
-    org:hasLink [
-        a org:Membership ;
-        org:role "child" ;
-        org:member <https://ror.org/05eva6s33> ;
-        rdfs:label "Istituto Nazionale di Fisica Nucleare, Sezione di Roma I" ;
-    ] ; 
     org:hasLink [
         a org:Membership ;
         org:role "related" ;
@@ -46,19 +40,25 @@
         org:member <https://ror.org/011cabk38> ;
         rdfs:label "Policlinico Umberto I" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05eva6s33> ;
+        rdfs:label "Istituto Nazionale di Fisica Nucleare, Sezione di Roma I" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(12.51133 41.89193)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Rome" ;
             schema:addressCountry "IT" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Lazio" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "Italy" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

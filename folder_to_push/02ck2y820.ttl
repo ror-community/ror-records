@@ -1,0 +1,52 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/02ck2y820> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "2006"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "facility" ; 
+    dct:created "2025-01-21"^^xsd:date ;
+    dct:modified "2025-01-22"^^xsd:date ;
+    org:abbreviation "ILFA UL"@en ; 
+    org:alternativeName "Institute of Literature, Folklore and Art"@en ; 
+    org:alternativeName "Institute of Literature, Folklore and Art of the University of Latvia"@en ; 
+    org:abbreviation "LU LFMI"@lv ; 
+    org:alternativeName "Latvijas Universitātes Literatūras, folkloras un mākslas institūts"@lv ; 
+    org:alternativeName "Literatūras, folkloras un mākslas institūts"@lv ; 
+    schema:url <http://lulfmi.lv> ; 
+    schema:mainEntityOfPage <https://lulfmi.lv/jaunumi> ;
+    owl:sameAs <https://lv.wikipedia.org/wiki/Latvijas_Universit%C4%81tes_Literat%C5%ABras,_folkloras_un_m%C4%81kslas_instit%C5%ABts> ; 
+    schema:sameAs <http://isni.org/isni/0000000123664705> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/05g3mes96> ;
+        rdfs:label "University of Latvia" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(24.10589 56.946)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Riga" ;
+            schema:addressCountry "LV" ;
+            schema:addressRegion "Riga" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Latvia" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/456172/> ;
+    ] ; 
+    .

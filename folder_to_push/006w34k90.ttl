@@ -1,0 +1,49 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/006w34k90> a org:Organization ;
+    rdfs:label "Howard Hughes Medical Institute" ;
+    schema:name "Howard Hughes Medical Institute" ;
+    schema:foundingDate "1953"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "facility" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-01-22"^^xsd:date ;
+    org:abbreviation "HHMI"@None ; 
+    schema:mainEntityOfPage <http://www.hhmi.org/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Howard_Hughes_Medical_Institute> ; 
+    schema:sameAs <https://api.crossref.org/funders/100000011> ;
+    schema:sameAs <https://grid.ac/institutions/grid.413575.1> ;
+    schema:sameAs <http://isni.org/isni/0000000121671581> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/013sk6x84> ;
+        rdfs:label "Janelia Research Campus" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-77.07115 39.00287)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Chevy Chase" ;
+            schema:addressCountry "US" ;
+            schema:addressRegion "Maryland" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "North America" ;
+                    schema:identifier "NA"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/4351335/> ;
+    ] ; 
+    .

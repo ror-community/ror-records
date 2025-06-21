@@ -14,7 +14,7 @@
     org:classification "education" ; 
     org:classification "funder" ; 
     dct:created "2023-03-16"^^xsd:date ;
-    dct:modified "2024-10-21"^^xsd:date ;
+    dct:modified "2025-01-22"^^xsd:date ;
     org:abbreviation "UCOP"@None ; 
     schema:url <http://ucop.edu> ; 
     schema:mainEntityOfPage <https://www.ucop.edu> ;
@@ -26,19 +26,25 @@
         org:member <https://ror.org/00pjdza24> ;
         rdfs:label "University of California System" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03yrm5c26> ;
+        rdfs:label "California Digital Library" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(-122.2708 37.80437)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Oakland" ;
             schema:addressCountry "US" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "California" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "United States" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "North America" ;
+                    schema:identifier "NA"
                 ]
             ]
         ] ;

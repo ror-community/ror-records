@@ -15,7 +15,7 @@
     org:classification "education" ; 
     org:classification "funder" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-12-10"^^xsd:date ;
+    dct:modified "2025-01-22"^^xsd:date ;
     schema:url <http://uc.pt> ; 
     schema:mainEntityOfPage <https://www.uc.pt> ;
     owl:sameAs <http://en.wikipedia.org/wiki/University_of_Coimbra> ; 
@@ -63,18 +63,6 @@
         org:role "child" ;
         org:member <https://ror.org/055v4a470> ;
         rdfs:label "Instituto de Estudos Filosóficos" ;
-    ] ; 
-    org:hasLink [
-        a org:Membership ;
-        org:role "related" ;
-        org:member <https://ror.org/04032fz76> ;
-        rdfs:label "Hospitais da Universidade de Coimbra" ;
-    ] ; 
-    org:hasLink [
-        a org:Membership ;
-        org:role "related" ;
-        org:member <https://ror.org/02ht4fk33> ;
-        rdfs:label "Instituto de Telecomunicações" ;
     ] ; 
     org:hasLink [
         a org:Membership ;
@@ -130,19 +118,37 @@
         org:member <https://ror.org/00p0pr527> ;
         rdfs:label "Centro de Estudos Clássicos e Humanísticos" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/04032fz76> ;
+        rdfs:label "Hospitais da Universidade de Coimbra" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02ht4fk33> ;
+        rdfs:label "Instituto de Telecomunicações" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01t5ta457> ;
+        rdfs:label "Centro de Inovação em Biomedicina e Biotecnologia" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(-8.41955 40.20564)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Coimbra" ;
             schema:addressCountry "PT" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Coimbra" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "Portugal" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

@@ -15,7 +15,7 @@
     org:classification "education" ; 
     org:classification "funder" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-10-21"^^xsd:date ;
+    dct:modified "2025-01-22"^^xsd:date ;
     org:alternativeName "Sheffield University"@en ; 
     schema:url <http://sheffield.ac.uk> ; 
     schema:mainEntityOfPage <https://www.sheffield.ac.uk> ;
@@ -77,19 +77,25 @@
         org:member <https://ror.org/042gs1a72> ;
         rdfs:label "Weston Park Cancer Centre" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/0251f2x81> ;
+        rdfs:label "White Rose University Consortium" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(-1.4659 53.38297)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Sheffield" ;
             schema:addressCountry "GB" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "England" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "United Kingdom" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

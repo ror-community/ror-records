@@ -14,7 +14,7 @@
     org:status "active" ;
     org:classification "education" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-05-30"^^xsd:date ;
+    dct:modified "2025-01-22"^^xsd:date ;
     org:abbreviation "MLU"@None ; 
     schema:mainEntityOfPage <http://www.uni-halle.de/?lang=en> ;
     owl:sameAs <http://en.wikipedia.org/wiki/Martin_Luther_University_of_Halle-Wittenberg> ; 
@@ -56,19 +56,25 @@
         org:member <https://ror.org/04bkfz588> ;
         rdfs:label "Stiftung des öffentlichen Rechts an der Martin-Luther-Universität Halle-Wittenberg" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01jty7g66> ;
+        rdfs:label "German Centre for Integrative Biodiversity Research" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(11.97947 51.48158)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Halle" ;
             schema:addressCountry "DE" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Saxony-Anhalt" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "Germany" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

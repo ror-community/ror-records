@@ -15,7 +15,7 @@
     org:classification "funder" ; 
     org:classification "government" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-12-10"^^xsd:date ;
+    dct:modified "2025-01-22"^^xsd:date ;
     org:abbreviation "CNRS"@None ; 
     schema:mainEntityOfPage <https://www.cnrs.fr> ;
     owl:sameAs <http://en.wikipedia.org/wiki/Centre_national_de_la_recherche_scientifique> ; 
@@ -2316,6 +2316,12 @@
     ] ; 
     org:hasLink [
         a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02yv0b554> ;
+        rdfs:label "Centre d’Economie Industrielle - CERNA" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
         org:role "related" ;
         org:member <https://ror.org/05yqfzf35> ;
         rdfs:label "UMR Géographie-cités" ;
@@ -2418,15 +2424,27 @@
     ] ; 
     org:hasLink [
         a org:Membership ;
-        org:role "child" ;
-        org:member <https://ror.org/02yv0b554> ;
-        rdfs:label "Centre d’Economie Industrielle - CERNA" ;
-    ] ; 
-    org:hasLink [
-        a org:Membership ;
         org:role "related" ;
         org:member <https://ror.org/033zfn006> ;
         rdfs:label "In-Service Aircraft for a Global Observing System" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02my5hx05> ;
+        rdfs:label "Technologie et Ethnologie des Mondes PréhistoriqueS" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/021f0sa24> ;
+        rdfs:label "Institut de Mathématiques de Bourgogne" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/053t9n429> ;
+        rdfs:label "Biomolécules : Conception, Isolement, Synthèse" ;
     ] ; 
     schema:location [
         a schema:Place ;
@@ -2434,13 +2452,13 @@
         schema:address [
             schema:addressLocality "Paris" ;
             schema:addressCountry "FR" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Île-de-France" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "France" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

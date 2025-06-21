@@ -14,7 +14,7 @@
     org:status "active" ;
     org:classification "education" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-10-21"^^xsd:date ;
+    dct:modified "2025-01-22"^^xsd:date ;
     org:abbreviation "UAlg"@None ; 
     schema:url <http://ualg.pt> ; 
     schema:mainEntityOfPage <https://www.ualg.pt> ;
@@ -33,19 +33,25 @@
         org:member <https://ror.org/00me37y22> ;
         rdfs:label "Centro de Ciências do Mar do Algarve" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00bfc1p59> ;
+        rdfs:label "Centro de Investigação em Artes e Comunicação" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(-7.92716 37.01869)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Faro" ;
             schema:addressCountry "PT" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Faro" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "Portugal" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

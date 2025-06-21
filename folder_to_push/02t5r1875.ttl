@@ -1,0 +1,41 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/02t5r1875> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "2001"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "government" ; 
+    dct:created "2025-01-21"^^xsd:date ;
+    dct:modified "2025-01-22"^^xsd:date ;
+    org:abbreviation "IQQO"@om ; 
+    org:abbreviation "OARI"@en ; 
+    schema:url <http://iqqo.gov.et> ; 
+    schema:mainEntityOfPage <https://www.iqqo.gov.et> ;
+    schema:sameAs <http://isni.org/isni/0000000513124974> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(38.74689 9.02497)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Addis Ababa" ;
+            schema:addressCountry "ET" ;
+            schema:addressRegion "Addis Ababa" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Ethiopia" ;
+                schema:containedInPlace [
+                    schema:name "Africa" ;
+                    schema:identifier "AF"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/344979/> ;
+    ] ; 
+    .

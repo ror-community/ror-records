@@ -15,7 +15,7 @@
     org:classification "education" ; 
     org:classification "facility" ; 
     dct:created "2024-12-09"^^xsd:date ;
-    dct:modified "2024-12-10"^^xsd:date ;
+    dct:modified "2025-01-22"^^xsd:date ;
     org:alternativeName "Higher institute for environmental engineering and management"@en ; 
     org:abbreviation "ISIGE"@fr ; 
     org:alternativeName "ISIGE-Mines Paris PSL"@fr ; 
@@ -24,19 +24,25 @@
     schema:mainEntityOfPage <https://www.isige.minesparis.psl.eu> ;
     owl:sameAs <https://fr.wikipedia.org/wiki/Institut_sup%C3%A9rieur_d%27ing%C3%A9nierie_et_de_gestion_de_l%27environnement> ; 
     schema:sameAs <http://isni.org/isni/0000000121590642> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/04y8cs423> ;
+        rdfs:label "École Nationale Supérieure des Mines de Paris" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(2.70177 48.40908)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Fontainebleau" ;
             schema:addressCountry "FR" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Île-de-France" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "France" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

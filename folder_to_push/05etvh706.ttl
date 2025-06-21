@@ -1,0 +1,40 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/05etvh706> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "2008"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2025-01-21"^^xsd:date ;
+    dct:modified "2025-01-22"^^xsd:date ;
+    org:abbreviation "KILAW"@en ; 
+    schema:url <http://kilaw.edu.kw> ; 
+    schema:mainEntityOfPage <https://kilaw.edu.kw> ;
+    schema:sameAs <http://isni.org/isni/000000046023970X> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(47.81 29.36778)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Ad Dawḩah" ;
+            schema:addressCountry "KW" ;
+            schema:addressRegion "None" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Kuwait" ;
+                schema:containedInPlace [
+                    schema:name "Asia" ;
+                    schema:identifier "AS"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/285855/> ;
+    ] ; 
+    .

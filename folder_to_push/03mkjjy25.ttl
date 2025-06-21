@@ -15,7 +15,7 @@
     org:classification "education" ; 
     org:classification "funder" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-10-31"^^xsd:date ;
+    dct:modified "2025-01-22"^^xsd:date ;
     org:abbreviation "UVSQ"@None ; 
     schema:url <http://uvsq.fr> ; 
     schema:mainEntityOfPage <https://www.uvsq.fr> ;
@@ -251,19 +251,25 @@
         org:member <https://ror.org/01x6z5t49> ;
         rdfs:label "Fédération de Recherche Spectroscopies de Photoémission" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/037y9hb39> ;
+        rdfs:label "Centre d'Investigation Clinique - Innovation Technologique de Garches" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(2.13424 48.80359)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Versailles" ;
             schema:addressCountry "FR" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Île-de-France" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "France" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

@@ -1,0 +1,48 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/004zvfq85> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    org:status "active" ;
+    org:classification "facility" ; 
+    org:classification "government" ; 
+    dct:created "2025-01-21"^^xsd:date ;
+    dct:modified "2025-01-22"^^xsd:date ;
+    org:alternativeName "EEA Pucallpa"@es ; 
+    org:abbreviation "EEAP-INIA"@es ; 
+    org:alternativeName "Estacion Experimental Agraria Pucallpa - Instituto Nacional de Innovacion Agraria"@es ; 
+    org:alternativeName "Estación Experimental Agraria Pucallpa"@es ; 
+    org:alternativeName "Instituto Nacional de Innovación Agraria EEA Pucallpa"@es ; 
+    schema:mainEntityOfPage <https://www.gob.pe/10866-instituto-nacional-de-innovacion-agraria-eea-pucallpa> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/004qcrr52> ;
+        rdfs:label "Instituto Nacional de Innovación Agraria" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-74.55387 -8.37915)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Pucallpa" ;
+            schema:addressCountry "PE" ;
+            schema:addressRegion "Ucayali" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Peru" ;
+                schema:containedInPlace [
+                    schema:name "South America" ;
+                    schema:identifier "SA"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3693345/> ;
+    ] ; 
+    .

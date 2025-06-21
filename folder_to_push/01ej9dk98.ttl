@@ -15,7 +15,7 @@
     org:classification "education" ; 
     org:classification "funder" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-05-30"^^xsd:date ;
+    dct:modified "2025-01-22"^^xsd:date ;
     org:alternativeName "Melbourne University"@en ; 
     schema:mainEntityOfPage <http://www.unimelb.edu.au/> ;
     owl:sameAs <http://en.wikipedia.org/wiki/University_of_Melbourne> ; 
@@ -184,19 +184,25 @@
         org:member <https://ror.org/01az7g189> ;
         rdfs:label "Stawell Underground Physics Laboratory" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/011wdec52> ;
+        rdfs:label "Centre of Excellence for Biosecurity Risk Analysis" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(144.96332 -37.814)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Melbourne" ;
             schema:addressCountry "AU" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Victoria" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "Australia" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Oceania" ;
+                    schema:identifier "OC"
                 ]
             ]
         ] ;

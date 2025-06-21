@@ -15,7 +15,7 @@
     org:classification "education" ; 
     org:classification "funder" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-06-20"^^xsd:date ;
+    dct:modified "2025-01-22"^^xsd:date ;
     org:alternativeName "Saragossa University"@en ; 
     org:abbreviation "UNIZAR"@None ; 
     org:alternativeName "Universidad Zaragoza"@es ; 
@@ -91,19 +91,25 @@
         org:member <https://ror.org/02tpwnr26> ;
         rdfs:label "Zaragoza Logistics Center" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01aqax545> ;
+        rdfs:label "Hospital Royo Villanova" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(-0.87734 41.65606)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Zaragoza" ;
             schema:addressCountry "ES" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Aragon" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "Spain" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

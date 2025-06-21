@@ -4,26 +4,61 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/0251f2x81> a org:Organization ;
     rdfs:label "White Rose University Consortium" ;
     schema:name "White Rose University Consortium" ;
     schema:foundingDate "1997"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Other" ; 
-    schema:url <http://www.whiterose.ac.uk/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/White_Rose_University_Consortium> ;
+    org:classification "other" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-01-22"^^xsd:date ;
+    schema:mainEntityOfPage <http://www.whiterose.ac.uk/> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/White_Rose_University_Consortium> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.434308.8> ;
+    schema:sameAs <http://isni.org/isni/0000000446709955> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0367py538> ;
+        rdfs:label "White Rose College of the Arts and Humanities" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/024mrxd33> ;
+        rdfs:label "University of Leeds" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05krs5044> ;
+        rdfs:label "University of Sheffield" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/04m01e293> ;
+        rdfs:label "University of York" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-1.08271 53.95763)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-1.08271 53.95763)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "York" ;
             schema:addressCountry "GB" ;
-            owl:sameAs <http://sws.geonames.org/2633352/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000446709955> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q7995353> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "England" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United Kingdom" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2633352/> ;
+    ] ; 
     .

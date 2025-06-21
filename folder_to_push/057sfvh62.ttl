@@ -1,0 +1,38 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/057sfvh62> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    org:status "active" ;
+    org:classification "healthcare" ; 
+    dct:created "2025-01-12"^^xsd:date ;
+    dct:modified "2025-01-22"^^xsd:date ;
+    org:alternativeName "千鳥橋病院"@ja ; 
+    schema:url <http://chidoribashi-hp.or.jp> ; 
+    schema:mainEntityOfPage <https://www.chidoribashi-hp.or.jp> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(130.41667 33.6)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Fukuoka" ;
+            schema:addressCountry "JP" ;
+            schema:addressRegion "Fukuoka" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Japan" ;
+                schema:containedInPlace [
+                    schema:name "Asia" ;
+                    schema:identifier "AS"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1863967/> ;
+    ] ; 
+    .

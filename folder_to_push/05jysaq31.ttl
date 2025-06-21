@@ -1,0 +1,40 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/05jysaq31> a org:Organization ;
+    rdfs:label "Debra" ;
+    schema:name "Debra" ;
+    schema:foundingDate "1978"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "nonprofit" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-01-22"^^xsd:date ;
+    schema:mainEntityOfPage <http://www.debra.org.uk/> ;
+    schema:sameAs <https://api.crossref.org/funders/100008081> ;
+    schema:sameAs <https://grid.ac/institutions/grid.433545.0> ;
+    schema:sameAs <http://isni.org/isni/000000010203160X> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-0.79219 51.37027)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Crowthorne" ;
+            schema:addressCountry "GB" ;
+            schema:addressRegion "England" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United Kingdom" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2651831/> ;
+    ] ; 
+    .

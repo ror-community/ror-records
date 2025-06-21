@@ -1,0 +1,54 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/04rgqcd02> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "2012"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "facility" ; 
+    org:classification "healthcare" ; 
+    dct:created "2025-01-21"^^xsd:date ;
+    dct:modified "2025-01-22"^^xsd:date ;
+    org:abbreviation "CRCHU"@fr ; 
+    org:alternativeName "Centre de recherche du CHUL"@fr ; 
+    schema:url <http://crchudequebec.ulaval.ca> ; 
+    schema:mainEntityOfPage <https://www.crchudequebec.ulaval.ca> ;
+    schema:sameAs <http://isni.org/isni/0000000516811227> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/05qn5kv73> ;
+        rdfs:label "CHU de Québec-Université Laval" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/04sjchr03> ;
+        rdfs:label "Université Laval" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-71.21454 46.81228)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Québec" ;
+            schema:addressCountry "CA" ;
+            schema:addressRegion "Quebec" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Canada" ;
+                schema:containedInPlace [
+                    schema:name "North America" ;
+                    schema:identifier "NA"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/6325494/> ;
+    ] ; 
+    .

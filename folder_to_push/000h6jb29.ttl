@@ -15,7 +15,7 @@
     org:classification "facility" ; 
     org:classification "funder" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-06-20"^^xsd:date ;
+    dct:modified "2025-01-22"^^xsd:date ;
     org:alternativeName "Helmholtz Centre for Environmental Research - UFZ"@en ; 
     org:alternativeName "Helmholtz-Zentrum für Umweltforschung - UFZ"@de ; 
     org:alternativeName "Helmholtz-Zentrum für Umweltforschung GmbH"@de ; 
@@ -33,19 +33,25 @@
         org:member <https://ror.org/0281dp749> ;
         rdfs:label "Helmholtz Association of German Research Centres" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01jty7g66> ;
+        rdfs:label "German Centre for Integrative Biodiversity Research" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(12.37129 51.33962)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Leipzig" ;
             schema:addressCountry "DE" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Saxony" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "Germany" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

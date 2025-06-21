@@ -1,0 +1,48 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/00bfc1p59> a org:Organization ;
+    rdfs:label "Centro de Investigação em Artes e Comunicação" ;
+    schema:name "Centro de Investigação em Artes e Comunicação" ;
+    schema:foundingDate "2008"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "facility" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-01-22"^^xsd:date ;
+    org:abbreviation "CIAC"@pt ; 
+    org:alternativeName "Universidade do Algarve Centro de Investigação em Artes e Comunicação"@pt ; 
+    schema:url <http://ciac.pt> ; 
+    schema:mainEntityOfPage <https://ciac.pt> ;
+    schema:sameAs <https://grid.ac/institutions/grid.466569.e> ;
+    schema:sameAs <http://isni.org/isni/0000000458956312> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/014g34x36> ;
+        rdfs:label "University of Algarve" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-7.92716 37.01869)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Faro" ;
+            schema:addressCountry "PT" ;
+            schema:addressRegion "Faro" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Portugal" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2268339/> ;
+    ] ; 
+    .
