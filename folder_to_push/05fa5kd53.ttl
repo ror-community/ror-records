@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/05fa5kd53> a org:Organization ;
+    rdfs:label "Héritage et Création dans le Texte et l'Image" ;
+    schema:name "Héritage et Création dans le Texte et l'Image" ;
+    schema:foundingDate "2008"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    org:alternativeName "Héritages et Constructions dans le Texte et l'Image" ;
+    schema:url <http://www.univ-brest.fr/hcti> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-4.48628 48.39029)"^^geo:wktLiteral ;
+            schema:addressLocality "Brest" ;
+            schema:addressCountry "FR" ;
+            owl:sameAs <http://sws.geonames.org/3030300/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q51780400> ;
+    .

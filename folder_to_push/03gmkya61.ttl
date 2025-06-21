@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/03gmkya61> a org:Organization ;
+    rdfs:label "SayFood - Food and Bioproduct Engineering" ;
+    schema:name "SayFood - Food and Bioproduct Engineering" ;
+    schema:foundingDate "2020"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    org:alternativeName "SayFood" ;
+    schema:url <https://www6.versailles-grignon.inrae.fr/umr-sayfood/UMR-SayFood> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(2.28301 48.72692)"^^geo:wktLiteral ;
+            schema:addressLocality "Massy" ;
+            schema:addressCountry "FR" ;
+            owl:sameAs <http://sws.geonames.org/2995206/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q109621296> ;
+    .

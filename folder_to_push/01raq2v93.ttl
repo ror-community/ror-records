@@ -1,0 +1,26 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/01raq2v93> a org:Organization ;
+    rdfs:label "Subsecretaría de Control y Aplicaciones Nucleares" ;
+    schema:name "Subsecretaría de Control y Aplicaciones Nucleares" ;
+    org:status "active" ;
+    org:classification "Government" ; 
+    org:abbreviation "SCAN" ;
+    org:alternativeName "Undersecretariat for Nuclear Control and Applications" ;
+    schema:url <https://www.recursosyenergia.gob.ec/subsecretaria-de-control-y-aplicaciones-nucleares-scan/> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-78.52495 -0.22985)"^^geo:wktLiteral ;
+            schema:addressLocality "Quito" ;
+            schema:addressCountry "EC" ;
+            owl:sameAs <http://sws.geonames.org/3652462/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    .

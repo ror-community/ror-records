@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/019qdtz78> a org:Organization ;
+    rdfs:label "Institut de recherche sur l'éducation" ;
+    schema:name "Institut de recherche sur l'éducation" ;
+    schema:foundingDate "2007"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    org:abbreviation "IREDU" ;
+    org:alternativeName "Institut de recherche sur l'éducation: Sociologie et Economie de l'Education" ;
+    schema:url <https://iredu.u-bourgogne.fr> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(5.01667 47.31667)"^^geo:wktLiteral ;
+            schema:addressLocality "Dijon" ;
+            schema:addressCountry "FR" ;
+            owl:sameAs <http://sws.geonames.org/3021372/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    .

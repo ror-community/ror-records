@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/002c9p632> a org:Organization ;
+    rdfs:label "Institut für Geschichtliche Landeskunde Rheinland-Pfalz e.V." ;
+    schema:name "Institut für Geschichtliche Landeskunde Rheinland-Pfalz e.V." ;
+    schema:foundingDate "1960"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Government" ; 
+    org:abbreviation "IGL" ;
+    org:alternativeName "Institut für Geschichtliche Landeskunde Rheinland-Pfalz" ;
+    schema:url <https://www.igl.uni-mainz.de> ; 
+    owl:sameAs <https://de.wikipedia.org/wiki/Institut_f%C3%BCr_Geschichtliche_Landeskunde_Rheinland-Pfalz> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(8.2791 49.98419)"^^geo:wktLiteral ;
+            schema:addressLocality "Mainz" ;
+            schema:addressCountry "DE" ;
+            owl:sameAs <http://sws.geonames.org/2874225/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000105976190> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q1664870> ;
+    .

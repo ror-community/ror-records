@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/0135fch82> a org:Organization ;
+    rdfs:label "Kitt Peak National Observatory" ;
+    schema:name "Kitt Peak National Observatory" ;
+    schema:foundingDate "1958"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    org:abbreviation "KPNO" ;
+    schema:url <https://noirlab.edu/public/programs/kitt-peak-national-observatory/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Kitt_Peak_National_Observatory> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-110.92648 32.22174)"^^geo:wktLiteral ;
+            schema:addressLocality "Tucson" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/5318313/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/000000012152854X> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q592248> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

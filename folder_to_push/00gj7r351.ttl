@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/00gj7r351> a org:Organization ;
+    rdfs:label "Laboratoire écologie, évolution, interactions des systèmes amazoniens" ;
+    schema:name "Laboratoire écologie, évolution, interactions des systèmes amazoniens" ;
+    schema:foundingDate "2011"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    org:abbreviation "LEEISA" ;
+    schema:url <https://www.leeisa.cnrs.fr> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-52.33333 4.93333)"^^geo:wktLiteral ;
+            schema:addressLocality "Cayenne" ;
+            schema:addressCountry "GF" ;
+            owl:sameAs <http://sws.geonames.org/3382160/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q51780915> ;
+    .

@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/030hj3061> a org:Organization ;
+    rdfs:label "IMT Atlantique" ;
+    schema:name "IMT Atlantique" ;
+    schema:foundingDate "2017"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:alternativeName "École Nationale Supérieure Mines-Télécom Atlantique Bretagne Pays de la Loire" ;
+    schema:url <https://www.imt-atlantique.fr/> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-4.48628 48.39029)"^^geo:wktLiteral ;
+            schema:addressLocality "Brest" ;
+            schema:addressCountry "FR" ;
+            owl:sameAs <http://sws.geonames.org/3030300/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000121096951> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q27962533> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q2460307> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q3578250> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

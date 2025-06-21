@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/04wbg2z51> a org:Organization ;
+    rdfs:label "Observatoire pour la Conservation de la Mégafaune Marine" ;
+    schema:name "Observatoire pour la Conservation de la Mégafaune Marine" ;
+    schema:foundingDate "2012"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    org:abbreviation "PELAGIS" ;
+    org:alternativeName "Systèmes d'observation pour la Conservation des Mammifères et Oiseaux Marins" ;
+    schema:url <http://www.observatoire-pelagis.cnrs.fr> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-1.15222 46.16308)"^^geo:wktLiteral ;
+            schema:addressLocality "La Rochelle" ;
+            schema:addressCountry "FR" ;
+            owl:sameAs <http://sws.geonames.org/3006787/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q51783090> ;
+    .

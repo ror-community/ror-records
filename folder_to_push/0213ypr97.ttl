@@ -1,0 +1,26 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/0213ypr97> a org:Organization ;
+    rdfs:label "Arbres et Réponses aux Contraintes Hydriques et Environnementales" ;
+    schema:name "Arbres et Réponses aux Contraintes Hydriques et Environnementales" ;
+    schema:foundingDate "2010"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    schema:url <https://www.univ-orleans.fr/fr/lblgc/equipes/arbres-et-reponses-aux-contraintes-hydriques-et-environnementales> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(1.90389 47.90289)"^^geo:wktLiteral ;
+            schema:addressLocality "Orléans" ;
+            schema:addressCountry "FR" ;
+            owl:sameAs <http://sws.geonames.org/2989317/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q51781606> ;
+    .

@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/01m800e37> a org:Organization ;
+    rdfs:label "University Grants Commission Nepal" ;
+    schema:name "University Grants Commission Nepal" ;
+    org:status "active" ;
+    org:classification "Government" ; 
+    org:abbreviation "UGC" ;
+    org:alternativeName "UGC Nepal" ;
+    schema:url <https://www.ugcnepal.edu.np> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/University_Grants_Commission_%28Nepal%29> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(85.43005 27.67298)"^^geo:wktLiteral ;
+            schema:addressLocality "Bhaktapur" ;
+            schema:addressCountry "NP" ;
+            owl:sameAs <http://sws.geonames.org/1283617/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000123422060> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q97276385> ;
+    .

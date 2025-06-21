@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/04gb9ay54> a org:Organization ;
+    rdfs:label "Hai Phong University of Management and Technology" ;
+    schema:name "Hai Phong University of Management and Technology" ;
+    schema:foundingDate "1997"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "HPU" ;
+    org:alternativeName "Hai Phong Private University" ;
+    schema:url <http://eng.hpu.edu.vn/home/index.php?language=2> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(106.68345 20.86481)"^^geo:wktLiteral ;
+            schema:addressLocality "Haiphong" ;
+            schema:addressCountry "VN" ;
+            owl:sameAs <http://sws.geonames.org/1581298/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000404986778> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q10829035> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

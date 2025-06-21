@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/0141j1w94> a org:Organization ;
+    rdfs:label "Gemini North Observatory" ;
+    schema:name "Gemini North Observatory" ;
+    schema:foundingDate "2000"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    schema:url <https://noirlab.edu/public/programs/gemini-observatory/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Gemini_Observatory> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-155.05222 19.53806)"^^geo:wktLiteral ;
+            schema:addressLocality "Hawaiian Acres" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/5855803/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000104448310> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q744667> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

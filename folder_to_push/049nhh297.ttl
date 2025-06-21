@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/049nhh297> a org:Organization ;
+    rdfs:label "Laboratoire d’Annecy de Physique des Particules" ;
+    schema:name "Laboratoire d’Annecy de Physique des Particules" ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    org:abbreviation "LAPP" ;
+    org:alternativeName "Laboratoire d'Annecy-le-Vieux de Physique des Particules" ;
+    schema:url <http://lapp.in2p3.fr/?lang=en> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Laboratoire_d'Annecy-le-Vieux_de_physique_des_particules> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(6.14393 45.91971)"^^geo:wktLiteral ;
+            schema:addressLocality "Annecy-le-Vieux" ;
+            schema:addressCountry "FR" ;
+            owl:sameAs <http://sws.geonames.org/3037540/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000122767382> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q3214403> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

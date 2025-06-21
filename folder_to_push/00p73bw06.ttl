@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/00p73bw06> a org:Organization ;
+    rdfs:label "Contrôle transcriptionnel et épigénétique de l’hématopoïèse maligne" ;
+    schema:name "Contrôle transcriptionnel et épigénétique de l’hématopoïèse maligne" ;
+    schema:foundingDate "2015"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    org:alternativeName "Hématopoïèse normale et pathologique" ;
+    schema:url <https://www.gustaveroussy.fr/fr/umr-1170> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(2.35992 48.7939)"^^geo:wktLiteral ;
+            schema:addressLocality "Villejuif" ;
+            schema:addressCountry "FR" ;
+            owl:sameAs <http://sws.geonames.org/2968705/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q51782149> ;
+    .

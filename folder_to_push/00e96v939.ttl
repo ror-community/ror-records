@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/00e96v939> a org:Organization ;
+    rdfs:label "University of Évry Val d'Essonne" ;
+    schema:name "University of Évry Val d'Essonne" ;
+    schema:foundingDate "1991"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "UEVE" ;
+    schema:url <http://www.univ-evry.fr/en/index.html> ; 
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_%C3%89vry_Val_d'Essonne> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(2.44049 48.6328)"^^geo:wktLiteral ;
+            schema:addressLocality "Évry" ;
+            schema:addressCountry "FR" ;
+            owl:sameAs <http://sws.geonames.org/3019256/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000121805818> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q1531014> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

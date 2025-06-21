@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/045nd5z39> a org:Organization ;
+    rdfs:label "UPHLS" ;
+    schema:name "UPHLS" ;
+    schema:foundingDate "2006"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Nonprofit" ; 
+    org:alternativeName "Umbrella of Organizations of People with Disabilities in the Fight against HIV and AIDS and in Health promotion" ;
+    schema:url <http://www.uphls.org> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(30.05885 -1.94995)"^^geo:wktLiteral ;
+            schema:addressLocality "Kigali" ;
+            schema:addressCountry "RW" ;
+            owl:sameAs <http://sws.geonames.org/202061/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

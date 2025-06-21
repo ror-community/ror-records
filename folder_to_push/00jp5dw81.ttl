@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/00jp5dw81> a org:Organization ;
+    rdfs:label "Radiothérapie Moléculaire et Innovation Thérapeutique" ;
+    schema:name "Radiothérapie Moléculaire et Innovation Thérapeutique" ;
+    schema:foundingDate "2011"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    org:abbreviation "RaMo-IT" ;
+    schema:url <https://www.gustaveroussy.fr/fr/umr-1030> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(2.35992 48.7939)"^^geo:wktLiteral ;
+            schema:addressLocality "Villejuif" ;
+            schema:addressCountry "FR" ;
+            owl:sameAs <http://sws.geonames.org/2968705/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q51782610> ;
+    .

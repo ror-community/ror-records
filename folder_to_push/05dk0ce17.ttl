@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/05dk0ce17> a org:Organization ;
+    rdfs:label "Washington State University" ;
+    schema:name "Washington State University" ;
+    schema:foundingDate "1890"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "WSU" ;
+    schema:url <https://wsu.edu/> ; 
+    owl:sameAs <http://en.wikipedia.org/wiki/Washington_State_University> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-117.17962 46.73127)"^^geo:wktLiteral ;
+            schema:addressLocality "Pullman" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/5807540/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000121576568> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q597236> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

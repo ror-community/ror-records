@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/019w0mc80> a org:Organization ;
+    rdfs:label "Institute for Water and Environmental Problems of the Siberian Branch of the Russian Academy of Sciences" ;
+    schema:name "Institute for Water and Environmental Problems of the Siberian Branch of the Russian Academy of Sciences" ;
+    schema:foundingDate "1987"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    org:abbreviation "IWEP" ;
+    org:alternativeName "Institute for Water and Environmental Problems" ;
+    schema:url <http://iwep.ru> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(83.76361 53.36056)"^^geo:wktLiteral ;
+            schema:addressLocality "Barnaul" ;
+            schema:addressCountry "RU" ;
+            owl:sameAs <http://sws.geonames.org/1510853/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000090787599> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q4201444> ;
+    .

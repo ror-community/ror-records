@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/00az7j379> a org:Organization ;
+    rdfs:label "Le Laboratoire des Maladies Neurodégénératives" ;
+    schema:name "Le Laboratoire des Maladies Neurodégénératives" ;
+    schema:foundingDate "2015"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    org:abbreviation "LMN" ;
+    org:alternativeName "Laboratoire de maladies neurodégénératives : mécanismes, thérapies, imagerie" ;
+    schema:url <https://jacob.cea.fr/drf/ifrancoisjacob/Pages/Departements/MIRCen/UMR9199.aspx> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(2.29275 48.79325)"^^geo:wktLiteral ;
+            schema:addressLocality "Fontenay-aux-Roses" ;
+            schema:addressCountry "FR" ;
+            owl:sameAs <http://sws.geonames.org/3017924/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q51782157> ;
+    .

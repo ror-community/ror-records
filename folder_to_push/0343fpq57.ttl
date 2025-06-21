@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/0343fpq57> a org:Organization ;
+    rdfs:label "Chimie, Structures et Propriétés de Biomatériaux et d'Agents Thérapeutiques" ;
+    schema:name "Chimie, Structures et Propriétés de Biomatériaux et d'Agents Thérapeutiques" ;
+    schema:foundingDate "2011"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    org:abbreviation "CSPBAT" ;
+    org:alternativeName "Laboratoire de Chimie, Structures, Propriétés de Biomatériaux et d'Agents Thérapeutiques" ;
+    schema:url <https://cspbat.univ-paris13.fr/11-le-cspbat/47-pr%C3%A9sentation-du-laboratoire-chimie-structures,-propri%C3%A9t%C3%A9s-de-biomat%C3%A9riaux-et-d%E2%80%99agents-th%C3%A9rapeutiques.html> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(2.34167 48.95833)"^^geo:wktLiteral ;
+            schema:addressLocality "Villetaneuse" ;
+            schema:addressCountry "FR" ;
+            owl:sameAs <http://sws.geonames.org/2968275/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q51779748> ;
+    .

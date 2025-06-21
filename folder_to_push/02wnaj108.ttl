@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/02wnaj108> a org:Organization ;
+    rdfs:label "Ufa University of Science and Technology" ;
+    schema:name "Ufa University of Science and Technology" ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "UUST" ;
+    org:alternativeName "Ufa University" ;
+    schema:url <https://uust.ru> ; 
+    owl:sameAs <https://ru.wikipedia.org/wiki/%D0%A3%D1%84%D0%B8%D0%BC%D1%81%D0%BA%D0%B8%D0%B9_%D1%83%D0%BD%D0%B8%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D1%82%D0%B5%D1%82_%D0%BD%D0%B0%D1%83%D0%BA%D0%B8_%D0%B8_%D1%82%D0%B5%D1%85%D0%BD%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D0%B9> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(55.96779 54.74306)"^^geo:wktLiteral ;
+            schema:addressLocality "Ufa" ;
+            schema:addressCountry "RU" ;
+            owl:sameAs <http://sws.geonames.org/479561/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q114712246> ;
+    .

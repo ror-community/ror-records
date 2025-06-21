@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/0449rap84> a org:Organization ;
+    rdfs:label "Laboratoire de Biologie de l'Exercice pour la Performance et la Santé" ;
+    schema:name "Laboratoire de Biologie de l'Exercice pour la Performance et la Santé" ;
+    schema:foundingDate "2019"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    org:abbreviation "LBEPS" ;
+    schema:url <https://www.univ-evry.fr/recherche/unites-de-recherche/sciences-du-vivant/laboratoire-de-biologie-de-lexercice-pour-la-performance-et-la-sante-lbeps.html> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(2.44417 48.63389)"^^geo:wktLiteral ;
+            schema:addressLocality "Évry-Courcouronnes" ;
+            schema:addressCountry "FR" ;
+            owl:sameAs <http://sws.geonames.org/6454878/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q109620334> ;
+    .

@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/05bpbnx46> a org:Organization ;
+    rdfs:label "Copenhagen University Hospital" ;
+    schema:name "Copenhagen University Hospital" ;
+    schema:foundingDate "1757"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Healthcare" ; 
+    org:abbreviation "KUH" ;
+    schema:url <https://universitetshospital.ku.dk/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Copenhagen_University_Hospital> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(12.56553 55.67594)"^^geo:wktLiteral ;
+            schema:addressLocality "Copenhagen" ;
+            schema:addressCountry "DK" ;
+            owl:sameAs <http://sws.geonames.org/2618425/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000406467373> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q5168500> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

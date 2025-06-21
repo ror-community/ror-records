@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/01xqwbk25> a org:Organization ;
+    rdfs:label "United States Securities and Exchange Commission" ;
+    schema:name "United States Securities and Exchange Commission" ;
+    schema:foundingDate "1934"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Government" ; 
+    org:abbreviation "SEC" ;
+    org:alternativeName "U.S. Securities and Exchange Commission" ;
+    schema:url <https://www.sec.gov> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/U.S._Securities_and_Exchange_Commission> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-77.03637 38.89511)"^^geo:wktLiteral ;
+            schema:addressLocality "Washington" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/4140963/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000122384963> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q953944> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

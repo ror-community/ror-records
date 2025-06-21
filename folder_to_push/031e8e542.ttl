@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/031e8e542> a org:Organization ;
+    rdfs:label "CODELCO" ;
+    schema:name "CODELCO" ;
+    org:status "active" ;
+    org:classification "Government" ; 
+    org:alternativeName "Corporación Nacional del Cobre de Chile" ;
+    schema:url <https://www.codelco.com> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Codelco> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-70.64827 -33.45694)"^^geo:wktLiteral ;
+            schema:addressLocality "Santiago" ;
+            schema:addressCountry "CL" ;
+            owl:sameAs <http://sws.geonames.org/3871336/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000107214253> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q1105695> ;
+    .
