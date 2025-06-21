@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/02p2cc606> a org:Organization ;
+    rdfs:label "Hospital Infanta Margarita" ;
+    schema:name "Hospital Infanta Margarita" ;
+    schema:foundingDate "1982"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Healthcare" ; 
+    org:abbreviation "." ;
+    org:alternativeName "Infanta Margarita Hospital" ;
+    schema:url <https://agssc.es/hospital-infanta-margarita/> ; 
+    owl:sameAs <https://es.wikipedia.org/wiki/Hospital_Infanta_Margarita> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-4.44206 37.47249)"^^geo:wktLiteral ;
+            schema:addressLocality "Cabra" ;
+            schema:addressCountry "ES" ;
+            owl:sameAs <http://sws.geonames.org/2520645/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000417711060> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q5902701> ;
+    .

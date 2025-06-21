@@ -1,0 +1,26 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/047sq9m91> a org:Organization ;
+    rdfs:label "Improved Pharma (United States)" ;
+    schema:name "Improved Pharma (United States)" ;
+    schema:foundingDate "2006"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Company" ; 
+    org:alternativeName "Improved Pharma" ;
+    schema:url <https://improvedpharma.com> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-86.90807 40.42587)"^^geo:wktLiteral ;
+            schema:addressLocality "West Lafayette" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/4928096/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    .

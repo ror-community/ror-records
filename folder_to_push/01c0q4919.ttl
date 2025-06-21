@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/01c0q4919> a org:Organization ;
+    rdfs:label "Ministerio de Educación" ;
+    schema:name "Ministerio de Educación" ;
+    schema:foundingDate "1946"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Government" ; 
+    org:alternativeName "Ministerio de Educación de la República Argentina" ;
+    schema:url <https://www.argentina.gob.ar/educacion> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-58.37723 -34.61315)"^^geo:wktLiteral ;
+            schema:addressLocality "Buenos Aires" ;
+            schema:addressCountry "AR" ;
+            owl:sameAs <http://sws.geonames.org/3435910/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000107281288> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q6017262> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

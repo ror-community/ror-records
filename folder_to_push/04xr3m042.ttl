@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/04xr3m042> a org:Organization ;
+    rdfs:label "Katherine Johnson Independent Verification and Validation Facility" ;
+    schema:name "Katherine Johnson Independent Verification and Validation Facility" ;
+    schema:foundingDate "1993"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    org:abbreviation "IV&V" ;
+    org:alternativeName "Katherine Johnson IV&V Facility" ;
+    schema:url <https://www.nasa.gov/centers/ivv/home/index.html> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Katherine_Johnson_Independent_Verification_and_Validation_Facility> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-80.14258 39.48508)"^^geo:wktLiteral ;
+            schema:addressLocality "Fairmont" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/4805404/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q618444> ;
+    .

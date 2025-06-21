@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/04tpkqz22> a org:Organization ;
+    rdfs:label "Centro Científico Tecnológico Salta - Jujuy" ;
+    schema:name "Centro Científico Tecnológico Salta - Jujuy" ;
+    schema:foundingDate "2010"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    org:abbreviation "CONICET SALTA-JUJUY" ;
+    org:alternativeName "Centro Científico Tecnológico del Consejo Nacional de Investigaciones Científicas y Técnicas" ;
+    schema:url <https://salta.conicet.gov.ar/> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-65.41166 -24.7859)"^^geo:wktLiteral ;
+            schema:addressLocality "Salta" ;
+            schema:addressCountry "AR" ;
+            owl:sameAs <http://sws.geonames.org/3838233/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000459133430> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

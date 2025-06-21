@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/011xg1225> a org:Organization ;
+    rdfs:label "Montpellier Interdisciplinary center on Sustainable Agri-food systems: social and nutritional sciences" ;
+    schema:name "Montpellier Interdisciplinary center on Sustainable Agri-food systems: social and nutritional sciences" ;
+    schema:foundingDate "2001"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    org:abbreviation "MOISA" ;
+    org:alternativeName "Marchés, Organisations, Institutions et Stratégies d'Acteurs" ;
+    schema:url <http://umr-moisa.cirad.fr/> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(3.87635 43.61093)"^^geo:wktLiteral ;
+            schema:addressLocality "Montpellier" ;
+            schema:addressCountry "FR" ;
+            owl:sameAs <http://sws.geonames.org/2992166/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000122431571> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q30261418> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

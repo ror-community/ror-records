@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/05b1rsv17> a org:Organization ;
+    rdfs:label "Universidad Católica San Antonio de Murcia" ;
+    schema:name "Universidad Católica San Antonio de Murcia" ;
+    schema:foundingDate "1996"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "UCAM" ;
+    schema:url <http://international.ucam.edu/> ; 
+    owl:sameAs <https://es.wikipedia.org/wiki/Universidad_Cat%C3%B3lica_San_Antonio_de_Murcia> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-1.13004 37.98704)"^^geo:wktLiteral ;
+            schema:addressLocality "Murcia" ;
+            schema:addressCountry "ES" ;
+            owl:sameAs <http://sws.geonames.org/2513416/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000122883068> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q2422685> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

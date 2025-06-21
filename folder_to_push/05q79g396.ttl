@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/05q79g396> a org:Organization ;
+    rdfs:label "Infrared Processing and Analysis Center" ;
+    schema:name "Infrared Processing and Analysis Center" ;
+    schema:foundingDate "1986"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    org:abbreviation "IPAC" ;
+    schema:url <https://www.ipac.caltech.edu/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Infrared_Processing_and_Analysis_Center> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-118.14452 34.14778)"^^geo:wktLiteral ;
+            schema:addressLocality "Pasadena" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/5381396/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000405263010> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q8343709> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

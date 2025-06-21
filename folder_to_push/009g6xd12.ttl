@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/009g6xd12> a org:Organization ;
+    rdfs:label "Taichung Municipal Taichung First Senior High School" ;
+    schema:name "Taichung Municipal Taichung First Senior High School" ;
+    schema:foundingDate "1915"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:alternativeName "Taichung Municipal First Senior High School" ;
+    schema:url <http://www.tcfsh.tc.edu.tw> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Taichung_Municipal_Taichung_First_Senior_High_School> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(120.66145 24.15926)"^^geo:wktLiteral ;
+            schema:addressLocality "Taichung" ;
+            schema:addressCountry "TW" ;
+            owl:sameAs <http://sws.geonames.org/1668392/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q6978817> ;
+    .

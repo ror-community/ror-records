@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/00wks2x74> a org:Organization ;
+    rdfs:label "Indiana Space Grant Consortium" ;
+    schema:name "Indiana Space Grant Consortium" ;
+    org:status "active" ;
+    org:classification "Other" ; 
+    org:abbreviation "INSGC" ;
+    schema:url <http://www.insgc.org> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Indiana_Space_Grant_Consortium> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-86.87529 40.4167)"^^geo:wktLiteral ;
+            schema:addressLocality "Lafayette" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/4922462/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000459038505> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

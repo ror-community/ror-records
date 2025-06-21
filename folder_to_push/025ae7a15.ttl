@@ -1,0 +1,26 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/025ae7a15> a org:Organization ;
+    rdfs:label "Instituto de Estudios Sociales" ;
+    schema:name "Instituto de Estudios Sociales" ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    org:abbreviation "INES" ;
+    org:alternativeName "Institute of Social Studies" ;
+    schema:url <https://ines.conicet.gov.ar> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-60.52897 -31.73271)"^^geo:wktLiteral ;
+            schema:addressLocality "Paraná" ;
+            schema:addressCountry "AR" ;
+            owl:sameAs <http://sws.geonames.org/3841956/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    .
