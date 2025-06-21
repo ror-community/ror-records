@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/02mpjaz73> a org:Organization ;
+    rdfs:label "Public University "Kadri Zeka"" ;
+    schema:name "Public University "Kadri Zeka"" ;
+    schema:foundingDate "2013"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "UKZ" ;
+    schema:url <https://www.uni-gjilan.net> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Public_University_%22Kadri_Zeka%22> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(21.46716 42.46078)"^^geo:wktLiteral ;
+            schema:addressLocality "Gjilan" ;
+            schema:addressCountry "XK" ;
+            owl:sameAs <http://sws.geonames.org/10097357/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    .

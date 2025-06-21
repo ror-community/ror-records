@@ -1,0 +1,25 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/01npa3a43> a org:Organization ;
+    rdfs:label "National Metrology Institute of Ethiopia" ;
+    schema:name "National Metrology Institute of Ethiopia" ;
+    org:status "active" ;
+    org:classification "Government" ; 
+    org:abbreviation "NMIE" ;
+    schema:url <http://www.nmie.gov.et> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(38.74689 9.02497)"^^geo:wktLiteral ;
+            schema:addressLocality "Addis Ababa" ;
+            schema:addressCountry "ET" ;
+            owl:sameAs <http://sws.geonames.org/344979/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    .

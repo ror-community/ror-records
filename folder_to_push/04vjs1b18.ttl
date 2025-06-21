@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/04vjs1b18> a org:Organization ;
+    rdfs:label "Houghton University" ;
+    schema:name "Houghton University" ;
+    schema:foundingDate "1883"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:alternativeName "Houghton College" ;
+    schema:url <https://www.houghton.edu/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Houghton_College> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-78.15723 42.4234)"^^geo:wktLiteral ;
+            schema:addressLocality "Houghton" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/5121382/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000102224057> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q4500472> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

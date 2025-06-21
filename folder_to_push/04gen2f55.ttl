@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/04gen2f55> a org:Organization ;
+    rdfs:label "Colegio Nacional de Monserrat" ;
+    schema:name "Colegio Nacional de Monserrat" ;
+    schema:foundingDate "1687"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    schema:url <https://monserrat.unc.edu.ar> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Colegio_Nacional_de_Monserrat> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-64.18105 -31.4135)"^^geo:wktLiteral ;
+            schema:addressLocality "Córdoba" ;
+            schema:addressCountry "AR" ;
+            owl:sameAs <http://sws.geonames.org/3860259/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q5142862> ;
+    .
