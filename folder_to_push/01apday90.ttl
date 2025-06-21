@@ -1,0 +1,47 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/01apday90> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "1950"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "company" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-08-21"^^xsd:date ;
+    org:alternativeName "Nippon Steel and Sumitomo Metal (Germany)"@None ; 
+    org:alternativeName "Shinnittetsu Sumikin Kabushiki-gaisha"@None ; 
+    schema:mainEntityOfPage <https://www.nipponsteel.com/en/company/offices/europe/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Nippon_Steel_%26_Sumitomo_Metal> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.481760.c> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/016vzmc05> ;
+        rdfs:label "Nippon Steel (Japan)" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(6.77616 51.22172)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Düsseldorf" ;
+            schema:addressCountry "DE" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Germany" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2934246/> ;
+    ] ; 
+    .

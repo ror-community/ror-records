@@ -1,0 +1,40 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/047pw0q71> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    org:status "active" ;
+    org:classification "company" ; 
+    dct:created "2024-08-19"^^xsd:date ;
+    dct:modified "2024-08-21"^^xsd:date ;
+    org:abbreviation "SDI"@None ; 
+    org:alternativeName "Steel Dynamics Inc"@en ; 
+    schema:url <http://steeldynamics.com> ; 
+    schema:mainEntityOfPage <https://www.steeldynamics.com> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Steel_Dynamics> ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-85.12886 41.1306)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Fort Wayne" ;
+            schema:addressCountry "US" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/4920423/> ;
+    ] ; 
+    .

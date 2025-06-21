@@ -1,0 +1,42 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/05d37ka75> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "1986"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "nonprofit" ; 
+    dct:created "2024-08-19"^^xsd:date ;
+    dct:modified "2024-08-21"^^xsd:date ;
+    org:alternativeName "Free Institute for Building Research and Documentation"@en ; 
+    org:alternativeName "Free Institute for Building Research and Documentation e.V."@en ; 
+    org:alternativeName "Freies Institut für Bauforschung und Dokumentation"@de ; 
+    org:abbreviation "IBD"@de ; 
+    schema:url <http://ibd-marburg.de> ; 
+    schema:mainEntityOfPage <http://ibd-marburg.de> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(8.77069 50.80904)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Marburg" ;
+            schema:addressCountry "DE" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Germany" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2873759/> ;
+    ] ; 
+    .

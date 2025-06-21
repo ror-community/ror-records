@@ -15,7 +15,7 @@
     org:classification "education" ; 
     org:classification "funder" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-06-20"^^xsd:date ;
+    dct:modified "2024-08-21"^^xsd:date ;
     org:abbreviation "CSU"@None ; 
     org:alternativeName "Colorado Agricultural College"@en ; 
     org:alternativeName "Colorado State College of Agriculture and Mechanic Arts"@en ; 
@@ -50,6 +50,12 @@
     ] ; 
     org:hasLink [
         a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01me7wg25> ;
+        rdfs:label "Center for Risk-Based Community Resilience Planning" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
         org:role "parent" ;
         org:member <https://ror.org/03xj0x983> ;
         rdfs:label "Colorado State University System" ;
@@ -68,9 +74,9 @@
     ] ; 
     org:hasLink [
         a org:Membership ;
-        org:role "child" ;
-        org:member <https://ror.org/01me7wg25> ;
-        rdfs:label "Center for Risk-Based Community Resilience Planning" ;
+        org:role "related" ;
+        org:member <https://ror.org/019q0z051> ;
+        rdfs:label "Rocky Mountain Advanced Computing Consortium" ;
     ] ; 
     schema:location [
         a schema:Place ;

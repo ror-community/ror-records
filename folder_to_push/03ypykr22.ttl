@@ -1,0 +1,41 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/03ypykr22> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "1942"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-08-21"^^xsd:date ;
+    schema:url <http://ort.edu.uy> ; 
+    schema:mainEntityOfPage <https://www.ort.edu.uy/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Universidad_ORT_Uruguay> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.442045.3> ;
+    schema:sameAs <http://isni.org/isni/0000000080322974> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-56.18816 -34.90328)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Montevideo" ;
+            schema:addressCountry "UY" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Uruguay" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3441575/> ;
+    ] ; 
+    .

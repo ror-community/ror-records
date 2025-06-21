@@ -4,28 +4,47 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/0451s5g67> a org:Organization ;
     rdfs:label "Colorado Mesa University" ;
     schema:name "Colorado Mesa University" ;
     schema:foundingDate "1925"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "CMU" ;
-    org:alternativeName "Mesa State College" ;
-    schema:url <http://www.coloradomesa.edu/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Colorado_Mesa_University> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-08-21"^^xsd:date ;
+    org:abbreviation "CMU"@None ; 
+    org:alternativeName "Mesa State College"@en ; 
+    schema:mainEntityOfPage <http://www.coloradomesa.edu/> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Colorado_Mesa_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/100015706> ;
+    schema:sameAs <https://grid.ac/institutions/grid.419760.d> ;
+    schema:sameAs <http://isni.org/isni/0000000085441139> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/019q0z051> ;
+        rdfs:label "Rocky Mountain Advanced Computing Consortium" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-108.55065 39.06387)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-108.55065 39.06387)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Grand Junction" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/5423573/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000085441139> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1507218> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/5423573/> ;
+    ] ; 
     .

@@ -1,0 +1,40 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/01qz28660> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "1998"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2024-08-19"^^xsd:date ;
+    dct:modified "2024-08-21"^^xsd:date ;
+    org:alternativeName "Alfa International College"@en ; 
+    schema:url <http://alfa.edu.my> ; 
+    schema:mainEntityOfPage <https://alfa.edu.my> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/ALFA_University_College> ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(101.58062 3.04384)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Subang Jaya" ;
+            schema:addressCountry "MY" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Malaysia" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/8504423/> ;
+    ] ; 
+    .

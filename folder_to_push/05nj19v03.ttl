@@ -1,0 +1,40 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/05nj19v03> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    org:status "active" ;
+    org:classification "nonprofit" ; 
+    dct:created "2024-08-19"^^xsd:date ;
+    dct:modified "2024-08-21"^^xsd:date ;
+    org:abbreviation "CASAS"@en ; 
+    org:alternativeName "CASAS Global"@en ; 
+    org:alternativeName "Center for the Analysis of Sustainable Agricultural Systems Global"@en ; 
+    schema:url <http://casasglobal.org> ; 
+    schema:mainEntityOfPage <https://www.casasglobal.org> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-122.28025 37.91048)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Kensington" ;
+            schema:addressCountry "US" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/5362849/> ;
+    ] ; 
+    .

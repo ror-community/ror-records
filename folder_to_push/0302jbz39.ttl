@@ -4,22 +4,40 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/0302jbz39> a org:Organization ;
     rdfs:label "Instituto Tecnológico de Boca del Río" ;
     schema:name "Instituto Tecnológico de Boca del Río" ;
     org:status "active" ;
-    org:classification "Education" ; 
-    schema:url <https://bdelrio.tecnm.mx> ; 
+    org:classification "education" ; 
+    dct:created "2023-01-26"^^xsd:date ;
+    dct:modified "2024-08-21"^^xsd:date ;
+    schema:mainEntityOfPage <https://bdelrio.tecnm.mx> ;
+    schema:sameAs <http://isni.org/isni/0000000403696787> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/00davry38> ;
+        rdfs:label "Tecnológico Nacional de México" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-96.10405 19.10464)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-96.10405 19.10464)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Boca del Rio" ;
             schema:addressCountry "MX" ;
-            owl:sameAs <http://sws.geonames.org/3532193/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000403696787> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Mexico" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3532193/> ;
+    ] ; 
     .

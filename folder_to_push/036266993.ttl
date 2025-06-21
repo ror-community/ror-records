@@ -4,28 +4,60 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/036266993> a org:Organization ;
     rdfs:label "National Renewable Energy Laboratory" ;
     schema:name "National Renewable Energy Laboratory" ;
     schema:foundingDate "1974"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "NREL" ;
-    org:alternativeName "United States Department of Energy Office of Energy Efficiency and Renewable Energy National Renewable Energy Laboratory" ;
-    schema:url <http://www.nrel.gov/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/National_Renewable_Energy_Laboratory> ;
+    org:classification "facility" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-08-21"^^xsd:date ;
+    org:abbreviation "NREL"@None ; 
+    org:alternativeName "Office of Energy Efficiency and Renewable Energy National Renewable Energy Laboratory"@en ; 
+    org:alternativeName "United States Department of Energy Office of Energy Efficiency and Renewable Energy National Renewable Energy Laboratory"@en ; 
+    schema:mainEntityOfPage <http://www.nrel.gov/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/National_Renewable_Energy_Laboratory> ; 
+    schema:sameAs <https://api.crossref.org/funders/100006233> ;
+    schema:sameAs <https://grid.ac/institutions/grid.419357.d> ;
+    schema:sameAs <http://isni.org/isni/0000000121993636> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02xznz413> ;
+        rdfs:label "Office of Energy Efficiency and Renewable Energy" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01dvj3d25> ;
+        rdfs:label "Atmospheric Radiation Measurement User Facility" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/019q0z051> ;
+        rdfs:label "Rocky Mountain Advanced Computing Consortium" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-105.2211 39.75554)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-105.2211 39.75554)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Golden" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/5423294/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000121993636> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1856153> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/5423294/> ;
+    ] ; 
     .

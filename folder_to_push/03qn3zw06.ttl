@@ -1,0 +1,57 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/03qn3zw06> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "2013"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2024-08-19"^^xsd:date ;
+    dct:modified "2024-08-21"^^xsd:date ;
+    org:alternativeName "LUC Ghana"@en ; 
+    org:abbreviation "LUCG"@en ; 
+    org:alternativeName "Lakeside University College"@en ; 
+    org:abbreviation "MIST"@en ; 
+    org:alternativeName "Madina Institute of Science and Technology"@en ; 
+    schema:url <http://lucg.edu.gh> ; 
+    schema:mainEntityOfPage <https://lucg.edu.gh> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Lakeside_University_College> ; 
+    schema:sameAs <http://isni.org/isni/0000000474173879> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00cb23x68> ;
+        rdfs:label "Kwame Nkrumah University of Science and Technology" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/052nhnq73> ;
+        rdfs:label "University for Development Studies" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-0.1969 5.55602)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Accra" ;
+            schema:addressCountry "GH" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Ghana" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2306104/> ;
+    ] ; 
+    .

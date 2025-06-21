@@ -1,0 +1,118 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/05jt6pc28> a org:Organization ;
+    rdfs:label "Somerset Partnership NHS Foundation Trust" ;
+    schema:name "Somerset Partnership NHS Foundation Trust" ;
+    schema:foundingDate "2008"^^xsd:gYear ;
+    org:status "inactive" ;
+    org:classification "nonprofit" ; 
+    dct:created "2019-02-17"^^xsd:date ;
+    dct:modified "2024-08-21"^^xsd:date ;
+    schema:mainEntityOfPage <http://www.sompar.nhs.uk> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Somerset_Partnership_NHS_Foundation_Trust> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.500936.9> ;
+    schema:sameAs <http://isni.org/isni/0000000086214130> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02r609884> ;
+        rdfs:label "Bridgwater Community Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04bg06z22> ;
+        rdfs:label "Burnham On Sea War Memorial Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01z3j1770> ;
+        rdfs:label "Crewkerne Community Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02x2vzy16> ;
+        rdfs:label "Dene Barton Community Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04e3sqx89> ;
+        rdfs:label "Frome Community Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0333vk137> ;
+        rdfs:label "Minehead Community Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02xyv8p74> ;
+        rdfs:label "Shepton Mallet Community Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00jz07n34> ;
+        rdfs:label "South Petherton Community Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03p8zav06> ;
+        rdfs:label "Wellington Community Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05v5aya38> ;
+        rdfs:label "West Mendip Community Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05cwhxn91> ;
+        rdfs:label "Williton Community Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02dr9m704> ;
+        rdfs:label "Wincanton Community Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "successor" ;
+        org:member <https://ror.org/00abj3t43> ;
+        rdfs:label "Somerset NHS Foundation Trust" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-3.00356 51.12837)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Bridgwater" ;
+            schema:addressCountry "GB" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United Kingdom" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2654730/> ;
+    ] ; 
+    .

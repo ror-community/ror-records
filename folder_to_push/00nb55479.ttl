@@ -1,0 +1,41 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/00nb55479> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "2008"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2024-08-19"^^xsd:date ;
+    dct:modified "2024-08-21"^^xsd:date ;
+    org:abbreviation "UTEM"@es ; 
+    schema:url <http://utem.edu.mx> ; 
+    schema:mainEntityOfPage <https://utem.edu.mx> ;
+    owl:sameAs <https://es.wikipedia.org/wiki/Universidad_Tecnol%C3%B3gica_de_Manzanillo> ; 
+    schema:sameAs <http://isni.org/isni/0000000405133435> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-104.31351 19.10856)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Manzanillo" ;
+            schema:addressCountry "MX" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Mexico" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/8581706/> ;
+    ] ; 
+    .

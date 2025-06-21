@@ -1,0 +1,41 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/057a3cc32> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "1988"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "nonprofit" ; 
+    dct:created "2024-08-19"^^xsd:date ;
+    dct:modified "2024-08-21"^^xsd:date ;
+    org:abbreviation "ALCS"@fr ; 
+    org:alternativeName "Association de lutte contre le sida"@fr ; 
+    schema:url <http://alcs.ma> ; 
+    schema:mainEntityOfPage <https://alcs.ma> ;
+    owl:sameAs <https://fr.wikipedia.org/wiki/Association_de_lutte_contre_le_sida> ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-7.61138 33.58831)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Casablanca" ;
+            schema:addressCountry "MA" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Morocco" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2553604/> ;
+    ] ; 
+    .

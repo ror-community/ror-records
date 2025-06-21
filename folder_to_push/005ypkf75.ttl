@@ -4,26 +4,99 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/005ypkf75> a org:Organization ;
     rdfs:label "University of Reunion Island" ;
     schema:name "University of Reunion Island" ;
     schema:foundingDate "1982"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    schema:url <http://www.univ-reunion.fr/university-of-reunion-island/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/University_of_La_R%C3%A9union> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-08-21"^^xsd:date ;
+    schema:mainEntityOfPage <http://www.univ-reunion.fr/university-of-reunion-island/> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_La_R%C3%A9union> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100010465> ;
+    schema:sameAs <https://grid.ac/institutions/grid.11642.30> ;
+    schema:sameAs <http://isni.org/isni/0000000121112608> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/048cbmc89> ;
+        rdfs:label "Biologie Intégrée du Globule Rouge" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03wsemq03> ;
+        rdfs:label "Laboratoire de l'Atmosphère et des Cyclones" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05mv3tj33> ;
+        rdfs:label "Observatoire des Sciences de l'Univers de la Réunion" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03mj14b52> ;
+        rdfs:label "Peuplements végétaux et bioagresseurs en milieu tropical" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05fnxds15> ;
+        rdfs:label "Processus Infectieux en Milieu Insulaire Tropical" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05kxt4539> ;
+        rdfs:label "Écologie Marine Tropicale des Océans Pacifique et Indien" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01nfvkq89> ;
+        rdfs:label "UMR QualiSud" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02z3f5j48> ;
+        rdfs:label "Diabète athérothrombose et thérapies Réunion Océan Indien" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01z485314> ;
+        rdfs:label "UMR Espace-Dev" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01qwvz642> ;
+        rdfs:label "Centre d'Étude et de Découverte des Tortues Marines" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(55.4504 -20.88231)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(55.4504 -20.88231)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Saint-Denis" ;
             schema:addressCountry "RE" ;
-            owl:sameAs <http://sws.geonames.org/935264/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000121112608> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q834819> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Réunion" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/935264/> ;
+    ] ; 
     .

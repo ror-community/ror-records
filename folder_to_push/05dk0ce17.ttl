@@ -4,27 +4,88 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/05dk0ce17> a org:Organization ;
     rdfs:label "Washington State University" ;
     schema:name "Washington State University" ;
     schema:foundingDate "1890"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "WSU" ;
-    schema:url <https://wsu.edu/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Washington_State_University> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-08-21"^^xsd:date ;
+    org:abbreviation "WSU"@None ; 
+    schema:mainEntityOfPage <https://wsu.edu/> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Washington_State_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/100007588> ;
+    schema:sameAs <https://grid.ac/institutions/grid.30064.31> ;
+    schema:sameAs <http://isni.org/isni/0000000121576568> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04vfs5h36> ;
+        rdfs:label "Washington State University Spokane" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02sjef319> ;
+        rdfs:label "Washington State University Tri-Cities" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00g2fk805> ;
+        rdfs:label "Washington State University Vancouver" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03wpv8896> ;
+        rdfs:label "Bioproducts Institute" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/039fx6g98> ;
+        rdfs:label "Nuclear Science and Technology Institute" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/014vdsh37> ;
+        rdfs:label "Advanced Grid Institute" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/04n07f274> ;
+        rdfs:label "Materials Science in Extreme Environments University Research Alliance" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/019q0z051> ;
+        rdfs:label "Rocky Mountain Advanced Computing Consortium" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-117.17962 46.73127)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-117.17962 46.73127)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Pullman" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/5807540/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000121576568> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q597236> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/5807540/> ;
+    ] ; 
     .

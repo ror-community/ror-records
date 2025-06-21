@@ -4,24 +4,44 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01qwmf693> a org:Organization ;
     rdfs:label "Harris (United States)" ;
     schema:name "Harris (United States)" ;
-    org:status "inactive" ;
-    org:classification "Company" ; 
-    org:alternativeName "Harris" ;
-    owl:sameAs <https://en.wikipedia.org/wiki/Harris_Corporation> ;
+    org:status "withdrawn" ;
+    org:classification "company" ; 
+    org:classification "funder" ; 
+    dct:created "2023-11-08"^^xsd:date ;
+    dct:modified "2024-08-21"^^xsd:date ;
+    org:alternativeName "Harris"@None ; 
+    org:alternativeName "Harris Corporation"@None ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Harris_Corporation> ; 
+    schema:sameAs <https://api.crossref.org/funders/100016279> ;
+    schema:sameAs <http://isni.org/isni/0000000092891250> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "successor" ;
+        org:member <https://ror.org/05fhwtx59> ;
+        rdfs:label "L3Harris (United States)" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-80.60811 28.08363)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-80.60811 28.08363)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Melbourne" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/4163971/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000092891250> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1433308> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/4163971/> ;
+    ] ; 
     .

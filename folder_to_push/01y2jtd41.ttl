@@ -4,30 +4,71 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01y2jtd41> a org:Organization ;
     rdfs:label "University of Wisconsin–Madison" ;
     schema:name "University of Wisconsin–Madison" ;
     schema:foundingDate "1848"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "UW" ;
-    org:alternativeName "UW–Madison" ;
-    schema:url <http://www.wisc.edu/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Wisconsin%E2%80%93Madison> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-08-21"^^xsd:date ;
+    org:abbreviation "UW"@None ; 
+    org:alternativeName "UW–Madison"@en ; 
+    schema:mainEntityOfPage <http://www.wisc.edu/> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Wisconsin%E2%80%93Madison> ; 
+    schema:sameAs <https://api.crossref.org/funders/100007015> ;
+    schema:sameAs <https://grid.ac/institutions/grid.14003.36> ;
+    schema:sameAs <http://isni.org/isni/0000000121673675> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05cb4rb43> ;
+        rdfs:label "Morgridge Institute for Research" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04gq8q482> ;
+        rdfs:label "North Temperate Lakes Long Term Ecological Research" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/03ydkyb10> ;
+        rdfs:label "University of Wisconsin System" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03b8vas82> ;
+        rdfs:label "National Atmospheric Deposition Program" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/04r3s7465> ;
+        rdfs:label "McMurdo Dry Valleys Long Term Ecological Research" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-89.40123 43.07305)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-89.40123 43.07305)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Madison" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/5261457/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000121673675> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q838330> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q33122195> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q7662222> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/5261457/> ;
+    ] ; 
     .

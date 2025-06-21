@@ -1,0 +1,42 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/000sg7415> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2024-08-19"^^xsd:date ;
+    dct:modified "2024-08-21"^^xsd:date ;
+    org:abbreviation "CUSUR"@es ; 
+    org:abbreviation "UDG CUSUR"@es ; 
+    org:alternativeName "Universidad de Guadalajara Centro Universitario del Sur"@es ; 
+    schema:url <http://cusur.udg.mx> ; 
+    schema:mainEntityOfPage <http://www.cusur.udg.mx> ;
+    owl:sameAs <https://es.wikipedia.org/wiki/Centro_Universitario_del_Sur> ; 
+    schema:sameAs <http://isni.org/isni/0000000092167684> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-103.4617 19.70466)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Ciudad Guzmán" ;
+            schema:addressCountry "MX" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Mexico" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/4013714/> ;
+    ] ; 
+    .

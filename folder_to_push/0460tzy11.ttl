@@ -4,27 +4,45 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/0460tzy11> a org:Organization ;
     rdfs:label "Instituto Tecnológico de La Paz" ;
     schema:name "Instituto Tecnológico de La Paz" ;
     schema:foundingDate "1973"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "ITLP" ;
-    org:alternativeName "TecNM - Instituto Tecnológico de La Paz" ;
-    schema:url <http://www.lapaz.tecnm.mx> ; 
-    owl:sameAs <https://es.wikipedia.org/wiki/Instituto_Tecnol%C3%B3gico_de_La_Paz> ;
+    org:classification "education" ; 
+    dct:created "2023-07-06"^^xsd:date ;
+    dct:modified "2024-08-21"^^xsd:date ;
+    org:abbreviation "ITLP"@None ; 
+    org:alternativeName "TecNM - Instituto Tecnológico de La Paz"@es ; 
+    org:alternativeName "Tecnológico Nacional de México - Instituto Tecnológico de La Paz"@es ; 
+    schema:mainEntityOfPage <http://www.lapaz.tecnm.mx> ;
+    owl:sameAs <https://es.wikipedia.org/wiki/Instituto_Tecnol%C3%B3gico_de_La_Paz> ; 
+    schema:sameAs <http://isni.org/isni/0000000403694917> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/00davry38> ;
+        rdfs:label "Tecnológico Nacional de México" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-110.31316 24.14231)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-110.31316 24.14231)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "La Paz" ;
             schema:addressCountry "MX" ;
-            owl:sameAs <http://sws.geonames.org/4000900/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000403694917> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q5917848> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Mexico" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/4000900/> ;
+    ] ; 
     .

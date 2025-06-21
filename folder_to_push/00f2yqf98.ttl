@@ -4,28 +4,65 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/00f2yqf98> a org:Organization ;
     rdfs:label "Medizinische Hochschule Hannover" ;
     schema:name "Medizinische Hochschule Hannover" ;
     schema:foundingDate "1961"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "MHH" ;
-    org:alternativeName "Med. HS Hannover" ;
-    schema:url <https://www.mhh.de> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Hannover_Medical_School> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-08-21"^^xsd:date ;
+    org:abbreviation "MHH"@None ; 
+    org:alternativeName "Med. HS Hannover"@de ; 
+    schema:mainEntityOfPage <https://www.mhh.de> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Hannover_Medical_School> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100005624> ;
+    schema:sameAs <https://grid.ac/institutions/grid.10423.34> ;
+    schema:sameAs <http://isni.org/isni/0000000095299877> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04s99xz91> ;
+        rdfs:label "Centre for Individualised Infection Medicine" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04fhwda97> ;
+        rdfs:label "Centre for Structural Systems Biology" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00tq6rn55> ;
+        rdfs:label "KRH Klinikum Nordstadt" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/04n901n71> ;
+        rdfs:label "CAIMed - Niedersächsisches Zentrum für KI und Kausale Methoden in der Medizin" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(9.73322 52.37052)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(9.73322 52.37052)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Hanover" ;
             schema:addressCountry "DE" ;
-            owl:sameAs <http://sws.geonames.org/2910831/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000095299877> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q911561> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Germany" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2910831/> ;
+    ] ; 
     .

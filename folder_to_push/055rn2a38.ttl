@@ -4,26 +4,55 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/055rn2a38> a org:Organization ;
     rdfs:label "Mercedes-Benz (Germany)" ;
     schema:name "Mercedes-Benz (Germany)" ;
     schema:foundingDate "1926"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Company" ; 
-    schema:url <https://www.mercedes-benz.com/en/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Mercedes-Benz> ;
+    org:classification "company" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-08-21"^^xsd:date ;
+    schema:mainEntityOfPage <https://www.mercedes-benz.com/en/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Mercedes-Benz> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.71377.35> ;
+    schema:sameAs <http://isni.org/isni/0000000123085762> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00b4ram58> ;
+        rdfs:label "Mercedes-Benz Research and Development North America (United States)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/049ahjd53> ;
+        rdfs:label "Daimler Truck (Germany)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03z22t144> ;
+        rdfs:label "Mercedes-Benz (Japan)" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(9.17702 48.78232)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(9.17702 48.78232)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Stuttgart" ;
             schema:addressCountry "DE" ;
-            owl:sameAs <http://sws.geonames.org/2825297/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000123085762> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q36008> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Germany" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2825297/> ;
+    ] ; 
     .

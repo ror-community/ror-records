@@ -15,7 +15,7 @@
     org:classification "education" ; 
     org:classification "funder" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-07-11"^^xsd:date ;
+    dct:modified "2024-08-21"^^xsd:date ;
     org:abbreviation "OSU"@None ; 
     schema:mainEntityOfPage <http://www.osu.edu/> ;
     owl:sameAs <http://en.wikipedia.org/wiki/Ohio_State_University> ; 
@@ -54,6 +54,12 @@
     ] ; 
     org:hasLink [
         a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/030e1gk87> ;
+        rdfs:label "Byrd Polar and Climate Research Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
         org:role "parent" ;
         org:member <https://ror.org/0561zqn56> ;
         rdfs:label "University System of Ohio" ;
@@ -84,9 +90,9 @@
     ] ; 
     org:hasLink [
         a org:Membership ;
-        org:role "child" ;
-        org:member <https://ror.org/030e1gk87> ;
-        rdfs:label "Byrd Polar and Climate Research Center" ;
+        org:role "related" ;
+        org:member <https://ror.org/04r3s7465> ;
+        rdfs:label "McMurdo Dry Valleys Long Term Ecological Research" ;
     ] ; 
     schema:location [
         a schema:Place ;

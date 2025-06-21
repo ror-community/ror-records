@@ -1,0 +1,40 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/03ggvqk67> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "2021"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2024-08-19"^^xsd:date ;
+    dct:modified "2024-08-21"^^xsd:date ;
+    org:abbreviation "ACFSMS"@en ; 
+    schema:url <http://alamal.edu.iq> ; 
+    schema:mainEntityOfPage <https://www.alamal.edu.iq> ;
+    owl:sameAs <https://ar.wikipedia.org/wiki/%D9%83%D9%84%D9%8A%D8%A9_%D8%A7%D9%84%D8%A3%D9%85%D9%84_%D9%84%D9%84%D8%B9%D9%84%D9%88%D9%85_%D8%A7%D9%84%D8%B7%D8%A8%D9%8A%D8%A9_%D8%A7%D9%84%D8%AA%D8%AE%D8%B5%D8%B5%D9%8A%D8%A9> ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(44.02488 32.61603)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Karbala" ;
+            schema:addressCountry "IQ" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Iraq" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/94824/> ;
+    ] ; 
+    .

@@ -1,0 +1,37 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/05v5aya38> a org:Organization ;
+    rdfs:label "West Mendip Community Hospital" ;
+    schema:name "West Mendip Community Hospital" ;
+    org:status "active" ;
+    org:classification "healthcare" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-08-21"^^xsd:date ;
+    schema:mainEntityOfPage <http://www.sompar.nhs.uk/what-we-do/community-hospitals/west-mendip-community-hospital/> ;
+    schema:sameAs <https://grid.ac/institutions/grid.439705.c> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-2.72075 51.14745)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Glastonbury" ;
+            schema:addressCountry "GB" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United Kingdom" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2648559/> ;
+    ] ; 
+    .

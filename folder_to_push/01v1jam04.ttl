@@ -1,0 +1,149 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/01v1jam04> a org:Organization ;
+    rdfs:label "Ludwig Boltzmann Gesellschaft" ;
+    schema:name "Ludwig Boltzmann Gesellschaft" ;
+    schema:foundingDate "1961"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "facility" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-08-21"^^xsd:date ;
+    org:abbreviation "LBG"@None ; 
+    schema:mainEntityOfPage <http://www.lbg.ac.at/en> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Ludwig_Boltzmann_Gesellschaft> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.419350.a> ;
+    schema:sameAs <http://isni.org/isni/0000000108606806> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04pkg4a74> ;
+        rdfs:label "Ludwig Boltzmann Cluster Arthritis and Rehabilitation" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0053xaw54> ;
+        rdfs:label "Ludwig Boltzmann Cluster for Cardiovascular Research" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03f6d5009> ;
+        rdfs:label "Ludwig Boltzmann Institut Health Promotion Research" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00zmn9v56> ;
+        rdfs:label "Ludwig Boltzmann Institut für Epilepsie und Neuromuskuläre Erkrankungen" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03gjxds17> ;
+        rdfs:label "Ludwig Boltzmann Institute Applied Diagnostics" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/017faj253> ;
+        rdfs:label "Ludwig Boltzmann Institute for Age Research" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01tf5aq62> ;
+        rdfs:label "Ludwig Boltzmann Institute for COPD And Respiratory Epidemiology" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04abv6630> ;
+        rdfs:label "Ludwig Boltzmann Institute for Cancer Research" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00a8zdv13> ;
+        rdfs:label "Ludwig Boltzmann Institute for Experimental and Clinical Traumatology" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00v16df20> ;
+        rdfs:label "Austrian Institute for Health Technology Assessment GmbH" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/009r5p347> ;
+        rdfs:label "Ludwig Boltzmann Institute for Lung Vascular Research" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03hgkg910> ;
+        rdfs:label "Ludwig Boltzmann Institute for Rare and Undiagnosed Diseases" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/007b74r43> ;
+        rdfs:label "Ludwig Boltzmann Institute for Retinology and Biomicroscopic Laser Surgery" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/043256924> ;
+        rdfs:label "Ludwig Boltzmann Institute for Translational Heart Failure Research" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/020sst346> ;
+        rdfs:label "Ludwig Boltzmann Institute of Electrical Stimulation and Physical Rehabilitation" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00gsyt497> ;
+        rdfs:label "Ludwig Boltzmann Institute of Human Rights" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/051kb4j80> ;
+        rdfs:label "Ludwig Boltzmann Institute of Osteology" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02ekkcr74> ;
+        rdfs:label "Ludwig Boltzmann für Klinische Neurobiologie" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(16.37208 48.20849)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Vienna" ;
+            schema:addressCountry "AT" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Austria" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2761369/> ;
+    ] ; 
+    .
