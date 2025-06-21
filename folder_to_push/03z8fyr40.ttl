@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/03z8fyr40> a org:Organization ;
+    rdfs:label "Karadeniz Technical University" ;
+    schema:name "Karadeniz Technical University" ;
+    schema:foundingDate "1955"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "KTU" ;
+    org:alternativeName "Karadeniz Teknik Üniversitesi" ;
+    schema:url <http://www.ktu.edu.tr> ; 
+    owl:sameAs <http://en.wikipedia.org/wiki/Karadeniz_Technical_University> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(39.72694 41.005)"^^geo:wktLiteral ;
+            schema:addressLocality "Trabzon" ;
+            schema:addressCountry "TR" ;
+            owl:sameAs <http://sws.geonames.org/738648/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000121860630> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q4823749> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

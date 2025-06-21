@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/02kzqn938> a org:Organization ;
+    rdfs:label "University of Lille" ;
+    schema:name "University of Lille" ;
+    schema:foundingDate "1559"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "UDL" ;
+    org:alternativeName "Ulille" ;
+    schema:url <https://www.univ-lille.fr/home/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/University_of_Lille> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(3.05858 50.63297)"^^geo:wktLiteral ;
+            schema:addressLocality "Lille" ;
+            schema:addressCountry "FR" ;
+            owl:sameAs <http://sws.geonames.org/2998324/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000122426780> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q3551621> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

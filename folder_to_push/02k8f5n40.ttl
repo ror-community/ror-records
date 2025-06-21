@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/02k8f5n40> a org:Organization ;
+    rdfs:label "Laboratoire Cognitions Humaine et Artificielle" ;
+    schema:name "Laboratoire Cognitions Humaine et Artificielle" ;
+    schema:foundingDate "2007"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    org:abbreviation "CHArt" ;
+    org:alternativeName "Laboratoire CHArt" ;
+    schema:url <http://www.cognition-usages.org/chart2/> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(2.35387 48.93564)"^^geo:wktLiteral ;
+            schema:addressLocality "Saint-Denis" ;
+            schema:addressCountry "FR" ;
+            owl:sameAs <http://sws.geonames.org/2980916/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/000000040495272X> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q51782494> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

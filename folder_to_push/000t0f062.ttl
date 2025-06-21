@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/000t0f062> a org:Organization ;
+    rdfs:label "Education University of Hong Kong" ;
+    schema:name "Education University of Hong Kong" ;
+    schema:foundingDate "1994"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "HKIEd" ;
+    org:alternativeName "Hong Kong Institute of Education" ;
+    schema:url <https://www.eduhk.hk/main/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Education_University_of_Hong_Kong> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(114.16877 22.45007)"^^geo:wktLiteral ;
+            schema:addressLocality "Tai Po" ;
+            schema:addressCountry "HK" ;
+            owl:sameAs <http://sws.geonames.org/1818673/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000417996254> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q5968342> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

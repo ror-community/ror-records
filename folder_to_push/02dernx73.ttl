@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/02dernx73> a org:Organization ;
+    rdfs:label "International Institute of Information Technology" ;
+    schema:name "International Institute of Information Technology" ;
+    schema:foundingDate "2003"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "I2IT" ;
+    schema:url <http://www.isquareit.edu.in/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/International_Institute_of_Information_Technology,_Pune> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(73.85535 18.51957)"^^geo:wktLiteral ;
+            schema:addressLocality "Pune" ;
+            schema:addressCountry "IN" ;
+            owl:sameAs <http://sws.geonames.org/1259229/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000417648903> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q6051159> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

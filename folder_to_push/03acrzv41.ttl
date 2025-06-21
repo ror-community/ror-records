@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/03acrzv41> a org:Organization ;
+    rdfs:label "North China University of Water Resources and Electric Power" ;
+    schema:name "North China University of Water Resources and Electric Power" ;
+    schema:foundingDate "1951"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "NCWU" ;
+    org:alternativeName "North China University of Water Resources and Electric Power" ;
+    schema:url <https://www.ncwu.edu.cn> ; 
+    owl:sameAs <http://en.wikipedia.org/wiki/North_China_University_of_Water_Conservancy_and_Electric_Power> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(113.64861 34.75778)"^^geo:wktLiteral ;
+            schema:addressLocality "Zhengzhou" ;
+            schema:addressCountry "CN" ;
+            owl:sameAs <http://sws.geonames.org/1784658/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000417596955> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q10905490> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

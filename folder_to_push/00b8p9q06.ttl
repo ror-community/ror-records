@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/00b8p9q06> a org:Organization ;
+    rdfs:label "American University of Bahrain" ;
+    schema:name "American University of Bahrain" ;
+    schema:foundingDate "2019"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "AUBH" ;
+    schema:url <https://aubh.edu.bh> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/American_University_of_Bahrain> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(50.555 26.13)"^^geo:wktLiteral ;
+            schema:addressLocality "Ar Rifā‘" ;
+            schema:addressCountry "BH" ;
+            owl:sameAs <http://sws.geonames.org/385038/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000477689985> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q85741244> ;
+    .

@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/03cq4gr50> a org:Organization ;
+    rdfs:label "Khon Kaen University" ;
+    schema:name "Khon Kaen University" ;
+    schema:foundingDate "1966"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "KKU" ;
+    schema:url <http://www.kku.ac.th/?l=en> ; 
+    owl:sameAs <http://en.wikipedia.org/wiki/Khon_Kaen_University> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(102.833 16.44671)"^^geo:wktLiteral ;
+            schema:addressLocality "Khon Kaen" ;
+            schema:addressCountry "TH" ;
+            owl:sameAs <http://sws.geonames.org/1609776/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000404700856> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q368329> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .
