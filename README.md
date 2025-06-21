@@ -80,3 +80,7 @@ Voici un schéma:
 ```
 release_rdf_push --> template_to_try --> detect_version_json --> create_rdf_file --> git_commit_push
 ```
+
+## Précision
+
+Au final, nous nous retrouvons avec environ 64'000 ttl d'organisations à l'aide des releases. Cela s'explique car parmis les 116'000 organisations du dump, nous retrouvons les entreprises inactives ainsi que certaines sous organisations.
