@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/013x70191> a org:Organization ;
+    rdfs:label "JSS Academy of Higher Education and Research" ;
+    schema:name "JSS Academy of Higher Education and Research" ;
+    schema:foundingDate "2008"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "JSS AHER" ;
+    org:alternativeName "Jagadguru Sri Shivarathreeswara University" ;
+    schema:url <https://www.jssuni.edu.in> ; 
+    owl:sameAs <http://en.wikipedia.org/wiki/Jagadguru_Sri_Shivarathreeswara_University> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(76.63925 12.29791)"^^geo:wktLiteral ;
+            schema:addressLocality "Mysuru" ;
+            schema:addressCountry "IN" ;
+            owl:sameAs <http://sws.geonames.org/1262321/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/000000041761157X> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q6122081> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

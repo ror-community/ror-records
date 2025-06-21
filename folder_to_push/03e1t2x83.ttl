@@ -1,0 +1,26 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/03e1t2x83> a org:Organization ;
+    rdfs:label "Eastern Ecological Science Center" ;
+    schema:name "Eastern Ecological Science Center" ;
+    org:status "active" ;
+    org:classification "Government" ; 
+    org:classification "Facility" ; 
+    org:alternativeName "USGS Eastern Ecological Science Center" ;
+    schema:url <https://www.usgs.gov/centers/eesc> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-77.88555 39.38816)"^^geo:wktLiteral ;
+            schema:addressLocality "Kearneysville" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/4810696/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    .

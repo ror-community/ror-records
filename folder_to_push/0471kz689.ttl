@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/0471kz689> a org:Organization ;
+    rdfs:label "French Agency for Food, Environmental and Occupational Health & Safety" ;
+    schema:name "French Agency for Food, Environmental and Occupational Health & Safety" ;
+    schema:foundingDate "2010"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Government" ; 
+    org:abbreviation "ANSES" ;
+    schema:url <https://www.anses.fr/en> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Agence_nationale_de_s%C3%A9curit%C3%A9_sanitaire_de_l'alimentation,_de_l'environnement_et_du_travail> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(2.43945 48.81171)"^^geo:wktLiteral ;
+            schema:addressLocality "Maisons-Alfort" ;
+            schema:addressCountry "FR" ;
+            owl:sameAs <http://sws.geonames.org/2996568/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000105847022> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

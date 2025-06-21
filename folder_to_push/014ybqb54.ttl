@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/014ybqb54> a org:Organization ;
+    rdfs:label "Hessian Center for Artificial Intelligence" ;
+    schema:name "Hessian Center for Artificial Intelligence" ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    org:alternativeName "The Hessian Center for Artificial Intelligence" ;
+    schema:url <https://hessian.ai> ; 
+    owl:sameAs <https://de.wikipedia.org/wiki/Hessisches_Zentrum_f%C3%BCr_K%C3%BCnstliche_Intelligenz> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(8.65027 49.87167)"^^geo:wktLiteral ;
+            schema:addressLocality "Darmstadt" ;
+            schema:addressCountry "DE" ;
+            owl:sameAs <http://sws.geonames.org/2938913/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q105750018> ;
+    .

@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/035jpr562> a org:Organization ;
+    rdfs:label "National Geospatial Program" ;
+    schema:name "National Geospatial Program" ;
+    org:status "active" ;
+    org:classification "Government" ; 
+    org:classification "Facility" ; 
+    org:abbreviation "NGP" ;
+    org:alternativeName "USGS National Geospatial Program" ;
+    schema:url <https://www.usgs.gov/programs/national-geospatial-program> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-91.77127 37.95143)"^^geo:wktLiteral ;
+            schema:addressLocality "Rolla" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/4406282/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q68213640> ;
+    .

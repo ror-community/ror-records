@@ -1,0 +1,26 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/02yvdat18> a org:Organization ;
+    rdfs:label "Neuroendocrine, Endocrine and Germinal Differentiation Communication" ;
+    schema:name "Neuroendocrine, Endocrine and Germinal Differentiation Communication" ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    org:abbreviation "NORDIC" ;
+    org:alternativeName "NorDic - Neuroendocrine, Endocrine and Germinal Differentiation Communication" ;
+    schema:url <https://campus-sante-rouen.fr/unite-de-recherche-inserm-1239/> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(1.09932 49.44313)"^^geo:wktLiteral ;
+            schema:addressLocality "Rouen" ;
+            schema:addressCountry "FR" ;
+            owl:sameAs <http://sws.geonames.org/2982652/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    .

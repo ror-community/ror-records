@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/05t0zvw13> a org:Organization ;
+    rdfs:label "Universitas Teknologi Digital" ;
+    schema:name "Universitas Teknologi Digital" ;
+    schema:foundingDate "2022"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "DIGITECH" ;
+    org:alternativeName "Digitech University" ;
+    schema:url <https://digitechuniversity.ac.id> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(107.60694 -6.92222)"^^geo:wktLiteral ;
+            schema:addressLocality "Bandung" ;
+            schema:addressCountry "ID" ;
+            owl:sameAs <http://sws.geonames.org/1650357/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000513739768> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q124415276> ;
+    .

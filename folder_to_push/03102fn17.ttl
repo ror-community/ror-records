@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/03102fn17> a org:Organization ;
+    rdfs:label "British Oceanographic Data Centre" ;
+    schema:name "British Oceanographic Data Centre" ;
+    schema:foundingDate "1969"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    org:abbreviation "BODC" ;
+    schema:url <https://www.bodc.ac.uk> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/British_Oceanographic_Data_Centre> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-2.97794 53.41058)"^^geo:wktLiteral ;
+            schema:addressLocality "Liverpool" ;
+            schema:addressCountry "GB" ;
+            owl:sameAs <http://sws.geonames.org/2644210/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q4970571> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

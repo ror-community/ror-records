@@ -8,12 +8,14 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 
 <https://ror.org/023kksk09> a org:Organization ;
-    rdfs:label "Weizenbaum Institute for the Networked Society" ;
-    schema:name "Weizenbaum Institute for the Networked Society" ;
+    rdfs:label "Weizenbaum Institute" ;
+    schema:name "Weizenbaum Institute" ;
     schema:foundingDate "2017"^^xsd:gYear ;
     org:status "active" ;
     org:classification "Facility" ; 
-    schema:url <https://www.weizenbaum-institut.de/en/> ; 
+    org:alternativeName "Weizenbaum Institute for the Networked Society" ;
+    schema:url <https://www.weizenbaum-institut.de> ; 
+    owl:sameAs <https://de.wikipedia.org/wiki/Weizenbaum-Institut> ;
     schema:location [
             a schema:Place ;
             geo:asWKT "POINT(13.41053 52.52437)"^^geo:wktLiteral ;
@@ -22,5 +24,6 @@
             owl:sameAs <http://sws.geonames.org/2950159/> ;
                 dct:license <http://creativecommons.org/licenses/by/3.0/> ;
             ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q31839610> ;
     schema:sameAs <https://grid.ac/institutions/g> ;
     .
