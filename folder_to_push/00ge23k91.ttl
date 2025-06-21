@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/00ge23k91> a org:Organization ;
+    rdfs:label "Instituto Federal do Triângulo Mineiro" ;
+    schema:name "Instituto Federal do Triângulo Mineiro" ;
+    schema:foundingDate "2008"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "IFTM" ;
+    org:alternativeName "Federal Institute of Triângulo Mineiro" ;
+    schema:url <http://www.iftm.edu.br/> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-47.93194 -19.74833)"^^geo:wktLiteral ;
+            schema:addressLocality "Uberaba" ;
+            schema:addressCountry "BR" ;
+            owl:sameAs <http://sws.geonames.org/3445839/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000403704193> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q10266174> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

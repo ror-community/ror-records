@@ -1,0 +1,26 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/02rs6vz87> a org:Organization ;
+    rdfs:label "Karel Komárek Proměny Foundation" ;
+    schema:name "Karel Komárek Proměny Foundation" ;
+    schema:foundingDate "2006"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Nonprofit" ; 
+    org:alternativeName "Nadace Proměny" ;
+    schema:url <http://www.nadace-promeny.cz> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(14.42076 50.08804)"^^geo:wktLiteral ;
+            schema:addressLocality "Prague" ;
+            schema:addressCountry "CZ" ;
+            owl:sameAs <http://sws.geonames.org/3067696/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    .

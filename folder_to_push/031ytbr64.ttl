@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/031ytbr64> a org:Organization ;
+    rdfs:label "Centre for Regional Development of the Czech Republic" ;
+    schema:name "Centre for Regional Development of the Czech Republic" ;
+    schema:foundingDate "1996"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Government" ; 
+    schema:url <http://www.crr.cz> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(14.42076 50.08804)"^^geo:wktLiteral ;
+            schema:addressLocality "Prague" ;
+            schema:addressCountry "CZ" ;
+            owl:sameAs <http://sws.geonames.org/3067696/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000404804719> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q101004560> ;
+    .

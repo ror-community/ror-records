@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/038kxsm48> a org:Organization ;
+    rdfs:label "Institute for Genetics, Environment and Plant Protection" ;
+    schema:name "Institute for Genetics, Environment and Plant Protection" ;
+    schema:foundingDate "2012"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    org:abbreviation "IGEPP" ;
+    schema:url <https://www6.rennes.inrae.fr/igepp_eng/> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-1.79565 48.1019)"^^geo:wktLiteral ;
+            schema:addressLocality "Le Rheu" ;
+            schema:addressCountry "FR" ;
+            owl:sameAs <http://sws.geonames.org/3002351/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/000000040556944X> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q30261470> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

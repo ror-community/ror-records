@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/02x4dn920> a org:Organization ;
+    rdfs:label "Real Sociedad Española de Química" ;
+    schema:name "Real Sociedad Española de Química" ;
+    schema:foundingDate "1903"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Other" ; 
+    org:abbreviation "RSEQ" ;
+    org:alternativeName "Spanish Royal Society of Chemistry" ;
+    schema:url <https://rseq.org> ; 
+    owl:sameAs <https://es.wikipedia.org/wiki/Real_Sociedad_Espa%C3%B1ola_de_Qu%C3%ADmica> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-3.70256 40.4165)"^^geo:wktLiteral ;
+            schema:addressLocality "Madrid" ;
+            schema:addressCountry "ES" ;
+            owl:sameAs <http://sws.geonames.org/3117735/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000106671479> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q9067104> ;
+    .

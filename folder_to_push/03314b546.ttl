@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/03314b546> a org:Organization ;
+    rdfs:label "Theresian Military Academy" ;
+    schema:name "Theresian Military Academy" ;
+    schema:foundingDate "1752"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "MilAk" ;
+    org:alternativeName "Theresan Military Academy" ;
+    schema:url <https://www.milak.at> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Theresian_Military_Academy> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(16.23196 47.80485)"^^geo:wktLiteral ;
+            schema:addressLocality "Wiener Neustadt" ;
+            schema:addressCountry "AT" ;
+            owl:sameAs <http://sws.geonames.org/2761353/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q568705> ;
+    .

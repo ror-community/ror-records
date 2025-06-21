@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/05b8kzx41> a org:Organization ;
+    rdfs:label "Olomouc Region" ;
+    schema:name "Olomouc Region" ;
+    schema:foundingDate "2000"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Government" ; 
+    org:alternativeName "Olomouc Region of the Czech Republic" ;
+    schema:url <https://www.olkraj.cz> ; 
+    owl:sameAs <https://cs.wikipedia.org/wiki/Olomouck%C3%BD_kraj> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(17.25175 49.59552)"^^geo:wktLiteral ;
+            schema:addressLocality "Olomouc" ;
+            schema:addressCountry "CZ" ;
+            owl:sameAs <http://sws.geonames.org/3069011/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000406113989> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q193307> ;
+    .

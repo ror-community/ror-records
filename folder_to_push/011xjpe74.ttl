@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/011xjpe74> a org:Organization ;
+    rdfs:label "Bangabandhu Sheikh Mujibur Rahman Science and Technology University" ;
+    schema:name "Bangabandhu Sheikh Mujibur Rahman Science and Technology University" ;
+    schema:foundingDate "2011"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "BSMRSTU" ;
+    schema:url <https://www.bsmrstu.edu.bd> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Bangabandhu_Sheikh_Mujibur_Rahman_Science_and_Technology_University> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(90.06041 23.22348)"^^geo:wktLiteral ;
+            schema:addressLocality "Gopālganj" ;
+            schema:addressCountry "BD" ;
+            owl:sameAs <http://sws.geonames.org/1202120/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000446839733> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q4855002> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/0356fh556> a org:Organization ;
+    rdfs:label "Deloitte (Czechia)" ;
+    schema:name "Deloitte (Czechia)" ;
+    schema:foundingDate "1845"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Company" ; 
+    org:alternativeName "Deloitte Touche Tohmatsu Limited" ;
+    schema:url <https://www2.deloitte.com/cz/en.html> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Deloitte> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(13.37759 49.74747)"^^geo:wktLiteral ;
+            schema:addressLocality "Pilsen" ;
+            schema:addressCountry "CZ" ;
+            owl:sameAs <http://sws.geonames.org/3068160/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q30258842> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

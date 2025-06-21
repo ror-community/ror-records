@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/02jsxsw65> a org:Organization ;
+    rdfs:label "Instituto Tecnológico de Puebla" ;
+    schema:name "Instituto Tecnológico de Puebla" ;
+    schema:foundingDate "1972"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "ITP" ;
+    schema:url <http://www.itpuebla.edu.mx> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Instituto_Tecnol%C3%B3gico_de_Puebla> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-98.20346 19.03793)"^^geo:wktLiteral ;
+            schema:addressLocality "Puebla City" ;
+            schema:addressCountry "MX" ;
+            owl:sameAs <http://sws.geonames.org/3521081/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000403697106> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q6041604> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

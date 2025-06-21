@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/05e08c338> a org:Organization ;
+    rdfs:label "Hospital General San Jorge" ;
+    schema:name "Hospital General San Jorge" ;
+    schema:foundingDate "1967"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Healthcare" ; 
+    schema:url <http://www.aragon.es/> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-0.4087 42.13615)"^^geo:wktLiteral ;
+            schema:addressLocality "Huesca" ;
+            schema:addressCountry "ES" ;
+            owl:sameAs <http://sws.geonames.org/3120514/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000417655935> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

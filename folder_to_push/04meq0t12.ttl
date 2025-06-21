@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/04meq0t12> a org:Organization ;
+    rdfs:label "ORLEN UniCRE" ;
+    schema:name "ORLEN UniCRE" ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    org:abbreviation "UNICRE" ;
+    schema:url <https://www.orlenunicre.cz> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(13.61812 50.6042)"^^geo:wktLiteral ;
+            schema:addressLocality "Litvínov" ;
+            schema:addressCountry "CZ" ;
+            owl:sameAs <http://sws.geonames.org/3071665/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000403811239> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

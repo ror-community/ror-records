@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/02g5p4n58> a org:Organization ;
+    rdfs:label "AbbVie (United States)" ;
+    schema:name "AbbVie (United States)" ;
+    schema:foundingDate "2013"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Company" ; 
+    schema:url <http://www.abbvie.com/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/AbbVie> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-87.84118 42.32558)"^^geo:wktLiteral ;
+            schema:addressLocality "North Chicago" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/4903862/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000405724227> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q14662364> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/05yjswp61> a org:Organization ;
+    rdfs:label "Czech Agriculture and Food Inspection Authority" ;
+    schema:name "Czech Agriculture and Food Inspection Authority" ;
+    schema:foundingDate "1986"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Government" ; 
+    org:abbreviation "SZPI" ;
+    schema:url <http://www.szpi.gov.cz> ; 
+    owl:sameAs <https://cs.wikipedia.org/wiki/St%C3%A1tn%C3%AD_zem%C4%9Bd%C4%9Blsk%C3%A1_a_potravin%C3%A1%C5%99sk%C3%A1_inspekce> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(16.60796 49.19522)"^^geo:wktLiteral ;
+            schema:addressLocality "Brno" ;
+            schema:addressCountry "CZ" ;
+            owl:sameAs <http://sws.geonames.org/3078610/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000459363682> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q12056879> ;
+    .

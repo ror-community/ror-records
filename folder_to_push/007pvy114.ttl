@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/007pvy114> a org:Organization ;
+    rdfs:label "University Hospital Waterford" ;
+    schema:name "University Hospital Waterford" ;
+    schema:foundingDate "1988"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Healthcare" ; 
+    org:abbreviation "UHW" ;
+    org:alternativeName "Ardkeen Hospital" ;
+    schema:url <https://www.hse.ie/eng/services/list/3/acutehospitals/hospitals/waterford/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/University_Hospital_Waterford> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-7.11194 52.25833)"^^geo:wktLiteral ;
+            schema:addressLocality "Waterford" ;
+            schema:addressCountry "IE" ;
+            owl:sameAs <http://sws.geonames.org/2960992/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000406179435> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q7974039> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .
