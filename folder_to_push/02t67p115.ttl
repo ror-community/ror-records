@@ -1,0 +1,39 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/02t67p115> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "1903"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2024-10-13"^^xsd:date ;
+    dct:modified "2024-10-14"^^xsd:date ;
+    schema:url <http://cdpc.edu.cn> ; 
+    schema:mainEntityOfPage <https://www.cdpc.edu.cn> ;
+    owl:sameAs <https://zh.wikipedia.org/zh-hans/%E6%B2%B3%E5%8C%97%E7%9F%B3%E6%B2%B9%E8%81%8C%E4%B8%9A%E6%8A%80%E6%9C%AF%E5%A4%A7%E5%AD%A6> ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(117.95883 40.9519)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Chengde" ;
+            schema:addressCountry "CN" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "China" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2038087/> ;
+    ] ; 
+    .

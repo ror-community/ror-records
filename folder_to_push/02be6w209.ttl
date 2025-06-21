@@ -1,0 +1,66 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/02be6w209> a org:Organization ;
+    rdfs:label "Sapienza University of Rome" ;
+    schema:name "Sapienza University of Rome" ;
+    schema:foundingDate "1303"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-14"^^xsd:date ;
+    org:alternativeName "Università degli Studi di Roma "La Sapienza""@it ; 
+    schema:mainEntityOfPage <http://www.uniroma1.it/> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Sapienza_University_of_Rome> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100004271> ;
+    schema:sameAs <https://grid.ac/institutions/grid.7841.a> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05eva6s33> ;
+        rdfs:label "Istituto Nazionale di Fisica Nucleare, Sezione di Roma I" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05rcgef49> ;
+        rdfs:label "Institute for Complex Systems" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01nyatq71> ;
+        rdfs:label "Institute of Molecular Biology and Pathology" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/011cabk38> ;
+        rdfs:label "Policlinico Umberto I" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(12.51133 41.89193)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Rome" ;
+            schema:addressCountry "IT" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Italy" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3169070/> ;
+    ] ; 
+    .

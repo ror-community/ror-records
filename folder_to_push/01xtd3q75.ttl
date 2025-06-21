@@ -1,0 +1,42 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/01xtd3q75> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "2013"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2024-10-13"^^xsd:date ;
+    dct:modified "2024-10-14"^^xsd:date ;
+    org:abbreviation "NBIU"@en ; 
+    org:alternativeName "নর্থ বেঙ্গল ইন্টারন্যাশনাল ইউনিভার্সিটি"@bn ; 
+    schema:url <http://nbiu.edu.bd> ; 
+    schema:mainEntityOfPage <https://nbiu.edu.bd> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/North_Bengal_International_University> ; 
+    schema:sameAs <http://isni.org/isni/000000044683414X> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(88.60114 24.374)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Rajshahi" ;
+            schema:addressCountry "BD" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Bangladesh" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1185128/> ;
+    ] ; 
+    .

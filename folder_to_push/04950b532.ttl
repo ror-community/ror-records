@@ -4,24 +4,56 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/04950b532> a org:Organization ;
     rdfs:label "NOAA National Marine Fisheries Service Office of Science and Technology" ;
     schema:name "NOAA National Marine Fisheries Service Office of Science and Technology" ;
     org:status "active" ;
-    org:classification "Government" ; 
-    org:abbreviation "OST" ;
-    org:alternativeName "NOAA NMFS Fisheries Office of Science and Technology" ;
-    schema:url <https://www.fisheries.noaa.gov/about/office-science-and-technology> ; 
+    org:classification "government" ; 
+    dct:created "2023-10-12"^^xsd:date ;
+    dct:modified "2024-10-14"^^xsd:date ;
+    org:abbreviation "NMFS OST"@None ; 
+    org:alternativeName "NOAA Fisheries Office of Science and Technology"@en ; 
+    org:alternativeName "NOAA NMFS Fisheries Office of Science and Technology"@en ; 
+    org:abbreviation "NOAA NMFS OST"@None ; 
+    org:abbreviation "NOAA OST"@None ; 
+    org:abbreviation "OST"@None ; 
+    org:alternativeName "U.S. National Marine Fisheries Service Office of Science & Technology"@en ; 
+    org:alternativeName "U.S. National Marine Fisheries Service Office of Science and Technology"@en ; 
+    org:alternativeName "United States National Marine Fisheries Service Office of Science & Technology"@en ; 
+    org:alternativeName "United States National Marine Fisheries Service Office of Science and Technology"@en ; 
+    schema:mainEntityOfPage <https://www.fisheries.noaa.gov/about/office-science-and-technology> ;
+    schema:sameAs <http://isni.org/isni/0000000404494650> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/033mqx355> ;
+        rdfs:label "NOAA National Marine Fisheries Service" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04kw44c30> ;
+        rdfs:label "NOAA National Systematics Laboratory" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-77.02609 38.99067)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-77.02609 38.99067)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Silver Spring" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/4369596/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000404494650> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/4369596/> ;
+    ] ; 
     .

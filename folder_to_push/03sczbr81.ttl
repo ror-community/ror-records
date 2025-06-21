@@ -1,0 +1,40 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/03sczbr81> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "2014"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "company" ; 
+    dct:created "2024-10-13"^^xsd:date ;
+    dct:modified "2024-10-14"^^xsd:date ;
+    org:alternativeName "Kimera"@None ; 
+    org:alternativeName "Kimera Biotech"@None ; 
+    schema:url <http://kimerabiotech.com> ; 
+    schema:mainEntityOfPage <https://www.kimerabiotech.com> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-47.81028 -21.1775)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Ribeirão Preto" ;
+            schema:addressCountry "BR" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Brazil" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3451328/> ;
+    ] ; 
+    .

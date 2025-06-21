@@ -1,0 +1,43 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/03ahebw65> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "2017"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2024-10-13"^^xsd:date ;
+    dct:modified "2024-10-14"^^xsd:date ;
+    org:abbreviation "RUB"@en ; 
+    org:alternativeName "Rabindra University, Bangladesh"@en ; 
+    org:alternativeName "রবীন্দ্র বিশ্ববিদ্যালয়, বাংলাদেশ"@bn ; 
+    schema:url <http://rub.ac.bd> ; 
+    schema:mainEntityOfPage <https://www.rub.ac.bd> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Rabindra_University%2C_Bangladesh> ; 
+    schema:sameAs <http://isni.org/isni/0000000485016641> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(89.61667 24.33333)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Sirajganj" ;
+            schema:addressCountry "BD" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Bangladesh" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1337168/> ;
+    ] ; 
+    .

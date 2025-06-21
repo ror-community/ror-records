@@ -1,0 +1,39 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/00ey4m741> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    org:status "active" ;
+    org:classification "healthcare" ; 
+    dct:created "2024-10-13"^^xsd:date ;
+    dct:modified "2024-10-14"^^xsd:date ;
+    org:abbreviation "CHL"@pt ; 
+    schema:url <http://chleiria.pt> ; 
+    schema:mainEntityOfPage <https://www.chleiria.pt> ;
+    schema:sameAs <http://isni.org/isni/0000000446827142> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-8.80705 39.74362)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Leiria" ;
+            schema:addressCountry "PT" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Portugal" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2267095/> ;
+    ] ; 
+    .

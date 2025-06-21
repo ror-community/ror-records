@@ -1,0 +1,48 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/00vzebw12> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2024-10-13"^^xsd:date ;
+    dct:modified "2024-10-14"^^xsd:date ;
+    org:abbreviation "NFC IET"@en ; 
+    org:alternativeName "NFC Institute of Engineering and Technology, Multan"@en ; 
+    org:alternativeName "National Fertilizer Corporation Institute of Engineering and Technology"@en ; 
+    schema:url <http://nfciet.edu.pk> ; 
+    schema:mainEntityOfPage <http://nfciet.edu.pk> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/NFC_Institute_of_Engineering_and_Technology> ; 
+    schema:sameAs <http://isni.org/isni/0000000404474748> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/04fysrj11> ;
+        rdfs:label "National Fertilizer Corporation (Pakistan)" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(71.47824 30.19679)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Multan" ;
+            schema:addressCountry "PK" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Pakistan" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1169825/> ;
+    ] ; 
+    .

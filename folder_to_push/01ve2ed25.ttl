@@ -1,0 +1,52 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/01ve2ed25> a org:Organization ;
+    rdfs:label "Museum of the Rockies" ;
+    schema:name "Museum of the Rockies" ;
+    schema:foundingDate "1957"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "archive" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-14"^^xsd:date ;
+    org:abbreviation "MOR"@None ; 
+    schema:mainEntityOfPage <http://www.museumoftherockies.org/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Museum_of_the_Rockies> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.447116.1> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02w0trx84> ;
+        rdfs:label "Montana State University" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01pp8nd67> ;
+        rdfs:label "Smithsonian Institution" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-111.03856 45.67965)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Bozeman" ;
+            schema:addressCountry "US" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/5641727/> ;
+    ] ; 
+    .

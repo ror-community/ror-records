@@ -4,27 +4,45 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/003109y17> a org:Organization ;
     rdfs:label "University of Cagliari" ;
     schema:name "University of Cagliari" ;
     schema:foundingDate "1606"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    schema:url <http://www.unica.it/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Cagliari> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-14"^^xsd:date ;
+    schema:mainEntityOfPage <http://www.unica.it/> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Cagliari> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100002772> ;
+    schema:sameAs <https://grid.ac/institutions/grid.7763.5> ;
+    schema:sameAs <http://isni.org/isni/0000000417553242> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03paz5966> ;
+        rdfs:label "Istituto Nazionale di Fisica Nucleare, Sezione di Cagliari" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(9.11917 39.23054)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(9.11917 39.23054)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Cagliari" ;
             schema:addressCountry "IT" ;
-            owl:sameAs <http://sws.geonames.org/2525473/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000417553242> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q2067315> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q39918611> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Italy" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2525473/> ;
+    ] ; 
     .

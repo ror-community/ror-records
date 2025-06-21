@@ -1,0 +1,43 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/01qcn1r66> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    org:status "active" ;
+    org:classification "archive" ; 
+    dct:created "2024-10-13"^^xsd:date ;
+    dct:modified "2024-10-14"^^xsd:date ;
+    org:alternativeName "Lagos Museum"@en ; 
+    org:abbreviation "NML"@en ; 
+    org:alternativeName "National Museum Lagos, Onikan"@en ; 
+    org:alternativeName "Nigerian National Museum"@en ; 
+    schema:url <http://lagosmuseum.ng> ; 
+    schema:mainEntityOfPage <https://lagosmuseum.ng> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Nigerian_National_Museum> ; 
+    schema:sameAs <http://isni.org/isni/0000000108384289> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(3.39467 6.45407)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Lagos" ;
+            schema:addressCountry "NG" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Nigeria" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2332459/> ;
+    ] ; 
+    .

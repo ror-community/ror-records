@@ -1,0 +1,53 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/04kw44c30> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "1970"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "facility" ; 
+    dct:created "2024-10-13"^^xsd:date ;
+    dct:modified "2024-10-14"^^xsd:date ;
+    org:abbreviation "NSL"@en ; 
+    org:alternativeName "National Systematics Lab"@en ; 
+    org:alternativeName "National Systematics Laboratory"@en ; 
+    org:alternativeName "National Systematics Laboratory of NOAA Fisheries"@en ; 
+    schema:mainEntityOfPage <https://www.fisheries.noaa.gov/about/national-systematics-laboratory> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/04950b532> ;
+        rdfs:label "NOAA National Marine Fisheries Service Office of Science and Technology" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/00cz47042> ;
+        rdfs:label "National Museum of Natural History" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-77.03637 38.89511)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Washington" ;
+            schema:addressCountry "US" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/4140963/> ;
+    ] ; 
+    .

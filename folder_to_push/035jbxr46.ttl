@@ -4,28 +4,95 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/035jbxr46> a org:Organization ;
     rdfs:label "Smithsonian Tropical Research Institute" ;
     schema:name "Smithsonian Tropical Research Institute" ;
     schema:foundingDate "1904"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "STRI" ;
-    org:alternativeName "El Instituto Smithsonian de Investigaciones Tropicales" ;
-    schema:url <http://www.stri.si.edu/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Smithsonian_Tropical_Research_Institute> ;
+    org:classification "facility" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-14"^^xsd:date ;
+    org:alternativeName "El Instituto Smithsonian de Investigaciones Tropicales"@es ; 
+    org:abbreviation "STRI"@None ; 
+    schema:mainEntityOfPage <http://www.stri.si.edu/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Smithsonian_Tropical_Research_Institute> ; 
+    schema:sameAs <https://api.crossref.org/funders/100009201> ;
+    schema:sameAs <https://grid.ac/institutions/grid.438006.9> ;
+    schema:sameAs <http://isni.org/isni/0000000122969689> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02f4ya153> ;
+        rdfs:label "Barro Colorado Island" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02ftc8763> ;
+        rdfs:label "Bocas del Toro Research Station" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05s45j557> ;
+        rdfs:label "Fortuna Field Station" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01ge7v435> ;
+        rdfs:label "Punta Culebra Nature Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/007yfgf06> ;
+        rdfs:label "Naos Marine and Molecular Laboratories" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05sffn795> ;
+        rdfs:label "Gamboa Laboratories" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02jq1vf72> ;
+        rdfs:label "Coibita Island" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02dzza612> ;
+        rdfs:label "Punta Galeta Marine Laboratory" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/01pp8nd67> ;
+        rdfs:label "Smithsonian Institution" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-79.51973 8.9936)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-79.51973 8.9936)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Panama City" ;
             schema:addressCountry "PA" ;
-            owl:sameAs <http://sws.geonames.org/3703443/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000122969689> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1673980> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Panama" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3703443/> ;
+    ] ; 
     .

@@ -1,0 +1,45 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/050y3ke75> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    org:status "active" ;
+    org:classification "nonprofit" ; 
+    dct:created "2024-10-13"^^xsd:date ;
+    dct:modified "2024-10-14"^^xsd:date ;
+    org:alternativeName "IFOAM Europe"@en ; 
+    org:alternativeName "International Federation of Organic Agriculture Movements Organics Europe"@en ; 
+    schema:url <http://organicseurope.bio> ; 
+    schema:mainEntityOfPage <https://www.organicseurope.bio> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/00f6f7930> ;
+        rdfs:label "IFOAM – Organics International" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(4.34878 50.85045)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Brussels" ;
+            schema:addressCountry "BE" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Belgium" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2800866/> ;
+    ] ; 
+    .

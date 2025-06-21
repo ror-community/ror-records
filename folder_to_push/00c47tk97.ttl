@@ -1,0 +1,43 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/00c47tk97> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "1951"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "government" ; 
+    dct:created "2024-10-13"^^xsd:date ;
+    dct:modified "2024-10-14"^^xsd:date ;
+    org:abbreviation "VDL"@de ; 
+    org:alternativeName "Vereinigung der Landesdenkmalpfleger"@de ; 
+    org:alternativeName "Vereinigung der Landesdenkmalpfleger in der Bundesrepublik Deutschland"@de ; 
+    schema:url <http://vdl-denkmalpflege.de> ; 
+    schema:mainEntityOfPage <https://www.vdl-denkmalpflege.de> ;
+    owl:sameAs <https://de.wikipedia.org/wiki/Vereinigung_der_Landesdenkmalpfleger> ; 
+    schema:sameAs <http://isni.org/isni/0000000121595208> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(8.24932 50.08258)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Wiesbaden" ;
+            schema:addressCountry "DE" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Germany" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2809346/> ;
+    ] ; 
+    .

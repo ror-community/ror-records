@@ -4,24 +4,51 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02v89pq06> a org:Organization ;
-    rdfs:label "INFN Sezione di Genova" ;
-    schema:name "INFN Sezione di Genova" ;
+    rdfs:label "" ;
+    schema:name "" ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:alternativeName "Istituto Nazionale di Fisica Nucleare Sezione di Genova" ;
-    schema:url <https://www.ge.infn.it/> ; 
+    org:classification "facility" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-14"^^xsd:date ;
+    org:alternativeName "INFN Genoa"@en ; 
+    org:alternativeName "INFN Genova"@it ; 
+    org:alternativeName "INFN Sezione di Genova"@it ; 
+    org:abbreviation "INFN-GE"@it ; 
+    schema:url <http://ge.infn.it> ; 
+    schema:mainEntityOfPage <https://www.ge.infn.it> ;
+    schema:sameAs <https://grid.ac/institutions/grid.470205.4> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/005ta0471> ;
+        rdfs:label "Istituto Nazionale di Fisica Nucleare" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/0107c5v14> ;
+        rdfs:label "University of Genoa" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(8.94439 44.40478)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(8.94439 44.40478)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Genoa" ;
             schema:addressCountry "IT" ;
-            owl:sameAs <http://sws.geonames.org/3176219/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://www.wikidata.org/entity/Q30265286> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Italy" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3176219/> ;
+    ] ; 
     .

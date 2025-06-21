@@ -4,26 +4,55 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02gyps716> a org:Organization ;
     rdfs:label "University of Évora" ;
     schema:name "University of Évora" ;
     schema:foundingDate "1559"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    schema:url <http://www.uevora.pt/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/University_of_%C3%89vora> ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-14"^^xsd:date ;
+    schema:mainEntityOfPage <http://www.uevora.pt/> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_%C3%89vora> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.8389.a> ;
+    schema:sameAs <http://isni.org/isni/0000000093106111> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03cvzf910> ;
+        rdfs:label "MARE - Centro de Ciências do Mar e do Ambiente" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00x0kn981> ;
+        rdfs:label "Centro de Geofísica de Évora" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/018m4p414> ;
+        rdfs:label "Instituto Mediterrâneo para a Agricultura Ambiente e Desenvolvimento" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-7.9 38.56667)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-7.9 38.56667)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Evora" ;
             schema:addressCountry "PT" ;
-            owl:sameAs <http://sws.geonames.org/2268406/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000093106111> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1557861> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Portugal" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2268406/> ;
+    ] ; 
     .

@@ -4,27 +4,52 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/0040axw97> a org:Organization ;
     rdfs:label "Yunnan University" ;
     schema:name "Yunnan University" ;
     schema:foundingDate "1922"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:alternativeName "University of the Eastern Land" ;
-    schema:url <http://english.ynu.edu.cn/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Yunnan_University> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-14"^^xsd:date ;
+    org:alternativeName "University of the Eastern Land"@en ; 
+    schema:mainEntityOfPage <http://english.ynu.edu.cn/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Yunnan_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100007839> ;
+    schema:sameAs <https://grid.ac/institutions/grid.440773.3> ;
+    schema:sameAs <http://isni.org/isni/0000000093422456> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00c639s42> ;
+        rdfs:label "Second People's Hospital of Yunnan Province" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02mk53y73> ;
+        rdfs:label "Dianchi College" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(102.71833 25.03889)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(102.71833 25.03889)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Kunming" ;
             schema:addressCountry "CN" ;
-            owl:sameAs <http://sws.geonames.org/1804651/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000093422456> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q649882> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "China" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1804651/> ;
+    ] ; 
     .

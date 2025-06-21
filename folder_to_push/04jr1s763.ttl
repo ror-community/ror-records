@@ -4,27 +4,76 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/04jr1s763> a org:Organization ;
     rdfs:label "University of Florence" ;
     schema:name "University of Florence" ;
     schema:foundingDate "1321"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:alternativeName "UniFI" ;
-    schema:url <http://www.unifi.it/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Florence> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-14"^^xsd:date ;
+    org:alternativeName "UniFI"@it ; 
+    schema:mainEntityOfPage <http://www.unifi.it/> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Florence> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100004434> ;
+    schema:sameAs <https://grid.ac/institutions/grid.8404.8> ;
+    schema:sameAs <http://isni.org/isni/0000000417572304> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/030ws5c69> ;
+        rdfs:label "Istituto Nazionale di Fisica Nucleare, Galileo Galilei Institute for Theoretical Physics" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02vv5y108> ;
+        rdfs:label "Istituto Nazionale di Fisica Nucleare, Sezione di Firenze" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04mmhnh95> ;
+        rdfs:label "Quantum Science and Technology in Arcetri" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04x48z588> ;
+        rdfs:label "European Laboratory for Non-Linear Spectroscopy" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02crev113> ;
+        rdfs:label "Azienda Ospedaliero-Universitaria Careggi" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01jkemy20> ;
+        rdfs:label "Istituto Nazionale di Fisica Nucleare, Laboratorio di Tecniche Nucleari per l'Ambiente e i Beni Culturali" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(11.24626 43.77925)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(11.24626 43.77925)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Florence" ;
             schema:addressCountry "IT" ;
-            owl:sameAs <http://sws.geonames.org/3176959/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000417572304> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q820887> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Italy" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3176959/> ;
+    ] ; 
     .

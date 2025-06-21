@@ -1,0 +1,87 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/030j39b93> a org:Organization ;
+    rdfs:label "VA Sierra Pacific Network" ;
+    schema:name "VA Sierra Pacific Network" ;
+    org:status "active" ;
+    org:classification "healthcare" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-14"^^xsd:date ;
+    org:alternativeName "VISN 21"@en ; 
+    schema:mainEntityOfPage <https://www.visn21.va.gov/> ;
+    schema:sameAs <https://grid.ac/institutions/grid.484327.e> ;
+    schema:sameAs <http://isni.org/isni/0000000404208415> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04g9q2h37> ;
+        rdfs:label "San Francisco VA Health Care System" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03wjr6873> ;
+        rdfs:label "VA Central California Health Care System" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05ts0bd12> ;
+        rdfs:label "VA Northern California Health Care System" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/028zspe92> ;
+        rdfs:label "VA Pacific Islands Health Care System" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00nr17z89> ;
+        rdfs:label "VA Palo Alto Health Care System" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03cfvmk82> ;
+        rdfs:label "VA Sierra Nevada Health Care System" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02xpk4806> ;
+        rdfs:label "VA Southern Nevada Healthcare System" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/05eq41471> ;
+        rdfs:label "Veterans Health Administration" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-122.25664 38.10409)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Vallejo" ;
+            schema:addressCountry "US" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/5405380/> ;
+    ] ; 
+    .

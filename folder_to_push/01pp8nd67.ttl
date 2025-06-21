@@ -4,27 +4,276 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01pp8nd67> a org:Organization ;
     rdfs:label "Smithsonian Institution" ;
     schema:name "Smithsonian Institution" ;
     schema:foundingDate "1846"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Government" ; 
-    org:abbreviation "SI" ;
-    schema:url <http://www.si.edu/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Smithsonian_Institution> ;
+    org:classification "funder" ; 
+    org:classification "government" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-14"^^xsd:date ;
+    org:abbreviation "SI"@None ; 
+    org:alternativeName "Smithsonian"@en ; 
+    schema:url <http://si.edu> ; 
+    schema:mainEntityOfPage <https://www.si.edu> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Smithsonian_Institution> ; 
+    schema:sameAs <https://api.crossref.org/funders/100000014> ;
+    schema:sameAs <https://grid.ac/institutions/grid.1214.6> ;
+    schema:sameAs <http://isni.org/isni/0000000087163312> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/026t55v35> ;
+        rdfs:label "Anacostia Community Museum" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04z4esw72> ;
+        rdfs:label "Archives of American Art" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00dkkfj04> ;
+        rdfs:label "Arthur M. Sackler Gallery" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03c3r2d17> ;
+        rdfs:label "Center for Astrophysics Harvard & Smithsonian" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03bey6t10> ;
+        rdfs:label "Cooper Hewitt, Smithsonian Design Museum" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0112yzy28> ;
+        rdfs:label "ForestGEO" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00xek3458> ;
+        rdfs:label "Freer Gallery of Art" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0148t1k76> ;
+        rdfs:label "Hirshhorn Museum and Sculpture Garden" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03n1tgd19> ;
+        rdfs:label "Museum Conservation Institute" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03b0ygs43> ;
+        rdfs:label "National Air and Space Museum" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03y5vsd17> ;
+        rdfs:label "National Museum of African American History and Culture" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00cz47042> ;
+        rdfs:label "National Museum of Natural History" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03fvnzx77> ;
+        rdfs:label "National Museum of the American Indian" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/009f78a75> ;
+        rdfs:label "National Portrait Gallery" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/017fpfn86> ;
+        rdfs:label "National Postal Museum" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/026etfb20> ;
+        rdfs:label "National Zoological Park" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01za3ap29> ;
+        rdfs:label "Smithsonian American Art Museum" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04kd9w798> ;
+        rdfs:label "Smithsonian Asian Pacific American Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03exnf371> ;
+        rdfs:label "Smithsonian Center for Folklife and Cultural Heritage" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04hnzva96> ;
+        rdfs:label "Smithsonian Conservation Biology Institute" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/032a13752> ;
+        rdfs:label "Smithsonian Environmental Research Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/031scq885> ;
+        rdfs:label "Smithsonian Institution Archives" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02xq3c453> ;
+        rdfs:label "Smithsonian Latino Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05mgwy297> ;
+        rdfs:label "Smithsonian Libraries" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00ga81413> ;
+        rdfs:label "Smithsonian Marine Station" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/035jbxr46> ;
+        rdfs:label "Smithsonian Tropical Research Institute" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00whzh260> ;
+        rdfs:label "Woodrow Wilson International Center for Scholars" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05s45j557> ;
+        rdfs:label "Fortuna Field Station" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01ge7v435> ;
+        rdfs:label "Punta Culebra Nature Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/007yfgf06> ;
+        rdfs:label "Naos Marine and Molecular Laboratories" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05sffn795> ;
+        rdfs:label "Gamboa Laboratories" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02jq1vf72> ;
+        rdfs:label "Coibita Island" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02ftc8763> ;
+        rdfs:label "Bocas del Toro Research Station" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02dzza612> ;
+        rdfs:label "Punta Galeta Marine Laboratory" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02ycfa514> ;
+        rdfs:label "California Science Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03tm6pb36> ;
+        rdfs:label "Center for Jewish History" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01ve2ed25> ;
+        rdfs:label "Museum of the Rockies" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/001kawq27> ;
+        rdfs:label "National Museum of American Jewish History" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03pfjex63> ;
+        rdfs:label "Wing Luke Museum of the Asian Pacific American Experience" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-77.03637 38.89511)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-77.03637 38.89511)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Washington" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/4140963/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000087163312> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q131626> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/4140963/> ;
+    ] ; 
     .

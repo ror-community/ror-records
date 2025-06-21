@@ -4,28 +4,47 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/00s6t1f81> a org:Organization ;
     rdfs:label "University of Pavia" ;
     schema:name "University of Pavia" ;
     schema:foundingDate "1361"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "UNIPV" ;
-    org:alternativeName "Università di Pavia" ;
-    schema:url <http://www.unipv.eu/site/en/home.html> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Pavia> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-14"^^xsd:date ;
+    org:abbreviation "UNIPV"@None ; 
+    org:alternativeName "Università di Pavia"@it ; 
+    schema:mainEntityOfPage <http://www.unipv.eu/site/en/home.html> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Pavia> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100004769> ;
+    schema:sameAs <https://grid.ac/institutions/grid.8982.b> ;
+    schema:sameAs <http://isni.org/isni/0000000417625736> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01st30669> ;
+        rdfs:label "Istituto Nazionale di Fisica Nucleare, Sezione di Pavia" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(9.15917 45.19205)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(9.15917 45.19205)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Pavia" ;
             schema:addressCountry "IT" ;
-            owl:sameAs <http://sws.geonames.org/3171366/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000417625736> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q219317> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Italy" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3171366/> ;
+    ] ; 
     .

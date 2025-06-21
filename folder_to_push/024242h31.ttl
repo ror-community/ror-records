@@ -4,26 +4,45 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/024242h31> a org:Organization ;
     rdfs:label "Public Authority for Applied Education and Training" ;
     schema:name "Public Authority for Applied Education and Training" ;
     schema:foundingDate "1982"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "PAAET" ;
-    schema:url <http://www.paaet.edu.kw/mysite/Default.aspx?tabid=4269&language=ar-KW> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/The_Public_Authority_for_Applied_Education_and_Training> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-14"^^xsd:date ;
+    org:abbreviation "PAAET"@None ; 
+    schema:mainEntityOfPage <http://www.paaet.edu.kw/mysite/Default.aspx?tabid=4269&language=ar-KW> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/The_Public_Authority_for_Applied_Education_and_Training> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100013393> ;
+    schema:sameAs <https://grid.ac/institutions/grid.459471.a> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05ka4wq25> ;
+        rdfs:label "Basic Education College" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(47.97833 29.36972)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(47.97833 29.36972)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Kuwait City" ;
             schema:addressCountry "KW" ;
-            owl:sameAs <http://sws.geonames.org/285787/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://www.wikidata.org/entity/Q7758687> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Kuwait" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/285787/> ;
+    ] ; 
     .

@@ -8,29 +8,31 @@
 @prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/04mq2g308> a org:Organization ;
-    rdfs:label "University of Applied Sciences and Arts Northwestern Switzerland" ;
-    schema:name "University of Applied Sciences and Arts Northwestern Switzerland" ;
+    rdfs:label "" ;
+    schema:name "" ;
     schema:foundingDate "2006"^^xsd:gYear ;
     org:status "active" ;
     org:classification "education" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-05-30"^^xsd:date ;
+    dct:modified "2024-10-14"^^xsd:date ;
     org:abbreviation "FHNW"@None ; 
+    org:alternativeName "FHNW University of Applied Sciences and Arts Northwestern Switzerland"@en ; 
     org:alternativeName "Fachhochschule Nordwestschweiz"@de ; 
+    org:alternativeName "University of Applied Sciences and Arts Northwestern Switzerland"@en ; 
     schema:mainEntityOfPage <http://www.fhnw.ch/homepage> ;
     schema:sameAs <https://grid.ac/institutions/grid.410380.e> ;
     schema:sameAs <http://isni.org/isni/0000000114978091> ;
     org:hasLink [
         a org:Membership ;
-        org:role "related" ;
-        org:member <https://ror.org/03bdt1p29> ;
-        rdfs:label "Musik Akademie Basel" ;
-    ] ; 
-    org:hasLink [
-        a org:Membership ;
         org:role "child" ;
         org:member <https://ror.org/04fawj142> ;
         rdfs:label "Pädagogische Hochschule FHNW" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03bdt1p29> ;
+        rdfs:label "Musik Akademie Basel" ;
     ] ; 
     schema:location [
         a schema:Place ;
@@ -49,5 +51,59 @@
             ]
         ] ;
         owl:sameAs <http://sws.geonames.org/2657976/> ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(7.90329 47.34999)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Olten" ;
+            schema:addressCountry "CH" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Switzerland" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2659297/> ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(7.64511 47.52271)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Muttenz" ;
+            schema:addressCountry "CH" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Switzerland" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2659522/> ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(7.57327 47.55839)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Basel" ;
+            schema:addressCountry "CH" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Switzerland" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2661604/> ;
     ] ; 
     .

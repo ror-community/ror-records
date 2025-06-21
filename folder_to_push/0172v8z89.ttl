@@ -14,9 +14,10 @@
     org:status "active" ;
     org:classification "government" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-06-20"^^xsd:date ;
+    dct:modified "2024-10-14"^^xsd:date ;
     org:alternativeName "Government of the French Republic"@en ; 
-    schema:mainEntityOfPage <http://www.gouvernement.fr/en/news> ;
+    schema:url <http://gouv.fr> ; 
+    schema:mainEntityOfPage <https://www.info.gouv.fr> ;
     owl:sameAs <https://en.wikipedia.org/wiki/Government_of_France> ; 
     schema:sameAs <https://grid.ac/institutions/grid.454784.e> ;
     org:hasLink [
@@ -48,6 +49,18 @@
         org:role "child" ;
         org:member <https://ror.org/01wp0c315> ;
         rdfs:label "Ministère des Solidarités et de la Santé" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/025er3q23> ;
+        rdfs:label "Ministère des Armées" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05m1fqs56> ;
+        rdfs:label "Assemblée Nationale de France" ;
     ] ; 
     schema:location [
         a schema:Place ;

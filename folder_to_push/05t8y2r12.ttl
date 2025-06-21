@@ -1,0 +1,91 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/05t8y2r12> a org:Organization ;
+    rdfs:label "Soochow University" ;
+    schema:name "Soochow University" ;
+    schema:foundingDate "1900"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-14"^^xsd:date ;
+    org:alternativeName "Sūzhōu Dàxué"@None ; 
+    schema:mainEntityOfPage <http://eng.suda.edu.cn/> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Soochow_University_(Suzhou)> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100007824> ;
+    schema:sameAs <https://grid.ac/institutions/grid.263761.7> ;
+    schema:sameAs <http://isni.org/isni/0000000101980694> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05a9skj35> ;
+        rdfs:label "Children's Hospital of Suzhou University" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/051jg5p78> ;
+        rdfs:label "First Affiliated Hospital of Soochow University" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05vf01n02> ;
+        rdfs:label "Fourth People's Hospital of Changzhou" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/0358q4810> ;
+        rdfs:label "Ruihua Affiliated Hospital of Soochow University" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02xjrkt08> ;
+        rdfs:label "Second Affiliated Hospital of Soochow University" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02pthay30> ;
+        rdfs:label "Wuxi Ninth People's Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01gx26191> ;
+        rdfs:label "Zhangjiagang First People's Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/025jsyk19> ;
+        rdfs:label "Suzhou City University" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(120.59538 31.30408)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Suzhou" ;
+            schema:addressCountry "CN" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "China" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1886760/> ;
+    ] ; 
+    .

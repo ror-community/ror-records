@@ -4,23 +4,59 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/039epzh36> a org:Organization ;
-    rdfs:label "INFN Gruppo Collegato di Cosenza" ;
-    schema:name "INFN Gruppo Collegato di Cosenza" ;
+    rdfs:label "" ;
+    schema:name "" ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "GCC" ;
-    org:alternativeName "Istituto Nazionale di Fisica Nucleare Gruppo Collegato di Cosenza" ;
-    schema:url <http://www.cs.infn.it> ; 
+    org:classification "facility" ; 
+    dct:created "2024-03-13"^^xsd:date ;
+    dct:modified "2024-10-14"^^xsd:date ;
+    org:alternativeName "Gruppo Collegato di Cosenza Laboratori, Nazionali di Frascati"@it ; 
+    org:alternativeName "INFN Cosenza"@it ; 
+    org:alternativeName "INFN Gruppo Collegato di Cosenza"@it ; 
+    org:alternativeName "INFN Gruppo Collegato di Cosenza Laboratori, Nazionali di Frascati"@it ; 
+    org:abbreviation "INFN-GCCS"@it ; 
+    org:alternativeName "Istituto Nazionale di Fisica Nucleare Gruppo Collegato di Cosenza"@it ; 
+    org:alternativeName "National Institute of Nuclear Physics - Cosenza Unit"@en ; 
+    schema:url <http://cs.infn.it> ; 
+    schema:mainEntityOfPage <http://www.cs.infn.it> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/005ta0471> ;
+        rdfs:label "Istituto Nazionale di Fisica Nucleare" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02rc97e94> ;
+        rdfs:label "University of Calabria" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/049jf1a25> ;
+        rdfs:label "Istituto Nazionale di Fisica Nucleare, Laboratori Nazionali di Frascati" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(16.25307 39.2989)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(16.25307 39.2989)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Cosenza" ;
             schema:addressCountry "IT" ;
-            owl:sameAs <http://sws.geonames.org/2524907/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Italy" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2524907/> ;
+    ] ; 
     .

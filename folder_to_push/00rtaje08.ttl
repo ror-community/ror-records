@@ -1,0 +1,41 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/00rtaje08> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "2011"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2024-10-13"^^xsd:date ;
+    dct:modified "2024-10-14"^^xsd:date ;
+    org:alternativeName "Raffles"@en ; 
+    schema:url <http://rafflesuniversity.edu.in> ; 
+    schema:mainEntityOfPage <https://rafflesuniversity.edu.in> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Raffles_University> ; 
+    schema:sameAs <http://isni.org/isni/0000000449118579> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(76.40388 28.04932)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Neemrana" ;
+            schema:addressCountry "IN" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "India" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/12681100/> ;
+    ] ; 
+    .

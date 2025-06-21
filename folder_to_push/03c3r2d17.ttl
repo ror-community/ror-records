@@ -1,0 +1,65 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/03c3r2d17> a org:Organization ;
+    rdfs:label "Center for Astrophysics Harvard & Smithsonian" ;
+    schema:name "Center for Astrophysics Harvard & Smithsonian" ;
+    schema:foundingDate "1973"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-14"^^xsd:date ;
+    org:abbreviation "CfA"@None ; 
+    org:alternativeName "Harvard–Smithsonian Center for Astrophysics"@en ; 
+    schema:mainEntityOfPage <https://pweb.cfa.harvard.edu/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Harvard%E2%80%93Smithsonian_Center_for_Astrophysics> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.455754.2> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01mcvy510> ;
+        rdfs:label "Harvard College Observatory" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04mh52z70> ;
+        rdfs:label "Smithsonian Astrophysical Observatory" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/03vek6s52> ;
+        rdfs:label "Harvard University" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/01pp8nd67> ;
+        rdfs:label "Smithsonian Institution" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-71.10561 42.3751)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Cambridge" ;
+            schema:addressCountry "US" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/4931972/> ;
+    ] ; 
+    .

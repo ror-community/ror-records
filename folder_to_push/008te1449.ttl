@@ -1,0 +1,51 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/008te1449> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "1987"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "government" ; 
+    dct:created "2024-10-13"^^xsd:date ;
+    dct:modified "2024-10-14"^^xsd:date ;
+    org:abbreviation "DPRJ"@pt ; 
+    org:alternativeName "Defensoria Pública do Rio"@pt ; 
+    org:alternativeName "Defensoria Pública do Estado do Rio de Janeiro"@pt ; 
+    org:abbreviation "PDO-RJ"@en ; 
+    org:alternativeName "Public Defender's Office, Rio de Janeiro"@en ; 
+    org:alternativeName "Public Defender’s Office in Rio de Janeiro"@en ; 
+    schema:url <http://defensoria.rj.def.br> ; 
+    schema:mainEntityOfPage <https://defensoria.rj.def.br> ;
+    schema:sameAs <http://isni.org/isni/0000000517720909> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05y5xxp70> ;
+        rdfs:label "Fundacao Escola Superior da Defensoria Publica do Estado do Rio de Janeiro" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-43.18223 -22.90642)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Rio de Janeiro" ;
+            schema:addressCountry "BR" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Brazil" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3451190/> ;
+    ] ; 
+    .

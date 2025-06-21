@@ -4,27 +4,44 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02ycfa514> a org:Organization ;
     rdfs:label "California Science Center" ;
     schema:name "California Science Center" ;
     schema:foundingDate "1998"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Archive" ; 
-    org:alternativeName "California ScienCenter" ;
-    schema:url <http://californiasciencecenter.org/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/California_Science_Center> ;
+    org:classification "archive" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-14"^^xsd:date ;
+    org:alternativeName "California ScienCenter"@en ; 
+    schema:mainEntityOfPage <http://californiasciencecenter.org/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/California_Science_Center> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.423314.3> ;
+    schema:sameAs <http://isni.org/isni/0000000460637011> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01pp8nd67> ;
+        rdfs:label "Smithsonian Institution" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-118.24368 34.05223)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-118.24368 34.05223)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Los Angeles" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/5368361/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000460637011> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1067376> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/5368361/> ;
+    ] ; 
     .

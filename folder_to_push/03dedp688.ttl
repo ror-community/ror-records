@@ -1,0 +1,43 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/03dedp688> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "2006"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2024-10-13"^^xsd:date ;
+    dct:modified "2024-10-14"^^xsd:date ;
+    org:alternativeName "S P Jain School of Global Management, Singapore"@en ; 
+    org:alternativeName "SP Jain Global, Singapore"@en ; 
+    org:alternativeName "SPJ Global, Singapore"@en ; 
+    schema:url <http://spjain.sg> ; 
+    schema:mainEntityOfPage <https://www.spjain.sg> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/S_P_Jain_School_of_Global_Management> ; 
+    schema:sameAs <http://isni.org/isni/0000000403960410> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(103.85007 1.28967)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Singapore" ;
+            schema:addressCountry "SG" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Singapore" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1880252/> ;
+    ] ; 
+    .

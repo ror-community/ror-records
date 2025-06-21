@@ -4,27 +4,53 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/04hnzva96> a org:Organization ;
     rdfs:label "Smithsonian Conservation Biology Institute" ;
     schema:name "Smithsonian Conservation Biology Institute" ;
     schema:foundingDate "1974"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "SCBI" ;
-    org:alternativeName "Conservation and Research Center" ;
-    schema:url <https://nationalzoo.si.edu/scbi/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Smithsonian_Conservation_Biology_Institute> ;
+    org:classification "facility" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-14"^^xsd:date ;
+    org:abbreviation "CRC"@None ; 
+    org:alternativeName "Conservation and Research Center"@en ; 
+    org:abbreviation "SCBI"@None ; 
+    schema:mainEntityOfPage <https://nationalzoo.si.edu/scbi/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Smithsonian_Conservation_Biology_Institute> ; 
+    schema:sameAs <https://api.crossref.org/funders/100009198> ;
+    schema:sameAs <https://grid.ac/institutions/grid.419531.b> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/01pp8nd67> ;
+        rdfs:label "Smithsonian Institution" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00mkh7345> ;
+        rdfs:label "Hubbard Brook Long Term Ecological Research" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-78.19444 38.91817)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-78.19444 38.91817)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Front Royal" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/4760232/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://www.wikidata.org/entity/Q1127326> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/4760232/> ;
+    ] ; 
     .

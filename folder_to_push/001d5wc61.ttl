@@ -4,25 +4,49 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/001d5wc61> a org:Organization ;
-    rdfs:label "National Center for Frame Analysis" ;
-    schema:name "National Center for Frame Analysis" ;
+    rdfs:label "" ;
+    schema:name "" ;
     schema:foundingDate "1962"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "CNAF" ;
-    schema:url <https://www.cnaf.infn.it/en/> ; 
+    org:classification "facility" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-14"^^xsd:date ;
+    org:abbreviation "CNAF"@None ; 
+    org:alternativeName "Centro Nazionale Analisi Fotogrammi"@it ; 
+    org:alternativeName "Centro Nazionale per la Ricerca e lo Sviluppo nelle Tecnologie Informatiche e Telematiche"@it ; 
+    org:alternativeName "INFN Centro Nazionale Analisi Fotogrammi"@it ; 
+    org:abbreviation "INFN-CNAF"@it ; 
+    org:alternativeName "Istituto Nazionale di Fisica Nucleare, Centro Nazionale per la Ricerca e lo Sviluppo nelle Tecnologie Informatiche e Telematiche"@it ; 
+    org:alternativeName "National Center for Frame Analysis"@en ; 
+    schema:url <http://cnaf.infn.it> ; 
+    schema:mainEntityOfPage <https://www.cnaf.infn.it> ;
+    schema:sameAs <https://grid.ac/institutions/grid.470182.8> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/005ta0471> ;
+        rdfs:label "Istituto Nazionale di Fisica Nucleare" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(11.33875 44.49381)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(11.33875 44.49381)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Bologna" ;
             schema:addressCountry "IT" ;
-            owl:sameAs <http://sws.geonames.org/3181928/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://www.wikidata.org/entity/Q30265265> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Italy" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3181928/> ;
+    ] ; 
     .

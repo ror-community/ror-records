@@ -12,10 +12,11 @@
     schema:name "Erasmus MC" ;
     schema:foundingDate "2011"^^xsd:gYear ;
     org:status "active" ;
+    org:classification "funder" ; 
     org:classification "healthcare" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2023-12-20"^^xsd:date ;
-    org:alternativeName "Erasmus University Medical Center"@None ; 
+    dct:modified "2024-10-14"^^xsd:date ;
+    org:alternativeName "Erasmus University Medical Center"@en ; 
     schema:mainEntityOfPage <http://www.erasmusmc.nl/> ;
     owl:sameAs <https://en.wikipedia.org/wiki/Erasmus_MC> ; 
     schema:sameAs <https://api.crossref.org/funders/501100008039> ;
@@ -53,6 +54,12 @@
     ] ; 
     org:hasLink [
         a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02ac58f22> ;
+        rdfs:label "Rotterdam Study" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
         org:role "related" ;
         org:member <https://ror.org/057w15z03> ;
         rdfs:label "Erasmus University Rotterdam" ;
@@ -71,9 +78,9 @@
     ] ; 
     org:hasLink [
         a org:Membership ;
-        org:role "child" ;
-        org:member <https://ror.org/02ac58f22> ;
-        rdfs:label "Rotterdam Study" ;
+        org:role "related" ;
+        org:member <https://ror.org/05ahyhp31> ;
+        rdfs:label "Holland Particle Therapy Center" ;
     ] ; 
     schema:location [
         a schema:Place ;
@@ -84,7 +91,7 @@
             schema:addressRegion "" ;
             dct:spatial [
                 a dct:Location ;
-                schema:name "Netherlands" ;
+                schema:name "The Netherlands" ;
                 schema:containedInPlace [
                     schema:name "" ;
                     schema:identifier ""

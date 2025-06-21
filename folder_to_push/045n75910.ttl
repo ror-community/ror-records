@@ -4,28 +4,151 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/045n75910> a org:Organization ;
     rdfs:label "UL Research Institutes" ;
     schema:name "UL Research Institutes" ;
     schema:foundingDate "1894"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Nonprofit" ; 
-    org:alternativeName "Underwriters' Electrical Bureau" ;
-    schema:url <https://ul.org> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/UL_(safety_organization)> ;
+    org:classification "funder" ; 
+    org:classification "nonprofit" ; 
+    dct:created "2021-09-23"^^xsd:date ;
+    dct:modified "2024-10-14"^^xsd:date ;
+    org:abbreviation "ULRI"@en ; 
+    org:alternativeName "Underwriters Laboratories"@en ; 
+    org:alternativeName "Underwriters Laboratories Research Institutes"@en ; 
+    org:alternativeName "Underwriters' Electrical Bureau"@en ; 
+    schema:mainEntityOfPage <https://ul.org> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/UL_(safety_organization)> ; 
+    schema:sameAs <https://api.crossref.org/funders/100018295> ;
+    schema:sameAs <https://grid.ac/institutions/grid.511449.c> ;
+    schema:sameAs <http://isni.org/isni/0000000460062211> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01z80p194> ;
+        rdfs:label "UL Standards & Engagement" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03r9y0p94> ;
+        rdfs:label "UL Solutions (United States)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02hp2td73> ;
+        rdfs:label "Materials Discovery Research Institute" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0418h6h65> ;
+        rdfs:label "Chemical Insights Research Institute" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0350q3086> ;
+        rdfs:label "Electrochemical Safety Research Institute" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03nmm4c68> ;
+        rdfs:label "Fire Safety Research Institute" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-87.69006 42.04114)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-84.54993 33.9526)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Marietta" ;
+            schema:addressCountry "US" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/4207783/> ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-76.83942 39.24038)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Columbia" ;
+            schema:addressCountry "US" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/4352053/> ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-95.36327 29.76328)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Houston" ;
+            schema:addressCountry "US" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/4699066/> ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-87.69006 42.04114)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Evanston" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/4891382/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000460062211> ;
-    schema:sameAs <http://isni.org/isni/0000000088597040> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1324421> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/4891382/> ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-87.73999 42.03597)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Village of Skokie" ;
+            schema:addressCountry "US" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/7317598/> ;
+    ] ; 
     .

@@ -4,22 +4,40 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/03zcqw776> a org:Organization ;
     rdfs:label "Amir-Al-Momenin Hospital" ;
     schema:name "Amir-Al-Momenin Hospital" ;
     org:status "active" ;
-    org:classification "Healthcare" ; 
-    org:alternativeName "Amir-Al-Moemenin Hospital" ;
-    schema:url <https://amiralmomeninbh.sums.ac.ir> ; 
+    org:classification "healthcare" ; 
+    dct:created "2023-06-22"^^xsd:date ;
+    dct:modified "2024-10-14"^^xsd:date ;
+    org:alternativeName "Amir-Al-Moemenin Hospital"@en ; 
+    schema:mainEntityOfPage <https://amiralmomeninhospital.sums.ac.ir> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01n3s4692> ;
+        rdfs:label "Shiraz University of Medical Sciences" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(52.53113 29.61031)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(52.53113 29.61031)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Shiraz" ;
             schema:addressCountry "IR" ;
-            owl:sameAs <http://sws.geonames.org/115019/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Iran" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/115019/> ;
+    ] ; 
     .

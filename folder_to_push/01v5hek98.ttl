@@ -4,25 +4,46 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01v5hek98> a org:Organization ;
     rdfs:label "Czech Academy of Sciences, Global Change Research Institute" ;
     schema:name "Czech Academy of Sciences, Global Change Research Institute" ;
     schema:foundingDate "2011"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "ÚVGZ AV ČR" ;
-    org:alternativeName "Global Change Research Institute of the Czech Academy of Sciences" ;
-    schema:url <https://www.czechglobe.cz> ; 
+    org:classification "facility" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-14"^^xsd:date ;
+    org:alternativeName "Czech Acad Sci, Global Change Res Inst"@en ; 
+    org:alternativeName "CzechGlobe"@cs ; 
+    org:alternativeName "Global Change Research Institute of the Czech Academy of Sciences"@en ; 
+    org:abbreviation "ÚVGZ AV ČR"@None ; 
+    schema:mainEntityOfPage <https://www.czechglobe.cz> ;
+    schema:sameAs <https://grid.ac/institutions/grid.426587.a> ;
+    schema:sameAs <http://isni.org/isni/000000011091957X> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/053avzc18> ;
+        rdfs:label "Czech Academy of Sciences" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(16.60796 49.19522)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(16.60796 49.19522)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Brno" ;
             schema:addressCountry "CZ" ;
-            owl:sameAs <http://sws.geonames.org/3078610/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Czechia" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3078610/> ;
+    ] ; 
     .

@@ -4,28 +4,84 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02wsd5p50> a org:Organization ;
     rdfs:label "Vietnam Academy of Science and Technology" ;
     schema:name "Vietnam Academy of Science and Technology" ;
     schema:foundingDate "1975"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Government" ; 
-    org:abbreviation "VAST" ;
-    org:alternativeName "Vietnam Academy of Science" ;
-    schema:url <https://vast.gov.vn> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Vietnam_Academy_of_Science_and_Technology> ;
+    org:classification "funder" ; 
+    org:classification "government" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-14"^^xsd:date ;
+    org:abbreviation "NCSR"@None ; 
+    org:alternativeName "NCSR of Vietnam"@en ; 
+    org:abbreviation "NCST"@None ; 
+    org:alternativeName "NCST of Vietnam"@en ; 
+    org:alternativeName "National Centre for Natural Science and Technology"@en ; 
+    org:alternativeName "National Centre for Natural Science and Technology of Vietnam"@en ; 
+    org:alternativeName "National Centre for Scientific Research of Vietnam"@en ; 
+    org:abbreviation "VAST"@None ; 
+    org:alternativeName "Vietnam Academy of Science"@en ; 
+    schema:mainEntityOfPage <https://vast.gov.vn> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Vietnam_Academy_of_Science_and_Technology> ; 
+    schema:sameAs <https://api.crossref.org/funders/100012046> ;
+    schema:sameAs <https://grid.ac/institutions/grid.267849.6> ;
+    schema:sameAs <http://isni.org/isni/0000000121056888> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/057as5086> ;
+        rdfs:label "Institute of Marine Geology and Geophysics" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/011pd5k86> ;
+        rdfs:label "Institute of Materials Science" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04jr71r83> ;
+        rdfs:label "Institute of Mathematics" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04g43ky75> ;
+        rdfs:label "Ho Chi Minh City Institute of Physics" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00tp4wm41> ;
+        rdfs:label "Institute for Tropical Technology" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03zzgjc77> ;
+        rdfs:label "Institute of Oceanography" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(105.84117 21.0245)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(105.84117 21.0245)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Hanoi" ;
             schema:addressCountry "VN" ;
-            owl:sameAs <http://sws.geonames.org/1581130/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000121056888> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q7928484> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Vietnam" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1581130/> ;
+    ] ; 
     .

@@ -4,27 +4,52 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02n742c10> a org:Organization ;
     rdfs:label "University of Trieste" ;
     schema:name "University of Trieste" ;
     schema:foundingDate "1924"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "UNITS" ;
-    schema:url <http://www.units.it/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Trieste> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-14"^^xsd:date ;
+    org:abbreviation "UNITS"@None ; 
+    schema:mainEntityOfPage <http://www.units.it/> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Trieste> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100012306> ;
+    schema:sameAs <https://grid.ac/institutions/grid.5133.4> ;
+    schema:sameAs <http://isni.org/isni/0000000119414308> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05j3snm48> ;
+        rdfs:label "Istituto Nazionale di Fisica Nucleare, Sezione di Trieste" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/0213f0637> ;
+        rdfs:label "Azienda Ospedaliero Universitaria Ospedali Riuniti" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(13.77678 45.64953)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(13.77678 45.64953)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Trieste" ;
             schema:addressCountry "IT" ;
-            owl:sameAs <http://sws.geonames.org/3165185/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000119414308> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1751060> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Italy" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3165185/> ;
+    ] ; 
     .

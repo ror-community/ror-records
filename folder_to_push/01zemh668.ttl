@@ -1,0 +1,47 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/01zemh668> a org:Organization ;
+    rdfs:label "Sri Siddhartha Medical College" ;
+    schema:name "Sri Siddhartha Medical College" ;
+    schema:foundingDate "1988"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-14"^^xsd:date ;
+    org:abbreviation "SSMC"@None ; 
+    schema:mainEntityOfPage <http://www.ssmctumkur.org/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Sri_Siddhartha_Medical_College> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.416286.f> ;
+    schema:sameAs <http://isni.org/isni/0000000417939129> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/05pc6yw33> ;
+        rdfs:label "Sri Siddhartha Academy of Higher Education" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(77.1022 13.34136)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Tumakuru" ;
+            schema:addressCountry "IN" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "India" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1254089/> ;
+    ] ; 
+    .

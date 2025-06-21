@@ -4,24 +4,58 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/009wnjh50> a org:Organization ;
-    rdfs:label "INFN Sezione di Roma III" ;
-    schema:name "INFN Sezione di Roma III" ;
+    rdfs:label "" ;
+    schema:name "" ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:alternativeName "Sezione di Roma Tre" ;
-    schema:url <http://www.roma3.infn.it/en/> ; 
+    org:classification "facility" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-14"^^xsd:date ;
+    org:alternativeName "INFN Roma 3"@it ; 
+    org:alternativeName "INFN Roma Tre"@it ; 
+    org:alternativeName "INFN Rome 3"@en ; 
+    org:alternativeName "INFN Rome III"@en ; 
+    org:alternativeName "INFN Sezione di Roma 3"@it ; 
+    org:alternativeName "INFN Sezione di Roma III"@it ; 
+    org:abbreviation "INFN-RM3"@it ; 
+    org:alternativeName "Istituto Nazionale di Fisica Nucleare Sezione di Roma III"@it ; 
+    org:alternativeName "Istituto Nazionale di Fisica Nucleare, Sezione di Roma III"@it ; 
+    org:alternativeName "National Institute for Nuclear Physics, Rome III Division"@en ; 
+    org:alternativeName "Sezione di Roma Tre"@it ; 
+    schema:url <http://roma3.infn.it> ; 
+    schema:mainEntityOfPage <https://www.roma3.infn.it> ;
+    schema:sameAs <https://grid.ac/institutions/grid.470220.3> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/005ta0471> ;
+        rdfs:label "Istituto Nazionale di Fisica Nucleare" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/05vf0dg29> ;
+        rdfs:label "Roma Tre University" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(12.51133 41.89193)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(12.51133 41.89193)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Rome" ;
             schema:addressCountry "IT" ;
-            owl:sameAs <http://sws.geonames.org/3169070/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://www.wikidata.org/entity/Q30265301> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Italy" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3169070/> ;
+    ] ; 
     .

@@ -4,23 +4,50 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/05s45j557> a org:Organization ;
     rdfs:label "Fortuna Field Station" ;
     schema:name "Fortuna Field Station" ;
     schema:foundingDate "1976"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:alternativeName "Jorge L. Araúz Research Center" ;
-    schema:url <https://stri.si.edu/facility/fortuna> ; 
+    org:classification "facility" ; 
+    dct:created "2022-03-17"^^xsd:date ;
+    dct:modified "2024-10-14"^^xsd:date ;
+    org:alternativeName "Fortuna Station"@en ; 
+    org:alternativeName "Green House"@en ; 
+    org:alternativeName "Jorge L. Araúz Research Center"@en ; 
+    org:alternativeName "Vivero"@es ; 
+    schema:mainEntityOfPage <https://stri.si.edu/facility/fortuna> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/01pp8nd67> ;
+        rdfs:label "Smithsonian Institution" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/035jbxr46> ;
+        rdfs:label "Smithsonian Tropical Research Institute" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-82.41667 8.5)"^^geo:wktLiteral ;
-            schema:addressLocality "Provincia de Chiriquí" ;
+        a schema:Place ;
+        geo:asWKT "POINT(-82.41667 8.5)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Chiriquí Province" ;
             schema:addressCountry "PA" ;
-            owl:sameAs <http://sws.geonames.org/3712410/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Panama" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3712410/> ;
+    ] ; 
     .

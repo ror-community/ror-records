@@ -1,0 +1,44 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/05skwvp09> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "2006"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2024-10-13"^^xsd:date ;
+    dct:modified "2024-10-14"^^xsd:date ;
+    org:abbreviation "ASUDOM"@en ; 
+    org:alternativeName "All Saints Dominica"@en ; 
+    org:alternativeName "All Saints University"@en ; 
+    org:alternativeName "All Saints University School of Medicine, Dominica"@en ; 
+    schema:url <http://allsaintsuniversity.org> ; 
+    schema:mainEntityOfPage <https://allsaintsuniversity.org> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/All_Saints_University_School_of_Medicine> ; 
+    schema:sameAs <http://isni.org/isni/0000000446890950> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-61.38808 15.30174)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Roseau" ;
+            schema:addressCountry "DM" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Dominica" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3575635/> ;
+    ] ; 
+    .

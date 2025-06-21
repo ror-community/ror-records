@@ -1,0 +1,48 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/02832k114> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "2004"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2024-10-13"^^xsd:date ;
+    dct:modified "2024-10-14"^^xsd:date ;
+    org:alternativeName "S P Jain School of Global Management, Dubai"@en ; 
+    org:alternativeName "SP Jain Global, Dubai"@en ; 
+    org:alternativeName "SPJ Global, Dubai"@en ; 
+    schema:url <http://spjain.ae> ; 
+    schema:mainEntityOfPage <https://www.spjain.ae> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/S_P_Jain_School_of_Global_Management> ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01x3vbs59> ;
+        rdfs:label "S P Jain School of Global Management" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(55.33333 25)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Dubai" ;
+            schema:addressCountry "AE" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United Arab Emirates" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/292224/> ;
+    ] ; 
+    .

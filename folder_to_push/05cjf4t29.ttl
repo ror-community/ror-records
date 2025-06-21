@@ -1,0 +1,41 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/05cjf4t29> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "2005"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2024-10-13"^^xsd:date ;
+    dct:modified "2024-10-14"^^xsd:date ;
+    org:abbreviation "UPFIM"@es ; 
+    schema:url <http://upfim.edu.mx> ; 
+    schema:mainEntityOfPage <https://upfim.edu.mx> ;
+    owl:sameAs <https://es.wikipedia.org/wiki/Universidad_Polit%C3%A9cnica_de_Francisco_I._Madero> ; 
+    schema:sameAs <http://isni.org/isni/0000000403696648> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-99.08981 20.24568)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Tepatepec" ;
+            schema:addressCountry "MX" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Mexico" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3515909/> ;
+    ] ; 
+    .

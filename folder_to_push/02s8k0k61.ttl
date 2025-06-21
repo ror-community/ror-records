@@ -4,27 +4,59 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02s8k0k61> a org:Organization ;
-    rdfs:label "Gran Sasso National Laboratory" ;
-    schema:name "Gran Sasso National Laboratory" ;
+    rdfs:label "" ;
+    schema:name "" ;
     schema:foundingDate "1989"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "LNGS" ;
-    schema:url <http://www.lngs.infn.it/en> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Laboratori_Nazionali_del_Gran_Sasso> ;
+    org:classification "facility" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-14"^^xsd:date ;
+    org:alternativeName "Gran Sasso National Laboratories"@en ; 
+    org:alternativeName "Gran Sasso National Laboratory"@en ; 
+    org:alternativeName "INFN Gran Sasso National Laboratories"@en ; 
+    org:alternativeName "INFN Laboratori Nazionali del Gran Sasso"@it ; 
+    org:abbreviation "INFN-LNGS"@it ; 
+    org:abbreviation "LNGS"@None ; 
+    org:alternativeName "Laboratori Nazionali del Gran Sasso"@it ; 
+    org:alternativeName "National Institute for Nuclear Physics, Gran Sasso National Laboratories"@en ; 
+    schema:mainEntityOfPage <https://www.lnl.infn.it> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Laboratori_Nazionali_del_Gran_Sasso> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100015057> ;
+    schema:sameAs <https://grid.ac/institutions/grid.466877.c> ;
+    schema:sameAs <http://isni.org/isni/0000000122018832> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/005ta0471> ;
+        rdfs:label "Istituto Nazionale di Fisica Nucleare" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/043qcb444> ;
+        rdfs:label "Gran Sasso Science Institute" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(13.39954 42.35055)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(13.39954 42.35055)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "L’Aquila" ;
             schema:addressCountry "IT" ;
-            owl:sameAs <http://sws.geonames.org/3175121/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000122018832> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1799482> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Italy" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3175121/> ;
+    ] ; 
     .

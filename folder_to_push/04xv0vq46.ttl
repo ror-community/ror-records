@@ -4,26 +4,46 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/04xv0vq46> a org:Organization ;
     rdfs:label "National Center for Post Traumatic Stress Disorder" ;
     schema:name "National Center for Post Traumatic Stress Disorder" ;
     schema:foundingDate "1989"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "PTSD" ;
-    org:alternativeName "National Center for PTSD" ;
-    schema:url <http://www.ptsd.va.gov/> ; 
+    org:classification "facility" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-14"^^xsd:date ;
+    org:alternativeName "National Center for PTSD"@en ; 
+    org:abbreviation "PTSD"@None ; 
+    schema:mainEntityOfPage <https://www.ptsd.va.gov> ;
+    schema:sameAs <https://api.crossref.org/funders/100019609> ;
+    schema:sameAs <https://grid.ac/institutions/grid.429666.9> ;
+    schema:sameAs <http://isni.org/isni/0000000403745948> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02hd1sz82> ;
+        rdfs:label "Mental Illness Research, Education and Clinical Centers" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-72.31926 43.64896)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-72.31926 43.64896)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "White River Junction" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/5242889/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000403745948> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/5242889/> ;
+    ] ; 
     .

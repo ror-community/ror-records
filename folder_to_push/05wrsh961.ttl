@@ -4,25 +4,56 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/05wrsh961> a org:Organization ;
     rdfs:label "Dispositifs d'information et de communication à l'ère du numérique - Paris Ile-de-france" ;
     schema:name "Dispositifs d'information et de communication à l'ère du numérique - Paris Ile-de-france" ;
     schema:foundingDate "2020"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "DICEN-IDF" ;
-    org:alternativeName "Information and communication devices in the digital era - Paris Ile-de-France" ;
-    schema:url <https://www.dicen-idf.org> ; 
+    org:classification "facility" ; 
+    dct:created "2023-03-30"^^xsd:date ;
+    dct:modified "2024-10-14"^^xsd:date ;
+    org:abbreviation "DICEN-IDF"@None ; 
+    org:alternativeName "Dispositifs d'information et de communication à l'ère du numérique"@fr ; 
+    org:alternativeName "Information and communication devices in the digital era"@en ; 
+    org:alternativeName "Information and communication devices in the digital era - Paris Ile-de-France"@en ; 
+    schema:mainEntityOfPage <https://www.dicen-idf.org> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/013bkhk48> ;
+        rdfs:label "Université Paris Nanterre" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/03x42jk29> ;
+        rdfs:label "Université Gustave Eiffel" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/0175hh227> ;
+        rdfs:label "Conservatoire National des Arts et Métiers" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(2.3488 48.85341)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(2.3488 48.85341)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Paris" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2988507/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://www.wikidata.org/entity/Q51783085> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2988507/> ;
+    ] ; 
     .

@@ -1,0 +1,64 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/033wn8m60> a org:Organization ;
+    rdfs:label "Institute for Systems Engineering and Computers" ;
+    schema:name "Institute for Systems Engineering and Computers" ;
+    schema:foundingDate "1980"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "nonprofit" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-14"^^xsd:date ;
+    org:abbreviation "INESC"@None ; 
+    schema:mainEntityOfPage <http://www.inesc.pt/en/> ;
+    schema:sameAs <https://grid.ac/institutions/grid.464690.9> ;
+    schema:sameAs <http://isni.org/isni/0000000107544834> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05fa8ka61> ;
+        rdfs:label "INESC TEC" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04mqy3p58> ;
+        rdfs:label "Instituto de Engenharia de Sistemas e Computadores Investigação e Desenvolvimento" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/022mzwp71> ;
+        rdfs:label "Instituto de Engenharia de Sistemas e Computadores Microsistemas e Nanotecnologias" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00we1pa83> ;
+        rdfs:label "Instituto de Novas Tecnologias" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-9.13333 38.71667)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Lisbon" ;
+            schema:addressCountry "PT" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Portugal" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2267057/> ;
+    ] ; 
+    .

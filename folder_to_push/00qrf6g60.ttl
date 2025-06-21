@@ -4,25 +4,52 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/00qrf6g60> a org:Organization ;
-    rdfs:label "INFN Sezione di Lecce" ;
-    schema:name "INFN Sezione di Lecce" ;
+    rdfs:label "" ;
+    schema:name "" ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:alternativeName "Istituto Nazionale di Fisica Nucleare Sezione di Lecce" ;
-    schema:url <https://web.le.infn.it/> ; 
+    org:classification "facility" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-14"^^xsd:date ;
+    org:alternativeName "INFN Lecce"@it ; 
+    org:alternativeName "INFN Lecce Section"@en ; 
+    org:alternativeName "INFN Sezione di Lecce"@it ; 
+    org:abbreviation "INFN-LE"@it ; 
+    schema:url <http://le.infn.it> ; 
+    schema:mainEntityOfPage <https://web.le.infn.it> ;
+    schema:sameAs <https://grid.ac/institutions/grid.470680.d> ;
+    schema:sameAs <http://isni.org/isni/0000000417617699> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/005ta0471> ;
+        rdfs:label "Istituto Nazionale di Fisica Nucleare" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/03fc1k060> ;
+        rdfs:label "University of Salento" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(18.17244 40.35481)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(18.17244 40.35481)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Lecce" ;
             schema:addressCountry "IT" ;
-            owl:sameAs <http://sws.geonames.org/3174953/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000417617699> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q30265693> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Italy" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3174953/> ;
+    ] ; 
     .

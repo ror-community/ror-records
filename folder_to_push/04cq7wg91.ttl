@@ -1,0 +1,49 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/04cq7wg91> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "1912"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2024-10-13"^^xsd:date ;
+    dct:modified "2024-10-14"^^xsd:date ;
+    org:abbreviation "NMIT"@en ; 
+    org:alternativeName "Northern Melbourne Institute of TAFE"@en ; 
+    org:alternativeName "Northern Melbourne Institute of Technical and Further Education"@en ; 
+    schema:url <http://melbournepolytechnic.edu.au> ; 
+    schema:mainEntityOfPage <http://www.melbournepolytechnic.edu.au> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Melbourne_Polytechnic> ; 
+    schema:sameAs <http://isni.org/isni/0000000103907722> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02p34hm58> ;
+        rdfs:label "Fuzhou Melbourne Polytechnic" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(144.96332 -37.814)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Melbourne" ;
+            schema:addressCountry "AU" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Australia" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2158177/> ;
+    ] ; 
+    .

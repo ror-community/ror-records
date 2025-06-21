@@ -1,0 +1,53 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/02mh1d616> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "1997"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "facility" ; 
+    org:classification "funder" ; 
+    dct:created "2024-10-13"^^xsd:date ;
+    dct:modified "2024-10-14"^^xsd:date ;
+    org:alternativeName "NCTS Physics"@en ; 
+    org:alternativeName "NCTS Physics Division"@en ; 
+    org:alternativeName "National Center for Theoretical Sciences, Physics"@en ; 
+    org:alternativeName "Physics Division, National Center for Theoretical Sciences"@en ; 
+    org:alternativeName "國家理論中心物理組"@zh ; 
+    schema:url <http://phys.ncts.ntu.edu.tw> ; 
+    schema:mainEntityOfPage <https://phys.ncts.ntu.edu.tw> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/National_Center_for_Theoretical_Sciences%2C_Physics> ; 
+    schema:sameAs <https://api.crossref.org/funders/100009638> ;
+    schema:sameAs <http://isni.org/isni/0000000463589641> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02mfp0b67> ;
+        rdfs:label "National Center for Theoretical Sciences" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(121.53185 25.04776)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Taipei" ;
+            schema:addressCountry "TW" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Taiwan" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1668341/> ;
+    ] ; 
+    .

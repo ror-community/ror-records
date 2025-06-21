@@ -4,24 +4,50 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02wdzfm91> a org:Organization ;
     rdfs:label "Centro Siciliano di Fisica Nucleare e di Struttura della Materia" ;
     schema:name "Centro Siciliano di Fisica Nucleare e di Struttura della Materia" ;
     schema:foundingDate "1955"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "CSFNSM" ;
-    schema:url <http://csfnsm.ct.infn.it/csfnsm/index.php/en/> ; 
+    org:classification "facility" ; 
+    dct:created "2021-09-23"^^xsd:date ;
+    dct:modified "2024-10-14"^^xsd:date ;
+    org:alternativeName "INFN Centro Siciliano di Fisica Nucleare e di Struttura della Materia"@it ; 
+    org:abbreviation "INFN-CSFNSM"@it ; 
+    schema:url <http://csfnsm.ct.infn.it> ; 
+    schema:mainEntityOfPage <https://csfnsm.ct.infn.it> ;
+    schema:sameAs <https://grid.ac/institutions/grid.510931.f> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/005ta0471> ;
+        rdfs:label "Istituto Nazionale di Fisica Nucleare" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/03a64bh57> ;
+        rdfs:label "University of Catania" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(15.07041 37.49223)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(15.07041 37.49223)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Catania" ;
             schema:addressCountry "IT" ;
-            owl:sameAs <http://sws.geonames.org/2525068/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Italy" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2525068/> ;
+    ] ; 
     .

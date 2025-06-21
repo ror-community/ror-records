@@ -1,0 +1,41 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/04js4m423> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "1983"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2024-10-13"^^xsd:date ;
+    dct:modified "2024-10-14"^^xsd:date ;
+    org:abbreviation "FPN"@en ; 
+    schema:url <http://fpn.edu.ng> ; 
+    schema:mainEntityOfPage <https://fpn.edu.ng> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Federal_Polytechnic_Nasarawa> ; 
+    schema:sameAs <http://isni.org/isni/0000000417775064> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(7.59744 8.26937)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Nasarawa" ;
+            schema:addressCountry "NG" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Nigeria" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/7871272/> ;
+    ] ; 
+    .

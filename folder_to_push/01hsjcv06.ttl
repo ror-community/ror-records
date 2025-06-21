@@ -4,26 +4,46 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01hsjcv06> a org:Organization ;
     rdfs:label "Czech Academy of Sciences, Institute of Inorganic Chemistry" ;
     schema:name "Czech Academy of Sciences, Institute of Inorganic Chemistry" ;
     schema:foundingDate "1972"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "ÚACH AV ČR" ;
-    org:alternativeName "Institute of Inorganic Chemistry of the Czech Academy of Sciences" ;
-    schema:url <https://www.iic.cas.cz> ; 
+    org:classification "facility" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-14"^^xsd:date ;
+    org:alternativeName "Czech Acad Sci, Inst Inorg Chem"@en ; 
+    org:alternativeName "Institute of Inorganic Chemistry CAS"@en ; 
+    org:alternativeName "Institute of Inorganic Chemistry of the Czech Academy of Sciences"@en ; 
+    org:abbreviation "ÚACH AV ČR"@None ; 
+    schema:mainEntityOfPage <https://www.iic.cas.cz> ;
+    schema:sameAs <https://grid.ac/institutions/grid.435265.3> ;
+    schema:sameAs <http://isni.org/isni/000000040400798X> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/053avzc18> ;
+        rdfs:label "Czech Academy of Sciences" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(14.35733 50.17734)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(14.35733 50.17734)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Řež" ;
             schema:addressCountry "CZ" ;
-            owl:sameAs <http://sws.geonames.org/3066885/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/000000040400798X> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Czechia" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3066885/> ;
+    ] ; 
     .

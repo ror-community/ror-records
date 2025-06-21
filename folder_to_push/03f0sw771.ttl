@@ -1,0 +1,40 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/03f0sw771> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "2022"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "facility" ; 
+    dct:created "2024-10-13"^^xsd:date ;
+    dct:modified "2024-10-14"^^xsd:date ;
+    org:abbreviation "PRX"@en ; 
+    org:alternativeName "PRX Research and Development"@en ; 
+    schema:url <http://prxresearch.com> ; 
+    schema:mainEntityOfPage <https://www.prxresearch.com> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-96.58878 32.76212)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "City of Mesquite" ;
+            schema:addressCountry "US" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/7173852/> ;
+    ] ; 
+    .

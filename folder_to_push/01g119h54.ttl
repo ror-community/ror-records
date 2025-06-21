@@ -1,0 +1,38 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/01g119h54> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    org:status "active" ;
+    org:classification "company" ; 
+    dct:created "2024-10-13"^^xsd:date ;
+    dct:modified "2024-10-14"^^xsd:date ;
+    schema:url <http://logica-em.com> ; 
+    schema:mainEntityOfPage <https://www.logica-em.com> ;
+    schema:sameAs <http://isni.org/isni/0000000464183969> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-7.29677 38.13148)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Moura Municipality" ;
+            schema:addressCountry "PT" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Portugal" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/8010441/> ;
+    ] ; 
+    .

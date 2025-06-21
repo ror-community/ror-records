@@ -4,26 +4,51 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/037wpkx04> a org:Organization ;
     rdfs:label "University of Minho" ;
     schema:name "University of Minho" ;
     schema:foundingDate "1973"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    schema:url <http://www.uminho.pt/en> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Minho> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-14"^^xsd:date ;
+    schema:mainEntityOfPage <http://www.uminho.pt/en> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Minho> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100007319> ;
+    schema:sameAs <https://grid.ac/institutions/grid.10328.38> ;
+    schema:sameAs <http://isni.org/isni/000000012159175X> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/043ft3840> ;
+        rdfs:label "Centre for Research in Anthropology" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/059esff37> ;
+        rdfs:label "Instituto para a Sustentabilidade e Inovação em Estruturas de Engenharia" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-8.42005 41.55032)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-8.42005 41.55032)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Braga" ;
             schema:addressCountry "PT" ;
-            owl:sameAs <http://sws.geonames.org/2742032/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/000000012159175X> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q29673> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Portugal" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2742032/> ;
+    ] ; 
     .

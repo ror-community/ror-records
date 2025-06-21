@@ -4,27 +4,70 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/05xvt9f17> a org:Organization ;
     rdfs:label "Leiden University Medical Center" ;
     schema:name "Leiden University Medical Center" ;
     schema:foundingDate "1990"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Healthcare" ; 
-    org:abbreviation "LUMC" ;
-    schema:url <https://www.lumc.nl/?setlanguage=English&setcountry=en> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Leiden_University_Medical_Center> ;
+    org:classification "funder" ; 
+    org:classification "healthcare" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-14"^^xsd:date ;
+    org:abbreviation "LUMC"@None ; 
+    schema:mainEntityOfPage <https://www.lumc.nl/?setlanguage=English&setcountry=en> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Leiden_University_Medical_Center> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100005039> ;
+    schema:sameAs <https://grid.ac/institutions/grid.10419.3d> ;
+    schema:sameAs <http://isni.org/isni/0000000089452978> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04cm10r73> ;
+        rdfs:label "Jon J van Rood Centre for Clinical Transfusion Research" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02xmm1048> ;
+        rdfs:label "Willem-Alexander Kinderziekenhuis" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/027bh9e22> ;
+        rdfs:label "Leiden University" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05s4nk876> ;
+        rdfs:label "Endo-ERN" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05ahyhp31> ;
+        rdfs:label "Holland Particle Therapy Center" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(4.49306 52.15833)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(4.49306 52.15833)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Leiden" ;
             schema:addressCountry "NL" ;
-            owl:sameAs <http://sws.geonames.org/2751773/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000089452978> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q2406409> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "The Netherlands" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2751773/> ;
+    ] ; 
     .

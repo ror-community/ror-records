@@ -4,28 +4,53 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/00240q980> a org:Organization ;
     rdfs:label "University of Padua" ;
     schema:name "University of Padua" ;
     schema:foundingDate "1222"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "UNIPD" ;
-    org:alternativeName "Università di Padova" ;
-    schema:url <https://www.unipd.it/en/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Padua> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-14"^^xsd:date ;
+    org:abbreviation "UNIPD"@None ; 
+    org:alternativeName "Università di Padova"@it ; 
+    schema:mainEntityOfPage <https://www.unipd.it/en/> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Padua> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100003500> ;
+    schema:sameAs <https://grid.ac/institutions/grid.5608.b> ;
+    schema:sameAs <http://isni.org/isni/0000000417573470> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/0038zss60> ;
+        rdfs:label "European Marine Biological Resource Centre" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00z34yn88> ;
+        rdfs:label "Istituto Nazionale di Fisica Nucleare, Sezione di Padova" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(11.88586 45.40797)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(11.88586 45.40797)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Padua" ;
             schema:addressCountry "IT" ;
-            owl:sameAs <http://sws.geonames.org/3171728/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000417573470> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q193510> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Italy" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3171728/> ;
+    ] ; 
     .

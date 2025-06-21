@@ -4,25 +4,38 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/00nx7n658> a org:Organization ;
     rdfs:label "Osaka Women's and Children's Hospital" ;
     schema:name "Osaka Women's and Children's Hospital" ;
     schema:foundingDate "1974"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Healthcare" ; 
-    schema:url <https://www.wch.opho.jp/> ; 
+    org:classification "healthcare" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-14"^^xsd:date ;
+    org:alternativeName "Osaka Medical Center and Research Institute for Maternal and Child Health"@en ; 
+    org:alternativeName "大阪府立母子保健総合医療センター"@ja ; 
+    schema:mainEntityOfPage <https://www.wch.opho.jp/> ;
+    schema:sameAs <https://grid.ac/institutions/grid.416629.e> ;
+    schema:sameAs <http://isni.org/isni/0000000403772137> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(135.50218 34.69374)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(135.50107 34.69379)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Osaka" ;
             schema:addressCountry "JP" ;
-            owl:sameAs <http://sws.geonames.org/1853909/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000403772137> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q11441108> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Japan" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1853909/> ;
+    ] ; 
     .

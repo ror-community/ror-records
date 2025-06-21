@@ -1,0 +1,52 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/05cbrk226> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "2019"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "facility" ; 
+    dct:created "2024-10-13"^^xsd:date ;
+    dct:modified "2024-10-14"^^xsd:date ;
+    org:alternativeName "CiTCoM"@fr ; 
+    org:alternativeName "UMR 8038"@None ; 
+    schema:url <http://citcom.cnrs.fr> ; 
+    schema:mainEntityOfPage <https://www.citcom.cnrs.fr> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/05f82e368> ;
+        rdfs:label "Université Paris Cité" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02feahw73> ;
+        rdfs:label "Centre National de la Recherche Scientifique" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(2.3488 48.85341)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Paris" ;
+            schema:addressCountry "FR" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2988507/> ;
+    ] ; 
+    .

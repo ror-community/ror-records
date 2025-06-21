@@ -1,0 +1,44 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/01swcva92> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "2000"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2024-10-13"^^xsd:date ;
+    dct:modified "2024-10-14"^^xsd:date ;
+    org:abbreviation "CDUTETC"@en ; 
+    org:alternativeName "Chengdu University of Technology Engineering and Technical College"@en ; 
+    org:alternativeName "College of Engineering and Technology, Chengdu University of Technology"@en ; 
+    org:alternativeName "Engineering & Technical College of Chengdu University of Technology"@en ; 
+    org:alternativeName "Engineering and Technical College of Chengdu University of Technology"@en ; 
+    org:alternativeName "成理工程"@zh ; 
+    schema:url <http://cdutetc.cn> ; 
+    schema:mainEntityOfPage <http://www.cdutetc.cn> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(104.06667 30.66667)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Chengdu" ;
+            schema:addressCountry "CN" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "China" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1815286/> ;
+    ] ; 
+    .

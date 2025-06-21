@@ -1,0 +1,56 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/0120cx869> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "1953"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "facility" ; 
+    dct:created "2021-04-06"^^xsd:date ;
+    dct:modified "2024-10-14"^^xsd:date ;
+    org:alternativeName "Earth Science Institute"@en ; 
+    org:alternativeName "Earth Science Institute SAS"@en ; 
+    org:alternativeName "Ústav Vied o Zemi"@sk ; 
+    org:alternativeName "Ústav Vied o Zemi SAV"@sk ; 
+    org:alternativeName "Ústav vied o Zemi Slovenskej akadémie vied, v.v.i."@sk ; 
+    schema:url <http://geo.sav.sk> ; 
+    schema:mainEntityOfPage <https://geo.sav.sk> ;
+    schema:sameAs <https://grid.ac/institutions/grid.510256.5> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04bzszh50> ;
+        rdfs:label "Geophysical Division of the Earth Science Institute of the Slovak Academy of Sciences" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/03h7qq074> ;
+        rdfs:label "Slovak Academy of Sciences" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(17.10674 48.14816)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Bratislava" ;
+            schema:addressCountry "SK" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Slovakia" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3060972/> ;
+    ] ; 
+    .

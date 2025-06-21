@@ -4,27 +4,42 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/05mx85j86> a org:Organization ;
     rdfs:label "Parkinson's Foundation" ;
     schema:name "Parkinson's Foundation" ;
     schema:foundingDate "1957"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Nonprofit" ; 
-    org:abbreviation "PDF" ;
-    schema:url <https://www.parkinson.org/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Parkinson%27s_Foundation> ;
+    org:classification "funder" ; 
+    org:classification "nonprofit" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-10-14"^^xsd:date ;
+    org:abbreviation "PDF"@None ; 
+    org:alternativeName "Parkinson's Disease Foundation"@en ; 
+    schema:url <http://parkinson.org> ; 
+    schema:mainEntityOfPage <https://www.parkinson.org/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Parkinson%27s_Foundation> ; 
+    schema:sameAs <https://api.crossref.org/funders/100001288> ;
+    schema:sameAs <https://grid.ac/institutions/grid.453338.a> ;
+    schema:sameAs <http://isni.org/isni/0000000122201741> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-74.00597 40.71427)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-74.00597 40.71427)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "New York" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/5128581/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000122201741> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q7138530> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/5128581/> ;
+    ] ; 
     .
