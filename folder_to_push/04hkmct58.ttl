@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/04hkmct58> a org:Organization ;
+    rdfs:label "Coastal and Estuarine Research Federation" ;
+    schema:name "Coastal and Estuarine Research Federation" ;
+    schema:foundingDate "1971"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Nonprofit" ; 
+    org:abbreviation "CERF" ;
+    schema:url <https://www.cerf.science> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Coastal_and_Estuarine_Research_Federation> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-122.33207 47.60621)"^^geo:wktLiteral ;
+            schema:addressLocality "Seattle" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/5809844/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

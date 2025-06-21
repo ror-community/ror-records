@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/05rgwws51> a org:Organization ;
+    rdfs:label "Institute of Fluid Physics" ;
+    schema:name "Institute of Fluid Physics" ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    org:abbreviation "IFP" ;
+    org:alternativeName "China Academy of Engineering Physics, Institute of Fluid Physics" ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(104.68168 31.46784)"^^geo:wktLiteral ;
+            schema:addressLocality "Mianyang" ;
+            schema:addressCountry "CN" ;
+            owl:sameAs <http://sws.geonames.org/1800627/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000417693616> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q39900689> ;
+    .

@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/01y64my43> a org:Organization ;
+    rdfs:label "University at Buffalo, State University of New York" ;
+    schema:name "University at Buffalo, State University of New York" ;
+    schema:foundingDate "1846"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "UB" ;
+    org:alternativeName "SUNY Buffalo" ;
+    schema:url <https://www.buffalo.edu/> ; 
+    owl:sameAs <http://en.wikipedia.org/wiki/University_at_Buffalo> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-78.87837 42.88645)"^^geo:wktLiteral ;
+            schema:addressLocality "Buffalo" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/5110629/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000419369887> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q681025> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

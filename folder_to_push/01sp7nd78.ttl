@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/01sp7nd78> a org:Organization ;
+    rdfs:label "Portuguese Sea and Atmosphere Institute" ;
+    schema:name "Portuguese Sea and Atmosphere Institute" ;
+    schema:foundingDate "1991"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    org:abbreviation "IPMA" ;
+    schema:url <https://www.ipma.pt/en/oipma/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Instituto_Portugu%C3%AAs_do_Mar_e_da_Atmosfera> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-9.13333 38.71667)"^^geo:wktLiteral ;
+            schema:addressLocality "Lisbon" ;
+            schema:addressCountry "PT" ;
+            owl:sameAs <http://sws.geonames.org/2267057/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000403820653> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q1526902> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .
