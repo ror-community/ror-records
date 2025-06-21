@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/03y8p5m75> a org:Organization ;
+    rdfs:label "Ushio (Japan)" ;
+    schema:name "Ushio (Japan)" ;
+    schema:foundingDate "1964"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Company" ; 
+    schema:url <https://www.ushio.co.jp/en> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(139.69171 35.6895)"^^geo:wktLiteral ;
+            schema:addressLocality "Tokyo" ;
+            schema:addressCountry "JP" ;
+            owl:sameAs <http://sws.geonames.org/1850147/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000418080424> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

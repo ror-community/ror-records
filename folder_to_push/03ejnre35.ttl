@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/03ejnre35> a org:Organization ;
+    rdfs:label "Niğde University" ;
+    schema:name "Niğde University" ;
+    schema:foundingDate "1992"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:alternativeName "Niğde Üniversitesi" ;
+    schema:url <http://www.nigde.edu.tr/index.php?ln=en> ; 
+    owl:sameAs <http://en.wikipedia.org/wiki/Ni%C4%9Fde_University> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(34.67935 37.96583)"^^geo:wktLiteral ;
+            schema:addressLocality "Niğde" ;
+            schema:addressCountry "TR" ;
+            owl:sameAs <http://sws.geonames.org/303827/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000107008038> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q7042323> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

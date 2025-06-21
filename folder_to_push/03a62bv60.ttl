@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/03a62bv60> a org:Organization ;
+    rdfs:label "University of Malta" ;
+    schema:name "University of Malta" ;
+    schema:foundingDate "1769"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:alternativeName "L-Università ta' Malta" ;
+    schema:url <http://www.um.edu.mt/> ; 
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Malta> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(14.48278 35.8925)"^^geo:wktLiteral ;
+            schema:addressLocality "Imsida" ;
+            schema:addressCountry "MT" ;
+            owl:sameAs <http://sws.geonames.org/2562698/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000121769482> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q426045> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

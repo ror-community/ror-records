@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/04ewct822> a org:Organization ;
+    rdfs:label "Southwestern University of Finance and Economics" ;
+    schema:name "Southwestern University of Finance and Economics" ;
+    schema:foundingDate "1925"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "SWUFE" ;
+    schema:url <https://www.swufe.edu.cn/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Southwestern_University_of_Finance_and_Economics> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(104.06667 30.66667)"^^geo:wktLiteral ;
+            schema:addressLocality "Chengdu" ;
+            schema:addressCountry "CN" ;
+            owl:sameAs <http://sws.geonames.org/1815286/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000417612353> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q1107944> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

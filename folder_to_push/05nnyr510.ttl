@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/05nnyr510> a org:Organization ;
+    rdfs:label "University of Rajshahi" ;
+    schema:name "University of Rajshahi" ;
+    schema:foundingDate "1953"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:alternativeName "Raajshaahi Bish-shobid-daloy" ;
+    schema:url <http://www.ru.ac.bd/> ; 
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Rajshahi> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(88.60114 24.374)"^^geo:wktLiteral ;
+            schema:addressLocality "Rajshahi" ;
+            schema:addressCountry "BD" ;
+            owl:sameAs <http://sws.geonames.org/1185128/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000404517306> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q3350920> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

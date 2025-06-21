@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/05dmr4w13> a org:Organization ;
+    rdfs:label "Sultan Ageng Tirtayasa University" ;
+    schema:name "Sultan Ageng Tirtayasa University" ;
+    schema:foundingDate "1981"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "Untirta" ;
+    org:alternativeName "Tirtayasa University" ;
+    schema:url <http://untirta.ac.id> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Sultan_Ageng_Tirtayasa_University> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(106.15417 -6.11528)"^^geo:wktLiteral ;
+            schema:addressLocality "Serang" ;
+            schema:addressCountry "ID" ;
+            owl:sameAs <http://sws.geonames.org/1627549/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000417594255> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q7636602> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

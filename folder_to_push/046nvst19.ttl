@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/046nvst19> a org:Organization ;
+    rdfs:label "Norwegian Institute of Public Health" ;
+    schema:name "Norwegian Institute of Public Health" ;
+    schema:foundingDate "1929"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Government" ; 
+    org:abbreviation "NIPH" ;
+    org:alternativeName "Folkehelseinstituttet" ;
+    schema:url <http://www.fhi.no/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Norwegian_Institute_of_Public_Health> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(10.74609 59.91273)"^^geo:wktLiteral ;
+            schema:addressLocality "Oslo" ;
+            schema:addressCountry "NO" ;
+            owl:sameAs <http://sws.geonames.org/3143244/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000115414204> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q7061149> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/04xv0vq46> a org:Organization ;
+    rdfs:label "National Center for Post Traumatic Stress Disorder" ;
+    schema:name "National Center for Post Traumatic Stress Disorder" ;
+    schema:foundingDate "1989"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    org:abbreviation "PTSD" ;
+    org:alternativeName "National Center for PTSD" ;
+    schema:url <http://www.ptsd.va.gov/> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-72.31926 43.64896)"^^geo:wktLiteral ;
+            schema:addressLocality "White River Junction" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/5242889/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000403745948> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

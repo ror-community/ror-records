@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/04r8tsy16> a org:Organization ;
+    rdfs:label "National Museum of Nature and Science" ;
+    schema:name "National Museum of Nature and Science" ;
+    schema:foundingDate "1871"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Archive" ; 
+    org:alternativeName "Kokuritsu Kagaku Hakubutsukan" ;
+    schema:url <http://www.kahaku.go.jp/english/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/National_Museum_of_Nature_and_Science> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(139.69171 35.6895)"^^geo:wktLiteral ;
+            schema:addressLocality "Tokyo" ;
+            schema:addressCountry "JP" ;
+            owl:sameAs <http://sws.geonames.org/1850147/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q74940> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

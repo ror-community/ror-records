@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/03kr8x191> a org:Organization ;
+    rdfs:label "National University of Misiones" ;
+    schema:name "National University of Misiones" ;
+    schema:foundingDate "1973"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "UNAM" ;
+    schema:url <http://www.unam.edu.ar/> ; 
+    owl:sameAs <http://en.wikipedia.org/wiki/National_University_of_Misiones> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-55.89608 -27.36708)"^^geo:wktLiteral ;
+            schema:addressLocality "Posadas" ;
+            schema:addressCountry "AR" ;
+            owl:sameAs <http://sws.geonames.org/3429886/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000121798144> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q690146> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

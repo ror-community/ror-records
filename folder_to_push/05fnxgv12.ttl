@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/05fnxgv12> a org:Organization ;
+    rdfs:label "GLA University" ;
+    schema:name "GLA University" ;
+    schema:foundingDate "2010"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    schema:url <http://gla.ac.in/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/GLA_University> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(77.67215 27.5035)"^^geo:wktLiteral ;
+            schema:addressLocality "Mathura" ;
+            schema:addressCountry "IN" ;
+            owl:sameAs <http://sws.geonames.org/1263364/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000417742318> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q16979726> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/03t8gwj81> a org:Organization ;
+    rdfs:label "JECS Trust" ;
+    schema:name "JECS Trust" ;
+    schema:foundingDate "2007"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Other" ; 
+    org:alternativeName "Journal of ECerS Trust" ;
+    schema:url <http://www.jecstrust.org/en/> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(5.45626 50.62306)"^^geo:wktLiteral ;
+            schema:addressLocality "Mons-lez-Liège" ;
+            schema:addressCountry "BE" ;
+            owl:sameAs <http://sws.geonames.org/2790868/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

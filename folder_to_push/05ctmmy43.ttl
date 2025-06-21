@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/05ctmmy43> a org:Organization ;
+    rdfs:label "Universidade do Vale do Rio dos Sinos" ;
+    schema:name "Universidade do Vale do Rio dos Sinos" ;
+    schema:foundingDate "1969"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "UNISINOS" ;
+    schema:url <http://www.unisinos.br/> ; 
+    owl:sameAs <http://en.wikipedia.org/wiki/Universidade_do_Vale_do_Rio_dos_Sinos> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-51.14722 -29.76028)"^^geo:wktLiteral ;
+            schema:addressLocality "São Leopoldo" ;
+            schema:addressCountry "BR" ;
+            owl:sameAs <http://sws.geonames.org/3448622/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000118827290> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q7894410> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/03g4sde39> a org:Organization ;
+    rdfs:label "Scania (Sweden)" ;
+    schema:name "Scania (Sweden)" ;
+    schema:foundingDate "1891"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Company" ; 
+    org:alternativeName "AB Scania-Vabis" ;
+    schema:url <https://www.scania.com/world/#/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Scania_AB> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(17.62525 59.19554)"^^geo:wktLiteral ;
+            schema:addressLocality "Södertälje" ;
+            schema:addressCountry "SE" ;
+            owl:sameAs <http://sws.geonames.org/2676176/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000095127485> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q219960> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/04j14t006> a org:Organization ;
+    rdfs:label "Rede de Química e Tecnologia" ;
+    schema:name "Rede de Química e Tecnologia" ;
+    schema:foundingDate "2003"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Nonprofit" ; 
+    org:abbreviation "REQUIMTE" ;
+    schema:url <http://www.requimte.pt/> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-8.61099 41.14961)"^^geo:wktLiteral ;
+            schema:addressLocality "Porto" ;
+            schema:addressCountry "PT" ;
+            owl:sameAs <http://sws.geonames.org/2735943/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000449034607> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

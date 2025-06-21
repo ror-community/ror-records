@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/04m2hj141> a org:Organization ;
+    rdfs:label "National Institute of Meteorological Sciences" ;
+    schema:name "National Institute of Meteorological Sciences" ;
+    schema:foundingDate "1978"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    org:abbreviation "NIMS" ;
+    schema:url <http://www.nimr.go.kr/AE/MA/main.jsp> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(126.56181 33.25333)"^^geo:wktLiteral ;
+            schema:addressLocality "Seogwipo" ;
+            schema:addressCountry "KR" ;
+            owl:sameAs <http://sws.geonames.org/6621166/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000403719491> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

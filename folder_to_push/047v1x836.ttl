@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/047v1x836> a org:Organization ;
+    rdfs:label "Korea Carbon Capture & Sequestration R&D Center" ;
+    schema:name "Korea Carbon Capture & Sequestration R&D Center" ;
+    schema:foundingDate "2011"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    org:abbreviation "KCRC" ;
+    schema:url <http://dh120.myelhub.com/_ENG/html/main.html> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Korea_Carbon_Capture_%26_Sequestration_R%26D_Center> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(127.38493 36.34913)"^^geo:wktLiteral ;
+            schema:addressLocality "Daejeon" ;
+            schema:addressCountry "KR" ;
+            owl:sameAs <http://sws.geonames.org/1835235/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q6431604> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

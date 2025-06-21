@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/033ztpr93> a org:Organization ;
+    rdfs:label "Texas Tech University Health Sciences Center" ;
+    schema:name "Texas Tech University Health Sciences Center" ;
+    schema:foundingDate "1979"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "TTUHSC" ;
+    schema:url <http://www.ttuhsc.edu/lubbock/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Texas_Tech_University_Health_Sciences_Center> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-101.85517 33.57786)"^^geo:wktLiteral ;
+            schema:addressLocality "Lubbock" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/5525577/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000121793554> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q4119816> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

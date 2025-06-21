@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/053ax8j41> a org:Organization ;
+    rdfs:label "Ankang University" ;
+    schema:name "Ankang University" ;
+    schema:foundingDate "1958"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "AKU" ;
+    schema:url <http://www.aku.edu.cn/english/index_en.jsp?wbtreeid=1154> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Ankang_University> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(109.01722 32.68)"^^geo:wktLiteral ;
+            schema:addressLocality "Ankang" ;
+            schema:addressCountry "CN" ;
+            owl:sameAs <http://sws.geonames.org/1789065/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000417654377> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q15964716> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

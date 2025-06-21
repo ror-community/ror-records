@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/05f23gs03> a org:Organization ;
+    rdfs:label "Université franco-allemande" ;
+    schema:name "Université franco-allemande" ;
+    schema:foundingDate "1997"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "UFA" ;
+    org:alternativeName "Deutsch Französische Hochschule" ;
+    schema:url <https://www.dfh-ufa.org/startseite/> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(7.00982 49.23262)"^^geo:wktLiteral ;
+            schema:addressLocality "Saarbrücken" ;
+            schema:addressCountry "DE" ;
+            owl:sameAs <http://sws.geonames.org/2842647/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000417874329> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

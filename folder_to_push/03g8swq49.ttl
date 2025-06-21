@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/03g8swq49> a org:Organization ;
+    rdfs:label "Tennessee Department of Transportation" ;
+    schema:name "Tennessee Department of Transportation" ;
+    schema:foundingDate "1915"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Government" ; 
+    org:abbreviation "TDOT" ;
+    schema:url <http://www.tn.gov/tdot/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Tennessee_Department_of_Transportation> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-86.78444 36.16589)"^^geo:wktLiteral ;
+            schema:addressLocality "Nashville" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/4644585/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000406441405> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q7700070> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

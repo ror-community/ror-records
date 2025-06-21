@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/052em3f88> a org:Organization ;
+    rdfs:label "Kansas City University of Medicine and Biosciences" ;
+    schema:name "Kansas City University of Medicine and Biosciences" ;
+    schema:foundingDate "1916"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "KCU" ;
+    schema:url <http://www.kcumb.edu/> ; 
+    owl:sameAs <http://en.wikipedia.org/wiki/Kansas_City_University_of_Medicine_and_Biosciences> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-94.57857 39.09973)"^^geo:wktLiteral ;
+            schema:addressLocality "Kansas City" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/4393217/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000405395056> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q6364916> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

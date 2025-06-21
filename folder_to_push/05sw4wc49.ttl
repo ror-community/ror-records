@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/05sw4wc49> a org:Organization ;
+    rdfs:label "University of Osijek" ;
+    schema:name "University of Osijek" ;
+    schema:foundingDate "1975"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:alternativeName "Josip Juraj Strossmayer University of Osijek" ;
+    schema:url <http://www.unios.hr/?english&i=1004> ; 
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Osijek> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(18.69389 45.55111)"^^geo:wktLiteral ;
+            schema:addressLocality "Osijek" ;
+            schema:addressCountry "HR" ;
+            owl:sameAs <http://sws.geonames.org/3193935/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/000000011015399X> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q1708709> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/03nxfhe13> a org:Organization ;
+    rdfs:label "Baylor University Medical Center" ;
+    schema:name "Baylor University Medical Center" ;
+    schema:foundingDate "1903"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Healthcare" ; 
+    org:abbreviation "BUMC" ;
+    org:alternativeName "Baylor Dallas" ;
+    schema:url <http://www.baylorhealth.com/PhysiciansLocations/Dallas/Pages/Default.aspx> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Baylor_University_Medical_Center_at_Dallas> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-96.80667 32.78306)"^^geo:wktLiteral ;
+            schema:addressLocality "Dallas" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/4684888/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000121679807> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q4874615> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

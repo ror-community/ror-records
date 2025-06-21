@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/0543j5e78> a org:Organization ;
+    rdfs:label "Voronezh State University" ;
+    schema:name "Voronezh State University" ;
+    schema:foundingDate "1918"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "VSU" ;
+    schema:url <http://www.vsu.ru/#gsc.tab=0> ; 
+    owl:sameAs <http://en.wikipedia.org/wiki/Voronezh_State_University> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(39.1843 51.67204)"^^geo:wktLiteral ;
+            schema:addressLocality "Voronezh" ;
+            schema:addressCountry "RU" ;
+            owl:sameAs <http://sws.geonames.org/472045/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000110139370> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q1807470> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

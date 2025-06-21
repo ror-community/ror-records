@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/0556gk990> a org:Organization ;
+    rdfs:label "Touro University California" ;
+    schema:name "Touro University California" ;
+    schema:foundingDate "1997"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "TUC" ;
+    schema:url <http://www.tu.edu/> ; 
+    owl:sameAs <http://en.wikipedia.org/wiki/Touro_University_California> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-122.25664 38.10409)"^^geo:wktLiteral ;
+            schema:addressLocality "Vallejo" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/5405380/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000406236962> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q7829362> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

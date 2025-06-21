@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/05sjrb944> a org:Organization ;
+    rdfs:label "Menoufia University" ;
+    schema:name "Menoufia University" ;
+    schema:foundingDate "1976"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    schema:url <http://www.menofia.edu.eg/> ; 
+    owl:sameAs <http://en.wikipedia.org/wiki/Menoufia_University> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(31.00904 30.55258)"^^geo:wktLiteral ;
+            schema:addressLocality "Shibīn al Kawm" ;
+            schema:addressCountry "EG" ;
+            owl:sameAs <http://sws.geonames.org/349158/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000406214712> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q1163280> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

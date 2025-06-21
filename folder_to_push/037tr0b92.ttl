@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/037tr0b92> a org:Organization ;
+    rdfs:label "Zabol University of Medical Sciences" ;
+    schema:name "Zabol University of Medical Sciences" ;
+    schema:foundingDate "1960"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "ZUMS" ;
+    schema:url <http://www.zbmu.ac.ir/index.php?slc_lang=en&sid=1> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Zabol_Medical_Science_University> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(61.4949 31.0306)"^^geo:wktLiteral ;
+            schema:addressLocality "Zabol" ;
+            schema:addressCountry "IR" ;
+            owl:sameAs <http://sws.geonames.org/1113217/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/000000040384898X> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q16904255> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

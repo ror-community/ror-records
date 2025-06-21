@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/04c14rw28> a org:Organization ;
+    rdfs:label "Leibniz Institute for Educational Trajectories" ;
+    schema:name "Leibniz Institute for Educational Trajectories" ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    org:abbreviation "LIfBi" ;
+    schema:url <https://www.lifbi.de/en-us/home.aspx> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(10.90067 49.89873)"^^geo:wktLiteral ;
+            schema:addressLocality "Bamberg" ;
+            schema:addressCountry "DE" ;
+            owl:sameAs <http://sws.geonames.org/2952984/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000446847709> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

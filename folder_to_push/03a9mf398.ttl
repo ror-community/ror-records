@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/03a9mf398> a org:Organization ;
+    rdfs:label "Moscow State Pedagogical University" ;
+    schema:name "Moscow State Pedagogical University" ;
+    schema:foundingDate "1872"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:alternativeName "Moscow University for Women" ;
+    schema:url <http://eng.mpgu.edu/> ; 
+    owl:sameAs <http://en.wikipedia.org/wiki/Moscow_State_Pedagogical_University> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(37.61556 55.75222)"^^geo:wktLiteral ;
+            schema:addressLocality "Moscow" ;
+            schema:addressCountry "RU" ;
+            owl:sameAs <http://sws.geonames.org/524901/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000122264830> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q1778321> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .
