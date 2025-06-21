@@ -1,0 +1,61 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/05kt9ap64> a org:Organization ;
+    rdfs:label "Kindai University" ;
+    schema:name "Kindai University" ;
+    schema:foundingDate "1925"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-05-20"^^xsd:date ;
+    org:alternativeName "Kinki University"@en ; 
+    schema:mainEntityOfPage <http://www.kindai.ac.jp/english/> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Kindai_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/100012043> ;
+    schema:sameAs <https://grid.ac/institutions/grid.258622.9> ;
+    schema:sameAs <http://isni.org/isni/0000000419369967> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00qmnd673> ;
+        rdfs:label "Kindai University Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02fzdct21> ;
+        rdfs:label "Kindai University Sakai Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03vdgq770> ;
+        rdfs:label "Kindai University Nara Hospital" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(135.50107 34.69379)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Osaka" ;
+            schema:addressCountry "JP" ;
+            schema:addressRegion "Osaka" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Japan" ;
+                schema:containedInPlace [
+                    schema:name "Asia" ;
+                    schema:identifier "AS"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1853909/> ;
+    ] ; 
+    .

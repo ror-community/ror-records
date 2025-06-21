@@ -1,0 +1,58 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/05kyx6f64> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    org:status "active" ;
+    org:classification "government" ; 
+    dct:created "2025-05-19"^^xsd:date ;
+    dct:modified "2025-05-20"^^xsd:date ;
+    org:abbreviation "CASCOM"@en ; 
+    org:alternativeName "Combined Arms Support Command"@en ; 
+    org:alternativeName "United States Army Combined Arms Support Command"@en ; 
+    schema:mainEntityOfPage <https://www.army.mil/cascom/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/United_States_Army_Combined_Arms_Support_Command> ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01p1q1f66> ;
+        rdfs:label "Sustainment Center of Excellence" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02t7y5s37> ;
+        rdfs:label "U.S. Army Training and Doctrine Command" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02skkz355> ;
+        rdfs:label "Army Sustainment University" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-77.33279 37.23503)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Fort Gregg Adams" ;
+            schema:addressCountry "US" ;
+            schema:addressRegion "Virginia" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "North America" ;
+                    schema:identifier "NA"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/7267733/> ;
+    ] ; 
+    .

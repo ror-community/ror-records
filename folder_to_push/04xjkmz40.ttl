@@ -1,0 +1,41 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/04xjkmz40> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "1977"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-05-20"^^xsd:date ;
+    org:abbreviation "UC"@None ; 
+    org:alternativeName "Universidad Cuauhtémoc"@es ; 
+    schema:mainEntityOfPage <https://www.ucslp.edu.mx> ;
+    schema:sameAs <https://grid.ac/institutions/grid.441405.0> ;
+    schema:sameAs <http://isni.org/isni/000000040484370X> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-98.20346 19.03793)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Puebla City" ;
+            schema:addressCountry "MX" ;
+            schema:addressRegion "Puebla" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Mexico" ;
+                schema:containedInPlace [
+                    schema:name "North America" ;
+                    schema:identifier "NA"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3521081/> ;
+    ] ; 
+    .

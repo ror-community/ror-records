@@ -1,0 +1,48 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/0476hs695> a org:Organization ;
+    rdfs:label "Centro de Investigação em Biodiversidade e Recursos Genéticos" ;
+    schema:name "Centro de Investigação em Biodiversidade e Recursos Genéticos" ;
+    org:status "active" ;
+    org:classification "facility" ; 
+    dct:created "2023-12-20"^^xsd:date ;
+    dct:modified "2025-05-20"^^xsd:date ;
+    org:abbreviation "CIBIO"@None ; 
+    org:alternativeName "CIBIO – Research Centre in Biodiversity and Genetic Resources - InBIO Associate Laboratory"@en ; 
+    org:abbreviation "UP CIBIO"@pt ; 
+    org:alternativeName "Universidade do Porto Centro de Investigação em Biodiversidade e Recursos Genéticos"@pt ; 
+    schema:url <http://cibio.up.pt> ; 
+    schema:mainEntityOfPage <https://cibio.up.pt> ;
+    schema:sameAs <http://isni.org/isni/0000000459281951> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/043pwc612> ;
+        rdfs:label "Universidade do Porto" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-8.61099 41.14961)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Porto" ;
+            schema:addressCountry "PT" ;
+            schema:addressRegion "Porto" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Portugal" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2735943/> ;
+    ] ; 
+    .

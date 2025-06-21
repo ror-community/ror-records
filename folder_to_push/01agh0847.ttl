@@ -1,0 +1,54 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/01agh0847> a org:Organization ;
+    rdfs:label "Deutsche Gesetzliche Unfallversicherung" ;
+    schema:name "Deutsche Gesetzliche Unfallversicherung" ;
+    schema:foundingDate "2007"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "funder" ; 
+    org:classification "other" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-05-20"^^xsd:date ;
+    org:abbreviation "DGUV"@None ; 
+    schema:mainEntityOfPage <http://www.dguv.de/de/index.jsp> ;
+    schema:sameAs <https://api.crossref.org/funders/501100003417> ;
+    schema:sameAs <https://grid.ac/institutions/grid.424163.6> ;
+    schema:sameAs <http://isni.org/isni/0000000121805850> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03jqa2c59> ;
+        rdfs:label "Institute for Prevention and Occupational Medicine" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03pcpfy27> ;
+        rdfs:label "DGUV Hochschule - Hochschule der Gesetzlichen Unfallversicherung (HGU)" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(7.197 50.77538)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Sankt Augustin" ;
+            schema:addressCountry "DE" ;
+            schema:addressRegion "North Rhine-Westphalia" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Germany" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2841648/> ;
+    ] ; 
+    .

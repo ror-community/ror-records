@@ -1,0 +1,81 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/02rz0r794> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "1957"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "other" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-05-20"^^xsd:date ;
+    org:abbreviation "FLACSO"@None ; 
+    org:alternativeName "FLACSO Ecuador"@es ; 
+    org:alternativeName "Facultad Latinoamericana de Ciencias Sociales"@es ; 
+    org:alternativeName "Latin American Faculty of Social Sciences"@en ; 
+    schema:url <http://flacso.edu.ec> ; 
+    schema:mainEntityOfPage <https://www.flacso.edu.ec> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Latin_American_Social_Sciences_Institute> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.442260.6> ;
+    schema:sameAs <http://isni.org/isni/000000012173903X> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00xp3z794> ;
+        rdfs:label "Facultad Latinoamericana de Ciencias Argentina" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01ze10m80> ;
+        rdfs:label "Facultad Latinoamericana de Ciencias Costa Rica" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05tfr6j26> ;
+        rdfs:label "Facultad Latinoamericana de Ciencias Sociales República Dominicana" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03fqcyc11> ;
+        rdfs:label "Facultad Latinoamericana de Ciencias Sociales" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01ehk9611> ;
+        rdfs:label "Facultad Latinoamericana de Ciencias Sociales" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02wdjwg88> ;
+        rdfs:label "Facultad Latinoamericana de Ciencias México" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-78.52495 -0.22985)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Quito" ;
+            schema:addressCountry "EC" ;
+            schema:addressRegion "Pichincha" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Ecuador" ;
+                schema:containedInPlace [
+                    schema:name "South America" ;
+                    schema:identifier "SA"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3652462/> ;
+    ] ; 
+    .

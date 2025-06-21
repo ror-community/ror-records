@@ -1,0 +1,52 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/01v6shv96> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    org:status "active" ;
+    org:classification "facility" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-05-20"^^xsd:date ;
+    org:abbreviation "IRENav"@None ; 
+    schema:mainEntityOfPage <https://www.ecole-navale.fr/RECHERCHE%2C1803> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Naval_Academy_Research_Institute> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.469975.0> ;
+    schema:sameAs <http://isni.org/isni/0000000406228575> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/018pp1107> ;
+        rdfs:label "Arts et Métiers" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/030txnd05> ;
+        rdfs:label "École Navale" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-4.48628 48.39029)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Brest" ;
+            schema:addressCountry "FR" ;
+            schema:addressRegion "Brittany" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3030300/> ;
+    ] ; 
+    .

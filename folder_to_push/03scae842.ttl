@@ -1,0 +1,59 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/03scae842> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    org:status "active" ;
+    org:classification "government" ; 
+    dct:created "2025-03-17"^^xsd:date ;
+    dct:modified "2025-05-20"^^xsd:date ;
+    org:alternativeName "U.S. Special Operations Command"@en ; 
+    org:abbreviation "USSOCOM"@en ; 
+    schema:url <http://socom.mil> ; 
+    schema:mainEntityOfPage <https://www.socom.mil> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/United_States_Special_Operations_Command> ; 
+    schema:sameAs <http://isni.org/isni/0000000121831493> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/054z15n55> ;
+        rdfs:label "United States Naval Special Warfare Command" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/0447fe631> ;
+        rdfs:label "United States Department of Defense" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04zn7j940> ;
+        rdfs:label "Joint Special Operations University" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-82.50338 27.8472)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Macdill Air Force Base" ;
+            schema:addressCountry "US" ;
+            schema:addressRegion "Florida" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "North America" ;
+                    schema:identifier "NA"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/7267537/> ;
+    ] ; 
+    .

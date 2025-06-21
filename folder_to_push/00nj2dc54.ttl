@@ -1,0 +1,47 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/00nj2dc54> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "2012"^^xsd:gYear ;
+    org:status "inactive" ;
+    org:classification "government" ; 
+    dct:created "2025-05-19"^^xsd:date ;
+    dct:modified "2025-05-20"^^xsd:date ;
+    org:abbreviation "ASC"@en ; 
+    org:alternativeName "Aeronautical Systems Division"@en ; 
+    org:alternativeName "U.S. Air Force Aeronautical Systems Center"@en ; 
+    org:alternativeName "Wright Air Development Center"@en ; 
+    org:alternativeName "Wright Air Development Division"@en ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "successor" ;
+        org:member <https://ror.org/0595f4b08> ;
+        rdfs:label "U.S. Air Force Life Cycle Management Center" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-84.0368 39.82201)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Wright-Patterson Air Force Base" ;
+            schema:addressCountry "US" ;
+            schema:addressRegion "Ohio" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "North America" ;
+                    schema:identifier "NA"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/7701733/> ;
+    ] ; 
+    .

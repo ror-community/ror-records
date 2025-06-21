@@ -1,0 +1,143 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/00ppaw753> a org:Organization ;
+    rdfs:label "World Wide Fund for Nature" ;
+    schema:name "World Wide Fund for Nature" ;
+    schema:foundingDate "1961"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "funder" ; 
+    org:classification "nonprofit" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-05-20"^^xsd:date ;
+    org:abbreviation "WWF"@None ; 
+    org:alternativeName "WWF Schweiz"@de ; 
+    org:alternativeName "WWF Switzerland"@en ; 
+    org:alternativeName "World Wide Fund for Nature Switzerland"@en ; 
+    org:alternativeName "World Wildlife Fund"@en ; 
+    schema:mainEntityOfPage <https://www.wwf.ch> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/World_Wide_Fund_for_Nature> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100005201> ;
+    schema:sameAs <https://grid.ac/institutions/grid.468233.8> ;
+    schema:sameAs <http://isni.org/isni/0000000110874025> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01054tt62> ;
+        rdfs:label "Luc Hoffmann Institute" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0177jvw02> ;
+        rdfs:label "WWF Senegal" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/019z76p34> ;
+        rdfs:label "WWF Italia" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05067ar32> ;
+        rdfs:label "WWF Germany" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/001pprn90> ;
+        rdfs:label "WWF Tanzania" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05jfx6e51> ;
+        rdfs:label "WWF Colombia" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03dj0nw15> ;
+        rdfs:label "WWF Cameroon" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/011590k05> ;
+        rdfs:label "World Wildlife Fund" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/052y0z870> ;
+        rdfs:label "WWF-UK" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05dq15a76> ;
+        rdfs:label "WWF-Indonesia" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/020tdv696> ;
+        rdfs:label "World Wildlife Fund Canada" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/043798m03> ;
+        rdfs:label "Stiftelsen Världsnaturfonden WWF" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04q30vj37> ;
+        rdfs:label "WWF Danmark" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/010t4mz11> ;
+        rdfs:label "WWF Hungary" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00306vw82> ;
+        rdfs:label "World Wide Fund for Nature Japan" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01s8kfg79> ;
+        rdfs:label "WWF-Pakistan" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(8.55 47.36667)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Zurich" ;
+            schema:addressCountry "CH" ;
+            schema:addressRegion "Zurich" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Switzerland" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2657896/> ;
+    ] ; 
+    .

@@ -1,0 +1,41 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/03ed7y723> a org:Organization ;
+    rdfs:label "Ministry of the Interior" ;
+    schema:name "Ministry of the Interior" ;
+    org:status "active" ;
+    org:classification "government" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-05-20"^^xsd:date ;
+    org:alternativeName "Ministrstvo za notranje zadeve Republike Slovenije"@sl ; 
+    org:alternativeName "Ministry of the Interior of the Republic of Slovenia"@en ; 
+    schema:mainEntityOfPage <https://www.gov.si/en/state-authorities/ministries/ministry-of-the-interior/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Ministry_of_the_Interior_(Slovenia)> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100022618> ;
+    schema:sameAs <https://grid.ac/institutions/grid.436122.0> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(14.50513 46.05108)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Ljubljana" ;
+            schema:addressCountry "SI" ;
+            schema:addressRegion "Ljubljana" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Slovenia" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3196359/> ;
+    ] ; 
+    .

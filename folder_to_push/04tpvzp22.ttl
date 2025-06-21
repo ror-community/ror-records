@@ -1,0 +1,45 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/04tpvzp22> a org:Organization ;
+    rdfs:label "European Severe Storms Laboratory" ;
+    schema:name "European Severe Storms Laboratory" ;
+    org:status "active" ;
+    org:classification "nonprofit" ; 
+    dct:created "2021-09-23"^^xsd:date ;
+    dct:modified "2025-05-20"^^xsd:date ;
+    org:abbreviation "ESSL"@None ; 
+    schema:mainEntityOfPage <https://www.essl.org/cms/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/European_Severe_Storms_Laboratory> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.512288.4> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01w5pyt41> ;
+        rdfs:label "European Severe Storms Laboratory - Science and Training" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(11.2482 48.07452)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Weßling" ;
+            schema:addressCountry "DE" ;
+            schema:addressRegion "Bavaria" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Germany" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2810587/> ;
+    ] ; 
+    .

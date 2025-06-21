@@ -1,0 +1,93 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/03jnx2c74> a org:Organization ;
+    rdfs:label "Aeres University of Applied Sciences" ;
+    schema:name "Aeres University of Applied Sciences" ;
+    schema:foundingDate "2012"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2023-10-26"^^xsd:date ;
+    dct:modified "2025-05-20"^^xsd:date ;
+    org:alternativeName "Aeres UAS"@en ; 
+    schema:mainEntityOfPage <https://www.aeresuas.com> ;
+    owl:sameAs <https://nl.wikipedia.org/wiki/Aeres_Hogeschool> ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "predecessor" ;
+        org:member <https://ror.org/01xpgs822> ;
+        rdfs:label "Vilentum University of applied sciences" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "predecessor" ;
+        org:member <https://ror.org/04x99xv31> ;
+        rdfs:label "Stoas University of Applied Sciences" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/026e19k63> ;
+        rdfs:label "Stichting Aeres Groep" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(5.66667 51.97)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Wageningen" ;
+            schema:addressCountry "NL" ;
+            schema:addressRegion "Gelderland" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "The Netherlands" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2745088/> ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(5.71806 52.525)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Dronten" ;
+            schema:addressCountry "NL" ;
+            schema:addressRegion "Flevoland" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "The Netherlands" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2756559/> ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(5.21413 52.37025)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Almere Stad" ;
+            schema:addressCountry "NL" ;
+            schema:addressRegion "Flevoland" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "The Netherlands" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2759879/> ;
+    ] ; 
+    .

@@ -1,0 +1,55 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/04s60rj63> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "1970"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-05-20"^^xsd:date ;
+    org:alternativeName "La Surcolombiana"@es ; 
+    org:alternativeName "Surcolombian University"@en ; 
+    org:abbreviation "USCO"@None ; 
+    org:alternativeName "USCO University"@en ; 
+    org:alternativeName "Universidad Surcolombiana - Colombia"@es ; 
+    org:alternativeName "University of Surcolombia"@en ; 
+    schema:url <http://usco.edu.co> ; 
+    schema:mainEntityOfPage <https://www.usco.edu.co> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/South_Colombian_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100020905> ;
+    schema:sameAs <https://grid.ac/institutions/grid.440794.a> ;
+    schema:sameAs <http://isni.org/isni/0000000094095733> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03c81c376> ;
+        rdfs:label "Hospital Universitario de Neiva" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-75.30939 3.01441)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Neiva" ;
+            schema:addressCountry "CO" ;
+            schema:addressRegion "Huila Department" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Colombia" ;
+                schema:containedInPlace [
+                    schema:name "South America" ;
+                    schema:identifier "SA"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3673900/> ;
+    ] ; 
+    .

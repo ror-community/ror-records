@@ -1,0 +1,54 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/054bfvp24> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "1977"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "other" ; 
+    dct:created "2025-05-19"^^xsd:date ;
+    dct:modified "2025-05-20"^^xsd:date ;
+    org:abbreviation "CICOES"@en ; 
+    org:alternativeName "Cooperative Institute for Climate, Ocean, and Ecosystem Studies"@en ; 
+    org:alternativeName "Joint Institute for the Study of the Atmosphere and Ocean"@en ; 
+    schema:url <http://cicoes.uw.edu> ; 
+    schema:mainEntityOfPage <https://cicoes.uw.edu> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Cooperative_Institute_for_Climate%2C_Ocean%2C_and_Ecosystem_Studies> ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/00cvxb145> ;
+        rdfs:label "University of Washington" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02z5nhe81> ;
+        rdfs:label "National Oceanic and Atmospheric Administration" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-122.33207 47.60621)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Seattle" ;
+            schema:addressCountry "US" ;
+            schema:addressRegion "Washington" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "North America" ;
+                    schema:identifier "NA"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/5809844/> ;
+    ] ; 
+    .

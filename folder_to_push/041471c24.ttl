@@ -1,0 +1,51 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/041471c24> a org:Organization ;
+    rdfs:label "National Research Center for Hematology Russian Academy of Medical Sciences" ;
+    schema:name "National Research Center for Hematology Russian Academy of Medical Sciences" ;
+    schema:foundingDate "1926"^^xsd:gYear ;
+    org:status "withdrawn" ;
+    org:classification "facility" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-05-20"^^xsd:date ;
+    org:alternativeName "Hematological Scientific Center"@en ; 
+    schema:mainEntityOfPage <http://www.blood.ru/> ;
+    schema:sameAs <https://grid.ac/institutions/grid.419717.d> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/019zcmj26> ;
+        rdfs:label "Department of Medical Sciences" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "successor" ;
+        org:member <https://ror.org/015fskz95> ;
+        rdfs:label "National Medical Research Center for Hematology" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(37.61556 55.75222)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Moscow" ;
+            schema:addressCountry "RU" ;
+            schema:addressRegion "Moscow" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Russia" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/524901/> ;
+    ] ; 
+    .

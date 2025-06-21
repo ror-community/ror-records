@@ -1,0 +1,59 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/04x5wnb75> a org:Organization ;
+    rdfs:label "Academic Center for Dentistry Amsterdam" ;
+    schema:name "Academic Center for Dentistry Amsterdam" ;
+    schema:foundingDate "1984"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-05-20"^^xsd:date ;
+    org:abbreviation "ACTA"@None ; 
+    schema:url <http://acta.nl> ; 
+    schema:mainEntityOfPage <https://acta.nl> ;
+    schema:sameAs <https://grid.ac/institutions/grid.424087.d> ;
+    schema:sameAs <http://isni.org/isni/0000000102954797> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05grdyy37> ;
+        rdfs:label "Amsterdam University Medical Centers" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/008xxew50> ;
+        rdfs:label "Vrije Universiteit Amsterdam" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/04dkp9463> ;
+        rdfs:label "University of Amsterdam" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(4.88969 52.37403)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Amsterdam" ;
+            schema:addressCountry "NL" ;
+            schema:addressRegion "North Holland" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "The Netherlands" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2759794/> ;
+    ] ; 
+    .

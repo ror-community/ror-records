@@ -1,0 +1,58 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/00c7kvd80> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "1900"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-05-20"^^xsd:date ;
+    org:abbreviation "CMC"@None ; 
+    org:alternativeName "Christian Medical College & Hospital"@en ; 
+    org:alternativeName "ক্রিশ্চিয়ান মেডিকেল কলেজ এন্ড হসপিটাল"@bn ; 
+    org:alternativeName "கிருத்தவ மருத்துவக் கல்லூரி மற்றும் மருத்துவமனை"@ta ; 
+    schema:mainEntityOfPage <http://www.cmch-vellore.edu/> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Christian_Medical_College_%26_Hospital> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100005918> ;
+    schema:sameAs <https://grid.ac/institutions/grid.11586.3b> ;
+    schema:sameAs <http://isni.org/isni/0000000417678969> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/035b18p12> ;
+        rdfs:label "CBM Bethel Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00b3mhg89> ;
+        rdfs:label "Tamil Nadu Dr. M.G.R. Medical University" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(79.13255 12.9184)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Vellore" ;
+            schema:addressCountry "IN" ;
+            schema:addressRegion "Tamil Nadu" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "India" ;
+                schema:containedInPlace [
+                    schema:name "Asia" ;
+                    schema:identifier "AS"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1253286/> ;
+    ] ; 
+    .

@@ -1,0 +1,58 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/0427vvt16> a org:Organization ;
+    rdfs:label "Global Affairs Canada" ;
+    schema:name "Global Affairs Canada" ;
+    schema:foundingDate "1909"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "funder" ; 
+    org:classification "government" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-05-20"^^xsd:date ;
+    org:abbreviation "AMC"@None ; 
+    org:alternativeName "Department of External Affairs"@en ; 
+    org:alternativeName "Foreign Affairs, Trade and Development Canada"@en ; 
+    org:abbreviation "GAC"@None ; 
+    schema:mainEntityOfPage <http://www.international.gc.ca/international/index.aspx?lang=eng> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Global_Affairs_Canada> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100008627> ;
+    schema:sameAs <https://grid.ac/institutions/grid.454088.5> ;
+    schema:sameAs <http://isni.org/isni/0000000460372738> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03594dm11> ;
+        rdfs:label "Embassy of Canada in Washington, D.C" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/010q4q527> ;
+        rdfs:label "Government of Canada" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-75.69812 45.41117)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Ottawa" ;
+            schema:addressCountry "CA" ;
+            schema:addressRegion "Ontario" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Canada" ;
+                schema:containedInPlace [
+                    schema:name "North America" ;
+                    schema:identifier "NA"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/6094817/> ;
+    ] ; 
+    .

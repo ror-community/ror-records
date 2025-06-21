@@ -1,0 +1,44 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/04ck23c90> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "2008"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "government" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-05-20"^^xsd:date ;
+    org:abbreviation "MECC"@en ; 
+    org:alternativeName "Ministry of Environment"@en ; 
+    org:alternativeName "Ministry of Environment, Qatar"@en ; 
+    org:alternativeName "Qatar Ministry of Environment"@en ; 
+    schema:url <http://mecc.gov.qa> ; 
+    schema:mainEntityOfPage <https://www.mecc.gov.qa> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Ministry_of_Environment_and_Climate_Change_%28Qatar%29> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.466903.e> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(51.53096 25.28545)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Doha" ;
+            schema:addressCountry "QA" ;
+            schema:addressRegion "Baladīyat ad Dawḩah" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Qatar" ;
+                schema:containedInPlace [
+                    schema:name "Asia" ;
+                    schema:identifier "AS"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/290030/> ;
+    ] ; 
+    .

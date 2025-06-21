@@ -1,0 +1,55 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/03pcpfy27> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "1996"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2025-05-19"^^xsd:date ;
+    dct:modified "2025-05-20"^^xsd:date ;
+    org:alternativeName "DGUV Hochschule"@de ; 
+    org:alternativeName "DGUV University"@en ; 
+    org:abbreviation "HGU"@de ; 
+    org:alternativeName "Hochschule der Deutschen Gesetzlichen Unfallversicherung"@de ; 
+    org:alternativeName "Hochschule der Gesetzlichen Unfallversicherung"@de ; 
+    schema:mainEntityOfPage <https://www.dguv.de/hochschule/index.jsp> ;
+    owl:sameAs <https://de.wikipedia.org/wiki/Hochschule_der_Deutschen_Gesetzlichen_Unfallversicherung> ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/01agh0847> ;
+        rdfs:label "Deutsche Gesetzliche Unfallversicherung" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/0454e9996> ;
+        rdfs:label "Institut für Arbeitsschutz der Deutschen Gesetzlichen Unfallversicherung" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(9.70891 50.87197)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Bad Hersfeld" ;
+            schema:addressCountry "DE" ;
+            schema:addressRegion "Hesse" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Germany" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2953439/> ;
+    ] ; 
+    .
