@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/04w2d5e08> a org:Organization ;
+    rdfs:label "Textbook and Academic Authors Association" ;
+    schema:name "Textbook and Academic Authors Association" ;
+    org:status "active" ;
+    org:classification "Other" ; 
+    org:abbreviation "TAA" ;
+    org:alternativeName "Textbook & Academic Authors Association" ;
+    schema:url <https://www.taaonline.net> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-91.83516 44.22746)"^^geo:wktLiteral ;
+            schema:addressLocality "Cochrane" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/5249071/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q107379748> ;
+    .

@@ -8,12 +8,13 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 
 <https://ror.org/032hzqh22> a org:Organization ;
-    rdfs:label "Research Centre for Toxic Compounds in the Environment" ;
-    schema:name "Research Centre for Toxic Compounds in the Environment" ;
+    rdfs:label "RECETOX" ;
+    schema:name "RECETOX" ;
     org:status "active" ;
     org:classification "Facility" ; 
     org:abbreviation "RI" ;
-    schema:url <http://www.recetox.muni.cz/index-en.php?pg=research-infrastructure> ; 
+    org:alternativeName "Research Centre for Toxic Compounds in the Environment" ;
+    schema:url <https://www.recetox.muni.cz> ; 
     schema:location [
             a schema:Place ;
             geo:asWKT "POINT(16.60796 49.19522)"^^geo:wktLiteral ;
@@ -22,5 +23,7 @@
             owl:sameAs <http://sws.geonames.org/3078610/> ;
                 dct:license <http://creativecommons.org/licenses/by/3.0/> ;
             ] ; 
+    schema:sameAs <http://isni.org/isni/0000000502834452> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q36877336> ;
     schema:sameAs <https://grid.ac/institutions/g> ;
     .

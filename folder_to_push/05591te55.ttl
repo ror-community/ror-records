@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/05591te55> a org:Organization ;
+    rdfs:label "Ludwig-Maximilians-Universität München" ;
+    schema:name "Ludwig-Maximilians-Universität München" ;
+    schema:foundingDate "1472"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "LMU" ;
+    schema:url <http://www.en.uni-muenchen.de/index.html> ; 
+    owl:sameAs <http://en.wikipedia.org/wiki/Ludwig_Maximilian_University_of_Munich> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(11.57549 48.13743)"^^geo:wktLiteral ;
+            schema:addressLocality "Munich" ;
+            schema:addressCountry "DE" ;
+            owl:sameAs <http://sws.geonames.org/2867714/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/000000041936973X> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q55044> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

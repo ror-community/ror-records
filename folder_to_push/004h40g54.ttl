@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/004h40g54> a org:Organization ;
+    rdfs:label "Mehr Alborz University" ;
+    schema:name "Mehr Alborz University" ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "MAU" ;
+    schema:url <https://mehralborz.ac.ir> ; 
+    owl:sameAs <https://fa.wikipedia.org/wiki/%D8%AF%D8%A7%D9%86%D8%B4%DA%AF%D8%A7%D9%87_%D9%85%D9%87%D8%B1%D8%A7%D9%84%D8%A8%D8%B1%D8%B2> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(51.42151 35.69439)"^^geo:wktLiteral ;
+            schema:addressLocality "Tehran" ;
+            schema:addressCountry "IR" ;
+            owl:sameAs <http://sws.geonames.org/112931/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q16047236> ;
+    .

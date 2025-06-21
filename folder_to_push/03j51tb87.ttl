@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/03j51tb87> a org:Organization ;
+    rdfs:label "Vingroup (Vietnam)" ;
+    schema:name "Vingroup (Vietnam)" ;
+    schema:foundingDate "1993"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Company" ; 
+    org:alternativeName "Vingroup" ;
+    schema:url <https://vingroup.net> ; 
+    owl:sameAs <https://vi.wikipedia.org/wiki/T%E1%BA%ADp_%C4%91o%C3%A0n_Vingroup> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(105.84117 21.0245)"^^geo:wktLiteral ;
+            schema:addressLocality "Hanoi" ;
+            schema:addressCountry "VN" ;
+            owl:sameAs <http://sws.geonames.org/1581130/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q10831597> ;
+    .

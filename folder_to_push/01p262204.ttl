@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/01p262204> a org:Organization ;
+    rdfs:label "Ministry of Education" ;
+    schema:name "Ministry of Education" ;
+    schema:foundingDate "2013"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Government" ; 
+    org:abbreviation "MOE" ;
+    schema:url <http://english.moe.go.kr/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Ministry_of_Education_(South_Korea)> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(127.29223 36.59245)"^^geo:wktLiteral ;
+            schema:addressLocality "Sejong" ;
+            schema:addressCountry "KR" ;
+            owl:sameAs <http://sws.geonames.org/11523293/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q9404048> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

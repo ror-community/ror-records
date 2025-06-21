@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/04gkkrw50> a org:Organization ;
+    rdfs:label "Al-Saeed University" ;
+    schema:name "Al-Saeed University" ;
+    schema:foundingDate "2004"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:alternativeName "Al Saeed University" ;
+    schema:url <https://alsaeeduni.edu.ye> ; 
+    owl:sameAs <https://ar.wikipedia.org/wiki/%D8%AC%D8%A7%D9%85%D8%B9%D8%A9_%D8%A7%D9%84%D8%B3%D8%B9%D9%8A%D8%AF> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(44.02091 13.57952)"^^geo:wktLiteral ;
+            schema:addressLocality "Taiz" ;
+            schema:addressCountry "YE" ;
+            owl:sameAs <http://sws.geonames.org/70225/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q33888230> ;
+    .

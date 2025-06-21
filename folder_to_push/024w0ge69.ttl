@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/024w0ge69> a org:Organization ;
+    rdfs:label "Ministry of Health and Welfare" ;
+    schema:name "Ministry of Health and Welfare" ;
+    schema:foundingDate "1971"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Government" ; 
+    org:abbreviation "DOH" ;
+    org:alternativeName "Wèishēng Shǔ" ;
+    schema:url <http://www.mohw.gov.tw/EN/Ministry/Index.aspx> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Ministry_of_Health_and_Welfare_(Taiwan)> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(121.53185 25.04776)"^^geo:wktLiteral ;
+            schema:addressLocality "Taipei" ;
+            schema:addressCountry "TW" ;
+            owl:sameAs <http://sws.geonames.org/1668341/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q697240> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

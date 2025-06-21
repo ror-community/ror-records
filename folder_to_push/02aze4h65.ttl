@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/02aze4h65> a org:Organization ;
+    rdfs:label "North Carolina Agricultural and Technical State University" ;
+    schema:name "North Carolina Agricultural and Technical State University" ;
+    schema:foundingDate "1891"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:alternativeName "North Carolina A&T State University" ;
+    schema:url <http://www.ncat.edu/> ; 
+    owl:sameAs <http://en.wikipedia.org/wiki/North_Carolina_Agricultural_and_Technical_State_University> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-79.79198 36.07264)"^^geo:wktLiteral ;
+            schema:addressLocality "Greensboro" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/4469146/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000102874439> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q1476484> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

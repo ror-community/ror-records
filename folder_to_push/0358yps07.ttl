@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/0358yps07> a org:Organization ;
+    rdfs:label "Council of Agriculture" ;
+    schema:name "Council of Agriculture" ;
+    schema:foundingDate "1912"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Government" ; 
+    org:abbreviation "COA" ;
+    org:alternativeName "Nóngyè Wěiyuánhuì" ;
+    schema:url <http://eng.coa.gov.tw/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Council_of_Agriculture_(Republic_of_China)> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(121.53185 25.04776)"^^geo:wktLiteral ;
+            schema:addressLocality "Taipei" ;
+            schema:addressCountry "TW" ;
+            owl:sameAs <http://sws.geonames.org/1668341/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000119570060> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q11626125> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

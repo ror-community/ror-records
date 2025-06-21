@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/03b38v557> a org:Organization ;
+    rdfs:label "Colorado Department of Natural Resources" ;
+    schema:name "Colorado Department of Natural Resources" ;
+    org:status "active" ;
+    org:classification "Government" ; 
+    org:abbreviation "DNR" ;
+    org:alternativeName "Colorado DNR" ;
+    schema:url <https://dnr.colorado.gov> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Colorado_Department_of_Natural_Resources> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-104.9847 39.73915)"^^geo:wktLiteral ;
+            schema:addressLocality "Denver" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/5419384/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000406368973> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q5148792> ;
+    .

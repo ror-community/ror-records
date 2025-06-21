@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/04nrmhz52> a org:Organization ;
+    rdfs:label "Linden-Museum Stuttgart" ;
+    schema:name "Linden-Museum Stuttgart" ;
+    schema:foundingDate "1889"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Archive" ; 
+    org:alternativeName "Linden-Museum" ;
+    schema:url <https://www.lindenmuseum.de> ; 
+    owl:sameAs <https://de.wikipedia.org/wiki/Linden-Museum> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(9.17702 48.78232)"^^geo:wktLiteral ;
+            schema:addressLocality "Stuttgart" ;
+            schema:addressCountry "DE" ;
+            owl:sameAs <http://sws.geonames.org/2825297/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000109439077> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q454416> ;
+    .

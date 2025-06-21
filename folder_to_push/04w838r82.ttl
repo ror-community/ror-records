@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/04w838r82> a org:Organization ;
+    rdfs:label "Kupat Holim Meuchedet" ;
+    schema:name "Kupat Holim Meuchedet" ;
+    schema:foundingDate "1931"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Healthcare" ; 
+    org:alternativeName "Meuchedet" ;
+    schema:url <https://www.meuhedet.co.il> ; 
+    owl:sameAs <https://he.wikipedia.org/wiki/%D7%A7%D7%95%D7%A4%D7%AA_%D7%97%D7%95%D7%9C%D7%99%D7%9D_%D7%9E%D7%90%D7%95%D7%97%D7%93%D7%AA> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(34.78057 32.08088)"^^geo:wktLiteral ;
+            schema:addressLocality "Tel Aviv" ;
+            schema:addressCountry "IL" ;
+            owl:sameAs <http://sws.geonames.org/293397/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q2906716> ;
+    .
