@@ -1,0 +1,43 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/01h6z2q77> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    org:status "active" ;
+    org:classification "facility" ; 
+    dct:created "2024-07-08"^^xsd:date ;
+    dct:modified "2024-07-11"^^xsd:date ;
+    org:abbreviation "ERMES"@fr ; 
+    schema:mainEntityOfPage <https://univ-cotedazur.fr/laboratoires/e%CC%81quipe-de-recherche-sur-les-mutations-de-leurope-et-de-ses-socie%CC%81te%CC%81s-ermes> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/019tgvf94> ;
+        rdfs:label "Université Côte d'Azur" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(7.26608 43.70313)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Nice" ;
+            schema:addressCountry "FR" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2990440/> ;
+    ] ; 
+    .

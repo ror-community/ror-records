@@ -4,27 +4,142 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/017zqws13> a org:Organization ;
     rdfs:label "University of Minnesota" ;
     schema:name "University of Minnesota" ;
     schema:foundingDate "1851"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:alternativeName "University of Minnesota, Twin Cities" ;
-    schema:url <http://twin-cities.umn.edu/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Minnesota> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-07-11"^^xsd:date ;
+    org:alternativeName "University of Minnesota, Twin Cities"@en ; 
+    schema:mainEntityOfPage <http://twin-cities.umn.edu/> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Minnesota> ; 
+    schema:sameAs <https://api.crossref.org/funders/100007913> ;
+    schema:sameAs <https://grid.ac/institutions/grid.17635.36> ;
+    schema:sameAs <http://isni.org/isni/0000000419368657> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/034ebnm46> ;
+        rdfs:label "Minnesota Geological Survey" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02amckb22> ;
+        rdfs:label "Continental Scientific Drilling Facility" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03a976s92> ;
+        rdfs:label "Cedar Creek Long Term Ecological Research" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04sqxdt31> ;
+        rdfs:label "Minneapolis-St. Paul Long Term Ecological Research" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01zn7ya31> ;
+        rdfs:label "Bell Museum of Natural History" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0516b6a83> ;
+        rdfs:label "Minnesota Agricultural Experiment Station" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05x083d20> ;
+        rdfs:label "Masonic Cancer Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/03grvy078> ;
+        rdfs:label "University of Minnesota System" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03d543283> ;
+        rdfs:label "Children's Minnesota" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01k7a6660> ;
+        rdfs:label "Hennepin County Medical Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02ry60714> ;
+        rdfs:label "Minneapolis VA Health Care System" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05je2ma32> ;
+        rdfs:label "Minnesota Lions Eye Bank" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/04cm1q459> ;
+        rdfs:label "Minnesota Veterans Medical Research and Education Foundation" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00r520291> ;
+        rdfs:label "St. Joseph's Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05jc5ee02> ;
+        rdfs:label "University of Minnesota Children's Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03e1ayz78> ;
+        rdfs:label "University of Minnesota Medical Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03d78qr79> ;
+        rdfs:label "University of Minnesota Libraries Publishing" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-93.26384 44.97997)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-93.26384 44.97997)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Minneapolis" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/5037649/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000419368657> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q238101> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/5037649/> ;
+    ] ; 
     .

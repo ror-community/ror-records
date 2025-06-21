@@ -4,23 +4,47 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/00yczwp93> a org:Organization ;
     rdfs:label "Laboratoire en Sciences et Technologies de l'Information Géographique pour la ville intelligente et les territoires durables" ;
     schema:name "Laboratoire en Sciences et Technologies de l'Information Géographique pour la ville intelligente et les territoires durables" ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "LASTIG" ;
-    org:alternativeName "Laboratory on Geographic Information Science for sustainable development and smart cities" ;
-    schema:url <https://www.umr-lastig.fr> ; 
+    org:classification "facility" ; 
+    dct:created "2024-02-13"^^xsd:date ;
+    dct:modified "2024-07-11"^^xsd:date ;
+    org:abbreviation "LASTIG"@None ; 
+    org:alternativeName "Laboratory on Geographic Information Science for sustainable development and smart cities"@en ; 
+    schema:mainEntityOfPage <https://www.umr-lastig.fr> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/038k8pw28> ;
+        rdfs:label "École des Ingénieurs de la Ville de Paris" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/03r3n3715> ;
+        rdfs:label "Ecole Nationale des Sciences Géographiques" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(2.41579 48.83864)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(2.41579 48.83864)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Saint-Mandé" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2978621/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2978621/> ;
+    ] ; 
     .

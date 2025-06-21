@@ -4,27 +4,49 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/03ppaqb54> a org:Organization ;
-    rdfs:label "FIR (Institute for Industrial Management) at RWTH Aachen University" ;
-    schema:name "FIR (Institute for Industrial Management) at RWTH Aachen University" ;
+    rdfs:label "" ;
+    schema:name "" ;
     schema:foundingDate "1953"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Nonprofit" ; 
-    org:abbreviation "FIR" ;
-    org:alternativeName "FIR an der RWTH Aachen" ;
-    schema:url <https://www.fir.rwth-aachen.de> ; 
-    owl:sameAs <https://de.wikipedia.org/wiki/FIR_%28Verein%29> ;
+    org:classification "nonprofit" ; 
+    dct:created "2022-10-27"^^xsd:date ;
+    dct:modified "2024-07-11"^^xsd:date ;
+    org:abbreviation "FIR"@None ; 
+    org:alternativeName "FIR (Institute for Industrial Management) at RWTH Aachen University"@en ; 
+    org:alternativeName "FIR an der RWTH Aachen"@de ; 
+    org:alternativeName "FIR at RWTH Aachen University"@en ; 
+    org:alternativeName "FIR e. V. at RWTH Aachen University"@en ; 
+    org:alternativeName "Forschungsinstitut für Rationalisierung (FIR) e. V. an der RWTH Aachen"@de ; 
+    org:alternativeName "Forschungsinstitut für Rationalisierung e. V. an der RWTH Aachen"@de ; 
+    schema:mainEntityOfPage <https://www.fir.rwth-aachen.de> ;
+    owl:sameAs <https://de.wikipedia.org/wiki/FIR_%28Verein%29> ; 
+    schema:sameAs <http://isni.org/isni/0000000110871094> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/04xfq0f34> ;
+        rdfs:label "RWTH Aachen University" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(6.08342 50.77664)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(6.08342 50.77664)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Aachen" ;
             schema:addressCountry "DE" ;
-            owl:sameAs <http://sws.geonames.org/3247449/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000110871094> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1388638> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Germany" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3247449/> ;
+    ] ; 
     .

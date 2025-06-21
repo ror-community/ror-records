@@ -4,23 +4,47 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/00jsgkx16> a org:Organization ;
     rdfs:label "Lille School of Management Research Center" ;
     schema:name "Lille School of Management Research Center" ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "LSMRC" ;
-    schema:url <http://iaelille.fr/recherche/lille-school-management-research-center> ; 
+    org:classification "facility" ; 
+    dct:created "2023-03-30"^^xsd:date ;
+    dct:modified "2024-07-11"^^xsd:date ;
+    org:abbreviation "LSMRC"@None ; 
+    schema:mainEntityOfPage <http://iaelille.fr/recherche/lille-school-management-research-center> ;
+    schema:sameAs <http://isni.org/isni/0000000403872592> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02kzqn938> ;
+        rdfs:label "Université de Lille" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/036h8vg94> ;
+        rdfs:label "SKEMA Business School" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(3.05858 50.63297)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(3.05858 50.63297)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Lille" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2998324/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000403872592> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2998324/> ;
+    ] ; 
     .

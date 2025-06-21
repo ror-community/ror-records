@@ -4,26 +4,55 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/04dy97z61> a org:Organization ;
     rdfs:label "Laboratoire Interactions, Dynamiques et Lasers" ;
     schema:name "Laboratoire Interactions, Dynamiques et Lasers" ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "LIDYL" ;
-    org:alternativeName "Laboratory Interactions, Dynamics and Lasers" ;
-    schema:url <https://iramis.cea.fr/LIDYL/> ; 
+    org:classification "facility" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-07-11"^^xsd:date ;
+    org:abbreviation "LIDYL"@None ; 
+    org:alternativeName "Laboratory Interactions, Dynamics and Lasers"@en ; 
+    schema:mainEntityOfPage <https://iramis.cea.fr/LIDYL/> ;
+    schema:sameAs <https://grid.ac/institutions/grid.463977.8> ;
+    schema:sameAs <http://isni.org/isni/000000040373398X> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/03n15ch10> ;
+        rdfs:label "CEA Saclay" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/03xjwb503> ;
+        rdfs:label "Université Paris-Saclay" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/00cch2r34> ;
+        rdfs:label "Institut Rayonnement-Matière de Saclay" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(2.13333 48.68333)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(2.13333 48.68333)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Gif-sur-Yvette" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/3016078/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/000000040373398X> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q30262349> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3016078/> ;
+    ] ; 
     .

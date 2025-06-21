@@ -4,29 +4,70 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/045ktmd28> a org:Organization ;
     rdfs:label "Laboratoire National des Champs Magnétiques Intenses" ;
     schema:name "Laboratoire National des Champs Magnétiques Intenses" ;
     schema:foundingDate "2009"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "LNCMI" ;
-    org:alternativeName "National Laboratory for Intense Magnetic Fields" ;
-    schema:url <https://lncmi.cnrs.fr> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/LNCMI> ;
+    org:classification "facility" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-07-11"^^xsd:date ;
+    org:alternativeName "French National High Magnetic Field Laboratory"@en ; 
+    org:abbreviation "LNCMI"@None ; 
+    org:alternativeName "National Laboratory for Intense Magnetic Fields"@en ; 
+    schema:mainEntityOfPage <https://lncmi.cnrs.fr> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/LNCMI> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.462694.b> ;
+    schema:sameAs <http://isni.org/isni/0000000403692620> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/01h8pf755> ;
+        rdfs:label "Institut National des Sciences Appliquées de Toulouse" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/00z54nq84> ;
+        rdfs:label "Institut de Physique" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02v6kpv12> ;
+        rdfs:label "Université Toulouse III - Paul Sabatier" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02wq1s711> ;
+        rdfs:label "Fédération de recherche Matière et Interactions" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02rx3b187> ;
+        rdfs:label "Université Grenoble Alpes" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(5.71479 45.17869)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(5.71479 45.17869)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Grenoble" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/3014728/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000403692620> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q13421865> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q39912770> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3014728/> ;
+    ] ; 
     .

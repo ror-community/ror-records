@@ -4,26 +4,49 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01fmctt82> a org:Organization ;
     rdfs:label "Sciences Po Rennes" ;
     schema:name "Sciences Po Rennes" ;
     schema:foundingDate "1991"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:alternativeName "Institut d'études politiques de Rennes" ;
-    schema:url <https://www.sciencespo-rennes.fr> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Institut_d'%C3%A9tudes_politiques_de_Rennes> ;
+    org:classification "education" ; 
+    dct:created "2023-02-16"^^xsd:date ;
+    dct:modified "2024-07-11"^^xsd:date ;
+    org:alternativeName "Institut d'études politiques de Rennes"@fr ; 
+    schema:mainEntityOfPage <https://www.sciencespo-rennes.fr> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Institut_d'%C3%A9tudes_politiques_de_Rennes> ; 
+    schema:sameAs <http://isni.org/isni/0000000122936617> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00m4rxj18> ;
+        rdfs:label "Arènes: politique, santé publique, environnement, médias" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/015m7wh34> ;
+        rdfs:label "Université de Rennes" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-1.67429 48.11198)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-1.67429 48.11198)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Rennes" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2983990/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000122936617> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q3151965> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2983990/> ;
+    ] ; 
     .

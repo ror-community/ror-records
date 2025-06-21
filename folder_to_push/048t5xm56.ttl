@@ -4,25 +4,45 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/048t5xm56> a org:Organization ;
     rdfs:label "Kentucky Humanities Council" ;
     schema:name "Kentucky Humanities Council" ;
     schema:foundingDate "1992"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Nonprofit" ; 
-    org:abbreviation "KHC" ;
-    schema:url <https://www.kyhumanities.org/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Kentucky_Humanities_Council> ;
+    org:classification "funder" ; 
+    org:classification "nonprofit" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-07-11"^^xsd:date ;
+    org:abbreviation "KHC"@None ; 
+    schema:mainEntityOfPage <https://www.kyhumanities.org/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Kentucky_Humanities_Council> ; 
+    schema:sameAs <https://api.crossref.org/funders/100014294> ;
+    schema:sameAs <https://grid.ac/institutions/grid.446826.a> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02vdm1p28> ;
+        rdfs:label "National Endowment for the Humanities" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-84.47772 37.98869)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-84.47772 37.98869)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Lexington" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/4297983/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/4297983/> ;
+    ] ; 
     .

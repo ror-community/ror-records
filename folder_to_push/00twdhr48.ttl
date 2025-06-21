@@ -1,0 +1,46 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/00twdhr48> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    org:status "active" ;
+    org:classification "company" ; 
+    org:classification "funder" ; 
+    dct:created "2024-07-08"^^xsd:date ;
+    dct:modified "2024-07-11"^^xsd:date ;
+    org:abbreviation "KHNP"@None ; 
+    org:alternativeName "Korea Hydro & Nuclear Power"@en ; 
+    org:alternativeName "Korea Hydro & Nuclear Power Co Ltd"@en ; 
+    org:alternativeName "Korea Hydro & Nuclear Power Co."@en ; 
+    org:alternativeName "Korea Hydro and Nuclear Power Corporation"@en ; 
+    org:alternativeName "Korea Hydro and Nuclear Power Corporation Co., Ltd"@en ; 
+    schema:url <http://khnp.co.kr> ; 
+    schema:mainEntityOfPage <https://www.khnp.co.kr> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Korea_Hydro_%26_Nuclear_Power> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100018792> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(129.21167 35.84278)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Gyeongju" ;
+            schema:addressCountry "KR" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "South Korea" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1841603/> ;
+    ] ; 
+    .

@@ -4,27 +4,42 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/00zhs8v21> a org:Organization ;
-    rdfs:label "University of Ciego de Ávila" ;
-    schema:name "University of Ciego de Ávila" ;
+    rdfs:label "" ;
+    schema:name "" ;
     schema:foundingDate "1978"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "UNICA" ;
-    schema:url <http://www.unica.cu/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/University_of_Ciego_de_%C3%81vila> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-07-11"^^xsd:date ;
+    org:abbreviation "UNICA"@None ; 
+    org:alternativeName "University of Ciego de Ávila"@en ; 
+    schema:url <http://unica.cu> ; 
+    schema:mainEntityOfPage <https://www.unica.cu> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/University_of_Ciego_de_%C3%81vila> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100008230> ;
+    schema:sameAs <https://grid.ac/institutions/grid.441262.7> ;
+    schema:sameAs <http://isni.org/isni/0000000404018486> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-78.76194 21.84)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-78.76194 21.84)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Ciego de Ávila" ;
             schema:addressCountry "CU" ;
-            owl:sameAs <http://sws.geonames.org/3564178/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000404018486> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q7895266> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Cuba" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3564178/> ;
+    ] ; 
     .

@@ -1,0 +1,42 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/03swgmm98> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "1963"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2024-07-08"^^xsd:date ;
+    dct:modified "2024-07-11"^^xsd:date ;
+    org:abbreviation "RIEM"@en ; 
+    org:alternativeName "क्षेत्रीय शिक्षा संस्थान, मैसूरु"@kn ; 
+    org:alternativeName "ಪ್ರಾದೇಶಿಕ ಶಿಕ್ಷಣ ಸಂಸ್ಥೆ, ಮೈಸೂರು"@kn ; 
+    schema:url <http://riemysore.ac.in> ; 
+    schema:mainEntityOfPage <https://www.riemysore.ac.in> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Regional_Institute_of_Education%2C_Mysore> ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(76.63925 12.29791)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Mysuru" ;
+            schema:addressCountry "IN" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "India" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1262321/> ;
+    ] ; 
+    .

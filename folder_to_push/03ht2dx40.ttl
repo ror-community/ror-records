@@ -1,0 +1,46 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/03ht2dx40> a org:Organization ;
+    rdfs:label "Institut Pasteur du Cambodge" ;
+    schema:name "Institut Pasteur du Cambodge" ;
+    schema:foundingDate "1953"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "facility" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-07-11"^^xsd:date ;
+    org:abbreviation "IPC"@None ; 
+    schema:mainEntityOfPage <http://www.pasteur-kh.org/> ;
+    schema:sameAs <https://grid.ac/institutions/grid.418537.c> ;
+    schema:sameAs <http://isni.org/isni/000000047535978X> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/0495fxg12> ;
+        rdfs:label "Institut Pasteur" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(104.91601 11.56245)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Phnom Penh" ;
+            schema:addressCountry "KH" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Cambodia" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1821306/> ;
+    ] ; 
+    .

@@ -4,25 +4,55 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/049dk3691> a org:Organization ;
     rdfs:label "Marine Biodiversity Exploitation and Conservation" ;
     schema:name "Marine Biodiversity Exploitation and Conservation" ;
     schema:foundingDate "2015"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "MARBEC" ;
-    schema:url <http://www.umr-marbec.fr/en/?lang=fr> ; 
+    org:classification "facility" ; 
+    dct:created "2019-02-17"^^xsd:date ;
+    dct:modified "2024-07-11"^^xsd:date ;
+    org:abbreviation "MARBEC"@None ; 
+    schema:mainEntityOfPage <http://www.umr-marbec.fr/en/?lang=fr> ;
+    schema:sameAs <https://grid.ac/institutions/grid.503122.7> ;
+    schema:sameAs <http://isni.org/isni/0000000403828145> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/044jxhp58> ;
+        rdfs:label "Ifremer" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/05q3vnk25> ;
+        rdfs:label "Institut de Recherche pour le Développement" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/051escj72> ;
+        rdfs:label "Université de Montpellier" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(3.69278 43.4028)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(3.69278 43.4028)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Sète" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2974733/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000403828145> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2974733/> ;
+    ] ; 
     .

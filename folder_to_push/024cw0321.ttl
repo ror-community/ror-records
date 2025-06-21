@@ -1,0 +1,43 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/024cw0321> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    org:status "active" ;
+    org:classification "funder" ; 
+    org:classification "government" ; 
+    dct:created "2024-07-08"^^xsd:date ;
+    dct:modified "2024-07-11"^^xsd:date ;
+    org:abbreviation "CARM"@es ; 
+    org:alternativeName "Comunidad Autónoma de la Región de Murcia"@es ; 
+    org:alternativeName "Provincia de Murcia"@es ; 
+    org:alternativeName "Region of Murcia"@en ; 
+    schema:mainEntityOfPage <https://www.carm.es> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Region_of_Murcia> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100009569> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-1.13004 37.98704)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Murcia" ;
+            schema:addressCountry "ES" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Spain" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2513416/> ;
+    ] ; 
+    .

@@ -1,0 +1,49 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/00qa63322> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "1932"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "funder" ; 
+    org:classification "healthcare" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-07-11"^^xsd:date ;
+    org:abbreviation "ABVIMS"@en ; 
+    org:alternativeName "ABVIMS & Dr. RMLH"@en ; 
+    org:alternativeName "Atal Bihari Vajpayee Institute of Medical Sciences"@en ; 
+    org:alternativeName "Dr. Ram Manohar Lohia Hospital"@en ; 
+    org:abbreviation "RMLH"@en ; 
+    org:alternativeName "Willingdon Hospital"@en ; 
+    schema:url <http://rmlh.nic.in> ; 
+    schema:mainEntityOfPage <http://rmlh.nic.in> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Ram_Manohar_Lohia_Hospital> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100002955> ;
+    schema:sameAs <https://grid.ac/institutions/grid.414117.6> ;
+    schema:sameAs <http://isni.org/isni/0000000417676509> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(77.2148 28.62137)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "New Delhi" ;
+            schema:addressCountry "IN" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "India" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1261481/> ;
+    ] ; 
+    .

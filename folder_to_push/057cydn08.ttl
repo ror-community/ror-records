@@ -1,0 +1,46 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/057cydn08> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "1994"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-07-11"^^xsd:date ;
+    org:abbreviation "HUC"@None ; 
+    org:abbreviation "HUTB"@en ; 
+    org:abbreviation "HUTC"@None ; 
+    org:alternativeName "Hunan University of Commerce"@en ; 
+    org:alternativeName "Hunan University of Technology and Commerce"@en ; 
+    org:alternativeName "湖南商学院"@zh ; 
+    schema:url <http://hutb.edu.cn> ; 
+    schema:mainEntityOfPage <https://www.hutb.edu.cn> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Hunan_University_of_Technology_and_Commerce> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.443321.3> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(112.97087 28.19874)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Changsha" ;
+            schema:addressCountry "CN" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "China" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1815577/> ;
+    ] ; 
+    .

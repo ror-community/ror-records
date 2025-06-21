@@ -4,28 +4,629 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01n6r0e97> a org:Organization ;
     rdfs:label "Leibniz Association" ;
     schema:name "Leibniz Association" ;
     schema:foundingDate "1990"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Government" ; 
-    org:abbreviation "LG" ;
-    org:alternativeName "Wissenschaftsgemeinschaft Gottfried Wilhelm Leibniz" ;
-    schema:url <http://www.leibniz-gemeinschaft.de/en/home/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Leibniz_Association> ;
+    org:classification "funder" ; 
+    org:classification "government" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-07-11"^^xsd:date ;
+    org:abbreviation "LG"@None ; 
+    org:alternativeName "Wissenschaftsgemeinschaft Gottfried Wilhelm Leibniz"@de ; 
+    schema:mainEntityOfPage <http://www.leibniz-gemeinschaft.de/en/home/> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Leibniz_Association> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100001664> ;
+    schema:sameAs <https://grid.ac/institutions/grid.413453.4> ;
+    schema:sameAs <http://isni.org/isni/0000000122243060> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/010b6ag76> ;
+        rdfs:label "ARL – Academy for Territorial Development in the Leibniz Association" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01evwfd48> ;
+        rdfs:label "Bernhard Nocht Institute for Tropical Medicine" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/005xmsp39> ;
+        rdfs:label "Leibniz-Centre for Contemporary History" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02qnsw591> ;
+        rdfs:label "Centre for European Economic Research" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0186h8060> ;
+        rdfs:label "DWI – Leibniz Institute for Interactive Materials" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00a7n7g54> ;
+        rdfs:label "Deutsches Museum" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02hdxnq28> ;
+        rdfs:label "Deutsches Schiffahrtsmuseum" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0387prb75> ;
+        rdfs:label "FIZ Karlsruhe – Leibniz Institute for Information Infrastructure" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02be22443> ;
+        rdfs:label "Ferdinand-Braun-Institut" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01hnv8x68> ;
+        rdfs:label "Leibniz Institute for Educational Media | Georg Eckert Institute" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04ews3245> ;
+        rdfs:label "Deutsches Diabetes-Zentrum e.V." ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04565hy55> ;
+        rdfs:label "German Institute for Adult Education" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0050vmv35> ;
+        rdfs:label "German Institute for Economic Research" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00681ts17> ;
+        rdfs:label "German Institute for Global and Area Studies" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0327sr118> ;
+        rdfs:label "DIPF | Leibniz Institute for Research and Information in Education" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05xdczy51> ;
+        rdfs:label "German Institute of Human Nutrition" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03k7cjr94> ;
+        rdfs:label "Deutsches Bergbau-Museum Bochum" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03a96gc12> ;
+        rdfs:label "ZBW – Leibniz-Informationszentrum Wirtschaft" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04aj4c181> ;
+        rdfs:label "Technische Informationsbibliothek (TIB)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02f99v835> ;
+        rdfs:label "German Primate Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00shv0x82> ;
+        rdfs:label "German Rheumatism Research Centre" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02fv99722> ;
+        rdfs:label "Germanisches Nationalmuseum" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03gjpvv92> ;
+        rdfs:label "Halle Institute for Economic Research" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/055s37c97> ;
+        rdfs:label "Hans Knöll Institute" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/021eps607> ;
+        rdfs:label "Hans-Bredow-Institute" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02r2q1d96> ;
+        rdfs:label "Leibniz Institute of Virology (LIV)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00sngv739> ;
+        rdfs:label "Herder Institute" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/045495t75> ;
+        rdfs:label "Ifo Institute for Economic Research" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0489gab80> ;
+        rdfs:label "Innovations for High Performance Microelectronics" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/008pp7a77> ;
+        rdfs:label "Institut für Zeitgeschichte München–Berlin" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02skbsp27> ;
+        rdfs:label "Leibniz Institute of Plant Genetics and Crop Plant Research" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/032yym934> ;
+        rdfs:label "Kiel Institute for the World Economy" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01ygyzs83> ;
+        rdfs:label "Leibniz Centre for Agricultural Landscape Research" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/019w00969> ;
+        rdfs:label "Leibniz Centre for Tropical Marine Research" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02tyer376> ;
+        rdfs:label "Leibniz Institute DSMZ – German Collection of Microorganisms and Cell Cultures" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04d62a771> ;
+        rdfs:label "Leibniz Institute for Agricultural Engineering and Bioeconomy" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02jhqqg57> ;
+        rdfs:label "Leibniz Institute for Analytical Sciences - ISAS" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05txczf44> ;
+        rdfs:label "Leibniz Institute for Applied Geophysics" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03mrbr458> ;
+        rdfs:label "Leibniz Institute for Astrophysics Potsdam" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03xh9nq73> ;
+        rdfs:label "Leibniz Institute for Baltic Sea Research" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/029hg0311> ;
+        rdfs:label "Leibniz Institute for Catalysis" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/037p86664> ;
+        rdfs:label "Leibniz Institute for Crystal Growth" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/039s64n79> ;
+        rdfs:label "Leibniz Institute for East and Southeast European Studies" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04c14rw28> ;
+        rdfs:label "Leibniz Institute for Educational Trajectories" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05wxywg93> ;
+        rdfs:label "Leibniz Institute for Financial Research SAFE" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03j1wg370> ;
+        rdfs:label "Leibniz Institute for Jewish History and Culture – Simon Dubnow" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01xc6bj88> ;
+        rdfs:label "Leibniz-Institut für Werkstofforientierte Technologien - IWT" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01zwmgk08> ;
+        rdfs:label "Leibniz Institute for Neurobiology" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/004hd5y14> ;
+        rdfs:label "Leibniz Institute for Plasma Science and Technology" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02c22vc57> ;
+        rdfs:label "Leibniz Institute for Prevention Research and Epidemiology - BIPS" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0165gz615> ;
+        rdfs:label "Leibniz Institute for Psychology" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02wt6e634> ;
+        rdfs:label "Leibniz Institute for Regional Geography" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01rkqb281> ;
+        rdfs:label "Leibniz Institute for Research on Society and Space" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00q5t0010> ;
+        rdfs:label "Leibniz Institute for Resilience Research" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/008n8dd57> ;
+        rdfs:label "Leibniz Institute for Science and Mathematics Education" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04zb59n70> ;
+        rdfs:label "Leibniz Institute for Solid State and Materials Research" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03a5xsc56> ;
+        rdfs:label "Leibniz Institute for Tropospheric Research" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05nywn832> ;
+        rdfs:label "Leibniz Institute for Zoo and Wildlife Research" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00hvwkt50> ;
+        rdfs:label "Leibniz Institute for the German Language" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04tjfqn96> ;
+        rdfs:label "Leibniz Institute for the History and Culture of Eastern Europe (GWZO)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/018afyw53> ;
+        rdfs:label "GESIS - Leibniz-Institute for the Social Sciences" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03hkr1v69> ;
+        rdfs:label "Leibniz Institute of Agricultural Development in Transition Economies" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04enhpe73> ;
+        rdfs:label "Leibniz Institute of Atmospheric Physics at the Rostock University" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02t26g637> ;
+        rdfs:label "Leibniz Institute of Ecological Urban and Regional Development" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0163xqp73> ;
+        rdfs:label "Leibniz Institute of Environmental Medicine" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/059dyrr28> ;
+        rdfs:label "Leibniz Institute of European History" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01nftxb06> ;
+        rdfs:label "Leibniz Institute of Freshwater Ecology and Inland Fisheries" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02se0t636> ;
+        rdfs:label "Leibniz Institute of Photonic Technology" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01mzk5576> ;
+        rdfs:label "Leibniz Institute of Plant Biochemistry" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01tspta37> ;
+        rdfs:label "Leibniz Institute of Polymer Research" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04vx4mk32> ;
+        rdfs:label "Leibniz Institute of Surface Engineering" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01a62v145> ;
+        rdfs:label "Leibniz Institute of Vegetable and Ornamental Crops" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/039a53269> ;
+        rdfs:label "Leibniz Institute on Aging - Fritz Lipmann Institute (FLI)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05cj29x94> ;
+        rdfs:label "Leibniz Research Centre for Working Environment and Human Factors" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03wz9xk91> ;
+        rdfs:label "Leibniz-Centre General Linguistics" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/010s54n03> ;
+        rdfs:label "Leibniz-Forschungsinstitut für Molekulare Pharmakologie" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/006g31f33> ;
+        rdfs:label "Leibniz-Institut für Sonnenphysik" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03hv28176> ;
+        rdfs:label "Leibniz-Institut für Wissensmedien" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04sy7nb49> ;
+        rdfs:label "Leibniz-Institute for Food Systems Biology at the Technical University of Munich" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00g656d67> ;
+        rdfs:label "Leibniz-Institute for New Materials" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03ty9wj75> ;
+        rdfs:label "Leibniz-Zentrum Moderner Orient" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00bpta863> ;
+        rdfs:label "Leibniz-Zentrum für Literatur- und Kulturforschung" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/001zbj766> ;
+        rdfs:label "Mathematical Research Institute of Oberwolfach" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03jbf6q27> ;
+        rdfs:label "Max-Born-Institute for Nonlinear Optics and Short Pulse Spectroscopy" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/052d1a351> ;
+        rdfs:label "Museum für Naturkunde" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01mk1hj86> ;
+        rdfs:label "Paul Drude Institute for Solid State Electronics" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/021k10z87> ;
+        rdfs:label "Peace Research Institute Frankfurt" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03e8s1d88> ;
+        rdfs:label "Potsdam Institute for Climate Impact Research" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02pse8162> ;
+        rdfs:label "RWI – Leibniz Institute for Economic Research" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/036ragn25> ;
+        rdfs:label "Research Center Borstel - Leibniz Lung Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0483qx226> ;
+        rdfs:label "LEIZA - Leibniz-Zentrum für Archäologie" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00k4h2615> ;
+        rdfs:label "Schloss Dagstuhl – Leibniz Center for Informatics" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00xmqmx64> ;
+        rdfs:label "Senckenberg Society for Nature Research" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03k0z2z93> ;
+        rdfs:label "WZB Berlin Social Science Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00h1x4t21> ;
+        rdfs:label "Weierstrass Institute for Applied Analysis and Stochastics" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00wz4b049> ;
+        rdfs:label "Zoological Research Museum Alexander Koenig" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00xn1pr13> ;
+        rdfs:label "Leibniz Institute for Immunotherapy" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03k5bhd83> ;
+        rdfs:label "Leibniz Institute for the Analysis of Biodiversity Change" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(13.41053 52.52437)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(13.41053 52.52437)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Berlin" ;
             schema:addressCountry "DE" ;
-            owl:sameAs <http://sws.geonames.org/2950159/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000122243060> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q680090> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Germany" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2950159/> ;
+    ] ; 
     .

@@ -4,26 +4,42 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01xc5jm57> a org:Organization ;
     rdfs:label "Instituto Federal de Educação Ciência e Tecnologia da Paraíba" ;
     schema:name "Instituto Federal de Educação Ciência e Tecnologia da Paraíba" ;
     schema:foundingDate "2008"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "CEFET-PB" ;
-    org:alternativeName "Instituto Federal da Paraíba" ;
-    schema:url <http://www.ifpb.edu.br/> ; 
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-07-11"^^xsd:date ;
+    org:abbreviation "CEFET-PB"@None ; 
+    org:abbreviation "IFPB"@pt ; 
+    org:alternativeName "Instituto Federal da Paraíba"@pt ; 
+    schema:url <http://ifpb.edu.br> ; 
+    schema:mainEntityOfPage <https://www.ifpb.edu.br> ;
+    schema:sameAs <https://api.crossref.org/funders/100019080> ;
+    schema:sameAs <https://grid.ac/institutions/grid.454344.6> ;
+    schema:sameAs <http://isni.org/isni/000000009895745X> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-34.86306 -7.115)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-34.86306 -7.115)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "João Pessoa" ;
             schema:addressCountry "BR" ;
-            owl:sameAs <http://sws.geonames.org/3397277/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/000000009895745X> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Brazil" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3397277/> ;
+    ] ; 
     .

@@ -4,24 +4,47 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01rs1gy10> a org:Organization ;
     rdfs:label "CEA Cadarache" ;
     schema:name "CEA Cadarache" ;
     org:status "active" ;
-    org:classification "Government" ; 
-    schema:url <https://cadarache.cea.fr/cad/Pages/Activites/Biologie.aspx> ; 
+    org:classification "government" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-07-11"^^xsd:date ;
+    schema:mainEntityOfPage <https://cadarache.cea.fr/cad/Pages/Activites/Biologie.aspx> ;
+    schema:sameAs <https://grid.ac/institutions/grid.457335.3> ;
+    schema:sameAs <http://isni.org/isni/0000000406240072> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/00jjx8s55> ;
+        rdfs:label "Commissariat à l'Énergie Atomique et aux Énergies Alternatives" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/03cwzta72> ;
+        rdfs:label "Direction des énergies" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(5.81168 43.72484)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(5.81168 43.72484)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Vinon-sur-Verdon" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2968023/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000406240072> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q855102> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2968023/> ;
+    ] ; 
     .

@@ -4,24 +4,48 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/03vgfxd91> a org:Organization ;
     rdfs:label "Institut Pascal" ;
     schema:name "Institut Pascal" ;
     schema:foundingDate "2012"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    schema:url <http://www.ip.univ-bpclermont.fr/index.php/en/> ; 
+    org:classification "facility" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-07-11"^^xsd:date ;
+    schema:mainEntityOfPage <http://www.ip.univ-bpclermont.fr/index.php/en/> ;
+    schema:sameAs <https://grid.ac/institutions/grid.462221.1> ;
+    schema:sameAs <http://isni.org/isni/0000000406386434> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/00s19x989> ;
+        rdfs:label "CNRS Ingénierie" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/01a8ajp46> ;
+        rdfs:label "Université Clermont Auvergne" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(3.11078 45.75082)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(3.11078 45.75082)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Aubière" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/3036364/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000406386434> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3036364/> ;
+    ] ; 
     .

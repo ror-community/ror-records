@@ -1,0 +1,44 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/03gvsr558> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "1994"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-07-11"^^xsd:date ;
+    org:alternativeName "KAZGUU University"@None ; 
+    org:alternativeName "М.С.Нарықбаев атындағы КАЗГЮУ университеті"@kk ; 
+    org:alternativeName "Университет КАЗГЮУ"@ru ; 
+    org:alternativeName "Университет КАЗГЮУ имени М.С. Нарикбаева"@ru ; 
+    schema:url <http://kazguu.kz> ; 
+    schema:mainEntityOfPage <https://kazguu.kz> ;
+    schema:sameAs <https://grid.ac/institutions/grid.443540.2> ;
+    schema:sameAs <http://isni.org/isni/0000000404629607> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(71.44598 51.1801)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Astana" ;
+            schema:addressCountry "KZ" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Kazakhstan" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1526273/> ;
+    ] ; 
+    .

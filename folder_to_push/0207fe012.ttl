@@ -4,26 +4,40 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/0207fe012> a org:Organization ;
-    rdfs:label "Burgundy School of Business" ;
-    schema:name "Burgundy School of Business" ;
+    rdfs:label "" ;
+    schema:name "" ;
     schema:foundingDate "1899"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:alternativeName "École supérieure de commerce de Dijon-Bourgogne" ;
-    schema:url <https://www.bsb-education.com> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Burgundy_School_of_Business> ;
+    org:classification "education" ; 
+    dct:created "2023-07-27"^^xsd:date ;
+    dct:modified "2024-07-11"^^xsd:date ;
+    org:alternativeName "Burgundy Business School"@en ; 
+    org:alternativeName "Burgundy School of Management"@en ; 
+    org:alternativeName "ESC Dijon Bourgogne"@fr ; 
+    org:alternativeName "École supérieure de commerce de Dijon-Bourgogne"@fr ; 
+    schema:mainEntityOfPage <https://www.bsb-education.com> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Burgundy_School_of_Business> ; 
+    schema:sameAs <http://isni.org/isni/0000000406230122> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(5.01667 47.31667)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(5.01667 47.31667)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Dijon" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/3021372/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000406230122> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q3578434> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3021372/> ;
+    ] ; 
     .

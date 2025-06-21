@@ -1,0 +1,37 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/00za3wc71> a org:Organization ;
+    rdfs:label "Klinik und Poliklinik für Hautkrankheiten" ;
+    schema:name "Klinik und Poliklinik für Hautkrankheiten" ;
+    org:status "active" ;
+    org:classification "healthcare" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-07-11"^^xsd:date ;
+    schema:mainEntityOfPage <https://www2.medizin.uni-greifswald.de/index.php?id=880> ;
+    schema:sameAs <https://grid.ac/institutions/grid.491939.f> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(13.38786 54.09311)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Greifswald" ;
+            schema:addressCountry "DE" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Germany" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2917788/> ;
+    ] ; 
+    .

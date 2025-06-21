@@ -4,27 +4,382 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02vdm1p28> a org:Organization ;
     rdfs:label "National Endowment for the Humanities" ;
     schema:name "National Endowment for the Humanities" ;
     schema:foundingDate "1965"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Government" ; 
-    org:abbreviation "NEH" ;
-    schema:url <http://www.neh.gov/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/National_Endowment_for_the_Humanities> ;
+    org:classification "funder" ; 
+    org:classification "government" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-07-11"^^xsd:date ;
+    org:abbreviation "NEH"@None ; 
+    schema:mainEntityOfPage <http://www.neh.gov/> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/National_Endowment_for_the_Humanities> ; 
+    schema:sameAs <https://api.crossref.org/funders/100000103> ;
+    schema:sameAs <https://grid.ac/institutions/grid.422239.c> ;
+    schema:sameAs <http://isni.org/isni/0000000102819499> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01ntvtb47> ;
+        rdfs:label "Alabama Humanities Foundation" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03afwf105> ;
+        rdfs:label "Alaska Humanities Forum" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00zv6sd12> ;
+        rdfs:label "Amerika Samoa Humanities Council" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/04d9hcc21> ;
+        rdfs:label "Arizona Humanities" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/04e9t3w40> ;
+        rdfs:label "Arkansas Humanities Council" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/0027wax95> ;
+        rdfs:label "Cal Humanities" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/005wz0e45> ;
+        rdfs:label "Colorado Humanities" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02sbkmb73> ;
+        rdfs:label "Connecticut Humanities Council" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05njt8204> ;
+        rdfs:label "Delaware Humanities Forum" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03bkshf67> ;
+        rdfs:label "Florida Humanities Council" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02ke25a78> ;
+        rdfs:label "Fundación Puertorriqueña de las Humanidades" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/056qzgq67> ;
+        rdfs:label "Georgia Humanities Council" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03skccr46> ;
+        rdfs:label "Guam Humanities Council" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/04aeaje24> ;
+        rdfs:label "Hawai'i Council for the Humanities" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/0290xtv45> ;
+        rdfs:label "Humanities Council of South Carolina" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/0160ba067> ;
+        rdfs:label "Humanities Council of Washington" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01ty7bz40> ;
+        rdfs:label "Humanities Iowa" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02nz6zk20> ;
+        rdfs:label "Humanities Montana" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03c10r560> ;
+        rdfs:label "Humanities Nebraska" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05bab7f08> ;
+        rdfs:label "Humanities Tennessee" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00xdgaz28> ;
+        rdfs:label "Humanities Texas" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05ajmm513> ;
+        rdfs:label "Humanities Washington" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/0371hm317> ;
+        rdfs:label "Humanities West" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02jjxqt79> ;
+        rdfs:label "Idaho Humanities Council" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05nw4bs65> ;
+        rdfs:label "Illinois Humanities Council" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01q3rcc14> ;
+        rdfs:label "Indiana Humanities" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/0018tj392> ;
+        rdfs:label "Humanities Kansas" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/048t5xm56> ;
+        rdfs:label "Kentucky Humanities Council" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/032m0qa86> ;
+        rdfs:label "Louisiana Endowment for the Humanities" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/024kdkj87> ;
+        rdfs:label "Maine Humanities Council" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00h43mz31> ;
+        rdfs:label "Maryland Humanities Council" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05jkzmq27> ;
+        rdfs:label "Mass Humanities" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/009445d52> ;
+        rdfs:label "Michigan Humanities Council" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/015hnv758> ;
+        rdfs:label "Minnesota Humanities Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/04n1pzr73> ;
+        rdfs:label "Mississippi Humanities Council" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01vjab145> ;
+        rdfs:label "Missouri Humanities Council" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/016df9e78> ;
+        rdfs:label "Nevada Humanities" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/054bwsx29> ;
+        rdfs:label "New Hampshire Humanities Council" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/037er0m96> ;
+        rdfs:label "New Jersey Council for the Humanities" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03ew9k907> ;
+        rdfs:label "New Mexico Humanities Council" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00kqccw49> ;
+        rdfs:label "New York Council for the Humanities" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01r8ww931> ;
+        rdfs:label "North Carolina Humanities Council" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/04h1tgj82> ;
+        rdfs:label "Humanities North Dakota" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02vwv4x74> ;
+        rdfs:label "Ohio Humanities Council" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/04mz2k452> ;
+        rdfs:label "Oklahoma Humanities Council" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01fjvrm82> ;
+        rdfs:label "Omohundro Institute of Early American History and Culture" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/020m4fx82> ;
+        rdfs:label "Oregon Humanities" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00cc69h98> ;
+        rdfs:label "Pennsylvania Humanities Council" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/012mse022> ;
+        rdfs:label "Rhode Island Council for the Humanities" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02hewtj70> ;
+        rdfs:label "South Dakota Humanities Council" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/056rync30> ;
+        rdfs:label "Utah Humanities Council" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05c602238> ;
+        rdfs:label "Vermont Humanities" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00amdr662> ;
+        rdfs:label "Virgin Islands Humanities Council" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/04x361v68> ;
+        rdfs:label "Virginia Foundation for the Humanities" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/024hqb733> ;
+        rdfs:label "West Virginia Humanities Council" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03ccs9d57> ;
+        rdfs:label "Wisconsin Humanities Council" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02gpbfd77> ;
+        rdfs:label "Wyoming Humanities Council" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-77.03637 38.89511)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-77.03637 38.89511)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Washington" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/4140963/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000102819499> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q478050> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/4140963/> ;
+    ] ; 
     .

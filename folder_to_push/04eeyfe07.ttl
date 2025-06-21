@@ -4,23 +4,44 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/04eeyfe07> a org:Organization ;
     rdfs:label "Centre Méditerranéen de l’Environnement et de la Biodiversité" ;
     schema:name "Centre Méditerranéen de l’Environnement et de la Biodiversité" ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "CeMEB" ;
-    org:alternativeName "Mediterranean Centre for Environment and Biodiversity Laboratory of Excellence" ;
-    schema:url <https://labex-cemeb.org> ; 
+    org:classification "facility" ; 
+    org:classification "funder" ; 
+    dct:created "2023-09-14"^^xsd:date ;
+    dct:modified "2024-07-11"^^xsd:date ;
+    org:abbreviation "CeMEB"@None ; 
+    org:alternativeName "LabEx CeMEB"@fr ; 
+    org:alternativeName "Mediterranean Centre for Environment and Biodiversity Laboratory of Excellence"@en ; 
+    schema:mainEntityOfPage <https://labex-cemeb.org> ;
+    schema:sameAs <https://api.crossref.org/funders/100017605> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/051escj72> ;
+        rdfs:label "Université de Montpellier" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(3.87635 43.61093)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(3.87635 43.61093)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Montpellier" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2992166/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2992166/> ;
+    ] ; 
     .

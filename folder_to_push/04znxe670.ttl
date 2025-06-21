@@ -4,27 +4,41 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/04znxe670> a org:Organization ;
-    rdfs:label "University of Colima" ;
-    schema:name "University of Colima" ;
+    rdfs:label "" ;
+    schema:name "" ;
     schema:foundingDate "1940"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:alternativeName "People's University of Colima" ;
-    schema:url <http://www.ucol.mx/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Colima> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-07-11"^^xsd:date ;
+    org:alternativeName "People's University of Colima"@en ; 
+    schema:url <http://ucol.mx> ; 
+    schema:mainEntityOfPage <https://www.ucol.mx> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Colima> ; 
+    schema:sameAs <https://api.crossref.org/funders/100019264> ;
+    schema:sameAs <https://grid.ac/institutions/grid.412887.0> ;
+    schema:sameAs <http://isni.org/isni/0000000123758971> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-103.72714 19.24997)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-103.72714 19.24997)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Colima" ;
             schema:addressCountry "MX" ;
-            owl:sameAs <http://sws.geonames.org/4013516/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000123758971> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q2495731> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Mexico" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/4013516/> ;
+    ] ; 
     .

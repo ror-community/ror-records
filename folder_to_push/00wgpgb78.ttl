@@ -14,7 +14,7 @@
     org:status "active" ;
     org:classification "facility" ; 
     dct:created "2024-06-19"^^xsd:date ;
-    dct:modified "2024-06-20"^^xsd:date ;
+    dct:modified "2024-07-11"^^xsd:date ;
     org:abbreviation "JAI"@en ; 
     schema:url <http://adams-institute.ac.uk> ; 
     schema:mainEntityOfPage <https://adams-institute.ac.uk> ;
@@ -56,6 +56,24 @@
     ] ; 
     schema:location [
         a schema:Place ;
+        geo:asWKT "POINT(-0.55239 51.43158)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Egham" ;
+            schema:addressCountry "GB" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United Kingdom" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2650188/> ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
         geo:asWKT "POINT(-84.74523 39.507)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Oxford" ;
@@ -71,23 +89,5 @@
             ]
         ] ;
         owl:sameAs <http://sws.geonames.org/4520760/> ;
-    ] ; 
-    schema:location [
-        a schema:Place ;
-        geo:asWKT "POINT(-122.82509 49.10635)"^^geo:wktLiteral ;
-        schema:address [
-            schema:addressLocality "Surrey" ;
-            schema:addressCountry "CA" ;
-            schema:addressRegion "" ;
-            dct:spatial [
-                a dct:Location ;
-                schema:name "Canada" ;
-                schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
-                ]
-            ]
-        ] ;
-        owl:sameAs <http://sws.geonames.org/6159905/> ;
     ] ; 
     .

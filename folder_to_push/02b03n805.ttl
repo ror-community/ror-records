@@ -1,0 +1,39 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/02b03n805> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2024-07-08"^^xsd:date ;
+    dct:modified "2024-07-11"^^xsd:date ;
+    org:alternativeName "Khan Younis College of Science and Technology"@en ; 
+    org:alternativeName "Khan Younis University College of Science and Technology"@en ; 
+    schema:url <http://cst-kh.edu.ps> ; 
+    schema:mainEntityOfPage <https://cst-kh.edu.ps> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(34.30627 31.34018)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Khan Yunis" ;
+            schema:addressCountry "PS" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Palestine" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/281124/> ;
+    ] ; 
+    .

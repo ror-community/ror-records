@@ -4,24 +4,49 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/00k3ph542> a org:Organization ;
     rdfs:label "Complexité, Innovation et Activités Motrices et Sportives" ;
     schema:name "Complexité, Innovation et Activités Motrices et Sportives" ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "CIAMS" ;
-    org:alternativeName "Laboratoire CIAMS" ;
-    schema:url <https://www.faculte-sciences-sport.universite-paris-saclay.fr/recherche/presentation-unite-de-recherche-ciams> ; 
+    org:classification "facility" ; 
+    dct:created "2019-02-17"^^xsd:date ;
+    dct:modified "2024-07-11"^^xsd:date ;
+    org:abbreviation "CIAMS"@None ; 
+    org:alternativeName "Laboratoire CIAMS"@fr ; 
+    org:alternativeName "Laboratoire Complexité, Innovation et Activités Motrices et Sportives"@fr ; 
+    schema:mainEntityOfPage <https://www.faculte-sciences-sport.universite-paris-saclay.fr/recherche/presentation-unite-de-recherche-ciams> ;
+    schema:sameAs <https://grid.ac/institutions/grid.503134.0> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/014zrew76> ;
+        rdfs:label "Université d'Orléans" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/03xjwb503> ;
+        rdfs:label "Université Paris-Saclay" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(2.18727 48.69572)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(2.18727 48.69572)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Orsay" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2989204/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2989204/> ;
+    ] ; 
     .

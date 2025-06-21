@@ -4,26 +4,75 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01wjejq96> a org:Organization ;
     rdfs:label "Yonsei University" ;
     schema:name "Yonsei University" ;
     schema:foundingDate "1885"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    schema:url <http://www.yonsei.ac.kr/eng/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Yonsei_University> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-07-11"^^xsd:date ;
+    schema:mainEntityOfPage <http://www.yonsei.ac.kr/eng/> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Yonsei_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100002573> ;
+    schema:sameAs <https://grid.ac/institutions/grid.15444.30> ;
+    schema:sameAs <http://isni.org/isni/0000000404705454> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01w108f05> ;
+        rdfs:label "Building Blocks for Future Electronics Laboratory" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/04ajwkn20> ;
+        rdfs:label "Gangnam Severance Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/044kjp413> ;
+        rdfs:label "Severance Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01b346b72> ;
+        rdfs:label "Wonju Severance Christian Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/04sze3c15> ;
+        rdfs:label "Yonsei University Health System" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00tfaab58> ;
+        rdfs:label "Yonsei University College of Dentistry" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(126.9784 37.566)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(126.9784 37.566)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Seoul" ;
             schema:addressCountry "KR" ;
-            owl:sameAs <http://sws.geonames.org/1835848/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000404705454> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q39988> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "South Korea" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1835848/> ;
+    ] ; 
     .

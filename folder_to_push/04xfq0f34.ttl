@@ -4,28 +4,95 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/04xfq0f34> a org:Organization ;
     rdfs:label "RWTH Aachen University" ;
     schema:name "RWTH Aachen University" ;
     schema:foundingDate "1870"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "RWTH" ;
-    org:alternativeName "RWTH Aachen" ;
-    schema:url <http://www.rwth-aachen.de/cms/~a/root/lidx/1/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/RWTH_Aachen_University> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-07-11"^^xsd:date ;
+    org:abbreviation "RWTH"@None ; 
+    org:alternativeName "RWTH Aachen"@de ; 
+    schema:mainEntityOfPage <http://www.rwth-aachen.de/cms/~a/root/lidx/1/> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/RWTH_Aachen_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100007210> ;
+    schema:sameAs <https://grid.ac/institutions/grid.1957.a> ;
+    schema:sameAs <http://isni.org/isni/000000010728696X> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02gm5zw39> ;
+        rdfs:label "Universitätsklinikum Aachen" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/054zhq066> ;
+        rdfs:label "Bonn Aachen International Center for Information Technology" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/000p86k36> ;
+        rdfs:label "Oel-Waerme-Institut" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02r0e4r58> ;
+        rdfs:label "Jülich Aachen Research Alliance" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/04gw0z407> ;
+        rdfs:label "Aachener Centrum für Technologietransfer in der Ophthalmologie" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02nx8n605> ;
+        rdfs:label "TU9" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03hass884> ;
+        rdfs:label "Ernst Ruska Centre" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/001g2x261> ;
+        rdfs:label "Institut für Unternehmenskybernetik" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03ppaqb54> ;
+        rdfs:label "FIR e. V. an der RWTH Aachen" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(6.08342 50.77664)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(6.08342 50.77664)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Aachen" ;
             schema:addressCountry "DE" ;
-            owl:sameAs <http://sws.geonames.org/3247449/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/000000010728696X> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q273263> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Germany" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3247449/> ;
+    ] ; 
     .

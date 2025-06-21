@@ -1,0 +1,42 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/00e59cf80> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "2008"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2024-07-08"^^xsd:date ;
+    dct:modified "2024-07-11"^^xsd:date ;
+    org:abbreviation "ITSNa"@es ; 
+    org:alternativeName "TecNM Campus Instituto Tecnológico de Naranjos"@es ; 
+    org:alternativeName "Tecnologico Nacional de Mexico Campus de Naranjos"@es ; 
+    schema:url <http://itsna.edu.mx> ; 
+    schema:mainEntityOfPage <https://www.itsna.edu.mx> ;
+    schema:sameAs <http://isni.org/isni/0000000446794758> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-97.68656 21.35087)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Naranjos" ;
+            schema:addressCountry "MX" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Mexico" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3522804/> ;
+    ] ; 
+    .

@@ -4,27 +4,62 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/05r7z1k40> a org:Organization ;
     rdfs:label "NOAA National Marine Fisheries Service Northwest Fisheries Science Center" ;
     schema:name "NOAA National Marine Fisheries Service Northwest Fisheries Science Center" ;
     schema:foundingDate "2000"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Government" ; 
-    org:abbreviation "NWFSC" ;
-    org:alternativeName "NOAA NMFS Northwest Fisheries Science Center" ;
-    schema:url <http://www.nwfsc.noaa.gov/> ; 
+    org:classification "funder" ; 
+    org:classification "government" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-07-11"^^xsd:date ;
+    org:abbreviation "NMFS NWFSC"@None ; 
+    org:alternativeName "NOAA NMFS Northwest Fisheries Science Center"@en ; 
+    org:abbreviation "NOAA NWFSC"@None ; 
+    org:alternativeName "NW Fisheries Science Center"@en ; 
+    org:abbreviation "NWFSC"@None ; 
+    org:alternativeName "Northwest Fisheries Center"@en ; 
+    org:alternativeName "U.S. National Marine Fisheries Service Northwest Fisheries Center"@en ; 
+    org:alternativeName "U.S. National Marine Fisheries Service Northwest Fisheries Science Center"@en ; 
+    org:alternativeName "U.S. Northwest Fisheries Science Center"@en ; 
+    org:alternativeName "United States National Marine Fisheries Service Northwest Fisheries Center"@en ; 
+    org:alternativeName "United States National Marine Fisheries Service Northwest Fisheries Science Center"@en ; 
+    org:alternativeName "United States Northwest Fisheries Science Center"@en ; 
+    schema:mainEntityOfPage <http://www.nwfsc.noaa.gov/> ;
+    schema:sameAs <https://api.crossref.org/funders/100015570> ;
+    schema:sameAs <https://grid.ac/institutions/grid.420104.3> ;
+    schema:sameAs <http://isni.org/isni/0000000115029269> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/033mqx355> ;
+        rdfs:label "NOAA National Marine Fisheries Service" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02nc0ck44> ;
+        rdfs:label "NOAA National Marine Fisheries Service Northeast Fisheries Science Center" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-122.33207 47.60621)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-122.33207 47.60621)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Seattle" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/5809844/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000115029269> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q30282379> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/5809844/> ;
+    ] ; 
     .

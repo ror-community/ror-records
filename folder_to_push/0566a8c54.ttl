@@ -1,0 +1,149 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/0566a8c54> a org:Organization ;
+    rdfs:label "University of North Carolina System" ;
+    schema:name "University of North Carolina System" ;
+    schema:foundingDate "1789"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-07-11"^^xsd:date ;
+    org:alternativeName "UNC System"@en ; 
+    schema:mainEntityOfPage <https://www.northcarolina.edu/> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_North_Carolina> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.410711.2> ;
+    schema:sameAs <http://isni.org/isni/0000000110341720> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/051m4vc48> ;
+        rdfs:label "Appalachian State University" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01vx35703> ;
+        rdfs:label "East Carolina University" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02n5cs023> ;
+        rdfs:label "Elizabeth City State University" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03rj92e31> ;
+        rdfs:label "Fayetteville State University" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02aze4h65> ;
+        rdfs:label "North Carolina Agricultural and Technical State University" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/051r3tx83> ;
+        rdfs:label "North Carolina Central University" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03zbydc22> ;
+        rdfs:label "North Carolina School of Science and Mathematics" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04tj63d06> ;
+        rdfs:label "North Carolina State University" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01fqs5523> ;
+        rdfs:label "Pisgah Astronomical Research Institute" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01vfsab41> ;
+        rdfs:label "University of North Carolina School of the Arts" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02t0qr014> ;
+        rdfs:label "University of North Carolina Wilmington" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/017c6at71> ;
+        rdfs:label "University of North Carolina at Asheville" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0130frc33> ;
+        rdfs:label "University of North Carolina at Chapel Hill" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04dawnj30> ;
+        rdfs:label "University of North Carolina at Charlotte" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04fnxsj42> ;
+        rdfs:label "University of North Carolina at Greensboro" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05pckj715> ;
+        rdfs:label "University of North Carolina at Pembroke" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/010h78f45> ;
+        rdfs:label "Western Carolina University" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/049yc0897> ;
+        rdfs:label "Winston-Salem State University" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-78.63861 35.7721)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Raleigh" ;
+            schema:addressCountry "US" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/4487042/> ;
+    ] ; 
+    .

@@ -1,0 +1,41 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/0479azd18> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "1993"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2024-07-08"^^xsd:date ;
+    dct:modified "2024-07-11"^^xsd:date ;
+    org:alternativeName "University of Yaoundé II"@en ; 
+    schema:url <http://univ-yaounde2.org> ; 
+    schema:mainEntityOfPage <https://www.univ-yaounde2.org> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/University_of_Yaound%C3%A9_II> ; 
+    schema:sameAs <http://isni.org/isni/0000000121934978> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(11.6 3.98333)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Okoa" ;
+            schema:addressCountry "CM" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Cameroon" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2223226/> ;
+    ] ; 
+    .

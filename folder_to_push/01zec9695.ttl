@@ -4,23 +4,41 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01zec9695> a org:Organization ;
     rdfs:label "Center for Global Change and Sustainability" ;
     schema:name "Center for Global Change and Sustainability" ;
     org:status "active" ;
-    org:classification "Nonprofit" ; 
-    org:abbreviation "CCGS" ;
-    schema:url <https://www.ccgs.mx/> ; 
+    org:classification "nonprofit" ; 
+    dct:created "2020-07-06"^^xsd:date ;
+    dct:modified "2024-07-11"^^xsd:date ;
+    org:abbreviation "CCGS"@None ; 
+    schema:mainEntityOfPage <https://www.ccgs.mx/> ;
+    schema:sameAs <https://grid.ac/institutions/grid.507778.a> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/057ff4y42> ;
+        rdfs:label "BOKU University" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-92.93028 17.98689)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-92.93028 17.98689)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Villahermosa" ;
             schema:addressCountry "MX" ;
-            owl:sameAs <http://sws.geonames.org/3514670/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Mexico" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3514670/> ;
+    ] ; 
     .

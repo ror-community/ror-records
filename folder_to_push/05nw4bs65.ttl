@@ -4,25 +4,45 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/05nw4bs65> a org:Organization ;
     rdfs:label "Illinois Humanities Council" ;
     schema:name "Illinois Humanities Council" ;
     schema:foundingDate "1973"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Nonprofit" ; 
-    org:abbreviation "IHC" ;
-    schema:url <https://www.ilhumanities.org/> ; 
+    org:classification "funder" ; 
+    org:classification "nonprofit" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-07-11"^^xsd:date ;
+    org:abbreviation "IHC"@None ; 
+    schema:mainEntityOfPage <https://www.ilhumanities.org/> ;
+    schema:sameAs <https://api.crossref.org/funders/100004890> ;
+    schema:sameAs <https://grid.ac/institutions/grid.446985.2> ;
+    schema:sameAs <http://isni.org/isni/0000000459021201> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02vdm1p28> ;
+        rdfs:label "National Endowment for the Humanities" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-87.65005 41.85003)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-87.65005 41.85003)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Chicago" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/4887398/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000459021201> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/4887398/> ;
+    ] ; 
     .

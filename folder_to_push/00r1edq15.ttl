@@ -4,26 +4,65 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/00r1edq15> a org:Organization ;
-    rdfs:label "University of Greifswald" ;
-    schema:name "University of Greifswald" ;
+    rdfs:label "" ;
+    schema:name "" ;
     schema:foundingDate "1456"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    schema:url <http://www.uni-greifswald.de/?L=1> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Greifswald> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-07-11"^^xsd:date ;
+    org:alternativeName "University of Greifswald"@en ; 
+    schema:url <http://uni-greifswald.de> ; 
+    schema:mainEntityOfPage <https://www.uni-greifswald.de> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Greifswald> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100018934> ;
+    schema:sameAs <https://grid.ac/institutions/grid.5603.0> ;
+    schema:sameAs <http://isni.org/isni/0000000123531531> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03rvn2t89> ;
+        rdfs:label "Institut für Klimaschutz, Energie und Mobilität" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/04qa46285> ;
+        rdfs:label "Dietrich Bonhoeffer Klinikum" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/025vngs54> ;
+        rdfs:label "Universitätsmedizin Greifswald" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/036b8pc68> ;
+        rdfs:label "Stiftung Alfried Krupp Kolleg Greifswald" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(13.38786 54.09311)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(13.38786 54.09311)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Greifswald" ;
             schema:addressCountry "DE" ;
-            owl:sameAs <http://sws.geonames.org/2917788/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000123531531> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q165528> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Germany" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2917788/> ;
+    ] ; 
     .

@@ -1,0 +1,42 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/00aqyg778> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "1961"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2024-07-08"^^xsd:date ;
+    dct:modified "2024-07-11"^^xsd:date ;
+    org:alternativeName "Saint Teresa's College of Education"@en ; 
+    org:abbreviation "TERESCO"@en ; 
+    org:abbreviation "WOTRACO"@en ; 
+    schema:url <http://teresco.edu.gh> ; 
+    schema:mainEntityOfPage <https://teresco.edu.gh> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/St._Teresa%27s_College_of_Education> ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(0.47362 7.15181)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Hohoe" ;
+            schema:addressCountry "GH" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Ghana" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2300372/> ;
+    ] ; 
+    .

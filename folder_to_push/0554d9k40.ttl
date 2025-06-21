@@ -1,0 +1,55 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/0554d9k40> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "1930"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-07-11"^^xsd:date ;
+    org:abbreviation "NUPP"@uk ; 
+    org:alternativeName "National University «Yuri Kondratyuk Poltava Polytechnic»"@en ; 
+    org:alternativeName "Poltava Engineering and Construction Institute"@en ; 
+    org:alternativeName "Poltava National Technical University"@en ; 
+    org:alternativeName "Poltava Technical University"@en ; 
+    org:alternativeName "Yuriy Kondratyuk Poltava National Technical University"@en ; 
+    org:alternativeName "Yuriy Kondratyuk Poltava Technical University"@en ; 
+    org:abbreviation "НУПП"@uk ; 
+    org:alternativeName "Національний унівеситет "Полтавська політехніка імені Юрія Кондратюка""@uk ; 
+    org:abbreviation "ПолНТУ"@uk ; 
+    org:alternativeName "Полтавский инженерно-строительный институт"@uk ; 
+    org:alternativeName "Полтавський національний технічний університет імені Юрія Кондратюка"@uk ; 
+    org:alternativeName "Полтавський технічний університет"@uk ; 
+    org:alternativeName "Полтавський технічний університет імені Юрія Кондратюка"@uk ; 
+    org:alternativeName "Полтавський інженерно-будівельний інститут"@uk ; 
+    org:alternativeName "Полтавський інститут сільськогосподарського будівництва"@uk ; 
+    schema:mainEntityOfPage <https://nupp.edu.ua/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Poltava_National_Technical_University> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.446268.a> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(34.55367 49.58925)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Poltava" ;
+            schema:addressCountry "UA" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Ukraine" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/696643/> ;
+    ] ; 
+    .

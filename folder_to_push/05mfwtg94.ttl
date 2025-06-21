@@ -4,26 +4,62 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/05mfwtg94> a org:Organization ;
     rdfs:label "Biologie de la Reproduction, Environnement, Epigénétique et Développement" ;
     schema:name "Biologie de la Reproduction, Environnement, Epigénétique et Développement" ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "BREED" ;
-    org:alternativeName "Unité Mixte Biologie de la Reproduction, Environnement, Epigénétique et Développement" ;
-    schema:url <https://www6.jouy.inrae.fr/breed/> ; 
+    org:classification "facility" ; 
+    dct:created "2019-02-17"^^xsd:date ;
+    dct:modified "2024-07-11"^^xsd:date ;
+    org:abbreviation "BREED"@None ; 
+    org:alternativeName "Unit Biology of Reproduction, Environment, Epigenetics and Development"@en ; 
+    org:alternativeName "Unité Mixte Biologie de la Reproduction, Environnement, Epigénétique et Développement"@fr ; 
+    schema:mainEntityOfPage <https://www6.jouy.inrae.fr/breed/> ;
+    schema:sameAs <https://grid.ac/institutions/grid.503097.8> ;
+    schema:sameAs <http://isni.org/isni/0000000404592891> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/00gtg0p11> ;
+        rdfs:label "Centre Île-de-France - Jouy-en-Josas - Antony" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/03xjwb503> ;
+        rdfs:label "Université Paris-Saclay" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/04k031t90> ;
+        rdfs:label "École Nationale Vétérinaire d'Alfort" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/03mkjjy25> ;
+        rdfs:label "Université de Versailles Saint-Quentin-en-Yvelines" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(2.16966 48.75909)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(2.16966 48.75909)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Jouy-en-Josas" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/3012165/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000404592891> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q52605711> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3012165/> ;
+    ] ; 
     .

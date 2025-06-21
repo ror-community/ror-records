@@ -4,26 +4,43 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/03r7e7711> a org:Organization ;
-    rdfs:label "Louvre-Lens" ;
-    schema:name "Louvre-Lens" ;
+    rdfs:label "" ;
+    schema:name "" ;
     schema:foundingDate "2010"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Archive" ; 
-    org:alternativeName "Musée du Louvre-Lens" ;
-    schema:url <https://www.louvrelens.fr> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Louvre-Lens> ;
+    org:classification "archive" ; 
+    dct:created "2023-07-27"^^xsd:date ;
+    dct:modified "2024-07-11"^^xsd:date ;
+    org:alternativeName "Musée du Louvre-Lens"@fr ; 
+    schema:mainEntityOfPage <https://www.louvrelens.fr> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Louvre-Lens> ; 
+    schema:sameAs <http://isni.org/isni/0000000494703320> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/05k441034> ;
+        rdfs:label "Louvre" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(2.8331 50.4315)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(2.8331 50.4315)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Lens" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/6618371/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000494703320> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q405543> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/6618371/> ;
+    ] ; 
     .

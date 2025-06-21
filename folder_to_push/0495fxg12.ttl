@@ -4,26 +4,304 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/0495fxg12> a org:Organization ;
     rdfs:label "Institut Pasteur" ;
     schema:name "Institut Pasteur" ;
     schema:foundingDate "1887"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Nonprofit" ; 
-    schema:url <http://www.pasteur.fr/en> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Pasteur_Institute> ;
+    org:classification "funder" ; 
+    org:classification "nonprofit" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-07-11"^^xsd:date ;
+    schema:url <http://pasteur.fr> ; 
+    schema:mainEntityOfPage <https://www.pasteur.fr> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Pasteur_Institute> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100003762> ;
+    schema:sameAs <https://grid.ac/institutions/grid.428999.7> ;
+    schema:sameAs <http://isni.org/isni/0000000123536535> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01x3ftb23> ;
+        rdfs:label "Biology of Infection" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05etkex69> ;
+        rdfs:label "Department of Genomes & Genetics" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01xx2ne27> ;
+        rdfs:label "Department of Virology" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/027atwb90> ;
+        rdfs:label "Gènes, synapses et cognition" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/053qdb191> ;
+        rdfs:label "Laboratoire des Systèmes Macromoléculaires et Signalisation" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02af93v77> ;
+        rdfs:label "Biologie du Développement et Cellules Souches" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05akjb009> ;
+        rdfs:label "Biologie des interactions hôte-parasite" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/026ddbz68> ;
+        rdfs:label "Génomique évolutive, modélisation et santé" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03cjyj977> ;
+        rdfs:label "Chimie Biologique pour le Vivant" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/009b91528> ;
+        rdfs:label "Biologie Moléculaire Structurale et Processus Infectieux" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05q8d3662> ;
+        rdfs:label "Organisation Nucléaire et Oncogenèse" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00gjnk018> ;
+        rdfs:label "Pathogenèse des infections vasculaires" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01tnxwc41> ;
+        rdfs:label "InBio: Experimental and Computational Methods for Modeling Cellular Processes" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05hvqzx20> ;
+        rdfs:label "Microfluidique Physique et Bio-ingénierie" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0330gay09> ;
+        rdfs:label "Morphogenèse du coeur" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/016nv8j08> ;
+        rdfs:label "Génomique fonctionnelle comparative" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00te8p082> ;
+        rdfs:label "Mécanismes de l'Hérédité épigénétique" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01ph0t361> ;
+        rdfs:label "Fondation Voir & Entendre" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/035cy3r13> ;
+        rdfs:label "Pasteur Hellenic Institute" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01ee94y34> ;
+        rdfs:label "Institut Pasteur de Bangui" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/046p4xa68> ;
+        rdfs:label "Institut Pasteur de Côte d'Ivoire" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02ysgwq33> ;
+        rdfs:label "Institut Pasteur de Dakar" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/04yb4j419> ;
+        rdfs:label "Institut Pasteur du Maroc" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03wwjjr94> ;
+        rdfs:label "HKU-Pasteur Research Pole" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00kcctq66> ;
+        rdfs:label "Saint Petersburg Pasteur Institute" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00g2j5111> ;
+        rdfs:label "Institut Pasteur in Ho Chi Minh City" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00wqczk30> ;
+        rdfs:label "Pasteur Institute of Iran" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03ht2dx40> ;
+        rdfs:label "Institut Pasteur du Cambodge" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/051v7w268> ;
+        rdfs:label "Istituto Pasteur" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05k9skc85> ;
+        rdfs:label "Institut Pasteur de Lille" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/04ejags36> ;
+        rdfs:label "Sciensano (Belgium)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01q8rrk81> ;
+        rdfs:label "Stephan Angeloff Institute of Microbiology" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/04sqtjj61> ;
+        rdfs:label "Institut Pasteur de Nouvelle Calédonie" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/052b46n78> ;
+        rdfs:label "Institut Pasteur d'Algérie" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/04t0zhb48> ;
+        rdfs:label "Institut Pasteur Korea" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/0259hk390> ;
+        rdfs:label "Centre Pasteur du Cameroun" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03fkjvy27> ;
+        rdfs:label "Institut Pasteur de Madagascar" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/04pwyer06> ;
+        rdfs:label "Institut Pasteur de Tunis" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/042cxsy45> ;
+        rdfs:label "Institut Pasteur de la Guadeloupe" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01fp8z436> ;
+        rdfs:label "Institut Pasteur de la Guyane" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/04dpm2z73> ;
+        rdfs:label "Institut Pasteur de Montevideo" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/046fcjp93> ;
+        rdfs:label "Instituto Pasteur" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02qkn0e91> ;
+        rdfs:label "Institut Pasteur du Laos" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02m5qpk42> ;
+        rdfs:label "Institut Pasteur de Nha Trang" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(2.3488 48.85341)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(2.3488 48.85341)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Paris" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2988507/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000123536535> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q391083> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2988507/> ;
+    ] ; 
     .

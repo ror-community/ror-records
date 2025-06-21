@@ -4,26 +4,40 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/00v416254> a org:Organization ;
-    rdfs:label "Học Viện Công Nghệ Bưu Chính Viễn Thông Cơ sở TP. Hồ Chí Minh" ;
-    schema:name "Học Viện Công Nghệ Bưu Chính Viễn Thông Cơ sở TP. Hồ Chí Minh" ;
+    rdfs:label "" ;
+    schema:name "" ;
     schema:foundingDate "1953"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "PTIT" ;
-    schema:url <http://hcm.ptit.edu.vn/> ; 
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2021-09-23"^^xsd:date ;
+    dct:modified "2024-07-11"^^xsd:date ;
+    org:abbreviation "PTITHCM"@en ; 
+    schema:url <http://ptithcm.edu.vn> ; 
+    schema:mainEntityOfPage <https://ptithcm.edu.vn> ;
+    schema:sameAs <https://api.crossref.org/funders/100016901> ;
+    schema:sameAs <https://grid.ac/institutions/grid.512485.f> ;
+    schema:sameAs <http://isni.org/isni/0000000403867531> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(106.62965 10.82302)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(106.62965 10.82302)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Ho Chi Minh City" ;
             schema:addressCountry "VN" ;
-            owl:sameAs <http://sws.geonames.org/1566083/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000403867531> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q10771881> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Vietnam" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1566083/> ;
+    ] ; 
     .

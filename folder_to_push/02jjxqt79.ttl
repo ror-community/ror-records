@@ -1,0 +1,48 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/02jjxqt79> a org:Organization ;
+    rdfs:label "Idaho Humanities Council" ;
+    schema:name "Idaho Humanities Council" ;
+    schema:foundingDate "1997"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "funder" ; 
+    org:classification "nonprofit" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-07-11"^^xsd:date ;
+    org:abbreviation "IHC"@None ; 
+    schema:mainEntityOfPage <http://www.idahohumanities.org/> ;
+    schema:sameAs <https://api.crossref.org/funders/100003877> ;
+    schema:sameAs <https://grid.ac/institutions/grid.446961.8> ;
+    schema:sameAs <http://isni.org/isni/0000000085359725> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02vdm1p28> ;
+        rdfs:label "National Endowment for the Humanities" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-116.20345 43.6135)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Boise" ;
+            schema:addressCountry "US" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/5586437/> ;
+    ] ; 
+    .
