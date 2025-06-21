@@ -4,27 +4,46 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/048zgak80> a org:Organization ;
     rdfs:label "National University of Río Negro" ;
     schema:name "National University of Río Negro" ;
     schema:foundingDate "2007"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "UNRN" ;
-    schema:url <https://www.unrn.edu.ar> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/National_University_of_R%C3%ADo_Negro> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-05-02"^^xsd:date ;
+    org:abbreviation "UNRN"@None ; 
+    schema:mainEntityOfPage <https://www.unrn.edu.ar> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/National_University_of_R%C3%ADo_Negro> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100013786> ;
+    schema:sameAs <https://grid.ac/institutions/grid.440499.4> ;
+    schema:sameAs <http://isni.org/isni/0000000404299257> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03erw8p58> ;
+        rdfs:label "Instituto de Investigaciones en Diversidad Cultural y Procesos de Cambio" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-62.99668 -40.81345)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-62.99668 -40.81345)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Viedma" ;
             schema:addressCountry "AR" ;
-            owl:sameAs <http://sws.geonames.org/3832899/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000404299257> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q6156591> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Argentina" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3832899/> ;
+    ] ; 
     .

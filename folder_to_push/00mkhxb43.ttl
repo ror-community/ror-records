@@ -4,26 +4,51 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/00mkhxb43> a org:Organization ;
     rdfs:label "University of Notre Dame" ;
     schema:name "University of Notre Dame" ;
     schema:foundingDate "1842"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    schema:url <https://www.nd.edu/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Notre_Dame> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-05-02"^^xsd:date ;
+    schema:mainEntityOfPage <https://www.nd.edu/> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Notre_Dame> ; 
+    schema:sameAs <https://api.crossref.org/funders/100008109> ;
+    schema:sameAs <https://grid.ac/institutions/grid.131063.6> ;
+    schema:sameAs <http://isni.org/isni/0000000121680066> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/030jvtg87> ;
+        rdfs:label "Mike and Josie Harper Cancer Research Institute" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/001zwgm84> ;
+        rdfs:label "CI Compass" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-86.23793 41.70019)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-86.23793 41.70019)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Notre Dame" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/8469294/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000121680066> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q178848> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/8469294/> ;
+    ] ; 
     .

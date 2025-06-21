@@ -4,24 +4,68 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/04hp1ky92> a org:Organization ;
     rdfs:label "NODES S.c.a.r.l" ;
     schema:name "NODES S.c.a.r.l" ;
     schema:foundingDate "2021"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Nonprofit" ; 
-    org:abbreviation "NODES" ;
-    org:alternativeName "NODES - Nord Ovest Digitale E Sostenibile" ;
-    schema:url <https://www.ecs-nodes.eu> ; 
+    org:classification "nonprofit" ; 
+    dct:created "2024-03-13"^^xsd:date ;
+    dct:modified "2024-05-02"^^xsd:date ;
+    org:alternativeName "HUB NODES S.c.a.r.l"@None ; 
+    org:abbreviation "NODES"@None ; 
+    org:alternativeName "NODES - Nord Ovest Digitale E Sostenibile"@None ; 
+    org:alternativeName "Nord Ovest Digitale E Sostenibile"@None ; 
+    schema:mainEntityOfPage <https://www.ecs-nodes.eu> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00bgk9508> ;
+        rdfs:label "Polytechnic University of Turin" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/048tbm396> ;
+        rdfs:label "University of Turin" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/04387x656> ;
+        rdfs:label "Università degli Studi del Piemonte Orientale “Amedeo Avogadro”" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00s409261> ;
+        rdfs:label "University of Insubria" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03126ng80> ;
+        rdfs:label "University of Aosta Valley" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(7.68682 45.07049)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(7.68682 45.07049)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Turin" ;
             schema:addressCountry "IT" ;
-            owl:sameAs <http://sws.geonames.org/3165524/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Italy" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3165524/> ;
+    ] ; 
     .

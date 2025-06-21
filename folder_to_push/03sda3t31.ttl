@@ -1,0 +1,39 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/03sda3t31> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    org:status "active" ;
+    org:classification "funder" ; 
+    org:classification "nonprofit" ; 
+    dct:created "2024-04-30"^^xsd:date ;
+    dct:modified "2024-05-02"^^xsd:date ;
+    schema:mainEntityOfPage <https://www.fem.es> ;
+    owl:sameAs <https://ca.wikipedia.org/wiki/Fundaci%C3%B3_Esclerosi_M%C3%BAltiple> ; 
+    schema:sameAs <http://isni.org/isni/0000000449030809> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(2.15899 41.38879)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Barcelona" ;
+            schema:addressCountry "ES" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Spain" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3128760/> ;
+    ] ; 
+    .

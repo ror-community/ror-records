@@ -4,25 +4,49 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01htygx54> a org:Organization ;
-    rdfs:label "Dynamyc" ;
-    schema:name "Dynamyc" ;
+    rdfs:label "" ;
+    schema:name "" ;
     schema:foundingDate "2015"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "DYNAMIC" ;
-    org:alternativeName "Dynamic Microbiology" ;
-    schema:url <https://www.dynamyc.fr> ; 
+    org:classification "facility" ; 
+    dct:created "2023-08-17"^^xsd:date ;
+    dct:modified "2024-05-02"^^xsd:date ;
+    org:abbreviation "DYNAMIC"@None ; 
+    org:alternativeName "Dynamic Microbiology"@None ; 
+    org:alternativeName "Dynamyc"@en ; 
+    schema:mainEntityOfPage <https://www.dynamyc.fr> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/04k031t90> ;
+        rdfs:label "École Nationale Vétérinaire d'Alfort" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/05ggc9x40> ;
+        rdfs:label "Université Paris-Est Créteil" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(2.46569 48.79266)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(2.46569 48.79266)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Créteil" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/3022530/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://www.wikidata.org/entity/Q51780402> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3022530/> ;
+    ] ; 
     .

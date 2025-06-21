@@ -4,26 +4,327 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02rx3b187> a org:Organization ;
     rdfs:label "Université Grenoble Alpes" ;
     schema:name "Université Grenoble Alpes" ;
     schema:foundingDate "2016"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "UGA" ;
-    schema:url <https://www.univ-grenoble-alpes.fr> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Grenoble_Alpes_University> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-05-02"^^xsd:date ;
+    org:abbreviation "UGA"@None ; 
+    schema:mainEntityOfPage <https://www.univ-grenoble-alpes.fr> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Grenoble_Alpes_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/100012952> ;
+    schema:sameAs <https://grid.ac/institutions/grid.450307.5> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/000tdrn36> ;
+        rdfs:label "Centre Interuniversitaire de MicroElectronique et Nanotechnologies" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00fwjkb59> ;
+        rdfs:label "Grenoble Applied Economics Lab" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05sbt2524> ;
+        rdfs:label "Grenoble Institute of Technology" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04dbzz632> ;
+        rdfs:label "Institut Néel" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02wmc6m46> ;
+        rdfs:label "Institut d'Histoire des Représentations et des Idées dans les Modernités" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01cf2sz15> ;
+        rdfs:label "Institut des Sciences de la Terre" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01wwcfa26> ;
+        rdfs:label "Institute of Environmental Geosciences" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03eqm6y13> ;
+        rdfs:label "LabEx PERSYVAL-Lab" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/023n9q531> ;
+        rdfs:label "Laboratoire Interdisciplinaire de Physique" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05588ks88> ;
+        rdfs:label "Laboratoire de Linguistique et Didactique des Langues Etrangères et Maternelles" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04qz4qy85> ;
+        rdfs:label "Laboratoire de Recherche Historique Rhône-Alpes" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03f0apy98> ;
+        rdfs:label "Laboratory of Subatomic Physics and Cosmology" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0157h5t87> ;
+        rdfs:label "Langages, Littératures, Sociétés. Études Transfrontalières et Internationales" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02f7wz369> ;
+        rdfs:label "Pierre Mendès-France University" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02rmwrd87> ;
+        rdfs:label "Laboratoire Environnements, Dynamiques et Territoires de Montagne" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/047p7mf25> ;
+        rdfs:label "Institut Carnot PolyNat" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03vte9x46> ;
+        rdfs:label "Observatoire des Sciences de l'Univers de Grenoble" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05c99vk74> ;
+        rdfs:label "Laboratoire de Recherche sur les Apprentissages en Contexte" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04fhvpc68> ;
+        rdfs:label "Département de Pharmacochimie Moléculaire" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03jrb0276> ;
+        rdfs:label "Laboratoire Inter-universitaire de Psychologie: Personnalité, Cognition, Changement Social" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01kbr1737> ;
+        rdfs:label "PHotonique ELectronique et Ingénierie QuantiqueS" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00ndvqf03> ;
+        rdfs:label "Laboratoire Modélisation et Exploration des Matériaux" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0467x8h16> ;
+        rdfs:label "Maison des Sciences de l'Homme-Alpes" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02cmt9z73> ;
+        rdfs:label "Agence pour les Mathématiques en Interaction avec l'Entreprise et la Société" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/026m44z54> ;
+        rdfs:label "Laboratoire Nanotechnologies et Nanosystèmes" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03949e763> ;
+        rdfs:label "Integrated Structural Biology Grenoble" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04ndt7n58> ;
+        rdfs:label "Centre d'Etudes et de Recherche sur la diplomatie, l’Administration Publique et le Politique" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/044cfnj78> ;
+        rdfs:label "GRICAD - Grenoble Alpes Recherche-Infrastructure de Calcul intensif et de Données" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0509qp208> ;
+        rdfs:label "Centre d'Etudes et de Recherches Appliquées à la Gestion" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03e044190> ;
+        rdfs:label "Spintronique et Technologie des Composants" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05hb8m595> ;
+        rdfs:label "PHOTOSYNTHESE" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01w1erp60> ;
+        rdfs:label "Couplage Multi-physiques et Multi-échelles en mécanique géo-environnemental" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05be9p317> ;
+        rdfs:label "Micropesanteur Fondamentale et Appliquée" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01x6z5t49> ;
+        rdfs:label "Fédération de Recherche Spectroscopies de Photoémission" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01nrtdp55> ;
+        rdfs:label "GDR NBODY : Problème quantique à N corps en chimie et physique" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00hgbrg14> ;
+        rdfs:label "Fédération française Matériaux sous hautes vitesses de déformation. Application aux matériaux en conditions extrêmes, Procédés et structures" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0459fdx51> ;
+        rdfs:label "Fédération de Recherche sur l'Energie Solaire" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04yem5s35> ;
+        rdfs:label "INFRANALYTICS" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01sgwka45> ;
+        rdfs:label "Microscopie Fonctionnelle du Vivant" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/041rhpw39> ;
+        rdfs:label "Centre Hospitalier Universitaire de Grenoble" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05hz99a17> ;
+        rdfs:label "AAU - Ambiances, Architectures, Urbanités" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05v727m31> ;
+        rdfs:label "Communauté Université Grenoble Alpes" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01c8rcg82> ;
+        rdfs:label "Grenoble Computer Science Laboratory" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02wrme198> ;
+        rdfs:label "Grenoble Images Parole Signal Automatique" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04ett5b41> ;
+        rdfs:label "Laboratoire Jean Kuntzmann" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/026j45x50> ;
+        rdfs:label "Laboratoire Pacte" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04eg25g76> ;
+        rdfs:label "Laboratoire de Conception et d'Intégration des Systèmes" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/014p6mg26> ;
+        rdfs:label "Laboratoire de Psychologie et NeuroCognition" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(5.76281 45.1787)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(5.76281 45.1787)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Saint-Martin-d'Hères" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2978317/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://www.wikidata.org/entity/Q945876> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2978317/> ;
+    ] ; 
     .

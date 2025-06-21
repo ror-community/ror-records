@@ -4,28 +4,59 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/00v29jp57> a org:Organization ;
     rdfs:label "National University of General San Martín" ;
     schema:name "National University of General San Martín" ;
     schema:foundingDate "1994"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "UNSAM" ;
-    org:alternativeName "Universidad Nacional de San Martín" ;
-    schema:url <http://www.unsam.edu.ar/english/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/National_University_of_General_San_Mart%C3%ADn> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-05-02"^^xsd:date ;
+    org:abbreviation "UNSAM"@None ; 
+    org:alternativeName "Universidad Nacional de San Martín"@None ; 
+    schema:mainEntityOfPage <http://www.unsam.edu.ar/english/> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/National_University_of_General_San_Mart%C3%ADn> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100010695> ;
+    schema:sameAs <https://grid.ac/institutions/grid.108365.9> ;
+    schema:sameAs <http://isni.org/isni/0000000121050048> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04qzr9r50> ;
+        rdfs:label "Instituto Tecnológico de Chascomús" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05e6n8h53> ;
+        rdfs:label "International Center for Advanced Studies" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01etg5g76> ;
+        rdfs:label "Escuela Interdisciplinaria de Altos Estudios Sociales" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-58.37723 -34.61315)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-58.37723 -34.61315)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Buenos Aires" ;
             schema:addressCountry "AR" ;
-            owl:sameAs <http://sws.geonames.org/3435910/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000121050048> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q5733950> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Argentina" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3435910/> ;
+    ] ; 
     .

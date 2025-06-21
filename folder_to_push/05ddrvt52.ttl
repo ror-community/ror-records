@@ -4,29 +4,49 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/05ddrvt52> a org:Organization ;
     rdfs:label "Defence Science and Technology Group" ;
     schema:name "Defence Science and Technology Group" ;
     schema:foundingDate "1907"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Government" ; 
-    org:abbreviation "DSTG" ;
-    org:alternativeName "DST Group" ;
-    schema:url <> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Defence_Science_and_Technology_Group> ;
+    org:classification "funder" ; 
+    org:classification "government" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-05-02"^^xsd:date ;
+    org:alternativeName "DST Group"@None ; 
+    org:abbreviation "DSTG"@None ; 
+    org:abbreviation "DSTO"@None ; 
+    org:alternativeName "Defence Science and Technology Organisation"@None ; 
+    schema:mainEntityOfPage <https://www.dst.defence.gov.au> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Defence_Science_and_Technology_Group> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100004715> ;
+    schema:sameAs <https://grid.ac/institutions/grid.431245.5> ;
+    schema:sameAs <http://isni.org/isni/0000000403855290> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/051wnqr14> ;
+        rdfs:label "Department of Defence" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(149.12807 -35.28346)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(149.12807 -35.28346)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Canberra" ;
             schema:addressCountry "AU" ;
-            owl:sameAs <http://sws.geonames.org/2172517/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000403855290> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q39913776> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q4335763> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Australia" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2172517/> ;
+    ] ; 
     .

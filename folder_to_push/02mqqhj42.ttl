@@ -4,28 +4,55 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02mqqhj42> a org:Organization ;
-    rdfs:label "University of Wisconsin Hospital and Clinics" ;
-    schema:name "University of Wisconsin Hospital and Clinics" ;
+    rdfs:label "" ;
+    schema:name "" ;
     schema:foundingDate "1924"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Healthcare" ; 
-    org:abbreviation "UWHC" ;
-    org:alternativeName "UW Hospital and Clinics" ;
-    schema:url <https://www.uwhealth.org/locations/main/10372> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/University_of_Wisconsin_Hospital_and_Clinics> ;
+    org:classification "healthcare" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-05-02"^^xsd:date ;
+    org:alternativeName "UW Hospital and Clinics"@en ; 
+    org:abbreviation "UWHC"@None ; 
+    org:alternativeName "University of Wisconsin Health University Hospital"@en ; 
+    org:alternativeName "University of Wisconsin Hospital and Clinics"@en ; 
+    org:alternativeName "University of Wisconsin-Madison Hospital"@en ; 
+    org:alternativeName "Wisconsin General Hospital"@en ; 
+    schema:mainEntityOfPage <https://www.uwhealth.org/locations/university-hospital-170> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/University_of_Wisconsin_Hospital_and_Clinics> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.412647.2> ;
+    schema:sameAs <http://isni.org/isni/0000000092090955> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01e4byj08> ;
+        rdfs:label "University of Wisconsin Carbone Cancer Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/03e3qgk42> ;
+        rdfs:label "University of Wisconsin Health" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-89.40123 43.07305)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-89.40123 43.07305)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Madison" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/5261457/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000092090955> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q7896631> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/5261457/> ;
+    ] ; 
     .

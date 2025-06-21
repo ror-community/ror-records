@@ -4,27 +4,281 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/015m7wh34> a org:Organization ;
     rdfs:label "University of Rennes" ;
     schema:name "University of Rennes" ;
     schema:foundingDate "1970"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:alternativeName "University of Rennes 1" ;
-    schema:url <https://www.univ-rennes.fr> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Rennes> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-05-02"^^xsd:date ;
+    org:alternativeName "University of Rennes 1"@None ; 
+    org:alternativeName "Université de Rennes 1 "@None ; 
+    schema:mainEntityOfPage <https://www.univ-rennes.fr> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Rennes> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100007525> ;
+    schema:sameAs <https://grid.ac/institutions/grid.410368.8> ;
+    schema:sameAs <http://isni.org/isni/0000000121919284> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02baj6743> ;
+        rdfs:label "CIC Rennes" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0047rmf80> ;
+        rdfs:label "Centre de Recherche en Économie et Management" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/005fjj927> ;
+        rdfs:label "Ecosystèmes, Biodiversité, Evolution" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04xtaw673> ;
+        rdfs:label "Fish Physiology and Genomics Institute" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03yn94905> ;
+        rdfs:label "Fonctions Optiques pour les Technologies de l’information" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00vn0zc62> ;
+        rdfs:label "Géosciences Rennes" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/022b0h879> ;
+        rdfs:label "Institut de Physique de Rennes" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00myn0z94> ;
+        rdfs:label "Institut de Recherche en Informatique et Systèmes Aléatoires" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01p178v10> ;
+        rdfs:label "Institut de Recherche en Santé, Environnement et Travail" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00adwkx90> ;
+        rdfs:label "Institut des Sciences Chimiques de Rennes" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/038kxsm48> ;
+        rdfs:label "Institut de Génétique, Environnement et Protection des Plantes" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/013q33h79> ;
+        rdfs:label "Institut d'Électronique et des Technologies du numéRique" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/036xhtv26> ;
+        rdfs:label "Institut de génétique et de développement de Rennes" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01f1amm71> ;
+        rdfs:label "Laboratoire Traitement du Signal et de l'Image" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05y76vp22> ;
+        rdfs:label "Institut de recherche mathématique de Rennes" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05cx7ek10> ;
+        rdfs:label "Structure Fédérative de Recherche en Biologie et Santé de Rennes" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/030ewzw66> ;
+        rdfs:label "Institut de l'Ouest : Droit et Europe" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01fmctt82> ;
+        rdfs:label "Sciences Po Rennes" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00m4rxj18> ;
+        rdfs:label "Arènes: politique, santé publique, environnement, médias" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02wgtm643> ;
+        rdfs:label "Centre de Recherche en Archéologie, Archéosciences, Histoire" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00bf6bf92> ;
+        rdfs:label "Oncogenesis Stress Signaling" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05b3p7p58> ;
+        rdfs:label "Laboratoire Mouvement Sport Santé" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02evk6c51> ;
+        rdfs:label "Ethologie animale et humaine" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/031y0x195> ;
+        rdfs:label "Bacterial RNAs & Medicine" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05p7fmf80> ;
+        rdfs:label "Microenvironment and B-cells: Immunopathology, Cell, Differentiation and Cancer" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03zb6nw87> ;
+        rdfs:label "Nutrition, métabolismes et cancer" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03x0g1010> ;
+        rdfs:label "Laboratoire de génie civil et génie mécanique" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/059ynac98> ;
+        rdfs:label "Centre Atlantique de Philosophie" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0274dq154> ;
+        rdfs:label "Centre de droit des affaires" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05nn1k450> ;
+        rdfs:label "Institut du droit public et de la science politique" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02hp31992> ;
+        rdfs:label "Empenn" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05pwkex33> ;
+        rdfs:label "Observatoire des Sciences de l'Univers de Rennes" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04fsxy317> ;
+        rdfs:label "ScanMAT" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01x6z5t49> ;
+        rdfs:label "Fédération de Recherche Spectroscopies de Photoémission" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01nrtdp55> ;
+        rdfs:label "GDR NBODY : Problème quantique à N corps en chimie et physique" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00hgbrg14> ;
+        rdfs:label "Fédération française Matériaux sous hautes vitesses de déformation. Application aux matériaux en conditions extrêmes, Procédés et structures" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01sgwka45> ;
+        rdfs:label "Microscopie Fonctionnelle du Vivant" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01h0ffh48> ;
+        rdfs:label "École Nationale Supérieure de Chimie de Rennes" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03rxtdc22> ;
+        rdfs:label "École Normale Supérieure de Rennes" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05qec5a53> ;
+        rdfs:label "Centre Hospitalier Universitaire de Rennes" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-1.67429 48.11198)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-1.67429 48.11198)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Rennes" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2983990/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000121919284> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q726595> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2983990/> ;
+    ] ; 
     .

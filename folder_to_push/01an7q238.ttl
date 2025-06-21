@@ -4,28 +4,133 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01an7q238> a org:Organization ;
     rdfs:label "University of California, Berkeley" ;
     schema:name "University of California, Berkeley" ;
     schema:foundingDate "1868"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "UCB" ;
-    org:alternativeName "UC Berkeley" ;
-    schema:url <https://www.berkeley.edu> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/University_of_California,_Berkeley> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-05-02"^^xsd:date ;
+    org:alternativeName "Cal Berkeley"@None ; 
+    org:alternativeName "UC Berkeley"@None ; 
+    org:abbreviation "UCB"@None ; 
+    org:alternativeName "University of California at Berkeley"@None ; 
+    schema:mainEntityOfPage <https://www.berkeley.edu> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_California,_Berkeley> ; 
+    schema:sameAs <https://api.crossref.org/funders/100006978> ;
+    schema:sameAs <https://grid.ac/institutions/grid.47840.3f> ;
+    schema:sameAs <http://isni.org/isni/0000000121817878> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03djjyk45> ;
+        rdfs:label "Center for Effective Global Action" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04sk0et52> ;
+        rdfs:label "Gump South Pacific Research Station" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01r4tcq81> ;
+        rdfs:label "Innovative Genomics Institute" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03rafms67> ;
+        rdfs:label "Plant Gene Expression Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02hhwwz98> ;
+        rdfs:label "Tsinghua–Berkeley Shenzhen Institute" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00knt4f32> ;
+        rdfs:label "Chan Zuckerberg Biohub San Francisco" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04n1n3n22> ;
+        rdfs:label "QB3" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02cq2e244> ;
+        rdfs:label "Pacific Earthquake Engineering Research Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/00pjdza24> ;
+        rdfs:label "University of California System" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/015yfqq31> ;
+        rdfs:label "Dominican School of Philosophy and Theology" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00xs48965> ;
+        rdfs:label "Graduate Theological Union" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05rfek682> ;
+        rdfs:label "Kaiser Permanente Oakland Medical Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02wyv8x71> ;
+        rdfs:label "San Francisco Theological Seminary" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00mkh7345> ;
+        rdfs:label "Hubbard Brook Long Term Ecological Research" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01ewh7m12> ;
+        rdfs:label "International Computer Science Institute" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-122.27275 37.87159)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-122.27275 37.87159)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Berkeley" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/5327684/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000121817878> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q168756> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/5327684/> ;
+    ] ; 
     .

@@ -4,29 +4,153 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/018pp1107> a org:Organization ;
     rdfs:label "Arts et Metiers Institute of Technology" ;
     schema:name "Arts et Metiers Institute of Technology" ;
     schema:foundingDate "1780"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "ENSAM" ;
-    org:alternativeName "École Nationale Supérieure d'Arts et Métiers" ;
-    schema:url <https://artsetmetiers.fr/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Arts_et_M%C3%A9tiers_ParisTech> ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-05-02"^^xsd:date ;
+    org:abbreviation "ENSAM"@None ; 
+    org:alternativeName "École Nationale Supérieure d'Arts et Métiers"@None ; 
+    schema:mainEntityOfPage <https://artsetmetiers.fr/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Arts_et_M%C3%A9tiers_ParisTech> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.434207.6> ;
+    schema:sameAs <http://isni.org/isni/0000000121946047> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/053gdvc84> ;
+        rdfs:label "Institut de Biomécanique Humaine Georges Charpak" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00wrnm709> ;
+        rdfs:label "Institute of Mechanics and Engineering" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01ks4c961> ;
+        rdfs:label "Laboratoire Angevin de Mécanique, Procédés et InnovAtion" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00hbc1k35> ;
+        rdfs:label "Laboratoire Bourguignon des Matériaux et Procédés" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04hztmn48> ;
+        rdfs:label "Laboratoire Conception de Produits et Innovation" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00awn3k11> ;
+        rdfs:label "Laboratoire Ingénierie des Fluides Systèmes Énergétiques" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0186z1m53> ;
+        rdfs:label "Laboratoire d'Électrotechnique et d'Électronique de Puissance de Lille" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01xd0ys45> ;
+        rdfs:label "Laboratoire de Conception Fabrication Commande" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/059jx7q58> ;
+        rdfs:label "Laboratoire de Dynamique des Fluides" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02w8awt17> ;
+        rdfs:label "Laboratoire de Mécanique des Fluides de Lille - Kampé de Fériet" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04yzbzc51> ;
+        rdfs:label "Laboratoire de Mécanique et Procédés de Fabrication" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/055449294> ;
+        rdfs:label "Laboratoire d’Ingénierie des Systèmes Physiques et Numériques" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01nyrrx14> ;
+        rdfs:label "Laboratory of Microstructure Studies and Mechanics of Materials" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01v6shv96> ;
+        rdfs:label "Naval Academy Research Institute" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/017jp7t31> ;
+        rdfs:label "Processes and Engineering in Mechanics and Materials" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01bbf9m56> ;
+        rdfs:label "Fédération Francilienne de Mécanique - Matériaux, Structures, Procédés" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0459fdx51> ;
+        rdfs:label "Fédération de Recherche sur l'Energie Solaire" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/042949r55> ;
+        rdfs:label "HESAM Université" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/05c2qg481> ;
+        rdfs:label "ParisTech" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(2.3488 48.85341)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(2.3488 48.85341)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Paris" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2988507/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000121946047> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q2570220> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q18181287> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2988507/> ;
+    ] ; 
     .

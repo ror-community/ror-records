@@ -4,26 +4,55 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/038kxsm48> a org:Organization ;
-    rdfs:label "Institute for Genetics, Environment and Plant Protection" ;
-    schema:name "Institute for Genetics, Environment and Plant Protection" ;
+    rdfs:label "" ;
+    schema:name "" ;
     schema:foundingDate "2012"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "IGEPP" ;
-    schema:url <https://www6.rennes.inrae.fr/igepp_eng/> ; 
+    org:classification "facility" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-05-02"^^xsd:date ;
+    org:abbreviation "IGEPP"@None ; 
+    schema:mainEntityOfPage <https://www6.rennes.inrae.fr/igepp_eng/> ;
+    schema:sameAs <https://grid.ac/institutions/grid.462490.d> ;
+    schema:sameAs <http://isni.org/isni/000000040556944X> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/01s3fs709> ;
+        rdfs:label "Institut Agro Rennes-Angers" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/003vg9w96> ;
+        rdfs:label "National Research Institute for Agriculture, Food and Environment" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/015m7wh34> ;
+        rdfs:label "University of Rennes" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-1.79565 48.1019)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-1.79565 48.1019)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Le Rheu" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/3002351/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/000000040556944X> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q30261470> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3002351/> ;
+    ] ; 
     .

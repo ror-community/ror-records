@@ -1,0 +1,45 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/03dyg8x92> a org:Organization ;
+    rdfs:label "Landesgesundheitsamt Baden-Württemberg" ;
+    schema:name "Landesgesundheitsamt Baden-Württemberg" ;
+    org:status "active" ;
+    org:classification "government" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-05-02"^^xsd:date ;
+    org:abbreviation "LGA"@None ; 
+    schema:mainEntityOfPage <https://www.gesundheitsamt-bw.de/lga/DE/Seiten/default.aspx> ;
+    schema:sameAs <https://grid.ac/institutions/grid.500247.4> ;
+    schema:sameAs <http://isni.org/isni/0000000087106254> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/0522eh277> ;
+        rdfs:label "Landesregierung von Baden-Württemberg" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(9.17702 48.78232)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Stuttgart" ;
+            schema:addressCountry "DE" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Germany" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2825297/> ;
+    ] ; 
+    .

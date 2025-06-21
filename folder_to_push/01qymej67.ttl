@@ -1,0 +1,45 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/01qymej67> a org:Organization ;
+    rdfs:label "Landesanstalt für Umwelt Baden-Württemberg" ;
+    schema:name "Landesanstalt für Umwelt Baden-Württemberg" ;
+    schema:foundingDate "2006"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "facility" ; 
+    dct:created "2019-11-07"^^xsd:date ;
+    dct:modified "2024-05-02"^^xsd:date ;
+    org:abbreviation "LUBW"@None ; 
+    schema:mainEntityOfPage <https://www.lubw.baden-wuerttemberg.de/startseite> ;
+    schema:sameAs <https://grid.ac/institutions/grid.506458.a> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/0522eh277> ;
+        rdfs:label "Landesregierung von Baden-Württemberg" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(8.40444 49.00937)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Karlsruhe" ;
+            schema:addressCountry "DE" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Germany" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2892794/> ;
+    ] ; 
+    .

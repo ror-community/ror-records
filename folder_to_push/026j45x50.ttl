@@ -4,25 +4,56 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/026j45x50> a org:Organization ;
-    rdfs:label "Laboratoire Politiques Publiques, Action Politique, Territoires" ;
-    schema:name "Laboratoire Politiques Publiques, Action Politique, Territoires" ;
+    rdfs:label "" ;
+    schema:name "" ;
     schema:foundingDate "2003"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "PACTE" ;
-    schema:url <http://www.pacte-grenoble.fr/en/> ; 
+    org:classification "facility" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-05-02"^^xsd:date ;
+    org:alternativeName "Laboratoire Politiques Publiques, Action Politique, Territoires"@fr ; 
+    org:abbreviation "PACTE"@None ; 
+    schema:mainEntityOfPage <https://www.pacte-grenoble.fr> ;
+    schema:sameAs <https://grid.ac/institutions/grid.463723.7> ;
+    schema:sameAs <http://isni.org/isni/0000000121648234> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02rx3b187> ;
+        rdfs:label "Université Grenoble Alpes" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/03c7zyj82> ;
+        rdfs:label "Sciences Po Grenoble" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02feahw73> ;
+        rdfs:label "French National Centre for Scientific Research" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(5.71479 45.17869)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(5.71479 45.17869)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Grenoble" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/3014728/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000121648234> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3014728/> ;
+    ] ; 
     .

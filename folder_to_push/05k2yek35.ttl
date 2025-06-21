@@ -4,27 +4,39 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/05k2yek35> a org:Organization ;
     rdfs:label "Universiteti Metropolitan Tirana" ;
     schema:name "Universiteti Metropolitan Tirana" ;
     schema:foundingDate "2011"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "UMT" ;
-    org:alternativeName "Metropolitan University of Tirana" ;
-    schema:url <https://umt.edu.al> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Metropolitan_University_of_Tirana> ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-05-02"^^xsd:date ;
+    org:alternativeName "Metropolitan University of Tirana"@None ; 
+    org:abbreviation "UMT"@None ; 
+    schema:mainEntityOfPage <https://umt.edu.al> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Metropolitan_University_of_Tirana> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.449042.f> ;
+    schema:sameAs <http://isni.org/isni/0000000514385850> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(19.81889 41.3275)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(19.81889 41.3275)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Tirana" ;
             schema:addressCountry "AL" ;
-            owl:sameAs <http://sws.geonames.org/3183875/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://www.wikidata.org/entity/Q6825303> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Albania" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3183875/> ;
+    ] ; 
     .

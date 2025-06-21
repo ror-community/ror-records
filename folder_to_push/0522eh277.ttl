@@ -1,0 +1,99 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/0522eh277> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "1952"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "government" ; 
+    dct:created "2024-04-30"^^xsd:date ;
+    dct:modified "2024-05-02"^^xsd:date ;
+    schema:mainEntityOfPage <https://www.baden-wuerttemberg.de> ;
+    owl:sameAs <https://de.wikipedia.org/wiki/Landesregierung_von_Baden-W%C3%BCrttemberg> ; 
+    schema:sameAs <http://isni.org/isni/0000000097878450> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/021wda575> ;
+        rdfs:label "Chemisches und Veterinäruntersuchungsamt Sigmaringen" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/038taf935> ;
+        rdfs:label "Chemisches und Veterinäruntersuchungsamt Freiburg" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04sed8n13> ;
+        rdfs:label "Ministerium für Wirtschaft, Arbeit und Wohnungsbau Baden-Württemberg" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03dyg8x92> ;
+        rdfs:label "Landesgesundheitsamt Baden-Württemberg" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04bb62x43> ;
+        rdfs:label "Ministerium für Verkehr Baden-Württemberg" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01qymej67> ;
+        rdfs:label "Landesanstalt für Umwelt Baden-Württemberg" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05px6z163> ;
+        rdfs:label "Ministerium für Soziales und Integration Baden-Württemberg" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0594nch39> ;
+        rdfs:label "Ministerium für Ländlichen Raum und Verbraucherschutz Baden-Württemberg" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00vt8p712> ;
+        rdfs:label "Ministerium für Kultus, Jugend und Sport Baden-Württemberg" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01hc18p32> ;
+        rdfs:label "Ministerium für Wissenschaft, Forschung und Kunst Baden-Württemberg" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(9.17702 48.78232)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Stuttgart" ;
+            schema:addressCountry "DE" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Germany" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2825297/> ;
+    ] ; 
+    .

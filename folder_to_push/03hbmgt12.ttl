@@ -1,0 +1,42 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/03hbmgt12> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "1971"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-05-02"^^xsd:date ;
+    org:alternativeName "Rosenheim University of Applied Sciences"@en ; 
+    org:alternativeName "University of Applied Sciences Rosenheim"@en ; 
+    schema:mainEntityOfPage <https://www.th-rosenheim.de> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Rosenheim_University_of_Applied_Sciences> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.449770.9> ;
+    schema:sameAs <http://isni.org/isni/0000000100586011> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(12.12247 47.85637)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Rosenheim" ;
+            schema:addressCountry "DE" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Germany" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2844988/> ;
+    ] ; 
+    .

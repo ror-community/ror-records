@@ -1,0 +1,47 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/01vyjqw07> a org:Organization ;
+    rdfs:label "Centre for Astrophysics of the University of Porto" ;
+    schema:name "Centre for Astrophysics of the University of Porto" ;
+    schema:foundingDate "1989"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2021-09-23"^^xsd:date ;
+    dct:modified "2024-05-02"^^xsd:date ;
+    org:abbreviation "CAUP"@None ; 
+    schema:mainEntityOfPage <http://www.astro.up.pt/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Centre_for_Astrophysics_of_the_University_of_Porto> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.511330.5> ;
+    schema:sameAs <http://isni.org/isni/0000000097831142> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/043pwc612> ;
+        rdfs:label "Universidade do Porto" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-8.40297 41.23451)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Lordelo" ;
+            schema:addressCountry "PT" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Portugal" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2738224/> ;
+    ] ; 
+    .

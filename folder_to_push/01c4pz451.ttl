@@ -4,27 +4,64 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01c4pz451> a org:Organization ;
     rdfs:label "Tehran University of Medical Sciences" ;
     schema:name "Tehran University of Medical Sciences" ;
     schema:foundingDate "1934"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "TUMS" ;
-    schema:url <https://tums.ac.ir> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Tehran_University_of_Medical_Sciences> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-05-02"^^xsd:date ;
+    org:abbreviation "TUMS"@None ; 
+    schema:mainEntityOfPage <https://tums.ac.ir> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Tehran_University_of_Medical_Sciences> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100004484> ;
+    schema:sameAs <https://grid.ac/institutions/grid.411705.6> ;
+    schema:sameAs <http://isni.org/isni/0000000101660922> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05v2x6b69> ;
+        rdfs:label "Imam Khomeini Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01v27vf29> ;
+        rdfs:label "Children's Medical Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01rb4vv49> ;
+        rdfs:label "Shariati Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02fvps960> ;
+        rdfs:label "Farabi Eye Hospital" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(51.42151 35.69439)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(51.42151 35.69439)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Tehran" ;
             schema:addressCountry "IR" ;
-            owl:sameAs <http://sws.geonames.org/112931/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000101660922> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q7694901> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Iran" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/112931/> ;
+    ] ; 
     .

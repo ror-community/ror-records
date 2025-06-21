@@ -4,26 +4,43 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02ysgg478> a org:Organization ;
     rdfs:label "Berlin State Library" ;
     schema:name "Berlin State Library" ;
     schema:foundingDate "1661"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Archive" ; 
-    schema:url <http://staatsbibliothek-berlin.de/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Berlin_State_Library> ;
+    org:classification "archive" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-05-02"^^xsd:date ;
+    schema:mainEntityOfPage <https://staatsbibliothek-berlin.de> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Berlin_State_Library> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.461943.d> ;
+    schema:sameAs <http://isni.org/isni/0000000114809634> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/01y6swy44> ;
+        rdfs:label "Prussian Cultural Heritage Foundation" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(13.41053 52.52437)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(13.41053 52.52437)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Berlin" ;
             schema:addressCountry "DE" ;
-            owl:sameAs <http://sws.geonames.org/2950159/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000114809634> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q170109> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Germany" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2950159/> ;
+    ] ; 
     .

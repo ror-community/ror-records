@@ -4,23 +4,42 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/03pcw1780> a org:Organization ;
     rdfs:label "State Key Laboratory of Robotics" ;
     schema:name "State Key Laboratory of Robotics" ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:alternativeName "State Key Lab of Robotics" ;
-    schema:url <http://rlab.sia.cas.cn> ; 
+    org:classification "facility" ; 
+    org:classification "funder" ; 
+    dct:created "2024-02-13"^^xsd:date ;
+    dct:modified "2024-05-02"^^xsd:date ;
+    org:alternativeName "State Key Lab of Robotics"@None ; 
+    schema:mainEntityOfPage <http://rlab.sia.cas.cn> ;
+    schema:sameAs <https://api.crossref.org/funders/501100011259> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/00ft6nj33> ;
+        rdfs:label "Shenyang Institute of Automation" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(122.66667 41.25)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(122.66667 41.25)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Liaoning" ;
             schema:addressCountry "CN" ;
-            owl:sameAs <http://sws.geonames.org/2036115/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000089924293> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "China" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2036115/> ;
+    ] ; 
     .

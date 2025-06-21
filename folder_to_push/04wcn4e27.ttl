@@ -4,23 +4,119 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/04wcn4e27> a org:Organization ;
     rdfs:label "LEAPS" ;
     schema:name "LEAPS" ;
     schema:foundingDate "2017"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Other" ; 
-    org:alternativeName "League of European Accelerator-based Photon Sources" ;
-    schema:url <https://leaps-initiative.eu> ; 
+    org:classification "other" ; 
+    dct:created "2024-03-13"^^xsd:date ;
+    dct:modified "2024-05-02"^^xsd:date ;
+    org:alternativeName "League of European Accelerator-based Photon Sources"@None ; 
+    schema:mainEntityOfPage <https://leaps-initiative.eu> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02j9n6e35> ;
+        rdfs:label "ALBA Synchrotron (Spain)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01js2sh04> ;
+        rdfs:label "Deutsches Elektronen-Synchrotron DESY" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05etxs293> ;
+        rdfs:label "Diamond Light Source" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01c3rrh15> ;
+        rdfs:label "Elettra-Sincrotrone Trieste S.C.p.A." ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01wp2jz98> ;
+        rdfs:label "European X-Ray Free-Electron Laser" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03tkwyq76> ;
+        rdfs:label "FELIX Laboratory" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02aj13c28> ;
+        rdfs:label "Helmholtz-Zentrum Berlin für Materialien und Energie" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01zy2cs03> ;
+        rdfs:label "Helmholtz-Zentrum Dresden-Rossendorf" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/005ta0471> ;
+        rdfs:label "Istituto Nazionale di Fisica Nucleare" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03q28x580> ;
+        rdfs:label "MAX IV Laboratory" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03eh3y714> ;
+        rdfs:label "Paul Scherrer Institute" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05r3f7h03> ;
+        rdfs:label "Physikalisch-Technische Bundesanstalt" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01ydb3330> ;
+        rdfs:label "Soleil Synchrotron" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/0567hb468> ;
+        rdfs:label "Synchrotron-Light for Experimental Science and Applications in the Middle East" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(5.85278 51.8425)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(5.85278 51.8425)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Nijmegen" ;
             schema:addressCountry "NL" ;
-            owl:sameAs <http://sws.geonames.org/2750053/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "The Netherlands" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2750053/> ;
+    ] ; 
     .

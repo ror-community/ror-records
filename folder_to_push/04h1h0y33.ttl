@@ -4,27 +4,118 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/04h1h0y33> a org:Organization ;
     rdfs:label "Centre National d'Études Spatiales" ;
     schema:name "Centre National d'Études Spatiales" ;
     schema:foundingDate "1961"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Government" ; 
-    org:abbreviation "CNES" ;
-    schema:url <https://www.cnes.fr> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/CNES> ;
+    org:classification "funder" ; 
+    org:classification "government" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-05-02"^^xsd:date ;
+    org:abbreviation "CNES"@None ; 
+    schema:mainEntityOfPage <https://www.cnes.fr> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/CNES> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100002830> ;
+    schema:sameAs <https://grid.ac/institutions/grid.13349.3c> ;
+    schema:sameAs <http://isni.org/isni/0000000122016490> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03tnjrr49> ;
+        rdfs:label "Astroparticle and Cosmology Laboratory" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01225hq90> ;
+        rdfs:label "Centre d'Études Spatiales de la Biosphère" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00q7mnz48> ;
+        rdfs:label "Collecte Localisation Satellites (France)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05k0qmv73> ;
+        rdfs:label "Géosciences Environnement Toulouse" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01racwh88> ;
+        rdfs:label "Laboratoire Hydrazines et Composés Energétiques Polyazotés" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02mdnkg28> ;
+        rdfs:label "Laboratoire d'Optique Atmosphérique" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04fm0sh33> ;
+        rdfs:label "Laboratoire de Planétologie et Géosciences" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02chvqy57> ;
+        rdfs:label "Laboratoire d’Études en Géophysique et Océanographie Spatiales" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05hm2ja81> ;
+        rdfs:label "Research Institute in Astrophysics and Planetology" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/013z99a51> ;
+        rdfs:label "AERIS/ICARE Data and Services Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02qdgbw61> ;
+        rdfs:label "Service des Avions Français Instrumentés pour la Recherche en Environnement" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05be9p317> ;
+        rdfs:label "Micropesanteur Fondamentale et Appliquée" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01zgcd031> ;
+        rdfs:label "TéSA" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(2.3488 48.85341)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(2.3488 48.85341)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Paris" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2988507/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000122016490> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q48756> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2988507/> ;
+    ] ; 
     .

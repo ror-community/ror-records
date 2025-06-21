@@ -4,29 +4,95 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/027s68j25> a org:Organization ;
     rdfs:label "Ministry of Science and Technology of the People's Republic of China" ;
     schema:name "Ministry of Science and Technology of the People's Republic of China" ;
     schema:foundingDate "1998"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Government" ; 
-    org:abbreviation "MOST" ;
-    org:alternativeName "State Science and Technology Commission" ;
-    schema:url <http://www.most.gov.cn/eng/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Ministry_of_Science_and_Technology_of_the_People%27s_Republic_of_China> ;
+    org:classification "funder" ; 
+    org:classification "government" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-05-02"^^xsd:date ;
+    org:abbreviation "MOST"@None ; 
+    org:alternativeName "State Science and Technology Commission"@None ; 
+    schema:mainEntityOfPage <http://www.most.gov.cn/eng/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Ministry_of_Science_and_Technology_of_the_People%27s_Republic_of_China> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100002855> ;
+    schema:sameAs <https://grid.ac/institutions/grid.424020.0> ;
+    schema:sameAs <http://isni.org/isni/0000000403691054> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/034k14f91> ;
+        rdfs:label "Beijing Municipal Science and Technology Commission" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02fsh0r13> ;
+        rdfs:label "China National Center for Biotechnology Development" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04qqd9793> ;
+        rdfs:label "Chinese Academy of Science and Technology for Development" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01b2av652> ;
+        rdfs:label "Institute of Scientific and Technical Information of China" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02pzr0022> ;
+        rdfs:label "National Center for Science and Technology Evaluation" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01c2sx728> ;
+        rdfs:label "Shaanxi Science and Technology Department" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/012wsxz85> ;
+        rdfs:label "State Key Laboratory of Hydrology-Water Resources and Hydraulic Engineering" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00502tg50> ;
+        rdfs:label "Wanfang Data (China)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02fzqav45> ;
+        rdfs:label "State Council of the People's Republic of China" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(116.39723 39.9075)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(116.39723 39.9075)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Beijing" ;
             schema:addressCountry "CN" ;
-            owl:sameAs <http://sws.geonames.org/1816670/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000403691054> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q839875> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q7248392> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "China" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1816670/> ;
+    ] ; 
     .

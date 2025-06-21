@@ -1,0 +1,126 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/0327f2m07> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "1999"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "government" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-05-02"^^xsd:date ;
+    org:alternativeName "Agricultural Research Council of Italy"@en ; 
+    org:abbreviation "CREA"@None ; 
+    org:alternativeName "Italian Agricultural Research Council"@en ; 
+    schema:mainEntityOfPage <https://www.crea.gov.it> ;
+    schema:sameAs <https://grid.ac/institutions/grid.423616.4> ;
+    schema:sameAs <http://isni.org/isni/0000000122936756> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/029p62z73> ;
+        rdfs:label "Centro di Ricerca per la Patologia Vegetale" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00z6kst31> ;
+        rdfs:label "Centro di Ricerca per l’Orticoltura" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/007bjx395> ;
+        rdfs:label "Cereal Research Centre" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04athv462> ;
+        rdfs:label "Food Technology Research Unit" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03wp9yy58> ;
+        rdfs:label "Foraggere e Lattiero Casearie" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02a2fqx66> ;
+        rdfs:label "Forest and Range Management Research Institute" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02a2x5r26> ;
+        rdfs:label "Forestry Research Centre" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/045380x72> ;
+        rdfs:label "Honey bee and Silkworm Research Unit" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05dsxr353> ;
+        rdfs:label "Istituto Sperimentale Agronomico" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02hb07017> ;
+        rdfs:label "Istituto Sperimentale per la Frutticoltura" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04hmvwa12> ;
+        rdfs:label "Istituto Sperimentale per la Zoologia Agraria" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01k1y4586> ;
+        rdfs:label "Istituto Sperimentale per la Zootecnia" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05sn5d694> ;
+        rdfs:label "Research Centre for Cereal and Industrial Crops" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05f8dke04> ;
+        rdfs:label "Research Centre for Olive Growing and Olive Oil Industry" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(12.51133 41.89193)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Rome" ;
+            schema:addressCountry "IT" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Italy" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3169070/> ;
+    ] ; 
+    .

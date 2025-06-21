@@ -4,27 +4,74 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/03vte9x46> a org:Organization ;
     rdfs:label "Observatoire des Sciences de l'Univers de Grenoble" ;
     schema:name "Observatoire des Sciences de l'Univers de Grenoble" ;
     schema:foundingDate "1985"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "OSUG" ;
-    org:alternativeName "Grenoble Universe Sciences Observatory" ;
-    schema:url <https://www.osug.fr> ; 
-    owl:sameAs <https://fr.wikipedia.org/wiki/Observatoire_des_sciences_de_l%27Univers_de_Grenoble> ;
+    org:classification "education" ; 
+    dct:created "2023-07-06"^^xsd:date ;
+    dct:modified "2024-05-02"^^xsd:date ;
+    org:alternativeName "Grenoble Universe Sciences Observatory"@None ; 
+    org:abbreviation "OSUG"@None ; 
+    schema:mainEntityOfPage <https://www.osug.fr> ;
+    owl:sameAs <https://fr.wikipedia.org/wiki/Observatoire_des_sciences_de_l%27Univers_de_Grenoble> ; 
+    schema:sameAs <http://isni.org/isni/0000000099784677> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/04kdfz702> ;
+        rdfs:label "Institut National des Sciences de l'Univers" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02feahw73> ;
+        rdfs:label "French National Centre for Scientific Research" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/003vg9w96> ;
+        rdfs:label "National Research Institute for Agriculture, Food and Environment" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/015q23935> ;
+        rdfs:label "Institut de Recherche pour le Développement" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02rx3b187> ;
+        rdfs:label "Université Grenoble Alpes" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01kcrnc96> ;
+        rdfs:label "Institut de Planétologie et d'Astrophysique de Grenoble" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(5.71479 45.17869)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(5.71479 45.17869)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Grenoble" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/3014728/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000099784677> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q7075448> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3014728/> ;
+    ] ; 
     .

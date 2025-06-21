@@ -4,24 +4,59 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02baj6743> a org:Organization ;
     rdfs:label "CIC Rennes" ;
     schema:name "CIC Rennes" ;
     schema:foundingDate "2002"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    schema:url <http://cic.chu-rennes.net/?q=accueil> ; 
+    org:classification "facility" ; 
+    dct:created "2019-02-17"^^xsd:date ;
+    dct:modified "2024-05-02"^^xsd:date ;
+    schema:mainEntityOfPage <https://www.cic-rennes.fr> ;
+    schema:sameAs <https://grid.ac/institutions/grid.503157.5> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/05qec5a53> ;
+        rdfs:label "Centre Hospitalier Universitaire de Rennes" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/01qa4rf46> ;
+        rdfs:label "Délégation Régionale Grand Ouest" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/015m7wh34> ;
+        rdfs:label "University of Rennes" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02vjkv261> ;
+        rdfs:label "Inserm" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-1.67429 48.11198)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-1.67429 48.11198)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Rennes" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2983990/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://www.wikidata.org/entity/Q51781079> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2983990/> ;
+    ] ; 
     .

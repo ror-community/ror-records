@@ -4,26 +4,169 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01m84wm78> a org:Organization ;
     rdfs:label "University of Rennes 2" ;
     schema:name "University of Rennes 2" ;
     schema:foundingDate "1969"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    schema:url <http://www.univ-rennes2.fr/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Rennes_2_%E2%80%93_Upper_Brittany> ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-05-02"^^xsd:date ;
+    schema:mainEntityOfPage <http://www.univ-rennes2.fr/> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Rennes_2_%E2%80%93_Upper_Brittany> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.11619.3e> ;
+    schema:sameAs <http://isni.org/isni/0000000121522279> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03dgmxj03> ;
+        rdfs:label "Laboratoire de Psychologie : Cognition, Comportement, Communication" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05y76vp22> ;
+        rdfs:label "Institut de recherche mathématique de Rennes" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05b3p7p58> ;
+        rdfs:label "Laboratoire Mouvement Sport Santé" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0595x5h51> ;
+        rdfs:label "Anglophonie: communautés, écritures" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01k9kg969> ;
+        rdfs:label "Arts: pratiques et poétiques" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00m4rxj18> ;
+        rdfs:label "Arènes: politique, santé publique, environnement, médias" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/045q3tp69> ;
+        rdfs:label "Centre d’études des langues et littératures anciennes et modernes" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05r4re112> ;
+        rdfs:label "Centre d’Etudes des Langues, Territoires et Identités Culturelles – Bretagne et Langues Minoritaires" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02wgtm643> ;
+        rdfs:label "Centre de Recherche en Archéologie, Archéosciences, Histoire" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00psw8792> ;
+        rdfs:label "Centre de recherche sur l’éducation, les apprentissages et la didactique" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0339jw085> ;
+        rdfs:label "Équipe de Recherche Interlangue : Mémoires, Identités, Territoires" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03237mt20> ;
+        rdfs:label "Espaces et Sociétés" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/018n13n96> ;
+        rdfs:label "Histoire et critique des arts" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05sat2s07> ;
+        rdfs:label "Littoral, Environnement, Télédétection, Géomatique" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02gn4cf81> ;
+        rdfs:label "Linguistique Ingénierie et Didactique des Langues" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01dyfj824> ;
+        rdfs:label "Laboratoire Interdisciplinaire de Recherche en Innovations Sociétales" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01pxcyx49> ;
+        rdfs:label "Pôle de Recherche Francophonies, Interculturel, Communication, Sociolinguistique" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00drkdp66> ;
+        rdfs:label "Pratiques et Théories de l'art contemporain" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04fke6556> ;
+        rdfs:label "Recherches en Psychopathologie et Psychanalyse" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05rmjk207> ;
+        rdfs:label "Tempora" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/026m1rk14> ;
+        rdfs:label "Valeurs, Innovations, Politiques, Socialisations et Sports" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05pwkex33> ;
+        rdfs:label "Observatoire des Sciences de l'Univers de Rennes" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-1.67429 48.11198)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-1.67429 48.11198)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Rennes" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2983990/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000121522279> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q459026> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2983990/> ;
+    ] ; 
     .

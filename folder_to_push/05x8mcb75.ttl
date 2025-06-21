@@ -4,26 +4,50 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/05x8mcb75> a org:Organization ;
-    rdfs:label "Technical University of Ostrava" ;
-    schema:name "Technical University of Ostrava" ;
+    rdfs:label "" ;
+    schema:name "" ;
     schema:foundingDate "1849"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    schema:url <https://www.vsb.cz/en> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Technical_University_of_Ostrava> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-05-02"^^xsd:date ;
+    org:abbreviation "VŠB"@cs ; 
+    org:alternativeName "VŠB - TU Ostrava"@cs ; 
+    org:alternativeName "VŠB - Technická univerzita Ostrava"@cs ; 
+    org:abbreviation "VŠB-TUO"@cs ; 
+    schema:url <http://vsb.cz> ; 
+    schema:mainEntityOfPage <https://www.vsb.cz> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/VSB_–_Technical_University_of_Ostrava> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100006443> ;
+    schema:sameAs <https://grid.ac/institutions/grid.440850.d> ;
+    schema:sameAs <http://isni.org/isni/0000000096432828> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04vxzbp05> ;
+        rdfs:label "Czech Welding Institute (Czechia)" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(18.28204 49.83465)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(18.28204 49.83465)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Ostrava" ;
             schema:addressCountry "CZ" ;
-            owl:sameAs <http://sws.geonames.org/3068799/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000096432828> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1247543> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Czechia" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3068799/> ;
+    ] ; 
     .

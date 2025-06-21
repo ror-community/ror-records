@@ -4,28 +4,60 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/04387x656> a org:Organization ;
-    rdfs:label "University of Eastern Piedmont Amadeo Avogadro" ;
-    schema:name "University of Eastern Piedmont Amadeo Avogadro" ;
+    rdfs:label "" ;
+    schema:name "" ;
     schema:foundingDate "1998"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "UNIPMN" ;
-    org:alternativeName "University of Eastern Piedmont" ;
-    schema:url <http://www.unipmn.it/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Eastern_Piedmont> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-05-02"^^xsd:date ;
+    org:abbreviation "UNIPMN"@None ; 
+    org:alternativeName "University of Eastern Piedmont"@en ; 
+    org:alternativeName "University of Eastern Piedmont Amadeo Avogadro"@en ; 
+    schema:mainEntityOfPage <https://uniupo.it> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Eastern_Piedmont> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100005699> ;
+    schema:sameAs <https://grid.ac/institutions/grid.16563.37> ;
+    schema:sameAs <http://isni.org/isni/0000000121663741> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01vj6ck58> ;
+        rdfs:label "INFN Sezione di Torino" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02gp92p70> ;
+        rdfs:label "Azienda Ospedaliero Universitaria Maggiore della Carita" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/04hp1ky92> ;
+        rdfs:label "NODES S.c.a.r.l" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(8.41989 45.32163)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(8.41989 45.32163)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Vercelli" ;
             schema:addressCountry "IT" ;
-            owl:sameAs <http://sws.geonames.org/3164565/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000121663741> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1235561> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Italy" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3164565/> ;
+    ] ; 
     .

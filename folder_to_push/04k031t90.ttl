@@ -4,28 +4,87 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/04k031t90> a org:Organization ;
     rdfs:label "École Nationale Vétérinaire d'Alfort" ;
     schema:name "École Nationale Vétérinaire d'Alfort" ;
     schema:foundingDate "1765"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "ENVA" ;
-    org:alternativeName "National Veterinary School of Alfort" ;
-    schema:url <https://www.vet-alfort.fr/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/%C3%89cole_nationale_v%C3%A9t%C3%A9rinaire_d%27Alfort> ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-05-02"^^xsd:date ;
+    org:abbreviation "ENVA"@None ; 
+    org:alternativeName "National Veterinary School of Alfort"@None ; 
+    schema:mainEntityOfPage <https://www.vet-alfort.fr/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/%C3%89cole_nationale_v%C3%A9t%C3%A9rinaire_d%27Alfort> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.428547.8> ;
+    schema:sameAs <http://isni.org/isni/0000000121693027> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05mfwtg94> ;
+        rdfs:label "Biologie de la Reproduction, Environnement, Epigénétique et Développement" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/027364b18> ;
+        rdfs:label "Bipar" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03q7r5x87> ;
+        rdfs:label "Laboratoire de Biologie, Bioingéniérie et Bioimagerie ostéoarticulaire" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/001rmv394> ;
+        rdfs:label "Biomécanique et Pathologie Locomotrice du Cheval" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0318tzh81> ;
+        rdfs:label "Virologie" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01htygx54> ;
+        rdfs:label "DYNAMYC MYCOLOGY" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/05ggc9x40> ;
+        rdfs:label "Université Paris-Est Créteil" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04qe59j94> ;
+        rdfs:label "Mondor Institute of Biomedical Research" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(2.43945 48.81171)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(2.43945 48.81171)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Maisons-Alfort" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2996568/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000121693027> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q273600> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2996568/> ;
+    ] ; 
     .

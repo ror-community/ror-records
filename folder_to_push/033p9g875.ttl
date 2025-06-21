@@ -4,28 +4,161 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/033p9g875> a org:Organization ;
     rdfs:label "National Polytechnic Institute of Toulouse" ;
     schema:name "National Polytechnic Institute of Toulouse" ;
     schema:foundingDate "1969"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "INPT" ;
-    org:alternativeName "INP Toulouse" ;
-    schema:url <http://www.inp-toulouse.fr/fr/index.html> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/National_Polytechnic_Institute_of_Toulouse> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-05-02"^^xsd:date ;
+    org:alternativeName "INP Toulouse"@None ; 
+    org:abbreviation "INPT"@None ; 
+    schema:mainEntityOfPage <http://www.inp-toulouse.fr/fr/index.html> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/National_Polytechnic_Institute_of_Toulouse> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100007256> ;
+    schema:sameAs <https://grid.ac/institutions/grid.15363.32> ;
+    schema:sameAs <http://isni.org/isni/0000000121766169> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01sjmsj73> ;
+        rdfs:label "AGroecologies, Innovations & Ruralities" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01z0xsq42> ;
+        rdfs:label "Genomics and Biotechnology of the Fruits Laboratory" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/025nmxp11> ;
+        rdfs:label "Institute of Fluid Mechanics of Toulouse" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03xhggy77> ;
+        rdfs:label "Interuniversity Center of Materials Research and Engineering" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/039aqbp11> ;
+        rdfs:label "Laboratoire Génie de Production" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/003jnac13> ;
+        rdfs:label "Laboratoire de Génie Chimique" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/027rbaq21> ;
+        rdfs:label "Laboratoire Écologie Fonctionnelle et Environnement" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03vcm6439> ;
+        rdfs:label "Laboratory for Analysis and Architecture of Systems" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02w5mvk98> ;
+        rdfs:label "Laboratory on Plasma and Conversion of Energy" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0111a5077> ;
+        rdfs:label "Toxalim Research Centre in Food Toxicology" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05wfw4946> ;
+        rdfs:label "École Nationale Supérieure d'Électrotechnique, d'Électronique, d'Informatique, d'Hydraulique et des Télécommunications" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04wa4se75> ;
+        rdfs:label "Dynamiques et écologie des paysages agriforestiers" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03tvs6n06> ;
+        rdfs:label "Centre de microcaractérisation Raimond Castaing" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02k7ask46> ;
+        rdfs:label "CALMIP" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01x6z5t49> ;
+        rdfs:label "Fédération de Recherche Spectroscopies de Photoémission" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0459fdx51> ;
+        rdfs:label "Fédération de Recherche sur l'Energie Solaire" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01sgwka45> ;
+        rdfs:label "Microscopie Fonctionnelle du Vivant" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/004raaa70> ;
+        rdfs:label "Université de Toulouse" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01fdvj254> ;
+        rdfs:label "École Nationale d'Ingénieurs de Tarbes" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01zgcd031> ;
+        rdfs:label "TéSA" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(1.44367 43.60426)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(1.44367 43.60426)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Toulouse" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2972315/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000121766169> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q3152453> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2972315/> ;
+    ] ; 
     .

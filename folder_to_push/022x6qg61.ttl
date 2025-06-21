@@ -4,26 +4,45 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/022x6qg61> a org:Organization ;
     rdfs:label "Vassar College" ;
     schema:name "Vassar College" ;
     schema:foundingDate "1861"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    schema:url <http://www.vassar.edu/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Vassar_College> ;
-    schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-73.92097 41.70037)"^^geo:wktLiteral ;
-            schema:addressLocality "Poughkeepsie" ;
-            schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/5132143/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-05-02"^^xsd:date ;
+    schema:mainEntityOfPage <http://www.vassar.edu/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Vassar_College> ; 
+    schema:sameAs <https://api.crossref.org/funders/100011571> ;
+    schema:sameAs <https://grid.ac/institutions/grid.267778.b> ;
     schema:sameAs <http://isni.org/isni/0000000122905183> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q2093794> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00mkh7345> ;
+        rdfs:label "Hubbard Brook Long Term Ecological Research" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-73.90703 41.66981)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Town of Poughkeepsie" ;
+            schema:addressCountry "US" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/5132147/> ;
+    ] ; 
     .

@@ -4,26 +4,56 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/036xhtv26> a org:Organization ;
-    rdfs:label "Institute of Genetics and Development of Rennes" ;
-    schema:name "Institute of Genetics and Development of Rennes" ;
+    rdfs:label "" ;
+    schema:name "" ;
     schema:foundingDate "1993"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "IGDR" ;
-    schema:url <https://igdr.univ-rennes.fr> ; 
+    org:classification "facility" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-05-02"^^xsd:date ;
+    org:abbreviation "IGDR"@None ; 
+    org:alternativeName "Institut de génétique et développement de Rennes"@fr ; 
+    schema:mainEntityOfPage <https://igdr.univ-rennes.fr> ;
+    schema:sameAs <https://grid.ac/institutions/grid.462478.b> ;
+    schema:sameAs <http://isni.org/isni/000000040609882X> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/00rydyx93> ;
+        rdfs:label "Institut des Sciences Biologiques" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/015m7wh34> ;
+        rdfs:label "University of Rennes" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02feahw73> ;
+        rdfs:label "French National Centre for Scientific Research" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-1.67429 48.11198)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-1.67429 48.11198)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Rennes" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2983990/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/000000040609882X> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q30261468> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2983990/> ;
+    ] ; 
     .

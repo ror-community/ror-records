@@ -4,27 +4,45 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/05b7rex33> a org:Organization ;
     rdfs:label "Ōtani University" ;
     schema:name "Ōtani University" ;
     schema:foundingDate "1901"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:alternativeName "Shinshū University" ;
-    schema:url <http://www.otani.ac.jp/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/%C5%8Ctani_University> ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-05-02"^^xsd:date ;
+    org:alternativeName "Ohtani Daigaku"@ja ; 
+    org:alternativeName "Ootani Daigaku"@ja ; 
+    org:alternativeName "Shinshuu University"@ja ; 
+    org:alternativeName "Shinshū University"@ja ; 
+    org:alternativeName "Ōtani Daigaku"@ja ; 
+    org:alternativeName "おおたにだいがく"@ja ; 
+    org:alternativeName "オオタニダイガク"@ja ; 
+    org:alternativeName "真宗大学"@ja ; 
+    schema:mainEntityOfPage <https://www.otani.ac.jp> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/%C5%8Ctani_University> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.444226.2> ;
+    schema:sameAs <http://isni.org/isni/0000000403734173> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(135.75385 35.02107)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(135.75385 35.02107)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Kyoto" ;
             schema:addressCountry "JP" ;
-            owl:sameAs <http://sws.geonames.org/1857910/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000403734173> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q386203> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Japan" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1857910/> ;
+    ] ; 
     .

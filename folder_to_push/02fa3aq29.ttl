@@ -4,26 +4,129 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02fa3aq29> a org:Organization ;
     rdfs:label "McMaster University" ;
     schema:name "McMaster University" ;
     schema:foundingDate "1887"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    schema:url <http://www.mcmaster.ca/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/McMaster_University> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-05-02"^^xsd:date ;
+    schema:mainEntityOfPage <http://www.mcmaster.ca/> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/McMaster_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/100009776> ;
+    schema:sameAs <https://grid.ac/institutions/grid.25073.33> ;
+    schema:sameAs <http://isni.org/isni/0000000419368227> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05wagd980> ;
+        rdfs:label "National Collaborating Centre for Methods and Tools" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05q8mwj81> ;
+        rdfs:label "Hamilton General Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02dqdxm48> ;
+        rdfs:label "Hamilton Health Sciences" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02cwjh447> ;
+        rdfs:label "Juravinski Cancer Centre" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00njz5525> ;
+        rdfs:label "Juravinski Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03cegwq60> ;
+        rdfs:label "McMaster Children's Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02zrdtc90> ;
+        rdfs:label "McMaster Divinity College" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05jyrng31> ;
+        rdfs:label "McMaster University Medical Centre" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05x596b40> ;
+        rdfs:label "Norfolk General Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/003w29077> ;
+        rdfs:label "Ontario Clinical Oncology Group" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03kwaeq96> ;
+        rdfs:label "Population Health Research Institute" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/009z39p97> ;
+        rdfs:label "St. Joseph’s Healthcare Hamilton" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01khsr243> ;
+        rdfs:label "St. Peter's Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02w3v2f07> ;
+        rdfs:label "Canadian Centre for Electron Microscopy" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/0042y9w49> ;
+        rdfs:label "Canadian Research Data Centre Network" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-79.84963 43.25011)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-79.84963 43.25011)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Hamilton" ;
             schema:addressCountry "CA" ;
-            owl:sameAs <http://sws.geonames.org/5969782/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000419368227> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q632891> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Canada" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/5969782/> ;
+    ] ; 
     .

@@ -4,27 +4,62 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01c8rcg82> a org:Organization ;
     rdfs:label "Grenoble Computer Science Laboratory" ;
     schema:name "Grenoble Computer Science Laboratory" ;
     schema:foundingDate "2007"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "LIG" ;
-    schema:url <https://www.liglab.fr/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Laboratoire_d%27Informatique_de_Grenoble> ;
+    org:classification "facility" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-05-02"^^xsd:date ;
+    org:abbreviation "LIG"@None ; 
+    schema:mainEntityOfPage <https://www.liglab.fr/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Laboratoire_d%27Informatique_de_Grenoble> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.462707.0> ;
+    schema:sameAs <http://isni.org/isni/0000000122864035> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02kvxyf05> ;
+        rdfs:label "French Institute for Research in Computer Science and Automation" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/05sbt2524> ;
+        rdfs:label "Grenoble Institute of Technology" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/04z22qz54> ;
+        rdfs:label "Institut des Sciences de l'Information et de leurs Interactions" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02rx3b187> ;
+        rdfs:label "Université Grenoble Alpes" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(5.71479 45.17869)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(5.71479 45.17869)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Grenoble" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/3014728/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000122864035> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q3214404> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3014728/> ;
+    ] ; 
     .

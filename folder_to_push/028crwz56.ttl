@@ -4,26 +4,81 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/028crwz56> a org:Organization ;
     rdfs:label "Universidad Nacional del Sur" ;
     schema:name "Universidad Nacional del Sur" ;
     schema:foundingDate "1956"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    schema:url <http://www.uns.edu.ar/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Universidad_Nacional_del_Sur> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-05-02"^^xsd:date ;
+    schema:mainEntityOfPage <http://www.uns.edu.ar/> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Universidad_Nacional_del_Sur> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100005740> ;
+    schema:sameAs <https://grid.ac/institutions/grid.412236.0> ;
+    schema:sameAs <http://isni.org/isni/0000000121679444> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00g04a530> ;
+        rdfs:label "Instituto de Física del Sur" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00xpayr72> ;
+        rdfs:label "Planta Piloto de Ingeniería Química" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02skrr217> ;
+        rdfs:label "Centro de Recursos Naturales Renovables de la Zona Semiárida" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/041ttmq60> ;
+        rdfs:label "Instituto de Matemática de Bahía Blanca" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/021rr7t48> ;
+        rdfs:label "Instituto de Investigaciones Bioquímicas de Bahía Blanca, CONICET-UNS" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03efzvv60> ;
+        rdfs:label "Centro Científico Tecnológico - Bahía Blanca" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/033xgn512> ;
+        rdfs:label "Instituto de Investigaciones Económicas y Sociales del Sur" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-62.27243 -38.71959)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-62.26545 -38.7176)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Bahía Blanca" ;
             schema:addressCountry "AR" ;
-            owl:sameAs <http://sws.geonames.org/3865086/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000121679444> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q5484518> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Argentina" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3865086/> ;
+    ] ; 
     .

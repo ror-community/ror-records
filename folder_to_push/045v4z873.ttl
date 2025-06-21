@@ -4,26 +4,40 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/045v4z873> a org:Organization ;
-    rdfs:label "Chittagong Veterinary and Animal Sciences University" ;
-    schema:name "Chittagong Veterinary and Animal Sciences University" ;
+    rdfs:label "" ;
+    schema:name "" ;
     schema:foundingDate "2006"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "CVASU" ;
-    schema:url <http://cvasu.ac.bd/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Chittagong_Veterinary_and_Animal_Sciences_University> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-05-02"^^xsd:date ;
+    org:abbreviation "CVASU"@None ; 
+    org:alternativeName "Chittagong Veterinary and Animal Sciences University"@en ; 
+    schema:mainEntityOfPage <https://cvasu.ac.bd> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Chittagong_Veterinary_and_Animal_Sciences_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/100020176> ;
+    schema:sameAs <https://grid.ac/institutions/grid.442958.6> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(91.83168 22.3384)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(91.83168 22.3384)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Chittagong" ;
             schema:addressCountry "BD" ;
-            owl:sameAs <http://sws.geonames.org/1205733/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://www.wikidata.org/entity/Q5102412> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Bangladesh" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1205733/> ;
+    ] ; 
     .

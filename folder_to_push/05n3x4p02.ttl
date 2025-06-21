@@ -4,27 +4,65 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/05n3x4p02> a org:Organization ;
     rdfs:label "Medical University of Vienna" ;
     schema:name "Medical University of Vienna" ;
     schema:foundingDate "1365"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:alternativeName "MedUni Wien" ;
-    schema:url <https://www.meduniwien.ac.at> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Medical_University_of_Vienna> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-05-02"^^xsd:date ;
+    org:alternativeName "MedUni Vienna"@None ; 
+    org:alternativeName "MedUni Wien"@None ; 
+    schema:mainEntityOfPage <https://www.meduniwien.ac.at> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Medical_University_of_Vienna> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100005788> ;
+    schema:sameAs <https://grid.ac/institutions/grid.22937.3d> ;
+    schema:sameAs <http://isni.org/isni/0000000092598492> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/04zvdfd56> ;
+        rdfs:label "Universitätszahnklinik Wien" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05f0zr486> ;
+        rdfs:label "Vienna General Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05cz70a34> ;
+        rdfs:label "Max Perutz Labs" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05bd7c383> ;
+        rdfs:label "St. Anna Children's Cancer Research Institute" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(16.37208 48.20849)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(16.37208 48.20849)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Vienna" ;
             schema:addressCountry "AT" ;
-            owl:sameAs <http://sws.geonames.org/2761369/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000092598492> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q700731> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Austria" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2761369/> ;
+    ] ; 
     .

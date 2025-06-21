@@ -4,26 +4,37 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/03769b225> a org:Organization ;
     rdfs:label "University of Vaasa" ;
     schema:name "University of Vaasa" ;
     schema:foundingDate "1968"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    schema:url <http://www.uva.fi/en/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Vaasa> ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-05-02"^^xsd:date ;
+    schema:mainEntityOfPage <https://www.uwasa.fi> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Vaasa> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.19397.35> ;
+    schema:sameAs <http://isni.org/isni/0000000106722619> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(21.61577 63.096)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(21.61577 63.096)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Vaasa" ;
             schema:addressCountry "FI" ;
-            owl:sameAs <http://sws.geonames.org/632978/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000106722619> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1724372> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Finland" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/632978/> ;
+    ] ; 
     .

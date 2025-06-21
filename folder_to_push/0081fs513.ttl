@@ -4,27 +4,136 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/0081fs513> a org:Organization ;
     rdfs:label "University of Buenos Aires" ;
     schema:name "University of Buenos Aires" ;
     schema:foundingDate "1821"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "UBA" ;
-    schema:url <http://www.uba.ar/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Buenos_Aires> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-05-02"^^xsd:date ;
+    org:abbreviation "UBA"@None ; 
+    schema:mainEntityOfPage <http://www.uba.ar/> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Buenos_Aires> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100005363> ;
+    schema:sameAs <https://grid.ac/institutions/grid.7345.5> ;
+    schema:sameAs <http://isni.org/isni/0000000100561981> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00jxb8k91> ;
+        rdfs:label "Agricultural Plant Physiology and Ecology Research Institute" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/036a3f271> ;
+        rdfs:label "Institute for Medical Research" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03rq94151> ;
+        rdfs:label "Institute of Astronomy and Space Physics" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05k07f122> ;
+        rdfs:label "Instituto Franco-Argentino sobre Estudios de Clima y sus Impactos" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/014pzm971> ;
+        rdfs:label "Instituto de Geocronología y Geología Isotópica" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0348f6e47> ;
+        rdfs:label "Instituto de Historia Argentina y Americana "Dr. Emilio Ravignani"" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01m444286> ;
+        rdfs:label "Instituto de Investigaciones Biomédicas en Retrovirus y Sida" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/019ptgs60> ;
+        rdfs:label "Buenos Aires Interdisciplinary Political Economy Institute" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05de0bv95> ;
+        rdfs:label "Instituto de Biodiversidad y Biología Experimental y Aplicada" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00822yn93> ;
+        rdfs:label "Instituto de Física de Buenos Aires" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/04c5b8z55> ;
+        rdfs:label "Biomedicine Research Institute of Buenos Aires - CONICET - Partner Institute of the Max Planck Society" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03hnwy706> ;
+        rdfs:label "Experimental Medicine and Biology Institute" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00ppmht14> ;
+        rdfs:label "Hospital Borda" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02hbrab76> ;
+        rdfs:label "Hospital de Clínicas "José de San Martín"" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0047z8a16> ;
+        rdfs:label "Instituto de Ciencias Antropológicas" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04tmf0341> ;
+        rdfs:label "Instituto de Investigaciones Gino Germani" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-58.37723 -34.61315)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-58.37723 -34.61315)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Buenos Aires" ;
             schema:addressCountry "AR" ;
-            owl:sameAs <http://sws.geonames.org/3435910/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000100561981> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q194223> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Argentina" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3435910/> ;
+    ] ; 
     .

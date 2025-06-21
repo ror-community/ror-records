@@ -4,28 +4,47 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/03csrq586> a org:Organization ;
     rdfs:label "European Association of National Metrology Institutes" ;
     schema:name "European Association of National Metrology Institutes" ;
     schema:foundingDate "2007"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Nonprofit" ; 
-    org:abbreviation "EURAMET" ;
-    org:alternativeName "EUROMET" ;
-    schema:url <https://www.euramet.org/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/EURAMET> ;
+    org:classification "funder" ; 
+    org:classification "nonprofit" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-05-02"^^xsd:date ;
+    org:alternativeName "EURAMET"@None ; 
+    org:alternativeName "EUROMET"@None ; 
+    schema:mainEntityOfPage <https://www.euramet.org/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/EURAMET> ; 
+    schema:sameAs <https://api.crossref.org/funders/100012329> ;
+    schema:sameAs <https://grid.ac/institutions/grid.484119.1> ;
+    schema:sameAs <http://isni.org/isni/0000000464325234> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/042k5q325> ;
+        rdfs:label "European Metrology Programme for Innovation and Research" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(10.52673 52.26594)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(10.52673 52.26594)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Braunschweig" ;
             schema:addressCountry "DE" ;
-            owl:sameAs <http://sws.geonames.org/2945024/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000464325234> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q5324551> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Germany" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2945024/> ;
+    ] ; 
     .

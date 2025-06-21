@@ -4,24 +4,46 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01g0jwx42> a org:Organization ;
     rdfs:label "Instituto Politécnico do Rio de Janeiro" ;
     schema:name "Instituto Politécnico do Rio de Janeiro" ;
     schema:foundingDate "1989"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "IPRJ" ;
-    org:alternativeName "Instituto Politécnico da Universidade do Estado do Rio de Janeiro" ;
-    schema:url <http://www.iprj.uerj.br> ; 
+    org:classification "education" ; 
+    dct:created "2024-03-13"^^xsd:date ;
+    dct:modified "2024-05-02"^^xsd:date ;
+    org:abbreviation "IPRJ"@None ; 
+    org:alternativeName "Instituto Politécnico da Universidade do Estado do Rio de Janeiro"@None ; 
+    org:alternativeName "Polytechnic Institute of Rio de Janeiro"@None ; 
+    org:alternativeName "Polytechnic Institute of the State University of Rio de Janeiro"@None ; 
+    org:abbreviation "UERJ"@None ; 
+    org:alternativeName "UERJ - Instituto Politécnico"@None ; 
+    schema:mainEntityOfPage <http://www.iprj.uerj.br> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/0198v2949> ;
+        rdfs:label "Universidade do Estado do Rio de Janeiro" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-42.53111 -22.28194)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-42.53111 -22.28194)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Nova Friburgo" ;
             schema:addressCountry "BR" ;
-            owl:sameAs <http://sws.geonames.org/3456166/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Brazil" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3456166/> ;
+    ] ; 
     .

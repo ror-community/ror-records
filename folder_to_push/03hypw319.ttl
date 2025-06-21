@@ -4,28 +4,113 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/03hypw319> a org:Organization ;
     rdfs:label "University of Reims Champagne-Ardenne" ;
     schema:name "University of Reims Champagne-Ardenne" ;
     schema:foundingDate "1971"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "URCA" ;
-    org:alternativeName "University of Reims" ;
-    schema:url <http://www.univ-reims.eu/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Reims_Champagne-Ardenne> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-05-02"^^xsd:date ;
+    org:abbreviation "URCA"@None ; 
+    org:alternativeName "University of Reims"@None ; 
+    schema:mainEntityOfPage <http://www.univ-reims.eu/> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Reims_Champagne-Ardenne> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100016399> ;
+    schema:sameAs <https://grid.ac/institutions/grid.11667.37> ;
+    schema:sameAs <http://isni.org/isni/0000000419370618> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00136g547> ;
+        rdfs:label "Fractionnation of AgroResources and Environment" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03c0nx407> ;
+        rdfs:label "Institute of Molecular Chemistry Reims" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03vyzg221> ;
+        rdfs:label "Molecular and Atmospheric Spectrometry Group" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/016wdna72> ;
+        rdfs:label "STIC Research Centre" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/046cwyy43> ;
+        rdfs:label "Stress Environnementaux et Biosurveillance des Milieux Aquatiques" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02w7ezv91> ;
+        rdfs:label "Pathologies Pulmonaires et Plasticité Cellulaire" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01xkfnd03> ;
+        rdfs:label "Laboratoire de Mathématiques de Reims" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/017p6sq53> ;
+        rdfs:label "Matrice Extracellulaire et Dynamique Cellulaire MEDyC" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01sgwka45> ;
+        rdfs:label "Microscopie Fonctionnelle du Vivant" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01dthb180> ;
+        rdfs:label "Epidémiosurveillance et circulation des parasites dans les environnements" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01jbb3w63> ;
+        rdfs:label "Centre Hospitalier Universitaire de Reims" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04j8jrf09> ;
+        rdfs:label "Centre Interdisciplinaire de Recherches sur les Langues Et la Pensée" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(4.02853 49.26526)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(4.02853 49.26526)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Reims" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2984114/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000419370618> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q2496149> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2984114/> ;
+    ] ; 
     .

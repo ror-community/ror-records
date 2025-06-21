@@ -4,26 +4,63 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/0420db125> a org:Organization ;
     rdfs:label "Rockefeller University" ;
     schema:name "Rockefeller University" ;
     schema:foundingDate "1901"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    schema:url <http://www.rockefeller.edu/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Rockefeller_University> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-05-02"^^xsd:date ;
+    schema:mainEntityOfPage <http://www.rockefeller.edu/> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Rockefeller_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/100012007> ;
+    schema:sameAs <https://grid.ac/institutions/grid.134907.8> ;
+    schema:sameAs <http://isni.org/isni/0000000121661519> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04er32z07> ;
+        rdfs:label "Rockefeller University Press" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00jjq6q61> ;
+        rdfs:label "Rockefeller University Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03zjqec80> ;
+        rdfs:label "Hospital for Special Surgery" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0263t7p64> ;
+        rdfs:label "Chan Zuckerberg Biohub New York" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-74.00597 40.71427)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-74.00597 40.71427)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "New York" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/5128581/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000121661519> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q270272> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/5128581/> ;
+    ] ; 
     .

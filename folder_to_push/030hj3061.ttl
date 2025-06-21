@@ -4,28 +4,106 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/030hj3061> a org:Organization ;
     rdfs:label "IMT Atlantique" ;
     schema:name "IMT Atlantique" ;
     schema:foundingDate "2017"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:alternativeName "École Nationale Supérieure Mines-Télécom Atlantique Bretagne Pays de la Loire" ;
-    schema:url <https://www.imt-atlantique.fr/> ; 
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-05-02"^^xsd:date ;
+    org:alternativeName "IMT Atlantique Bretagne Pays de la Loire"@None ; 
+    org:alternativeName "École Nationale Supérieure Mines-Télécom Atlantique Bretagne Pays de la Loire"@None ; 
+    schema:mainEntityOfPage <https://www.imt-atlantique.fr/> ;
+    schema:sameAs <https://api.crossref.org/funders/501100007262> ;
+    schema:sameAs <https://grid.ac/institutions/grid.486295.4> ;
+    schema:sameAs <http://isni.org/isni/0000000121096951> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00myn0z94> ;
+        rdfs:label "Institut de Recherche en Informatique et Systèmes Aléatoires" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01kxesq83> ;
+        rdfs:label "Laboratoire de Physique Subatomique et des Technologies Associées" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02snf8m58> ;
+        rdfs:label "Laboratoire des Sciences du Numérique de Nantes" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0266kfd37> ;
+        rdfs:label "Laboratoire des Sciences et Techniques de l’Information de la Communication et de la Connaissance" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05ngxmx20> ;
+        rdfs:label "Process Engineering for Environment and Food" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/010rve435> ;
+        rdfs:label "Laboratoire d’Économie et de Gestion de l'Ouest" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04fgntk96> ;
+        rdfs:label "Tara Oceans Systems Ecology & Evolution" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0459fdx51> ;
+        rdfs:label "Fédération de Recherche sur l'Energie Solaire" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04k51bq24> ;
+        rdfs:label "Laboratoire d'Economie et de Management de Nantes Atlantique" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/025vp2923> ;
+        rdfs:label "Institut Mines-Télécom" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01zgcd031> ;
+        rdfs:label "TéSA" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-4.48628 48.39029)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-4.48628 48.39029)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Brest" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/3030300/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000121096951> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q27962533> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q2460307> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q3578250> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3030300/> ;
+    ] ; 
     .

@@ -4,26 +4,81 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/04h699437> a org:Organization ;
     rdfs:label "University of Leicester" ;
     schema:name "University of Leicester" ;
     schema:foundingDate "1957"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    schema:url <https://le.ac.uk> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Leicester> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-05-02"^^xsd:date ;
+    schema:mainEntityOfPage <https://le.ac.uk> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Leicester> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100000738> ;
+    schema:sameAs <https://grid.ac/institutions/grid.9918.9> ;
+    schema:sameAs <http://isni.org/isni/0000000419368411> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05xqxa525> ;
+        rdfs:label "NIHR Leicester Biomedical Research Centre" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/048a96r61> ;
+        rdfs:label "Glenfield Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02zg49d29> ;
+        rdfs:label "Leicester General Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03jkz2y73> ;
+        rdfs:label "Leicester Royal Infirmary" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03ke6rf22> ;
+        rdfs:label "NIHR Leicester Cardiovascular Biomedical Research Unit" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/04s4s0979> ;
+        rdfs:label "NIHR Leicester Respiratory Biomedical Research Unit" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0323snh42> ;
+        rdfs:label "Institute for Environmental Futures" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-1.13169 52.6386)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-1.13169 52.6386)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Leicester" ;
             schema:addressCountry "GB" ;
-            owl:sameAs <http://sws.geonames.org/2644668/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000419368411> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1333399> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United Kingdom" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2644668/> ;
+    ] ; 
     .

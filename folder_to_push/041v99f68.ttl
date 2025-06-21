@@ -4,25 +4,48 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/041v99f68> a org:Organization ;
     rdfs:label "Pharmacologie des anti-infectieux et antibiorésistance" ;
     schema:name "Pharmacologie des anti-infectieux et antibiorésistance" ;
     schema:foundingDate "2012"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "PHAR2" ;
-    org:alternativeName "Pharmacologie des anti-infectieux et antibiorésistance" ;
-    schema:url <http://phar.labo.univ-poitiers.fr> ; 
+    org:classification "facility" ; 
+    dct:created "2023-08-17"^^xsd:date ;
+    dct:modified "2024-05-02"^^xsd:date ;
+    org:abbreviation "PHAR2"@None ; 
+    org:alternativeName "Pharmacology of Antimicrobial Agents and Resistances"@None ; 
+    schema:mainEntityOfPage <http://phar.labo.univ-poitiers.fr> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/04xhy8q59> ;
+        rdfs:label "University of Poitiers" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02vjkv261> ;
+        rdfs:label "Inserm" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(0.34348 46.58261)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(0.34348 46.58261)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Poitiers" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2986495/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://www.wikidata.org/entity/Q51779859> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2986495/> ;
+    ] ; 
     .

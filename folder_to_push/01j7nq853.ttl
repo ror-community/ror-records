@@ -4,28 +4,94 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01j7nq853> a org:Organization ;
     rdfs:label "University of Alaska Fairbanks" ;
     schema:name "University of Alaska Fairbanks" ;
     schema:foundingDate "1917"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "UAF" ;
-    schema:url <http://www.uaf.edu/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Alaska_Fairbanks> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-05-02"^^xsd:date ;
+    org:abbreviation "UAF"@None ; 
+    schema:mainEntityOfPage <http://www.uaf.edu/> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Alaska_Fairbanks> ; 
+    schema:sameAs <https://api.crossref.org/funders/100006024> ;
+    schema:sameAs <https://grid.ac/institutions/grid.70738.3b> ;
+    schema:sameAs <http://isni.org/isni/000000041936981X> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04j23ff69> ;
+        rdfs:label "Alaska Sea Grant" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/022nyme12> ;
+        rdfs:label "Alaska Space Grant Program" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01nysf027> ;
+        rdfs:label "Bonanza Creek Long Term Ecological Research" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01csn4944> ;
+        rdfs:label "Northern Gulf of Alaska Long Term Ecological Research" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02yryhg49> ;
+        rdfs:label "Geophysical Detection of Nuclear Proliferation" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00y4zmh56> ;
+        rdfs:label "Alaska Climate Adaptation Science Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/01mtkd993> ;
+        rdfs:label "University of Alaska System" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/055a54548> ;
+        rdfs:label "Beaufort Lagoon Ecosystems Long Term Ecological Research Network" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/012prxm53> ;
+        rdfs:label "International Arctic Research Center" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-147.71639 64.83778)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-147.71639 64.83778)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Fairbanks" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/5861897/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/000000041936981X> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1285262> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q5535569> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/5861897/> ;
+    ] ; 
     .

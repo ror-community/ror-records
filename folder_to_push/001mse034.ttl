@@ -1,0 +1,40 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/001mse034> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "1947"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "government" ; 
+    dct:created "2024-04-30"^^xsd:date ;
+    dct:modified "2024-05-02"^^xsd:date ;
+    org:abbreviation "SoP"@en ; 
+    schema:mainEntityOfPage <http://surveyofpakistan.gov.pk> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Survey_of_Pakistan> ; 
+    schema:sameAs <http://isni.org/isni/0000000107003544> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(73.0479 33.59733)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Rawalpindi" ;
+            schema:addressCountry "PK" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Pakistan" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1166993/> ;
+    ] ; 
+    .

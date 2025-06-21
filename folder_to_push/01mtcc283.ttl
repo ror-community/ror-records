@@ -4,27 +4,94 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01mtcc283> a org:Organization ;
     rdfs:label "Le Mans Université" ;
     schema:name "Le Mans Université" ;
     schema:foundingDate "1977"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:alternativeName "Université du Maine" ;
-    schema:url <https://www.univ-lemans.fr> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Le_Mans_University> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-05-02"^^xsd:date ;
+    org:alternativeName "Université du Maine"@None ; 
+    schema:mainEntityOfPage <https://www.univ-lemans.fr> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Le_Mans_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100005715> ;
+    schema:sameAs <https://grid.ac/institutions/grid.34566.32> ;
+    schema:sameAs <http://isni.org/isni/0000000121723046> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03a9gd656> ;
+        rdfs:label "Institut des Molécules et Matériaux du Mans" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04fm0sh33> ;
+        rdfs:label "Laboratoire de Planétologie et Géosciences" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02wgtm643> ;
+        rdfs:label "Centre de Recherche en Archéologie, Archéosciences, Histoire" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03237mt20> ;
+        rdfs:label "Espaces et Sociétés" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/001aevc89> ;
+        rdfs:label "Laboratoire d'Acoustique de l'Université du Mans" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00b1crx81> ;
+        rdfs:label "Centre de Recherche en Éducation de Nantes" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03hq2nj16> ;
+        rdfs:label "3L.AM - Langues, Littératures, Linguistique des Universités d’Angers et du Mans" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01nhp3z94> ;
+        rdfs:label "Temps, Mondes, Sociétés" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02mhxg157> ;
+        rdfs:label "Groupement Ligérien pour le Calcul Intensif Distribué" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(0.20251 48.0021)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(0.20251 48.0021)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Le Mans" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/3003603/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000121723046> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q834825> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3003603/> ;
+    ] ; 
     .

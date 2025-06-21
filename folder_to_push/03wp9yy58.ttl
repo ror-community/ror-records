@@ -1,0 +1,46 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/03wp9yy58> a org:Organization ;
+    rdfs:label "Foraggere e Lattiero Casearie" ;
+    schema:name "Foraggere e Lattiero Casearie" ;
+    schema:foundingDate "1987"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "facility" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-05-02"^^xsd:date ;
+    org:abbreviation "CRA-FLC"@None ; 
+    schema:mainEntityOfPage <http://centroflc.entecra.it/> ;
+    schema:sameAs <https://grid.ac/institutions/grid.419572.c> ;
+    schema:sameAs <http://isni.org/isni/0000000404129231> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/0327f2m07> ;
+        rdfs:label "Consiglio per la ricerca in agricoltura e l’analisi dell’economia agraria" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(9.50085 45.30989)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Lodi" ;
+            schema:addressCountry "IT" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Italy" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3174638/> ;
+    ] ; 
+    .

@@ -4,27 +4,328 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/03cqe8w59> a org:Organization ;
     rdfs:label "Consejo Nacional de Investigaciones Científicas y Técnicas" ;
     schema:name "Consejo Nacional de Investigaciones Científicas y Técnicas" ;
     schema:foundingDate "1958"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Government" ; 
-    org:abbreviation "CONICET" ;
-    schema:url <http://www.conicet.gov.ar> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/National_Scientific_and_Technical_Research_Council> ;
+    org:classification "funder" ; 
+    org:classification "government" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-05-02"^^xsd:date ;
+    org:abbreviation "CONICET"@None ; 
+    schema:mainEntityOfPage <http://www.conicet.gov.ar> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/National_Scientific_and_Technical_Research_Council> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100002923> ;
+    schema:sameAs <https://grid.ac/institutions/grid.423606.5> ;
+    schema:sameAs <http://isni.org/isni/0000000119452152> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00jxb8k91> ;
+        rdfs:label "Agricultural Plant Physiology and Ecology Research Institute" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04c5b8z55> ;
+        rdfs:label "Biomedicine Research Institute of Buenos Aires - CONICET - Partner Institute of the Max Planck Society" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03efzvv60> ;
+        rdfs:label "Centro Científico Tecnológico - Bahía Blanca" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03vxkne37> ;
+        rdfs:label "Centro Científico Tecnológico - Córdoba" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03qan4b12> ;
+        rdfs:label "Centro Científico Tecnológico - La Plata" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/055wmc747> ;
+        rdfs:label "Centro Científico Tecnológico - Mendoza" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01ktqem13> ;
+        rdfs:label "Centro Científico Tecnológico - Nordeste" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/038n0qb29> ;
+        rdfs:label "Centro Científico Tecnológico - Patagonia Norte" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00kwm3d29> ;
+        rdfs:label "Centro Científico Tecnológico - San Juan" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02r8b4p12> ;
+        rdfs:label "Centro Científico Tecnológico - San Luis" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/003vet424> ;
+        rdfs:label "Centro Científico Tecnológico - Santa Fe" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00veegj02> ;
+        rdfs:label "Centro Científico Tecnológico - Tandil" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03w8cva37> ;
+        rdfs:label "Centro Científico Tecnológico - Tucumán" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05yqfsf29> ;
+        rdfs:label "Centro Científico Tecnológico Mar del Plata" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/049xnr573> ;
+        rdfs:label "Centro Científico Tecnológico Patagónico" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04tpkqz22> ;
+        rdfs:label "Centro Científico Tecnológico Salta - Jujuy" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01qkxb782> ;
+        rdfs:label "Centro Científico Tecnólogico - Rosario" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01d67x059> ;
+        rdfs:label "Centro de Investigación y Extensión Forestal Andino Patagónico" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03hnwy706> ;
+        rdfs:label "Experimental Medicine and Biology Institute" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/036a3f271> ;
+        rdfs:label "Institute for Medical Research" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03rq94151> ;
+        rdfs:label "Institute of Astronomy and Space Physics" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05k07f122> ;
+        rdfs:label "Instituto Franco-Argentino sobre Estudios de Clima y sus Impactos" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00568z619> ;
+        rdfs:label "Instituto Interdisciplinario de Ciencias Básicas" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04vhn6x78> ;
+        rdfs:label "Instituto Multidisciplinario de Biología Vegetal" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04qzr9r50> ;
+        rdfs:label "Instituto Tecnológico de Chascomús" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0594de127> ;
+        rdfs:label "Instituto de Botanica Darwinion" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/014pzm971> ;
+        rdfs:label "Instituto de Geocronología y Geología Isotópica" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0348f6e47> ;
+        rdfs:label "Instituto de Historia Argentina y Americana "Dr. Emilio Ravignani"" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01m444286> ;
+        rdfs:label "Instituto de Investigaciones Biomédicas en Retrovirus y Sida" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0469ejq24> ;
+        rdfs:label "Instituto de Química y Fisicoquímica Biológicas" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/048f36m54> ;
+        rdfs:label "Instituto de Tecnologías en Detección y Astropartículas" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04n143x36> ;
+        rdfs:label "Unidad Ejecutora Lillo" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/019ptgs60> ;
+        rdfs:label "Buenos Aires Interdisciplinary Political Economy Institute" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05de0bv95> ;
+        rdfs:label "Instituto de Biodiversidad y Biología Experimental y Aplicada" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02skrr217> ;
+        rdfs:label "Centro de Recursos Naturales Renovables de la Zona Semiárida" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/036rry744> ;
+        rdfs:label "Instituto Argentino de Investigaciones de las Zonas Aridas" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04ssjv946> ;
+        rdfs:label "Instituto de Investigación y Desarrollo en Bioingeniería y Bioinformática" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/025ae7a15> ;
+        rdfs:label "Instituto de Estudios Sociales" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05et1xd41> ;
+        rdfs:label "Instituto de Ciencia y Tecnología de los Alimentos de Entre Ríos" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/021rr7t48> ;
+        rdfs:label "Instituto de Investigaciones Bioquímicas de Bahía Blanca, CONICET-UNS" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00822yn93> ;
+        rdfs:label "Instituto de Física de Buenos Aires" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02h503d38> ;
+        rdfs:label "Ministerio de Ciencia, Tecnología e Innovación" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/03j517g53> ;
+        rdfs:label "Argentine-German Geodetic Observatory" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/001ecav82> ;
+        rdfs:label "Bernardino Rivadavia Natural Sciences Museum" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01bvz2w43> ;
+        rdfs:label "Museum of Paleontology Egidio Feruglio" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/033xgn512> ;
+        rdfs:label "Instituto de Investigaciones Económicas y Sociales del Sur" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01d4y0s98> ;
+        rdfs:label "Instituto de Investigaciones para el Desarrollo Territorial y el Hábitat Humano" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03erw8p58> ;
+        rdfs:label "Instituto de Investigaciones en Diversidad Cultural y Procesos de Cambio" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-58.37723 -34.61315)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-58.37723 -34.61315)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Buenos Aires" ;
             schema:addressCountry "AR" ;
-            owl:sameAs <http://sws.geonames.org/3435910/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000119452152> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q6978293> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Argentina" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3435910/> ;
+    ] ; 
     .

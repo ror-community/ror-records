@@ -4,28 +4,198 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02jx3x895> a org:Organization ;
     rdfs:label "University College London" ;
     schema:name "University College London" ;
     schema:foundingDate "1826"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "UCL" ;
-    org:alternativeName "London University" ;
-    schema:url <http://www.ucl.ac.uk/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/University_College_London> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-05-02"^^xsd:date ;
+    org:alternativeName "London University"@None ; 
+    org:abbreviation "UCL"@None ; 
+    org:alternativeName "University College, London"@None ; 
+    schema:mainEntityOfPage <http://www.ucl.ac.uk/> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_College_London> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100000765> ;
+    schema:sameAs <https://grid.ac/institutions/grid.83440.3b> ;
+    schema:sameAs <http://isni.org/isni/0000000121901201> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/047d2d387> ;
+        rdfs:label "Centre for the Observation and Modelling of Earthquakes, Volcanoes and Tectonics" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05wsetc54> ;
+        rdfs:label "Institute of Structural and Molecular Biology" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/001mm6w73> ;
+        rdfs:label "MRC Clinical Trials Unit at UCL" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00fv61j67> ;
+        rdfs:label "MRC Laboratory for Molecular Cell Biology" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/043j90n04> ;
+        rdfs:label "MRC Prion Unit" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03kpvby98> ;
+        rdfs:label "MRC Unit for Lifelong Health and Ageing" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/004hydx84> ;
+        rdfs:label "NIHR Moorfields Biomedical Research Centre" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05s21y527> ;
+        rdfs:label "Sierra Leone Urban Research Centre" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03r9qc142> ;
+        rdfs:label "UCL Biomedical Research Centre" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0078bd381> ;
+        rdfs:label "University College London Qatar" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03r42r570> ;
+        rdfs:label "Wellcome / EPSRC Centre for Interventional and Surgical Sciences" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02704qw51> ;
+        rdfs:label "Wellcome Centre for Human Neuroimaging" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05mz0pr34> ;
+        rdfs:label "UCL Hospitals Charitable Foundation" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/04cw6st05> ;
+        rdfs:label "University of London" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00zn2c847> ;
+        rdfs:label "Great Ormond Street Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03tb37539> ;
+        rdfs:label "Moorfields Eye Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/04ksb3515> ;
+        rdfs:label "NIHR Queen Square Dementia Biomedical Research Unit" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/048b34d51> ;
+        rdfs:label "National Hospital for Neurology and Neurosurgery" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/043j9bc42> ;
+        rdfs:label "Royal National Orthopaedic Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03dx46b94> ;
+        rdfs:label "Royal National Orthopaedic Hospital NHS Trust" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01ge67z96> ;
+        rdfs:label "The Royal Free Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00wrevg56> ;
+        rdfs:label "University College Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02pkrn365> ;
+        rdfs:label "University College Hospital at Westmoreland Street" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05d64cx77> ;
+        rdfs:label "Wellcome Trust Centre for the History of Medicine" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01ckbq028> ;
+        rdfs:label "Whittington Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04kjqkz56> ;
+        rdfs:label "Sainsbury Wellcome Centre" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-0.12574 51.50853)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-0.12574 51.50853)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "London" ;
             schema:addressCountry "GB" ;
-            owl:sameAs <http://sws.geonames.org/2643743/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000121901201> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q193196> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United Kingdom" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2643743/> ;
+    ] ; 
     .

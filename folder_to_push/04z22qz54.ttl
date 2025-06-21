@@ -4,25 +4,224 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/04z22qz54> a org:Organization ;
     rdfs:label "Institut des Sciences de l'Information et de leurs Interactions" ;
     schema:name "Institut des Sciences de l'Information et de leurs Interactions" ;
     org:status "active" ;
-    org:classification "Government" ; 
-    org:abbreviation "INS2I" ;
-    schema:url <http://www.cnrs.fr/ins2i/> ; 
+    org:classification "funder" ; 
+    org:classification "government" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-05-02"^^xsd:date ;
+    org:abbreviation "INS2I"@None ; 
+    schema:mainEntityOfPage <http://www.cnrs.fr/ins2i/> ;
+    schema:sameAs <https://api.crossref.org/funders/501100017211> ;
+    schema:sameAs <https://grid.ac/institutions/grid.457015.2> ;
+    schema:sameAs <http://isni.org/isni/0000000403871581> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03smk3872> ;
+        rdfs:label "Centre de Recherche en Acquisition et Traitement de l'Image pour la Santé" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05g1zjw44> ;
+        rdfs:label "Laboratoire d'Informatique de Paris-Nord" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04afed728> ;
+        rdfs:label "Computer Science Laboratory of the École Polytechnique" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05y6rqs46> ;
+        rdfs:label "Département d'Informatique" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01c8rcg82> ;
+        rdfs:label "Grenoble Computer Science Laboratory" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/043749971> ;
+        rdfs:label "GREYC" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0075hvk77> ;
+        rdfs:label "Heuristics and Diagnostics for Complex Systems" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0592ata02> ;
+        rdfs:label "Information Processing and System Research Lab" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00myn0z94> ;
+        rdfs:label "Institut de Recherche en Informatique et Systèmes Aléatoires" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05neq8668> ;
+        rdfs:label "Institut Systèmes Intelligents et de Robotique" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03adqg323> ;
+        rdfs:label "Laboratoire Bordelais de Recherche en Informatique" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04t50yk91> ;
+        rdfs:label "Laboratoire d'Informatique Gaspard-Monge" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01215r597> ;
+        rdfs:label "Laboratoire d'Informatique, Signaux et Systèmes de Sophia Antipolis" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05krcen59> ;
+        rdfs:label "Laboratoire de Recherche en Informatique de Paris 6" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04msnz457> ;
+        rdfs:label "Laboratoire de l'Informatique du Parallélisme" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00k4e5n71> ;
+        rdfs:label "Laboratoire des Sciences de l'Ingénieur, de l'Informatique et de l'Imagerie" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0266kfd37> ;
+        rdfs:label "Laboratoire des Sciences et Techniques de l’Information de la Communication et de la Connaissance" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00rv5x925> ;
+        rdfs:label "Laboratoire des Sciences pour la Conception, l'Optimisation et la Production" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/046p9e825> ;
+        rdfs:label "Laboratory Preuves, Programmes et Systèmes" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03vcm6439> ;
+        rdfs:label "Laboratory for Analysis and Architecture of Systems" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00t3fpp34> ;
+        rdfs:label "Laboratory of Computing, Modelling and Optimization of the Systems" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/006z7v557> ;
+        rdfs:label "Laboratory of Industrial and Human Automation Control, Mechanical Engineering and Computer Science" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03pnp1a74> ;
+        rdfs:label "Lamsade" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02vnf0c38> ;
+        rdfs:label "Lorraine Research Laboratory in Computer Science and its Applications" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03jv6w209> ;
+        rdfs:label "Maison de la Simulation" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/013yean28> ;
+        rdfs:label "Montpellier Laboratory of Informatics, Robotics and Microelectronics" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/022r5hc56> ;
+        rdfs:label "Research Center for Automatic Control of Nancy" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03985kf35> ;
+        rdfs:label "Techniques for Biomedical Engineering and Complexity Management–Informatics, Mathematics and Applications Grenoble" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/000063q30> ;
+        rdfs:label "Techniques of Informatics and Microelectronics for Integrated Systems Architecture" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05afmzm11> ;
+        rdfs:label "Verimag" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02feahw73> ;
+        rdfs:label "French National Centre for Scientific Research" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(2.3488 48.85341)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(2.3488 48.85341)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Paris" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2988507/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000403871581> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q24935922> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2988507/> ;
+    ] ; 
     .

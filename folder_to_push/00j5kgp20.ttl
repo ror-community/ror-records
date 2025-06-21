@@ -4,24 +4,42 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/00j5kgp20> a org:Organization ;
-    rdfs:label "Faculty of Mechanical Engineering and Naval Architecture" ;
-    schema:name "Faculty of Mechanical Engineering and Naval Architecture" ;
+    rdfs:label "" ;
+    schema:name "" ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "FSB" ;
-    org:alternativeName "Fakultetu strojarstva i brodogradnje" ;
-    schema:url <https://www.fsb.unizg.hr> ; 
+    org:classification "education" ; 
+    dct:created "2023-04-12"^^xsd:date ;
+    dct:modified "2024-05-02"^^xsd:date ;
+    org:abbreviation "FAMENA"@None ; 
+    org:abbreviation "FSB"@None ; 
+    org:alternativeName "FSB Zagreb"@hr ; 
+    schema:mainEntityOfPage <https://www.fsb.unizg.hr> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/00mv6sv71> ;
+        rdfs:label "University of Zagreb" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(15.97798 45.81444)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(15.97798 45.81444)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Zagreb" ;
             schema:addressCountry "HR" ;
-            owl:sameAs <http://sws.geonames.org/3186886/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://www.wikidata.org/entity/Q12630898> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Croatia" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3186886/> ;
+    ] ; 
     .

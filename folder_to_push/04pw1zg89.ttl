@@ -4,24 +4,55 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/04pw1zg89> a org:Organization ;
     rdfs:label "PARADIM" ;
     schema:name "PARADIM" ;
     schema:foundingDate "2016"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "PARADIM" ;
-    org:alternativeName "Platform for the Accelerated Realization, Analysis, and Discovery of Interface Materials" ;
-    schema:url <https://paradim.org> ; 
+    org:classification "facility" ; 
+    dct:created "2023-09-21"^^xsd:date ;
+    dct:modified "2024-05-02"^^xsd:date ;
+    org:abbreviation "PARADIM MIP"@None ; 
+    org:alternativeName "PARADIM Materials Innovation Platform"@None ; 
+    org:alternativeName "Platform for the Accelerated Realization, Analysis, and Discovery of Interface Materials"@None ; 
+    schema:mainEntityOfPage <https://paradim.org> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/021nxhr62> ;
+        rdfs:label "National Science Foundation" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/05bnh6r87> ;
+        rdfs:label "Cornell University" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/00za53h95> ;
+        rdfs:label "Johns Hopkins University" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-76.49661 42.44063)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-76.49661 42.44063)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Ithaca" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/5122432/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/5122432/> ;
+    ] ; 
     .

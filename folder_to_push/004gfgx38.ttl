@@ -4,27 +4,42 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/004gfgx38> a org:Organization ;
-    rdfs:label "Eszterházy Károly College" ;
-    schema:name "Eszterházy Károly College" ;
+    rdfs:label "" ;
+    schema:name "" ;
     schema:foundingDate "1774"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:alternativeName "Eszterházy Károly University of Applied Sciences" ;
-    schema:url <https://uni-eszterhazy.hu/en> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Eszterh%C3%A1zy_K%C3%A1roly_University> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-05-02"^^xsd:date ;
+    org:alternativeName "Eszterházy Károly College"@en ; 
+    org:alternativeName "Eszterházy Károly Főiskola"@hu ; 
+    org:alternativeName "Eszterházy Károly University of Applied Sciences"@en ; 
+    schema:mainEntityOfPage <https://uni-eszterhazy.hu> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Eszterh%C3%A1zy_K%C3%A1roly_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/100018374> ;
+    schema:sameAs <https://grid.ac/institutions/grid.424679.a> ;
+    schema:sameAs <http://isni.org/isni/0000000406367962> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(20.37329 47.90265)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(20.37329 47.90265)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Eger" ;
             schema:addressCountry "HU" ;
-            owl:sameAs <http://sws.geonames.org/721239/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000406367962> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q991872> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Hungary" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/721239/> ;
+    ] ; 
     .

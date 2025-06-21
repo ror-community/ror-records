@@ -13,8 +13,9 @@
     schema:foundingDate "1946"^^xsd:gYear ;
     org:status "active" ;
     org:classification "education" ; 
+    org:classification "funder" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2023-10-26"^^xsd:date ;
+    dct:modified "2024-05-02"^^xsd:date ;
     org:abbreviation "ANU"@None ; 
     schema:mainEntityOfPage <http://www.anu.edu.au/> ;
     owl:sameAs <http://en.wikipedia.org/wiki/Australian_National_University> ; 
@@ -47,6 +48,12 @@
     ] ; 
     org:hasLink [
         a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/024jkkf40> ;
+        rdfs:label "Australian Centre for Excellence in Antarctic Science" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
         org:role "related" ;
         org:member <https://ror.org/041c7s516> ;
         rdfs:label "Calvary Hospital" ;
@@ -72,8 +79,8 @@
     org:hasLink [
         a org:Membership ;
         org:role "child" ;
-        org:member <https://ror.org/024jkkf40> ;
-        rdfs:label "Australian Centre for Excellence in Antarctic Science" ;
+        org:member <https://ror.org/01s5nqv53> ;
+        rdfs:label "Centre for Advanced Microscopy" ;
     ] ; 
     schema:location [
         a schema:Place ;

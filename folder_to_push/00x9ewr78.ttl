@@ -4,25 +4,117 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/00x9ewr78> a org:Organization ;
     rdfs:label "National Council for Scientific Research" ;
     schema:name "National Council for Scientific Research" ;
     schema:foundingDate "1962"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Government" ; 
-    org:abbreviation "CNRS" ;
-    schema:url <http://www.cnrs.edu.lb/> ; 
+    org:classification "funder" ; 
+    org:classification "government" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-05-02"^^xsd:date ;
+    org:abbreviation "CNRS"@None ; 
+    schema:mainEntityOfPage <http://www.cnrs.edu.lb/> ;
+    schema:sameAs <https://api.crossref.org/funders/501100007175> ;
+    schema:sameAs <https://grid.ac/institutions/grid.423603.0> ;
+    schema:sameAs <http://isni.org/isni/0000000123223037> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/047p7mf25> ;
+        rdfs:label "Institut Carnot PolyNat" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00jj62164> ;
+        rdfs:label "Centre de Recherche et de Documentation sur l'Océanie (CREDO)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/005yfhm28> ;
+        rdfs:label "Institut de Biosciences et biotechnologies d'Aix-Marseille" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00xc55v17> ;
+        rdfs:label "Génomique Métabolique du Genoscope" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03j65n394> ;
+        rdfs:label "Laboratoire d'Excellence TULIP" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/023n9q531> ;
+        rdfs:label "Laboratoire Interdisciplinaire de Physique" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/039bex249> ;
+        rdfs:label "Centre d'études sud-asiatiques et himalayennes" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01wp2jz98> ;
+        rdfs:label "European X-Ray Free-Electron Laser" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01b436806> ;
+        rdfs:label "CIRED" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05fc1hn07> ;
+        rdfs:label "Laboratoire Techniques, Territoires et Sociétés" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/029hkd614> ;
+        rdfs:label "Laboratoire Navier" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04b9vs620> ;
+        rdfs:label "Imagerie et Stratégies Thérapeutiques pour les Cancers et Tissus cérébraux" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05hz99a17> ;
+        rdfs:label "AAU - Ambiances, Architectures, Urbanités" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(35.50157 33.89332)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(35.50157 33.89332)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Beirut" ;
             schema:addressCountry "LB" ;
-            owl:sameAs <http://sws.geonames.org/276781/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000123223037> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Lebanon" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/276781/> ;
+    ] ; 
     .

@@ -4,26 +4,429 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/057qpr032> a org:Organization ;
     rdfs:label "University of Bordeaux" ;
     schema:name "University of Bordeaux" ;
     schema:foundingDate "1896"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    schema:url <http://www.u-bordeaux.com/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Bordeaux> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-05-02"^^xsd:date ;
+    schema:mainEntityOfPage <http://www.u-bordeaux.com/> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Bordeaux> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100006251> ;
+    schema:sameAs <https://grid.ac/institutions/grid.412041.2> ;
+    schema:sameAs <http://isni.org/isni/000000012106639X> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/027953924> ;
+        rdfs:label "Aménagement, Développement, Environnement, Santé et Sociétés" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02aswf736> ;
+        rdfs:label "Atmosphere Plant Soil Interactions" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00ccpdp17> ;
+        rdfs:label "Biologie du Fruit et Pathologie" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00xzzba89> ;
+        rdfs:label "Bordeaux Population Health" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02910d597> ;
+        rdfs:label "Centre Lasers Intenses et Applications" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/034a4bk84> ;
+        rdfs:label "Laboratoire de Physique des deux infinis Bordeaux" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04vgc9p51> ;
+        rdfs:label "Centre de Recherche Cardio-Thoracique de Bordeaux" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01mts2g59> ;
+        rdfs:label "Centre de Résonance Magnétique des Systèmes Biologiques" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03jtzcc30> ;
+        rdfs:label "Chimie et Biologie des Membranes et des Nanoobjects" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/027mnq498> ;
+        rdfs:label "De la Préhistoire à l'Actuel : Culture, Environnement et Anthropologie" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/004q3z910> ;
+        rdfs:label "Ecophysiology and Grape Functional Genomics" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00jsv7j98> ;
+        rdfs:label "Electrophysiology and Heart Modeling Institute" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01tsa0x55> ;
+        rdfs:label "Environnements et Paléoenvironnements Océaniques et Continentaux" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02dsacc67> ;
+        rdfs:label "Immunology from Concept and Experiments to Translation" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04agqs597> ;
+        rdfs:label "Institut Européen de Chimie et Biologie" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/048xwe611> ;
+        rdfs:label "Institut de Biochimie et Génétique Cellulaires" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01nw6qk38> ;
+        rdfs:label "Institut de Chimie de la Matière Condensée de Bordeaux" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05m3r1b84> ;
+        rdfs:label "Institut de Mathématiques de Bordeaux" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01a6zh966> ;
+        rdfs:label "Institut de Neurosciences Cognitives et Intégratives d’Aquitaine" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00wrnm709> ;
+        rdfs:label "Institute of Mechanics and Engineering" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00r8jkk54> ;
+        rdfs:label "Institute of Molecular Sciences" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/032j53342> ;
+        rdfs:label "Interdisciplinary Institute for NeuroScience" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03adqg323> ;
+        rdfs:label "Laboratoire Bordelais de Recherche en Informatique" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05qsp5m64> ;
+        rdfs:label "Laboratoire Ondes et Matière d'Aquitaine" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03vdg7e33> ;
+        rdfs:label "Laboratoire Photonique, Numérique et Nanosciences" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02nthwg11> ;
+        rdfs:label "Laboratoire de Biogenèse Membranaire" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/056n05x05> ;
+        rdfs:label "Laboratoire de Chimie des Polymères Organiques" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04nabhy78> ;
+        rdfs:label "Laboratoire de l'Intégration du Matériau au Système" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02n2h9t24> ;
+        rdfs:label "Laboratoire des Composites Thermo Structuraux" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04qq0qp34> ;
+        rdfs:label "Laboratoire du Futur" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00yee3n23> ;
+        rdfs:label "Laboratory of Astrophysics of Bordeaux" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00721wn77> ;
+        rdfs:label "Les Afriques dans le Monde" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02wycgj20> ;
+        rdfs:label "Molécules d'Intérêt Biologique" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/001695n52> ;
+        rdfs:label "Neurodegeneratives Diseases Institute" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04hw9c755> ;
+        rdfs:label "NutriNeuro" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03qma7a12> ;
+        rdfs:label "Observatoire Aquitain des Sciences de l'Univers" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04xz2my07> ;
+        rdfs:label "Oenology Research Unit" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/043a21x04> ;
+        rdfs:label "Paul Pascal Research Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05367a632> ;
+        rdfs:label "Plateforme Technologique d'Innovation Biomédicale" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0208m5v39> ;
+        rdfs:label "Régulations Naturelle et Artificielle" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00vfxg105> ;
+        rdfs:label "Santé et Agroécologie du Vignoble" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/033ebya06> ;
+        rdfs:label "UMR BIOdiversity, GEnes & Communities" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0473hxz56> ;
+        rdfs:label "Unité de Recherche Œnologie" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/000bbyx17> ;
+        rdfs:label "Centre d'Investigation Clinique Plurithématique de Bordeaux" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01k7w0p97> ;
+        rdfs:label "Centre Émile Durkheim" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/041ctrc20> ;
+        rdfs:label "Centre de droit comparé du travail et de la sécurité sociale" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03e4tg734> ;
+        rdfs:label "Laboratoire de Microbiologie Fondamentale et Pathogénicité" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0463z7496> ;
+        rdfs:label "Biologie des maladies cardiovasculaires" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/012zmcc30> ;
+        rdfs:label "Laboratory for the Bioengineering of Tissues" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00bj04t22> ;
+        rdfs:label "Sciences, Philosophie, Humanités" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04k8wt746> ;
+        rdfs:label "Sommeil, Addiction et Neuropsychiatrie" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05r25mc45> ;
+        rdfs:label "Plateforme d'Imagerie Biomédicale" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00qe5nz43> ;
+        rdfs:label "TBM-Core" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04dyeh227> ;
+        rdfs:label "Bordeaux Imaging Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00s40r567> ;
+        rdfs:label "Passages" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01cbgsf04> ;
+        rdfs:label "ARNA - Acides nucléiques: Régulations naturelles et artificielles" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01wvg5605> ;
+        rdfs:label "Maladies Rares: Génétique et Métabolisme" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/014vz2d20> ;
+        rdfs:label "Bordeaux Sciences Économiques" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01nrtdp55> ;
+        rdfs:label "GDR NBODY : Problème quantique à N corps en chimie et physique" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00hgbrg14> ;
+        rdfs:label "Fédération française Matériaux sous hautes vitesses de déformation. Application aux matériaux en conditions extrêmes, Procédés et structures" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0459fdx51> ;
+        rdfs:label "Fédération de Recherche sur l'Energie Solaire" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04yem5s35> ;
+        rdfs:label "INFRANALYTICS" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01sgwka45> ;
+        rdfs:label "Microscopie Fonctionnelle du Vivant" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "predecessor" ;
+        org:member <https://ror.org/05h5wna09> ;
+        rdfs:label "Université Montesquieu Bordeaux IV" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "predecessor" ;
+        org:member <https://ror.org/001anga17> ;
+        rdfs:label "Université Bordeaux-I" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-0.5805 44.84044)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-0.5805 44.84044)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Bordeaux" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/3031582/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/000000012106639X> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q13344> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3031582/> ;
+    ] ; 
     .

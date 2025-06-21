@@ -4,25 +4,49 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/00cxy0s05> a org:Organization ;
     rdfs:label "Hôpital Charles-Nicolle" ;
     schema:name "Hôpital Charles-Nicolle" ;
     schema:foundingDate "1602"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Healthcare" ; 
-    org:alternativeName "Centre hospitalier universitaire de Rouen" ;
-    schema:url <http://www3.chu-rouen.fr/internet/connaitreCHU/reperes/soins/charles_nicolle/> ; 
+    org:classification "healthcare" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-05-02"^^xsd:date ;
+    org:alternativeName "Charles-Nicolle Hospital"@en ; 
+    schema:mainEntityOfPage <https://www.chu-rouen.fr/hopital_charles_nicolle/> ;
+    schema:sameAs <https://grid.ac/institutions/grid.417615.0> ;
+    schema:sameAs <http://isni.org/isni/0000000122965231> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/04cdk4t75> ;
+        rdfs:label "Centre Hospitalier Universitaire de Rouen" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03nhjew95> ;
+        rdfs:label "Université de Rouen Normandie" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(1.09932 49.44313)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(1.09932 49.44313)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Rouen" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2982652/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000122965231> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2982652/> ;
+    ] ; 
     .
