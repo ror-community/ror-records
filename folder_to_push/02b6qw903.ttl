@@ -4,27 +4,76 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02b6qw903> a org:Organization ;
     rdfs:label "University of South Carolina" ;
     schema:name "University of South Carolina" ;
     schema:foundingDate "1801"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "USC" ;
-    schema:url <http://www.sc.edu/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/University_of_South_Carolina> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-05-05"^^xsd:date ;
+    org:abbreviation "USC"@None ; 
+    schema:mainEntityOfPage <http://www.sc.edu/> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_South_Carolina> ; 
+    schema:sameAs <https://api.crossref.org/funders/100008899> ;
+    schema:sameAs <https://grid.ac/institutions/grid.254567.7> ;
+    schema:sameAs <http://isni.org/isni/000000009075106X> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/03rtgjq94> ;
+        rdfs:label "University of South Carolina System" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/052dmyg58> ;
+        rdfs:label "Greenville Memorial Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02yw7q747> ;
+        rdfs:label "Palmetto Health Richland" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03n7vd314> ;
+        rdfs:label "Prisma Health" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/04b7web15> ;
+        rdfs:label "Wm. Jennings Bryan Dorn VA Medical Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/052tfzs89> ;
+        rdfs:label "Plum Island Ecosystems Long Term Ecological Research" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-81.03481 34.00071)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-81.03481 34.00071)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Columbia" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/4575352/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/000000009075106X> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1024426> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "South Carolina" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "North America" ;
+                    schema:identifier "NA"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/4575352/> ;
+    ] ; 
     .

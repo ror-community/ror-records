@@ -4,26 +4,45 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02f009v59> a org:Organization ;
     rdfs:label "University of Haifa" ;
     schema:name "University of Haifa" ;
     schema:foundingDate "1963"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    schema:url <http://www.haifa.ac.il/index.php/en/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Haifa> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-05-05"^^xsd:date ;
+    schema:mainEntityOfPage <http://www.haifa.ac.il/index.php/en/> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Haifa> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100005717> ;
+    schema:sameAs <https://grid.ac/institutions/grid.18098.38> ;
+    schema:sameAs <http://isni.org/isni/0000000419370562> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02wvcn790> ;
+        rdfs:label "Carmel (Israel)" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(34.9885 32.81841)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(34.9885 32.81841)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Haifa" ;
             schema:addressCountry "IL" ;
-            owl:sameAs <http://sws.geonames.org/294801/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000419370562> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q591115> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "Haifa" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Israel" ;
+                schema:containedInPlace [
+                    schema:name "Asia" ;
+                    schema:identifier "AS"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/294801/> ;
+    ] ; 
     .

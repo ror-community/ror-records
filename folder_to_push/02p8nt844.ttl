@@ -1,0 +1,49 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/02p8nt844> a org:Organization ;
+    rdfs:label "North East Institute of Science and Technology" ;
+    schema:name "North East Institute of Science and Technology" ;
+    schema:foundingDate "1961"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "facility" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-05-05"^^xsd:date ;
+    org:abbreviation "NEIST"@None ; 
+    org:alternativeName "Regional Research Laboratory"@en ; 
+    schema:mainEntityOfPage <http://www.rrljorhat.res.in/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/North_East_Institute_of_Science_and_Technology,_Jorhat> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100023981> ;
+    schema:sameAs <https://grid.ac/institutions/grid.462670.1> ;
+    schema:sameAs <http://isni.org/isni/0000000418028319> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/021wm7p51> ;
+        rdfs:label "Council of Scientific and Industrial Research" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(94.20306 26.75751)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Jorhat" ;
+            schema:addressCountry "IN" ;
+            schema:addressRegion "Assam" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "India" ;
+                schema:containedInPlace [
+                    schema:name "Asia" ;
+                    schema:identifier "AS"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1268820/> ;
+    ] ; 
+    .

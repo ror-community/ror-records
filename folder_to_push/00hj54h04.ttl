@@ -15,7 +15,7 @@
     org:classification "education" ; 
     org:classification "funder" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-10-31"^^xsd:date ;
+    dct:modified "2025-05-05"^^xsd:date ;
     org:alternativeName "UT Austin"@en ; 
     schema:mainEntityOfPage <http://www.utexas.edu/> ;
     owl:sameAs <http://en.wikipedia.org/wiki/University_of_Texas_at_Austin> ; 
@@ -54,6 +54,12 @@
     ] ; 
     org:hasLink [
         a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/034bxn811> ;
+        rdfs:label "Bureau of Economic Geology" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
         org:role "parent" ;
         org:member <https://ror.org/01gek1696> ;
         rdfs:label "The University of Texas System" ;
@@ -70,25 +76,19 @@
         org:member <https://ror.org/02e0efw43> ;
         rdfs:label "Institute for Foundations of Machine Learning" ;
     ] ; 
-    org:hasLink [
-        a org:Membership ;
-        org:role "child" ;
-        org:member <https://ror.org/034bxn811> ;
-        rdfs:label "Bureau of Economic Geology" ;
-    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(-97.74306 30.26715)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Austin" ;
             schema:addressCountry "US" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Texas" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "United States" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "North America" ;
+                    schema:identifier "NA"
                 ]
             ]
         ] ;

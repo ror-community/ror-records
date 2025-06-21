@@ -4,24 +4,43 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02hkzs489> a org:Organization ;
     rdfs:label "Bayer Foundation" ;
     schema:name "Bayer Foundation" ;
     org:status "active" ;
-    org:classification "Other" ; 
-    schema:url <https://www.bayer-foundation.com> ; 
-    owl:sameAs <https://de.wikipedia.org/wiki/Bayer-Studienstiftung> ;
+    org:classification "funder" ; 
+    org:classification "other" ; 
+    dct:created "2023-07-27"^^xsd:date ;
+    dct:modified "2025-05-05"^^xsd:date ;
+    schema:mainEntityOfPage <https://www.bayer-foundation.com> ;
+    owl:sameAs <https://de.wikipedia.org/wiki/Bayer-Studienstiftung> ; 
+    schema:sameAs <https://api.crossref.org/funders/100016888> ;
+    schema:sameAs <http://isni.org/isni/0000000478700429> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/04hmn8g73> ;
+        rdfs:label "Bayer (Germany)" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(6.98432 51.0303)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(6.98432 51.0303)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Leverkusen" ;
             schema:addressCountry "DE" ;
-            owl:sameAs <http://sws.geonames.org/2878234/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000478700429> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q812125> ;
+            schema:addressRegion "North Rhine-Westphalia" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Germany" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2878234/> ;
+    ] ; 
     .

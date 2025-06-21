@@ -4,27 +4,58 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/008d1xp69> a org:Organization ;
     rdfs:label "Ministry of Economic Affairs and Employment" ;
     schema:name "Ministry of Economic Affairs and Employment" ;
     schema:foundingDate "2008"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Government" ; 
-    org:abbreviation "TEM" ;
-    schema:url <https://tem.fi/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Ministry_of_Economic_Affairs_and_Employment_(Finland)> ;
+    org:classification "funder" ; 
+    org:classification "government" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-05-05"^^xsd:date ;
+    org:abbreviation "TEM"@None ; 
+    schema:mainEntityOfPage <https://tem.fi/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Ministry_of_Economic_Affairs_and_Employment_(Finland)> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100001838> ;
+    schema:sameAs <https://grid.ac/institutions/grid.436219.b> ;
+    schema:sameAs <http://isni.org/isni/0000000404102557> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00eggnv95> ;
+        rdfs:label "Finnish Safety and Chemicals Agency" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03vjnqy43> ;
+        rdfs:label "Geological Survey of Finland" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04b181w54> ;
+        rdfs:label "VTT Technical Research Centre of Finland" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(24.93545 60.16952)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(24.93545 60.16952)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Helsinki" ;
             schema:addressCountry "FI" ;
-            owl:sameAs <http://sws.geonames.org/658225/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000404102557> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q13765742> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "Uusimaa" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Finland" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/658225/> ;
+    ] ; 
     .

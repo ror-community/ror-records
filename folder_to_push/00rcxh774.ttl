@@ -15,7 +15,7 @@
     org:classification "education" ; 
     org:classification "funder" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2025-02-26"^^xsd:date ;
+    dct:modified "2025-05-05"^^xsd:date ;
     schema:mainEntityOfPage <http://www.portal.uni-koeln.de/> ;
     owl:sameAs <http://en.wikipedia.org/wiki/University_of_Cologne> ; 
     schema:sameAs <https://api.crossref.org/funders/501100008001> ;
@@ -41,6 +41,12 @@
     ] ; 
     org:hasLink [
         a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04vg4mg18> ;
+        rdfs:label "Heinrich-Barth-Institut" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
         org:role "related" ;
         org:member <https://ror.org/04c4bwh63> ;
         rdfs:label "Cologne Excellence Cluster on Cellular Stress Responses in Aging Associated Diseases" ;
@@ -56,12 +62,6 @@
         org:role "related" ;
         org:member <https://ror.org/05mxhda18> ;
         rdfs:label "University Hospital Cologne" ;
-    ] ; 
-    org:hasLink [
-        a org:Membership ;
-        org:role "child" ;
-        org:member <https://ror.org/04vg4mg18> ;
-        rdfs:label "Heinrich-Barth-Institut" ;
     ] ; 
     schema:location [
         a schema:Place ;

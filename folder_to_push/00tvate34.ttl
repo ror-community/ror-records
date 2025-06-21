@@ -4,28 +4,49 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/00tvate34> a org:Organization ;
     rdfs:label "Universidad San Pablo CEU" ;
     schema:name "Universidad San Pablo CEU" ;
     schema:foundingDate "1993"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "CEU" ;
-    org:alternativeName "Universidad CEU San Pablo" ;
-    schema:url <https://www.uspceu.com> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Universidad_CEU_San_Pablo> ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-05-05"^^xsd:date ;
+    org:abbreviation "CEU"@None ; 
+    org:alternativeName "CEU San Pablo University"@en ; 
+    org:alternativeName "CEU Universidad San Pablo"@es ; 
+    org:alternativeName "San Pablo CEU University"@en ; 
+    org:alternativeName "Universidad CEU San Pablo"@es ; 
+    schema:mainEntityOfPage <https://www.uspceu.com> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Universidad_CEU_San_Pablo> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100014750> ;
+    schema:sameAs <https://grid.ac/institutions/grid.8461.b> ;
+    schema:sameAs <http://isni.org/isni/0000000121590415> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/04a0dbe36> ;
+        rdfs:label "Fundación Universitaria San Pablo CEU" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-3.70256 40.4165)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-3.70256 40.4165)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Madrid" ;
             schema:addressCountry "ES" ;
-            owl:sameAs <http://sws.geonames.org/3117735/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000121590415> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q32821> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "Madrid" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Spain" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3117735/> ;
+    ] ; 
     .

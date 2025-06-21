@@ -15,7 +15,7 @@
     org:classification "education" ; 
     org:classification "funder" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-10-31"^^xsd:date ;
+    dct:modified "2025-05-05"^^xsd:date ;
     schema:url <http://mcgill.ca> ; 
     schema:mainEntityOfPage <https://www.mcgill.ca> ;
     owl:sameAs <http://en.wikipedia.org/wiki/McGill_University> ; 
@@ -39,6 +39,12 @@
         org:role "child" ;
         org:member <https://ror.org/05yfz9t60> ;
         rdfs:label "International Laboratory for Brain, Music and Sound Research" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02bkw1m29> ;
+        rdfs:label "International Laboratory on Learning Systems" ;
     ] ; 
     org:hasLink [
         a org:Membership ;
@@ -136,25 +142,19 @@
         org:member <https://ror.org/05fdt6816> ;
         rdfs:label "Obvia" ;
     ] ; 
-    org:hasLink [
-        a org:Membership ;
-        org:role "child" ;
-        org:member <https://ror.org/02bkw1m29> ;
-        rdfs:label "International Laboratory on Learning Systems" ;
-    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(-73.58781 45.50884)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Montreal" ;
             schema:addressCountry "CA" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Quebec" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "Canada" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "North America" ;
+                    schema:identifier "NA"
                 ]
             ]
         ] ;

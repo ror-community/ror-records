@@ -4,27 +4,40 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01qepzr42> a org:Organization ;
     rdfs:label "British Broadcasting Corporation (United Kingdom)" ;
     schema:name "British Broadcasting Corporation (United Kingdom)" ;
     schema:foundingDate "1922"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Government" ; 
-    org:abbreviation "BBC" ;
-    schema:url <http://www.bbc.com/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/BBC> ;
+    org:classification "funder" ; 
+    org:classification "government" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-05-05"^^xsd:date ;
+    org:abbreviation "BBC"@None ; 
+    schema:mainEntityOfPage <http://www.bbc.com/> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/BBC> ; 
+    schema:sameAs <https://api.crossref.org/funders/100013243> ;
+    schema:sameAs <https://grid.ac/institutions/grid.28371.3f> ;
+    schema:sameAs <http://isni.org/isni/000000009830888X> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-0.12574 51.50853)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-0.12574 51.50853)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "London" ;
             schema:addressCountry "GB" ;
-            owl:sameAs <http://sws.geonames.org/2643743/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/000000009830888X> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q9531> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "England" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United Kingdom" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2643743/> ;
+    ] ; 
     .

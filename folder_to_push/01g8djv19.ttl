@@ -4,26 +4,99 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01g8djv19> a org:Organization ;
     rdfs:label "Solvay (Belgium)" ;
     schema:name "Solvay (Belgium)" ;
     schema:foundingDate "1863"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Company" ; 
-    schema:url <http://www.solvay.com/en/index.html> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Solvay_S.A.> ;
+    org:classification "company" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-05-05"^^xsd:date ;
+    schema:mainEntityOfPage <http://www.solvay.com/en/index.html> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Solvay_S.A.> ; 
+    schema:sameAs <https://api.crossref.org/funders/100015268> ;
+    schema:sameAs <https://grid.ac/institutions/grid.6137.3> ;
+    schema:sameAs <http://isni.org/isni/0000000403822309> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03gr95p90> ;
+        rdfs:label "Solvay (Austria)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/024p6za61> ;
+        rdfs:label "Solvay (Brazil)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01ekca690> ;
+        rdfs:label "Solvay (Canada)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04dd9eh65> ;
+        rdfs:label "Solvay (China)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01jyh4590> ;
+        rdfs:label "Solvay (France)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01xscrc43> ;
+        rdfs:label "Solvay (Germany)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00xqcpg12> ;
+        rdfs:label "Solvay (Italy)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05hxvc906> ;
+        rdfs:label "Solvay (Netherlands)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0139mkv47> ;
+        rdfs:label "Solvay (United Kingdom)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/016k8tv59> ;
+        rdfs:label "Solvay (United States)" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(4.34878 50.85045)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(4.34878 50.85045)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Brussels" ;
             schema:addressCountry "BE" ;
-            owl:sameAs <http://sws.geonames.org/2800866/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000403822309> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q706184> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "Brussels Capital" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Belgium" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2800866/> ;
+    ] ; 
     .

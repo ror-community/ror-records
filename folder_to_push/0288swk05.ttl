@@ -1,0 +1,48 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/0288swk05> a org:Organization ;
+    rdfs:label "Maj Institute of Pharmacology" ;
+    schema:name "Maj Institute of Pharmacology" ;
+    schema:foundingDate "1954"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "facility" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-05-05"^^xsd:date ;
+    org:abbreviation "IF PAN"@None ; 
+    schema:mainEntityOfPage <http://www.if-pan.krakow.pl/ifpan_ww/> ;
+    schema:sameAs <https://api.crossref.org/funders/501100008725> ;
+    schema:sameAs <https://grid.ac/institutions/grid.418903.7> ;
+    schema:sameAs <http://isni.org/isni/0000000122278271> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/01dr6c206> ;
+        rdfs:label "Polish Academy of Sciences" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(19.93658 50.06143)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Krakow" ;
+            schema:addressCountry "PL" ;
+            schema:addressRegion "Lesser Poland" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Poland" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3094802/> ;
+    ] ; 
+    .

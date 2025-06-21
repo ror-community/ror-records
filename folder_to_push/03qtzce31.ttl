@@ -4,24 +4,52 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/03qtzce31> a org:Organization ;
     rdfs:label "Ministère de l'Économie, de l'Innovation et de l'Énergie" ;
     schema:name "Ministère de l'Économie, de l'Innovation et de l'Énergie" ;
     org:status "active" ;
-    org:classification "Government" ; 
-    org:alternativeName "Ministery of Economy, Innovation and Exports" ;
-    schema:url <https://www.economie.gouv.qc.ca> ; 
+    org:classification "funder" ; 
+    org:classification "government" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-05-05"^^xsd:date ;
+    org:alternativeName "Ministery of Economy, Innovation and Exports"@en ; 
+    org:alternativeName "Ministry of Economy, Science and Innovation"@en ; 
+    org:alternativeName "Ministère de l'Économie, de la Science et de l'Innovation"@fr ; 
+    schema:mainEntityOfPage <https://www.economie.gouv.qc.ca> ;
+    schema:sameAs <https://api.crossref.org/funders/100011100> ;
+    schema:sameAs <https://grid.ac/institutions/grid.451075.2> ;
+    schema:sameAs <http://isni.org/isni/000000046432598X> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00acpf703> ;
+        rdfs:label "Commission de l'Ethique en Science et en Technologie" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/05waa5295> ;
+        rdfs:label "Government of Quebec" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-73.58781 45.50884)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-73.58781 45.50884)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Montreal" ;
             schema:addressCountry "CA" ;
-            owl:sameAs <http://sws.geonames.org/6077243/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/000000046432598X> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "Quebec" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Canada" ;
+                schema:containedInPlace [
+                    schema:name "North America" ;
+                    schema:identifier "NA"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/6077243/> ;
+    ] ; 
     .

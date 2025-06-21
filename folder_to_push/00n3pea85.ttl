@@ -1,0 +1,47 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/00n3pea85> a org:Organization ;
+    rdfs:label "GlaxoSmithKline (Belgium)" ;
+    schema:name "GlaxoSmithKline (Belgium)" ;
+    schema:foundingDate "2000"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "company" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-05-05"^^xsd:date ;
+    org:abbreviation "GSK"@None ; 
+    schema:mainEntityOfPage <http://be.gsk.com/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/GlaxoSmithKline> ; 
+    schema:sameAs <https://api.crossref.org/funders/100020955> ;
+    schema:sameAs <https://grid.ac/institutions/grid.425090.a> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/01xsqw823> ;
+        rdfs:label "GlaxoSmithKline (United Kingdom)" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(4.60138 50.71717)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Wavre" ;
+            schema:addressCountry "BE" ;
+            schema:addressRegion "Wallonia" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Belgium" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2783941/> ;
+    ] ; 
+    .

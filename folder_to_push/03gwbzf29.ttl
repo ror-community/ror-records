@@ -4,27 +4,42 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/03gwbzf29> a org:Organization ;
     rdfs:label "Universitatea de Medicină, Farmacie, Științe și Tehnologie „George Emil Palade” din Târgu Mureș" ;
     schema:name "Universitatea de Medicină, Farmacie, Științe și Tehnologie „George Emil Palade” din Târgu Mureș" ;
     schema:foundingDate "1945"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:alternativeName "Universitatea de Medicină și Farmacie din Tîrgu Mureș" ;
-    schema:url <https://umfst.ro> ; 
-    owl:sameAs <https://ro.wikipedia.org/wiki/Universitatea_de_Medicină,_Farmacie,_Științe_și_Tehnologie_„George_Emil_Palade”_din_Târgu_Mureș> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-05-05"^^xsd:date ;
+    org:alternativeName "UMF Tîrgu Mureș"@ro ; 
+    org:alternativeName "Universitatea de Medicină și Farmacie din Târgu Mureș"@ro ; 
+    org:alternativeName "Universitatea de Medicină și Farmacie din Tîrgu Mureș"@ro ; 
+    schema:mainEntityOfPage <https://umfst.ro> ;
+    owl:sameAs <https://ro.wikipedia.org/wiki/Universitatea_de_Medicină,_Farmacie,_Științe_și_Tehnologie_„George_Emil_Palade”_din_Târgu_Mureș> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100014677> ;
+    schema:sameAs <https://grid.ac/institutions/grid.10414.30> ;
+    schema:sameAs <http://isni.org/isni/0000000107389977> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(24.55747 46.54245)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(24.55747 46.54245)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Târgu Mureş" ;
             schema:addressCountry "RO" ;
-            owl:sameAs <http://sws.geonames.org/665004/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000107389977> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q541901> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "Mureș County" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Romania" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/665004/> ;
+    ] ; 
     .

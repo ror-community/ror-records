@@ -1,0 +1,41 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/02smred28> a org:Organization ;
+    rdfs:label "International Institute of Tropical Agriculture" ;
+    schema:name "International Institute of Tropical Agriculture" ;
+    schema:foundingDate "1967"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "nonprofit" ; 
+    dct:created "2021-09-23"^^xsd:date ;
+    dct:modified "2025-05-05"^^xsd:date ;
+    org:abbreviation "IITA"@None ; 
+    schema:mainEntityOfPage <https://www.iita.org/iita-countries/nigeria/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/International_Institute_of_Tropical_Agriculture> ; 
+    schema:sameAs <https://api.crossref.org/funders/100022898> ;
+    schema:sameAs <https://grid.ac/institutions/grid.512912.c> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(8.51672 12.00012)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Kano" ;
+            schema:addressCountry "NG" ;
+            schema:addressRegion "Kano State" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Nigeria" ;
+                schema:containedInPlace [
+                    schema:name "Africa" ;
+                    schema:identifier "AF"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2335204/> ;
+    ] ; 
+    .

@@ -1,0 +1,53 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/029nydt37> a org:Organization ;
+    rdfs:label "Nitte University" ;
+    schema:name "Nitte University" ;
+    schema:foundingDate "2008"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-05-05"^^xsd:date ;
+    schema:mainEntityOfPage <http://nitte.edu.in/> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Nitte_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/100023003> ;
+    schema:sameAs <https://grid.ac/institutions/grid.412206.3> ;
+    schema:sameAs <http://isni.org/isni/0000000100328661> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02p74z057> ;
+        rdfs:label "K S Hegde Medical Academy" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/008ny3111> ;
+        rdfs:label "K.S. Hegde Hospital" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(74.85603 12.91723)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Mangaluru" ;
+            schema:addressCountry "IN" ;
+            schema:addressRegion "Karnataka" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "India" ;
+                schema:containedInPlace [
+                    schema:name "Asia" ;
+                    schema:identifier "AS"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1263780/> ;
+    ] ; 
+    .

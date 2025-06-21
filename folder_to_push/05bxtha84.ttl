@@ -1,0 +1,38 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/05bxtha84> a org:Organization ;
+    rdfs:label "Guangdong Provincial Health Commission" ;
+    schema:name "Guangdong Provincial Health Commission" ;
+    org:status "active" ;
+    org:classification "government" ; 
+    dct:created "2020-07-06"^^xsd:date ;
+    dct:modified "2025-05-05"^^xsd:date ;
+    schema:mainEntityOfPage <http://wsjkw.gd.gov.cn/> ;
+    schema:sameAs <https://api.crossref.org/funders/501100003785> ;
+    schema:sameAs <https://grid.ac/institutions/grid.508055.d> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(113.25 23.11667)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Guangzhou" ;
+            schema:addressCountry "CN" ;
+            schema:addressRegion "Guangdong" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "China" ;
+                schema:containedInPlace [
+                    schema:name "Asia" ;
+                    schema:identifier "AS"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1809858/> ;
+    ] ; 
+    .

@@ -4,28 +4,77 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/05ect4e57> a org:Organization ;
     rdfs:label "Louisiana State University" ;
     schema:name "Louisiana State University" ;
     schema:foundingDate "1860"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "LSU" ;
-    org:alternativeName "Louisiana State University and Agricultural and Mechanical College" ;
-    schema:url <http://www.lsu.edu/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Louisiana_State_University> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-05-05"^^xsd:date ;
+    org:abbreviation "LSU"@None ; 
+    org:alternativeName "Louisiana State University and Agricultural and Mechanical College"@en ; 
+    schema:mainEntityOfPage <http://www.lsu.edu/> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Louisiana_State_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/100008294> ;
+    schema:sameAs <https://grid.ac/institutions/grid.64337.35> ;
+    schema:sameAs <http://isni.org/isni/0000000106627451> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/045by4v54> ;
+        rdfs:label "Louisiana Sea Grant" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/022gnbj15> ;
+        rdfs:label "Louisiana State University System" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01qv8fp92> ;
+        rdfs:label "Louisiana State University Health Sciences Center New Orleans" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/008r2d260> ;
+        rdfs:label "Louisiana State University Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01y9s4r06> ;
+        rdfs:label "Our Lady of the Lake Regional Medical Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/04r3s7465> ;
+        rdfs:label "McMurdo Dry Valleys Long Term Ecological Research" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-91.18747 30.44332)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-91.18747 30.44332)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Baton Rouge" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/4315588/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000106627451> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1521725> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "Louisiana" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "North America" ;
+                    schema:identifier "NA"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/4315588/> ;
+    ] ; 
     .

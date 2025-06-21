@@ -4,24 +4,38 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/058p20n09> a org:Organization ;
     rdfs:label "Henan Science and Technology Department" ;
     schema:name "Henan Science and Technology Department" ;
     org:status "active" ;
-    org:classification "Government" ; 
-    schema:url <http://www.hnkjt.gov.cn/> ; 
+    org:classification "funder" ; 
+    org:classification "government" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-05-05"^^xsd:date ;
+    schema:url <http://kjt.henan.gov.cn> ; 
+    schema:mainEntityOfPage <https://wap.kjt.henan.gov.cn> ;
+    schema:sameAs <https://api.crossref.org/funders/501100011447> ;
+    schema:sameAs <https://grid.ac/institutions/grid.454866.d> ;
+    schema:sameAs <http://isni.org/isni/0000000417935902> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(113.64861 34.75778)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(113.64861 34.75778)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Zhengzhou" ;
             schema:addressCountry "CN" ;
-            owl:sameAs <http://sws.geonames.org/1784658/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000417935902> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q30297415> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "Henan" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "China" ;
+                schema:containedInPlace [
+                    schema:name "Asia" ;
+                    schema:identifier "AS"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1784658/> ;
+    ] ; 
     .

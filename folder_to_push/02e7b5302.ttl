@@ -4,28 +4,58 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02e7b5302> a org:Organization ;
     rdfs:label "Nanyang Technological University" ;
     schema:name "Nanyang Technological University" ;
     schema:foundingDate "1991"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "NTU" ;
-    schema:url <http://www.ntu.edu.sg/Pages/home.aspx> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Nanyang_Technological_University> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-05-05"^^xsd:date ;
+    org:abbreviation "NTU"@None ; 
+    schema:mainEntityOfPage <http://www.ntu.edu.sg/Pages/home.aspx> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Nanyang_Technological_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100001475> ;
+    schema:sameAs <https://grid.ac/institutions/grid.59025.3b> ;
+    schema:sameAs <http://isni.org/isni/0000000122240361> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/027jrtw17> ;
+        rdfs:label "UMI MajuLab" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02fhgbp51> ;
+        rdfs:label "National Institute of Education" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05yb3w112> ;
+        rdfs:label "Singapore-MIT Alliance for Research and Technology" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(103.85007 1.28967)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(103.85007 1.28967)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Singapore" ;
             schema:addressCountry "SG" ;
-            owl:sameAs <http://sws.geonames.org/1880252/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000122240361> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q721064> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q6973642> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "SG.01" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Singapore" ;
+                schema:containedInPlace [
+                    schema:name "Asia" ;
+                    schema:identifier "AS"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1880252/> ;
+    ] ; 
     .

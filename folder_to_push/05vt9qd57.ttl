@@ -4,28 +4,144 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/05vt9qd57> a org:Organization ;
     rdfs:label "Rutgers, The State University of New Jersey" ;
     schema:name "Rutgers, The State University of New Jersey" ;
     schema:foundingDate "1825"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "RU" ;
-    org:alternativeName "Rutgers" ;
-    schema:url <http://www.rutgers.edu> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Rutgers_University> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-05-05"^^xsd:date ;
+    org:abbreviation "RU"@None ; 
+    org:alternativeName "Rutgers"@en ; 
+    org:alternativeName "Rutgers University"@en ; 
+    schema:mainEntityOfPage <http://www.rutgers.edu> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Rutgers_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/100007558> ;
+    schema:sameAs <https://grid.ac/institutions/grid.430387.b> ;
+    schema:sameAs <http://isni.org/isni/0000000419368796> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00k551w06> ;
+        rdfs:label "Center for Discrete Mathematics and Theoretical Computer Science" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00rqs0x69> ;
+        rdfs:label "New Jersey Space Grant Consortium" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0139hn422> ;
+        rdfs:label "Palmer Long Term Ecological Research" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/029z02k15> ;
+        rdfs:label "Rutgers Health" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/008zj0x80> ;
+        rdfs:label "Hackensack University Medical Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05brmpx55> ;
+        rdfs:label "John F. Kennedy Medical Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/0120w8n36> ;
+        rdfs:label "Muhlenberg Regional Medical Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05resfq34> ;
+        rdfs:label "Overlook Medical Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02cm2rk35> ;
+        rdfs:label "Raritan Bay Medical Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/011qwff60> ;
+        rdfs:label "Riverview Medical Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00eekd641> ;
+        rdfs:label "Robert Wood Johnson University Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/024esvk12> ;
+        rdfs:label "Saint Barnabas Medical Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/055mfza47> ;
+        rdfs:label "Saint Peter's University Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02qb5a654> ;
+        rdfs:label "Somerset Medical Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/050n8x383> ;
+        rdfs:label "The Bristol-Myers Squibb Children's Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02snf5j61> ;
+        rdfs:label "University Hospital, Newark" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/003g0xf19> ;
+        rdfs:label "VA New Jersey Health Care System" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-74.45182 40.48622)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-74.45182 40.48622)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "New Brunswick" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/5101717/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000419368796> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q499451> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "New Jersey" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "North America" ;
+                    schema:identifier "NA"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/5101717/> ;
+    ] ; 
     .

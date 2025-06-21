@@ -1,0 +1,40 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/02p2qrw13> a org:Organization ;
+    rdfs:label "Ningxia Water Conservancy" ;
+    schema:name "Ningxia Water Conservancy" ;
+    org:status "active" ;
+    org:classification "funder" ; 
+    org:classification "government" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-05-05"^^xsd:date ;
+    org:alternativeName "宁夏水利厅"@zh ; 
+    schema:url <http://slt.nx.gov.cn> ; 
+    schema:mainEntityOfPage <https://slt.nx.gov.cn> ;
+    schema:sameAs <https://grid.ac/institutions/grid.496813.1> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(106.27306 38.46806)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Yinchuan" ;
+            schema:addressCountry "CN" ;
+            schema:addressRegion "Ningxia" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "China" ;
+                schema:containedInPlace [
+                    schema:name "Asia" ;
+                    schema:identifier "AS"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1786657/> ;
+    ] ; 
+    .

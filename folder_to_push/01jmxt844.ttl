@@ -4,26 +4,63 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01jmxt844> a org:Organization ;
     rdfs:label "University of Otago" ;
     schema:name "University of Otago" ;
     schema:foundingDate "1869"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    schema:url <http://www.otago.ac.nz/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Otago> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-05-05"^^xsd:date ;
+    schema:mainEntityOfPage <http://www.otago.ac.nz/> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Otago> ; 
+    schema:sameAs <https://api.crossref.org/funders/100008247> ;
+    schema:sameAs <https://grid.ac/institutions/grid.29980.3a> ;
+    schema:sameAs <http://isni.org/isni/0000000419367830> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/053336823> ;
+        rdfs:label "Riddet Institute" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05p61mv27> ;
+        rdfs:label "The Dodd-Walls Centre for Photonic and Quantum Technologies" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/029gprt07> ;
+        rdfs:label "Dunedin Public Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/007n45g27> ;
+        rdfs:label "Wellington Hospital" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(170.50361 -45.87416)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(170.50361 -45.87416)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Dunedin" ;
             schema:addressCountry "NZ" ;
-            owl:sameAs <http://sws.geonames.org/2191562/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000419367830> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1201513> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "Otago" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "New Zealand" ;
+                schema:containedInPlace [
+                    schema:name "Oceania" ;
+                    schema:identifier "OC"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2191562/> ;
+    ] ; 
     .

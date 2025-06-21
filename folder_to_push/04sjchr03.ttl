@@ -15,7 +15,7 @@
     org:classification "education" ; 
     org:classification "funder" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2025-04-28"^^xsd:date ;
+    dct:modified "2025-05-05"^^xsd:date ;
     schema:url <http://ulaval.ca> ; 
     schema:mainEntityOfPage <https://www.ulaval.ca> ;
     owl:sameAs <http://en.wikipedia.org/wiki/Laval_University> ; 
@@ -60,6 +60,12 @@
     ] ; 
     org:hasLink [
         a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04ya1kq07> ;
+        rdfs:label "Québec-Océan" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
         org:role "related" ;
         org:member <https://ror.org/03gf7z214> ;
         rdfs:label "Institut Universitaire de Cardiologie et de Pneumologie de Québec" ;
@@ -99,12 +105,6 @@
         org:role "related" ;
         org:member <https://ror.org/04rgqcd02> ;
         rdfs:label "Centre de recherche du CHU de Québec-Université Laval" ;
-    ] ; 
-    org:hasLink [
-        a org:Membership ;
-        org:role "child" ;
-        org:member <https://ror.org/04ya1kq07> ;
-        rdfs:label "Québec-Océan" ;
     ] ; 
     schema:location [
         a schema:Place ;

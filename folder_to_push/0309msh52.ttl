@@ -4,26 +4,44 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/0309msh52> a org:Organization ;
     rdfs:label "Wehrwissenschaftliches Institut für Werk- und Betriebsstoffe" ;
     schema:name "Wehrwissenschaftliches Institut für Werk- und Betriebsstoffe" ;
     schema:foundingDate "1997"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "WIWeB" ;
-    org:alternativeName "Bundeswehr Research Institute for Materials, Fuels and Lubricants" ;
-    schema:url <https://www.bundeswehr.de/de/organisation/ausruestung-baainbw/organisation/wiweb/> ; 
-    owl:sameAs <https://de.wikipedia.org/wiki/Wehrwissenschaftliches_Institut_f%C3%BCr_Werk-_und_Betriebsstoffe> ;
+    org:classification "facility" ; 
+    dct:created "2023-05-11"^^xsd:date ;
+    dct:modified "2025-05-05"^^xsd:date ;
+    org:alternativeName "Bundeswehr Research Institute for Materials, Fuels and Lubricants"@en ; 
+    org:abbreviation "WIWeB"@None ; 
+    schema:mainEntityOfPage <https://www.bundeswehr.de/de/organisation/ausruestung-baainbw/organisation/wiweb/> ;
+    owl:sameAs <https://de.wikipedia.org/wiki/Wehrwissenschaftliches_Institut_f%C3%BCr_Werk-_und_Betriebsstoffe> ; 
+    schema:sameAs <https://api.crossref.org/funders/100017579> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/00nmgny79> ;
+        rdfs:label "Bundeswehr" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(7.57883 50.35357)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(7.57883 50.35357)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Koblenz" ;
             schema:addressCountry "DE" ;
-            owl:sameAs <http://sws.geonames.org/2886946/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://www.wikidata.org/entity/Q2554725> ;
+            schema:addressRegion "Rheinland-Pfalz" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Germany" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2886946/> ;
+    ] ; 
     .

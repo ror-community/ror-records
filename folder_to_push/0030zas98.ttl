@@ -4,28 +4,41 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/0030zas98> a org:Organization ;
     rdfs:label "Hong Kong Polytechnic University" ;
     schema:name "Hong Kong Polytechnic University" ;
     schema:foundingDate "1937"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "HKPU" ;
-    org:alternativeName "PolyU" ;
-    schema:url <http://www.polyu.edu.hk/web/en/home/index.html> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Hong_Kong_Polytechnic_University> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-05-05"^^xsd:date ;
+    org:abbreviation "HKPU"@None ; 
+    org:alternativeName "PolyU"@None ; 
+    schema:mainEntityOfPage <http://www.polyu.edu.hk/web/en/home/index.html> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Hong_Kong_Polytechnic_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100004377> ;
+    schema:sameAs <https://grid.ac/institutions/grid.16890.36> ;
+    schema:sameAs <http://isni.org/isni/0000000417646123> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(114.17469 22.27832)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(114.17469 22.27832)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Hong Kong" ;
             schema:addressCountry "HK" ;
-            owl:sameAs <http://sws.geonames.org/1819729/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000417646123> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1187271> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "None" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Hong Kong" ;
+                schema:containedInPlace [
+                    schema:name "Asia" ;
+                    schema:identifier "AS"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1819729/> ;
+    ] ; 
     .

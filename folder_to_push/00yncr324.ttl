@@ -4,25 +4,38 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/00yncr324> a org:Organization ;
     rdfs:label "Monash University Malaysia" ;
     schema:name "Monash University Malaysia" ;
     schema:foundingDate "1998"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    schema:url <https://www.monash.edu.my/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Monash_University_Malaysia_Campus> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-05-05"^^xsd:date ;
+    schema:mainEntityOfPage <https://www.monash.edu.my/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Monash_University_Malaysia_Campus> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100010699> ;
+    schema:sameAs <https://grid.ac/institutions/grid.440425.3> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(101.58062 3.04384)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(101.58062 3.04384)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Subang Jaya" ;
             schema:addressCountry "MY" ;
-            owl:sameAs <http://sws.geonames.org/8504423/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://www.wikidata.org/entity/Q16934243> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "Kuala Lumpur" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Malaysia" ;
+                schema:containedInPlace [
+                    schema:name "Asia" ;
+                    schema:identifier "AS"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/8504423/> ;
+    ] ; 
     .

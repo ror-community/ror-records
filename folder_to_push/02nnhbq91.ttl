@@ -1,0 +1,50 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/02nnhbq91> a org:Organization ;
+    rdfs:label "Asahi Glass (Japan)" ;
+    schema:name "Asahi Glass (Japan)" ;
+    schema:foundingDate "1907"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "company" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-05-05"^^xsd:date ;
+    org:abbreviation "AGC"@None ; 
+    org:alternativeName "Asahi Garasu Kabushiki-gaisha"@None ; 
+    schema:mainEntityOfPage <http://www.agc.com/english> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Asahi_Glass_Co.> ; 
+    schema:sameAs <https://api.crossref.org/funders/100007684> ;
+    schema:sameAs <https://grid.ac/institutions/grid.453952.c> ;
+    schema:sameAs <http://isni.org/isni/0000000106991851> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/027kczr92> ;
+        rdfs:label "Asahi Glass (Belgium)" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(139.69171 35.6895)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Tokyo" ;
+            schema:addressCountry "JP" ;
+            schema:addressRegion "Tokyo" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Japan" ;
+                schema:containedInPlace [
+                    schema:name "Asia" ;
+                    schema:identifier "AS"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1850147/> ;
+    ] ; 
+    .

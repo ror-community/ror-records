@@ -1,0 +1,43 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/05078rg59> a org:Organization ;
+    rdfs:label "Institute of Mathematical Sciences" ;
+    schema:name "Institute of Mathematical Sciences" ;
+    schema:foundingDate "1962"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "facility" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-05-05"^^xsd:date ;
+    org:abbreviation "IMSc"@None ; 
+    org:alternativeName "Matscience"@en ; 
+    schema:mainEntityOfPage <https://www.imsc.res.in/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Institute_of_Mathematical_Sciences,_Chennai> ; 
+    schema:sameAs <https://api.crossref.org/funders/100013441> ;
+    schema:sameAs <https://grid.ac/institutions/grid.462414.1> ;
+    schema:sameAs <http://isni.org/isni/000000040504909X> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(80.27847 13.08784)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Chennai" ;
+            schema:addressCountry "IN" ;
+            schema:addressRegion "Tamil Nadu" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "India" ;
+                schema:containedInPlace [
+                    schema:name "Asia" ;
+                    schema:identifier "AS"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1264527/> ;
+    ] ; 
+    .

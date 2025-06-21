@@ -4,22 +4,36 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01e70gy59> a org:Organization ;
     rdfs:label "Department of Science and Technology of Anhui Province" ;
     schema:name "Department of Science and Technology of Anhui Province" ;
     org:status "active" ;
-    org:classification "Government" ; 
-    schema:url <http://www.ahkjt.gov.cn/> ; 
+    org:classification "funder" ; 
+    org:classification "government" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-05-05"^^xsd:date ;
+    schema:mainEntityOfPage <http://www.ahkjt.gov.cn/> ;
+    schema:sameAs <https://api.crossref.org/funders/501100010816> ;
+    schema:sameAs <https://grid.ac/institutions/grid.484398.a> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(99.32483 27.19582)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(99.32483 27.19582)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Baohe" ;
             schema:addressCountry "CN" ;
-            owl:sameAs <http://sws.geonames.org/1281674/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "Yunnan" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "China" ;
+                schema:containedInPlace [
+                    schema:name "Asia" ;
+                    schema:identifier "AS"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1281674/> ;
+    ] ; 
     .

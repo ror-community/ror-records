@@ -4,27 +4,45 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/04xdyc983> a org:Organization ;
     rdfs:label "Włodzimierz Trzebiatowski Institute of Low Temperature and Structure Research" ;
     schema:name "Włodzimierz Trzebiatowski Institute of Low Temperature and Structure Research" ;
     schema:foundingDate "1993"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "INTiBS" ;
-    schema:url <https://www.intibs.pl> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/W%C5%82odzimierz_Trzebiatowski_Institute_of_Low_Temperature_and_Structure_Research> ;
+    org:classification "facility" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-05-05"^^xsd:date ;
+    org:abbreviation "INTiBS"@None ; 
+    schema:mainEntityOfPage <https://www.intibs.pl> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/W%C5%82odzimierz_Trzebiatowski_Institute_of_Low_Temperature_and_Structure_Research> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100014432> ;
+    schema:sameAs <https://grid.ac/institutions/grid.426324.5> ;
+    schema:sameAs <http://isni.org/isni/0000000404466553> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/01dr6c206> ;
+        rdfs:label "Polish Academy of Sciences" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(17.03333 51.1)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(17.03333 51.1)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Wroclaw" ;
             schema:addressCountry "PL" ;
-            owl:sameAs <http://sws.geonames.org/3081368/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000404466553> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q8041343> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "Lower Silesia" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Poland" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3081368/> ;
+    ] ; 
     .

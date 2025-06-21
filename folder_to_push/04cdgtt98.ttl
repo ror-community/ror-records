@@ -4,27 +4,76 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/04cdgtt98> a org:Organization ;
     rdfs:label "German Cancer Research Center" ;
     schema:name "German Cancer Research Center" ;
     schema:foundingDate "1964"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "DKFZ" ;
-    schema:url <http://www.dkfz.de/en/index.html> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/German_Cancer_Research_Center> ;
+    org:classification "facility" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-05-05"^^xsd:date ;
+    org:abbreviation "DKFZ"@None ; 
+    schema:mainEntityOfPage <http://www.dkfz.de/en/index.html> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/German_Cancer_Research_Center> ; 
+    schema:sameAs <https://api.crossref.org/funders/100008658> ;
+    schema:sameAs <https://grid.ac/institutions/grid.7497.d> ;
+    schema:sameAs <http://isni.org/isni/0000000404920584> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05x8b4491> ;
+        rdfs:label "DKFZ-ZMBH Alliance" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/015wgw417> ;
+        rdfs:label "Heidelberger Institut für Radioonkologie" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02cypar22> ;
+        rdfs:label "Hopp Children's Cancer Center Heidelberg" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01zy07c70> ;
+        rdfs:label "Nationales Centrum für Tumorerkrankungen Dresden" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/054qg2939> ;
+        rdfs:label "Helmholtz Institute for Translational Oncology Mainz" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/0281dp749> ;
+        rdfs:label "Helmholtz Association of German Research Centres" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(8.69079 49.40768)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(8.69079 49.40768)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Heidelberg" ;
             schema:addressCountry "DE" ;
-            owl:sameAs <http://sws.geonames.org/2907911/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000404920584> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q449325> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "Baden-Wurttemberg" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Germany" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2907911/> ;
+    ] ; 
     .

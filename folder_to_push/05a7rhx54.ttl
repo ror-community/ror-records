@@ -4,26 +4,134 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/05a7rhx54> a org:Organization ;
     rdfs:label "Ericsson (Sweden)" ;
     schema:name "Ericsson (Sweden)" ;
     schema:foundingDate "1876"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Company" ; 
-    org:alternativeName "Telefonaktiebolaget L. M. Ericsson" ;
-    schema:url <https://www.ericsson.com/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Ericsson> ;
+    org:classification "company" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-05-05"^^xsd:date ;
+    org:alternativeName "Telefonaktiebolaget L. M. Ericsson"@None ; 
+    schema:mainEntityOfPage <https://www.ericsson.com/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Ericsson> ; 
+    schema:sameAs <https://api.crossref.org/funders/100018177> ;
+    schema:sameAs <https://grid.ac/institutions/grid.28287.37> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00nas2c56> ;
+        rdfs:label "Ericsson (Canada)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04bsh3r03> ;
+        rdfs:label "Ericsson (Croatia)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04dhm2b57> ;
+        rdfs:label "Ericsson (Denmark)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04vv43q89> ;
+        rdfs:label "Ericsson (Finland)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03m3fa408> ;
+        rdfs:label "Ericsson (Germany)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02xy96n81> ;
+        rdfs:label "Ericsson (Greece)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03c0yyz21> ;
+        rdfs:label "Ericsson (Hungary)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04swdfh12> ;
+        rdfs:label "Ericsson (Ireland)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/027n3xb46> ;
+        rdfs:label "Ericsson (Italy)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01h4rpv44> ;
+        rdfs:label "Ericsson (Netherlands)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/012674h84> ;
+        rdfs:label "Ericsson (Norway)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/011fzp843> ;
+        rdfs:label "Ericsson (Serbia)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04tr57w63> ;
+        rdfs:label "Ericsson (Spain)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01knxge52> ;
+        rdfs:label "Ericsson (United Kingdom)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03q3bdj78> ;
+        rdfs:label "Ericsson (United States)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "predecessor" ;
+        org:member <https://ror.org/017kjzz63> ;
+        rdfs:label "GEC (United Kingdom)" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(17.94479 59.40316)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(17.94479 59.40316)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Kista" ;
             schema:addressCountry "SE" ;
-            owl:sameAs <http://sws.geonames.org/2700791/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://www.wikidata.org/entity/Q52618> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "Stockholm" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Sweden" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2700791/> ;
+    ] ; 
     .

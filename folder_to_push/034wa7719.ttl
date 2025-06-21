@@ -4,27 +4,40 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/034wa7719> a org:Organization ;
     rdfs:label "The National Lottery Community Fund" ;
     schema:name "The National Lottery Community Fund" ;
     schema:foundingDate "2004"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Other" ; 
-    org:alternativeName "Big Lottery Fund" ;
-    schema:url <https://www.biglotteryfund.org.uk/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Big_Lottery_Fund> ;
+    org:classification "funder" ; 
+    org:classification "other" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-05-05"^^xsd:date ;
+    org:alternativeName "Big Lottery Fund"@en ; 
+    schema:mainEntityOfPage <https://www.biglotteryfund.org.uk/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Big_Lottery_Fund> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100000385> ;
+    schema:sameAs <https://grid.ac/institutions/grid.450491.d> ;
+    schema:sameAs <http://isni.org/isni/0000000404504775> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-0.12574 51.50853)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-0.12574 51.50853)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "London" ;
             schema:addressCountry "GB" ;
-            owl:sameAs <http://sws.geonames.org/2643743/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000404504775> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q4905974> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "England" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United Kingdom" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2643743/> ;
+    ] ; 
     .

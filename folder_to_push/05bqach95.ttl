@@ -1,0 +1,49 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/05bqach95> a org:Organization ;
+    rdfs:label "National Taiwan University" ;
+    schema:name "National Taiwan University" ;
+    schema:foundingDate "1928"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-05-05"^^xsd:date ;
+    org:abbreviation "NTU"@None ; 
+    schema:mainEntityOfPage <http://www.ntu.edu.tw/english/> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/National_Taiwan_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100006477> ;
+    schema:sameAs <https://grid.ac/institutions/grid.19188.39> ;
+    schema:sameAs <http://isni.org/isni/0000000405460241> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03nteze27> ;
+        rdfs:label "National Taiwan University Hospital" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(121.52639 25.05306)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Taipei" ;
+            schema:addressCountry "TW" ;
+            schema:addressRegion "Taiwan" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Taiwan" ;
+                schema:containedInPlace [
+                    schema:name "Asia" ;
+                    schema:identifier "AS"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1668341/> ;
+    ] ; 
+    .

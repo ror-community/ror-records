@@ -4,25 +4,37 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/03j186m48> a org:Organization ;
     rdfs:label "Urakami Food and Food Culture Promotion Foundation" ;
     schema:name "Urakami Food and Food Culture Promotion Foundation" ;
     schema:foundingDate "1986"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:alternativeName "Urakami Foundation" ;
-    schema:url <http://www.urakamizaidan.or.jp/> ; 
+    org:classification "facility" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-05-05"^^xsd:date ;
+    org:alternativeName "Urakami Foundation"@None ; 
+    schema:mainEntityOfPage <http://www.urakamizaidan.or.jp/> ;
+    schema:sameAs <https://api.crossref.org/funders/100017103> ;
+    schema:sameAs <https://grid.ac/institutions/grid.484724.9> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(139.69171 35.6895)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(139.69171 35.6895)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Tokyo" ;
             schema:addressCountry "JP" ;
-            owl:sameAs <http://sws.geonames.org/1850147/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://www.wikidata.org/entity/Q11558126> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "Tokyo" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Japan" ;
+                schema:containedInPlace [
+                    schema:name "Asia" ;
+                    schema:identifier "AS"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1850147/> ;
+    ] ; 
     .

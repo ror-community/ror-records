@@ -4,28 +4,49 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/026zar759> a org:Organization ;
     rdfs:label "U.S. Army Combat Capabilities Development Command Ground Vehicle System Center" ;
     schema:name "U.S. Army Combat Capabilities Development Command Ground Vehicle System Center" ;
     schema:foundingDate "1946"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Government" ; 
-    org:classification "Facility" ; 
-    org:abbreviation "DEVCOM GVSC" ;
-    org:alternativeName "United States Army Combat Capabilities Development Command Ground Vehicle System Center" ;
-    schema:url <https://www.usarmygvsc.com> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/United_States_Army_CCDC_Ground_Vehicle_Systems_Center> ;
+    org:classification "facility" ; 
+    org:classification "funder" ; 
+    org:classification "government" ; 
+    dct:created "2023-11-08"^^xsd:date ;
+    dct:modified "2025-05-05"^^xsd:date ;
+    org:abbreviation "DEVCOM GVSC"@None ; 
+    org:alternativeName "DEVCOM Ground Vehicle Systems Center"@en ; 
+    org:alternativeName "United States Army Combat Capabilities Development Command Ground Vehicle System Center"@en ; 
+    org:alternativeName "United States Army Tank Automotive Research, Development and Engineering Center"@en ; 
+    schema:mainEntityOfPage <https://www.usarmygvsc.com> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/United_States_Army_CCDC_Ground_Vehicle_Systems_Center> ; 
+    schema:sameAs <https://api.crossref.org/funders/100009922> ;
+    schema:sameAs <http://isni.org/isni/0000000086797030> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02rdkx920> ;
+        rdfs:label "United States Army Combat Capabilities Development Command" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-83.01304 42.49044)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-83.01304 42.49044)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Warren" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/5014051/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000086797030> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q7889528> ;
+            schema:addressRegion "Michigan" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "North America" ;
+                    schema:identifier "NA"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/5014051/> ;
+    ] ; 
     .

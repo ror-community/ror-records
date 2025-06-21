@@ -1,0 +1,54 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/01dhvva97> a org:Organization ;
+    rdfs:label "Markey Cancer Center" ;
+    schema:name "Markey Cancer Center" ;
+    schema:foundingDate "1983"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "healthcare" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-05-05"^^xsd:date ;
+    org:abbreviation "MCC"@None ; 
+    schema:mainEntityOfPage <http://ukhealthcare.uky.edu/markey/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Markey_Cancer_Center> ; 
+    schema:sameAs <https://api.crossref.org/funders/100015087> ;
+    schema:sameAs <https://grid.ac/institutions/grid.478547.d> ;
+    schema:sameAs <http://isni.org/isni/0000000404024587> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/05vvzn852> ;
+        rdfs:label "University of Kentucky HealthCare" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02k3smh20> ;
+        rdfs:label "University of Kentucky" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-84.45855 38.0498)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Lexington-Fayette" ;
+            schema:addressCountry "US" ;
+            schema:addressRegion "Kentucky" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "North America" ;
+                    schema:identifier "NA"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/4297999/> ;
+    ] ; 
+    .

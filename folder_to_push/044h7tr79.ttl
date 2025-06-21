@@ -1,0 +1,43 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/044h7tr79> a org:Organization ;
+    rdfs:label "Hilti (Liechtenstein)" ;
+    schema:name "Hilti (Liechtenstein)" ;
+    schema:foundingDate "1941"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "company" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-05-05"^^xsd:date ;
+    org:alternativeName "Hilti Aktiengesellschaft"@None ; 
+    org:alternativeName "Hilti Group"@None ; 
+    schema:mainEntityOfPage <https://www.hilti.group/content/hilti/CP/XX/en.html> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Hilti> ; 
+    schema:sameAs <https://api.crossref.org/funders/100022771> ;
+    schema:sameAs <https://grid.ac/institutions/grid.434885.6> ;
+    schema:sameAs <http://isni.org/isni/0000000406094212> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(9.50867 47.16498)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Schaan" ;
+            schema:addressCountry "LI" ;
+            schema:addressRegion "Schaan" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Liechtenstein" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3042041/> ;
+    ] ; 
+    .

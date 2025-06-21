@@ -15,10 +15,10 @@
     org:classification "education" ; 
     org:classification "funder" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-05-02"^^xsd:date ;
-    org:alternativeName "London University"@None ; 
+    dct:modified "2025-05-05"^^xsd:date ;
+    org:alternativeName "London University"@en ; 
     org:abbreviation "UCL"@None ; 
-    org:alternativeName "University College, London"@None ; 
+    org:alternativeName "University College, London"@en ; 
     schema:mainEntityOfPage <http://www.ucl.ac.uk/> ;
     owl:sameAs <http://en.wikipedia.org/wiki/University_College_London> ; 
     schema:sameAs <https://api.crossref.org/funders/501100000765> ;
@@ -104,6 +104,12 @@
     ] ; 
     org:hasLink [
         a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04kjqkz56> ;
+        rdfs:label "Sainsbury Wellcome Centre" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
         org:role "parent" ;
         org:member <https://ror.org/04cw6st05> ;
         rdfs:label "University of London" ;
@@ -174,25 +180,19 @@
         org:member <https://ror.org/01ckbq028> ;
         rdfs:label "Whittington Hospital" ;
     ] ; 
-    org:hasLink [
-        a org:Membership ;
-        org:role "child" ;
-        org:member <https://ror.org/04kjqkz56> ;
-        rdfs:label "Sainsbury Wellcome Centre" ;
-    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(-0.12574 51.50853)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "London" ;
             schema:addressCountry "GB" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "England" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "United Kingdom" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

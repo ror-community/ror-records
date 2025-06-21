@@ -1,0 +1,108 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/01ee9ar58> a org:Organization ;
+    rdfs:label "University of Nottingham" ;
+    schema:name "University of Nottingham" ;
+    schema:foundingDate "1881"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-05-05"^^xsd:date ;
+    schema:mainEntityOfPage <http://www.nottingham.ac.uk/> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Nottingham> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100000837> ;
+    schema:sameAs <https://grid.ac/institutions/grid.4563.4> ;
+    schema:sameAs <http://isni.org/isni/0000000419368868> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/045g6w049> ;
+        rdfs:label "Eminate (United Kingdom)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04gycm791> ;
+        rdfs:label "MRC Institute of Hearing Research" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04mz9mt17> ;
+        rdfs:label "University of Nottingham Malaysia Campus" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03y4dt428> ;
+        rdfs:label "University of Nottingham Ningbo China" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05wyncb52> ;
+        rdfs:label "Kings Mill Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02ppy9c89> ;
+        rdfs:label "NIHR Nottingham Digestive Diseases Biomedical Research Unit" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03f5eqm42> ;
+        rdfs:label "NIHR Nottingham Hearing Biomedical Research Unit" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/0022b3c04> ;
+        rdfs:label "Nottingham City Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05y3qh794> ;
+        rdfs:label "Nottingham University Hospitals NHS Trust" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03ap6wx93> ;
+        rdfs:label "Queen's Medical Centre" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/005r9p256> ;
+        rdfs:label "Royal Derby Hospital" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-1.15047 52.9536)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Nottingham" ;
+            schema:addressCountry "GB" ;
+            schema:addressRegion "England" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United Kingdom" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2641170/> ;
+    ] ; 
+    .

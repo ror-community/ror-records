@@ -15,7 +15,7 @@
     org:classification "education" ; 
     org:classification "funder" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2025-03-26"^^xsd:date ;
+    dct:modified "2025-05-05"^^xsd:date ;
     org:abbreviation "OSU"@None ; 
     schema:mainEntityOfPage <http://www.osu.edu/> ;
     owl:sameAs <http://en.wikipedia.org/wiki/Ohio_State_University> ; 
@@ -60,6 +60,12 @@
     ] ; 
     org:hasLink [
         a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01xf8ec44> ;
+        rdfs:label "NSF National eXtreme Ultrafast Science Facility" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
         org:role "parent" ;
         org:member <https://ror.org/0561zqn56> ;
         rdfs:label "University System of Ohio" ;
@@ -93,12 +99,6 @@
         org:role "related" ;
         org:member <https://ror.org/04r3s7465> ;
         rdfs:label "McMurdo Dry Valleys Long Term Ecological Research" ;
-    ] ; 
-    org:hasLink [
-        a org:Membership ;
-        org:role "child" ;
-        org:member <https://ror.org/01xf8ec44> ;
-        rdfs:label "NSF National eXtreme Ultrafast Science Facility" ;
     ] ; 
     schema:location [
         a schema:Place ;

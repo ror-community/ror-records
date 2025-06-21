@@ -4,27 +4,64 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01kh0x418> a org:Organization ;
     rdfs:label "Indian Institute of Chemical Biology" ;
     schema:name "Indian Institute of Chemical Biology" ;
     schema:foundingDate "1935"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "IICB" ;
-    schema:url <http://www.iicb.res.in/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Indian_Institute_of_Chemical_Biology> ;
+    org:classification "facility" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-05-05"^^xsd:date ;
+    org:abbreviation "IICB"@None ; 
+    schema:mainEntityOfPage <http://www.iicb.res.in/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Indian_Institute_of_Chemical_Biology> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100012323> ;
+    schema:sameAs <https://grid.ac/institutions/grid.417635.2> ;
+    schema:sameAs <http://isni.org/isni/0000000122165074> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/021wm7p51> ;
+        rdfs:label "Council of Scientific and Industrial Research" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/053rcsq61> ;
+        rdfs:label "Academy of Scientific and Innovative Research" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02af4h012> ;
+        rdfs:label "Jadavpur University" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01e7v7w47> ;
+        rdfs:label "University of Calcutta" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(88.36304 22.56263)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(88.36304 22.56263)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Kolkata" ;
             schema:addressCountry "IN" ;
-            owl:sameAs <http://sws.geonames.org/1275004/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000122165074> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q6020595> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "West Bengal" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "India" ;
+                schema:containedInPlace [
+                    schema:name "Asia" ;
+                    schema:identifier "AS"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1275004/> ;
+    ] ; 
     .

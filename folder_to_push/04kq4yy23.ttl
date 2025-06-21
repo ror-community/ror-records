@@ -1,0 +1,42 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/04kq4yy23> a org:Organization ;
+    rdfs:label "Joint Institute for Nuclear Astrophysics" ;
+    schema:name "Joint Institute for Nuclear Astrophysics" ;
+    schema:foundingDate "2003"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "facility" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-05-05"^^xsd:date ;
+    org:abbreviation "JINA-CEE"@None ; 
+    org:alternativeName "Joint Institute for Nuclear Astrophysics Center for the Evolution of Elements"@en ; 
+    schema:mainEntityOfPage <http://www.jinaweb.org/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Joint_Institute_for_Nuclear_Astrophysics> ; 
+    schema:sameAs <https://api.crossref.org/funders/100015546> ;
+    schema:sameAs <https://grid.ac/institutions/grid.494597.2> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-84.48387 42.73698)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "East Lansing" ;
+            schema:addressCountry "US" ;
+            schema:addressRegion "Michigan" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "North America" ;
+                    schema:identifier "NA"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/4991640/> ;
+    ] ; 
+    .

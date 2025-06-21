@@ -1,0 +1,49 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/05e7w0f38> a org:Organization ;
+    rdfs:label "Ministry of External Affairs" ;
+    schema:name "Ministry of External Affairs" ;
+    schema:foundingDate "1946"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "government" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-05-05"^^xsd:date ;
+    org:abbreviation "MEA"@None ; 
+    org:alternativeName "Ministry of External Affairs and Commonwealth Relations"@en ; 
+    schema:mainEntityOfPage <https://www.mea.gov.in/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Ministry_of_External_Affairs_(India)> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100014185> ;
+    schema:sameAs <https://grid.ac/institutions/grid.425934.d> ;
+    schema:sameAs <http://isni.org/isni/0000000110101348> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/036h6g940> ;
+        rdfs:label "Government of India" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(77.2148 28.62137)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "New Delhi" ;
+            schema:addressCountry "IN" ;
+            schema:addressRegion "Delhi" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "India" ;
+                schema:containedInPlace [
+                    schema:name "Asia" ;
+                    schema:identifier "AS"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1261481/> ;
+    ] ; 
+    .

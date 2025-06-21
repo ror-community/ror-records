@@ -15,7 +15,7 @@
     org:classification "education" ; 
     org:classification "funder" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-10-31"^^xsd:date ;
+    dct:modified "2025-05-05"^^xsd:date ;
     org:abbreviation "UW"@None ; 
     org:alternativeName "UW–Madison"@en ; 
     schema:mainEntityOfPage <http://www.wisc.edu/> ;
@@ -37,6 +37,12 @@
     ] ; 
     org:hasLink [
         a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02kj3rm24> ;
+        rdfs:label "Wisconsin Geological and Natural History Survey" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
         org:role "parent" ;
         org:member <https://ror.org/03ydkyb10> ;
         rdfs:label "University of Wisconsin System" ;
@@ -53,25 +59,19 @@
         org:member <https://ror.org/04r3s7465> ;
         rdfs:label "McMurdo Dry Valleys Long Term Ecological Research" ;
     ] ; 
-    org:hasLink [
-        a org:Membership ;
-        org:role "child" ;
-        org:member <https://ror.org/02kj3rm24> ;
-        rdfs:label "Wisconsin Geological and Natural History Survey" ;
-    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(-89.40123 43.07305)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Madison" ;
             schema:addressCountry "US" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Wisconsin" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "United States" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "North America" ;
+                    schema:identifier "NA"
                 ]
             ]
         ] ;

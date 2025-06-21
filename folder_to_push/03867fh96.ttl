@@ -4,25 +4,37 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/03867fh96> a org:Organization ;
     rdfs:label "Instituto Nacional de Ecología y Cambio Climático" ;
     schema:name "Instituto Nacional de Ecología y Cambio Climático" ;
     org:status "active" ;
-    org:classification "Government" ; 
-    org:abbreviation "INECC" ;
-    org:alternativeName "Centro Nacional de Investigación y Capacitación Ambiental" ;
-    schema:url <https://www.gob.mx/inecc> ; 
+    org:classification "government" ; 
+    dct:created "2023-02-16"^^xsd:date ;
+    dct:modified "2025-05-05"^^xsd:date ;
+    org:alternativeName "Centro Nacional de Investigación y Capacitación Ambiental"@es ; 
+    org:abbreviation "INECC"@None ; 
+    schema:mainEntityOfPage <https://www.gob.mx/inecc> ;
+    schema:sameAs <https://api.crossref.org/funders/100020714> ;
+    schema:sameAs <http://isni.org/isni/0000000417640688> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-99.12766 19.42847)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-99.12766 19.42847)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Mexico City" ;
             schema:addressCountry "MX" ;
-            owl:sameAs <http://sws.geonames.org/3530597/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000417640688> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q5917519> ;
+            schema:addressRegion "Mexico City" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Mexico" ;
+                schema:containedInPlace [
+                    schema:name "North America" ;
+                    schema:identifier "NA"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3530597/> ;
+    ] ; 
     .

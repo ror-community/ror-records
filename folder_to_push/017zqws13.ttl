@@ -15,7 +15,7 @@
     org:classification "education" ; 
     org:classification "funder" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2025-02-26"^^xsd:date ;
+    dct:modified "2025-05-05"^^xsd:date ;
     org:alternativeName "University of Minnesota, Twin Cities"@en ; 
     schema:url <http://umn.edu> ; 
     schema:mainEntityOfPage <https://twin-cities.umn.edu> ;
@@ -73,6 +73,12 @@
     ] ; 
     org:hasLink [
         a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02vq8p756> ;
+        rdfs:label "University of Minnesota Itasca Biological Station and Laboratories" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
         org:role "parent" ;
         org:member <https://ror.org/03grvy078> ;
         rdfs:label "University of Minnesota System" ;
@@ -124,12 +130,6 @@
         org:role "related" ;
         org:member <https://ror.org/03e1ayz78> ;
         rdfs:label "University of Minnesota Medical Center" ;
-    ] ; 
-    org:hasLink [
-        a org:Membership ;
-        org:role "child" ;
-        org:member <https://ror.org/02vq8p756> ;
-        rdfs:label "University of Minnesota Itasca Biological Station and Laboratories" ;
     ] ; 
     schema:location [
         a schema:Place ;

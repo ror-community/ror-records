@@ -1,0 +1,48 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/01xm30661> a org:Organization ;
+    rdfs:label "International Space Science Institute" ;
+    schema:name "International Space Science Institute" ;
+    schema:foundingDate "1995"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "nonprofit" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-05-05"^^xsd:date ;
+    org:abbreviation "ISSI"@None ; 
+    schema:mainEntityOfPage <http://www.issibern.ch/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/International_Space_Science_Institute> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100023945> ;
+    schema:sameAs <https://grid.ac/institutions/grid.450946.a> ;
+    schema:sameAs <http://isni.org/isni/0000000110892856> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04tw9zq58> ;
+        rdfs:label "International Space Science Institute - Beijing" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(7.44744 46.94809)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Bern" ;
+            schema:addressCountry "CH" ;
+            schema:addressRegion "Bern" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Switzerland" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2661552/> ;
+    ] ; 
+    .

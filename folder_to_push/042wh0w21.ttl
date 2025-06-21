@@ -1,0 +1,42 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/042wh0w21> a org:Organization ;
+    rdfs:label "Irish Rugby Football Union" ;
+    schema:name "Irish Rugby Football Union" ;
+    schema:foundingDate "1879"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "other" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-05-05"^^xsd:date ;
+    org:abbreviation "IRFU"@None ; 
+    schema:mainEntityOfPage <http://www.irishrugby.ie/home.php> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Irish_Rugby_Football_Union> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100024313> ;
+    schema:sameAs <https://grid.ac/institutions/grid.496980.a> ;
+    schema:sameAs <http://isni.org/isni/0000000094476587> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-6.24889 53.33306)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Dublin" ;
+            schema:addressCountry "IE" ;
+            schema:addressRegion "Leinster" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Ireland" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2964574/> ;
+    ] ; 
+    .

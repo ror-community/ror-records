@@ -4,21 +4,40 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02vyfsk43> a org:Organization ;
     rdfs:label "SmithKline Beecham (United States)" ;
     schema:name "SmithKline Beecham (United States)" ;
     org:status "withdrawn" ;
-    org:classification "Company" ; 
+    org:classification "company" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-05-05"^^xsd:date ;
+    schema:sameAs <https://api.crossref.org/funders/100011420> ;
+    schema:sameAs <https://grid.ac/institutions/grid.417456.5> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "successor" ;
+        org:member <https://ror.org/025vn3989> ;
+        rdfs:label "GlaxoSmithKline (United States)" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-75.60804 39.96097)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-75.60804 39.96097)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "West Chester" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/4562144/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "Pennsylvania" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "North America" ;
+                    schema:identifier "NA"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/4562144/> ;
+    ] ; 
     .

@@ -4,27 +4,63 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02dqehb95> a org:Organization ;
     rdfs:label "Purdue University West Lafayette" ;
     schema:name "Purdue University West Lafayette" ;
     schema:foundingDate "1869"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    schema:url <http://www.purdue.edu/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Purdue_University> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-05-05"^^xsd:date ;
+    schema:mainEntityOfPage <http://www.purdue.edu/> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Purdue_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/100006377> ;
+    schema:sameAs <https://grid.ac/institutions/grid.169077.e> ;
+    schema:sameAs <http://isni.org/isni/0000000419372197> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00vg14f79> ;
+        rdfs:label "Illinois Indiana Sea Grant" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00wks2x74> ;
+        rdfs:label "Indiana Space Grant Consortium" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0482ksk80> ;
+        rdfs:label "Purdue University in Indianapolis" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/05p8z3f47> ;
+        rdfs:label "Purdue University System" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-86.90807 40.42587)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-86.90807 40.42587)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "West Lafayette" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/4928096/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000419372197> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q217741> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q45136563> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "Indiana" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "North America" ;
+                    schema:identifier "NA"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/4928096/> ;
+    ] ; 
     .

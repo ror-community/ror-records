@@ -4,22 +4,47 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01rrxb840> a org:Organization ;
     rdfs:label "Guam Sea Grant" ;
     schema:name "Guam Sea Grant" ;
     org:status "active" ;
-    org:classification "Other" ; 
-    schema:url <https://www.uog.edu/seagrant/> ; 
+    org:classification "other" ; 
+    dct:created "2021-04-06"^^xsd:date ;
+    dct:modified "2025-05-05"^^xsd:date ;
+    schema:mainEntityOfPage <https://www.uog.edu/seagrant/> ;
+    schema:sameAs <https://api.crossref.org/funders/501100009909> ;
+    schema:sameAs <https://grid.ac/institutions/grid.510279.8> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02z5nhe81> ;
+        rdfs:label "National Oceanic and Atmospheric Administration" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/00376bg92> ;
+        rdfs:label "University of Guam" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(144.80109 13.44761)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(144.80109 13.44761)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Mangilao Village" ;
             schema:addressCountry "GU" ;
-            owl:sameAs <http://sws.geonames.org/7268049/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "Mangilao" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Guam" ;
+                schema:containedInPlace [
+                    schema:name "Oceania" ;
+                    schema:identifier "OC"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/7268049/> ;
+    ] ; 
     .

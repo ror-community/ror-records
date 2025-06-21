@@ -4,23 +4,45 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/00tjzgn92> a org:Organization ;
-    rdfs:label "Guangdong Science and Technology Department" ;
-    schema:name "Guangdong Science and Technology Department" ;
+    rdfs:label "" ;
+    schema:name "" ;
     schema:foundingDate "1999"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Government" ; 
-    schema:url <http://www.gdstc.gov.cn/eng/mission.html> ; 
+    org:classification "funder" ; 
+    org:classification "government" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-05-05"^^xsd:date ;
+    org:alternativeName "Guangdong Science and Technology Department"@en ; 
+    schema:url <http://gdstc.gd.gov.cn> ; 
+    schema:mainEntityOfPage <https://gdstc.gd.gov.cn> ;
+    schema:sameAs <https://api.crossref.org/funders/501100007162> ;
+    schema:sameAs <https://grid.ac/institutions/grid.454741.7> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/050m0b055> ;
+        rdfs:label "People's Government of Guangdong Province" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(113.25 23.11667)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(113.25 23.11667)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Guangzhou" ;
             schema:addressCountry "CN" ;
-            owl:sameAs <http://sws.geonames.org/1809858/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "Guangdong" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "China" ;
+                schema:containedInPlace [
+                    schema:name "Asia" ;
+                    schema:identifier "AS"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1809858/> ;
+    ] ; 
     .

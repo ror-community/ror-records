@@ -4,27 +4,52 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/05twwhs70> a org:Organization ;
     rdfs:label "State Grid Corporation of China (China)" ;
     schema:name "State Grid Corporation of China (China)" ;
     schema:foundingDate "2002"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Company" ; 
-    org:abbreviation "SGCC" ;
-    schema:url <http://www.sgcc.com.cn/ywlm/index.shtml> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/State_Grid_Corporation_of_China> ;
+    org:classification "company" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-05-05"^^xsd:date ;
+    org:abbreviation "SGCC"@None ; 
+    schema:mainEntityOfPage <http://www.sgcc.com.cn/ywlm/index.shtml> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/State_Grid_Corporation_of_China> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100010880> ;
+    schema:sameAs <https://grid.ac/institutions/grid.433158.8> ;
+    schema:sameAs <http://isni.org/isni/0000000088917315> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00efwap41> ;
+        rdfs:label "Global Energy Interconnection Research Institute North America" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05ehpzy81> ;
+        rdfs:label "China Electric Power Research Institute" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(116.39723 39.9075)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(116.39723 39.9075)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Beijing" ;
             schema:addressCountry "CN" ;
-            owl:sameAs <http://sws.geonames.org/1816670/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000088917315> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q209078> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "Beijing" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "China" ;
+                schema:containedInPlace [
+                    schema:name "Asia" ;
+                    schema:identifier "AS"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1816670/> ;
+    ] ; 
     .

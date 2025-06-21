@@ -15,7 +15,7 @@
     org:classification "facility" ; 
     org:classification "funder" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2025-02-26"^^xsd:date ;
+    dct:modified "2025-05-05"^^xsd:date ;
     org:abbreviation "INL"@None ; 
     org:alternativeName "Office of Nuclear Energy Idaho National Laboratory"@en ; 
     org:alternativeName "United States Department of Energy Office of Nuclear Energy Idaho National Laboratory"@en ; 
@@ -24,6 +24,12 @@
     schema:sameAs <https://api.crossref.org/funders/100011660> ;
     schema:sameAs <https://grid.ac/institutions/grid.417824.c> ;
     schema:sameAs <http://isni.org/isni/0000000100207392> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03c7p2r39> ;
+        rdfs:label "Nuclear Science User Facilities" ;
+    ] ; 
     org:hasLink [
         a org:Membership ;
         org:role "parent" ;
@@ -41,12 +47,6 @@
         org:role "related" ;
         org:member <https://ror.org/019q0z051> ;
         rdfs:label "Rocky Mountain Advanced Computing Consortium" ;
-    ] ; 
-    org:hasLink [
-        a org:Membership ;
-        org:role "child" ;
-        org:member <https://ror.org/03c7p2r39> ;
-        rdfs:label "Nuclear Science User Facilities" ;
     ] ; 
     schema:location [
         a schema:Place ;

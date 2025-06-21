@@ -4,26 +4,47 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/032n1tr36> a org:Organization ;
     rdfs:label "Hausdorff Center for Mathematics" ;
     schema:name "Hausdorff Center for Mathematics" ;
     schema:foundingDate "2006"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "HCM" ;
-    org:alternativeName "Hausdorff Center" ;
-    schema:url <https://www.mathematics.uni-bonn.de/hcm> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Hausdorff_Center_for_Mathematics> ;
+    org:classification "facility" ; 
+    org:classification "funder" ; 
+    dct:created "2024-02-13"^^xsd:date ;
+    dct:modified "2025-05-05"^^xsd:date ;
+    org:abbreviation "HCM"@None ; 
+    org:alternativeName "Hausdorff Center"@en ; 
+    org:alternativeName "Hausdorff Institute"@en ; 
+    org:alternativeName "Hausdorff Mathematics Institute"@en ; 
+    schema:mainEntityOfPage <https://www.mathematics.uni-bonn.de/hcm> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Hausdorff_Center_for_Mathematics> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100014603> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/041nas322> ;
+        rdfs:label "University of Bonn" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(7.09549 50.73438)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(7.09549 50.73438)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Bonn" ;
             schema:addressCountry "DE" ;
-            owl:sameAs <http://sws.geonames.org/2946447/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://www.wikidata.org/entity/Q1591067> ;
+            schema:addressRegion "North Rhine-Westphalia" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Germany" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2946447/> ;
+    ] ; 
     .

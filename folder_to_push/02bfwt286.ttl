@@ -15,7 +15,7 @@
     org:classification "education" ; 
     org:classification "funder" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-07-29"^^xsd:date ;
+    dct:modified "2025-05-05"^^xsd:date ;
     schema:mainEntityOfPage <https://www.monash.edu> ;
     owl:sameAs <http://en.wikipedia.org/wiki/Monash_University> ; 
     schema:sameAs <https://api.crossref.org/funders/501100001779> ;
@@ -65,6 +65,12 @@
     ] ; 
     org:hasLink [
         a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00jgk9c55> ;
+        rdfs:label "Monash University European Research Foundation ETS" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
         org:role "related" ;
         org:member <https://ror.org/0484pjq71> ;
         rdfs:label "Box Hill Hospital" ;
@@ -99,25 +105,19 @@
         org:member <https://ror.org/01wddqe20> ;
         rdfs:label "The Alfred Hospital" ;
     ] ; 
-    org:hasLink [
-        a org:Membership ;
-        org:role "child" ;
-        org:member <https://ror.org/00jgk9c55> ;
-        rdfs:label "Monash University European Research Foundation ETS" ;
-    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(144.96332 -37.814)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Melbourne" ;
             schema:addressCountry "AU" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Victoria" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "Australia" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Oceania" ;
+                    schema:identifier "OC"
                 ]
             ]
         ] ;

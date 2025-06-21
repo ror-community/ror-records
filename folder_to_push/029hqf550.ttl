@@ -1,0 +1,40 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/029hqf550> a org:Organization ;
+    rdfs:label "CytoSorbents (Germany)" ;
+    schema:name "CytoSorbents (Germany)" ;
+    schema:foundingDate "2012"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "company" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-05-05"^^xsd:date ;
+    schema:mainEntityOfPage <http://cytosorbents.com/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Cytosorbents_Corporation> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100023520> ;
+    schema:sameAs <https://grid.ac/institutions/grid.491626.e> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(13.41053 52.52437)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Berlin" ;
+            schema:addressCountry "DE" ;
+            schema:addressRegion "State of Berlin" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Germany" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2950159/> ;
+    ] ; 
+    .

@@ -4,25 +4,56 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/03w28pb62> a org:Organization ;
     rdfs:label "South Eastern Sydney Local Health District" ;
     schema:name "South Eastern Sydney Local Health District" ;
     schema:foundingDate "2011"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Healthcare" ; 
-    org:abbreviation "SESLHD" ;
-    schema:url <http://www.seslhd.health.nsw.gov.au/> ; 
+    org:classification "healthcare" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-05-05"^^xsd:date ;
+    org:abbreviation "SESLHD"@None ; 
+    schema:mainEntityOfPage <http://www.seslhd.health.nsw.gov.au/> ;
+    schema:sameAs <https://api.crossref.org/funders/100015069> ;
+    schema:sameAs <https://grid.ac/institutions/grid.477714.6> ;
+    schema:sameAs <http://isni.org/isni/000000040587919X> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/021cxfs56> ;
+        rdfs:label "Royal Hospital for Women" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0402tt118> ;
+        rdfs:label "Sydney Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/04f0vbp79> ;
+        rdfs:label "Mindgardens Neuroscience Network" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(151.20732 -33.86785)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(151.20732 -33.86785)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Sydney" ;
             schema:addressCountry "AU" ;
-            owl:sameAs <http://sws.geonames.org/2147714/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/000000040587919X> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "New South Wales" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Australia" ;
+                schema:containedInPlace [
+                    schema:name "Oceania" ;
+                    schema:identifier "OC"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2147714/> ;
+    ] ; 
     .

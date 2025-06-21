@@ -1,0 +1,42 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/0440yjn92> a org:Organization ;
+    rdfs:label "American University of Ras Al Khaimah" ;
+    schema:name "American University of Ras Al Khaimah" ;
+    schema:foundingDate "2009"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2021-04-06"^^xsd:date ;
+    dct:modified "2025-05-05"^^xsd:date ;
+    org:abbreviation "AURAK"@None ; 
+    schema:mainEntityOfPage <https://aurak.ac.ae/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/American_University_of_Ras_Al_Khaimah_(AURAK)> ; 
+    schema:sameAs <https://api.crossref.org/funders/100020843> ;
+    schema:sameAs <https://grid.ac/institutions/grid.510262.2> ;
+    schema:sameAs <http://isni.org/isni/0000000417618907> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(55.9432 25.78953)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Ras al-Khaimah" ;
+            schema:addressCountry "AE" ;
+            schema:addressRegion "Raʼs al Khaymah" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United Arab Emirates" ;
+                schema:containedInPlace [
+                    schema:name "Asia" ;
+                    schema:identifier "AS"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/291074/> ;
+    ] ; 
+    .

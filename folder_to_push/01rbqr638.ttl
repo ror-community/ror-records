@@ -4,26 +4,45 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01rbqr638> a org:Organization ;
     rdfs:label "Elkem (Norway)" ;
     schema:name "Elkem (Norway)" ;
     schema:foundingDate "1904"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Company" ; 
-    schema:url <https://www.elkem.com> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Elkem> ;
+    org:classification "company" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-05-05"^^xsd:date ;
+    schema:mainEntityOfPage <https://www.elkem.com> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Elkem> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100010048> ;
+    schema:sameAs <https://grid.ac/institutions/grid.450768.8> ;
+    schema:sameAs <http://isni.org/isni/0000000405649677> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/016t6nf16> ;
+        rdfs:label "Vianode (Norway)" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(10.74609 59.91273)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(10.74609 59.91273)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Oslo" ;
             schema:addressCountry "NO" ;
-            owl:sameAs <http://sws.geonames.org/3143244/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000405649677> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1331615> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "Oslo" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Norway" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3143244/> ;
+    ] ; 
     .

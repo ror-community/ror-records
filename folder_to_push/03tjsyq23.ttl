@@ -1,0 +1,84 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/03tjsyq23> a org:Organization ;
+    rdfs:label "Department of Biotechnology" ;
+    schema:name "Department of Biotechnology" ;
+    schema:foundingDate "1986"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "funder" ; 
+    org:classification "government" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-05-05"^^xsd:date ;
+    org:abbreviation "DBT"@None ; 
+    schema:mainEntityOfPage <http://www.dbtindia.nic.in/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Department_of_Biotechnology> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100001407> ;
+    schema:sameAs <https://grid.ac/institutions/grid.454774.1> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04m3mhq27> ;
+        rdfs:label "Centre for Advanced Bioenergy Research" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/007wpch15> ;
+        rdfs:label "Institute for Stem Cell Biology and Regenerative Medicine" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03561p598> ;
+        rdfs:label "Institute of Bio-Resources and Sustainable Development" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03780jn86> ;
+        rdfs:label "Kalam Institute of Health Technology" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/057y6sk36> ;
+        rdfs:label "National Institute of Biomedical Genomics" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/03emtbt60> ;
+        rdfs:label "Ministry of Science and Technology" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/017mw4x28> ;
+        rdfs:label "Healthcare Technology Innovation Centre" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(77.2148 28.62137)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "New Delhi" ;
+            schema:addressCountry "IN" ;
+            schema:addressRegion "Delhi" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "India" ;
+                schema:containedInPlace [
+                    schema:name "Asia" ;
+                    schema:identifier "AS"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1261481/> ;
+    ] ; 
+    .

@@ -4,26 +4,44 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/03vmmgg57> a org:Organization ;
     rdfs:label "Singapore Immunology Network" ;
     schema:name "Singapore Immunology Network" ;
     schema:foundingDate "2008"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "SIgN" ;
-    schema:url <http://www.a-star.edu.sg/sign> ; 
+    org:classification "facility" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-05-05"^^xsd:date ;
+    org:abbreviation "SIgN"@None ; 
+    schema:mainEntityOfPage <http://www.a-star.edu.sg/sign> ;
+    schema:sameAs <https://api.crossref.org/funders/100022896> ;
+    schema:sameAs <https://grid.ac/institutions/grid.430276.4> ;
+    schema:sameAs <http://isni.org/isni/0000000403872429> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/03xy0wx88> ;
+        rdfs:label "Biomedical Research Council" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(103.85007 1.28967)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(103.85007 1.28967)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Singapore" ;
             schema:addressCountry "SG" ;
-            owl:sameAs <http://sws.geonames.org/1880252/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000403872429> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q7523006> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "SG.01" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Singapore" ;
+                schema:containedInPlace [
+                    schema:name "Asia" ;
+                    schema:identifier "AS"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1880252/> ;
+    ] ; 
     .

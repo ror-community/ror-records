@@ -15,7 +15,7 @@
     org:classification "education" ; 
     org:classification "funder" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-05-02"^^xsd:date ;
+    dct:modified "2025-05-05"^^xsd:date ;
     org:abbreviation "NU"@None ; 
     schema:mainEntityOfPage <http://www.northwestern.edu/> ;
     owl:sameAs <http://en.wikipedia.org/wiki/Northwestern_University> ; 
@@ -33,6 +33,12 @@
         org:role "child" ;
         org:member <https://ror.org/00rncr820> ;
         rdfs:label "International Institute for Nanotechnology" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/014nxkk19> ;
+        rdfs:label "Chan Zuckerberg Biohub Chicago" ;
     ] ; 
     org:hasLink [
         a org:Membership ;
@@ -94,25 +100,19 @@
         org:member <https://ror.org/02p4far57> ;
         rdfs:label "Robert H. Lurie Comprehensive Cancer Center of Northwestern University" ;
     ] ; 
-    org:hasLink [
-        a org:Membership ;
-        org:role "child" ;
-        org:member <https://ror.org/014nxkk19> ;
-        rdfs:label "Chan Zuckerberg Biohub Chicago" ;
-    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(-87.69006 42.04114)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Evanston" ;
             schema:addressCountry "US" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Illinois" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "United States" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "North America" ;
+                    schema:identifier "NA"
                 ]
             ]
         ] ;

@@ -4,28 +4,47 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/029qx3s09> a org:Organization ;
     rdfs:label "High Point University" ;
     schema:name "High Point University" ;
     schema:foundingDate "1924"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "HPU" ;
-    org:alternativeName "High Point College " ;
-    schema:url <http://www.highpoint.edu/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/High_Point_University> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-05-05"^^xsd:date ;
+    org:abbreviation "HPU"@None ; 
+    org:alternativeName "High Point College "@en ; 
+    schema:mainEntityOfPage <http://www.highpoint.edu/> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/High_Point_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/100012806> ;
+    schema:sameAs <https://grid.ac/institutions/grid.256969.7> ;
+    schema:sameAs <http://isni.org/isni/0000000099028484> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05w72d176> ;
+        rdfs:label "The People of the United Methodist Church" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-80.00532 35.95569)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-80.00532 35.95569)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "High Point" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/4471025/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000099028484> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q5756235> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "North Carolina" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "North America" ;
+                    schema:identifier "NA"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/4471025/> ;
+    ] ; 
     .

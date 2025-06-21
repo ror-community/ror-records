@@ -4,23 +4,38 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/05yj3y977> a org:Organization ;
     rdfs:label "Science and Technology Department of Zhejiang Province" ;
     schema:name "Science and Technology Department of Zhejiang Province" ;
     schema:foundingDate "2003"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Government" ; 
-    schema:url <http://www.zjkjt.gov.cn> ; 
+    org:classification "funder" ; 
+    org:classification "government" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-05-05"^^xsd:date ;
+    schema:url <http://kjt.zj.gov.cn> ; 
+    schema:mainEntityOfPage <http://kjt.zj.gov.cn> ;
+    schema:sameAs <https://api.crossref.org/funders/501100008990> ;
+    schema:sameAs <https://grid.ac/institutions/grid.454744.2> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(120.16142 30.29365)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(120.16142 30.29365)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Hangzhou" ;
             schema:addressCountry "CN" ;
-            owl:sameAs <http://sws.geonames.org/1808926/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "Zhejiang" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "China" ;
+                schema:containedInPlace [
+                    schema:name "Asia" ;
+                    schema:identifier "AS"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1808926/> ;
+    ] ; 
     .

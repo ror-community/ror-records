@@ -4,26 +4,45 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02wbrth70> a org:Organization ;
     rdfs:label "Fatih University" ;
     schema:name "Fatih University" ;
     schema:foundingDate "1996"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    schema:url <http://www.fatih.edu.tr/?&language=EN> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Fatih_University> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-05-05"^^xsd:date ;
+    schema:mainEntityOfPage <http://www.fatih.edu.tr/?&language=EN> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Fatih_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100003098> ;
+    schema:sameAs <https://grid.ac/institutions/grid.411137.1> ;
+    schema:sameAs <http://isni.org/isni/0000000106886613> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03wff9w51> ;
+        rdfs:label "Sema Hospital" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(28.94966 41.01384)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(28.94966 41.01384)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Istanbul" ;
             schema:addressCountry "TR" ;
-            owl:sameAs <http://sws.geonames.org/745044/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000106886613> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q5437801> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "Istanbul" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Türkiye" ;
+                schema:containedInPlace [
+                    schema:name "Asia" ;
+                    schema:identifier "AS"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/745044/> ;
+    ] ; 
     .

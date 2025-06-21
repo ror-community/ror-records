@@ -4,27 +4,64 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/00trqv719> a org:Organization ;
     rdfs:label "University of Rochester Medical Center" ;
     schema:name "University of Rochester Medical Center" ;
     schema:foundingDate "1921"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Healthcare" ; 
-    org:abbreviation "URMC" ;
-    schema:url <https://www.urmc.rochester.edu> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/University_of_Rochester_Medical_Center> ;
+    org:classification "funder" ; 
+    org:classification "healthcare" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-05-05"^^xsd:date ;
+    org:abbreviation "URMC"@None ; 
+    schema:mainEntityOfPage <https://www.urmc.rochester.edu> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/University_of_Rochester_Medical_Center> ; 
+    schema:sameAs <https://api.crossref.org/funders/100009750> ;
+    schema:sameAs <https://grid.ac/institutions/grid.412750.5> ;
+    schema:sameAs <http://isni.org/isni/0000000419369166> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02rcfyf15> ;
+        rdfs:label "Golisano Children's Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00z9qkg54> ;
+        rdfs:label "Highland Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0583j8v67> ;
+        rdfs:label "Strong Memorial Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/022kthw22> ;
+        rdfs:label "University of Rochester" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-77.61556 43.15478)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-77.61556 43.15478)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Rochester" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/5134086/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000419369166> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q7896217> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "New York" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "North America" ;
+                    schema:identifier "NA"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/5134086/> ;
+    ] ; 
     .

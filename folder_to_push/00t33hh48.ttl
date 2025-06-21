@@ -1,0 +1,79 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/00t33hh48> a org:Organization ;
+    rdfs:label "Chinese University of Hong Kong" ;
+    schema:name "Chinese University of Hong Kong" ;
+    schema:foundingDate "1963"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-05-05"^^xsd:date ;
+    org:abbreviation "CUHK"@None ; 
+    schema:mainEntityOfPage <http://www.cuhk.edu.hk/english/index.html> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Chinese_University_of_Hong_Kong> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100004853> ;
+    schema:sameAs <https://grid.ac/institutions/grid.10784.3a> ;
+    schema:sameAs <http://isni.org/isni/0000000419370482> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02d5ks197> ;
+        rdfs:label "Chinese University of Hong Kong, Shenzhen" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00qfke340> ;
+        rdfs:label "Institute of Molecular Functional Materials" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/038ey3e97> ;
+        rdfs:label "State Key Laboratory of Synthetic Chemistry" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03fttgk04> ;
+        rdfs:label "Hong Kong Eye Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/009s7a550> ;
+        rdfs:label "Pamela Youde Nethersole Eastern Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02827ca86> ;
+        rdfs:label "Prince of Wales Hospital" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(114.17469 22.27832)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Hong Kong" ;
+            schema:addressCountry "HK" ;
+            schema:addressRegion "None" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Hong Kong" ;
+                schema:containedInPlace [
+                    schema:name "Asia" ;
+                    schema:identifier "AS"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1819729/> ;
+    ] ; 
+    .

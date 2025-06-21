@@ -1,0 +1,42 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/00c5q9r49> a org:Organization ;
+    rdfs:label "Indian Institute of Advanced Research" ;
+    schema:name "Indian Institute of Advanced Research" ;
+    schema:foundingDate "2011"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-05-05"^^xsd:date ;
+    org:abbreviation "IIAR"@None ; 
+    schema:mainEntityOfPage <http://www.iiar.res.in/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Institute_of_Advanced_Research> ; 
+    schema:sameAs <https://api.crossref.org/funders/100020566> ;
+    schema:sameAs <https://grid.ac/institutions/grid.429014.a> ;
+    schema:sameAs <http://isni.org/isni/0000000417619571> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(72.68333 23.21667)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Gandhinagar" ;
+            schema:addressCountry "IN" ;
+            schema:addressRegion "Gujarat" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "India" ;
+                schema:containedInPlace [
+                    schema:name "Asia" ;
+                    schema:identifier "AS"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1271715/> ;
+    ] ; 
+    .

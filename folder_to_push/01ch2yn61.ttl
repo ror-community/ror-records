@@ -4,27 +4,40 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01ch2yn61> a org:Organization ;
     rdfs:label "Met Office" ;
     schema:name "Met Office" ;
     schema:foundingDate "1854"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Government" ; 
-    org:alternativeName "Meteorological Office" ;
-    schema:url <http://www.metoffice.gov.uk/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Met_Office> ;
+    org:classification "funder" ; 
+    org:classification "government" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-05-05"^^xsd:date ;
+    org:alternativeName "Meteorological Office"@en ; 
+    schema:mainEntityOfPage <http://www.metoffice.gov.uk/> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Met_Office> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100000847> ;
+    schema:sameAs <https://grid.ac/institutions/grid.17100.37> ;
+    schema:sameAs <http://isni.org/isni/0000000405133830> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-3.52751 50.7236)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-3.52751 50.7236)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Exeter" ;
             schema:addressCountry "GB" ;
-            owl:sameAs <http://sws.geonames.org/2649808/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000405133830> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1851405> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "England" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United Kingdom" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2649808/> ;
+    ] ; 
     .

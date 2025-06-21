@@ -1,0 +1,38 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/01vfw8847> a org:Organization ;
+    rdfs:label "Ministry of Agriculture" ;
+    schema:name "Ministry of Agriculture" ;
+    org:status "active" ;
+    org:classification "government" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-05-05"^^xsd:date ;
+    schema:mainEntityOfPage <https://www.zm.gov.lv/en/> ;
+    schema:sameAs <https://api.crossref.org/funders/501100023737> ;
+    schema:sameAs <https://grid.ac/institutions/grid.494340.e> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(24.10589 56.946)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Riga" ;
+            schema:addressCountry "LV" ;
+            schema:addressRegion "Riga" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Latvia" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/456172/> ;
+    ] ; 
+    .

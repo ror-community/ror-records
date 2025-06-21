@@ -4,27 +4,46 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/04zfaj906> a org:Organization ;
     rdfs:label "Catalan Institute for Water Research" ;
     schema:name "Catalan Institute for Water Research" ;
     schema:foundingDate "2006"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "ICRA" ;
-    org:alternativeName "Institut Català de Recerca de l'Aigua" ;
-    schema:url <http://www.icra.cat/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/The_Catalan_Institute_for_Water_Research> ;
+    org:classification "facility" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-05-05"^^xsd:date ;
+    org:abbreviation "ICRA"@None ; 
+    org:abbreviation "ICRA-CERCA"@None ; 
+    org:alternativeName "Institut Català de Recerca de l'Aigua"@ca ; 
+    schema:mainEntityOfPage <http://www.icra.cat/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/The_Catalan_Institute_for_Water_Research> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100014855> ;
+    schema:sameAs <https://grid.ac/institutions/grid.424734.2> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/01bkbaq61> ;
+        rdfs:label "CERCA Institution" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(2.82493 41.98311)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(2.82493 41.98311)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Girona" ;
             schema:addressCountry "ES" ;
-            owl:sameAs <http://sws.geonames.org/3121456/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://www.wikidata.org/entity/Q19879039> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "Catalonia" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Spain" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3121456/> ;
+    ] ; 
     .

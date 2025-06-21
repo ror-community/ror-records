@@ -1,0 +1,55 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/03kgsv495> a org:Organization ;
+    rdfs:label "Bar-Ilan University" ;
+    schema:name "Bar-Ilan University" ;
+    schema:foundingDate "1955"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-05-05"^^xsd:date ;
+    org:abbreviation "BIU"@None ; 
+    schema:mainEntityOfPage <http://www1.biu.ac.il/indexE.php> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Bar-Ilan_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100002744> ;
+    schema:sameAs <https://grid.ac/institutions/grid.22098.31> ;
+    schema:sameAs <http://isni.org/isni/0000000419370503> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02a2hb496> ;
+        rdfs:label "Nazareth Hospital EMMS" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/000ke5995> ;
+        rdfs:label "Western Galilee Hospital" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(34.81065 32.08227)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Ramat Gan" ;
+            schema:addressCountry "IL" ;
+            schema:addressRegion "Tel Aviv" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Israel" ;
+                schema:containedInPlace [
+                    schema:name "Asia" ;
+                    schema:identifier "AS"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/293788/> ;
+    ] ; 
+    .

@@ -4,28 +4,46 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01h0zpd94> a org:Organization ;
     rdfs:label "National Natural Science Foundation of China" ;
     schema:name "National Natural Science Foundation of China" ;
     schema:foundingDate "1986"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Government" ; 
-    org:abbreviation "NSFC" ;
-    schema:url <https://www.nsfc.gov.cn> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/National_Natural_Science_Foundation_of_China> ;
+    org:classification "funder" ; 
+    org:classification "government" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-05-05"^^xsd:date ;
+    org:abbreviation "NSFC"@None ; 
+    schema:mainEntityOfPage <https://www.nsfc.gov.cn> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/National_Natural_Science_Foundation_of_China> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100001809> ;
+    schema:sameAs <https://grid.ac/institutions/grid.419696.5> ;
+    schema:sameAs <http://isni.org/isni/0000000108418282> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02egfyg20> ;
+        rdfs:label "China Center of Advanced Science and Technology" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(116.39723 39.9075)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(116.39723 39.9075)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Beijing" ;
             schema:addressCountry "CN" ;
-            owl:sameAs <http://sws.geonames.org/1816670/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000108418282> ;
-    schema:sameAs <http://isni.org/isni/000000012107957X> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q4501917> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "Beijing" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "China" ;
+                schema:containedInPlace [
+                    schema:name "Asia" ;
+                    schema:identifier "AS"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1816670/> ;
+    ] ; 
     .

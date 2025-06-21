@@ -4,26 +4,99 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01an3r305> a org:Organization ;
     rdfs:label "University of Pittsburgh" ;
     schema:name "University of Pittsburgh" ;
     schema:foundingDate "1787"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    schema:url <http://www.pitt.edu/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Pittsburgh> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-05-05"^^xsd:date ;
+    schema:mainEntityOfPage <http://www.pitt.edu/> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Pittsburgh> ; 
+    schema:sameAs <https://api.crossref.org/funders/100007921> ;
+    schema:sameAs <https://grid.ac/institutions/grid.21925.3d> ;
+    schema:sameAs <http://isni.org/isni/0000000419369000> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00jfeg660> ;
+        rdfs:label "Center for the Neural Basis of Cognition" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04js6xx21> ;
+        rdfs:label "McGowan Institute for Regenerative Medicine" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0019bf448> ;
+        rdfs:label "University of Pittsburgh at Bradford" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02b394754> ;
+        rdfs:label "University of Pittsburgh at Greensburg" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03n9scz70> ;
+        rdfs:label "University of Pittsburgh at Johnstown" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0242vta36> ;
+        rdfs:label "University of Pittsburgh at Titusville" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03bw34a45> ;
+        rdfs:label "UPMC Hillman Cancer Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/04a0qsn58> ;
+        rdfs:label "St. Margaret Memorial Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03bw34a45> ;
+        rdfs:label "UPMC Hillman Cancer Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/04ehecz88> ;
+        rdfs:label "University of Pittsburgh Medical Center" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-79.99589 40.44062)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-79.99589 40.44062)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Pittsburgh" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/5206379/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000419369000> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q235034> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "Pennsylvania" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "North America" ;
+                    schema:identifier "NA"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/5206379/> ;
+    ] ; 
     .

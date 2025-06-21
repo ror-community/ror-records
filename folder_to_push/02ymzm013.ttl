@@ -1,0 +1,44 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/02ymzm013> a org:Organization ;
+    rdfs:label "Alzheimer’s Research UK" ;
+    schema:name "Alzheimer’s Research UK" ;
+    schema:foundingDate "1992"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "funder" ; 
+    org:classification "nonprofit" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-05-05"^^xsd:date ;
+    org:abbreviation "ARUK"@None ; 
+    org:alternativeName "Alzheimer's Research Trust"@en ; 
+    schema:mainEntityOfPage <http://www.alzheimersresearchuk.org/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Alzheimer%27s_Research_UK> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100002283> ;
+    schema:sameAs <https://grid.ac/institutions/grid.453466.6> ;
+    schema:sameAs <http://isni.org/isni/0000000096891581> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(0.11667 52.2)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Cambridge" ;
+            schema:addressCountry "GB" ;
+            schema:addressRegion "England" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United Kingdom" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2653941/> ;
+    ] ; 
+    .

@@ -4,25 +4,48 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02h7kd997> a org:Organization ;
     rdfs:label "U.S. Army Command, Control, Communications, Computers, Cyber, Intelligence, Surveillance and Reconnaissance Center" ;
     schema:name "U.S. Army Command, Control, Communications, Computers, Cyber, Intelligence, Surveillance and Reconnaissance Center" ;
     org:status "active" ;
-    org:classification "Government" ; 
-    org:classification "Facility" ; 
-    org:alternativeName "United States Army Command, Control, Communications, Computers, Cyber, Intelligence, Surveillance" ;
-    schema:url <https://c5isrcenter.devcom.army.mil/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/United_States_Army_Command%2C_Control%2C_Communication%2C_Computers%2C_Cyber%2C_Intelligence%2C_Surveillance_and_Reconnaissance_Center> ;
+    org:classification "facility" ; 
+    org:classification "government" ; 
+    dct:created "2023-11-08"^^xsd:date ;
+    dct:modified "2025-05-05"^^xsd:date ;
+    org:alternativeName "C5ISR Center"@en ; 
+    org:alternativeName "Communications-Electronics RD&E Center"@en ; 
+    org:alternativeName "DEVCOM C5ISR Center"@en ; 
+    org:alternativeName "U.S. Army Combat Capabilities Development Command - Command, Control, Communications, Computers, Cyber, Intelligence, Surveillance and Reconnaissance Center"@en ; 
+    org:alternativeName "United States Army Command, Control, Communications, Computers, Cyber, Intelligence, Surveillance"@en ; 
+    org:alternativeName "United States Army Communications-Electronics Research, Development and Engineering Center"@en ; 
+    schema:mainEntityOfPage <https://c5isrcenter.devcom.army.mil/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/United_States_Army_Command%2C_Control%2C_Communication%2C_Computers%2C_Cyber%2C_Intelligence%2C_Surveillance_and_Reconnaissance_Center> ; 
+    schema:sameAs <https://api.crossref.org/funders/100010188> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02rdkx920> ;
+        rdfs:label "United States Army Combat Capabilities Development Command" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-76.13066 39.46686)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-76.13066 39.46686)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Aberdeen Proving Ground" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/7257914/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://www.wikidata.org/entity/Q7889469> ;
+            schema:addressRegion "Maryland" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "North America" ;
+                    schema:identifier "NA"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/7257914/> ;
+    ] ; 
     .

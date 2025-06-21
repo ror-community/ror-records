@@ -1,0 +1,49 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/04a5szx83> a org:Organization ;
+    rdfs:label "University of North Dakota" ;
+    schema:name "University of North Dakota" ;
+    schema:foundingDate "1883"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-05-05"^^xsd:date ;
+    org:abbreviation "UND"@None ; 
+    schema:mainEntityOfPage <http://und.edu/> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_North_Dakota> ; 
+    schema:sameAs <https://api.crossref.org/funders/100007237> ;
+    schema:sameAs <https://grid.ac/institutions/grid.266862.e> ;
+    schema:sameAs <http://isni.org/isni/0000000419368163> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/045fdzr53> ;
+        rdfs:label "North Dakota Space Grant Consortium" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-97.03285 47.92526)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Grand Forks" ;
+            schema:addressCountry "US" ;
+            schema:addressRegion "North Dakota" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "North America" ;
+                    schema:identifier "NA"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/5059429/> ;
+    ] ; 
+    .

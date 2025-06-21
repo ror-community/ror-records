@@ -15,7 +15,7 @@
     org:classification "funder" ; 
     org:classification "government" ; 
     dct:created "2023-02-16"^^xsd:date ;
-    dct:modified "2024-05-30"^^xsd:date ;
+    dct:modified "2025-05-05"^^xsd:date ;
     schema:mainEntityOfPage <https://www.dcceew.gov.au> ;
     owl:sameAs <https://en.wikipedia.org/wiki/Department_of_Climate_Change%2C_Energy%2C_the_Environment_and_Water> ; 
     schema:sameAs <https://api.crossref.org/funders/501100024290> ;
@@ -24,6 +24,12 @@
         org:role "child" ;
         org:member <https://ror.org/00289aa83> ;
         rdfs:label "Australian Biological Resources Study" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03x57gn41> ;
+        rdfs:label "Australian Institute of Marine Science" ;
     ] ; 
     org:hasLink [
         a org:Membership ;
@@ -43,25 +49,19 @@
         org:member <https://ror.org/00qq77n27> ;
         rdfs:label "Consortium for Ocean-Sea Ice Modelling in Australia" ;
     ] ; 
-    org:hasLink [
-        a org:Membership ;
-        org:role "child" ;
-        org:member <https://ror.org/03x57gn41> ;
-        rdfs:label "Australian Institute of Marine Science" ;
-    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(149.12807 -35.28346)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Canberra" ;
             schema:addressCountry "AU" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Australian Capital Territory" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "Australia" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Oceania" ;
+                    schema:identifier "OC"
                 ]
             ]
         ] ;

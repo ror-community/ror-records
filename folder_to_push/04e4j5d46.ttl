@@ -1,0 +1,60 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/04e4j5d46> a org:Organization ;
+    rdfs:label "Galapagos (Belgium)" ;
+    schema:name "Galapagos (Belgium)" ;
+    schema:foundingDate "1999"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "company" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-05-05"^^xsd:date ;
+    org:alternativeName "Galapagos Genomics"@None ; 
+    schema:mainEntityOfPage <http://www.glpg.com/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Galapagos_NV> ; 
+    schema:sameAs <https://api.crossref.org/funders/100019832> ;
+    schema:sameAs <https://grid.ac/institutions/grid.476376.7> ;
+    schema:sameAs <http://isni.org/isni/0000000406033591> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02srvrw14> ;
+        rdfs:label "Galapagos (Croatia)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/023bt3h76> ;
+        rdfs:label "Galapagos (France)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04e7m9p55> ;
+        rdfs:label "Galapagos (Netherlands)" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(4.47762 51.02574)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Mechelen" ;
+            schema:addressCountry "BE" ;
+            schema:addressRegion "Flanders" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Belgium" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2791537/> ;
+    ] ; 
+    .

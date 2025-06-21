@@ -1,0 +1,46 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/01vnxev61> a org:Organization ;
+    rdfs:label "Bayer (Canada)" ;
+    schema:name "Bayer (Canada)" ;
+    schema:foundingDate "1863"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "company" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-05-05"^^xsd:date ;
+    schema:mainEntityOfPage <http://www.bayer.ca/> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Bayer> ; 
+    schema:sameAs <https://api.crossref.org/funders/100013711> ;
+    schema:sameAs <https://grid.ac/institutions/grid.410314.3> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/04hmn8g73> ;
+        rdfs:label "Bayer (Germany)" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-79.6583 43.5789)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Mississauga" ;
+            schema:addressCountry "CA" ;
+            schema:addressRegion "Ontario" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Canada" ;
+                schema:containedInPlace [
+                    schema:name "North America" ;
+                    schema:identifier "NA"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/6075357/> ;
+    ] ; 
+    .

@@ -4,26 +4,50 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/0111es613> a org:Organization ;
     rdfs:label "Hospital General Universitario Gregorio Marañón" ;
     schema:name "Hospital General Universitario Gregorio Marañón" ;
     schema:foundingDate "1567"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Healthcare" ; 
-    schema:url <https://www.comunidad.madrid/hospital/gregoriomaranon/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Hospital_General_Universitario_Gregorio_Mara%C3%B1%C3%B3n> ;
+    org:classification "healthcare" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-05-05"^^xsd:date ;
+    schema:mainEntityOfPage <https://www.comunidad.madrid/hospital/gregoriomaranon/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Hospital_General_Universitario_Gregorio_Mara%C3%B1%C3%B3n> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100024028> ;
+    schema:sameAs <https://grid.ac/institutions/grid.410526.4> ;
+    schema:sameAs <http://isni.org/isni/0000000102777938> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/040scgh75> ;
+        rdfs:label "Comunidad de Madrid" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02p0gd045> ;
+        rdfs:label "Universidad Complutense de Madrid" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-3.70256 40.4165)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-3.70256 40.4165)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Madrid" ;
             schema:addressCountry "ES" ;
-            owl:sameAs <http://sws.geonames.org/3117735/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000102777938> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q30253672> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "Madrid" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Spain" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3117735/> ;
+    ] ; 
     .

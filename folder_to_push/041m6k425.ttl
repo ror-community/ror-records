@@ -4,28 +4,46 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/041m6k425> a org:Organization ;
     rdfs:label "OCP Group (Morocco)" ;
     schema:name "OCP Group (Morocco)" ;
     schema:foundingDate "1920"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Company" ; 
-    org:abbreviation "OCP" ;
-    org:alternativeName "Office Chérifien des Phosphates" ;
-    schema:url <http://www.ocpgroup.ma/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Office_Ch%C3%A9rifien_des_Phosphates> ;
+    org:classification "company" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-05-05"^^xsd:date ;
+    org:abbreviation "OCP"@None ; 
+    org:alternativeName "Office Chérifien des Phosphates"@None ; 
+    schema:mainEntityOfPage <http://www.ocpgroup.ma/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Office_Ch%C3%A9rifien_des_Phosphates> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100022668> ;
+    schema:sameAs <https://grid.ac/institutions/grid.460966.b> ;
+    schema:sameAs <http://isni.org/isni/0000000121553948> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/011s40y19> ;
+        rdfs:label "Fondation OCP" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-7.61138 33.58831)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-7.61138 33.58831)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Casablanca" ;
             schema:addressCountry "MA" ;
-            owl:sameAs <http://sws.geonames.org/2553604/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000121553948> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q501605> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "Casablanca-Settat" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Morocco" ;
+                schema:containedInPlace [
+                    schema:name "Africa" ;
+                    schema:identifier "AF"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2553604/> ;
+    ] ; 
     .

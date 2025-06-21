@@ -4,26 +4,57 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01djxaj77> a org:Organization ;
     rdfs:label "Wockhardt (India)" ;
     schema:name "Wockhardt (India)" ;
     schema:foundingDate "1960"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Company" ; 
-    schema:url <http://www.wockhardt.com/home.aspx> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Wockhardt> ;
+    org:classification "company" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-05-05"^^xsd:date ;
+    schema:mainEntityOfPage <http://www.wockhardt.com/home.aspx> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Wockhardt> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100015512> ;
+    schema:sameAs <https://grid.ac/institutions/grid.465098.6> ;
+    schema:sameAs <http://isni.org/isni/0000000404516004> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/037j2g266> ;
+        rdfs:label "Wockhardt (France)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/021vwsa16> ;
+        rdfs:label "Wockhardt (Switzerland)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/059j7sj66> ;
+        rdfs:label "Wockhardt (United States)" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(75.34226 19.87757)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(75.34226 19.87757)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Aurangabad" ;
             schema:addressCountry "IN" ;
-            owl:sameAs <http://sws.geonames.org/1278149/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000404516004> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q3572415> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "Maharashtra" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "India" ;
+                schema:containedInPlace [
+                    schema:name "Asia" ;
+                    schema:identifier "AS"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1278149/> ;
+    ] ; 
     .

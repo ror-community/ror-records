@@ -4,27 +4,69 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/04gq6mn61> a org:Organization ;
     rdfs:label "Ministry of Health" ;
     schema:name "Ministry of Health" ;
     schema:foundingDate "1935"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Government" ; 
-    org:abbreviation "MINSA" ;
-    schema:url <http://www.minsa.gob.pe/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Ministry_of_Health_(Peru)> ;
+    org:classification "government" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-05-05"^^xsd:date ;
+    org:abbreviation "MINSA"@None ; 
+    schema:mainEntityOfPage <http://www.minsa.gob.pe/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Ministry_of_Health_(Peru)> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100015274> ;
+    schema:sameAs <https://grid.ac/institutions/grid.419858.9> ;
+    schema:sameAs <http://isni.org/isni/0000000403713700> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01a2d7067> ;
+        rdfs:label "Instituto Nacional de Salud del Niño" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00hmkqz52> ;
+        rdfs:label "Instituto Nacional de Ciencias Neurológicas" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05t25a229> ;
+        rdfs:label "Instituto Nacional de Oftalmología "Dr. Francisco Contreras Campos"" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02c3p9381> ;
+        rdfs:label "Instituto Nacional de Rehabilitación de "Dra. Adriana Rebaza Flores" Amistad Perú-Japón" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00s582952> ;
+        rdfs:label "Instituto Nacional de Salud Mental "Honorio Delgado - Hideyo Noguchi"" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-77.02824 -12.04318)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-77.02824 -12.04318)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Lima" ;
             schema:addressCountry "PE" ;
-            owl:sameAs <http://sws.geonames.org/3936456/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000403713700> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q3065012> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "Lima Province" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Peru" ;
+                schema:containedInPlace [
+                    schema:name "South America" ;
+                    schema:identifier "SA"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3936456/> ;
+    ] ; 
     .

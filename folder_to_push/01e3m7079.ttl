@@ -1,0 +1,73 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/01e3m7079> a org:Organization ;
+    rdfs:label "University of Cincinnati" ;
+    schema:name "University of Cincinnati" ;
+    schema:foundingDate "1819"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-05-05"^^xsd:date ;
+    org:abbreviation "UC"@None ; 
+    schema:mainEntityOfPage <http://www.uc.edu/> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Cincinnati> ; 
+    schema:sameAs <https://api.crossref.org/funders/100008102> ;
+    schema:sameAs <https://grid.ac/institutions/grid.24827.3b> ;
+    schema:sameAs <http://isni.org/isni/0000000121799593> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/0561zqn56> ;
+        rdfs:label "University System of Ohio" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01hcyya48> ;
+        rdfs:label "Cincinnati Children's Hospital Medical Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/045r80n66> ;
+        rdfs:label "Cincinnati VA Medical Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01aeq1t78> ;
+        rdfs:label "Shriners Hospitals for Children - Cincinnati" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02p72h367> ;
+        rdfs:label "University of Cincinnati Medical Center" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-84.51439 39.12711)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Cincinnati" ;
+            schema:addressCountry "US" ;
+            schema:addressRegion "Ohio" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "North America" ;
+                    schema:identifier "NA"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/4508722/> ;
+    ] ; 
+    .

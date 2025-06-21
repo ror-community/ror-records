@@ -1,0 +1,42 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/03pfsnq21> a org:Organization ;
+    rdfs:label "Rzeszów University" ;
+    schema:name "Rzeszów University" ;
+    schema:foundingDate "2001"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-05-05"^^xsd:date ;
+    schema:mainEntityOfPage <http://www.ur.edu.pl/en> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Rzesz%C3%B3w_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100007817> ;
+    schema:sameAs <https://grid.ac/institutions/grid.13856.39> ;
+    schema:sameAs <http://isni.org/isni/0000000121543176> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(21.99901 50.04132)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Rzeszów" ;
+            schema:addressCountry "PL" ;
+            schema:addressRegion "Subcarpathia" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Poland" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/759734/> ;
+    ] ; 
+    .

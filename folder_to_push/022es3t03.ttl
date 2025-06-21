@@ -1,0 +1,44 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/022es3t03> a org:Organization ;
+    rdfs:label "Japan International Cooperation Agency" ;
+    schema:name "Japan International Cooperation Agency" ;
+    schema:foundingDate "1974"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "funder" ; 
+    org:classification "government" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-05-05"^^xsd:date ;
+    org:alternativeName "Dokuritsu Gyōseihōjin Kokusai Kyōryoku Kikō"@None ; 
+    org:abbreviation "JICA"@None ; 
+    schema:mainEntityOfPage <http://www.jica.go.jp/english/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Japan_International_Cooperation_Agency> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100004532> ;
+    schema:sameAs <https://grid.ac/institutions/grid.454175.6> ;
+    schema:sameAs <http://isni.org/isni/000000012178130X> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(139.69171 35.6895)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Tokyo" ;
+            schema:addressCountry "JP" ;
+            schema:addressRegion "Tokyo" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Japan" ;
+                schema:containedInPlace [
+                    schema:name "Asia" ;
+                    schema:identifier "AS"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1850147/> ;
+    ] ; 
+    .

@@ -4,27 +4,112 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/00m2s0z68> a org:Organization ;
     rdfs:label "Pennsylvania State System of Higher Education" ;
     schema:name "Pennsylvania State System of Higher Education" ;
     schema:foundingDate "1983"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "PASSHE" ;
-    schema:url <http://www.passhe.edu/Pages/default.aspx> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Pennsylvania_State_System_of_Higher_Education> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-05-05"^^xsd:date ;
+    org:abbreviation "PASSHE"@None ; 
+    schema:mainEntityOfPage <http://www.passhe.edu/Pages/default.aspx> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Pennsylvania_State_System_of_Higher_Education> ; 
+    schema:sameAs <https://api.crossref.org/funders/100004900> ;
+    schema:sameAs <https://grid.ac/institutions/grid.437102.3> ;
+    schema:sameAs <http://isni.org/isni/0000000091532061> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/007dga614> ;
+        rdfs:label "Bloomsburg University" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01spssf70> ;
+        rdfs:label "California University of Pennsylvania" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02nckwn80> ;
+        rdfs:label "Cheyney University of Pennsylvania" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05atz9219> ;
+        rdfs:label "East Stroudsburg University" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0511cmw96> ;
+        rdfs:label "Indiana University of Pennsylvania" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/056veft20> ;
+        rdfs:label "Kutztown University" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/046aym564> ;
+        rdfs:label "Lock Haven University" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01emtgd92> ;
+        rdfs:label "Mansfield University" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02x2aj034> ;
+        rdfs:label "Millersville University" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/048arep70> ;
+        rdfs:label "Shippensburg University" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0369st156> ;
+        rdfs:label "Slippery Rock University" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0053n5071> ;
+        rdfs:label "West Chester University" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-76.88442 40.2737)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-76.88442 40.2737)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Harrisburg" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/5192726/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000091532061> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q3304232> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "Pennsylvania" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "North America" ;
+                    schema:identifier "NA"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/5192726/> ;
+    ] ; 
     .

@@ -4,27 +4,52 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02r109517> a org:Organization ;
     rdfs:label "Weill Cornell Medicine" ;
     schema:name "Weill Cornell Medicine" ;
     schema:foundingDate "1989"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "WCM" ;
-    schema:url <https://weill.cornell.edu> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Weill_Cornell_Medicine> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-05-05"^^xsd:date ;
+    org:abbreviation "WCM"@None ; 
+    schema:mainEntityOfPage <https://weill.cornell.edu> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Weill_Cornell_Medicine> ; 
+    schema:sameAs <https://api.crossref.org/funders/100007273> ;
+    schema:sameAs <https://grid.ac/institutions/grid.471410.7> ;
+    schema:sameAs <http://isni.org/isni/0000000121797643> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/05bnh6r87> ;
+        rdfs:label "Cornell University" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03zjqec80> ;
+        rdfs:label "Hospital for Special Surgery" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-74.00597 40.71427)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-74.00597 40.71427)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "New York" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/5128581/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000121797643> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q3567094> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "New York" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "North America" ;
+                    schema:identifier "NA"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/5128581/> ;
+    ] ; 
     .

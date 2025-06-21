@@ -1,0 +1,47 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/00fd30e02> a org:Organization ;
+    rdfs:label "Indo Soviet Friendship College of Pharmacy" ;
+    schema:name "Indo Soviet Friendship College of Pharmacy" ;
+    schema:foundingDate "1984"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-05-05"^^xsd:date ;
+    org:abbreviation "ISFCP"@None ; 
+    schema:mainEntityOfPage <http://www.isfcp.org/> ;
+    schema:sameAs <https://api.crossref.org/funders/100020921> ;
+    schema:sameAs <https://grid.ac/institutions/grid.418006.b> ;
+    schema:sameAs <http://isni.org/isni/0000000418004675> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/025kz2973> ;
+        rdfs:label "Punjab Technical University" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(75.16878 30.81383)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Moga" ;
+            schema:addressCountry "IN" ;
+            schema:addressRegion "Punjab" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "India" ;
+                schema:containedInPlace [
+                    schema:name "Asia" ;
+                    schema:identifier "AS"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1262951/> ;
+    ] ; 
+    .
