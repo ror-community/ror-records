@@ -15,7 +15,7 @@
     org:classification "education" ; 
     org:classification "funder" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-06-20"^^xsd:date ;
+    dct:modified "2025-03-26"^^xsd:date ;
     schema:mainEntityOfPage <http://www.bg.ac.rs/en/> ;
     owl:sameAs <http://en.wikipedia.org/wiki/University_of_Belgrade> ; 
     schema:sameAs <https://api.crossref.org/funders/100009574> ;
@@ -66,12 +66,6 @@
     org:hasLink [
         a org:Membership ;
         org:role "child" ;
-        org:member <https://ror.org/00vgscq55> ;
-        rdfs:label "University of Belgrade – Faculty of Pharmacy" ;
-    ] ; 
-    org:hasLink [
-        a org:Membership ;
-        org:role "child" ;
         org:member <https://ror.org/05xn4js35> ;
         rdfs:label "University of Belgrade - Faculty of Geography" ;
     ] ; 
@@ -80,18 +74,6 @@
         org:role "child" ;
         org:member <https://ror.org/0391a8v61> ;
         rdfs:label "University of Belgrade - Faculty of Civil Engineering" ;
-    ] ; 
-    org:hasLink [
-        a org:Membership ;
-        org:role "related" ;
-        org:member <https://ror.org/05422jd13> ;
-        rdfs:label "University Children's Hospital, Belgrade" ;
-    ] ; 
-    org:hasLink [
-        a org:Membership ;
-        org:role "related" ;
-        org:member <https://ror.org/01b8wwr26> ;
-        rdfs:label "University Hospital Center Dr Dragiša Mišović" ;
     ] ; 
     org:hasLink [
         a org:Membership ;
@@ -291,19 +273,31 @@
         org:member <https://ror.org/054eytx62> ;
         rdfs:label "University of Belgrade - Faculty of Mechanical Engineering" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05422jd13> ;
+        rdfs:label "University Children's Hospital, Belgrade" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01b8wwr26> ;
+        rdfs:label "University Hospital Center Dr Dragiša Mišović" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(20.46513 44.80401)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Belgrade" ;
             schema:addressCountry "RS" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Central Serbia" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "Serbia" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

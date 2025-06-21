@@ -1,0 +1,85 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/02zqm6r10> a org:Organization ;
+    rdfs:label "Toyota Motor Corporation (Japan)" ;
+    schema:name "Toyota Motor Corporation (Japan)" ;
+    schema:foundingDate "1937"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "company" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-03-26"^^xsd:date ;
+    org:alternativeName "Toyota Jidōsha"@None ; 
+    schema:mainEntityOfPage <http://www.toyota-global.com/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Toyota> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100004405> ;
+    schema:sameAs <https://grid.ac/institutions/grid.462975.b> ;
+    schema:sameAs <http://isni.org/isni/0000000091751993> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03b5tag12> ;
+        rdfs:label "The Toyota Foundation" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/023g86t37> ;
+        rdfs:label "Toyota Motor Corporation (Belgium)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05rt6q248> ;
+        rdfs:label "Toyota Motor Corporation (Canada)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03dwh7z09> ;
+        rdfs:label "Toyota Motor Corporation (Germany)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05p0pbv75> ;
+        rdfs:label "Toyota Motor Corporation (Switzerland)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0076knn86> ;
+        rdfs:label "Toyota Motor North America (United States)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/0307bxz06> ;
+        rdfs:label "Toyota Group (Japan)" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(137.15 35.08333)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Toyota" ;
+            schema:addressCountry "JP" ;
+            schema:addressRegion "Aichi" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Japan" ;
+                schema:containedInPlace [
+                    schema:name "Asia" ;
+                    schema:identifier "AS"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1849814/> ;
+    ] ; 
+    .

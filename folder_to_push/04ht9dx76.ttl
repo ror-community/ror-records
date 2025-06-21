@@ -1,0 +1,40 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/04ht9dx76> a org:Organization ;
+    rdfs:label "Vorarlberger Landesbibliothek" ;
+    schema:name "Vorarlberger Landesbibliothek" ;
+    schema:foundingDate "1904"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "archive" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-03-26"^^xsd:date ;
+    schema:url <http://vlb.vorarlberg.at> ; 
+    schema:mainEntityOfPage <https://vlb.vorarlberg.at> ;
+    schema:sameAs <https://grid.ac/institutions/grid.458346.8> ;
+    schema:sameAs <http://isni.org/isni/0000000119714511> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(9.7471 47.50311)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Bregenz" ;
+            schema:addressCountry "AT" ;
+            schema:addressRegion "Vorarlberg" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Austria" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2781503/> ;
+    ] ; 
+    .

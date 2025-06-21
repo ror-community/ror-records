@@ -1,0 +1,39 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/007dnwq44> a org:Organization ;
+    rdfs:label "Armavir Institute of Economics and Finance" ;
+    schema:name "Armavir Institute of Economics and Finance" ;
+    schema:foundingDate "1989"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-03-26"^^xsd:date ;
+    org:abbreviation "AFEI"@None ; 
+    schema:mainEntityOfPage <http://skibiit.ru/eng/info/main.html> ;
+    schema:sameAs <https://grid.ac/institutions/grid.445729.9> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(41.11472 44.99849)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Armavir" ;
+            schema:addressCountry "RU" ;
+            schema:addressRegion "Krasnodar Krai" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Russia" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/580922/> ;
+    ] ; 
+    .

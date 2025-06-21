@@ -15,7 +15,7 @@
     org:classification "education" ; 
     org:classification "funder" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-12-10"^^xsd:date ;
+    dct:modified "2025-03-26"^^xsd:date ;
     org:alternativeName "UCT Prague"@en ; 
     org:alternativeName "University of Chemistry and Technology"@en ; 
     org:alternativeName "Vysoká škola chemicko-technologická"@cs ; 
@@ -27,19 +27,43 @@
     schema:sameAs <https://api.crossref.org/funders/501100016367> ;
     schema:sameAs <https://grid.ac/institutions/grid.448072.d> ;
     schema:sameAs <http://isni.org/isni/0000000406356059> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05me1q676> ;
+        rdfs:label "Infrastructure for Promoting Metrology in Food and Nutrition in the Czech Republic" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0286qer95> ;
+        rdfs:label "Czech National Infrastructure for Biological Data" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04xsmz457> ;
+        rdfs:label "Czech National Node to the European Infrastructure for Translational Medicine" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/023jyyg30> ;
+        rdfs:label "National Infrastructure for Chemical Biology" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(14.42076 50.08804)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Prague" ;
             schema:addressCountry "CZ" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Prague" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "Czechia" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

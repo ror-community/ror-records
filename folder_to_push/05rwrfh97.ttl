@@ -14,7 +14,7 @@
     org:status "active" ;
     org:classification "facility" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-06-20"^^xsd:date ;
+    dct:modified "2025-03-26"^^xsd:date ;
     schema:mainEntityOfPage <https://www-fourier.ujf-grenoble.fr/> ;
     schema:sameAs <https://grid.ac/institutions/grid.466764.1> ;
     schema:sameAs <http://isni.org/isni/0000000122896889> ;
@@ -30,19 +30,25 @@
         org:member <https://ror.org/02rx3b187> ;
         rdfs:label "Université Grenoble Alpes" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/053brmk41> ;
+        rdfs:label "Association des Annales de l'institut Fourier" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(5.76281 45.1787)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Saint-Martin-d'Hères" ;
             schema:addressCountry "FR" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Auvergne-Rhône-Alpes" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "France" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

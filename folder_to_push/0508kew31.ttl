@@ -4,24 +4,50 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/0508kew31> a org:Organization ;
     rdfs:label "Department of Water and Environmental Regulation" ;
     schema:name "Department of Water and Environmental Regulation" ;
     schema:foundingDate "2013"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Government" ; 
-    org:alternativeName "Department of Environment Regulation" ;
-    schema:url <https://www.der.wa.gov.au> ; 
+    org:classification "funder" ; 
+    org:classification "government" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-03-26"^^xsd:date ;
+    org:alternativeName "Department of Environment Regulation"@en ; 
+    schema:mainEntityOfPage <https://www.wa.gov.au/organisation/department-of-water-and-environmental-regulation> ;
+    schema:sameAs <https://api.crossref.org/funders/501100002288> ;
+    schema:sameAs <https://grid.ac/institutions/grid.468100.b> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/00wqdbc63> ;
+        rdfs:label "Government of Western Australia" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "predecessor" ;
+        org:member <https://ror.org/017wrhq72> ;
+        rdfs:label "Department of Water" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(115.8614 -31.95224)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(115.8614 -31.95224)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Perth" ;
             schema:addressCountry "AU" ;
-            owl:sameAs <http://sws.geonames.org/2063523/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "Western Australia" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Australia" ;
+                schema:containedInPlace [
+                    schema:name "Oceania" ;
+                    schema:identifier "OC"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2063523/> ;
+    ] ; 
     .

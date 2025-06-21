@@ -4,27 +4,60 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/04dp46240> a org:Organization ;
-    rdfs:label "Universidad Europea de Madrid" ;
-    schema:name "Universidad Europea de Madrid" ;
+    rdfs:label "" ;
+    schema:name "" ;
     schema:foundingDate "1995"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "UE" ;
-    schema:url <https://universidadeuropea.com> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/European_University_of_Madrid> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-03-26"^^xsd:date ;
+    org:abbreviation "UE"@None ; 
+    org:alternativeName "Universidad Europea de Madrid"@es ; 
+    schema:url <http://universidadeuropea.com> ; 
+    schema:mainEntityOfPage <https://universidadeuropea.com> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/European_University_of_Madrid> ; 
+    schema:sameAs <https://api.crossref.org/funders/100019776> ;
+    schema:sameAs <https://grid.ac/institutions/grid.119375.8> ;
+    schema:sameAs <http://isni.org/isni/0000000121738416> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01bynmm24> ;
+        rdfs:label "Hospital Universitario Santa Cristina" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01ehe5s81> ;
+        rdfs:label "Hospital Universitario de Getafe" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05m35m789> ;
+        rdfs:label "Universidad Europea de Valencia" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-3.70256 40.4165)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-3.70256 40.4165)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Madrid" ;
             schema:addressCountry "ES" ;
-            owl:sameAs <http://sws.geonames.org/3117735/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000121738416> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q2290716> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "Madrid" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Spain" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3117735/> ;
+    ] ; 
     .

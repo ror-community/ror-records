@@ -4,26 +4,73 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/05tzrdd39> a org:Organization ;
     rdfs:label "Leo Pharma (Denmark)" ;
     schema:name "Leo Pharma (Denmark)" ;
     schema:foundingDate "1908"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Company" ; 
-    schema:url <https://www.leo-pharma.com/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Leo_Pharma> ;
+    org:classification "company" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-03-26"^^xsd:date ;
+    schema:mainEntityOfPage <https://www.leo-pharma.com/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Leo_Pharma> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.420009.f> ;
+    schema:sameAs <http://isni.org/isni/0000000110107950> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00vvs5b96> ;
+        rdfs:label "Leo Pharma (Australia)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02wvemr05> ;
+        rdfs:label "Leo Pharma (France)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04h9drp94> ;
+        rdfs:label "Leo Pharma (Germany)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04c6jsb22> ;
+        rdfs:label "Leo Pharma (Ireland)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/057w77e54> ;
+        rdfs:label "Leo Pharma (United States)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02rgsr590> ;
+        rdfs:label "LEO Foundation" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(12.36328 55.73165)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(12.36328 55.73165)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Ballerup Municipality" ;
             schema:addressCountry "DK" ;
-            owl:sameAs <http://sws.geonames.org/2624341/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000110107950> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1798020> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "Capital Region" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Denmark" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2624341/> ;
+    ] ; 
     .

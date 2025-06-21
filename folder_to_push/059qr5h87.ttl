@@ -14,7 +14,7 @@
     org:status "active" ;
     org:classification "education" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-06-20"^^xsd:date ;
+    dct:modified "2025-03-26"^^xsd:date ;
     org:abbreviation "ENSSIB"@fr ; 
     schema:url <http://enssib.fr> ; 
     schema:mainEntityOfPage <https://www.enssib.fr> ;
@@ -33,19 +33,25 @@
         org:member <https://ror.org/03jms8710> ;
         rdfs:label "Centre Gabriel Naudé" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00prvqp73> ;
+        rdfs:label "Institut Rhônalpin des Systèmes Complexes" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(4.8795 45.76601)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Villeurbanne" ;
             schema:addressCountry "FR" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Auvergne-Rhône-Alpes" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "France" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

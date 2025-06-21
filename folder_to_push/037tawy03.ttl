@@ -4,22 +4,46 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/037tawy03> a org:Organization ;
     rdfs:label "BIST Dolors Aleu Graduate Centre" ;
     schema:name "BIST Dolors Aleu Graduate Centre" ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "BIST DAGC" ;
-    schema:url <https://mmres.bist.eu/dolors-aleu-gc/> ; 
+    org:classification "education" ; 
+    dct:created "2023-03-30"^^xsd:date ;
+    dct:modified "2025-03-26"^^xsd:date ;
+    org:abbreviation "BIST DAGC"@None ; 
+    schema:mainEntityOfPage <https://mmres.bist.eu/dolors-aleu-gc/> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/04n0g0b29> ;
+        rdfs:label "Universitat Pompeu Fabra" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/03kpps236> ;
+        rdfs:label "Barcelona Institute for Science and Technology" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(2.15899 41.38879)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(2.15899 41.38879)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Barcelona" ;
             schema:addressCountry "ES" ;
-            owl:sameAs <http://sws.geonames.org/3128760/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
+            schema:addressRegion "Catalonia" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Spain" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3128760/> ;
+    ] ; 
     .

@@ -1,0 +1,52 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/01gccqc59> a org:Organization ;
+    rdfs:label "Research Institute for Labour and Social Affairs" ;
+    schema:name "Research Institute for Labour and Social Affairs" ;
+    schema:foundingDate "1919"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "facility" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-03-26"^^xsd:date ;
+    org:abbreviation "RILSA"@None ; 
+    org:alternativeName "Research Institute for Labour and Social Affairs, v. v. i."@en ; 
+    org:abbreviation "VUPSV"@None ; 
+    org:alternativeName "Výzkumný institut práce a sociálních věcí"@cs ; 
+    org:alternativeName "Výzkumný institut práce a sociálních věcí, v. v. i."@cs ; 
+    org:alternativeName "Výzkumný ústav práce a sociálních věcí"@cs ; 
+    schema:url <http://rilsa.cz> ; 
+    schema:mainEntityOfPage <https://www.rilsa.cz> ;
+    schema:sameAs <https://grid.ac/institutions/grid.448157.b> ;
+    schema:sameAs <http://isni.org/isni/0000000121542421> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "predecessor" ;
+        org:member <https://ror.org/03zbxqj79> ;
+        rdfs:label "Occupational Safety Research Institute" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(14.42076 50.08804)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Prague" ;
+            schema:addressCountry "CZ" ;
+            schema:addressRegion "Prague" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Czechia" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3067696/> ;
+    ] ; 
+    .

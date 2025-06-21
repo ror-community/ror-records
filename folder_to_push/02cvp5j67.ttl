@@ -4,27 +4,41 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02cvp5j67> a org:Organization ;
-    rdfs:label "Danish Board of Technology" ;
-    schema:name "Danish Board of Technology" ;
+    rdfs:label "" ;
+    schema:name "" ;
     schema:foundingDate "1999"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Other" ; 
-    org:alternativeName "Teknologirådet Danmark" ;
-    schema:url <https://tekno.dk> ; 
-    owl:sameAs <https://da.wikipedia.org/wiki/Teknologir%C3%A5det> ;
+    org:classification "government" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-03-26"^^xsd:date ;
+    org:alternativeName "Danish Board of Technology"@en ; 
+    org:alternativeName "Teknologirådet"@da ; 
+    org:alternativeName "Teknologirådet Danmark"@da ; 
+    schema:url <http://democracyx.dk> ; 
+    schema:mainEntityOfPage <https://www.democracyx.dk> ;
+    owl:sameAs <https://da.wikipedia.org/wiki/Teknologir%C3%A5det> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.424451.2> ;
+    schema:sameAs <http://isni.org/isni/0000000092551424> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(12.56553 55.67594)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(12.56553 55.67594)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Copenhagen" ;
             schema:addressCountry "DK" ;
-            owl:sameAs <http://sws.geonames.org/2618425/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000092551424> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q7728870> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "Capital Region" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Denmark" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2618425/> ;
+    ] ; 
     .

@@ -4,22 +4,42 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/055gja518> a org:Organization ;
     rdfs:label "Center for Economic Research on Governance, Inequality and Conflict" ;
     schema:name "Center for Economic Research on Governance, Inequality and Conflict" ;
     schema:foundingDate "2023"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    schema:url <http://www.ens-lyon.fr/en/research/research-units/laboratories/center-economic-research-governance-inequality-and-conflict> ; 
+    org:classification "facility" ; 
+    org:classification "funder" ; 
+    dct:created "2023-07-06"^^xsd:date ;
+    dct:modified "2025-03-26"^^xsd:date ;
+    org:abbreviation "CERGIC"@fr ; 
+    schema:mainEntityOfPage <https://www.cergic-lyon.fr> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/04zmssz18> ;
+        rdfs:label "École Normale Supérieure de Lyon" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(4.84671 45.74846)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(4.84671 45.74846)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Lyon" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2996944/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
+            schema:addressRegion "Auvergne-Rhône-Alpes" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2996944/> ;
+    ] ; 
     .

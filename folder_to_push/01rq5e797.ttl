@@ -4,23 +4,55 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01rq5e797> a org:Organization ;
     rdfs:label "ERN EURACAN" ;
     schema:name "ERN EURACAN" ;
     schema:foundingDate "2017"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Healthcare" ; 
-    org:alternativeName "European Reference Network on rare adult solid cancers" ;
-    schema:url <https://euracan.eu> ; 
+    org:classification "funder" ; 
+    org:classification "healthcare" ; 
+    dct:created "2022-06-16"^^xsd:date ;
+    dct:modified "2025-03-26"^^xsd:date ;
+    org:alternativeName "European Reference Network on rare adult solid cancers"@en ; 
+    schema:mainEntityOfPage <https://euracan.eu> ;
+    schema:sameAs <https://api.crossref.org/funders/501100020147> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/00r7apq26> ;
+        rdfs:label "ERN Board of Member States" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01cmnjq37> ;
+        rdfs:label "Centre Léon Bérard" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00f29ja18> ;
+        rdfs:label "European Rare Disease Research Coordination and Support Action" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(4.84671 45.74846)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(4.84671 45.74846)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Lyon" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2996944/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
+            schema:addressRegion "Auvergne-Rhône-Alpes" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2996944/> ;
+    ] ; 
     .

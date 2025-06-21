@@ -1,0 +1,46 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/0092mfq48> a org:Organization ;
+    rdfs:label "Institute of Textile Chemistry and Chemical Fibers" ;
+    schema:name "Institute of Textile Chemistry and Chemical Fibers" ;
+    schema:foundingDate "1921"^^xsd:gYear ;
+    org:status "inactive" ;
+    org:classification "facility" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-03-26"^^xsd:date ;
+    org:abbreviation "ITCF"@None ; 
+    schema:mainEntityOfPage <http://www.itcf-denkendorf.de/en/> ;
+    schema:sameAs <https://grid.ac/institutions/grid.461679.b> ;
+    schema:sameAs <http://isni.org/isni/0000000092606253> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "successor" ;
+        org:member <https://ror.org/03tgwp072> ;
+        rdfs:label "Deutschen Institute für Textil und Faserforschung" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(9.31675 48.69555)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Denkendorf" ;
+            schema:addressCountry "DE" ;
+            schema:addressRegion "Baden-Wurttemberg" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Germany" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2938253/> ;
+    ] ; 
+    .

@@ -14,24 +14,30 @@
     org:status "active" ;
     org:classification "other" ; 
     dct:created "2024-07-08"^^xsd:date ;
-    dct:modified "2024-07-11"^^xsd:date ;
+    dct:modified "2025-03-26"^^xsd:date ;
     org:alternativeName "EU OPENSCREEN"@None ; 
     org:abbreviation "EU-OS"@None ; 
     schema:url <http://eu-openscreen.eu> ; 
     schema:mainEntityOfPage <https://www.eu-openscreen.eu> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/023jyyg30> ;
+        rdfs:label "National Infrastructure for Chemical Biology" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(13.41053 52.52437)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Berlin" ;
             schema:addressCountry "DE" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Berlin" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "Germany" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

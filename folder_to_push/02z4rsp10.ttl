@@ -4,24 +4,90 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02z4rsp10> a org:Organization ;
     rdfs:label "Airbus (Netherlands)" ;
     schema:name "Airbus (Netherlands)" ;
     schema:foundingDate "1970"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Company" ; 
-    schema:url <https://www.airbus.com/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Airbus> ;
+    org:classification "company" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-03-26"^^xsd:date ;
+    schema:mainEntityOfPage <https://www.airbus.com/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Airbus> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.433919.5> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/023qdcg29> ;
+        rdfs:label "Airbus (France)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04a3akw68> ;
+        rdfs:label "Airbus (Germany)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05tw0wf88> ;
+        rdfs:label "Airbus (India)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00v8s1x79> ;
+        rdfs:label "Airbus (Italy)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0509tgg56> ;
+        rdfs:label "Airbus (Spain)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02hbhxa68> ;
+        rdfs:label "Airbus (United Kingdom)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03hbksy74> ;
+        rdfs:label "Airbus (United States)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/052xgjt73> ;
+        rdfs:label "Airbus Defence and Space GmbH (Germany)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01z2efh66> ;
+        rdfs:label "Airbus Group Singapore Pte Ltd (Singapore)" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(4.49306 52.15833)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(4.49306 52.15833)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Leiden" ;
             schema:addressCountry "NL" ;
-            owl:sameAs <http://sws.geonames.org/2751773/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "South Holland" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "The Netherlands" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2751773/> ;
+    ] ; 
     .

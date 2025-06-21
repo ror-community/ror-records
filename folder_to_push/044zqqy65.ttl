@@ -15,7 +15,7 @@
     org:classification "funder" ; 
     org:classification "government" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-10-14"^^xsd:date ;
+    dct:modified "2025-03-26"^^xsd:date ;
     org:abbreviation "NPS"@None ; 
     schema:mainEntityOfPage <http://www.nps.gov/> ;
     owl:sameAs <https://en.wikipedia.org/wiki/National_Park_Service> ; 
@@ -42,6 +42,12 @@
     ] ; 
     org:hasLink [
         a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04cbgjc24> ;
+        rdfs:label "Petrified Forest National Park" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
         org:role "parent" ;
         org:member <https://ror.org/03v0pmy70> ;
         rdfs:label "United States Department of the Interior" ;
@@ -49,8 +55,8 @@
     org:hasLink [
         a org:Membership ;
         org:role "child" ;
-        org:member <https://ror.org/04cbgjc24> ;
-        rdfs:label "Petrified Forest National Park" ;
+        org:member <https://ror.org/0411d8q28> ;
+        rdfs:label "Waco Mammoth National Monument" ;
     ] ; 
     schema:location [
         a schema:Place ;
@@ -58,13 +64,13 @@
         schema:address [
             schema:addressLocality "Washington" ;
             schema:addressCountry "US" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "District of Columbia" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "United States" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "North America" ;
+                    schema:identifier "NA"
                 ]
             ]
         ] ;

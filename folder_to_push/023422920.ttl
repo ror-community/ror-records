@@ -1,0 +1,39 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/023422920> a org:Organization ;
+    rdfs:label "Vallen Systeme (Germany)" ;
+    schema:name "Vallen Systeme (Germany)" ;
+    schema:foundingDate "1980"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "company" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-03-26"^^xsd:date ;
+    schema:url <http://vallen.de> ; 
+    schema:mainEntityOfPage <https://www.vallen.de> ;
+    schema:sameAs <https://grid.ac/institutions/grid.426598.4> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(11.42166 47.91289)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Wolfratshausen" ;
+            schema:addressCountry "DE" ;
+            schema:addressRegion "Bavaria" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Germany" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2806768/> ;
+    ] ; 
+    .

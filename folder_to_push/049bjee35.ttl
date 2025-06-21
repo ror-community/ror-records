@@ -14,7 +14,7 @@
     org:status "active" ;
     org:classification "healthcare" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-10-31"^^xsd:date ;
+    dct:modified "2025-03-26"^^xsd:date ;
     org:abbreviation "FNUSA"@None ; 
     org:alternativeName "St. Anne's University Hospital"@en ; 
     schema:url <http://fnusa.cz> ; 
@@ -33,19 +33,37 @@
         org:member <https://ror.org/02j46qs45> ;
         rdfs:label "Masaryk University" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0286qer95> ;
+        rdfs:label "Czech National Infrastructure for Biological Data" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04xsmz457> ;
+        rdfs:label "Czech National Node to the European Infrastructure for Translational Medicine" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0001a1c49> ;
+        rdfs:label "Czech National Node to the European Clinical Research Infrastructure Network" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(16.60796 49.19522)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Brno" ;
             schema:addressCountry "CZ" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "South Moravian" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "Czechia" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

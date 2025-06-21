@@ -1,0 +1,39 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/04yhfw911> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2025-03-26"^^xsd:date ;
+    dct:modified "2025-03-26"^^xsd:date ;
+    org:abbreviation "SABU"@en ; 
+    org:alternativeName "جامعة صبراتة"@ar ; 
+    schema:url <http://sabu.edu.ly> ; 
+    schema:mainEntityOfPage <https://sabu.edu.ly> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(12.48845 32.79335)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Şabrātah" ;
+            schema:addressCountry "LY" ;
+            schema:addressRegion "Az Zāwiyah" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Libya" ;
+                schema:containedInPlace [
+                    schema:name "Africa" ;
+                    schema:identifier "AF"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2212771/> ;
+    ] ; 
+    .

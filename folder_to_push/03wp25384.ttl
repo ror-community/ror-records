@@ -14,7 +14,7 @@
     org:status "active" ;
     org:classification "other" ; 
     dct:created "2023-01-26"^^xsd:date ;
-    dct:modified "2024-10-31"^^xsd:date ;
+    dct:modified "2025-03-26"^^xsd:date ;
     org:abbreviation "CLARIN"@None ; 
     org:alternativeName "CLARIN ERIC"@en ; 
     schema:mainEntityOfPage <https://www.clarin.eu> ;
@@ -25,19 +25,25 @@
         org:member <https://ror.org/02z92c890> ;
         rdfs:label "Common Language Resources and Technology Infrastructure, Slovenia" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00dd4fz34> ;
+        rdfs:label "Digital Research Infrastructure for Language Technologies, Arts and Humanities" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(5.12222 52.09083)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Utrecht" ;
             schema:addressCountry "NL" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Utrecht" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "The Netherlands" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

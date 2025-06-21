@@ -1,0 +1,46 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/044sx9203> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "1802"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "government" ; 
+    dct:created "2025-03-26"^^xsd:date ;
+    dct:modified "2025-03-26"^^xsd:date ;
+    schema:url <http://sherbrooke.ca> ; 
+    schema:mainEntityOfPage <https://www.sherbrooke.ca> ;
+    owl:sameAs <https://fr.wikipedia.org/wiki/Sherbrooke> ; 
+    schema:sameAs <http://isni.org/isni/0000000464279522> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/03d5zgz97> ;
+        rdfs:label "Ministry of Municipal Affairs, Regions and Land Occupancy" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-71.89908 45.40008)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Sherbrooke" ;
+            schema:addressCountry "CA" ;
+            schema:addressRegion "Quebec" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Canada" ;
+                schema:containedInPlace [
+                    schema:name "North America" ;
+                    schema:identifier "NA"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/6146143/> ;
+    ] ; 
+    .

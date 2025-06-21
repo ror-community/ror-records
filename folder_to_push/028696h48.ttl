@@ -8,14 +8,16 @@
 @prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/028696h48> a org:Organization ;
-    rdfs:label "Austrian BioImaging/CMI" ;
-    schema:name "Austrian BioImaging/CMI" ;
+    rdfs:label "" ;
+    schema:name "" ;
     org:status "active" ;
-    org:classification "facility" ; 
+    org:classification "nonprofit" ; 
     dct:created "2022-09-29"^^xsd:date ;
-    dct:modified "2024-05-02"^^xsd:date ;
-    org:alternativeName "Austrian BioImaging Correlated Multimodal Imaging (CMI)"@None ; 
-    schema:mainEntityOfPage <https://www.bioimaging-austria.at> ;
+    dct:modified "2025-03-26"^^xsd:date ;
+    org:alternativeName "Austrian BioImaging Correlated Multimodal Imaging (CMI)"@en ; 
+    org:alternativeName "Austrian BioImaging/CMI"@en ; 
+    schema:url <http://austrian-bioimaing.at> ; 
+    schema:mainEntityOfPage <https://austrian-bioimaing.at> ;
     org:hasLink [
         a org:Membership ;
         org:role "parent" ;
@@ -34,13 +36,13 @@
         schema:address [
             schema:addressLocality "Vienna" ;
             schema:addressCountry "AT" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Vienna" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "Austria" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

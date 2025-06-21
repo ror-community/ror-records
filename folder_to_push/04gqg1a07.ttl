@@ -15,7 +15,7 @@
     org:classification "education" ; 
     org:classification "funder" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-07-29"^^xsd:date ;
+    dct:modified "2025-03-26"^^xsd:date ;
     org:alternativeName "Chambéry University"@en ; 
     org:alternativeName "University of Savoy Mont Blanc"@en ; 
     org:alternativeName "Université de Chambéry"@fr ; 
@@ -114,19 +114,25 @@
         org:member <https://ror.org/0459fdx51> ;
         rdfs:label "Fédération de Recherche sur l'Energie Solaire" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00prvqp73> ;
+        rdfs:label "Institut Rhônalpin des Systèmes Complexes" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(5.92079 45.56628)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Chambéry" ;
             schema:addressCountry "FR" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Auvergne-Rhône-Alpes" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "France" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

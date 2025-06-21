@@ -4,28 +4,43 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/001xjdh50> a org:Organization ;
     rdfs:label "Kansai Medical University" ;
     schema:name "Kansai Medical University" ;
     schema:foundingDate "1928"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "KMU" ;
-    org:alternativeName "Kansai Ika Daigaku" ;
-    schema:url <http://www.kmu.ac.jp/en/index.html> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Kansai_Medical_University> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-03-26"^^xsd:date ;
+    org:abbreviation "KMU"@None ; 
+    org:alternativeName "Kansai Ika Daigaku"@None ; 
+    org:alternativeName "かんさいいかだいがく"@ja ; 
+    schema:url <http://kmu.ac.jp> ; 
+    schema:mainEntityOfPage <https://www.kmu.ac.jp> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Kansai_Medical_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100012412> ;
+    schema:sameAs <https://grid.ac/institutions/grid.410783.9> ;
+    schema:sameAs <http://isni.org/isni/0000000121725041> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(135.50218 34.69374)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(135.50107 34.69379)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Osaka" ;
             schema:addressCountry "JP" ;
-            owl:sameAs <http://sws.geonames.org/1853909/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000121725041> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q6364465> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "Osaka" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Japan" ;
+                schema:containedInPlace [
+                    schema:name "Asia" ;
+                    schema:identifier "AS"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1853909/> ;
+    ] ; 
     .

@@ -1,0 +1,40 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/02m69r871> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    org:status "active" ;
+    org:classification "archive" ; 
+    dct:created "2025-03-26"^^xsd:date ;
+    dct:modified "2025-03-26"^^xsd:date ;
+    org:abbreviation "MMGM"@en ; 
+    org:alternativeName "Maine Mineral and Gem Museum"@en ; 
+    schema:url <http://mainemineralmuseum.org> ; 
+    schema:mainEntityOfPage <https://mainemineralmuseum.org> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Maine_Mineral_and_Gem_Museum> ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-70.79062 44.40423)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Bethel" ;
+            schema:addressCountry "US" ;
+            schema:addressRegion "Maine" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "North America" ;
+                    schema:identifier "NA"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/4958084/> ;
+    ] ; 
+    .

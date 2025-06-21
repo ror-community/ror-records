@@ -11,10 +11,10 @@
     rdfs:label "" ;
     schema:name "" ;
     schema:foundingDate "1999"^^xsd:gYear ;
-    org:status "active" ;
+    org:status "inactive" ;
     org:classification "education" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-05-30"^^xsd:date ;
+    dct:modified "2025-03-26"^^xsd:date ;
     org:alternativeName "BIVŠ"@cs ; 
     org:alternativeName "Banking Institute"@en ; 
     org:alternativeName "College of Banking"@en ; 
@@ -23,19 +23,25 @@
     owl:sameAs <https://en.wikipedia.org/wiki/Banking_Institute_/_College_of_Banking> ; 
     schema:sameAs <https://grid.ac/institutions/grid.445516.7> ;
     schema:sameAs <http://isni.org/isni/0000000105915793> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "successor" ;
+        org:member <https://ror.org/02z8bdw71> ;
+        rdfs:label "College of Regional Development and Banking Institute - AMBIS" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(14.42076 50.08804)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Prague" ;
             schema:addressCountry "CZ" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Prague" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "Czechia" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

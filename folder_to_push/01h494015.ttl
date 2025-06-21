@@ -14,10 +14,10 @@
     org:status "active" ;
     org:classification "facility" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-10-31"^^xsd:date ;
-    org:alternativeName "Institute of Plasma Physics of the Czech Academy of Sciences"@en ; 
-    org:alternativeName "Institute of Plasma Physics CAS"@en ; 
+    dct:modified "2025-03-26"^^xsd:date ;
     org:alternativeName "Czech Acad Sci, Inst Plasma Phys"@en ; 
+    org:alternativeName "Institute of Plasma Physics CAS"@en ; 
+    org:alternativeName "Institute of Plasma Physics of the Czech Academy of Sciences"@en ; 
     org:abbreviation "ÚFP AV ČR"@None ; 
     schema:mainEntityOfPage <http://www.ipp.cas.cz/> ;
     schema:sameAs <https://grid.ac/institutions/grid.425087.c> ;
@@ -28,19 +28,31 @@
         org:member <https://ror.org/053avzc18> ;
         rdfs:label "Czech Academy of Sciences" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05cn0b378> ;
+        rdfs:label "Prague Asterix Laser System" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03r547v08> ;
+        rdfs:label "COMPASS – Tokamak for Thermonuclear Fusion Research" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(14.42076 50.08804)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Prague" ;
             schema:addressCountry "CZ" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Prague" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "Czechia" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

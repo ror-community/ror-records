@@ -1,0 +1,42 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/02syf1597> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "2014"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2025-03-26"^^xsd:date ;
+    dct:modified "2025-03-26"^^xsd:date ;
+    org:abbreviation "AUK"@en ; 
+    org:alternativeName "American University - Duhok"@en ; 
+    org:alternativeName "زانكۆی ئەمریکی لە کوردستان"@ku ; 
+    schema:url <http://auk.edu.krd> ; 
+    schema:mainEntityOfPage <https://auk.edu.krd> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/The_American_University_of_Kurdistan> ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(42.98845 36.86709)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Dihok" ;
+            schema:addressCountry "IQ" ;
+            schema:addressRegion "Duhok" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Iraq" ;
+                schema:containedInPlace [
+                    schema:name "Asia" ;
+                    schema:identifier "AS"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/96994/> ;
+    ] ; 
+    .

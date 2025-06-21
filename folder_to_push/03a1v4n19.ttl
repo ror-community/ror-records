@@ -1,0 +1,41 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/03a1v4n19> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "2009"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "nonprofit" ; 
+    dct:created "2025-03-26"^^xsd:date ;
+    dct:modified "2025-03-26"^^xsd:date ;
+    org:abbreviation "KORAD"@en ; 
+    org:alternativeName "한국원자력환경공단"@ko ; 
+    schema:url <http://korad.or.kr> ; 
+    schema:mainEntityOfPage <https://www.korad.or.kr> ;
+    owl:sameAs <https://ko.wikipedia.org/wiki/%ED%95%9C%EA%B5%AD%EC%9B%90%EC%9E%90%EB%A0%A5%ED%99%98%EA%B2%BD%EA%B3%B5%EB%8B%A8> ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(129.21167 35.84278)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Gyeongju" ;
+            schema:addressCountry "KR" ;
+            schema:addressRegion "Gyeongsangbuk-do" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "South Korea" ;
+                schema:containedInPlace [
+                    schema:name "Asia" ;
+                    schema:identifier "AS"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1841603/> ;
+    ] ; 
+    .

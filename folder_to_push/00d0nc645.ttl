@@ -15,7 +15,7 @@
     org:classification "company" ; 
     org:classification "funder" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-09-16"^^xsd:date ;
+    dct:modified "2025-03-26"^^xsd:date ;
     org:alternativeName "Microsoft Corporation"@None ; 
     schema:mainEntityOfPage <https://www.microsoft.com/en-us> ;
     owl:sameAs <https://en.wikipedia.org/wiki/Microsoft> ; 
@@ -160,19 +160,25 @@
         org:member <https://ror.org/05xdft911> ;
         rdfs:label "Microsoft Research Montréal (Canada)" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/032q61545> ;
+        rdfs:label "Microsoft (Singapore)" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(-122.12151 47.67399)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Redmond" ;
             schema:addressCountry "US" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Washington" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "United States" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "North America" ;
+                    schema:identifier "NA"
                 ]
             ]
         ] ;

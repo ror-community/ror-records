@@ -4,23 +4,53 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02h9n4675> a org:Organization ;
     rdfs:label "ERNICA" ;
     schema:name "ERNICA" ;
     schema:foundingDate "2017"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Healthcare" ; 
-    org:alternativeName "European Reference Network for Rare Inherited and Congenital Anomalies" ;
-    schema:url <https://ern-ernica.eu> ; 
+    org:classification "healthcare" ; 
+    dct:created "2022-06-16"^^xsd:date ;
+    dct:modified "2025-03-26"^^xsd:date ;
+    org:alternativeName "European Reference Network for Rare Inherited and Congenital Anomalies"@en ; 
+    schema:mainEntityOfPage <https://ern-ernica.eu> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/00r7apq26> ;
+        rdfs:label "ERN Board of Member States" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/018906e22> ;
+        rdfs:label "Erasmus MC" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00f29ja18> ;
+        rdfs:label "European Rare Disease Research Coordination and Support Action" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(4.47917 51.9225)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(4.47917 51.9225)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Rotterdam" ;
             schema:addressCountry "NL" ;
-            owl:sameAs <http://sws.geonames.org/2747891/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
+            schema:addressRegion "South Holland" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "The Netherlands" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2747891/> ;
+    ] ; 
     .

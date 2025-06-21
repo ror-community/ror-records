@@ -4,25 +4,69 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/042pgcv68> a org:Organization ;
     rdfs:label "China Academy of Chinese Medical Sciences" ;
     schema:name "China Academy of Chinese Medical Sciences" ;
     schema:foundingDate "1955"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "CACMS" ;
-    schema:url <http://www.cacms.ac.cn/> ; 
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-03-26"^^xsd:date ;
+    org:abbreviation "CACMS"@None ; 
+    schema:mainEntityOfPage <http://www.cacms.ac.cn/> ;
+    schema:sameAs <https://api.crossref.org/funders/501100005892> ;
+    schema:sameAs <https://grid.ac/institutions/grid.410318.f> ;
+    schema:sameAs <http://isni.org/isni/0000000406323409> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/038z7hb11> ;
+        rdfs:label "Institute of Laboratory Animal Science" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/052nj8f19> ;
+        rdfs:label "Institute of Medicinal Plant Development" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02szepc22> ;
+        rdfs:label "Suzhou Institute of Systems Medicine" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02y0vze35> ;
+        rdfs:label "Xiyuan Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00bh09c15> ;
+        rdfs:label "Guang'anmen Hospital Jinan Hospital, China Academy of Chinese Medical Sciences" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(116.39723 39.9075)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(116.39723 39.9075)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Beijing" ;
             schema:addressCountry "CN" ;
-            owl:sameAs <http://sws.geonames.org/1816670/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000406323409> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "Beijing" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "China" ;
+                schema:containedInPlace [
+                    schema:name "Asia" ;
+                    schema:identifier "AS"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1816670/> ;
+    ] ; 
     .

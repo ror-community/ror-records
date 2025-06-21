@@ -15,7 +15,7 @@
     org:classification "funder" ; 
     org:classification "government" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-11-19"^^xsd:date ;
+    dct:modified "2025-03-26"^^xsd:date ;
     org:abbreviation "CONACYT"@None ; 
     org:abbreviation "CONAHCYT"@None ; 
     org:alternativeName "Consejo Nacional de Ciencia y Tecnología"@es ; 
@@ -68,19 +68,25 @@
         org:member <https://ror.org/039zdhk64> ;
         rdfs:label "Centro de Innovación Aplicada en Tecnologías Competitivas" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/022b6wh61> ;
+        rdfs:label "Laboratorio Nacional de GeoInteligencia" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(-99.12766 19.42847)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Mexico City" ;
             schema:addressCountry "MX" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Mexico City" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "Mexico" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "North America" ;
+                    schema:identifier "NA"
                 ]
             ]
         ] ;

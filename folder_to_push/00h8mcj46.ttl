@@ -1,0 +1,51 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/00h8mcj46> a org:Organization ;
+    rdfs:label "Philippine Association of State Universities and Colleges" ;
+    schema:name "Philippine Association of State Universities and Colleges" ;
+    schema:foundingDate "1967"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "other" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-03-26"^^xsd:date ;
+    org:abbreviation "PASUC"@None ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Philippine_Association_of_State_Universities_and_Colleges> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.461159.e> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03fqqe674> ;
+        rdfs:label "Davao Oriental State University" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/04fhp7r51> ;
+        rdfs:label "Davao del Norte State College" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(121.0509 14.6488)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Quezon City" ;
+            schema:addressCountry "PH" ;
+            schema:addressRegion "National Capital Region" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Philippines" ;
+                schema:containedInPlace [
+                    schema:name "Asia" ;
+                    schema:identifier "AS"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1692192/> ;
+    ] ; 
+    .

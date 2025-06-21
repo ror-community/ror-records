@@ -1,0 +1,137 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/0234cd281> a org:Organization ;
+    rdfs:label "Mitsubishi Group (Japan)" ;
+    schema:name "Mitsubishi Group (Japan)" ;
+    schema:foundingDate "1870"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "company" ; 
+    dct:created "2020-10-19"^^xsd:date ;
+    dct:modified "2025-03-26"^^xsd:date ;
+    org:alternativeName "Mitsubishi Group of Companies"@None ; 
+    org:alternativeName "Mitsubishi Keiretsu"@None ; 
+    schema:mainEntityOfPage <https://www.mitsubishi.com> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Mitsubishi> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.508713.8> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03ze5qn46> ;
+        rdfs:label "MUFG Bank (United Kingdom)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/015c8af10> ;
+        rdfs:label "Mitsubishi Chemical (Germany)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0535c3537> ;
+        rdfs:label "Mitsubishi Chemical Holdings (Japan)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/014m1ef46> ;
+        rdfs:label "Mitsubishi Corporation (Japan)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04fs8gp50> ;
+        rdfs:label "Mitsubishi Economic Research Institute" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/033y26782> ;
+        rdfs:label "Mitsubishi Electric (Japan)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02y2f3e22> ;
+        rdfs:label "Mitsubishi Foundation" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00mhg9s35> ;
+        rdfs:label "Mitsubishi Gas Chemical (Japan)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02aq67p44> ;
+        rdfs:label "Mitsubishi Heavy Industries (Japan)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03p5evc41> ;
+        rdfs:label "Mitsubishi Materials (Japan)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/016t76z82> ;
+        rdfs:label "Mitsubishi Motors (Japan)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/010g5w962> ;
+        rdfs:label "Mitsubishi Paper Mills (Japan)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0510bgz94> ;
+        rdfs:label "Mitsubishi Plastics (Japan)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02vq4f039> ;
+        rdfs:label "Mitsubishi Research Institute (Japan)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00c782c94> ;
+        rdfs:label "Mitsubishi UFJ Research & Consulting (Japan)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00e2e3n51> ;
+        rdfs:label "Mitsubishi Electric Research Laboratories (United States)" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(139.69171 35.6895)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Tokyo" ;
+            schema:addressCountry "JP" ;
+            schema:addressRegion "Tokyo" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Japan" ;
+                schema:containedInPlace [
+                    schema:name "Asia" ;
+                    schema:identifier "AS"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1850147/> ;
+    ] ; 
+    .

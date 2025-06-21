@@ -15,26 +15,32 @@
     org:classification "education" ; 
     org:classification "funder" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-10-21"^^xsd:date ;
+    dct:modified "2025-03-26"^^xsd:date ;
     schema:url <http://ujep.cz> ; 
     schema:mainEntityOfPage <https://www.ujep.cz> ;
     owl:sameAs <http://en.wikipedia.org/wiki/Jan_Evangelista_Purkyn%C4%9B_University_in_%C3%9Ast%C3%AD_nad_Labem> ; 
     schema:sameAs <https://api.crossref.org/funders/501100004011> ;
     schema:sameAs <https://grid.ac/institutions/grid.424917.d> ;
     schema:sameAs <http://isni.org/isni/0000000113790994> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01j84x757> ;
+        rdfs:label "Nanomaterials and Nanotechnologies for Environment Protection and Sustainable Future" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(14.03227 50.6607)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Ústí nad Labem" ;
             schema:addressCountry "CZ" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Ústecký kraj" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "Czechia" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

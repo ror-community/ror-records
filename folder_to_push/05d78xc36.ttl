@@ -4,23 +4,119 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/05d78xc36> a org:Organization ;
     rdfs:label "Euro-BioImaging ERIC" ;
     schema:name "Euro-BioImaging ERIC" ;
     schema:foundingDate "2019"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Other" ; 
-    org:alternativeName "Euro-BioImaging" ;
-    schema:url <https://www.eurobioimaging.eu> ; 
+    org:classification "other" ; 
+    dct:created "2022-08-03"^^xsd:date ;
+    dct:modified "2025-03-26"^^xsd:date ;
+    org:alternativeName "Euro-BioImaging"@en ; 
+    schema:mainEntityOfPage <https://www.eurobioimaging.eu> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01y7vt929> ;
+        rdfs:label "France-BioImaging" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/023f5cj14> ;
+        rdfs:label "Finnish Advanced Microscopy Node" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01c3rrh15> ;
+        rdfs:label "Elettra-Sincrotrone Trieste S.C.p.A." ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/0573ty638> ;
+        rdfs:label "Multi-Modal Molecular Imaging Italian Node" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/028696h48> ;
+        rdfs:label "Austrian Biolmaging - Verein zur innovativen, korrelativen, multimodalen Bildgebung in Österreich" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03xh8px24> ;
+        rdfs:label "Finnish Biomedical Imaging Node" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/0094hc805> ;
+        rdfs:label "Center for Advanced Preclinical Imaging" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00h3qhh74> ;
+        rdfs:label "Advanced Light Microscopy Italian Node" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00hjpwn75> ;
+        rdfs:label "Erasmus Optical Imaging Centre" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/013rctf62> ;
+        rdfs:label "Van Leeuwenhoek Centre for Advanced Microscopy" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01d3r6z34> ;
+        rdfs:label "Brain Imaging Network" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/0479zfq62> ;
+        rdfs:label "Portuguese Platform of BioImaging" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01mq2eh43> ;
+        rdfs:label "National Microscopy Infrastructure" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00defv642> ;
+        rdfs:label "National Research Infrastructure for Biological and Medical Imaging" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(22.26869 60.45148)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(22.26869 60.45148)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Turku" ;
             schema:addressCountry "FI" ;
-            owl:sameAs <http://sws.geonames.org/633679/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
+            schema:addressRegion "Southwest Finland" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Finland" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/633679/> ;
+    ] ; 
     .

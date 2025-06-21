@@ -4,24 +4,40 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/015ya8798> a org:Organization ;
-    rdfs:label "Jeddah University" ;
-    schema:name "Jeddah University" ;
+    rdfs:label "" ;
+    schema:name "" ;
     schema:foundingDate "1435"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    schema:url <http://www.uj.edu.sa/Home.aspx?Lng=EN> ; 
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-03-26"^^xsd:date ;
+    org:alternativeName "Jeddah University"@en ; 
+    schema:url <http://uj.edu.sa> ; 
+    schema:mainEntityOfPage <https://uj.edu.sa> ;
+    schema:sameAs <https://api.crossref.org/funders/501100015624> ;
+    schema:sameAs <https://grid.ac/institutions/grid.460099.2> ;
+    schema:sameAs <http://isni.org/isni/0000000449122893> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(39.18624 21.49012)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(39.18624 21.49012)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Jeddah" ;
             schema:addressCountry "SA" ;
-            owl:sameAs <http://sws.geonames.org/105343/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000449122893> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "Mecca Region" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Saudi Arabia" ;
+                schema:containedInPlace [
+                    schema:name "Asia" ;
+                    schema:identifier "AS"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/105343/> ;
+    ] ; 
     .

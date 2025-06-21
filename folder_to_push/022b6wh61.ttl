@@ -1,0 +1,81 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/022b6wh61> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    org:status "active" ;
+    org:classification "government" ; 
+    dct:created "2025-03-26"^^xsd:date ;
+    dct:modified "2025-03-26"^^xsd:date ;
+    org:alternativeName "GeoINT"@es ; 
+    org:alternativeName "National Geointelligence Laboratory"@en ; 
+    schema:url <http://geoint.mx> ; 
+    schema:mainEntityOfPage <https://geoint.mx> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/059ex5q34> ;
+        rdfs:label "Consejo Nacional de Humanidades, Ciencias y Tecnologías" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-102.28259 21.88234)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Aguascalientes" ;
+            schema:addressCountry "MX" ;
+            schema:addressRegion "Aguascalientes" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Mexico" ;
+                schema:containedInPlace [
+                    schema:name "North America" ;
+                    schema:identifier "NA"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/4019233/> ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-99.12766 19.42847)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Mexico City" ;
+            schema:addressCountry "MX" ;
+            schema:addressRegion "Mexico City" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Mexico" ;
+                schema:containedInPlace [
+                    schema:name "North America" ;
+                    schema:identifier "NA"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3530597/> ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-71.15611 8.58972)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Merida" ;
+            schema:addressCountry "VE" ;
+            schema:addressRegion "Mérida" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Venezuela" ;
+                schema:containedInPlace [
+                    schema:name "South America" ;
+                    schema:identifier "SA"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3632308/> ;
+    ] ; 
+    .

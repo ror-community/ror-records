@@ -1,0 +1,51 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/05db0es39> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "2001"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "facility" ; 
+    dct:created "2019-02-17"^^xsd:date ;
+    dct:modified "2025-03-26"^^xsd:date ;
+    org:abbreviation "ISSM"@None ; 
+    org:alternativeName "Institute for Studies on the Mediterranean"@en ; 
+    org:alternativeName "Institute of Studies on Mediterranean Societies"@en ; 
+    org:alternativeName "Istituto di Studi sul Mediterraneo"@it ; 
+    org:alternativeName "Istituto di Studi sulle Società del Mediterraneo"@it ; 
+    schema:url <http://ismed.cnr.it> ; 
+    schema:mainEntityOfPage <https://www.ismed.cnr.it> ;
+    schema:sameAs <https://grid.ac/institutions/grid.503046.4> ;
+    schema:sameAs <http://isni.org/isni/0000000121521954> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/04zaypm56> ;
+        rdfs:label "National Research Council" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(14.26811 40.85216)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Naples" ;
+            schema:addressCountry "IT" ;
+            schema:addressRegion "Campania" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Italy" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3172394/> ;
+    ] ; 
+    .

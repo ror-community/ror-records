@@ -4,24 +4,48 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02wg9xc72> a org:Organization ;
     rdfs:label "Consortium of European Social Science Data Archives" ;
     schema:name "Consortium of European Social Science Data Archives" ;
     schema:foundingDate "1976"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Other" ; 
-    org:abbreviation "CESSDA" ;
-    schema:url <https://www.cessda.eu/> ; 
+    org:classification "other" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-03-26"^^xsd:date ;
+    org:abbreviation "CESSDA"@None ; 
+    schema:mainEntityOfPage <https://www.cessda.eu/> ;
+    schema:sameAs <https://grid.ac/institutions/grid.457668.e> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/028znnm42> ;
+        rdfs:label "DASSI - Data Archive for Social Sciences in Italy" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01snj4592> ;
+        rdfs:label "Czech Social Science Data Archive" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(5.32415 60.39299)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(5.32415 60.39299)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Bergen" ;
             schema:addressCountry "NO" ;
-            owl:sameAs <http://sws.geonames.org/3161732/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "Vestland" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Norway" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3161732/> ;
+    ] ; 
     .

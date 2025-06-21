@@ -14,10 +14,10 @@
     org:status "active" ;
     org:classification "facility" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-10-31"^^xsd:date ;
-    org:alternativeName "Institute of Scientific Instruments of the Czech Academy of Sciences"@en ; 
-    org:alternativeName "Institute of Scientific Instruments"@en ; 
+    dct:modified "2025-03-26"^^xsd:date ;
     org:alternativeName "Czech Acad Sci, Inst Sci Instruments"@en ; 
+    org:alternativeName "Institute of Scientific Instruments"@en ; 
+    org:alternativeName "Institute of Scientific Instruments of the Czech Academy of Sciences"@en ; 
     org:abbreviation "ÚPT AV ČR"@None ; 
     schema:mainEntityOfPage <http://www.isibrno.cz/> ;
     schema:sameAs <https://grid.ac/institutions/grid.438850.2> ;
@@ -28,19 +28,25 @@
         org:member <https://ror.org/053avzc18> ;
         rdfs:label "Czech Academy of Sciences" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00defv642> ;
+        rdfs:label "National Research Infrastructure for Biological and Medical Imaging" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(16.60796 49.19522)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Brno" ;
             schema:addressCountry "CZ" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "South Moravian" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "Czechia" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

@@ -14,7 +14,7 @@
     org:status "active" ;
     org:classification "government" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-11-19"^^xsd:date ;
+    dct:modified "2025-03-26"^^xsd:date ;
     schema:mainEntityOfPage <https://www.usa.gov/> ;
     owl:sameAs <https://en.wikipedia.org/wiki/Federal_government_of_the_United_States> ; 
     schema:sameAs <https://grid.ac/institutions/grid.451285.f> ;
@@ -217,19 +217,25 @@
         org:member <https://ror.org/05scvw539> ;
         rdfs:label "United States Trade and Development Agency" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00rn4r370> ;
+        rdfs:label "Peace Corps" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(-77.03637 38.89511)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Washington" ;
             schema:addressCountry "US" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "District of Columbia" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "United States" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "North America" ;
+                    schema:identifier "NA"
                 ]
             ]
         ] ;

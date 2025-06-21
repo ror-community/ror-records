@@ -4,25 +4,75 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/04wkdwp52> a org:Organization ;
     rdfs:label "Institut Català de la Salut" ;
     schema:name "Institut Català de la Salut" ;
     schema:foundingDate "1983"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Healthcare" ; 
-    org:abbreviation "ICS" ;
-    schema:url <http://www.gencat.cat/ics/> ; 
+    org:classification "funder" ; 
+    org:classification "healthcare" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-03-26"^^xsd:date ;
+    org:abbreviation "ICS"@None ; 
+    schema:mainEntityOfPage <http://www.gencat.cat/ics/> ;
+    schema:sameAs <https://api.crossref.org/funders/501100014550> ;
+    schema:sameAs <https://grid.ac/institutions/grid.22061.37> ;
+    schema:sameAs <http://isni.org/isni/0000000091276969> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00epner96> ;
+        rdfs:label "Bellvitge University Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01p3tpn79> ;
+        rdfs:label "Hospital Universitari Arnau de Vilanova" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04wxdxa47> ;
+        rdfs:label "Hospital Universitari Germans Trias i Pujol" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04g27v387> ;
+        rdfs:label "Hospital Universitari de Girona Doctor Josep Trueta" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/01bg62x04> ;
+        rdfs:label "Government of Catalonia" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/046sqxa62> ;
+        rdfs:label "Hospital de Tortosa Verge de la Cinta" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(2.15899 41.38879)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(2.15899 41.38879)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Barcelona" ;
             schema:addressCountry "ES" ;
-            owl:sameAs <http://sws.geonames.org/3128760/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000091276969> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "Catalonia" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Spain" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3128760/> ;
+    ] ; 
     .

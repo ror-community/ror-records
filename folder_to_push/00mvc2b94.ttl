@@ -1,0 +1,40 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/00mvc2b94> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "2023"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2025-03-26"^^xsd:date ;
+    dct:modified "2025-03-26"^^xsd:date ;
+    org:abbreviation "SOIS-FT"@hr ; 
+    org:alternativeName "Sveučilište obrane i sigurnosti "Dr. Franjo Tuđman""@hr ; 
+    schema:url <http://sois-ft.hr> ; 
+    schema:mainEntityOfPage <https://www.sois-ft.hr> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(15.97798 45.81444)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Zagreb" ;
+            schema:addressCountry "HR" ;
+            schema:addressRegion "Zagreb" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Croatia" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3186886/> ;
+    ] ; 
+    .

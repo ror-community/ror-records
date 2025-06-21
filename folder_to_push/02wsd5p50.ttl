@@ -15,7 +15,7 @@
     org:classification "funder" ; 
     org:classification "government" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-12-10"^^xsd:date ;
+    dct:modified "2025-03-26"^^xsd:date ;
     org:abbreviation "NCSR"@None ; 
     org:alternativeName "NCSR of Vietnam"@en ; 
     org:abbreviation "NCST"@None ; 
@@ -72,19 +72,25 @@
         org:member <https://ror.org/05x2wrh98> ;
         rdfs:label "Institute of Geological Sciences" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04vtp9n41> ;
+        rdfs:label "Southern Institute of Ecology" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(105.84117 21.0245)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Hanoi" ;
             schema:addressCountry "VN" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Hanoi" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "Vietnam" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Asia" ;
+                    schema:identifier "AS"
                 ]
             ]
         ] ;

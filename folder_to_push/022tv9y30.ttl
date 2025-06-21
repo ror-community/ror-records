@@ -14,7 +14,7 @@
     org:status "active" ;
     org:classification "education" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-12-10"^^xsd:date ;
+    dct:modified "2025-03-26"^^xsd:date ;
     org:alternativeName "Christ"@None ; 
     org:alternativeName "Christ (Deemed to Be University)"@en ; 
     org:alternativeName "Christ College"@en ; 
@@ -23,19 +23,25 @@
     owl:sameAs <https://en.wikipedia.org/wiki/Christ_University> ; 
     schema:sameAs <https://grid.ac/institutions/grid.440672.3> ;
     schema:sameAs <http://isni.org/isni/0000000417610390> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00yz0w484> ;
+        rdfs:label "CHRIST (Deemed to be) University, Delhi NCR" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(77.59369 12.97194)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Bengaluru" ;
             schema:addressCountry "IN" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Karnataka" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "India" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Asia" ;
+                    schema:identifier "AS"
                 ]
             ]
         ] ;

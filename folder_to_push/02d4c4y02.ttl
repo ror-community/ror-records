@@ -15,26 +15,32 @@
     org:classification "education" ; 
     org:classification "funder" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-11-19"^^xsd:date ;
+    dct:modified "2025-03-26"^^xsd:date ;
     schema:url <http://unimore.it> ; 
     schema:mainEntityOfPage <https://www.unimore.it> ;
     owl:sameAs <http://en.wikipedia.org/wiki/University_of_Modena_and_Reggio_Emilia> ; 
     schema:sameAs <https://api.crossref.org/funders/100009104> ;
     schema:sameAs <https://grid.ac/institutions/grid.7548.e> ;
     schema:sameAs <http://isni.org/isni/0000000121697570> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01hmmsr16> ;
+        rdfs:label "Azienda Ospedaliero-Universitaria di Modena" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(10.92539 44.64783)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Modena" ;
             schema:addressCountry "IT" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Emilia-Romagna" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "Italy" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

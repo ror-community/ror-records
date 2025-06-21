@@ -4,25 +4,45 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/04jb37t29> a org:Organization ;
-    rdfs:label "Empresa Pública de Emergencias Sanitarias" ;
-    schema:name "Empresa Pública de Emergencias Sanitarias" ;
+    rdfs:label "" ;
+    schema:name "" ;
     schema:foundingDate "1994"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Other" ; 
-    org:abbreviation "EPES" ;
-    schema:url <http://www.epes.es> ; 
-    schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-5.97317 37.38283)"^^geo:wktLiteral ;
-            schema:addressLocality "Seville" ;
-            schema:addressCountry "ES" ;
-            owl:sameAs <http://sws.geonames.org/2510911/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
+    org:classification "other" ; 
+    dct:created "2019-11-07"^^xsd:date ;
+    dct:modified "2025-03-26"^^xsd:date ;
+    org:abbreviation "CES 061"@None ; 
+    org:abbreviation "EPES"@None ; 
+    org:alternativeName "Empresa Pública de Emergencias Sanitarias"@es ; 
+    schema:mainEntityOfPage <https://www.sspa.juntadeandalucia.es/servicioandaluzdesalud/emergencias061/> ;
+    schema:sameAs <https://grid.ac/institutions/grid.507270.7> ;
     schema:sameAs <http://isni.org/isni/0000000099147926> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/047pymx40> ;
+        rdfs:label "Consejería de Salud y Consumo" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-4.42034 36.72016)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Málaga" ;
+            schema:addressCountry "ES" ;
+            schema:addressRegion "Andalusia" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Spain" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2514256/> ;
+    ] ; 
     .

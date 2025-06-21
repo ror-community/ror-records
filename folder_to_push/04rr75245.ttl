@@ -4,23 +4,53 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/04rr75245> a org:Organization ;
     rdfs:label "ERN TRANSPLANT-CHILD" ;
     schema:name "ERN TRANSPLANT-CHILD" ;
     schema:foundingDate "2017"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Healthcare" ; 
-    org:alternativeName "European Reference Network on Transplantation in Children" ;
-    schema:url <https://www.transplantchild.eu> ; 
+    org:classification "healthcare" ; 
+    dct:created "2022-06-16"^^xsd:date ;
+    dct:modified "2025-03-26"^^xsd:date ;
+    org:alternativeName "European Reference Network on Transplantation in Children"@en ; 
+    schema:mainEntityOfPage <https://www.transplantchild.eu> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/00r7apq26> ;
+        rdfs:label "ERN Board of Member States" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01s1q0w69> ;
+        rdfs:label "Hospital Universitario La Paz" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00f29ja18> ;
+        rdfs:label "European Rare Disease Research Coordination and Support Action" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-3.70256 40.4165)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-3.70256 40.4165)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Madrid" ;
             schema:addressCountry "ES" ;
-            owl:sameAs <http://sws.geonames.org/3117735/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
+            schema:addressRegion "Madrid" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Spain" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3117735/> ;
+    ] ; 
     .

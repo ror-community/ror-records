@@ -1,0 +1,39 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/00jp6wj61> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    org:status "active" ;
+    org:classification "government" ; 
+    dct:created "2025-03-26"^^xsd:date ;
+    dct:modified "2025-03-26"^^xsd:date ;
+    org:abbreviation "INIMET"@es ; 
+    org:alternativeName "National Research Institute on Metrology"@en ; 
+    schema:url <http://inimet.cu> ; 
+    schema:mainEntityOfPage <https://www.inimet.cu> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-82.38304 23.13302)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Havana" ;
+            schema:addressCountry "CU" ;
+            schema:addressRegion "Havana" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Cuba" ;
+                schema:containedInPlace [
+                    schema:name "North America" ;
+                    schema:identifier "NA"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3553478/> ;
+    ] ; 
+    .

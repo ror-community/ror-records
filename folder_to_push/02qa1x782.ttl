@@ -15,7 +15,7 @@
     org:classification "funder" ; 
     org:classification "government" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-07-29"^^xsd:date ;
+    dct:modified "2025-03-26"^^xsd:date ;
     org:abbreviation "DFO"@None ; 
     org:alternativeName "Department of Fisheries and Oceans"@en ; 
     org:abbreviation "MPO"@None ; 
@@ -32,6 +32,12 @@
     ] ; 
     org:hasLink [
         a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01fkg1209> ;
+        rdfs:label "NorthEast Pacific Deep-sea Exploration Project" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
         org:role "parent" ;
         org:member <https://ror.org/010q4q527> ;
         rdfs:label "Government of Canada" ;
@@ -45,8 +51,8 @@
     org:hasLink [
         a org:Membership ;
         org:role "child" ;
-        org:member <https://ror.org/01fkg1209> ;
-        rdfs:label "NorthEast Pacific Deep-sea Exploration Project" ;
+        org:member <https://ror.org/01yzs6492> ;
+        rdfs:label "Canadian Coast Guard" ;
     ] ; 
     schema:location [
         a schema:Place ;
@@ -54,13 +60,13 @@
         schema:address [
             schema:addressLocality "Ottawa" ;
             schema:addressCountry "CA" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Ontario" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "Canada" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "North America" ;
+                    schema:identifier "NA"
                 ]
             ]
         ] ;

@@ -15,7 +15,7 @@
     org:classification "education" ; 
     org:classification "funder" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-10-21"^^xsd:date ;
+    dct:modified "2025-03-26"^^xsd:date ;
     org:abbreviation "VU"@None ; 
     org:alternativeName "VU Amsterdam"@nl ; 
     schema:url <http://vu.nl> ; 
@@ -32,21 +32,9 @@
     ] ; 
     org:hasLink [
         a org:Membership ;
-        org:role "child" ;
-        org:member <https://ror.org/01x2d9f70> ;
-        rdfs:label "Amsterdam Neuroscience" ;
-    ] ; 
-    org:hasLink [
-        a org:Membership ;
-        org:role "child" ;
-        org:member <https://ror.org/0258apj61> ;
-        rdfs:label "EMGO Institute for Health and Care Research" ;
-    ] ; 
-    org:hasLink [
-        a org:Membership ;
         org:role "related" ;
         org:member <https://ror.org/00q6h8f30> ;
-        rdfs:label "Amsterdam UMC Location VUmc" ;
+        rdfs:label "Amsterdam UMC Location Vrije Universiteit Amsterdam" ;
     ] ; 
     org:hasLink [
         a org:Membership ;
@@ -54,19 +42,43 @@
         org:member <https://ror.org/05kgbsy64> ;
         rdfs:label "Spinoza Centre for Neuroimaging" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04x5wnb75> ;
+        rdfs:label "Academic Center for Dentistry Amsterdam" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01x2d9f70> ;
+        rdfs:label "Amsterdam Neuroscience" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/0258apj61> ;
+        rdfs:label "Amsterdam Public Health" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/0286p1c86> ;
+        rdfs:label "Cancer Center Amsterdam" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(4.88969 52.37403)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Amsterdam" ;
             schema:addressCountry "NL" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "North Holland" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "The Netherlands" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

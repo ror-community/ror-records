@@ -4,28 +4,43 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01r4q9n85> a org:Organization ;
     rdfs:label "University of Macau" ;
     schema:name "University of Macau" ;
     schema:foundingDate "1981"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "UM" ;
-    org:alternativeName "University of East Asia" ;
-    schema:url <http://www.umac.mo/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Macau> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-03-26"^^xsd:date ;
+    org:abbreviation "UM"@None ; 
+    org:alternativeName "University of East Asia"@en ; 
+    schema:url <http://um.edu.mo> ; 
+    schema:url <http://umac.mo> ; 
+    schema:mainEntityOfPage <https://www.um.edu.mo> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Macau> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100004733> ;
+    schema:sameAs <https://grid.ac/institutions/grid.437123.0> ;
+    schema:sameAs <http://isni.org/isni/0000000417948068> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(113.54611 22.20056)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(113.54611 22.20056)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Macao" ;
             schema:addressCountry "MO" ;
-            owl:sameAs <http://sws.geonames.org/1821274/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000417948068> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1563050> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "Macau" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Macao" ;
+                schema:containedInPlace [
+                    schema:name "Asia" ;
+                    schema:identifier "AS"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1821274/> ;
+    ] ; 
     .

@@ -1,0 +1,45 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/01c0m1t63> a org:Organization ;
+    rdfs:label "Karlsruhe University of Applied Sciences" ;
+    schema:name "Karlsruhe University of Applied Sciences" ;
+    schema:foundingDate "1878"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-03-26"^^xsd:date ;
+    org:abbreviation "H-KA"@de ; 
+    org:abbreviation "HKA"@de ; 
+    org:alternativeName "Hochschule Karlsruhe"@de ; 
+    org:abbreviation "HsKA"@de ; 
+    schema:url <http://h-ka.de> ; 
+    schema:mainEntityOfPage <https://www.h-ka.de> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Karlsruhe_University_of_Applied_Sciences> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.434954.b> ;
+    schema:sameAs <http://isni.org/isni/0000000106811275> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(8.40444 49.00937)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Karlsruhe" ;
+            schema:addressCountry "DE" ;
+            schema:addressRegion "Baden-Wurttemberg" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Germany" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2892794/> ;
+    ] ; 
+    .

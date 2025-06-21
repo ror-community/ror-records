@@ -14,7 +14,7 @@
     org:status "active" ;
     org:classification "facility" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-10-31"^^xsd:date ;
+    dct:modified "2025-03-26"^^xsd:date ;
     org:alternativeName "Czech Acad Sci, Nucl Phys Inst"@en ; 
     org:alternativeName "Nuclear Physics Institute CAS"@en ; 
     org:alternativeName "Nuclear Physics Institute of the Czech Academy of Sciences"@en ; 
@@ -30,19 +30,43 @@
         org:member <https://ror.org/053avzc18> ;
         rdfs:label "Czech Academy of Sciences" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02fjdfm19> ;
+        rdfs:label "Système de Production d’Ions Radioactifs Accélérés en Ligne" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04xsmz457> ;
+        rdfs:label "Czech National Node to the European Infrastructure for Translational Medicine" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01t0a1151> ;
+        rdfs:label "Research Infrastructure for Experiments at CERN" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02s1c4g54> ;
+        rdfs:label "Brookhaven National Laboratory - Participation of the Czech Republic" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(14.35733 50.17734)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Řež" ;
             schema:addressCountry "CZ" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Central Bohemia" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "Czechia" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

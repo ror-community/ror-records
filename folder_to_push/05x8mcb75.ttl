@@ -15,7 +15,7 @@
     org:classification "education" ; 
     org:classification "funder" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-05-02"^^xsd:date ;
+    dct:modified "2025-03-26"^^xsd:date ;
     org:abbreviation "VŠB"@cs ; 
     org:alternativeName "VŠB - TU Ostrava"@cs ; 
     org:alternativeName "VŠB - Technická univerzita Ostrava"@cs ; 
@@ -32,19 +32,31 @@
         org:member <https://ror.org/04vxzbp05> ;
         rdfs:label "Czech Welding Institute (Czechia)" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05a721x13> ;
+        rdfs:label "Energy Waste Recovery and Gas Treatment" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02h8zn861> ;
+        rdfs:label "e-INFRA" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(18.28204 49.83465)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Ostrava" ;
             schema:addressCountry "CZ" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Moravskoslezský" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "Czechia" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

@@ -14,7 +14,7 @@
     org:status "active" ;
     org:classification "education" ; 
     dct:created "2020-12-21"^^xsd:date ;
-    dct:modified "2024-05-30"^^xsd:date ;
+    dct:modified "2025-03-26"^^xsd:date ;
     org:abbreviation "IOE"@None ; 
     schema:mainEntityOfPage <https://ioe.tu.edu.np> ;
     owl:sameAs <https://en.wikipedia.org/wiki/Institute_of_Engineering> ; 
@@ -25,19 +25,25 @@
         org:member <https://ror.org/02rg1r889> ;
         rdfs:label "Tribhuvan University" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03et06q41> ;
+        rdfs:label "Khwopa College of Engineering" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(85.31685 27.67824)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Pulchowk" ;
             schema:addressCountry "NP" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Bagmati Province" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "Nepal" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Asia" ;
+                    schema:identifier "AS"
                 ]
             ]
         ] ;

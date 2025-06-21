@@ -14,7 +14,7 @@
     org:status "active" ;
     org:classification "education" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-10-31"^^xsd:date ;
+    dct:modified "2025-03-26"^^xsd:date ;
     schema:mainEntityOfPage <http://www.cegep-ste-foy.qc.ca/csf4/index.php> ;
     owl:sameAs <http://en.wikipedia.org/wiki/C%C3%A9gep_de_Sainte-Foy> ; 
     schema:sameAs <https://grid.ac/institutions/grid.420974.c> ;
@@ -31,19 +31,25 @@
         org:member <https://ror.org/05fdt6816> ;
         rdfs:label "Obvia" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04427p113> ;
+        rdfs:label "Centre d'enseignement et de recherche en foresterie" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(-71.21454 46.81228)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Québec" ;
             schema:addressCountry "CA" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Quebec" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "Canada" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "North America" ;
+                    schema:identifier "NA"
                 ]
             ]
         ] ;

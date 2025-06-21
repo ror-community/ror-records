@@ -4,23 +4,55 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/04ckbty56> a org:Organization ;
     rdfs:label "Cardio-Pulmonary Institute" ;
     schema:name "Cardio-Pulmonary Institute" ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "CPI" ;
-    schema:url <https://www.cpi-online.de/> ; 
+    org:classification "facility" ; 
+    org:classification "funder" ; 
+    dct:created "2021-09-23"^^xsd:date ;
+    dct:modified "2025-03-26"^^xsd:date ;
+    org:abbreviation "CPI"@None ; 
+    schema:mainEntityOfPage <https://www.cpi-online.de/> ;
+    schema:sameAs <https://api.crossref.org/funders/501100021703> ;
+    schema:sameAs <https://grid.ac/institutions/grid.511808.5> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/04cvxnb49> ;
+        rdfs:label "Goethe University Frankfurt" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/0165r2y73> ;
+        rdfs:label "Max Planck Institute for Heart and Lung Research" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/033eqas34> ;
+        rdfs:label "Justus-Liebig-Universität Gießen" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(8.67554 50.58727)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(8.67554 50.58727)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Giessen" ;
             schema:addressCountry "DE" ;
-            owl:sameAs <http://sws.geonames.org/2920512/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "Hesse" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Germany" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2920512/> ;
+    ] ; 
     .

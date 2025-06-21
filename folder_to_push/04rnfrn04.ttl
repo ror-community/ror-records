@@ -1,0 +1,43 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/04rnfrn04> a org:Organization ;
+    rdfs:label "Center for Psychobiology and Behavioral Medicine" ;
+    schema:name "Center for Psychobiology and Behavioral Medicine" ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-03-26"^^xsd:date ;
+    schema:mainEntityOfPage <https://www.uni-giessen.de/faculties/f06/psy/other-inst/center-for-psychobiology-and-behavioral-medicine?set_language=en> ;
+    schema:sameAs <https://grid.ac/institutions/grid.500269.8> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/033eqas34> ;
+        rdfs:label "Justus-Liebig-Universität Gießen" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(8.67554 50.58727)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Giessen" ;
+            schema:addressCountry "DE" ;
+            schema:addressRegion "Hesse" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Germany" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2920512/> ;
+    ] ; 
+    .

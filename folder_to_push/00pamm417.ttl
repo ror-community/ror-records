@@ -4,24 +4,42 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/00pamm417> a org:Organization ;
     rdfs:label "Centre intégré universitaire de santé et de services sociaux de la Capitale-Nationale" ;
     schema:name "Centre intégré universitaire de santé et de services sociaux de la Capitale-Nationale" ;
     org:status "active" ;
-    org:classification "Healthcare" ; 
-    org:alternativeName "CIUSSS de la Capitale-Nationale" ;
-    schema:url <https://www.ciusss-capitalenationale.gouv.qc.ca> ; 
-    owl:sameAs <https://fr.wikipedia.org/wiki/Centre_int%C3%A9gr%C3%A9_de_sant%C3%A9_et_de_services_sociaux> ;
+    org:classification "healthcare" ; 
+    dct:created "2024-03-13"^^xsd:date ;
+    dct:modified "2025-03-26"^^xsd:date ;
+    org:alternativeName "CIUSSS de la Capitale-Nationale"@fr ; 
+    schema:mainEntityOfPage <https://www.ciusss-capitalenationale.gouv.qc.ca> ;
+    owl:sameAs <https://fr.wikipedia.org/wiki/Centre_int%C3%A9gr%C3%A9_de_sant%C3%A9_et_de_services_sociaux> ; 
+    schema:sameAs <http://isni.org/isni/0000000480607653> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01ca3xs90> ;
+        rdfs:label "Centre de réadaptation en dépendance de Québec" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-71.21454 46.81228)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-71.21454 46.81228)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Québec" ;
             schema:addressCountry "CA" ;
-            owl:sameAs <http://sws.geonames.org/6325494/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000480607653> ;
+            schema:addressRegion "Quebec" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Canada" ;
+                schema:containedInPlace [
+                    schema:name "North America" ;
+                    schema:identifier "NA"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/6325494/> ;
+    ] ; 
     .

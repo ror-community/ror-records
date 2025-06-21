@@ -1,0 +1,46 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/04bfjpv87> a org:Organization ;
+    rdfs:label "Cisbio (France)" ;
+    schema:name "Cisbio (France)" ;
+    schema:foundingDate "1985"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "company" ; 
+    dct:created "2019-02-17"^^xsd:date ;
+    dct:modified "2025-03-26"^^xsd:date ;
+    schema:url <http://cisbio.com> ; 
+    schema:mainEntityOfPage <https://www.cisbio.com> ;
+    schema:sameAs <https://grid.ac/institutions/grid.503165.4> ;
+    schema:sameAs <http://isni.org/isni/0000000088494180> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02sbvqb41> ;
+        rdfs:label "Revvity (United States)" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(4.35788 43.83665)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Nîmes" ;
+            schema:addressCountry "FR" ;
+            schema:addressRegion "Occitanie" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2990363/> ;
+    ] ; 
+    .

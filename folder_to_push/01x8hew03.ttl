@@ -15,7 +15,7 @@
     org:classification "funder" ; 
     org:classification "government" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-10-21"^^xsd:date ;
+    dct:modified "2025-03-26"^^xsd:date ;
     org:abbreviation "BAS"@None ; 
     org:alternativeName "Balgarska Akademiya na Naukite"@None ; 
     schema:url <http://bas.bg> ; 
@@ -270,19 +270,25 @@
         org:member <https://ror.org/002cfhw56> ;
         rdfs:label "Institute of Robotics" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/019gydp64> ;
+        rdfs:label "Institute of Mineralogy and Crystallography "Acad. Ivan Kostov" Bulgarian Academy of Sciences" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(23.32415 42.69751)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Sofia" ;
             schema:addressCountry "BG" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Sofia-Capital" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "Bulgaria" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

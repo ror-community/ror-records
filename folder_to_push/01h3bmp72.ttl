@@ -1,0 +1,48 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/01h3bmp72> a org:Organization ;
+    rdfs:label "Clinical Practice Research Datalink" ;
+    schema:name "Clinical Practice Research Datalink" ;
+    schema:foundingDate "1987"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "government" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-03-26"^^xsd:date ;
+    org:abbreviation "CPRD"@None ; 
+    schema:url <http://cprd.com> ; 
+    schema:mainEntityOfPage <https://www.cprd.com> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Clinical_Practice_Research_Datalink#General_Practice_Research_Database> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Clinical_Practice_Research_Datalink> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.477301.6> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/03sbpja79> ;
+        rdfs:label "Department of Health and Social Care" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-0.12574 51.50853)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "London" ;
+            schema:addressCountry "GB" ;
+            schema:addressRegion "England" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United Kingdom" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2643743/> ;
+    ] ; 
+    .

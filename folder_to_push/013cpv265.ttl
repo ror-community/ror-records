@@ -1,0 +1,40 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/013cpv265> a org:Organization ;
+    rdfs:label "Cégep de Rivière-du-Loup" ;
+    schema:name "Cégep de Rivière-du-Loup" ;
+    schema:foundingDate "1969"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-03-26"^^xsd:date ;
+    schema:mainEntityOfPage <http://www.cegeprdl.ca/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/C%C3%A9gep_de_Rivi%C3%A8re-du-Loup> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.473884.4> ;
+    schema:sameAs <http://isni.org/isni/0000000086570127> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-69.54243 47.82699)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Rivière-du-Loup" ;
+            schema:addressCountry "CA" ;
+            schema:addressRegion "Quebec" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Canada" ;
+                schema:containedInPlace [
+                    schema:name "North America" ;
+                    schema:identifier "NA"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/6354897/> ;
+    ] ; 
+    .

@@ -4,23 +4,53 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02dk8t214> a org:Organization ;
     rdfs:label "ERN PaedCan" ;
     schema:name "ERN PaedCan" ;
     schema:foundingDate "2017"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Healthcare" ; 
-    org:alternativeName "European Reference Network on paediatric cancer" ;
-    schema:url <https://paedcan.ern-net.eu> ; 
+    org:classification "healthcare" ; 
+    dct:created "2022-06-16"^^xsd:date ;
+    dct:modified "2025-03-26"^^xsd:date ;
+    org:alternativeName "European Reference Network on paediatric cancer"@en ; 
+    schema:mainEntityOfPage <https://paedcan.ern-net.eu> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/00r7apq26> ;
+        rdfs:label "ERN Board of Member States" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02qb3f692> ;
+        rdfs:label "St Anna Children's Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00f29ja18> ;
+        rdfs:label "European Rare Disease Research Coordination and Support Action" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(16.37208 48.20849)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(16.37208 48.20849)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Vienna" ;
             schema:addressCountry "AT" ;
-            owl:sameAs <http://sws.geonames.org/2761369/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
+            schema:addressRegion "Vienna" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Austria" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2761369/> ;
+    ] ; 
     .

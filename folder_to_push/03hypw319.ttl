@@ -15,7 +15,7 @@
     org:classification "education" ; 
     org:classification "funder" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-07-29"^^xsd:date ;
+    dct:modified "2025-03-26"^^xsd:date ;
     org:abbreviation "URCA"@None ; 
     org:alternativeName "University of Reims"@en ; 
     org:alternativeName "University of Reims Champagne-Ardenne"@en ; 
@@ -199,19 +199,37 @@
         org:member <https://ror.org/01sgwka45> ;
         rdfs:label "Microscopie Fonctionnelle du Vivant" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01r5wky88> ;
+        rdfs:label "Pharmacologie et Pathologies Fragilisantes" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03m4qdj85> ;
+        rdfs:label "Laboratoire d'Informatique en Calcul Intensif et Image pour la Simulation" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00wppxb27> ;
+        rdfs:label "Vieillissement, Fragilité" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(4.02853 49.26526)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Reims" ;
             schema:addressCountry "FR" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Grand Est" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "France" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

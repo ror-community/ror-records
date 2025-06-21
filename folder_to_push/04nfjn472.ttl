@@ -15,7 +15,7 @@
     org:classification "facility" ; 
     org:classification "funder" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-10-14"^^xsd:date ;
+    dct:modified "2025-03-26"^^xsd:date ;
     org:alternativeName "Czech Acad Sci, Inst Org Chem & Biochem"@en ; 
     org:alternativeName "Institute of Organic Chemistry and Biochemistry CAS"@en ; 
     org:alternativeName "Institute of Organic Chemistry and Biochemistry of the Czech Academy of Sciences"@en ; 
@@ -30,19 +30,31 @@
         org:member <https://ror.org/053avzc18> ;
         rdfs:label "Czech Academy of Sciences" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0286qer95> ;
+        rdfs:label "Czech National Infrastructure for Biological Data" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04xsmz457> ;
+        rdfs:label "Czech National Node to the European Infrastructure for Translational Medicine" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(14.42076 50.08804)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Prague" ;
             schema:addressCountry "CZ" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Prague" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "Czechia" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

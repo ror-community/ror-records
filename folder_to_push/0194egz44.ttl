@@ -1,0 +1,45 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/0194egz44> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    org:status "active" ;
+    org:classification "facility" ; 
+    dct:created "2025-03-26"^^xsd:date ;
+    dct:modified "2025-03-26"^^xsd:date ;
+    org:abbreviation "CIMSUR"@es ; 
+    schema:url <http://cimsur.unam.mx> ; 
+    schema:mainEntityOfPage <https://www.cimsur.unam.mx> ;
+    owl:sameAs <https://es.wikipedia.org/wiki/Centro_de_Investigaciones_Multidisciplinarias_sobre_Chiapas_y_la_Frontera_Sur> ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/01tmp8f25> ;
+        rdfs:label "Universidad Nacional Autónoma de México" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-92.64126 16.73176)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "San Cristóbal de las Casas" ;
+            schema:addressCountry "MX" ;
+            schema:addressRegion "Chiapas" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Mexico" ;
+                schema:containedInPlace [
+                    schema:name "North America" ;
+                    schema:identifier "NA"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3519537/> ;
+    ] ; 
+    .

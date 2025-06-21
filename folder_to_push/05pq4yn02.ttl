@@ -15,13 +15,12 @@
     org:classification "facility" ; 
     org:classification "funder" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-10-21"^^xsd:date ;
+    dct:modified "2025-03-26"^^xsd:date ;
     org:abbreviation "BC AV ČR"@None ; 
     org:abbreviation "BC CAS"@en ; 
     org:alternativeName "Biology Centre CAS"@en ; 
     org:alternativeName "Biology Centre of the Czech Academy of Sciences"@en ; 
     org:alternativeName "Czech Acad Sci, Biol Ctr"@en ; 
-    org:alternativeName "Czech Academy of Sciences, Biology Centre"@en ; 
     schema:url <http://bc.cas.cz> ; 
     schema:mainEntityOfPage <https://www.bc.cas.cz> ;
     schema:sameAs <https://api.crossref.org/funders/501100017273> ;
@@ -63,19 +62,31 @@
         org:member <https://ror.org/02tz8r820> ;
         rdfs:label "Institute of Soil Biology" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0286qer95> ;
+        rdfs:label "Czech National Infrastructure for Biological Data" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00defv642> ;
+        rdfs:label "National Research Infrastructure for Biological and Medical Imaging" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(14.47434 48.97447)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "České Budějovice" ;
             schema:addressCountry "CZ" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Jihočeský kraj" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "Czechia" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

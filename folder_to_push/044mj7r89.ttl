@@ -4,26 +4,55 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/044mj7r89> a org:Organization ;
     rdfs:label "Institut de Biologia Evolutiva" ;
     schema:name "Institut de Biologia Evolutiva" ;
     schema:foundingDate "2008"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "IBE" ;
-    schema:url <https://www.ibe.upf-csic.es> ; 
+    org:classification "facility" ; 
+    dct:created "2020-03-15"^^xsd:date ;
+    dct:modified "2025-03-26"^^xsd:date ;
+    org:abbreviation "IBE"@None ; 
+    schema:mainEntityOfPage <https://www.ibe.upf-csic.es> ;
+    schema:sameAs <https://grid.ac/institutions/grid.507636.1> ;
+    schema:sameAs <http://isni.org/isni/0000000404245398> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/04n0g0b29> ;
+        rdfs:label "Universitat Pompeu Fabra" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02gfc7t72> ;
+        rdfs:label "Consejo Superior de Investigaciones Científicas" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01wfb3668> ;
+        rdfs:label "Institut de Recerca de la Biodiversitat de la Universitat de Barcelona" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(2.15899 41.38879)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(2.15899 41.38879)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Barcelona" ;
             schema:addressCountry "ES" ;
-            owl:sameAs <http://sws.geonames.org/3128760/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000404245398> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q90571080> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "Catalonia" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Spain" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3128760/> ;
+    ] ; 
     .

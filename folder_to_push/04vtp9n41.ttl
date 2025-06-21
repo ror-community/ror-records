@@ -1,0 +1,46 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/04vtp9n41> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "2012"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "government" ; 
+    dct:created "2025-03-26"^^xsd:date ;
+    dct:modified "2025-03-26"^^xsd:date ;
+    org:abbreviation "SIE"@en ; 
+    org:alternativeName "Southern Institute of Ecology, Vietnam Academy of Science and Technology"@en ; 
+    schema:url <http://sie.vast.vn> ; 
+    schema:mainEntityOfPage <https://sie.vast.vn> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02wsd5p50> ;
+        rdfs:label "Vietnam Academy of Science and Technology" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(106.62965 10.82302)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Ho Chi Minh City" ;
+            schema:addressCountry "VN" ;
+            schema:addressRegion "Ho Chi Minh" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Vietnam" ;
+                schema:containedInPlace [
+                    schema:name "Asia" ;
+                    schema:identifier "AS"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1566083/> ;
+    ] ; 
+    .

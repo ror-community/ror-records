@@ -1,0 +1,46 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/03zbxqj79> a org:Organization ;
+    rdfs:label "Occupational Safety Research Institute" ;
+    schema:name "Occupational Safety Research Institute" ;
+    org:status "inactive" ;
+    org:classification "facility" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-03-26"^^xsd:date ;
+    org:abbreviation "VÚBP"@None ; 
+    org:alternativeName "Výzkumný ústav bezpečnosti práce"@cs ; 
+    schema:mainEntityOfPage <http://www.vubp.cz/> ;
+    schema:sameAs <https://grid.ac/institutions/grid.448120.b> ;
+    schema:sameAs <http://isni.org/isni/0000000097114506> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "successor" ;
+        org:member <https://ror.org/01gccqc59> ;
+        rdfs:label "Research Institute for Labour and Social Affairs" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(14.42076 50.08804)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Prague" ;
+            schema:addressCountry "CZ" ;
+            schema:addressRegion "Prague" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Czechia" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3067696/> ;
+    ] ; 
+    .

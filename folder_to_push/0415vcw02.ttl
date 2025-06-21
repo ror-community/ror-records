@@ -15,7 +15,7 @@
     org:classification "education" ; 
     org:classification "funder" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-10-21"^^xsd:date ;
+    dct:modified "2025-03-26"^^xsd:date ;
     org:abbreviation "CULS"@None ; 
     org:alternativeName "Czech University of Agriculture in Prague"@en ; 
     org:abbreviation "ČZU"@None ; 
@@ -25,19 +25,25 @@
     schema:sameAs <https://api.crossref.org/funders/501100006206> ;
     schema:sameAs <https://grid.ac/institutions/grid.15866.3c> ;
     schema:sameAs <http://isni.org/isni/000000012238631X> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05me1q676> ;
+        rdfs:label "Infrastructure for Promoting Metrology in Food and Nutrition in the Czech Republic" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(14.42076 50.08804)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Prague" ;
             schema:addressCountry "CZ" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Prague" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "Czechia" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

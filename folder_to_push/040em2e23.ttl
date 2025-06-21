@@ -14,7 +14,7 @@
     org:status "active" ;
     org:classification "education" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-06-20"^^xsd:date ;
+    dct:modified "2025-03-26"^^xsd:date ;
     org:abbreviation "ASRT"@None ; 
     org:alternativeName "Tajik Academy of Sciences"@en ; 
     schema:mainEntityOfPage <http://www.anrt.tj/index.php/en/> ;
@@ -33,19 +33,25 @@
         org:member <https://ror.org/02004hr86> ;
         rdfs:label "S. U. Umarov Physical-Technical Institute" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04wkkwk59> ;
+        rdfs:label "Institute of Mathematics National Academy of Science of Tajikistan" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(68.77905 38.53575)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Dushanbe" ;
             schema:addressCountry "TJ" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Dushanbe" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "Tajikistan" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Asia" ;
+                    schema:identifier "AS"
                 ]
             ]
         ] ;

@@ -15,7 +15,7 @@
     org:classification "education" ; 
     org:classification "funder" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-10-21"^^xsd:date ;
+    dct:modified "2025-03-26"^^xsd:date ;
     org:abbreviation "BUT"@None ; 
     org:abbreviation "VUT"@None ; 
     org:alternativeName "Vysoké Učení Technické v Brně"@cs ; 
@@ -31,19 +31,31 @@
         org:member <https://ror.org/01p7k1986> ;
         rdfs:label "Central European Institute of Technology" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/004fpq690> ;
+        rdfs:label "CzechNanoLab Research Infrastructure" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00defv642> ;
+        rdfs:label "National Research Infrastructure for Biological and Medical Imaging" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(16.60796 49.19522)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Brno" ;
             schema:addressCountry "CZ" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "South Moravian" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "Czechia" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

@@ -8,15 +8,16 @@
 @prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/03t4gr691> a org:Organization ;
-    rdfs:label "Academic Medical Center" ;
-    schema:name "Academic Medical Center" ;
+    rdfs:label "" ;
+    schema:name "" ;
     schema:foundingDate "1983"^^xsd:gYear ;
     org:status "active" ;
     org:classification "funder" ; 
     org:classification "healthcare" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-10-21"^^xsd:date ;
+    dct:modified "2025-03-26"^^xsd:date ;
     org:abbreviation "AMC"@None ; 
+    org:alternativeName "Academic Medical Center"@en ; 
     schema:url <http://amc.nl> ; 
     schema:mainEntityOfPage <https://www.amc.nl> ;
     owl:sameAs <https://en.wikipedia.org/wiki/Academic_Medical_Center> ; 
@@ -28,12 +29,6 @@
         org:role "child" ;
         org:member <https://ror.org/022gvqh28> ;
         rdfs:label "Amsterdam Institute for Addiction Research" ;
-    ] ; 
-    org:hasLink [
-        a org:Membership ;
-        org:role "child" ;
-        org:member <https://ror.org/01x2d9f70> ;
-        rdfs:label "Amsterdam Neuroscience" ;
     ] ; 
     org:hasLink [
         a org:Membership ;
@@ -53,13 +48,13 @@
         schema:address [
             schema:addressLocality "Amsterdam" ;
             schema:addressCountry "NL" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "North Holland" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "The Netherlands" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

@@ -1,0 +1,39 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/0230rkd28> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "2021"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "government" ; 
+    dct:created "2025-03-26"^^xsd:date ;
+    dct:modified "2025-03-26"^^xsd:date ;
+    org:abbreviation "WRTI"@en ; 
+    schema:url <http://wrti.go.ke> ; 
+    schema:mainEntityOfPage <https://wrti.go.ke> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(36.43261 -0.71383)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Naivasha" ;
+            schema:addressCountry "KE" ;
+            schema:addressRegion "Nakuru County" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Kenya" ;
+                schema:containedInPlace [
+                    schema:name "Africa" ;
+                    schema:identifier "AF"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/184707/> ;
+    ] ; 
+    .

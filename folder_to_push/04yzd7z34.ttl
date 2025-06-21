@@ -1,0 +1,42 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/04yzd7z34> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "2017"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "other" ; 
+    dct:created "2025-03-26"^^xsd:date ;
+    dct:modified "2025-03-26"^^xsd:date ;
+    org:abbreviation "FENZ"@en ; 
+    org:alternativeName "Fire and Emergency NZ"@en ; 
+    schema:url <http://fireandemergency.nz> ; 
+    schema:mainEntityOfPage <https://www.fireandemergency.nz> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Fire_and_Emergency_New_Zealand> ; 
+    schema:sameAs <http://isni.org/isni/0000000494931796> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(174.77557 -41.28664)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Wellington" ;
+            schema:addressCountry "NZ" ;
+            schema:addressRegion "Wellington Region" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "New Zealand" ;
+                schema:containedInPlace [
+                    schema:name "Oceania" ;
+                    schema:identifier "OC"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2179537/> ;
+    ] ; 
+    .

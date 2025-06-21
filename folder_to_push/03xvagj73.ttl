@@ -1,0 +1,65 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/03xvagj73> a org:Organization ;
+    rdfs:label "KPMG (Netherlands)" ;
+    schema:name "KPMG (Netherlands)" ;
+    schema:foundingDate "1987"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "company" ; 
+    dct:created "2020-07-06"^^xsd:date ;
+    dct:modified "2025-03-26"^^xsd:date ;
+    org:alternativeName "KPMG International Cooperative"@None ; 
+    org:alternativeName "Klynveld Peat Marwick Goerdeler"@None ; 
+    schema:mainEntityOfPage <https://home.kpmg/xx/en/home.html> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/KPMG> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.508406.f> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04cwh4511> ;
+        rdfs:label "KPMG (Australia)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05rjsp326> ;
+        rdfs:label "KPMG (United Kingdom)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/049ngdd28> ;
+        rdfs:label "KPMG (United States)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03q9f6286> ;
+        rdfs:label "KPMG (Singapore)" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(4.86389 52.30083)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Amstelveen" ;
+            schema:addressCountry "NL" ;
+            schema:addressRegion "North Holland" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "The Netherlands" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2759798/> ;
+    ] ; 
+    .

@@ -15,7 +15,7 @@
     org:classification "funder" ; 
     org:classification "other" ; 
     dct:created "2024-12-09"^^xsd:date ;
-    dct:modified "2024-12-10"^^xsd:date ;
+    dct:modified "2025-03-26"^^xsd:date ;
     org:abbreviation "CERIC"@en ; 
     org:abbreviation "CERIC-ERIC"@en ; 
     schema:url <http://ceric-eric.eu> ; 
@@ -23,19 +23,25 @@
     owl:sameAs <https://it.wikipedia.org/wiki/Central_European_Research_Infrastructure_Consortium> ; 
     schema:sameAs <https://api.crossref.org/funders/100020931> ;
     schema:sameAs <http://isni.org/isni/0000000473971334> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/001338s77> ;
+        rdfs:label "Surface Physics Laboratory – Hydrogen Technology Centre" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(13.77678 45.64953)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Trieste" ;
             schema:addressCountry "IT" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Friuli Venezia Giulia" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "Italy" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

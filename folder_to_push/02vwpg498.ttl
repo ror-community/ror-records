@@ -14,7 +14,7 @@
     org:status "active" ;
     org:classification "nonprofit" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-10-21"^^xsd:date ;
+    dct:modified "2025-03-26"^^xsd:date ;
     org:abbreviation "NRPI"@None ; 
     org:alternativeName "Státní ústav radiační ochrany"@cs ; 
     org:abbreviation "SÚRO"@None ; 
@@ -22,19 +22,25 @@
     schema:mainEntityOfPage <https://www.suro.cz> ;
     schema:sameAs <https://grid.ac/institutions/grid.436407.2> ;
     schema:sameAs <http://isni.org/isni/0000000092366202> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05r4c7e67> ;
+        rdfs:label "Laboratoire Souterrain de Modane – participation of the Czech Republic" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(14.42076 50.08804)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Prague" ;
             schema:addressCountry "CZ" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Prague" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "Czechia" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

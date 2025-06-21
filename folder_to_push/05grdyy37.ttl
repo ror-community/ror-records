@@ -4,26 +4,105 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/05grdyy37> a org:Organization ;
     rdfs:label "Amsterdam University Medical Centers" ;
     schema:name "Amsterdam University Medical Centers" ;
     schema:foundingDate "2018"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Healthcare" ; 
-    org:alternativeName "Amsterdam UMC" ;
-    schema:url <https://www.amsterdamumc.org> ; 
+    org:classification "funder" ; 
+    org:classification "healthcare" ; 
+    dct:created "2020-12-21"^^xsd:date ;
+    dct:modified "2025-03-26"^^xsd:date ;
+    org:alternativeName "Amsterdam UMC"@nl ; 
+    schema:mainEntityOfPage <https://www.amsterdamumc.org> ;
+    schema:sameAs <https://api.crossref.org/funders/100019573> ;
+    schema:sameAs <https://grid.ac/institutions/grid.509540.d> ;
+    schema:sameAs <http://isni.org/isni/0000000468803010> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03t4gr691> ;
+        rdfs:label "Amsterdam UMC Location University of Amsterdam" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00q6h8f30> ;
+        rdfs:label "Amsterdam UMC Location Vrije Universiteit Amsterdam" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/052b8a564> ;
+        rdfs:label "Amsterdam health & technology institute" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/041cyvf45> ;
+        rdfs:label "Amsterdam Reproduction Development" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00bcn1057> ;
+        rdfs:label "Amsterdam institute for Immunology and Infectious Diseases" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02ck0dq88> ;
+        rdfs:label "Amsterdam Gastroenterology Endocrinology Metabolism" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05c9qnd49> ;
+        rdfs:label "Amsterdam Cardiovascular Sciences" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/04atb9h07> ;
+        rdfs:label "Amsterdam Movement Sciences" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0258apj61> ;
+        rdfs:label "Amsterdam Public Health" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01x2d9f70> ;
+        rdfs:label "Amsterdam Neuroscience" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/0286p1c86> ;
+        rdfs:label "Cancer Center Amsterdam" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(4.88969 52.37403)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(4.88969 52.37403)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Amsterdam" ;
             schema:addressCountry "NL" ;
-            owl:sameAs <http://sws.geonames.org/2759794/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000468803010> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q56682938> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "North Holland" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "The Netherlands" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2759794/> ;
+    ] ; 
     .

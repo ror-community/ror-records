@@ -15,7 +15,7 @@
     org:classification "funder" ; 
     org:classification "nonprofit" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-12-10"^^xsd:date ;
+    dct:modified "2025-03-26"^^xsd:date ;
     org:abbreviation "GI"@None ; 
     schema:mainEntityOfPage <https://www.goethe.de/de/index.html> ;
     owl:sameAs <https://en.wikipedia.org/wiki/Goethe-Institut> ; 
@@ -28,19 +28,25 @@
         org:member <https://ror.org/0510zxr89> ;
         rdfs:label "Goethe Institut Portugal" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01mtt4z48> ;
+        rdfs:label "Goethe-Institut Singapore" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(11.57549 48.13743)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Munich" ;
             schema:addressCountry "DE" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Bavaria" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "Germany" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

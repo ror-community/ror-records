@@ -15,7 +15,7 @@
     org:classification "education" ; 
     org:classification "funder" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-10-21"^^xsd:date ;
+    dct:modified "2025-03-26"^^xsd:date ;
     org:abbreviation "ČVUT"@None ; 
     schema:url <http://cvut.cz> ; 
     schema:mainEntityOfPage <https://www.cvut.cz> ;
@@ -23,19 +23,55 @@
     schema:sameAs <https://api.crossref.org/funders/100007655> ;
     schema:sameAs <https://grid.ac/institutions/grid.6652.7> ;
     schema:sameAs <http://isni.org/isni/0000000121738213> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01t6gwh61> ;
+        rdfs:label "VR-1 – Training Reactor for Research Activities" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05r4c7e67> ;
+        rdfs:label "Laboratoire Souterrain de Modane – participation of the Czech Republic" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02mebaz96> ;
+        rdfs:label "Research Infrastructure for Fermilab Experiments" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0286qer95> ;
+        rdfs:label "Czech National Infrastructure for Biological Data" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01t0a1151> ;
+        rdfs:label "Research Infrastructure for Experiments at CERN" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02s1c4g54> ;
+        rdfs:label "Brookhaven National Laboratory - Participation of the Czech Republic" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(14.42076 50.08804)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Prague" ;
             schema:addressCountry "CZ" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Prague" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "Czechia" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

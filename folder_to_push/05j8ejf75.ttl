@@ -1,0 +1,41 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/05j8ejf75> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "1967"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2025-03-26"^^xsd:date ;
+    dct:modified "2025-03-26"^^xsd:date ;
+    org:alternativeName "UIN STS Jambi"@id ; 
+    org:alternativeName "UIN Sulthan Thaha Saifudin Jambi"@id ; 
+    schema:url <http://uinjambi.ac.id> ; 
+    schema:mainEntityOfPage <https://uinjambi.ac.id> ;
+    owl:sameAs <https://id.wikipedia.org/wiki/Universitas_Islam_Negeri_Sulthan_Thaha_Saifuddin> ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(103.61667 -1.6)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Jambi City" ;
+            schema:addressCountry "ID" ;
+            schema:addressRegion "Jambi" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Indonesia" ;
+                schema:containedInPlace [
+                    schema:name "Asia" ;
+                    schema:identifier "AS"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1642858/> ;
+    ] ; 
+    .

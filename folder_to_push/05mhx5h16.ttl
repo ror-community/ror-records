@@ -14,7 +14,7 @@
     org:status "active" ;
     org:classification "education" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-10-21"^^xsd:date ;
+    dct:modified "2025-03-26"^^xsd:date ;
     org:abbreviation "EAL"@None ; 
     org:abbreviation "ENSAL"@None ; 
     org:alternativeName "École d'architecture de Lyon"@fr ; 
@@ -22,19 +22,25 @@
     schema:mainEntityOfPage <https://www.lyon.archi.fr> ;
     schema:sameAs <https://grid.ac/institutions/grid.466390.e> ;
     schema:sameAs <http://isni.org/isni/0000000417817025> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0256r1e04> ;
+        rdfs:label "Environnement, ville, société" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(4.84671 45.74846)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Lyon" ;
             schema:addressCountry "FR" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Auvergne-Rhône-Alpes" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "France" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

@@ -4,25 +4,48 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01bynmm24> a org:Organization ;
     rdfs:label "Hospital Universitario Santa Cristina" ;
     schema:name "Hospital Universitario Santa Cristina" ;
     schema:foundingDate "1926"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Healthcare" ; 
-    schema:url <https://www.comunidad.madrid/hospital/santacristina/> ; 
+    org:classification "healthcare" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-03-26"^^xsd:date ;
+    schema:mainEntityOfPage <https://www.comunidad.madrid/hospital/santacristina/> ;
+    schema:sameAs <https://grid.ac/institutions/grid.411359.b> ;
+    schema:sameAs <http://isni.org/isni/0000000417631052> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/040scgh75> ;
+        rdfs:label "Comunidad de Madrid" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/04dp46240> ;
+        rdfs:label "Universidad Europea" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-3.70256 40.4165)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-3.70256 40.4165)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Madrid" ;
             schema:addressCountry "ES" ;
-            owl:sameAs <http://sws.geonames.org/3117735/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000417631052> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q5902906> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "Madrid" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Spain" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3117735/> ;
+    ] ; 
     .

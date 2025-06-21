@@ -1,0 +1,40 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/04dmevr13> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "1906"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "archive" ; 
+    dct:created "2025-03-26"^^xsd:date ;
+    dct:modified "2025-03-26"^^xsd:date ;
+    org:abbreviation "NMSA"@en ; 
+    org:alternativeName "Natal Museum"@en ; 
+    schema:url <http://nmsa.org.za> ; 
+    schema:mainEntityOfPage <https://nmsa.org.za> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(30.39278 -29.61679)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Pietermaritzburg" ;
+            schema:addressCountry "ZA" ;
+            schema:addressRegion "KwaZulu-Natal" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "South Africa" ;
+                schema:containedInPlace [
+                    schema:name "Africa" ;
+                    schema:identifier "AF"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/965301/> ;
+    ] ; 
+    .

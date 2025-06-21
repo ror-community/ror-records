@@ -1,0 +1,46 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/00yx29a03> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2021-09-23"^^xsd:date ;
+    dct:modified "2025-03-26"^^xsd:date ;
+    org:alternativeName "Fernhochschule – The Mobile University"@en ; 
+    schema:url <http://mobile-university.de> ; 
+    schema:url <http://srh-distance-learning-university.com> ; 
+    schema:mainEntityOfPage <https://www.mobile-university.de> ;
+    schema:sameAs <https://grid.ac/institutions/grid.512569.c> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "predecessor" ;
+        org:member <https://ror.org/05ygfpx91> ;
+        rdfs:label "SRH Fernhochschule Riedlingen" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(9.47558 48.15455)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Riedlingen" ;
+            schema:addressCountry "DE" ;
+            schema:addressRegion "Baden-Wurttemberg" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Germany" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2847080/> ;
+    ] ; 
+    .

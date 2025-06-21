@@ -1,0 +1,45 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/05q4tey07> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "1931"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-03-26"^^xsd:date ;
+    org:abbreviation "BQFNC"@None ; 
+    org:alternativeName "Blue Quills Education Centre"@en ; 
+    org:alternativeName "Blue Quills First Nations College"@en ; 
+    org:abbreviation "UnBQ"@en ; 
+    schema:url <http://bluequills.ca> ; 
+    schema:mainEntityOfPage <https://www.bluequills.ca> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Blue_Quills_University> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.439986.9> ;
+    schema:sameAs <http://isni.org/isni/0000000404142735> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-111.28507 53.98347)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "St. Paul" ;
+            schema:addressCountry "CA" ;
+            schema:addressRegion "Alberta" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Canada" ;
+                schema:containedInPlace [
+                    schema:name "North America" ;
+                    schema:identifier "NA"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/6157795/> ;
+    ] ; 
+    .
