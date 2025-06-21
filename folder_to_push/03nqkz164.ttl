@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/03nqkz164> a org:Organization ;
+    rdfs:label "ETH Zürich Foundation" ;
+    schema:name "ETH Zürich Foundation" ;
+    org:status "active" ;
+    org:classification "Nonprofit" ; 
+    org:alternativeName "ETH Foundation" ;
+    schema:url <https://ethz-foundation.ch> ; 
+    owl:sameAs <https://de.wikipedia.org/wiki/ETH_Z%C3%BCrich_Foundation> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(8.55 47.36667)"^^geo:wktLiteral ;
+            schema:addressLocality "Zurich" ;
+            schema:addressCountry "CH" ;
+            owl:sameAs <http://sws.geonames.org/2657896/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000478667147> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q62513374> ;
+    .

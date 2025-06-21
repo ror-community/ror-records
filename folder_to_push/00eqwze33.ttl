@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/00eqwze33> a org:Organization ;
+    rdfs:label "Basque Centre for Climate Change" ;
+    schema:name "Basque Centre for Climate Change" ;
+    schema:foundingDate "2008"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Nonprofit" ; 
+    org:abbreviation "BERC" ;
+    org:alternativeName "BC3" ;
+    schema:url <https://www.bc3research.org/> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-2.92528 43.26271)"^^geo:wktLiteral ;
+            schema:addressLocality "Bilbao" ;
+            schema:addressCountry "ES" ;
+            owl:sameAs <http://sws.geonames.org/3128026/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000120020998> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

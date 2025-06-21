@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/00vye5g85> a org:Organization ;
+    rdfs:label "Research Centre in Digitalization and Intelligent Robotics" ;
+    schema:name "Research Centre in Digitalization and Intelligent Robotics" ;
+    schema:foundingDate "2018"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    org:abbreviation "CeDRI" ;
+    org:alternativeName "Research Centre in Digitalization and Intelligent Robotics (CeDRI)" ;
+    schema:url <https://cedri.ipb.pt> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-6.76346 41.83615)"^^geo:wktLiteral ;
+            schema:addressLocality "Bragança" ;
+            schema:addressCountry "PT" ;
+            owl:sameAs <http://sws.geonames.org/2742026/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    .

@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/0336w4p56> a org:Organization ;
+    rdfs:label "Université numérique Cheikh Hamidou KANE" ;
+    schema:name "Université numérique Cheikh Hamidou KANE" ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "UN-CHK" ;
+    org:alternativeName "Université virtuelle du Sénégal" ;
+    schema:url <https://www.unchk.sn> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-17.44406 14.6937)"^^geo:wktLiteral ;
+            schema:addressLocality "Dakar" ;
+            schema:addressCountry "SN" ;
+            owl:sameAs <http://sws.geonames.org/2253354/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/000000049335961X> ;
+    .

@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/050qa2043> a org:Organization ;
+    rdfs:label "International Society for Neurochemistry" ;
+    schema:name "International Society for Neurochemistry" ;
+    schema:foundingDate "1963"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Other" ; 
+    org:abbreviation "ISN" ;
+    schema:url <https://www.neurochemistry.org> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/International_Society_for_Neurochemistry> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(6.14569 46.20222)"^^geo:wktLiteral ;
+            schema:addressLocality "Geneva" ;
+            schema:addressCountry "CH" ;
+            owl:sameAs <http://sws.geonames.org/2660646/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000460918278> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q6053383> ;
+    .

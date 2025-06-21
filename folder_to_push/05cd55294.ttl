@@ -1,0 +1,24 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/05cd55294> a org:Organization ;
+    rdfs:label "State Key Laboratory of Mobile Networks and Mobile Multimedia Technology" ;
+    schema:name "State Key Laboratory of Mobile Networks and Mobile Multimedia Technology" ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    org:alternativeName "State Key Lab of Mobile Networks and Mobile Multimedia Technology" ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(118.77778 32.06167)"^^geo:wktLiteral ;
+            schema:addressLocality "Nanjing" ;
+            schema:addressCountry "CN" ;
+            owl:sameAs <http://sws.geonames.org/1799962/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    .

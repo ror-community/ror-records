@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/05r5ax121> a org:Organization ;
+    rdfs:label "Jeffrey Cheah Foundation" ;
+    schema:name "Jeffrey Cheah Foundation" ;
+    schema:foundingDate "1997"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "JCF" ;
+    schema:url <https://jeffreycheah.foundation> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(101.68653 3.1412)"^^geo:wktLiteral ;
+            schema:addressLocality "Kuala Lumpur" ;
+            schema:addressCountry "MY" ;
+            owl:sameAs <http://sws.geonames.org/1735161/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000494555575> ;
+    .

@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/051vpkw73> a org:Organization ;
+    rdfs:label "Asociacion de Investigacion de Materiales Plasticos y Conexas" ;
+    schema:name "Asociacion de Investigacion de Materiales Plasticos y Conexas" ;
+    schema:foundingDate "1990"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Other" ; 
+    org:abbreviation "AIMPLAS" ;
+    org:alternativeName "Asociacion De Investigacion De Materiales Plasticos Y Conexas" ;
+    schema:url <https://www.aimplas.net> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-0.44079 39.50263)"^^geo:wktLiteral ;
+            schema:addressLocality "Paterna" ;
+            schema:addressCountry "ES" ;
+            owl:sameAs <http://sws.geonames.org/2512862/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000104453021> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

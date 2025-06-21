@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/04wk25q62> a org:Organization ;
+    rdfs:label "University of Constantine 3" ;
+    schema:name "University of Constantine 3" ;
+    schema:foundingDate "2012"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:alternativeName "University of Constantine 3 Salah Boubnider" ;
+    schema:url <https://univ-constantine3.dz> ; 
+    owl:sameAs <https://ar.wikipedia.org/wiki/%D8%AC%D8%A7%D9%85%D8%B9%D8%A9_%D9%82%D8%B3%D9%86%D8%B7%D9%8A%D9%86%D8%A9_3_-%D8%B5%D8%A7%D9%84%D8%AD_%D8%A8%D9%88%D8%A8%D9%86%D9%8A%D8%AF%D8%B1> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(6.5671 36.2459)"^^geo:wktLiteral ;
+            schema:addressLocality "Ali Mendjeli" ;
+            schema:addressCountry "DZ" ;
+            owl:sameAs <http://sws.geonames.org/11204500/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000446550366> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q55721694> ;
+    .

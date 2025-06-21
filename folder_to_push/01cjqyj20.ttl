@@ -1,0 +1,26 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/01cjqyj20> a org:Organization ;
+    rdfs:label "Institut Agama Islam Negeri Curup" ;
+    schema:name "Institut Agama Islam Negeri Curup" ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:alternativeName "IAIN Curup" ;
+    schema:url <https://portal.iaincurup.ac.id> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(102.5207 -3.4703)"^^geo:wktLiteral ;
+            schema:addressLocality "Curup" ;
+            schema:addressCountry "ID" ;
+            owl:sameAs <http://sws.geonames.org/1645875/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q109912911> ;
+    .

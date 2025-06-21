@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/04sk0bj73> a org:Organization ;
+    rdfs:label "Fresenius Medical Care (Germany)" ;
+    schema:name "Fresenius Medical Care (Germany)" ;
+    schema:foundingDate "1996"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Company" ; 
+    schema:url <http://www.freseniusmedicalcare.us/en/home/> ; 
+    owl:sameAs <http://en.wikipedia.org/wiki/Fresenius_Medical_Care> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(8.61816 50.22683)"^^geo:wktLiteral ;
+            schema:addressLocality "Bad Homburg" ;
+            schema:addressCountry "DE" ;
+            owl:sameAs <http://sws.geonames.org/2953436/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q650259> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

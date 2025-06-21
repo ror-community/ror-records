@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/00h52n341> a org:Organization ;
+    rdfs:label "Changchun Institute of Applied Chemistry" ;
+    schema:name "Changchun Institute of Applied Chemistry" ;
+    schema:foundingDate "1948"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    org:abbreviation "CIAC" ;
+    org:alternativeName "Northeast Industrial Institute" ;
+    schema:url <http://english.ciac.cas.cn/> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(125.32278 43.88)"^^geo:wktLiteral ;
+            schema:addressLocality "Changchun" ;
+            schema:addressCountry "CN" ;
+            owl:sameAs <http://sws.geonames.org/2038180/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000417932912> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

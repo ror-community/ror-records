@@ -1,0 +1,32 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/0207yh398> a org:Organization ;
+    rdfs:label "Shandong University" ;
+    schema:name "Shandong University" ;
+    schema:foundingDate "1901"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "SDU" ;
+    org:alternativeName "Shāndōng Dàxué," ;
+    schema:url <http://en.sdu.edu.cn/> ; 
+    owl:sameAs <http://en.wikipedia.org/wiki/Shandong_University> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(116.99722 36.66833)"^^geo:wktLiteral ;
+            schema:addressLocality "Jinan" ;
+            schema:addressCountry "CN" ;
+            owl:sameAs <http://sws.geonames.org/1805753/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000417611174> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q604470> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q39654170> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

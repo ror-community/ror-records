@@ -1,0 +1,26 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/037pstq92> a org:Organization ;
+    rdfs:label "Instituto Nacional de Ciência e Tecnologia da Criosfera" ;
+    schema:name "Instituto Nacional de Ciência e Tecnologia da Criosfera" ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    org:alternativeName "INCT da Criosfera" ;
+    schema:url <https://www.ufrgs.br/inctcriosfera/> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-51.23019 -30.03283)"^^geo:wktLiteral ;
+            schema:addressLocality "Porto Alegre" ;
+            schema:addressCountry "BR" ;
+            owl:sameAs <http://sws.geonames.org/3452925/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/000000047773247X> ;
+    .

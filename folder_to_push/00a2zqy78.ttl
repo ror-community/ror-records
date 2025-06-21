@@ -1,0 +1,25 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/00a2zqy78> a org:Organization ;
+    rdfs:label "Laboratoire des technologies spatiales, systèmes embarqués, navigation et avionique" ;
+    schema:name "Laboratoire des technologies spatiales, systèmes embarqués, navigation et avionique" ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    org:abbreviation "LASSENA" ;
+    schema:url <https://lassena.etsmtl.ca> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-73.58781 45.50884)"^^geo:wktLiteral ;
+            schema:addressLocality "Montreal" ;
+            schema:addressCountry "CA" ;
+            owl:sameAs <http://sws.geonames.org/6077243/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    .

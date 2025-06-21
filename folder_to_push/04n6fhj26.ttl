@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/04n6fhj26> a org:Organization ;
+    rdfs:label "Clinics Hospital of Ribeirão Preto" ;
+    schema:name "Clinics Hospital of Ribeirão Preto" ;
+    schema:foundingDate "1952"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Healthcare" ; 
+    schema:url <http://www.hcrp.usp.br/sitehc/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Hospital_das_Cl%C3%ADnicas_de_Ribeir%C3%A3o_Preto> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-47.81028 -21.1775)"^^geo:wktLiteral ;
+            schema:addressLocality "Ribeirão Preto" ;
+            schema:addressCountry "BR" ;
+            owl:sameAs <http://sws.geonames.org/3451328/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q10298524> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/03gq5rs15> a org:Organization ;
+    rdfs:label "Consellería de Cultura, Educación, Formación Profesional e Universidades" ;
+    schema:name "Consellería de Cultura, Educación, Formación Profesional e Universidades" ;
+    org:status "active" ;
+    org:classification "Government" ; 
+    org:abbreviation "CCEOU" ;
+    org:alternativeName "Consellería de Cultura, Educación e Ordenación Universitaria" ;
+    schema:url <https://culturaeducacion.xunta.gal/> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-8.396 43.37135)"^^geo:wktLiteral ;
+            schema:addressLocality "A Coruña" ;
+            schema:addressCountry "ES" ;
+            owl:sameAs <http://sws.geonames.org/3119841/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

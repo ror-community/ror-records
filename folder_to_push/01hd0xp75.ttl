@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/01hd0xp75> a org:Organization ;
+    rdfs:label "Skogs- och Jordbrukets Forskningsråd" ;
+    schema:name "Skogs- och Jordbrukets Forskningsråd" ;
+    schema:foundingDate "1945"^^xsd:gYear ;
+    org:status "inactive" ;
+    org:classification "Government" ; 
+    org:abbreviation "SJFR" ;
+    owl:sameAs <https://sv.wikipedia.org/wiki/Skogs-_och_jordbrukets_forskningsr%C3%A5d> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(18.06871 59.32938)"^^geo:wktLiteral ;
+            schema:addressLocality "Stockholm" ;
+            schema:addressCountry "SE" ;
+            owl:sameAs <http://sws.geonames.org/2673730/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q10670309> ;
+    .

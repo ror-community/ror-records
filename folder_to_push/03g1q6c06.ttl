@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/03g1q6c06> a org:Organization ;
+    rdfs:label "State University of New York at Geneseo" ;
+    schema:name "State University of New York at Geneseo" ;
+    schema:foundingDate "1871"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:alternativeName "State University of New York-College at Geneseo" ;
+    schema:url <http://www.geneseo.edu/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/State_University_of_New_York_at_Geneseo> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-77.81695 42.7959)"^^geo:wktLiteral ;
+            schema:addressLocality "Geneseo" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/5118394/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000101510940> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q6149540> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

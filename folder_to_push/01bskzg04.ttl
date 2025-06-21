@@ -1,0 +1,25 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/01bskzg04> a org:Organization ;
+    rdfs:label "State Key Laboratory of Theoretical Chemical Computing" ;
+    schema:name "State Key Laboratory of Theoretical Chemical Computing" ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    org:alternativeName "State Key Lab of Theoretical Chemical Computing" ;
+    schema:url <http://tcclab.jlu.edu.cn> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(126.56028 43.85083)"^^geo:wktLiteral ;
+            schema:addressLocality "Jilin City" ;
+            schema:addressCountry "CN" ;
+            owl:sameAs <http://sws.geonames.org/2036502/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    .

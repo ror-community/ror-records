@@ -1,0 +1,26 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/04rvfc379> a org:Organization ;
+    rdfs:label "Solar Data Analysis Center" ;
+    schema:name "Solar Data Analysis Center" ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    org:abbreviation "SDAC" ;
+    org:alternativeName "NASA Solar Data Analysis Center" ;
+    schema:url <https://umbra.nascom.nasa.gov> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-76.87553 39.00455)"^^geo:wktLiteral ;
+            schema:addressLocality "Greenbelt" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/4356847/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    .

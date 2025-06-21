@@ -1,0 +1,26 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/01nx7yy98> a org:Organization ;
+    rdfs:label "Departament d'Universitats, Recerca i Societat de la Informació" ;
+    schema:name "Departament d'Universitats, Recerca i Societat de la Informació" ;
+    schema:foundingDate "2000"^^xsd:gYear ;
+    org:status "inactive" ;
+    org:classification "Government" ; 
+    org:abbreviation "DURSI" ;
+    owl:sameAs <https://ca.wikipedia.org/wiki/Departament_d%27Universitats,_Recerca_i_Societat_de_la_Informaci%C3%B3_de_la_Generalitat_de_Catalunya> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(2.15899 41.38879)"^^geo:wktLiteral ;
+            schema:addressLocality "Barcelona" ;
+            schema:addressCountry "ES" ;
+            owl:sameAs <http://sws.geonames.org/3128760/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    .

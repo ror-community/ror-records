@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/03cavsb35> a org:Organization ;
+    rdfs:label "Universitas Islam Negeri Raden Fatah Palembang" ;
+    schema:name "Universitas Islam Negeri Raden Fatah Palembang" ;
+    schema:foundingDate "1964"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "UIN RFP" ;
+    org:alternativeName "UIN Palembang" ;
+    schema:url <https://radenfatah.ac.id> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Raden_Fatah_State_Islamic_University> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(104.7458 -2.91673)"^^geo:wktLiteral ;
+            schema:addressLocality "Palembang" ;
+            schema:addressCountry "ID" ;
+            owl:sameAs <http://sws.geonames.org/1633070/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000460065535> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q12486119> ;
+    .
