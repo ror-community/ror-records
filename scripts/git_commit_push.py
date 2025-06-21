@@ -89,19 +89,3 @@ def git_push_existing_ttl(repo_dir, target_dir, version_name, tag_version=None):
     except Exception as e:
         print(f"\n❌ ERREUR : {str(e)}")
         return False
-    
-if __name__ == "__main__":
-    
-    success = git_push_existing_ttl(
-        repo_dir= Path(__file__).parent.parent,
-        target_dir= "folder_to_push",
-        version_name=f"Release v1.66",
-        tag_version="v1.66"
-    )
-
-    if not success:
-        print("\n✗ Échec de l'opération. Voir les messages ci-dessus.")
-        exit(1)
-
-    print("\n✓ Release v1.66 poussée avec succès. Attente de 15 secondes...")
-    # time.sleep(30)
