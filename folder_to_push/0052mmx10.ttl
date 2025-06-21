@@ -1,0 +1,41 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/0052mmx10> a org:Organization ;
+    rdfs:label "Bharati Vidyapeeth Deemed University" ;
+    schema:name "Bharati Vidyapeeth Deemed University" ;
+    schema:foundingDate "1964"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    schema:url <http://bharatividyapeeth.edu> ; 
+    schema:mainEntityOfPage <https://bharatividyapeeth.edu> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Bharati_Vidyapeeth> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.411681.b> ;
+    schema:sameAs <http://isni.org/isni/0000000405030903> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(73.85535 18.51957)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Pune" ;
+            schema:addressCountry "IN" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "India" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1259229/> ;
+    ] ; 
+    .

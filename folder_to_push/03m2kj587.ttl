@@ -4,28 +4,41 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/03m2kj587> a org:Organization ;
     rdfs:label "Hochschule Hannover" ;
     schema:name "Hochschule Hannover" ;
     schema:foundingDate "1971"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "HsH" ;
-    org:alternativeName "Hochschule Hannover – University of Applied Sciences and Arts" ;
-    schema:url <https://www.hs-hannover.de> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Hochschule_Hannover> ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:alternativeName "HS Hannover"@de ; 
+    org:alternativeName "Hochschule Hannover – University of Applied Sciences and Arts"@en ; 
+    org:abbreviation "HsH"@None ; 
+    schema:url <http://hs-hannover.de> ; 
+    schema:mainEntityOfPage <https://www.hs-hannover.de> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Hochschule_Hannover> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.461671.3> ;
+    schema:sameAs <http://isni.org/isni/0000000405891084> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(9.73322 52.37052)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(9.73322 52.37052)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Hanover" ;
             schema:addressCountry "DE" ;
-            owl:sameAs <http://sws.geonames.org/2910831/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000405891084> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q224514> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Germany" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2910831/> ;
+    ] ; 
     .

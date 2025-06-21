@@ -4,28 +4,41 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/00gm0aw40> a org:Organization ;
     rdfs:label "Ostbayerische Technische Hochschule Amberg-Weiden" ;
     schema:name "Ostbayerische Technische Hochschule Amberg-Weiden" ;
     schema:foundingDate "1994"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "OTH-AW" ;
-    org:alternativeName "Technical University of Applied Sciences Amberg-Weiden" ;
-    schema:url <https://www.oth-aw.de> ; 
-    owl:sameAs <https://de.wikipedia.org/wiki/Ostbayerische_Technische_Hochschule_Amberg-Weiden> ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:alternativeName "OTH Amberg-Weiden"@de ; 
+    org:abbreviation "OTH-AW"@None ; 
+    org:alternativeName "Technical University of Applied Sciences Amberg-Weiden"@en ; 
+    schema:url <http://oth-aw.de> ; 
+    schema:mainEntityOfPage <https://www.oth-aw.de> ;
+    owl:sameAs <https://de.wikipedia.org/wiki/Ostbayerische_Technische_Hochschule_Amberg-Weiden> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.462281.b> ;
+    schema:sameAs <http://isni.org/isni/0000000122341381> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(11.86267 49.44287)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(11.86267 49.44287)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Amberg" ;
             schema:addressCountry "DE" ;
-            owl:sameAs <http://sws.geonames.org/2956656/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000122341381> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1622072> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Germany" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2956656/> ;
+    ] ; 
     .

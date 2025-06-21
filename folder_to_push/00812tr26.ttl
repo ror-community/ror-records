@@ -4,24 +4,36 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/00812tr26> a org:Organization ;
     rdfs:label "International European University" ;
     schema:name "International European University" ;
     schema:foundingDate "2019"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "IEU" ;
-    schema:url <https://ieu.edu.ua> ; 
+    org:classification "education" ; 
+    dct:created "2023-02-28"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:abbreviation "IEU"@None ; 
+    schema:url <http://ieu.edu.ua> ; 
+    schema:mainEntityOfPage <https://www.ieu.edu.ua> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(30.5238 50.45466)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(30.5238 50.45466)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Kyiv" ;
             schema:addressCountry "UA" ;
-            owl:sameAs <http://sws.geonames.org/703448/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://www.wikidata.org/entity/Q95986902> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Ukraine" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/703448/> ;
+    ] ; 
     .

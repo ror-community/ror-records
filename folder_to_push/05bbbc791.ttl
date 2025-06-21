@@ -1,0 +1,62 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/05bbbc791> a org:Organization ;
+    rdfs:label "University of Karachi" ;
+    schema:name "University of Karachi" ;
+    schema:foundingDate "1953"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:abbreviation "KU"@None ; 
+    schema:url <http://uok.edu.pk> ; 
+    schema:mainEntityOfPage <https://www.uok.edu.pk> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Karachi> ; 
+    schema:sameAs <https://api.crossref.org/funders/100008697> ;
+    schema:sameAs <https://grid.ac/institutions/grid.266518.e> ;
+    schema:sameAs <http://isni.org/isni/0000000102193705> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/024ghrf67> ;
+        rdfs:label "International Center for Chemical and Biological Sciences" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02afbf040> ;
+        rdfs:label "Karachi Medical and Dental College" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01xytvd82> ;
+        rdfs:label "Liaquat National Hospital" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(67.0104 24.8608)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Karachi" ;
+            schema:addressCountry "PK" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Pakistan" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1174872/> ;
+    ] ; 
+    .

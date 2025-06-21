@@ -4,24 +4,43 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02dfe8754> a org:Organization ;
     rdfs:label "Dr. N.G.P. Institute of Technology" ;
     schema:name "Dr. N.G.P. Institute of Technology" ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "NGPIT" ;
-    org:alternativeName "Dr. Nalla G. Palaniswami Institute of Technology" ;
-    schema:url <https://www.drngpit.ac.in/> ; 
+    org:classification "education" ; 
+    dct:created "2022-09-29"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:alternativeName "Dr. Nalla G. Palaniswami Institute of Technology"@en ; 
+    org:abbreviation "NGPIT"@None ; 
+    schema:url <http://drngpit.ac.in> ; 
+    schema:mainEntityOfPage <https://www.drngpit.ac.in/> ;
+    schema:sameAs <http://isni.org/isni/0000000417779436> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01qhf1r47> ;
+        rdfs:label "Anna University, Chennai" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(76.96612 11.00555)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(76.96612 11.00555)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Coimbatore" ;
             schema:addressCountry "IN" ;
-            owl:sameAs <http://sws.geonames.org/1273865/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000417779436> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "India" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1273865/> ;
+    ] ; 
     .

@@ -1,0 +1,41 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/030xrqd09> a org:Organization ;
+    rdfs:label "Nuh Naci Yazgan University" ;
+    schema:name "Nuh Naci Yazgan University" ;
+    schema:foundingDate "2009"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    schema:url <http://nny.edu.tr> ; 
+    schema:mainEntityOfPage <https://www.nny.edu.tr> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Nuh_Naci_Yazgan_University> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.466101.4> ;
+    schema:sameAs <http://isni.org/isni/0000000404719784> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(35.48528 38.73222)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Kayseri" ;
+            schema:addressCountry "TR" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Türkiye" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/308464/> ;
+    ] ; 
+    .

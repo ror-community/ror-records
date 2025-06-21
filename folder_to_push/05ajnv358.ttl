@@ -4,25 +4,39 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/05ajnv358> a org:Organization ;
     rdfs:label "Karnatak University" ;
     schema:name "Karnatak University" ;
     schema:foundingDate "1949"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    schema:url <http://www.kud.ac.in/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Karnatak_University> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    schema:url <http://kud.ac.in> ; 
+    schema:mainEntityOfPage <https://www.kud.ac.in> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Karnatak_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100012034> ;
+    schema:sameAs <https://grid.ac/institutions/grid.444416.7> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(75.14 15.37)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(75.14 15.37)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Dharwad" ;
             schema:addressCountry "IN" ;
-            owl:sameAs <http://sws.geonames.org/1272797/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://www.wikidata.org/entity/Q502336> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "India" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1272797/> ;
+    ] ; 
     .

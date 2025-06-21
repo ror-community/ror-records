@@ -4,27 +4,41 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/0479aed98> a org:Organization ;
     rdfs:label "University of Dar es Salaam" ;
     schema:name "University of Dar es Salaam" ;
     schema:foundingDate "1970"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "UDSM" ;
-    schema:url <https://udsm.ac.tz/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Dar_es_Salaam> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:abbreviation "UDSM"@None ; 
+    schema:url <http://udsm.ac.tz> ; 
+    schema:mainEntityOfPage <https://www.udsm.ac.tz> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Dar_es_Salaam> ; 
+    schema:sameAs <https://api.crossref.org/funders/100012907> ;
+    schema:sameAs <https://grid.ac/institutions/grid.8193.3> ;
+    schema:sameAs <http://isni.org/isni/0000000406480244> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(39.26951 -6.82349)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(39.26951 -6.82349)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Dar es Salaam" ;
             schema:addressCountry "TZ" ;
-            owl:sameAs <http://sws.geonames.org/160263/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000406480244> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q557597> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Tanzania" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/160263/> ;
+    ] ; 
     .

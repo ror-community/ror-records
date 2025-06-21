@@ -4,24 +4,40 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/05ekg7w76> a org:Organization ;
     rdfs:label "Poltekkes Kemenkes Aceh" ;
     schema:name "Poltekkes Kemenkes Aceh" ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:alternativeName "Politeknik Kesehatan Kemenkes Aceh" ;
-    schema:url <https://poltekkesaceh.ac.id> ; 
+    org:classification "education" ; 
+    dct:created "2024-02-13"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:alternativeName "Aceh Polytechnic of the Ministry of Health"@en ; 
+    org:alternativeName "Banda Aceh Health Polytechnic"@en ; 
+    org:alternativeName "Politeknik Kesehatan Banda Aceh"@id ; 
+    org:alternativeName "Politeknik Kesehatan Kemenkes Aceh"@id ; 
+    org:alternativeName "Politeknik Kesehatan Kementerian Kesehatan Aceh"@id ; 
+    schema:url <http://poltekkesaceh.ac.id> ; 
+    schema:mainEntityOfPage <https://poltekkesaceh.ac.id> ;
+    schema:sameAs <http://isni.org/isni/0000000460145535> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(95.33333 5.54167)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(95.33333 5.54167)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Banda Aceh" ;
             schema:addressCountry "ID" ;
-            owl:sameAs <http://sws.geonames.org/1215502/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000460145535> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q109913186> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Indonesia" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1215502/> ;
+    ] ; 
     .

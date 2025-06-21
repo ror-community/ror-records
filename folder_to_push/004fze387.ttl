@@ -4,27 +4,47 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/004fze387> a org:Organization ;
     rdfs:label "Scuola Internazionale Superiore di Studi Avanzati" ;
     schema:name "Scuola Internazionale Superiore di Studi Avanzati" ;
     schema:foundingDate "1978"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "SISSA" ;
-    schema:url <https://www.sissa.it/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/International_School_for_Advanced_Studies> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:abbreviation "SISSA"@None ; 
+    schema:url <http://sissa.it> ; 
+    schema:mainEntityOfPage <https://www.sissa.it/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/International_School_for_Advanced_Studies> ; 
+    schema:sameAs <https://api.crossref.org/funders/100013104> ;
+    schema:sameAs <https://grid.ac/institutions/grid.5970.b> ;
+    schema:sameAs <http://isni.org/isni/0000000417629868> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04ys00n93> ;
+        rdfs:label "Institute for Geometry and Physics" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(13.77678 45.64953)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(13.77678 45.64953)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Trieste" ;
             schema:addressCountry "IT" ;
-            owl:sameAs <http://sws.geonames.org/3165185/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000417629868> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q2424299> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Italy" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3165185/> ;
+    ] ; 
     .

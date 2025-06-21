@@ -4,27 +4,40 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/0022qva30> a org:Organization ;
     rdfs:label "Ponce Health Sciences University" ;
     schema:name "Ponce Health Sciences University" ;
     schema:foundingDate "1977"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "PSM" ;
-    org:alternativeName "Ponce School of Medicine & Health Sciences" ;
-    schema:url <http://psm.edu/home.html> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Ponce_Health_Sciences_University> ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:abbreviation "PHSU"@None ; 
+    org:abbreviation "PSM"@None ; 
+    org:alternativeName "Ponce School of Medicine & Health Sciences"@en ; 
+    schema:url <http://psm.edu> ; 
+    schema:mainEntityOfPage <https://www.psm.edu> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Ponce_Health_Sciences_University> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.262009.f> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-66.62398 18.01031)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-66.62398 18.01031)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Ponce" ;
             schema:addressCountry "PR" ;
-            owl:sameAs <http://sws.geonames.org/4566880/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://www.wikidata.org/entity/Q5839196> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Puerto Rico" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/4566880/> ;
+    ] ; 
     .

@@ -4,28 +4,44 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/03xq4x896> a org:Organization ;
     rdfs:label "Instituut voor Tropische Geneeskunde" ;
     schema:name "Instituut voor Tropische Geneeskunde" ;
     schema:foundingDate "1906"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Nonprofit" ; 
-    org:abbreviation "ITM" ;
-    org:alternativeName "Prince Leopold Institute of Tropical Medicine" ;
-    schema:url <https://www.itg.be> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Institute_of_Tropical_Medicine_Antwerp> ;
+    org:classification "funder" ; 
+    org:classification "nonprofit" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:abbreviation "IMT"@None ; 
+    org:abbreviation "ITG"@None ; 
+    org:abbreviation "ITM"@None ; 
+    org:alternativeName "Prince Leopold Institute of Tropical Medicine"@en ; 
+    schema:url <http://itg.be> ; 
+    schema:mainEntityOfPage <https://www.itg.be> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Institute_of_Tropical_Medicine_Antwerp> ; 
+    schema:sameAs <https://api.crossref.org/funders/100018370> ;
+    schema:sameAs <https://grid.ac/institutions/grid.11505.30> ;
+    schema:sameAs <http://isni.org/isni/0000000121535088> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(4.40026 51.22047)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(4.40026 51.22047)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Antwerp" ;
             schema:addressCountry "BE" ;
-            owl:sameAs <http://sws.geonames.org/2803138/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000121535088> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1881864> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Belgium" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2803138/> ;
+    ] ; 
     .

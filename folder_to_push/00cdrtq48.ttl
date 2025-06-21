@@ -4,26 +4,40 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/00cdrtq48> a org:Organization ;
     rdfs:label "Alfaisal University" ;
     schema:name "Alfaisal University" ;
     schema:foundingDate "2002"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    schema:url <http://www.alfaisal.edu/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Alfaisal_University> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    schema:url <http://alfaisal.edu> ; 
+    schema:mainEntityOfPage <https://www.alfaisal.edu> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Alfaisal_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100018990> ;
+    schema:sameAs <https://grid.ac/institutions/grid.411335.1> ;
+    schema:sameAs <http://isni.org/isni/0000000417587207> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(46.72185 24.68773)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(46.72185 24.68773)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Riyadh" ;
             schema:addressCountry "SA" ;
-            owl:sameAs <http://sws.geonames.org/108410/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000417587207> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q4118882> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Saudi Arabia" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/108410/> ;
+    ] ; 
     .

@@ -1,0 +1,39 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/00c0k8h59> a org:Organization ;
+    rdfs:label "Istituto Zooprofilattico Sperimentale Della Sicilia" ;
+    schema:name "Istituto Zooprofilattico Sperimentale Della Sicilia" ;
+    org:status "active" ;
+    org:classification "facility" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    schema:url <http://izssicilia.it> ; 
+    schema:mainEntityOfPage <https://www.izssicilia.it> ;
+    schema:sameAs <https://grid.ac/institutions/grid.466852.b> ;
+    schema:sameAs <http://isni.org/isni/0000000417581905> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(13.3636 38.1166)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Palermo" ;
+            schema:addressCountry "IT" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Italy" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2523920/> ;
+    ] ; 
+    .

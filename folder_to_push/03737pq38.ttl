@@ -4,26 +4,42 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/03737pq38> a org:Organization ;
     rdfs:label "Korea Institute for Health and Social Affairs" ;
     schema:name "Korea Institute for Health and Social Affairs" ;
     schema:foundingDate "1999"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "KIPH" ;
-    org:alternativeName "Korea Institute for Population and Health" ;
-    schema:url <https://www.kihasa.re.kr/english/main.do> ; 
+    org:classification "facility" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:abbreviation "KIHASA"@None ; 
+    org:abbreviation "KIPH"@None ; 
+    org:alternativeName "Korea Institute for Population and Health"@en ; 
+    schema:url <http://kihasa.re.kr> ; 
+    schema:mainEntityOfPage <https://www.kihasa.re.kr> ;
+    schema:sameAs <https://api.crossref.org/funders/501100003677> ;
+    schema:sameAs <https://grid.ac/institutions/grid.496247.a> ;
+    schema:sameAs <http://isni.org/isni/0000000122045654> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(127.29223 36.59245)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(127.29223 36.59245)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Sejong" ;
             schema:addressCountry "KR" ;
-            owl:sameAs <http://sws.geonames.org/11523293/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000122045654> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "South Korea" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/11523293/> ;
+    ] ; 
     .

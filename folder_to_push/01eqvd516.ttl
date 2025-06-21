@@ -1,0 +1,47 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/01eqvd516> a org:Organization ;
+    rdfs:label "MSD (Sweden)" ;
+    schema:name "MSD (Sweden)" ;
+    schema:foundingDate "1891"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "company" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:alternativeName "Merck Sharp & Dohme"@None ; 
+    schema:mainEntityOfPage <http://www.msd.se/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Merck_%26_Co.> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.476584.c> ;
+    schema:sameAs <http://isni.org/isni/000000040607692X> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02891sr49> ;
+        rdfs:label "Merck & Co., Inc., Rahway, NJ, USA (United States)" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(18.06871 59.32938)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Stockholm" ;
+            schema:addressCountry "SE" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Sweden" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2673730/> ;
+    ] ; 
+    .

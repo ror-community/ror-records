@@ -4,28 +4,46 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/04cadha73> a org:Organization ;
     rdfs:label "Instituto Geológico y Minero de España" ;
     schema:name "Instituto Geológico y Minero de España" ;
     schema:foundingDate "1849"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Other" ; 
-    org:abbreviation "IGME" ;
-    org:alternativeName "Comisión para la Carta Geológica de Madrid y General del Reino" ;
-    schema:url <https://www.igme.es> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Geological_and_Mining_Institute_of_Spain> ;
+    org:classification "other" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:alternativeName "Comisión para la Carta Geológica de Madrid y General del Reino"@es ; 
+    org:abbreviation "IGME"@None ; 
+    org:alternativeName "Spanish Geological Survey Institute"@en ; 
+    schema:mainEntityOfPage <https://www.igme.es> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Geological_and_Mining_Institute_of_Spain> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.421265.6> ;
+    schema:sameAs <http://isni.org/isni/0000000417678176> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02gfc7t72> ;
+        rdfs:label "Consejo Superior de Investigaciones Científicas" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-3.70256 40.4165)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-3.70256 40.4165)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Madrid" ;
             schema:addressCountry "ES" ;
-            owl:sameAs <http://sws.geonames.org/3117735/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000417678176> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q5535322> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Spain" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3117735/> ;
+    ] ; 
     .

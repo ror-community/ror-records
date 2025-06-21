@@ -4,26 +4,51 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/05sk14837> a org:Organization ;
     rdfs:label "National Science Foundation Ice Core Facility" ;
     schema:name "National Science Foundation Ice Core Facility" ;
     schema:foundingDate "1993"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "NSF-ICF" ;
-    org:alternativeName "National Ice Core Laboratory" ;
-    schema:url <https://icecores.org/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/National_Ice_Core_Laboratory> ;
+    org:classification "facility" ; 
+    dct:created "2022-03-17"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:alternativeName "NICL"@en ; 
+    org:abbreviation "NSF-ICF"@None ; 
+    org:alternativeName "National Ice Core Lab"@en ; 
+    org:alternativeName "National Ice Core Laboratory"@en ; 
+    schema:mainEntityOfPage <https://icecores.org/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/National_Ice_Core_Laboratory> ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/021nxhr62> ;
+        rdfs:label "U.S. National Science Foundation" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/035a68863> ;
+        rdfs:label "United States Geological Survey" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-104.89439 39.43373)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-104.89439 39.43373)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Denver-Aurora-Lakewood, CO" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/12213207/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://www.wikidata.org/entity/Q6973470> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/12213207/> ;
+    ] ; 
     .

@@ -4,28 +4,44 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/03g3p3b82> a org:Organization ;
     rdfs:label "Mount Saint Vincent University" ;
     schema:name "Mount Saint Vincent University" ;
     schema:foundingDate "1873"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "MSVU" ;
-    org:alternativeName "The Mount" ;
-    schema:url <http://www.msvu.ca/en/home/default.aspx> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Mount_Saint_Vincent_University> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:abbreviation "MSVU"@None ; 
+    org:alternativeName "Mount Saint Vincent Academy"@en ; 
+    org:alternativeName "Mount Saint Vincent College"@en ; 
+    org:alternativeName "The Mount"@en ; 
+    schema:url <http://msvu.ca> ; 
+    schema:mainEntityOfPage <https://www.msvu.ca> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Mount_Saint_Vincent_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/100011796> ;
+    schema:sameAs <https://grid.ac/institutions/grid.260303.4> ;
+    schema:sameAs <http://isni.org/isni/0000000121869504> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-63.57291 44.6464)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-63.57688 44.64269)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Halifax" ;
             schema:addressCountry "CA" ;
-            owl:sameAs <http://sws.geonames.org/6324729/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000121869504> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q3551457> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Canada" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/6324729/> ;
+    ] ; 
     .

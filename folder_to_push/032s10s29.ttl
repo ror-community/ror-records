@@ -4,26 +4,38 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/032s10s29> a org:Organization ;
     rdfs:label "European University" ;
     schema:name "European University" ;
     schema:foundingDate "1991"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "EU" ;
-    schema:url <https://e-u.edu.ua> ; 
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:abbreviation "EU"@None ; 
+    schema:url <http://e-u.edu.ua> ; 
+    schema:mainEntityOfPage <https://e-u.edu.ua> ;
+    schema:sameAs <https://grid.ac/institutions/grid.445643.4> ;
+    schema:sameAs <http://isni.org/isni/0000000460909785> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(30.5238 50.45466)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(30.5238 50.45466)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Kyiv" ;
             schema:addressCountry "UA" ;
-            owl:sameAs <http://sws.geonames.org/703448/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000460909785> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q12073153> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Ukraine" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/703448/> ;
+    ] ; 
     .

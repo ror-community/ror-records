@@ -4,26 +4,40 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/03n273w86> a org:Organization ;
     rdfs:label "Rajabhat Maha Sarakham University" ;
     schema:name "Rajabhat Maha Sarakham University" ;
     schema:foundingDate "1925"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "RMU" ;
-    schema:url <https://www.rmu.ac.th/> ; 
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:abbreviation "RMU"@None ; 
+    schema:url <http://rmu.ac.th> ; 
+    schema:mainEntityOfPage <https://www.rmu.ac.th/> ;
+    schema:sameAs <https://api.crossref.org/funders/100018649> ;
+    schema:sameAs <https://grid.ac/institutions/grid.443971.c> ;
+    schema:sameAs <http://isni.org/isni/0000000091617882> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(103.30067 16.18483)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(103.30067 16.18483)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Maha Sarakham" ;
             schema:addressCountry "TH" ;
-            owl:sameAs <http://sws.geonames.org/1608900/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000091617882> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q2128646> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Thailand" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1608900/> ;
+    ] ; 
     .

@@ -4,26 +4,40 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/03rcwtr18> a org:Organization ;
     rdfs:label "Laurentian University" ;
     schema:name "Laurentian University" ;
     schema:foundingDate "1960"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    schema:url <https://laurentian.ca/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Laurentian_University> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    schema:url <http://laurentian.ca> ; 
+    schema:mainEntityOfPage <https://laurentian.ca/> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Laurentian_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100015669> ;
+    schema:sameAs <https://grid.ac/institutions/grid.258970.1> ;
+    schema:sameAs <http://isni.org/isni/0000000404695874> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-80.99001 46.49)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-80.99001 46.49)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Sudbury" ;
             schema:addressCountry "CA" ;
-            owl:sameAs <http://sws.geonames.org/5964700/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000404695874> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q3551432> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Canada" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/5964700/> ;
+    ] ; 
     .

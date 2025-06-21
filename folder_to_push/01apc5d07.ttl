@@ -1,0 +1,50 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/01apc5d07> a org:Organization ;
+    rdfs:label "Ningbo No. 2 Hospital" ;
+    schema:name "Ningbo No. 2 Hospital" ;
+    schema:foundingDate "1915"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "healthcare" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:alternativeName "HuaMei Hospital"@en ; 
+    org:alternativeName "Hwa Mei Hospital, University of Chinese Academy of Sciences"@en ; 
+    org:alternativeName "HwaMei Hospital"@en ; 
+    org:alternativeName "Ramada Hospital"@None ; 
+    org:alternativeName "中国科学院大学宁波华美医院"@zh ; 
+    schema:mainEntityOfPage <http://www.nbdeyy.com> ;
+    schema:sameAs <https://grid.ac/institutions/grid.459833.0> ;
+    schema:sameAs <http://isni.org/isni/0000000417993336> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/05qbk4x57> ;
+        rdfs:label "University of Chinese Academy of Sciences" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(121.54945 29.87819)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Ningbo" ;
+            schema:addressCountry "CN" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "China" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1799397/> ;
+    ] ; 
+    .

@@ -1,0 +1,61 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/01ckdn478> a org:Organization ;
+    rdfs:label "University of Louisville" ;
+    schema:name "University of Louisville" ;
+    schema:foundingDate "1798"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    schema:url <http://louisville.edu> ; 
+    schema:mainEntityOfPage <https://louisville.edu> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Louisville> ; 
+    schema:sameAs <https://api.crossref.org/funders/100007924> ;
+    schema:sameAs <https://grid.ac/institutions/grid.266623.5> ;
+    schema:sameAs <http://isni.org/isni/0000000121131622> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0230wyg61> ;
+        rdfs:label "Cardiovascular Innovation Institute" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01zd7yk57> ;
+        rdfs:label "Louisville VA Medical Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/04sq8k219> ;
+        rdfs:label "University of Louisville Hospital" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-85.75941 38.25424)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Louisville" ;
+            schema:addressCountry "US" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/4299276/> ;
+    ] ; 
+    .

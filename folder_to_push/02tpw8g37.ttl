@@ -4,26 +4,38 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02tpw8g37> a org:Organization ;
     rdfs:label "Institute of Nuclear Physics" ;
     schema:name "Institute of Nuclear Physics" ;
     schema:foundingDate "1957"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Government" ; 
-    org:alternativeName "Institute of Nuclear Physics of the Republic of Kazakhstan" ;
-    schema:url <https://inp.kz> ; 
-    owl:sameAs <https://ru.wikipedia.org/wiki/%D0%98%D0%BD%D1%81%D1%82%D0%B8%D1%82%D1%83%D1%82_%D1%8F%D0%B4%D0%B5%D1%80%D0%BD%D0%BE%D0%B9_%D1%84%D0%B8%D0%B7%D0%B8%D0%BA%D0%B8_%D0%A0%D0%B5%D1%81%D0%BF%D1%83%D0%B1%D0%BB%D0%B8%D0%BA%D0%B8_%D0%9A%D0%B0%D0%B7%D0%B0%D1%85%D1%81%D1%82%D0%B0%D0%BD> ;
+    org:classification "government" ; 
+    dct:created "2022-09-29"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:alternativeName "Institute of Nuclear Physics of the Republic of Kazakhstan"@en ; 
+    schema:url <http://inp.kz> ; 
+    schema:mainEntityOfPage <https://inp.kz> ;
+    owl:sameAs <https://ru.wikipedia.org/wiki/%D0%98%D0%BD%D1%81%D1%82%D0%B8%D1%82%D1%83%D1%82_%D1%8F%D0%B4%D0%B5%D1%80%D0%BD%D0%BE%D0%B9_%D1%84%D0%B8%D0%B7%D0%B8%D0%BA%D0%B8_%D0%A0%D0%B5%D1%81%D0%BF%D1%83%D0%B1%D0%BB%D0%B8%D0%BA%D0%B8_%D0%9A%D0%B0%D0%B7%D0%B0%D1%85%D1%81%D1%82%D0%B0%D0%BD> ; 
+    schema:sameAs <http://isni.org/isni/0000000406060995> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(76.91667 43.25)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(76.91667 43.25)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Almaty" ;
             schema:addressCountry "KZ" ;
-            owl:sameAs <http://sws.geonames.org/1526384/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000406060995> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q12572201> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Kazakhstan" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1526384/> ;
+    ] ; 
     .

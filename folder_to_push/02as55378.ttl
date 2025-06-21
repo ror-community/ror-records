@@ -1,0 +1,43 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/02as55378> a org:Organization ;
+    rdfs:label "University of Arts and Industrial Design Linz" ;
+    schema:name "University of Arts and Industrial Design Linz" ;
+    schema:foundingDate "1947"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:alternativeName "Kunstuniversität Linz"@de ; 
+    org:alternativeName "University of Arts Linz"@en ; 
+    schema:url <http://ufg.at> ; 
+    schema:mainEntityOfPage <https://www.kunstuni-linz.at> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/University_of_Art_and_Design_Linz> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.449792.5> ;
+    schema:sameAs <http://isni.org/isni/0000000121533015> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(14.28611 48.30639)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Linz" ;
+            schema:addressCountry "AT" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Austria" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2772400/> ;
+    ] ; 
+    .

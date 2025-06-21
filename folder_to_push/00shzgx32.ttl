@@ -1,0 +1,42 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/00shzgx32> a org:Organization ;
+    rdfs:label "Methodist University of Piracicaba" ;
+    schema:name "Methodist University of Piracicaba" ;
+    schema:foundingDate "1964"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:abbreviation "UNIMEP"@None ; 
+    schema:url <http://unimep.br> ; 
+    schema:mainEntityOfPage <http://unimep.edu.br> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Methodist_University_of_Piracicaba> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.412397.a> ;
+    schema:sameAs <http://isni.org/isni/0000000102715964> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-47.64917 -22.72528)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Piracicaba" ;
+            schema:addressCountry "BR" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Brazil" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3453643/> ;
+    ] ; 
+    .

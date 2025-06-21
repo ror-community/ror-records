@@ -1,0 +1,44 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/052qsay17> a org:Organization ;
+    rdfs:label "Chittagong University of Engineering & Technology" ;
+    schema:name "Chittagong University of Engineering & Technology" ;
+    schema:foundingDate "1968"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:alternativeName "Bangladesh Institute of Technology, Chittagong"@en ; 
+    org:abbreviation "CUET"@None ; 
+    org:alternativeName "Engineering College, Chittagong"@en ; 
+    schema:url <http://cuet.ac.bd> ; 
+    schema:mainEntityOfPage <https://www.cuet.ac.bd> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Chittagong_University_of_Engineering_%26_Technology> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.442957.9> ;
+    schema:sameAs <http://isni.org/isni/0000000403713778> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(91.83168 22.3384)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Chittagong" ;
+            schema:addressCountry "BD" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Bangladesh" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1205733/> ;
+    ] ; 
+    .

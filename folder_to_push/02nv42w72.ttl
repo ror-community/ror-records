@@ -4,28 +4,42 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02nv42w72> a org:Organization ;
     rdfs:label "Online Computer Library Center" ;
     schema:name "Online Computer Library Center" ;
     schema:foundingDate "1967"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Nonprofit" ; 
-    org:abbreviation "OCLC" ;
-    org:alternativeName "Ohio College Library Center" ;
-    schema:url <https://www.oclc.org> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/OCLC> ;
+    org:classification "funder" ; 
+    org:classification "nonprofit" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:abbreviation "OCLC"@None ; 
+    org:alternativeName "Ohio College Library Center"@en ; 
+    schema:url <http://oclc.org> ; 
+    schema:mainEntityOfPage <https://www.oclc.org> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/OCLC> ; 
+    schema:sameAs <https://api.crossref.org/funders/100007067> ;
+    schema:sameAs <https://grid.ac/institutions/grid.423017.3> ;
+    schema:sameAs <http://isni.org/isni/0000000114821326> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-83.11408 40.09923)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-83.11408 40.09923)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Dublin" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/5152333/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000114821326> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q190593> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/5152333/> ;
+    ] ; 
     .

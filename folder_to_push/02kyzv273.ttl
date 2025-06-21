@@ -1,0 +1,40 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/02kyzv273> a org:Organization ;
+    rdfs:label "University Clinical Centre" ;
+    schema:name "University Clinical Centre" ;
+    org:status "active" ;
+    org:classification "healthcare" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:abbreviation "UCK"@None ; 
+    schema:url <http://uck.gda.pl> ; 
+    schema:mainEntityOfPage <https://uck.pl> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/University_Clinical_Centre_in_Gda%C5%84sk> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.467122.4> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(18.64912 54.35227)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Gdansk" ;
+            schema:addressCountry "PL" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Poland" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3099434/> ;
+    ] ; 
+    .

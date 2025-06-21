@@ -1,0 +1,41 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/03cg80535> a org:Organization ;
+    rdfs:label "Université Catholique de Bukavu" ;
+    schema:name "Université Catholique de Bukavu" ;
+    schema:foundingDate "1989"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:abbreviation "UCB"@None ; 
+    schema:url <http://ucbukavu.ac.cd> ; 
+    schema:mainEntityOfPage <https://ucbukavu.ac.cd> ;
+    schema:sameAs <https://grid.ac/institutions/grid.442834.d> ;
+    schema:sameAs <http://isni.org/isni/0000000460114325> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(28.84281 -2.49077)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Bukavu" ;
+            schema:addressCountry "CD" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "DR Congo" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/217831/> ;
+    ] ; 
+    .

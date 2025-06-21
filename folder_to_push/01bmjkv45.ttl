@@ -4,26 +4,53 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01bmjkv45> a org:Organization ;
     rdfs:label "Friedrich Miescher Institute" ;
     schema:name "Friedrich Miescher Institute" ;
     schema:foundingDate "1970"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "FMI" ;
-    org:alternativeName "Friedrich Miescher Institute for Biomedical Research" ;
-    schema:url <http://www.fmi.ch/> ; 
+    org:classification "facility" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:abbreviation "FMI"@None ; 
+    org:alternativeName "Friedrich Miescher Institute for Biomedical Research"@en ; 
+    schema:url <http://fmi.ch> ; 
+    schema:mainEntityOfPage <https://www.fmi.ch> ;
+    schema:sameAs <https://api.crossref.org/funders/100008550> ;
+    schema:sameAs <https://grid.ac/institutions/grid.482245.d> ;
+    schema:sameAs <http://isni.org/isni/0000000121103787> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02f9zrr09> ;
+        rdfs:label "Novartis (Switzerland)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02s6k3f65> ;
+        rdfs:label "University of Basel" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(7.57327 47.55839)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(7.57327 47.55839)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Basel" ;
             schema:addressCountry "CH" ;
-            owl:sameAs <http://sws.geonames.org/2661604/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000121103787> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Switzerland" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2661604/> ;
+    ] ; 
     .

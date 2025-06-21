@@ -4,27 +4,39 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/0414ppq07> a org:Organization ;
     rdfs:label "San Juan Bautista School of Medicine" ;
     schema:name "San Juan Bautista School of Medicine" ;
     schema:foundingDate "1978"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "SJBSOM" ;
-    schema:url <http://www.sanjuanbautista.edu/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/San_Juan_Bautista_School_of_Medicine> ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:abbreviation "SJBSOM"@None ; 
+    schema:url <http://sanjuanbautista.edu> ; 
+    schema:mainEntityOfPage <https://www.sanjuanbautista.edu> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/San_Juan_Bautista_School_of_Medicine> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.469085.6> ;
+    schema:sameAs <http://isni.org/isni/0000000404621031> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-66.0485 18.23412)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-66.0485 18.23412)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Caguas" ;
             schema:addressCountry "PR" ;
-            owl:sameAs <http://sws.geonames.org/4563008/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000404621031> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q7414560> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Puerto Rico" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/4563008/> ;
+    ] ; 
     .

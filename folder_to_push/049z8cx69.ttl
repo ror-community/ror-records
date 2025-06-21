@@ -1,0 +1,49 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/049z8cx69> a org:Organization ;
+    rdfs:label "NATO Centre for Maritime Research and Experimentation" ;
+    schema:name "NATO Centre for Maritime Research and Experimentation" ;
+    schema:foundingDate "1959"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "facility" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:abbreviation "CMRE"@None ; 
+    org:alternativeName "NATO Undersea Research Centre"@en ; 
+    org:abbreviation "NURC"@None ; 
+    schema:mainEntityOfPage <http://www.cmre.nato.int/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Centre_for_Maritime_Research_and_Experimentation> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.425579.8> ;
+    schema:sameAs <http://isni.org/isni/0000000417561082> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02qzsgg04> ;
+        rdfs:label "NATO Science and Technology Organization" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(9.82375 44.103)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "La Spezia" ;
+            schema:addressCountry "IT" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Italy" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3175081/> ;
+    ] ; 
+    .

@@ -1,0 +1,43 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/05t2k9j40> a org:Organization ;
+    rdfs:label "Romanian Research and Development Institute for Gas Turbines" ;
+    schema:name "Romanian Research and Development Institute for Gas Turbines" ;
+    schema:foundingDate "1985"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "facility" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:abbreviation "COMOTI"@None ; 
+    org:alternativeName "Institutul Naţional de Cercetare-Dezvoltare Turbomotoare"@ro ; 
+    org:alternativeName "Scientific Research and Technological Engineering for Aviation Engines"@en ; 
+    schema:url <http://comoti.ro> ; 
+    schema:mainEntityOfPage <https://comoti.ro> ;
+    schema:sameAs <https://grid.ac/institutions/grid.435173.7> ;
+    schema:sameAs <http://isni.org/isni/0000000403854458> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(26.10626 44.43225)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Bucharest" ;
+            schema:addressCountry "RO" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Romania" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/683506/> ;
+    ] ; 
+    .

@@ -4,26 +4,45 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/00shpc021> a org:Organization ;
     rdfs:label "Fonds de Recherche du Québec - Société et culture" ;
     schema:name "Fonds de Recherche du Québec - Société et culture" ;
     schema:foundingDate "2001"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Government" ; 
-    org:abbreviation "FRQSC" ;
-    schema:url <http://www.frqsc.gouv.qc.ca/en/> ; 
-    schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-73.58781 45.50884)"^^geo:wktLiteral ;
-            schema:addressLocality "Montreal" ;
-            schema:addressCountry "CA" ;
-            owl:sameAs <http://sws.geonames.org/6077243/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
+    org:classification "funder" ; 
+    org:classification "government" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:abbreviation "FRQSC"@None ; 
+    schema:mainEntityOfPage <https://frq.gouv.qc.ca/societe-et-culture/> ;
+    schema:sameAs <https://api.crossref.org/funders/100008240> ;
+    schema:sameAs <https://grid.ac/institutions/grid.440162.5> ;
     schema:sameAs <http://isni.org/isni/0000000107097499> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q48754845> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/00w3qhf76> ;
+        rdfs:label "Fonds de recherche du Québec" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-71.21454 46.81228)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Québec" ;
+            schema:addressCountry "CA" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Canada" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/6325494/> ;
+    ] ; 
     .

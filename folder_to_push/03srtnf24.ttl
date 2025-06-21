@@ -1,0 +1,51 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/03srtnf24> a org:Organization ;
+    rdfs:label "Universidade Federal do Ceará" ;
+    schema:name "Universidade Federal do Ceará" ;
+    schema:foundingDate "1954"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:alternativeName "Ceará Federal University"@en ; 
+    org:abbreviation "UFC"@None ; 
+    schema:url <http://ufc.br> ; 
+    schema:mainEntityOfPage <https://www.ufc.br> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Federal_University_of_Cear%C3%A1> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100002735> ;
+    schema:sameAs <https://grid.ac/institutions/grid.8395.7> ;
+    schema:sameAs <http://isni.org/isni/0000000121600329> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01d9cfw89> ;
+        rdfs:label "Hospital Universitário Walter Cantídio" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-38.54306 -3.71722)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Fortaleza" ;
+            schema:addressCountry "BR" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Brazil" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3399415/> ;
+    ] ; 
+    .

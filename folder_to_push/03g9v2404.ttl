@@ -4,27 +4,39 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/03g9v2404> a org:Organization ;
     rdfs:label "University of Tirana" ;
     schema:name "University of Tirana" ;
     schema:foundingDate "1957"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "UT" ;
-    schema:url <http://www.unitir.edu.al/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Tirana> ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:abbreviation "UT"@None ; 
+    schema:url <http://unitir.edu.al> ; 
+    schema:mainEntityOfPage <https://unitir.edu.al> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Tirana> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.12306.36> ;
+    schema:sameAs <http://isni.org/isni/0000000122923330> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(19.81889 41.3275)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(19.81889 41.3275)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Tirana" ;
             schema:addressCountry "AL" ;
-            owl:sameAs <http://sws.geonames.org/3183875/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000122923330> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q428520> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Albania" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3183875/> ;
+    ] ; 
     .

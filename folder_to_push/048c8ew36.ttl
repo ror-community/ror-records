@@ -4,27 +4,41 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/048c8ew36> a org:Organization ;
     rdfs:label "Mercu Buana University of Yogyakarta" ;
     schema:name "Mercu Buana University of Yogyakarta" ;
     schema:foundingDate "1986"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "Yogya UMB" ;
-    org:alternativeName "Institute of Agricultural House of Mangala Indonesia" ;
-    schema:url <https://mercubuana-yogya.ac.id> ; 
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:alternativeName "Institute of Agricultural House of Mangala Indonesia"@en ; 
+    org:abbreviation "Yogya UMB"@None ; 
+    schema:url <http://mercubuana-yogya.ac.id> ; 
+    schema:mainEntityOfPage <https://www.mercubuana-yogya.ac.id> ;
+    schema:sameAs <https://api.crossref.org/funders/501100013820> ;
+    schema:sameAs <https://grid.ac/institutions/grid.444656.1> ;
+    schema:sameAs <http://isni.org/isni/0000000403865173> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(110.36472 -7.80139)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(110.36472 -7.80139)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Yogyakarta" ;
             schema:addressCountry "ID" ;
-            owl:sameAs <http://sws.geonames.org/1621177/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000403865173> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q12523378> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Indonesia" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1621177/> ;
+    ] ; 
     .

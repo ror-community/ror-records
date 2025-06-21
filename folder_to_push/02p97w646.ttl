@@ -1,0 +1,44 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/02p97w646> a org:Organization ;
+    rdfs:label "École Nationale Polytechnique d'Oran" ;
+    schema:name "École Nationale Polytechnique d'Oran" ;
+    schema:foundingDate "1970"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:abbreviation "ENPO-MA"@None ; 
+    org:abbreviation "ENSEP"@None ; 
+    org:abbreviation "ENSET"@None ; 
+    org:alternativeName "École Normale Supérieure d'enseignement Polytechnique d'Oran"@fr ; 
+    org:alternativeName "École Normale Supérieure de l'enseignement Technique d'Oran"@fr ; 
+    schema:url <http://enp-oran.dz> ; 
+    schema:mainEntityOfPage <https://www.enp-oran.dz> ;
+    schema:sameAs <https://grid.ac/institutions/grid.442501.6> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-0.63588 35.69906)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Oran" ;
+            schema:addressCountry "DZ" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Algeria" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2485926/> ;
+    ] ; 
+    .

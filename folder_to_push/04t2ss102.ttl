@@ -4,26 +4,44 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/04t2ss102> a org:Organization ;
     rdfs:label "Novosibirsk State University" ;
     schema:name "Novosibirsk State University" ;
     schema:foundingDate "1959"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    schema:url <http://www.nsu.ru/exp/index.jz?lang=en> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Novosibirsk_State_University> ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    schema:url <http://nsu.ru> ; 
+    schema:mainEntityOfPage <https://www.nsu.ru/n> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Novosibirsk_State_University> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.4605.7> ;
+    schema:sameAs <http://isni.org/isni/0000000121896553> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0277xgb12> ;
+        rdfs:label "Institute of Cytology and Genetics" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(82.9346 55.0415)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(82.9346 55.0415)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Novosibirsk" ;
             schema:addressCountry "RU" ;
-            owl:sameAs <http://sws.geonames.org/1496747/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000121896553> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1637997> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Russia" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1496747/> ;
+    ] ; 
     .

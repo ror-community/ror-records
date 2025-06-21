@@ -1,0 +1,42 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/004af2v94> a org:Organization ;
+    rdfs:label "ORT Braude College" ;
+    schema:name "ORT Braude College" ;
+    schema:foundingDate "1992"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:abbreviation "OBC"@None ; 
+    schema:url <http://braude.ac.il> ; 
+    schema:mainEntityOfPage <https://w3.braude.ac.il> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/ORT_Braude_College_of_Engineering> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.426208.a> ;
+    schema:sameAs <http://isni.org/isni/000000040604977X> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(35.30501 32.91708)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Karmiel" ;
+            schema:addressCountry "IL" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Israel" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/294577/> ;
+    ] ; 
+    .

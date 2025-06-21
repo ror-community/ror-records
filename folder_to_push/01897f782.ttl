@@ -4,26 +4,38 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01897f782> a org:Organization ;
     rdfs:label "Universidad Nacional de Juliaca" ;
     schema:name "Universidad Nacional de Juliaca" ;
     schema:foundingDate "2007"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "UNAJ" ;
-    schema:url <http://www.unaj.edu.pe/> ; 
-    owl:sameAs <https://es.wikipedia.org/wiki/Universidad_Nacional_de_Juliaca> ;
+    org:classification "education" ; 
+    dct:created "2022-03-17"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:abbreviation "UNAJ"@None ; 
+    schema:url <http://unaj.edu.pe> ; 
+    schema:mainEntityOfPage <https://portal.unaj.edu.pe> ;
+    owl:sameAs <https://es.wikipedia.org/wiki/Universidad_Nacional_de_Juliaca> ; 
+    schema:sameAs <http://isni.org/isni/0000000449123685> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-70.13333 -15.5)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-70.13333 -15.5)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Juliaca" ;
             schema:addressCountry "PE" ;
-            owl:sameAs <http://sws.geonames.org/3937513/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000449123685> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q6156585> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Peru" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3937513/> ;
+    ] ; 
     .

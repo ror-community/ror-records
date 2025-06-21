@@ -4,29 +4,56 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/03r6hpz93> a org:Organization ;
     rdfs:label "State University of Trade and Economics" ;
     schema:name "State University of Trade and Economics" ;
     schema:foundingDate "1946"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "KNUTE" ;
-    org:alternativeName "Kiev National University of Trade and Economics" ;
-    schema:url <https://knute.edu.ua/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Kyiv_National_University_of_Trade_and_Economics> ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:abbreviation "KITE"@None ; 
+    org:abbreviation "KNTEU"@None ; 
+    org:abbreviation "KNUTE"@None ; 
+    org:abbreviation "KSUTE"@None ; 
+    org:alternativeName "Kiev National University of Trade and Economics"@en ; 
+    org:alternativeName "Kyiv Institute of Trade and Economics"@en ; 
+    org:alternativeName "Kyiv National University of Trade and Economics"@en ; 
+    org:alternativeName "Kyiv State University of Trade and Economics"@en ; 
+    org:abbreviation "SUTE"@None ; 
+    org:abbreviation "ДТЕУ"@None ; 
+    org:abbreviation "КГТЭУ"@None ; 
+    org:abbreviation "КДТЕУ"@None ; 
+    org:abbreviation "КНТЕУ"@None ; 
+    org:abbreviation "КНТЭУ"@None ; 
+    org:abbreviation "КТЕІ"@None ; 
+    org:abbreviation "КТЭИ"@None ; 
+    org:alternativeName "Киевский национальный торгово-экономический университет"@None ; 
+    org:alternativeName "Київський національний торговельно-економічний університет"@uk ; 
+    schema:url <http://knute.edu.ua> ; 
+    schema:mainEntityOfPage <https://knute.edu.ua/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Kyiv_National_University_of_Trade_and_Economics> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.445690.a> ;
+    schema:sameAs <http://isni.org/isni/0000000110160639> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(30.5238 50.45466)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(30.5238 50.45466)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Kyiv" ;
             schema:addressCountry "UA" ;
-            owl:sameAs <http://sws.geonames.org/703448/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000110160639> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q694219> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q7878521> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Ukraine" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/703448/> ;
+    ] ; 
     .

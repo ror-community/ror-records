@@ -1,0 +1,69 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/00eae9z71> a org:Organization ;
+    rdfs:label "University of Newcastle Australia" ;
+    schema:name "University of Newcastle Australia" ;
+    schema:foundingDate "1965"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:alternativeName "Newcastle University"@en ; 
+    org:abbreviation "UoN"@None ; 
+    schema:url <http://newcastle.edu.au> ; 
+    schema:mainEntityOfPage <https://www.newcastle.edu.au> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Newcastle_(Australia)> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100001771> ;
+    schema:sameAs <https://grid.ac/institutions/grid.266842.c> ;
+    schema:sameAs <http://isni.org/isni/000000008831109X> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01nsxs283> ;
+        rdfs:label "ARC Centre of Excellence for Enabling Eco-Efficient Beneficiation of Minerals" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01jg3a168> ;
+        rdfs:label "Gosford Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/048sjbt91> ;
+        rdfs:label "John Hunter Children's Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/0187t0j49> ;
+        rdfs:label "John Hunter Hospital" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(151.7801 -32.92953)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Newcastle" ;
+            schema:addressCountry "AU" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Australia" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2155472/> ;
+    ] ; 
+    .

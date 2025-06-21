@@ -4,26 +4,72 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/05sn8wf81> a org:Organization ;
-    rdfs:label "National University of Cuyo" ;
-    schema:name "National University of Cuyo" ;
+    rdfs:label "" ;
+    schema:name "" ;
     schema:foundingDate "1939"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    schema:url <http://www.uncu.edu.ar/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/National_University_of_Cuyo> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:abbreviation "UNCU"@es ; 
+    org:abbreviation "UNCUYO"@es ; 
+    schema:url <http://uncuyo.edu.ar> ; 
+    schema:mainEntityOfPage <https://www.uncuyo.edu.ar> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/National_University_of_Cuyo> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100005961> ;
+    schema:sameAs <https://grid.ac/institutions/grid.412108.e> ;
+    schema:sameAs <http://isni.org/isni/0000000121855065> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00568z619> ;
+        rdfs:label "Instituto Interdisciplinario de Ciencias Básicas" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04jpdpb33> ;
+        rdfs:label "Instituto de Histología y Embriología de Mendoza" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/036rry744> ;
+        rdfs:label "Instituto Argentino de Investigaciones de las Zonas Aridas" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00sx0cd23> ;
+        rdfs:label "Balseiro Institute" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/055wmc747> ;
+        rdfs:label "Centro Científico Tecnológico - Mendoza" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-68.82717 -32.89084)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-68.82717 -32.89084)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Mendoza" ;
             schema:addressCountry "AR" ;
-            owl:sameAs <http://sws.geonames.org/3844421/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000121855065> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1076209> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Argentina" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3844421/> ;
+    ] ; 
     .

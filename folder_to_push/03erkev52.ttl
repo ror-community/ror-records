@@ -4,27 +4,41 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/03erkev52> a org:Organization ;
     rdfs:label "Al Akhawayn University" ;
     schema:name "Al Akhawayn University" ;
     schema:foundingDate "1995"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "AUI" ;
-    schema:url <http://www.aui.ma/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Al_Akhawayn_University> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:abbreviation "AUI"@None ; 
+    schema:url <http://aui.ma> ; 
+    schema:mainEntityOfPage <https://aui.ma> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Al_Akhawayn_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/100016042> ;
+    schema:sameAs <https://grid.ac/institutions/grid.442822.a> ;
+    schema:sameAs <http://isni.org/isni/0000000417898654> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-6.3494 31.70217)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-6.3494 31.70217)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Ifrane" ;
             schema:addressCountry "MA" ;
-            owl:sameAs <http://sws.geonames.org/2543394/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000417898654> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q2829294> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Morocco" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2543394/> ;
+    ] ; 
     .

@@ -4,27 +4,42 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01t5m8p03> a org:Organization ;
     rdfs:label "Borys Grinchenko Kyiv Metropolitan University" ;
     schema:name "Borys Grinchenko Kyiv Metropolitan University" ;
     schema:foundingDate "1874"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:alternativeName "Borys Grinchenko Kyiv University" ;
-    schema:url <https://kubg.edu.ua> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Borys_Hrinchenko_Kyiv_University> ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:alternativeName "Borys Grinchenko Kyiv University"@en ; 
+    org:alternativeName "Uniwersytet Kijowski imienia Borysa Hrinczenki"@pl ; 
+    org:alternativeName "Киевский университет имени Бориса Гринченко"@None ; 
+    org:alternativeName "Київський університет імені Бориса Грінченка"@uk ; 
+    schema:url <http://kubg.edu.ua> ; 
+    schema:mainEntityOfPage <https://kubg.edu.ua> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Borys_Hrinchenko_Kyiv_University> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.448561.a> ;
+    schema:sameAs <http://isni.org/isni/0000000405823102> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(30.5238 50.45466)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(30.5238 50.45466)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Kyiv" ;
             schema:addressCountry "UA" ;
-            owl:sameAs <http://sws.geonames.org/703448/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000405823102> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q12110286> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Ukraine" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/703448/> ;
+    ] ; 
     .

@@ -4,26 +4,38 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/00dr09x15> a org:Organization ;
     rdfs:label "Caltex Riau Polytechnic" ;
     schema:name "Caltex Riau Polytechnic" ;
     schema:foundingDate "2001"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "PCR" ;
-    schema:url <https://pcr.ac.id> ; 
-    owl:sameAs <https://id.wikipedia.org/wiki/Politeknik_Caltex_Riau> ;
+    org:classification "education" ; 
+    dct:created "2023-02-28"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:abbreviation "PCR"@None ; 
+    schema:url <http://pcr.ac.id> ; 
+    schema:mainEntityOfPage <https://pcr.ac.id> ;
+    owl:sameAs <https://id.wikipedia.org/wiki/Politeknik_Caltex_Riau> ; 
+    schema:sameAs <http://isni.org/isni/0000000403748786> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(101.44167 0.51667)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(101.44167 0.51667)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Pekanbaru" ;
             schema:addressCountry "ID" ;
-            owl:sameAs <http://sws.geonames.org/1631761/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000403748786> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q12506012> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Indonesia" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1631761/> ;
+    ] ; 
     .

@@ -4,28 +4,42 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02fabx761> a org:Organization ;
     rdfs:label "De Nederlandsche Bank" ;
     schema:name "De Nederlandsche Bank" ;
     schema:foundingDate "1814"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Other" ; 
-    org:abbreviation "DNB" ;
-    org:alternativeName "Dutch Bank" ;
-    schema:url <http://www.dnb.nl/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/De_Nederlandsche_Bank> ;
+    org:classification "funder" ; 
+    org:classification "other" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:abbreviation "DNB"@None ; 
+    org:alternativeName "Dutch Bank"@en ; 
+    schema:url <http://dnb.nl> ; 
+    schema:mainEntityOfPage <https://www.dnb.nl> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/De_Nederlandsche_Bank> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100014104> ;
+    schema:sameAs <https://grid.ac/institutions/grid.459463.9> ;
+    schema:sameAs <http://isni.org/isni/0000000403694300> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(4.88969 52.37403)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(4.88969 52.37403)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Amsterdam" ;
             schema:addressCountry "NL" ;
-            owl:sameAs <http://sws.geonames.org/2759794/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000403694300> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1180205> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "The Netherlands" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2759794/> ;
+    ] ; 
     .

@@ -4,26 +4,38 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02ytfpp52> a org:Organization ;
     rdfs:label "Universitas PGRI Palembang" ;
     schema:name "Universitas PGRI Palembang" ;
     schema:foundingDate "1983"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:alternativeName "PGRI University of Palembang" ;
-    schema:url <https://univpgri-palembang.ac.id> ; 
-    owl:sameAs <https://id.wikipedia.org/wiki/Universitas_PGRI_Palembang> ;
+    org:classification "education" ; 
+    dct:created "2023-07-27"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:alternativeName "PGRI University of Palembang"@en ; 
+    schema:url <http://univpgri-palembang.ac.id> ; 
+    schema:mainEntityOfPage <https://univpgri-palembang.ac.id> ;
+    owl:sameAs <https://id.wikipedia.org/wiki/Universitas_PGRI_Palembang> ; 
+    schema:sameAs <http://isni.org/isni/0000000403868446> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(104.7458 -2.91673)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(104.7458 -2.91673)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Palembang" ;
             schema:addressCountry "ID" ;
-            owl:sameAs <http://sws.geonames.org/1633070/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000403868446> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q97199998> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Indonesia" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1633070/> ;
+    ] ; 
     .

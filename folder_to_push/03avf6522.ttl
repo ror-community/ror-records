@@ -4,27 +4,41 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/03avf6522> a org:Organization ;
     rdfs:label "Norwegian Polar Institute" ;
     schema:name "Norwegian Polar Institute" ;
     schema:foundingDate "1928"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:alternativeName "Norsk Polarinstitutt" ;
-    schema:url <http://www.npolar.no/en/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Norwegian_Polar_Institute> ;
+    org:classification "facility" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:alternativeName "Norsk Polarinstitutt"@no ; 
+    schema:url <http://npolar.no> ; 
+    schema:mainEntityOfPage <https://www.npolar.no> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Norwegian_Polar_Institute> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100013265> ;
+    schema:sameAs <https://grid.ac/institutions/grid.418676.a> ;
+    schema:sameAs <http://isni.org/isni/0000000121947912> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(18.95508 69.6489)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(18.95508 69.6489)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Tromsø" ;
             schema:addressCountry "NO" ;
-            owl:sameAs <http://sws.geonames.org/3133895/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000121947912> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q962986> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Norway" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3133895/> ;
+    ] ; 
     .

@@ -1,0 +1,47 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/02avtbn34> a org:Organization ;
+    rdfs:label "Bowen University" ;
+    schema:name "Bowen University" ;
+    schema:foundingDate "2001"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    schema:url <http://bowen.edu.ng> ; 
+    schema:mainEntityOfPage <https://bowen.edu.ng/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Bowen_University> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.442598.6> ;
+    schema:sameAs <http://isni.org/isni/0000000406303934> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00qs33y73> ;
+        rdfs:label "Bowen University Teaching Hospital" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(4.18156 7.63527)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Iwo" ;
+            schema:addressCountry "NG" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Nigeria" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2336905/> ;
+    ] ; 
+    .

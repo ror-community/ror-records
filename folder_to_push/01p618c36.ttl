@@ -1,0 +1,42 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/01p618c36> a org:Organization ;
+    rdfs:label "Norwegian Centre for Violence and Traumatic Stress Studies" ;
+    schema:name "Norwegian Centre for Violence and Traumatic Stress Studies" ;
+    schema:foundingDate "2004"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "facility" ; 
+    dct:created "2019-02-17"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:abbreviation "NKVTS"@None ; 
+    schema:url <http://nkvts.no> ; 
+    schema:mainEntityOfPage <https://www.nkvts.no> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Norwegian_Centre_for_Violence_and_Traumatic_Stress_Studies> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.504188.0> ;
+    schema:sameAs <http://isni.org/isni/0000000404605461> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(10.74609 59.91273)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Oslo" ;
+            schema:addressCountry "NO" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Norway" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3143244/> ;
+    ] ; 
+    .

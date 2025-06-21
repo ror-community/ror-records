@@ -4,27 +4,39 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/00q898q52> a org:Organization ;
     rdfs:label "University of Medical Sciences, Ondo" ;
     schema:name "University of Medical Sciences, Ondo" ;
     schema:foundingDate "2015"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "UNIMED" ;
-    org:alternativeName "University of Medical Sciences, Ondo City" ;
-    schema:url <https://www.unimed.edu.ng> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/University_of_Medical_Sciences%2C_Ondo> ;
+    org:classification "education" ; 
+    dct:created "2022-09-29"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:abbreviation "UNIMED"@None ; 
+    org:alternativeName "University of Medical Sciences, Ondo City"@en ; 
+    schema:url <http://unimed.edu.ng> ; 
+    schema:mainEntityOfPage <https://www.unimed.edu.ng> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/University_of_Medical_Sciences%2C_Ondo> ; 
+    schema:sameAs <http://isni.org/isni/0000000493359644> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(4.83528 7.09316)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(4.83528 7.09316)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Ondo" ;
             schema:addressCountry "NG" ;
-            owl:sameAs <http://sws.geonames.org/2326171/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000493359644> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q22080012> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Nigeria" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2326171/> ;
+    ] ; 
     .

@@ -4,27 +4,57 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/044ntvm43> a org:Organization ;
     rdfs:label "Montefiore Medical Center" ;
     schema:name "Montefiore Medical Center" ;
     schema:foundingDate "1884"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Healthcare" ; 
-    org:abbreviation "MMC" ;
-    schema:url <http://www.montefiore.org/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Montefiore_Medical_Center> ;
+    org:classification "healthcare" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:abbreviation "MMC"@None ; 
+    schema:url <http://montefiore.org> ; 
+    schema:mainEntityOfPage <https://montefioreeinstein.org> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Montefiore_Medical_Center> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.240283.f> ;
+    schema:sameAs <http://isni.org/isni/0000000121520791> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02navrb60> ;
+        rdfs:label "Lady of Mercy Medical Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/031wwqy14> ;
+        rdfs:label "Sound Shore Medical Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05cf8a891> ;
+        rdfs:label "Albert Einstein College of Medicine" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-73.86641 40.84985)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-73.86641 40.84985)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Bronx" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/5110266/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000121520791> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q6905066> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/5110266/> ;
+    ] ; 
     .

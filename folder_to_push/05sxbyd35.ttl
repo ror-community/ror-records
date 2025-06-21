@@ -4,24 +4,57 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/05sxbyd35> a org:Organization ;
     rdfs:label "University Medical Centre Mannheim" ;
     schema:name "University Medical Centre Mannheim" ;
     org:status "active" ;
-    org:classification "Healthcare" ; 
-    org:abbreviation "UMM" ;
-    schema:url <https://www.umm.de> ; 
+    org:classification "funder" ; 
+    org:classification "healthcare" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:abbreviation "UMM"@None ; 
+    schema:url <http://umm.de> ; 
+    schema:mainEntityOfPage <https://www.umm.de> ;
+    schema:sameAs <https://api.crossref.org/funders/501100021259> ;
+    schema:sameAs <https://grid.ac/institutions/grid.411778.c> ;
+    schema:sameAs <http://isni.org/isni/0000000121621728> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05gtwra97> ;
+        rdfs:label "Universitäts HNO Klinik Mannheim" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/038t36y30> ;
+        rdfs:label "Heidelberg University" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02m1z0a87> ;
+        rdfs:label "Medizinische Fakultät Mannheim" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(8.46694 49.4891)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(8.46694 49.4891)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Mannheim" ;
             schema:addressCountry "DE" ;
-            owl:sameAs <http://sws.geonames.org/2873891/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000121621728> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Germany" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2873891/> ;
+    ] ; 
     .

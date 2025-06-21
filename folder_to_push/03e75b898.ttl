@@ -4,26 +4,40 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/03e75b898> a org:Organization ;
     rdfs:label "University Mohamed El Bachir El Ibrahimi of Bordj Bou Arreridj" ;
     schema:name "University Mohamed El Bachir El Ibrahimi of Bordj Bou Arreridj" ;
     schema:foundingDate "2000"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:alternativeName "University of Bordj Bou Arreridj" ;
-    schema:url <http://www.univ-bba.dz> ; 
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:alternativeName "University of Bordj Bou Arreridj"@en ; 
+    org:alternativeName "University of Mohamed El Bachir El Ibrahimi"@en ; 
+    org:alternativeName "جامعة برج بوعريريج"@ar ; 
+    schema:url <http://univ-bba.dz> ; 
+    schema:mainEntityOfPage <https://www.univ-bba.dz> ;
+    schema:sameAs <https://grid.ac/institutions/grid.442407.1> ;
+    schema:sameAs <http://isni.org/isni/0000000417860867> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(4.76139 36.07389)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(4.76139 36.07389)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Bordj Bou Arreridj" ;
             schema:addressCountry "DZ" ;
-            owl:sameAs <http://sws.geonames.org/2503701/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000417860867> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q30294212> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Algeria" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2503701/> ;
+    ] ; 
     .

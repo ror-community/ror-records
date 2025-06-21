@@ -4,26 +4,39 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/03zq0dg86> a org:Organization ;
     rdfs:label "University Colleges Leuven-Limburg" ;
     schema:name "University Colleges Leuven-Limburg" ;
     schema:foundingDate "2014"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "UCLL" ;
-    org:alternativeName "UC Leuven-Limburg" ;
-    schema:url <http://www.ucll.be/en/> ; 
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:alternativeName "UC Leuven-Limburg"@nl ; 
+    org:abbreviation "UCLL"@None ; 
+    schema:url <http://ucll.be> ; 
+    schema:mainEntityOfPage <https://www.ucll.be> ;
+    schema:sameAs <https://grid.ac/institutions/grid.451396.c> ;
+    schema:sameAs <http://isni.org/isni/0000000459059058> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(4.70093 50.87959)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(4.70093 50.87959)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Leuven" ;
             schema:addressCountry "BE" ;
-            owl:sameAs <http://sws.geonames.org/2792482/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000459059058> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Belgium" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2792482/> ;
+    ] ; 
     .

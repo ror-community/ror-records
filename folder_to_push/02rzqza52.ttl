@@ -1,0 +1,43 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/02rzqza52> a org:Organization ;
+    rdfs:label "University Ferhat Abbas of Setif" ;
+    schema:name "University Ferhat Abbas of Setif" ;
+    schema:foundingDate "1978"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:abbreviation "UFAS"@None ; 
+    org:alternativeName "Université de Sétif"@fr ; 
+    schema:url <http://univ-setif.dz> ; 
+    schema:mainEntityOfPage <https://www.univ-setif.dz> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Universit%C3%A9_de_S%C3%A9tif> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.411305.2> ;
+    schema:sameAs <http://isni.org/isni/0000000417621954> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(5.41373 36.19112)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Sétif" ;
+            schema:addressCountry "DZ" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Algeria" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2481700/> ;
+    ] ; 
+    .

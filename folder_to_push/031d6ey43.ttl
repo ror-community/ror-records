@@ -4,24 +4,37 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/031d6ey43> a org:Organization ;
     rdfs:label "Akenten Appiah-Menka University of Skills Training and Entrepreneurial Development" ;
     schema:name "Akenten Appiah-Menka University of Skills Training and Entrepreneurial Development" ;
     schema:foundingDate "2020"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "AAMUSTED" ;
-    schema:url <https://aamusted.edu.gh> ; 
+    org:classification "education" ; 
+    dct:created "2023-01-26"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:abbreviation "AAMUSTED"@None ; 
+    schema:url <http://aamusted.edu.gh> ; 
+    schema:mainEntityOfPage <https://aamusted.edu.gh> ;
+    schema:sameAs <http://isni.org/isni/0000000506841131> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-1.62443 6.68848)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-1.62443 6.68848)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Kumasi" ;
             schema:addressCountry "GH" ;
-            owl:sameAs <http://sws.geonames.org/2298890/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000506841131> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Ghana" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2298890/> ;
+    ] ; 
     .

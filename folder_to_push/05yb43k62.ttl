@@ -4,28 +4,61 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/05yb43k62> a org:Organization ;
     rdfs:label "NOSM University" ;
     schema:name "NOSM University" ;
     schema:foundingDate "2005"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "NOSM" ;
-    org:alternativeName "Northern Ontario School of Medicine" ;
-    schema:url <http://www.nosm.ca/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Northern_Ontario_School_of_Medicine> ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:abbreviation "NOSM"@None ; 
+    org:alternativeName "Northern Ontario School of Medicine"@en ; 
+    org:alternativeName "Northern Ontario School of Medicine University"@en ; 
+    org:alternativeName "École de médecine du Nord de l’Ontario"@fr ; 
+    org:alternativeName "École de médecine du Nord de l’Ontario Université"@fr ; 
+    schema:url <http://nosm.ca> ; 
+    schema:mainEntityOfPage <https://www.nosm.ca> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Northern_Ontario_School_of_Medicine> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.436533.4> ;
+    schema:sameAs <http://isni.org/isni/0000000086580974> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-89.25018 48.38202)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-80.99974 46.50008)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Greater Sudbury" ;
+            schema:addressCountry "CA" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Canada" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/6158841/> ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-89.25018 48.38202)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Thunder Bay" ;
             schema:addressCountry "CA" ;
-            owl:sameAs <http://sws.geonames.org/6166142/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000086580974> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q7058818> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Canada" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/6166142/> ;
+    ] ; 
     .

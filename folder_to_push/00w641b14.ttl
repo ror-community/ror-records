@@ -4,28 +4,44 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/00w641b14> a org:Organization ;
     rdfs:label "George Fox University" ;
     schema:name "George Fox University" ;
     schema:foundingDate "1885"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "GFU" ;
-    org:alternativeName "George Fox College" ;
-    schema:url <http://www.georgefox.edu/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/George_Fox_University> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:alternativeName "Friends Pacific Academy"@en ; 
+    org:abbreviation "GFU"@None ; 
+    org:alternativeName "George Fox College"@en ; 
+    org:alternativeName "Pacific College"@en ; 
+    schema:url <http://georgefox.edu> ; 
+    schema:mainEntityOfPage <https://www.georgefox.edu> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/George_Fox_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/100020196> ;
+    schema:sameAs <https://grid.ac/institutions/grid.256259.f> ;
+    schema:sameAs <http://isni.org/isni/0000000090203012> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-122.97316 45.30012)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-122.97316 45.30012)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Newberg" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/5742726/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000090203012> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q5539406> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/5742726/> ;
+    ] ; 
     .

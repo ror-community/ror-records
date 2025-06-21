@@ -4,27 +4,41 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01j2kd606> a org:Organization ;
     rdfs:label "Trinity Western University" ;
     schema:name "Trinity Western University" ;
     schema:foundingDate "1962"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "TWU" ;
-    schema:url <http://twu.ca/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Trinity_Western_University> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:abbreviation "TWU"@None ; 
+    schema:url <http://twu.ca> ; 
+    schema:mainEntityOfPage <https://www.twu.ca> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Trinity_Western_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/100011793> ;
+    schema:sameAs <https://grid.ac/institutions/grid.265179.e> ;
+    schema:sameAs <http://isni.org/isni/0000000090628563> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-122.65883 49.10107)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-122.65883 49.10107)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Langley" ;
             schema:addressCountry "CA" ;
-            owl:sameAs <http://sws.geonames.org/6049429/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000090628563> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q6569551> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Canada" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/6049429/> ;
+    ] ; 
     .

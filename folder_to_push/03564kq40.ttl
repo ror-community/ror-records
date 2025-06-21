@@ -1,0 +1,51 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/03564kq40> a org:Organization ;
+    rdfs:label "Rayat Bahra University" ;
+    schema:name "Rayat Bahra University" ;
+    schema:foundingDate "2005"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:abbreviation "RBIEBT"@None ; 
+    org:abbreviation "RBU"@None ; 
+    org:alternativeName "Rayat & Bahra Institute of Engineering and Biotechnology"@en ; 
+    org:alternativeName "Rayat and Bahra Institute of Engineering and Information Technology"@en ; 
+    schema:url <http://rayatbahrauniversity.edu.in> ; 
+    schema:mainEntityOfPage <https://rayatbahrauniversity.edu.in> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Rayat_Bahra_University> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.449466.d> ;
+    schema:sameAs <http://isni.org/isni/0000000458946229> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/025kz2973> ;
+        rdfs:label "Punjab Technical University" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(76.72211 30.67995)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Mohali" ;
+            schema:addressCountry "IN" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "India" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/6992326/> ;
+    ] ; 
+    .

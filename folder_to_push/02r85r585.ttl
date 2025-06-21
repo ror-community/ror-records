@@ -1,0 +1,41 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/02r85r585> a org:Organization ;
+    rdfs:label "Institute of Rural Development Planning" ;
+    schema:name "Institute of Rural Development Planning" ;
+    schema:foundingDate "1980"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:abbreviation "IRDP"@None ; 
+    schema:url <http://irdp.ac.tz> ; 
+    schema:mainEntityOfPage <https://www.irdp.ac.tz/> ;
+    schema:sameAs <https://grid.ac/institutions/grid.442453.0> ;
+    schema:sameAs <http://isni.org/isni/0000000404635679> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(35.73947 -6.17221)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Dodoma" ;
+            schema:addressCountry "TZ" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Tanzania" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/160196/> ;
+    ] ; 
+    .

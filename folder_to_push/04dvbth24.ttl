@@ -4,27 +4,41 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/04dvbth24> a org:Organization ;
     rdfs:label "Universidad Técnica Particular de Loja" ;
     schema:name "Universidad Técnica Particular de Loja" ;
     schema:foundingDate "1971"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "UTPL" ;
-    schema:url <https://www.utpl.edu.ec/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Universidad_T%C3%A9cnica_Particular_de_Loja> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:abbreviation "UTPL"@None ; 
+    schema:url <http://utpl.edu.ec> ; 
+    schema:mainEntityOfPage <https://www.utpl.edu.ec/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Universidad_T%C3%A9cnica_Particular_de_Loja> ; 
+    schema:sameAs <https://api.crossref.org/funders/100019349> ;
+    schema:sameAs <https://grid.ac/institutions/grid.440860.e> ;
+    schema:sameAs <http://isni.org/isni/0000000404856148> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-79.20422 -3.99313)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-79.20422 -3.99313)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Loja" ;
             schema:addressCountry "EC" ;
-            owl:sameAs <http://sws.geonames.org/3654667/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000404856148> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q7894321> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Ecuador" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3654667/> ;
+    ] ; 
     .

@@ -15,8 +15,9 @@
     org:classification "education" ; 
     org:classification "funder" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-05-02"^^xsd:date ;
-    schema:mainEntityOfPage <http://www.rockefeller.edu/> ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    schema:url <http://rockefeller.edu> ; 
+    schema:mainEntityOfPage <https://www.rockefeller.edu> ;
     owl:sameAs <http://en.wikipedia.org/wiki/Rockefeller_University> ; 
     schema:sameAs <https://api.crossref.org/funders/100012007> ;
     schema:sameAs <https://grid.ac/institutions/grid.134907.8> ;
@@ -29,6 +30,12 @@
     ] ; 
     org:hasLink [
         a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0263t7p64> ;
+        rdfs:label "Chan Zuckerberg Biohub New York" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
         org:role "related" ;
         org:member <https://ror.org/00jjq6q61> ;
         rdfs:label "Rockefeller University Hospital" ;
@@ -38,12 +45,6 @@
         org:role "related" ;
         org:member <https://ror.org/03zjqec80> ;
         rdfs:label "Hospital for Special Surgery" ;
-    ] ; 
-    org:hasLink [
-        a org:Membership ;
-        org:role "child" ;
-        org:member <https://ror.org/0263t7p64> ;
-        rdfs:label "Chan Zuckerberg Biohub New York" ;
     ] ; 
     schema:location [
         a schema:Place ;

@@ -4,25 +4,40 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01fqrjt38> a org:Organization ;
     rdfs:label "Instituto Nacional de Investigação Agrária e Veterinária" ;
     schema:name "Instituto Nacional de Investigação Agrária e Veterinária" ;
     schema:foundingDate "2012"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "INIAV" ;
-    schema:url <http://www.iniav.pt/> ; 
+    org:classification "facility" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:abbreviation "INIAV"@None ; 
+    schema:url <http://iniav.pt> ; 
+    schema:mainEntityOfPage <https://www.iniav.pt> ;
+    schema:sameAs <https://api.crossref.org/funders/100017256> ;
+    schema:sameAs <https://grid.ac/institutions/grid.420943.8> ;
+    schema:sameAs <http://isni.org/isni/0000000101902100> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-9.13333 38.71667)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-9.13333 38.71667)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Lisbon" ;
             schema:addressCountry "PT" ;
-            owl:sameAs <http://sws.geonames.org/2267057/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000101902100> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Portugal" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2267057/> ;
+    ] ; 
     .

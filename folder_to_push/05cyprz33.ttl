@@ -1,0 +1,44 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/05cyprz33> a org:Organization ;
+    rdfs:label "University of Mauritius" ;
+    schema:name "University of Mauritius" ;
+    schema:foundingDate "1965"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:abbreviation "UoM"@None ; 
+    schema:url <http://uom.ac.mu> ; 
+    schema:mainEntityOfPage <https://www.uom.ac.mu> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Mauritius> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100004827> ;
+    schema:sameAs <https://grid.ac/institutions/grid.45199.30> ;
+    schema:sameAs <http://isni.org/isni/0000000122889451> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(57.51083 -20.21904)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Moka" ;
+            schema:addressCountry "MU" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Mauritius" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/934277/> ;
+    ] ; 
+    .

@@ -1,0 +1,41 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/04j8de466> a org:Organization ;
+    rdfs:label "Worcester State University" ;
+    schema:name "Worcester State University" ;
+    schema:foundingDate "1874"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:abbreviation "WSU"@None ; 
+    schema:url <http://worcester.edu> ; 
+    schema:mainEntityOfPage <https://www.worcester.edu> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Worcester_State_University> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.268324.9> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-71.80229 42.26259)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Worcester" ;
+            schema:addressCountry "US" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/4956184/> ;
+    ] ; 
+    .

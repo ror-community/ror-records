@@ -1,0 +1,41 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/04rszy995> a org:Organization ;
+    rdfs:label "Nikola Vaptsarov Naval Academy" ;
+    schema:name "Nikola Vaptsarov Naval Academy" ;
+    schema:foundingDate "1881"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:abbreviation "NVNA"@None ; 
+    schema:url <http://naval-acad.bg> ; 
+    schema:mainEntityOfPage <https://www.naval-acad.bg> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Nikola_Vaptsarov_Naval_Academy> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.445416.6> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(27.91667 43.21667)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Varna" ;
+            schema:addressCountry "BG" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Bulgaria" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/726050/> ;
+    ] ; 
+    .

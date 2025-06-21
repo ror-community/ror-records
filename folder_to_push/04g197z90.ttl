@@ -4,27 +4,40 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/04g197z90> a org:Organization ;
     rdfs:label "Maden Tetkik ve Arama Genel Müdürlüğü" ;
     schema:name "Maden Tetkik ve Arama Genel Müdürlüğü" ;
     schema:foundingDate "1935"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Government" ; 
-    org:abbreviation "MTA" ;
-    org:alternativeName "Maden Tetkik ve Arama Genel Mudurlugu" ;
-    schema:url <https://www.mta.gov.tr> ; 
-    owl:sameAs <https://tr.wikipedia.org/wiki/Maden_Tetkik_ve_Arama_Genel_M%C3%BCd%C3%BCrl%C3%BC%C4%9F%C3%BC> ;
+    org:classification "government" ; 
+    dct:created "2023-05-11"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:abbreviation "MTA"@None ; 
+    org:alternativeName "MTA Genel Mudurlugu"@tr ; 
+    org:alternativeName "Maden Tetkik ve Arama Genel Mudurlugu"@tr ; 
+    schema:url <http://mta.gov.tr> ; 
+    schema:mainEntityOfPage <https://www.mta.gov.tr> ;
+    owl:sameAs <https://tr.wikipedia.org/wiki/Maden_Tetkik_ve_Arama_Genel_M%C3%BCd%C3%BCrl%C3%BC%C4%9F%C3%BC> ; 
+    schema:sameAs <http://isni.org/isni/0000000107233534> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(32.85427 39.91987)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(32.85427 39.91987)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Ankara" ;
             schema:addressCountry "TR" ;
-            owl:sameAs <http://sws.geonames.org/323786/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000107233534> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q5531837> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Türkiye" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/323786/> ;
+    ] ; 
     .

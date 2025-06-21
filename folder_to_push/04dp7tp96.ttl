@@ -4,28 +4,50 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/04dp7tp96> a org:Organization ;
     rdfs:label "Motilal Nehru National Institute of Technology" ;
     schema:name "Motilal Nehru National Institute of Technology" ;
     schema:foundingDate "1961"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "MNNIT" ;
-    org:alternativeName "NIT Allahabad" ;
-    schema:url <http://www.mnnit.ac.in/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Motilal_Nehru_National_Institute_of_Technology_Allahabad> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:abbreviation "MNNIT"@None ; 
+    org:abbreviation "MNREC"@None ; 
+    org:alternativeName "Motilal Nehru Regional Engineering College"@en ; 
+    org:alternativeName "NIT Allahabad"@None ; 
+    schema:url <http://mnnit.ac.in> ; 
+    schema:mainEntityOfPage <https://www.mnnit.ac.in> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Motilal_Nehru_National_Institute_of_Technology_Allahabad> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100015989> ;
+    schema:sameAs <https://grid.ac/institutions/grid.419983.e> ;
+    schema:sameAs <http://isni.org/isni/0000000121909158> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03h56sg55> ;
+        rdfs:label "Dr. A.P.J. Abdul Kalam Technical University" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(81.84322 25.44478)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(81.84322 25.44478)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Prayagraj" ;
             schema:addressCountry "IN" ;
-            owl:sameAs <http://sws.geonames.org/1278994/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000121909158> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q2988778> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "India" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1278994/> ;
+    ] ; 
     .

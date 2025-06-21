@@ -4,28 +4,44 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/00yp5c433> a org:Organization ;
     rdfs:label "National Technical University "Kharkiv Polytechnic Institute"" ;
     schema:name "National Technical University "Kharkiv Polytechnic Institute"" ;
     schema:foundingDate "1885"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "KPI" ;
-    org:alternativeName "National Technical University Kharkiv Polytechnic Institute" ;
-    schema:url <https://www.kpi.kharkov.ua> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Kharkiv_Polytechnic_Institute> ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:abbreviation "KPI"@None ; 
+    org:alternativeName "Kharkiv Polytechnic Institute"@en ; 
+    org:abbreviation "NTU "KhPI""@None ; 
+    org:abbreviation "NTU KhPI"@None ; 
+    org:alternativeName "National Technical University Kharkiv Polytechnic Institute"@en ; 
+    org:abbreviation "НТУ "ХПІ""@None ; 
+    schema:url <http://kpi.kharkov.ua> ; 
+    schema:mainEntityOfPage <https://www.kpi.kharkov.ua/ukr> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Kharkiv_Polytechnic_Institute> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.18192.33> ;
+    schema:sameAs <http://isni.org/isni/0000000403996958> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(36.25272 49.98081)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(36.25272 49.98081)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Kharkiv" ;
             schema:addressCountry "UA" ;
-            owl:sameAs <http://sws.geonames.org/706483/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000403996958> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1164068> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Ukraine" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/706483/> ;
+    ] ; 
     .

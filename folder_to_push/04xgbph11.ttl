@@ -4,27 +4,42 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/04xgbph11> a org:Organization ;
     rdfs:label "Presidency University" ;
     schema:name "Presidency University" ;
     schema:foundingDate "1817"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:alternativeName "Hindu College" ;
-    schema:url <http://www.presiuniv.ac.in/web/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Presidency_University,_Kolkata> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:alternativeName "Hindu College"@en ; 
+    org:alternativeName "Presidency College"@en ; 
+    schema:url <http://presiuniv.ac.in> ; 
+    schema:mainEntityOfPage <https://www.presiuniv.ac.in/web> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Presidency_University,_Kolkata> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100012623> ;
+    schema:sameAs <https://grid.ac/institutions/grid.412537.6> ;
+    schema:sameAs <http://isni.org/isni/0000000417682925> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(88.36304 22.56263)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(88.36304 22.56263)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Kolkata" ;
             schema:addressCountry "IN" ;
-            owl:sameAs <http://sws.geonames.org/1275004/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000417682925> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q2749583> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "India" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1275004/> ;
+    ] ; 
     .

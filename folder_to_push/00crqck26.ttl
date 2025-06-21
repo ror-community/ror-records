@@ -1,0 +1,42 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/00crqck26> a org:Organization ;
+    rdfs:label "Varendra University" ;
+    schema:name "Varendra University" ;
+    schema:foundingDate "2012"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2019-02-17"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:abbreviation "VU"@None ; 
+    schema:url <http://vu.edu.bd> ; 
+    schema:mainEntityOfPage <https://www.vu.edu.bd> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Varendra_University> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.502765.3> ;
+    schema:sameAs <http://isni.org/isni/0000000446837375> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(88.60114 24.374)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Rajshahi" ;
+            schema:addressCountry "BD" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Bangladesh" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1185128/> ;
+    ] ; 
+    .

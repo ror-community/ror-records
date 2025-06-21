@@ -4,27 +4,41 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01wbhqj28> a org:Organization ;
     rdfs:label "North Eastern Regional Institute of Science and Technology" ;
     schema:name "North Eastern Regional Institute of Science and Technology" ;
     schema:foundingDate "1984"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "NERIST" ;
-    schema:url <https://www.nerist.ac.in/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/North_Eastern_Regional_Institute_of_Science_and_Technology> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:abbreviation "NERIST"@None ; 
+    schema:url <http://nerist.ac.in> ; 
+    schema:mainEntityOfPage <https://www.nerist.ac.in/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/North_Eastern_Regional_Institute_of_Science_and_Technology> ; 
+    schema:sameAs <https://api.crossref.org/funders/100019148> ;
+    schema:sameAs <https://grid.ac/institutions/grid.444461.7> ;
+    schema:sameAs <http://isni.org/isni/0000000404062874> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(93.60987 27.08694)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(93.60987 27.08694)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Itanagar" ;
             schema:addressCountry "IN" ;
-            owl:sameAs <http://sws.geonames.org/1269655/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000404062874> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q7055282> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "India" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1269655/> ;
+    ] ; 
     .

@@ -1,0 +1,43 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/00kfp3012> a org:Organization ;
+    rdfs:label "North Estonia Medical Centre" ;
+    schema:name "North Estonia Medical Centre" ;
+    schema:foundingDate "2001"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "healthcare" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:abbreviation "NEMC"@None ; 
+    org:abbreviation "PERH"@None ; 
+    org:alternativeName "Põhja-Eesti Regionaalhaigla"@et ; 
+    schema:url <http://regionaalhaigla.ee> ; 
+    schema:mainEntityOfPage <https://www.regionaalhaigla.ee> ;
+    schema:sameAs <https://grid.ac/institutions/grid.454953.a> ;
+    schema:sameAs <http://isni.org/isni/000000040631377X> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(24.75353 59.43696)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Tallinn" ;
+            schema:addressCountry "EE" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Estonia" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/588409/> ;
+    ] ; 
+    .

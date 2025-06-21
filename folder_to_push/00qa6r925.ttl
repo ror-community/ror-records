@@ -4,28 +4,41 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/00qa6r925> a org:Organization ;
     rdfs:label "Kyoto University of Advanced Science" ;
     schema:name "Kyoto University of Advanced Science" ;
     schema:foundingDate "1925"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "KUAS" ;
-    org:alternativeName "Kyoto University of Advanced Science and Technology" ;
-    schema:url <https://www.kuas.ac.jp/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Kyoto_Gakuen_University> ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:abbreviation "KUAS"@None ; 
+    org:alternativeName "Kyoto Gakuen University"@en ; 
+    org:alternativeName "Kyoto University of Advanced Science and Technology"@en ; 
+    schema:url <http://kuas.ac.jp> ; 
+    schema:mainEntityOfPage <https://www.kuas.ac.jp/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Kyoto_Gakuen_University> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.440905.c> ;
+    schema:sameAs <http://isni.org/isni/0000000475539983> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(135.58333 35)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(135.58333 35)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Kameoka" ;
             schema:addressCountry "JP" ;
-            owl:sameAs <http://sws.geonames.org/1860635/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000475539983> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q6452146> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Japan" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1860635/> ;
+    ] ; 
     .

@@ -4,26 +4,250 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02frkq021> a org:Organization ;
     rdfs:label "Siberian Branch of the Russian Academy of Sciences" ;
     schema:name "Siberian Branch of the Russian Academy of Sciences" ;
     schema:foundingDate "1957"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Government" ; 
-    org:abbreviation "SB RAS" ;
-    schema:url <http://www.sbras.ru/en> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Siberian_Branch_of_the_Russian_Academy_of_Sciences> ;
+    org:classification "funder" ; 
+    org:classification "government" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:abbreviation "SB RAS"@None ; 
+    schema:mainEntityOfPage <http://www.sbras.ru/en> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Siberian_Branch_of_the_Russian_Academy_of_Sciences> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100003182> ;
+    schema:sameAs <https://grid.ac/institutions/grid.415877.8> ;
+    schema:sameAs <http://isni.org/isni/0000000122541834> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03e5eem51> ;
+        rdfs:label "Budker Institute of Nuclear Physics" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04rf83d41> ;
+        rdfs:label "East-Siberian Institute of the Ministry of Internal Affairs of the Russian Federation" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04xnqnd94> ;
+        rdfs:label "Institute for Humanities Research and Indigenous Studies of the North" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04wteqw51> ;
+        rdfs:label "Institute for System Dynamics and Control Theory" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05m3tag45> ;
+        rdfs:label "Institute of Archaeology and Ethnography" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00c6xwj41> ;
+        rdfs:label "Institute of Chemistry and Chemical Technology" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03gbabd35> ;
+        rdfs:label "Institute of Coal Chemistry and Material Science" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/011nbgj79> ;
+        rdfs:label "Institute of Coal of the Siberian Branch of the RAS" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0277xgb12> ;
+        rdfs:label "Institute of Cytology and Genetics" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04faa0n67> ;
+        rdfs:label "Institute of Economics and Industrial Engineering" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00q976b76> ;
+        rdfs:label "V. B. Sochava Institute of Geography" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02qpqb855> ;
+        rdfs:label "Institute of History" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05pp7qy10> ;
+        rdfs:label "Institute of Hydrocarbon Processing" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04d7gd791> ;
+        rdfs:label "Institute of Monitoring of Climatic and Ecological Systems" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00mj88198> ;
+        rdfs:label "Institute of Natural Resources, Ecology and Cryology" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00f4mz521> ;
+        rdfs:label "Institute of Strength Physics and Materials Science" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/006btmz82> ;
+        rdfs:label "Institute of Systematics and Ecology of Animals" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02azz6x90> ;
+        rdfs:label "Institute of Theoretical and Applied Mechanics" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/045xd0268> ;
+        rdfs:label "Institute of the Earth’s Crust" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/007ebp326> ;
+        rdfs:label "Krasnoyarsk Scientific Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04t5w6b17> ;
+        rdfs:label "Lavrentyev Institute of Hydrodynamics" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01rwqqv19> ;
+        rdfs:label "Melnikov Permafrost Institute of the Siberian Branch of the Russian Academy of Science" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02375ts60> ;
+        rdfs:label "New Siberian Institute" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/008kv0w14> ;
+        rdfs:label "Siberian Center for Environmental Research and Training" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03g1eje15> ;
+        rdfs:label "Siberian Independent Institute" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01473qm81> ;
+        rdfs:label "Siberian Institute of Business Management and Psychology" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05swf4h71> ;
+        rdfs:label "Siberian Institute of Business and Information Technologies" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02vbq0s06> ;
+        rdfs:label "Siberian Law Institute of Russian Federal Drug Control Service" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02hgfj293> ;
+        rdfs:label "Siberian Research Institute of Agricultural Economics" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00shc0s02> ;
+        rdfs:label "Sobolev Institute of Mathematics" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0168c7237> ;
+        rdfs:label "State Public Scientific Technological Library of Siberian Branch of Russian Academy of Sciences" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01v5rbf40> ;
+        rdfs:label "Yu.G. Shafer Institute of Cosmophysical Research and Aeronomy" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01dc8vg74> ;
+        rdfs:label "A.P. Ershov Institute of Informatics Systems, Siberian Branch of the Russian Academy of Sciences" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/05qrfxd25> ;
+        rdfs:label "Russian Academy of Sciences" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05m2n8847> ;
+        rdfs:label "V.E. Zuev Institute of Atmospheric Optics" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(82.9346 55.0415)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(82.9346 55.0415)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Novosibirsk" ;
             schema:addressCountry "RU" ;
-            owl:sameAs <http://sws.geonames.org/1496747/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000122541834> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Russia" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1496747/> ;
+    ] ; 
     .

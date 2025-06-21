@@ -1,0 +1,44 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/030chxw89> a org:Organization ;
+    rdfs:label "Yaba College of Technology" ;
+    schema:name "Yaba College of Technology" ;
+    schema:foundingDate "1947"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:alternativeName "Federal Polytechnic Yaba"@en ; 
+    org:abbreviation "YABATECH"@None ; 
+    org:alternativeName "Yaba Higher College"@en ; 
+    schema:url <http://yabatech.edu.ng> ; 
+    schema:mainEntityOfPage <https://www.yabatech.edu.ng> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Yaba_College_of_Technology> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.442699.4> ;
+    schema:sameAs <http://isni.org/isni/0000000088623843> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(3.39467 6.45407)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Lagos" ;
+            schema:addressCountry "NG" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Nigeria" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2332459/> ;
+    ] ; 
+    .

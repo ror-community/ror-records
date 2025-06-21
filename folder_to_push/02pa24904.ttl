@@ -1,0 +1,40 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/02pa24904> a org:Organization ;
+    rdfs:label "Universitas Garut" ;
+    schema:name "Universitas Garut" ;
+    schema:foundingDate "1998"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    schema:url <http://uniga.ac.id> ; 
+    schema:mainEntityOfPage <https://uniga.ac.id/> ;
+    schema:sameAs <https://grid.ac/institutions/grid.443315.4> ;
+    schema:sameAs <http://isni.org/isni/0000000403860559> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(107.921 -7.245)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Garut" ;
+            schema:addressCountry "ID" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Indonesia" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1644409/> ;
+    ] ; 
+    .

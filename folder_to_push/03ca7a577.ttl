@@ -4,25 +4,39 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/03ca7a577> a org:Organization ;
     rdfs:label "Fundación Universitaria Konrad Lorenz" ;
     schema:name "Fundación Universitaria Konrad Lorenz" ;
     schema:foundingDate "1981"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    schema:url <http://www.konradlorenz.edu.co> ; 
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    schema:url <http://konradlorenz.edu.co> ; 
+    schema:mainEntityOfPage <https://www.konradlorenz.edu.co> ;
+    schema:sameAs <https://api.crossref.org/funders/501100009540> ;
+    schema:sameAs <https://grid.ac/institutions/grid.442097.c> ;
+    schema:sameAs <http://isni.org/isni/0000000118821147> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-74.08175 4.60971)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-74.08175 4.60971)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Bogotá" ;
             schema:addressCountry "CO" ;
-            owl:sameAs <http://sws.geonames.org/3688689/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000118821147> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q29052693> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Colombia" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3688689/> ;
+    ] ; 
     .

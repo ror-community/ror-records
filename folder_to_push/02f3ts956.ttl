@@ -4,24 +4,43 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02f3ts956> a org:Organization ;
     rdfs:label "Parc Sanitari Sant Joan de Déu" ;
     schema:name "Parc Sanitari Sant Joan de Déu" ;
     schema:foundingDate "2010"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Healthcare" ; 
-    schema:url <http://www.pssjd.org/ca-es/Paginas/default.aspx> ; 
+    org:classification "healthcare" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    schema:url <http://pssjd.org> ; 
+    schema:mainEntityOfPage <https://www.pssjd.org> ;
+    schema:sameAs <https://grid.ac/institutions/grid.466982.7> ;
+    schema:sameAs <http://isni.org/isni/0000000417710789> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00gy2ar74> ;
+        rdfs:label "Institut de Recerca Sant Joan de Déu" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(2.03659 41.34357)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(2.03659 41.34357)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Sant Boi de Llobregat" ;
             schema:addressCountry "ES" ;
-            owl:sameAs <http://sws.geonames.org/3110834/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000417710789> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Spain" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3110834/> ;
+    ] ; 
     .

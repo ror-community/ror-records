@@ -4,28 +4,40 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/033zpbv42> a org:Organization ;
     rdfs:label "Moscow Aviation Institute" ;
     schema:name "Moscow Aviation Institute" ;
     schema:foundingDate "1930"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "MAI" ;
-    org:alternativeName "National Research University" ;
-    schema:url <http://www.mai.ru/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Moscow_Aviation_Institute> ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:abbreviation "MAI"@None ; 
+    org:alternativeName "National Research University"@en ; 
+    schema:url <http://mai.ru> ; 
+    schema:mainEntityOfPage <https://mai.ru> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Moscow_Aviation_Institute> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.17758.3c> ;
+    schema:sameAs <http://isni.org/isni/0000000088920127> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(37.61556 55.75222)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(37.61556 55.75222)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Moscow" ;
             schema:addressCountry "RU" ;
-            owl:sameAs <http://sws.geonames.org/524901/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000088920127> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1719898> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Russia" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/524901/> ;
+    ] ; 
     .

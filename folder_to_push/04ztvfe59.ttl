@@ -4,26 +4,38 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/04ztvfe59> a org:Organization ;
     rdfs:label "Eugeniusz Geppert Academy of Art and Design in Wroclaw" ;
     schema:name "Eugeniusz Geppert Academy of Art and Design in Wroclaw" ;
     schema:foundingDate "1946"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "ASP" ;
-    schema:url <https://www.asp.wroc.pl> ; 
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:abbreviation "ASP"@None ; 
+    schema:url <http://asp.wroc.pl> ; 
+    schema:mainEntityOfPage <https://www.asp.wroc.pl> ;
+    schema:sameAs <https://grid.ac/institutions/grid.445634.4> ;
+    schema:sameAs <http://isni.org/isni/000000044673515X> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(17.03333 51.1)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(17.03333 51.1)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Wroclaw" ;
             schema:addressCountry "PL" ;
-            owl:sameAs <http://sws.geonames.org/3081368/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/000000044673515X> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q30257498> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Poland" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3081368/> ;
+    ] ; 
     .

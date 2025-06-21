@@ -1,0 +1,41 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/03gx10y75> a org:Organization ;
+    rdfs:label "Universidad Gerardo Barrios" ;
+    schema:name "Universidad Gerardo Barrios" ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:abbreviation "UGB"@None ; 
+    schema:url <http://ugb.edu.sv> ; 
+    schema:mainEntityOfPage <https://sgc.ugb.edu.sv> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Universidad_Gerardo_Barrios> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.472373.6> ;
+    schema:sameAs <http://isni.org/isni/0000000405317728> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-88.18333 13.48333)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "San Miguel" ;
+            schema:addressCountry "SV" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "El Salvador" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3583446/> ;
+    ] ; 
+    .

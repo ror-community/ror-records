@@ -4,27 +4,41 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/03ftejk10> a org:Organization ;
     rdfs:label "V. N. Karazin Kharkiv National University" ;
     schema:name "V. N. Karazin Kharkiv National University" ;
     schema:foundingDate "1804"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:alternativeName "Vasily Karazin Kharkov National University" ;
-    schema:url <https://karazin.ua> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Kharkiv> ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:alternativeName "Karazin University"@en ; 
+    org:alternativeName "Vasily Karazin Kharkov National University"@en ; 
+    org:alternativeName "Каразінський університет"@uk ; 
+    schema:url <http://karazin.ua> ; 
+    schema:mainEntityOfPage <https://karazin.ua> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Kharkiv> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.18999.30> ;
+    schema:sameAs <http://isni.org/isni/0000000405176080> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(36.25272 49.98081)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(36.25272 49.98081)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Kharkiv" ;
             schema:addressCountry "UA" ;
-            owl:sameAs <http://sws.geonames.org/706483/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000405176080> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1458695> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Ukraine" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/706483/> ;
+    ] ; 
     .

@@ -4,27 +4,39 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/012mm7y56> a org:Organization ;
     rdfs:label "Universidade Metodista de São Paulo" ;
     schema:name "Universidade Metodista de São Paulo" ;
     schema:foundingDate "1938"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "UMESP" ;
-    schema:url <https://metodista.br> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Methodist_University_of_São_Paulo> ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:abbreviation "UMESP"@None ; 
+    schema:url <http://metodista.br> ; 
+    schema:mainEntityOfPage <https://www.metodista.br> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Methodist_University_of_São_Paulo> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.456932.f> ;
+    schema:sameAs <http://isni.org/isni/0000000122951681> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-46.565 -23.69389)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-46.565 -23.69389)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "São Bernardo do Campo" ;
             schema:addressCountry "BR" ;
-            owl:sameAs <http://sws.geonames.org/3449344/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000122951681> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q7894387> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Brazil" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3449344/> ;
+    ] ; 
     .

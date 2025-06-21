@@ -1,0 +1,42 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/03gh19d69> a org:Organization ;
+    rdfs:label "University of Zambia" ;
+    schema:name "University of Zambia" ;
+    schema:foundingDate "1966"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:abbreviation "UNZA"@None ; 
+    schema:url <http://unza.zm> ; 
+    schema:mainEntityOfPage <https://www.unza.zm/> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Zambia> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.12984.36> ;
+    schema:sameAs <http://isni.org/isni/0000000089145257> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(28.28713 -15.40669)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Lusaka" ;
+            schema:addressCountry "ZM" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Zambia" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/909137/> ;
+    ] ; 
+    .

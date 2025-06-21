@@ -4,26 +4,40 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/006vzad83> a org:Organization ;
     rdfs:label "Tata Medical Center" ;
     schema:name "Tata Medical Center" ;
     schema:foundingDate "2011"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Healthcare" ; 
-    org:abbreviation "TMC" ;
-    schema:url <https://tmckolkata.com> ; 
+    org:classification "funder" ; 
+    org:classification "healthcare" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:abbreviation "TMC"@None ; 
+    schema:url <http://tmckolkata.com> ; 
+    schema:mainEntityOfPage <https://tmckolkata.com> ;
+    schema:sameAs <https://api.crossref.org/funders/100020407> ;
+    schema:sameAs <https://grid.ac/institutions/grid.430884.3> ;
+    schema:sameAs <http://isni.org/isni/0000000417708996> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(88.36304 22.56263)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(88.36304 22.56263)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Kolkata" ;
             schema:addressCountry "IN" ;
-            owl:sameAs <http://sws.geonames.org/1275004/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000417708996> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q30289160> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "India" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1275004/> ;
+    ] ; 
     .

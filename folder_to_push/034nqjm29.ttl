@@ -1,0 +1,44 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/034nqjm29> a org:Organization ;
+    rdfs:label "Houston Community College System" ;
+    schema:name "Houston Community College System" ;
+    schema:foundingDate "1971"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:abbreviation "HCC"@None ; 
+    org:abbreviation "HCCS"@None ; 
+    org:alternativeName "Houston Community College"@en ; 
+    schema:url <http://hccs.edu> ; 
+    schema:mainEntityOfPage <https://www.hccs.edu> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Houston_Community_College> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.420772.4> ;
+    schema:sameAs <http://isni.org/isni/0000000088836232> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-95.36327 29.76328)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Houston" ;
+            schema:addressCountry "US" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/4699066/> ;
+    ] ; 
+    .

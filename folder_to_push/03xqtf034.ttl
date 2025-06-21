@@ -4,28 +4,49 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/03xqtf034> a org:Organization ;
     rdfs:label "The Netherlands Cancer Institute" ;
     schema:name "The Netherlands Cancer Institute" ;
     schema:foundingDate "1913"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Healthcare" ; 
-    org:abbreviation "NKI-AVL" ;
-    org:alternativeName "Netherlands Cancer Institute" ;
-    schema:url <https://www.nki.nl> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Antoni_van_Leeuwenhoekziekenhuis> ;
+    org:classification "healthcare" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:abbreviation "NKI"@None ; 
+    org:abbreviation "NKI-AVL"@None ; 
+    org:alternativeName "Nederlands Kanker Instituut - Antoni van Leeuwenhoekziekenhuis"@nl ; 
+    org:alternativeName "Netherlands Cancer Institute"@en ; 
+    org:alternativeName "Netherlands Cancer Institute - Antoni van Leeuwenhoek Hospital"@en ; 
+    schema:url <http://nki.nl> ; 
+    schema:mainEntityOfPage <https://www.nki.nl> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Antoni_van_Leeuwenhoekziekenhuis> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.430814.a> ;
+    schema:sameAs <http://isni.org/isni/0000000106741393> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/013rctf62> ;
+        rdfs:label "Van Leeuwenhoek Centre for Advanced Microscopy" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(4.88969 52.37403)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(4.88969 52.37403)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Amsterdam" ;
             schema:addressCountry "NL" ;
-            owl:sameAs <http://sws.geonames.org/2759794/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000106741393> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q97503000> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "The Netherlands" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2759794/> ;
+    ] ; 
     .

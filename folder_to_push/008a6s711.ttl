@@ -1,0 +1,41 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/008a6s711> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "2015"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2024-11-18"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:abbreviation "CUSM"@es ; 
+    schema:url <http://cusm.edu> ; 
+    schema:mainEntityOfPage <https://www.cusm.edu> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/California_University_of_Science_and_Medicine> ; 
+    schema:sameAs <http://isni.org/isni/0000000464847120> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-117.31365 34.0739)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Colton" ;
+            schema:addressCountry "US" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/5338783/> ;
+    ] ; 
+    .

@@ -1,0 +1,41 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/040hbk441> a org:Organization ;
+    rdfs:label "Universidad Nacional Pedro Ruíz Gallo" ;
+    schema:name "Universidad Nacional Pedro Ruíz Gallo" ;
+    schema:foundingDate "1970"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:abbreviation "UNPRG"@None ; 
+    schema:url <http://unprg.edu.pe> ; 
+    schema:mainEntityOfPage <https://www.unprg.edu.pe> ;
+    schema:sameAs <https://grid.ac/institutions/grid.441718.f> ;
+    schema:sameAs <http://isni.org/isni/0000000106742441> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-79.90611 -6.70111)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Lambayeque" ;
+            schema:addressCountry "PE" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Peru" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3695754/> ;
+    ] ; 
+    .

@@ -1,0 +1,47 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/0079jgp14> a org:Organization ;
+    rdfs:label "College of Europe" ;
+    schema:name "College of Europe" ;
+    schema:foundingDate "1949"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    schema:url <http://coleurope.eu> ; 
+    schema:mainEntityOfPage <https://www.coleurope.eu/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/College_of_Europe> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.433628.8> ;
+    schema:sameAs <http://isni.org/isni/0000000123754524> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/055560x25> ;
+        rdfs:label "College of Europe, Warsaw" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(3.22424 51.20892)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Bruges" ;
+            schema:addressCountry "BE" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Belgium" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2800931/> ;
+    ] ; 
+    .

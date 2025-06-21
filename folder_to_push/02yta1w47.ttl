@@ -1,0 +1,42 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/02yta1w47> a org:Organization ;
+    rdfs:label "Palmer College of Chiropractic" ;
+    schema:name "Palmer College of Chiropractic" ;
+    schema:foundingDate "1897"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:alternativeName "Palmer School and Cure"@en ; 
+    schema:url <http://palmer.edu> ; 
+    schema:mainEntityOfPage <https://www.palmer.edu> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Palmer_College_of_Chiropractic> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.419969.a> ;
+    schema:sameAs <http://isni.org/isni/0000000419370749> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-90.57764 41.52364)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Davenport" ;
+            schema:addressCountry "US" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/4853423/> ;
+    ] ; 
+    .

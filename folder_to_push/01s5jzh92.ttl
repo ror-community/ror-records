@@ -4,27 +4,40 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01s5jzh92> a org:Organization ;
     rdfs:label "Stockholm School of Economics" ;
     schema:name "Stockholm School of Economics" ;
     schema:foundingDate "1909"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "HHS" ;
-    schema:url <https://www.hhs.se/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Stockholm_School_of_Economics> ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:abbreviation "HHS"@None ; 
+    org:abbreviation "SSE "@None ; 
+    schema:url <http://hhs.se> ; 
+    schema:mainEntityOfPage <https://www.hhs.se/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Stockholm_School_of_Economics> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.419684.6> ;
+    schema:sameAs <http://isni.org/isni/0000000112141861> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(18.06871 59.32938)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(18.06871 59.32938)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Stockholm" ;
             schema:addressCountry "SE" ;
-            owl:sameAs <http://sws.geonames.org/2673730/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000112141861> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1061504> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Sweden" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2673730/> ;
+    ] ; 
     .

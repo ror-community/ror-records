@@ -4,28 +4,42 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/017ebfz38> a org:Organization ;
     rdfs:label "National Institute of Technology Warangal" ;
     schema:name "National Institute of Technology Warangal" ;
     schema:foundingDate "1959"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "NITW" ;
-    org:alternativeName "NIT Warangal" ;
-    schema:url <http://www.nitw.ac.in/nitw/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/National_Institute_of_Technology,_Warangal> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:alternativeName "NIT Warangal"@None ; 
+    org:abbreviation "NITW"@None ; 
+    schema:url <http://nitw.ac.in> ; 
+    schema:mainEntityOfPage <https://www.nitw.ac.in> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/National_Institute_of_Technology,_Warangal> ; 
+    schema:sameAs <https://api.crossref.org/funders/100017604> ;
+    schema:sameAs <https://grid.ac/institutions/grid.419655.a> ;
+    schema:sameAs <http://isni.org/isni/0000000100083668> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(79.58333 18)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(79.58333 18)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Warangal" ;
             schema:addressCountry "IN" ;
-            owl:sameAs <http://sws.geonames.org/1252948/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000100083668> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q6973724> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "India" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1252948/> ;
+    ] ; 
     .

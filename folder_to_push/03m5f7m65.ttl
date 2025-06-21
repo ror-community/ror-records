@@ -1,0 +1,42 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/03m5f7m65> a org:Organization ;
+    rdfs:label "Pilot University of Colombia" ;
+    schema:name "Pilot University of Colombia" ;
+    schema:foundingDate "1962"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:abbreviation "UNIPILOTO"@None ; 
+    schema:url <http://unipiloto.edu.co> ; 
+    schema:mainEntityOfPage <https://www.unipiloto.edu.co> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Pilot_University_of_Colombia> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.442185.e> ;
+    schema:sameAs <http://isni.org/isni/000000010730630X> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-74.08175 4.60971)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Bogotá" ;
+            schema:addressCountry "CO" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Colombia" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3688689/> ;
+    ] ; 
+    .

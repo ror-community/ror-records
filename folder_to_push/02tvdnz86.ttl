@@ -4,24 +4,49 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02tvdnz86> a org:Organization ;
     rdfs:label "Dulaty University" ;
     schema:name "Dulaty University" ;
     schema:foundingDate "2020"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:alternativeName "M.Kh.Dulaty Taraz Regional University" ;
-    schema:url <https://dulaty.kz> ; 
-    owl:sameAs <https://kk.wikipedia.org/wiki/%D0%9C%D2%B1%D1%85%D0%B0%D0%BC%D0%BC%D0%B5%D0%B4_%D0%A5%D0%B0%D0%B9%D0%B4%D0%B0%D1%80_%D0%94%D1%83%D0%BB%D0%B0%D1%82%D0%B8_%D0%B0%D1%82%D1%8B%D0%BD%D0%B4%D0%B0%D2%93%D1%8B_%D0%A2%D0%B0%D1%80%D0%B0%D0%B7_%D3%A9%D2%A3%D1%96%D1%80%D0%BB%D1%96%D0%BA_%D1%83%D0%BD%D0%B8%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D1%82%D0%B5%D1%82%D1%96> ;
+    org:classification "education" ; 
+    dct:created "2023-04-27"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:alternativeName "M.Kh.Dulaty Taraz Regional University"@en ; 
+    schema:url <http://dulaty.kz> ; 
+    schema:mainEntityOfPage <https://dulaty.kz> ;
+    owl:sameAs <https://kk.wikipedia.org/wiki/%D0%9C%D2%B1%D1%85%D0%B0%D0%BC%D0%BC%D0%B5%D0%B4_%D0%A5%D0%B0%D0%B9%D0%B4%D0%B0%D1%80_%D0%94%D1%83%D0%BB%D0%B0%D1%82%D0%B8_%D0%B0%D1%82%D1%8B%D0%BD%D0%B4%D0%B0%D2%93%D1%8B_%D0%A2%D0%B0%D1%80%D0%B0%D0%B7_%D3%A9%D2%A3%D1%96%D1%80%D0%BB%D1%96%D0%BA_%D1%83%D0%BD%D0%B8%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D1%82%D0%B5%D1%82%D1%96> ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "predecessor" ;
+        org:member <https://ror.org/014kyp779> ;
+        rdfs:label "M. Kh Dulati Taraz State University" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "predecessor" ;
+        org:member <https://ror.org/03fkxys09> ;
+        rdfs:label "Taraz State Pedagogical University" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(71.36667 42.9)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(71.36667 42.9)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Taraz" ;
             schema:addressCountry "KZ" ;
-            owl:sameAs <http://sws.geonames.org/1516905/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Kazakhstan" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1516905/> ;
+    ] ; 
     .

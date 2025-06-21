@@ -1,0 +1,44 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/026w31v75> a org:Organization ;
+    rdfs:label "University of Technology Malaysia" ;
+    schema:name "University of Technology Malaysia" ;
+    schema:foundingDate "1975"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:abbreviation "UTM"@None ; 
+    schema:url <http://utm.my> ; 
+    schema:mainEntityOfPage <https://www.utm.my> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Universiti_Teknologi_Malaysia> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100005417> ;
+    schema:sameAs <https://grid.ac/institutions/grid.410877.d> ;
+    schema:sameAs <http://isni.org/isni/0000000122961505> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(103.7578 1.4655)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Johor Bahru" ;
+            schema:addressCountry "MY" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Malaysia" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1732752/> ;
+    ] ; 
+    .

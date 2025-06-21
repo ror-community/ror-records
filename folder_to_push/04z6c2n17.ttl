@@ -1,0 +1,44 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/04z6c2n17> a org:Organization ;
+    rdfs:label "University of Johannesburg" ;
+    schema:name "University of Johannesburg" ;
+    schema:foundingDate "2005"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:abbreviation "UJ"@None ; 
+    schema:url <http://uj.ac.za> ; 
+    schema:mainEntityOfPage <https://www.uj.ac.za/> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Johannesburg> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100006565> ;
+    schema:sameAs <https://grid.ac/institutions/grid.412988.e> ;
+    schema:sameAs <http://isni.org/isni/000000010109131X> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(28.04363 -26.20227)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Johannesburg" ;
+            schema:addressCountry "ZA" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "South Africa" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/993800/> ;
+    ] ; 
+    .

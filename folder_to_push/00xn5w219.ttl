@@ -1,0 +1,40 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/00xn5w219> a org:Organization ;
+    rdfs:label "OMV (Austria)" ;
+    schema:name "OMV (Austria)" ;
+    schema:foundingDate "1956"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "company" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    schema:url <http://omv.com> ; 
+    schema:mainEntityOfPage <https://www.omv.com/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/OMV> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.426135.7> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(16.46667 48.13333)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Schwechat" ;
+            schema:addressCountry "AT" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Austria" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2765388/> ;
+    ] ; 
+    .

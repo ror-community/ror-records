@@ -4,27 +4,41 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/036kgyt43> a org:Organization ;
     rdfs:label "Chouaib Doukkali University" ;
     schema:name "Chouaib Doukkali University" ;
     schema:foundingDate "1985"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "UCD" ;
-    schema:url <http://www.ucd.ac.ma> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Chouaib_Doukkali_University> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:abbreviation "UCD"@None ; 
+    schema:url <http://ucd.ac.ma> ; 
+    schema:mainEntityOfPage <https://www.ucd.ac.ma> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Chouaib_Doukkali_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/100016043> ;
+    schema:sameAs <https://grid.ac/institutions/grid.440482.e> ;
+    schema:sameAs <http://isni.org/isni/0000000088068069> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-8.50882 33.25682)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-8.50882 33.25682)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "El Jadida" ;
             schema:addressCountry "MA" ;
-            owl:sameAs <http://sws.geonames.org/2550078/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000088068069> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q12204499> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Morocco" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2550078/> ;
+    ] ; 
     .

@@ -4,27 +4,41 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01texbd31> a org:Organization ;
     rdfs:label "Parahyangan Catholic University" ;
     schema:name "Parahyangan Catholic University" ;
     schema:foundingDate "1955"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:alternativeName "UNPAR" ;
-    schema:url <http://unpar.ac.id/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Parahyangan_Catholic_University> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:alternativeName "UNPAR"@id ; 
+    schema:url <http://unpar.ac.id> ; 
+    schema:mainEntityOfPage <https://unpar.ac.id> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Parahyangan_Catholic_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100020222> ;
+    schema:sameAs <https://grid.ac/institutions/grid.443075.1> ;
+    schema:sameAs <http://isni.org/isni/0000000122239408> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(107.60694 -6.92222)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(107.60694 -6.92222)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Bandung" ;
             schema:addressCountry "ID" ;
-            owl:sameAs <http://sws.geonames.org/1650357/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000122239408> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q14091635> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Indonesia" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1650357/> ;
+    ] ; 
     .

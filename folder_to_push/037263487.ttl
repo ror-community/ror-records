@@ -4,27 +4,41 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/037263487> a org:Organization ;
     rdfs:label "Università degli Studi Internazionali di Roma" ;
     schema:name "Università degli Studi Internazionali di Roma" ;
     schema:foundingDate "1996"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "UNINT" ;
-    schema:url <http://www.unint.eu/it/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Libera_Universit%C3%A0_degli_Studi_Per_l'Innovazione_e_le_Organizzazioni> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:abbreviation "UNINT"@None ; 
+    schema:url <http://unint.eu> ; 
+    schema:mainEntityOfPage <https://www.unint.eu> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Libera_Universit%C3%A0_degli_Studi_Per_l'Innovazione_e_le_Organizzazioni> ; 
+    schema:sameAs <https://api.crossref.org/funders/100012989> ;
+    schema:sameAs <https://grid.ac/institutions/grid.437533.5> ;
+    schema:sameAs <http://isni.org/isni/0000000446759565> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(12.51133 41.89193)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(12.51133 41.89193)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Rome" ;
             schema:addressCountry "IT" ;
-            owl:sameAs <http://sws.geonames.org/3169070/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000446759565> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q939801> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Italy" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3169070/> ;
+    ] ; 
     .

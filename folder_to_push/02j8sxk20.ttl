@@ -1,0 +1,41 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/02j8sxk20> a org:Organization ;
+    rdfs:label "Polymer Competence Center Leoben (Austria)" ;
+    schema:name "Polymer Competence Center Leoben (Austria)" ;
+    schema:foundingDate "2002"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "company" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:abbreviation "PCCL"@None ; 
+    schema:url <http://pccl.at> ; 
+    schema:mainEntityOfPage <https://www.pccl.at> ;
+    schema:sameAs <https://grid.ac/institutions/grid.451918.0> ;
+    schema:sameAs <http://isni.org/isni/0000000098742221> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(15.09144 47.3765)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Leoben" ;
+            schema:addressCountry "AT" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Austria" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2772649/> ;
+    ] ; 
+    .

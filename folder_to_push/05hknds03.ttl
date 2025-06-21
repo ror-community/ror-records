@@ -4,27 +4,39 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/05hknds03> a org:Organization ;
     rdfs:label "University American College Skopje" ;
     schema:name "University American College Skopje" ;
     schema:foundingDate "2005"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "UACS" ;
-    schema:url <http://www.uacs.edu.mk/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/University_American_College_Skopje> ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:abbreviation "UACS"@None ; 
+    schema:url <http://uacs.edu.mk> ; 
+    schema:mainEntityOfPage <https://uacs.edu.mk> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/University_American_College_Skopje> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.445944.c> ;
+    schema:sameAs <http://isni.org/isni/0000000404464427> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(21.43141 41.99646)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(21.43141 41.99646)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Skopje" ;
             schema:addressCountry "MK" ;
-            owl:sameAs <http://sws.geonames.org/785842/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000404464427> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q7894510> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "North Macedonia" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/785842/> ;
+    ] ; 
     .

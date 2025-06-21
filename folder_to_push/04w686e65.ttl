@@ -4,28 +4,42 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/04w686e65> a org:Organization ;
     rdfs:label "Bicol University" ;
     schema:name "Bicol University" ;
     schema:foundingDate "1969"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "BU" ;
-    org:alternativeName "Bueños and Iskolar ng Bayan" ;
-    schema:url <http://www.bicol-u.edu.ph> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Bicol_University> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:abbreviation "BU"@None ; 
+    org:alternativeName "Bueños and Iskolar ng Bayan"@tl ; 
+    schema:url <http://bicol-u.edu.ph> ; 
+    schema:mainEntityOfPage <https://bicol-u.edu.ph> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Bicol_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100012414> ;
+    schema:sameAs <https://grid.ac/institutions/grid.443113.0> ;
+    schema:sameAs <http://isni.org/isni/0000000092758249> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(123.74073 13.14125)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(123.74073 13.14125)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Legazpi" ;
             schema:addressCountry "PH" ;
-            owl:sameAs <http://sws.geonames.org/1706889/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000092758249> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q4903711> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Philippines" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1706889/> ;
+    ] ; 
     .

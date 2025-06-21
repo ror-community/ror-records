@@ -1,0 +1,50 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/013fsnh78> a org:Organization ;
+    rdfs:label "University of Waikato" ;
+    schema:name "University of Waikato" ;
+    schema:foundingDate "1964"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:alternativeName "Te Whare Wānanga o Waikato"@mi ; 
+    schema:url <http://waikato.ac.nz> ; 
+    schema:mainEntityOfPage <https://www.waikato.ac.nz> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Waikato> ; 
+    schema:sameAs <https://api.crossref.org/funders/100010061> ;
+    schema:sameAs <https://grid.ac/institutions/grid.49481.30> ;
+    schema:sameAs <http://isni.org/isni/0000000404083579> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05p61mv27> ;
+        rdfs:label "The Dodd-Walls Centre for Photonic and Quantum Technologies" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(175.28333 -37.78333)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Hamilton" ;
+            schema:addressCountry "NZ" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "New Zealand" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2190324/> ;
+    ] ; 
+    .

@@ -4,27 +4,39 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/045ncxc88> a org:Organization ;
     rdfs:label "Centro Tecnolóxico de Telecomunicacións de Galicia" ;
     schema:name "Centro Tecnolóxico de Telecomunicacións de Galicia" ;
     schema:foundingDate "2007"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Nonprofit" ; 
-    org:abbreviation "GRADIANT" ;
-    org:alternativeName "Gradiant" ;
-    schema:url <https://www.gradiant.org> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Gradiant_(foundation)> ;
+    org:classification "nonprofit" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:abbreviation "GRADIANT"@None ; 
+    org:alternativeName "Gradiant"@en ; 
+    schema:url <http://gradiant.org> ; 
+    schema:mainEntityOfPage <https://www.gradiant.org> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Gradiant_(foundation)> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.424788.5> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-8.72264 42.23282)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-8.72264 42.23282)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Vigo" ;
             schema:addressCountry "ES" ;
-            owl:sameAs <http://sws.geonames.org/3105976/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://www.wikidata.org/entity/Q5591894> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Spain" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3105976/> ;
+    ] ; 
     .

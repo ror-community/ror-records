@@ -4,28 +4,48 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/0127mpp72> a org:Organization ;
     rdfs:label "University of Uyo" ;
     schema:name "University of Uyo" ;
     schema:foundingDate "1991"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "UNIUYO" ;
-    org:alternativeName "University of Cross River State" ;
-    schema:url <http://www.uniuyo.edu.ng/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Uyo> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:abbreviation "UNIUYO"@None ; 
+    org:alternativeName "University of Cross River State"@en ; 
+    schema:url <http://uniuyo.edu.ng> ; 
+    schema:mainEntityOfPage <https://uniuyo.edu.ng> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Uyo> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100022614> ;
+    schema:sameAs <https://grid.ac/institutions/grid.412960.8> ;
+    schema:sameAs <http://isni.org/isni/0000000091562260> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03fr85h91> ;
+        rdfs:label "University of Uyo Teaching Hospital" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(7.9335 5.05127)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(7.9335 5.05127)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Uyo" ;
             schema:addressCountry "NG" ;
-            owl:sameAs <http://sws.geonames.org/2319480/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000091562260> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q7896523> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Nigeria" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2319480/> ;
+    ] ; 
     .

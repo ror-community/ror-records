@@ -4,24 +4,47 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/035d7ds17> a org:Organization ;
     rdfs:label "AfricArXiv" ;
     schema:name "AfricArXiv" ;
     schema:foundingDate "2018"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Archive" ; 
-    schema:url <https://africarxiv.org> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/AfricArXiv> ;
+    org:classification "archive" ; 
+    dct:created "2023-06-22"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    schema:mainEntityOfPage <https://africarxiv.org> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/AfricArXiv> ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01385bp05> ;
+        rdfs:label "UbuntuNet Alliance for Research and Education Networking" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/002q01z48> ;
+        rdfs:label "Access 2 Perspectives" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(33.78725 -13.96692)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(33.78725 -13.96692)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Lilongwe" ;
             schema:addressCountry "MW" ;
-            owl:sameAs <http://sws.geonames.org/927967/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://www.wikidata.org/entity/Q55313398> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Malawi" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/927967/> ;
+    ] ; 
     .

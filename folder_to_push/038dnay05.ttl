@@ -4,27 +4,39 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/038dnay05> a org:Organization ;
     rdfs:label "Constantine the Philosopher University in Nitra" ;
     schema:name "Constantine the Philosopher University in Nitra" ;
     schema:foundingDate "1959"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "UKF" ;
-    schema:url <https://www.ukf.sk/en/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Constantine_the_Philosopher_University_in_Nitra> ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:abbreviation "UKF"@None ; 
+    schema:url <http://ukf.sk> ; 
+    schema:mainEntityOfPage <https://www.ukf.sk> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Constantine_the_Philosopher_University_in_Nitra> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.411883.7> ;
+    schema:sameAs <http://isni.org/isni/0000000106737167> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(18.08453 48.30763)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(18.08453 48.30763)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Nitra" ;
             schema:addressCountry "SK" ;
-            owl:sameAs <http://sws.geonames.org/3058531/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000106737167> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q9366812> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Slovakia" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3058531/> ;
+    ] ; 
     .

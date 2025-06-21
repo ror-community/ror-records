@@ -4,27 +4,40 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/005cqsz63> a org:Organization ;
     rdfs:label "Hungarian Research Centre for Linguistics" ;
     schema:name "Hungarian Research Centre for Linguistics" ;
     schema:foundingDate "1949"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:alternativeName "MTA Nyelvtudományi Intézet" ;
-    schema:url <https://nytud.hu> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Research_Institute_for_Linguistics_of_the_Hungarian_Academy_of_Sciences> ;
+    org:classification "facility" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:alternativeName "MTA Nyelvtudományi Intézet"@hu ; 
+    org:alternativeName "Magyar Tudományos Akadémia Nyelvtudományi Intézete"@hu ; 
+    schema:url <http://nytud.hu> ; 
+    schema:mainEntityOfPage <https://nytud.hu> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Research_Institute_for_Linguistics_of_the_Hungarian_Academy_of_Sciences> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.462746.5> ;
+    schema:sameAs <http://isni.org/isni/0000000109441097> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(19.04045 47.49835)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(19.04045 47.49835)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Budapest" ;
             schema:addressCountry "HU" ;
-            owl:sameAs <http://sws.geonames.org/3054643/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000109441097> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q7315098> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Hungary" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3054643/> ;
+    ] ; 
     .

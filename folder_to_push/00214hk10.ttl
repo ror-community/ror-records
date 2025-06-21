@@ -1,0 +1,52 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/00214hk10> a org:Organization ;
+    rdfs:label "Roointan Arash Hospital" ;
+    schema:name "Roointan Arash Hospital" ;
+    schema:foundingDate "1975"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "healthcare" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:alternativeName "Arash Hospital"@en ; 
+    org:alternativeName "Roointan Arash Women's Hospital"@en ; 
+    org:alternativeName "Ruin Tan Arash Hospital"@en ; 
+    org:alternativeName "آرش"@fa ; 
+    org:alternativeName "بیمارستان جامع بانوان آرش دانشگاه علوم پزشکی تهران"@fa ; 
+    org:alternativeName "جامع بانوان آرش"@fa ; 
+    schema:url <http://arash.tums.ac.ir> ; 
+    schema:mainEntityOfPage <http://arash.tums.ac.ir> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Ruin_Tan_Arash_Hospital%2C_Tehran> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.430312.7> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01c4pz451> ;
+        rdfs:label "Tehran University of Medical Sciences" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(51.42151 35.69439)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Tehran" ;
+            schema:addressCountry "IR" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Iran" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/112931/> ;
+    ] ; 
+    .

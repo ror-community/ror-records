@@ -4,25 +4,48 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02qrdc062> a org:Organization ;
     rdfs:label "Peoria campus of the University of Illinois System" ;
     schema:name "Peoria campus of the University of Illinois System" ;
     schema:foundingDate "1882"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:alternativeName "University of Illinois at Peoria" ;
-    schema:url <https://www.uillinois.edu> ; 
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:alternativeName "University of Illinois at Peoria"@en ; 
+    schema:mainEntityOfPage <https://www.uillinois.edu> ;
+    schema:sameAs <https://grid.ac/institutions/grid.430852.8> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02mpq6x41> ;
+        rdfs:label "University of Illinois Chicago" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03qrwy954> ;
+        rdfs:label "OSF Saint Francis Medical Center" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-89.58899 40.69365)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-89.58899 40.69365)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Peoria" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/4905687/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://www.wikidata.org/entity/Q7895524> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/4905687/> ;
+    ] ; 
     .

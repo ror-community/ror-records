@@ -1,0 +1,43 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/02fhfq388> a org:Organization ;
+    rdfs:label "Enverga University" ;
+    schema:name "Enverga University" ;
+    schema:foundingDate "1947"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:abbreviation "MSEUF"@None ; 
+    org:alternativeName "Manuel S. Enverga University Foundation"@en ; 
+    schema:url <http://mseuf.edu.ph> ; 
+    schema:mainEntityOfPage <https://mseuf.edu.ph> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Enverga_University> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.448687.1> ;
+    schema:sameAs <http://isni.org/isni/0000000406396528> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(121.61722 13.93139)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Lucena City" ;
+            schema:addressCountry "PH" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Philippines" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1705357/> ;
+    ] ; 
+    .

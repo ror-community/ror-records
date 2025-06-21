@@ -4,28 +4,41 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/051qw9f78> a org:Organization ;
     rdfs:label "HTWG Hochschule Konstanz - Technik, Wirtschaft und Gestaltung" ;
     schema:name "HTWG Hochschule Konstanz - Technik, Wirtschaft und Gestaltung" ;
     schema:foundingDate "1906"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "HTWG" ;
-    org:alternativeName "Hochschule Konstanz University of Applied Sciences" ;
-    schema:url <https://www.htwg-konstanz.de> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Hochschule_Konstanz> ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:abbreviation "HTWG"@None ; 
+    org:alternativeName "Hochschule Konstanz Technik, Wirtschaft und Gestaltung"@de ; 
+    org:alternativeName "Hochschule Konstanz University of Applied Sciences"@en ; 
+    schema:url <http://htwg-konstanz.de> ; 
+    schema:mainEntityOfPage <https://www.htwg-konstanz.de> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Hochschule_Konstanz> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.454352.1> ;
+    schema:sameAs <http://isni.org/isni/0000000107275531> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(9.17582 47.66033)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(9.17582 47.66033)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Konstanz" ;
             schema:addressCountry "DE" ;
-            owl:sameAs <http://sws.geonames.org/2885679/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000107275531> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1622118> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Germany" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2885679/> ;
+    ] ; 
     .

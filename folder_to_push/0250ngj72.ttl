@@ -4,25 +4,50 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/0250ngj72> a org:Organization ;
     rdfs:label "Centre Hospitalier Universitaire d'Angers" ;
     schema:name "Centre Hospitalier Universitaire d'Angers" ;
     schema:foundingDate "1175"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Healthcare" ; 
-    org:alternativeName "CHU Angers" ;
-    schema:url <http://www.chu-angers.fr/> ; 
+    org:classification "healthcare" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:alternativeName "CHU Angers"@fr ; 
+    schema:url <http://chu-angers.fr> ; 
+    schema:mainEntityOfPage <https://www.chu-angers.fr> ;
+    schema:sameAs <https://grid.ac/institutions/grid.411147.6> ;
+    schema:sameAs <http://isni.org/isni/0000000404720283> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/003g1aw90> ;
+        rdfs:label "Centre de Recherche en Cancérologie et Immunologie Intégrée Nantes Angers" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/04yrqp957> ;
+        rdfs:label "Université d'Angers" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-0.55202 47.47156)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-0.55202 47.47156)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Angers" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/3037656/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000404720283> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3037656/> ;
+    ] ; 
     .

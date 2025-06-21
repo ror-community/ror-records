@@ -4,27 +4,40 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/04jm2zr28> a org:Organization ;
     rdfs:label "Meshalkin National Medical Research Center" ;
     schema:name "Meshalkin National Medical Research Center" ;
     schema:foundingDate "1957"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "NNIIPK" ;
-    org:alternativeName "Novosibirsk Scientific Research Institute of Pathology named after Academician EN circulation Meshalkina" ;
-    schema:url <http://www.meshalkin.ru/> ; 
+    org:classification "facility" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:alternativeName "NII Patologii Krovoobrashcheniya im. E.N. Meshalkina"@None ; 
+    org:abbreviation "NNIIPK"@None ; 
+    org:alternativeName "Novosibirsk Scientific Research Institute of Pathology named after Academician EN circulation Meshalkina"@en ; 
+    schema:url <http://meshalkin.ru> ; 
+    schema:mainEntityOfPage <https://www.meshalkin.ru> ;
+    schema:sameAs <https://grid.ac/institutions/grid.465330.7> ;
+    schema:sameAs <http://isni.org/isni/0000000403917076> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(82.9346 55.0415)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(82.9346 55.0415)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Novosibirsk" ;
             schema:addressCountry "RU" ;
-            owl:sameAs <http://sws.geonames.org/1496747/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000403917076> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q24930773> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Russia" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1496747/> ;
+    ] ; 
     .

@@ -4,27 +4,47 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/0069bkg23> a org:Organization ;
     rdfs:label "Lithuanian University of Health Sciences" ;
     schema:name "Lithuanian University of Health Sciences" ;
     schema:foundingDate "2010"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "LSMU" ;
-    schema:url <https://lsmu.lt> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Lithuanian_University_of_Health_Sciences> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:abbreviation "LSMU"@None ; 
+    schema:url <http://lsmu.lt> ; 
+    schema:mainEntityOfPage <https://lsmu.lt> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Lithuanian_University_of_Health_Sciences> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100016250> ;
+    schema:sameAs <https://grid.ac/institutions/grid.45083.3a> ;
+    schema:sameAs <http://isni.org/isni/0000000404326841> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/058hsp657> ;
+        rdfs:label "Hospital of Lithuanian University of Health Sciences Kaunas Clinics" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(23.90961 54.90272)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(23.90961 54.90272)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Kaunas" ;
             schema:addressCountry "LT" ;
-            owl:sameAs <http://sws.geonames.org/598316/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000404326841> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q2092640> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Lithuania" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/598316/> ;
+    ] ; 
     .

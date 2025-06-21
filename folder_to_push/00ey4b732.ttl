@@ -4,26 +4,38 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/00ey4b732> a org:Organization ;
     rdfs:label "Dzemal Bijedic University of Mostar" ;
     schema:name "Dzemal Bijedic University of Mostar" ;
     schema:foundingDate "1977"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    schema:url <https://www.unmo.ba> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/University_D%C5%BEemal_Bijedi%C4%87_of_Mostar> ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    schema:url <http://unmo.ba> ; 
+    schema:mainEntityOfPage <https://www.unmo.ba> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/University_D%C5%BEemal_Bijedi%C4%87_of_Mostar> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.448712.c> ;
+    schema:sameAs <http://isni.org/isni/0000000110150123> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(17.80806 43.34333)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(17.80806 43.34333)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Mostar" ;
             schema:addressCountry "BA" ;
-            owl:sameAs <http://sws.geonames.org/3194828/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000110150123> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q6471118> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Bosnia and Herzegovina" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3194828/> ;
+    ] ; 
     .

@@ -4,24 +4,37 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/03yef2k78> a org:Organization ;
     rdfs:label "Universidad Nacional Autónoma de Tayacaja Daniel Hernández Morillo" ;
     schema:name "Universidad Nacional Autónoma de Tayacaja Daniel Hernández Morillo" ;
     schema:foundingDate "2016"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "UNAT" ;
-    schema:url <https://unat.edu.pe/> ; 
-    schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-74.75 -12.25)"^^geo:wktLiteral ;
-            schema:addressLocality "Provincia de Tayacaja" ;
-            schema:addressCountry "PE" ;
-            owl:sameAs <http://sws.geonames.org/3927670/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
+    org:classification "education" ; 
+    dct:created "2022-03-17"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:abbreviation "UNAT"@None ; 
+    schema:url <http://unat.edu.pe> ; 
+    schema:mainEntityOfPage <https://www.gob.pe/unat> ;
     schema:sameAs <http://isni.org/isni/0000000464701041> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-74.76755 -12.24202)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Tayacaja Province" ;
+            schema:addressCountry "PE" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Peru" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3927670/> ;
+    ] ; 
     .

@@ -4,28 +4,42 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/036dwbr90> a org:Organization ;
     rdfs:label "Norwegian Geological Survey" ;
     schema:name "Norwegian Geological Survey" ;
     schema:foundingDate "1858"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Government" ; 
-    org:abbreviation "NGU" ;
-    org:alternativeName "Norges Geologiske Undersøkelse" ;
-    schema:url <https://www.ngu.no/en> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Norwegian_Geological_Survey> ;
+    org:classification "funder" ; 
+    org:classification "government" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:abbreviation "NGU"@None ; 
+    org:alternativeName "Norges Geologiske Undersøkelse"@no ; 
+    schema:url <http://ngu.no> ; 
+    schema:mainEntityOfPage <https://www.ngu.no> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Norwegian_Geological_Survey> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100008647> ;
+    schema:sameAs <https://grid.ac/institutions/grid.438521.9> ;
+    schema:sameAs <http://isni.org/isni/0000000110340453> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(10.39506 63.43049)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(10.39506 63.43049)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Trondheim" ;
             schema:addressCountry "NO" ;
-            owl:sameAs <http://sws.geonames.org/3133880/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000110340453> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1770198> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Norway" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3133880/> ;
+    ] ; 
     .

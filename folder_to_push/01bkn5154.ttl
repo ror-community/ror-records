@@ -4,28 +4,48 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01bkn5154> a org:Organization ;
     rdfs:label "Mbarara University of Science and Technology" ;
     schema:name "Mbarara University of Science and Technology" ;
     schema:foundingDate "1989"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "MUST" ;
-    org:alternativeName "Mbarara University" ;
-    schema:url <http://www.must.ac.ug/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Mbarara_University_of_Science_and_Technology> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:abbreviation "MUST"@None ; 
+    org:alternativeName "Mbarara University"@en ; 
+    schema:url <http://must.ac.ug> ; 
+    schema:mainEntityOfPage <https://www.must.ac.ug> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Mbarara_University_of_Science_and_Technology> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100009915> ;
+    schema:sameAs <https://grid.ac/institutions/grid.33440.30> ;
+    schema:sameAs <http://isni.org/isni/0000000102326272> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00f041n88> ;
+        rdfs:label "Mbarara National Referral Hospital" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(30.64851 -0.60467)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(30.64851 -0.60467)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Mbarara" ;
             schema:addressCountry "UG" ;
-            owl:sameAs <http://sws.geonames.org/229268/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000102326272> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q514030> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Uganda" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/229268/> ;
+    ] ; 
     .

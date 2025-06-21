@@ -1,0 +1,44 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/01sb6ek09> a org:Organization ;
+    rdfs:label "Ghulam Ishaq Khan Institute of Engineering Sciences and Technology" ;
+    schema:name "Ghulam Ishaq Khan Institute of Engineering Sciences and Technology" ;
+    schema:foundingDate "1988"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:abbreviation "GIKI "@None ; 
+    schema:url <http://giki.edu.pk> ; 
+    schema:mainEntityOfPage <https://giki.edu.pk> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Ghulam_Ishaq_Khan_Institute_of_Engineering_Sciences_and_Technology> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100003421> ;
+    schema:sameAs <https://grid.ac/institutions/grid.442860.c> ;
+    schema:sameAs <http://isni.org/isni/0000000088536248> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(72.62147 34.07034)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Topi" ;
+            schema:addressCountry "PK" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Pakistan" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1163224/> ;
+    ] ; 
+    .

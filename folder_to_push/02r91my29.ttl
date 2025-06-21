@@ -4,27 +4,41 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02r91my29> a org:Organization ;
     rdfs:label "University of Kelaniya" ;
     schema:name "University of Kelaniya" ;
     schema:foundingDate "1959"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:alternativeName "Vidyalankara University" ;
-    schema:url <http://www.kln.ac.lk/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/University_of_Kelaniya> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:alternativeName "Vidyalankara University"@None ; 
+    schema:url <http://kln.ac.lk> ; 
+    schema:mainEntityOfPage <https://www.kln.ac.lk> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/University_of_Kelaniya> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100011614> ;
+    schema:sameAs <https://grid.ac/institutions/grid.45202.31> ;
+    schema:sameAs <http://isni.org/isni/0000000086315388> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(79.922 6.9553)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(79.922 6.9553)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Kelaniya" ;
             schema:addressCountry "LK" ;
-            owl:sameAs <http://sws.geonames.org/1240622/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000086315388> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q3534731> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Sri Lanka" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1240622/> ;
+    ] ; 
     .

@@ -4,28 +4,41 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/04603xj85> a org:Organization ;
     rdfs:label "Universidade Federal do Oeste do Pará" ;
     schema:name "Universidade Federal do Oeste do Pará" ;
     schema:foundingDate "1970"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "UFOPA" ;
-    org:alternativeName "Núcleo de Educação em Santarém" ;
-    schema:url <https://www.ufopa.edu.br> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Federal_University_of_Western_Par%C3%A1> ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:abbreviation "NES"@None ; 
+    org:alternativeName "Núcleo de Educação em Santarém"@pt ; 
+    org:abbreviation "UFOPA"@None ; 
+    schema:url <http://ufopa.edu.br> ; 
+    schema:mainEntityOfPage <https://www.ufopa.edu.br> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Federal_University_of_Western_Par%C3%A1> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.448725.8> ;
+    schema:sameAs <http://isni.org/isni/0000000405090076> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-54.70833 -2.44306)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-54.70833 -2.44306)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Santarém" ;
             schema:addressCountry "BR" ;
-            owl:sameAs <http://sws.geonames.org/3389353/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000405090076> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q10387833> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Brazil" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3389353/> ;
+    ] ; 
     .

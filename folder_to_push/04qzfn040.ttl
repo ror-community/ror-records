@@ -1,0 +1,92 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/04qzfn040> a org:Organization ;
+    rdfs:label "University of KwaZulu-Natal" ;
+    schema:name "University of KwaZulu-Natal" ;
+    schema:foundingDate "2004"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:abbreviation "UKZN "@None ; 
+    schema:url <http://ukzn.ac.za> ; 
+    schema:mainEntityOfPage <https://www.ukzn.ac.za> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_KwaZulu-Natal> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100004695> ;
+    schema:sameAs <https://grid.ac/institutions/grid.16463.36> ;
+    schema:sameAs <http://isni.org/isni/0000000107234123> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01vx7zt03> ;
+        rdfs:label "Addington Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03gvpk069> ;
+        rdfs:label "Edendale Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00xnmcq32> ;
+        rdfs:label "Grey's Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/04ap0ew90> ;
+        rdfs:label "Hlabisa Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03r56rv89> ;
+        rdfs:label "King Edward VIII Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02p2egt14> ;
+        rdfs:label "McCord Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/04xz2c768> ;
+        rdfs:label "R. K. Khan Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/055ne9q08> ;
+        rdfs:label "Wentworth Hospital" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(31.0292 -29.8579)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Durban" ;
+            schema:addressCountry "ZA" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "South Africa" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1007311/> ;
+    ] ; 
+    .

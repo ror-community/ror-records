@@ -4,28 +4,40 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/00w9tx359> a org:Organization ;
     rdfs:label "University of Science and Technology Chittagong" ;
     schema:name "University of Science and Technology Chittagong" ;
     schema:foundingDate "1989"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "USTC" ;
-    org:alternativeName "Institute of Applied Health Sciences" ;
-    schema:url <http://www.ustc.ac.bd/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/University_of_Science_and_Technology_Chittagong> ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:alternativeName "Institute of Applied Health Sciences"@en ; 
+    org:abbreviation "USTC"@None ; 
+    schema:url <http://ustc.ac.bd> ; 
+    schema:mainEntityOfPage <https://ustc.ac.bd> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/University_of_Science_and_Technology_Chittagong> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.442967.a> ;
+    schema:sameAs <http://isni.org/isni/0000000403872947> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(91.83168 22.3384)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(91.83168 22.3384)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Chittagong" ;
             schema:addressCountry "BD" ;
-            owl:sameAs <http://sws.geonames.org/1205733/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000403872947> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q7896284> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Bangladesh" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1205733/> ;
+    ] ; 
     .

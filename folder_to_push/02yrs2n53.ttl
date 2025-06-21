@@ -4,28 +4,44 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02yrs2n53> a org:Organization ;
     rdfs:label "Constructor University" ;
     schema:name "Constructor University" ;
     schema:foundingDate "2001"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "IUB" ;
-    org:alternativeName "International University Bremen" ;
-    schema:url <https://www.jacobs-university.de/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Constructor_University> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:abbreviation "IUB"@None ; 
+    org:alternativeName "International University Bremen"@en ; 
+    org:alternativeName "Jacobs University"@en ; 
+    org:alternativeName "Jacobs University Bremen"@en ; 
+    schema:url <http://jacobs-university.de> ; 
+    schema:mainEntityOfPage <https://constructor.university> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Constructor_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100014757> ;
+    schema:sameAs <https://grid.ac/institutions/grid.15078.3b> ;
+    schema:sameAs <http://isni.org/isni/0000000093978745> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(8.80717 53.07582)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(8.80717 53.07582)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Bremen" ;
             schema:addressCountry "DE" ;
-            owl:sameAs <http://sws.geonames.org/2944388/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000093978745> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q59114> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Germany" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2944388/> ;
+    ] ; 
     .

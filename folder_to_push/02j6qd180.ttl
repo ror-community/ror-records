@@ -1,0 +1,41 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/02j6qd180> a org:Organization ;
+    rdfs:label "Asociación de Investigación Metalúrgica del Noroeste" ;
+    schema:name "Asociación de Investigación Metalúrgica del Noroeste" ;
+    schema:foundingDate "1967"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "nonprofit" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:abbreviation "AIMEN"@None ; 
+    schema:url <http://aimen.es> ; 
+    schema:mainEntityOfPage <https://www.aimen.es/> ;
+    schema:sameAs <https://grid.ac/institutions/grid.424291.8> ;
+    schema:sameAs <http://isni.org/isni/0000000404084301> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-8.6198 42.16156)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Porriño" ;
+            schema:addressCountry "ES" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Spain" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3113157/> ;
+    ] ; 
+    .

@@ -4,27 +4,40 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/04p61dj41> a org:Organization ;
     rdfs:label "Mannheim University of Applied Sciences" ;
     schema:name "Mannheim University of Applied Sciences" ;
     schema:foundingDate "1898"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:alternativeName "FH Mannheim" ;
-    schema:url <https://www.hs-mannheim.de> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Mannheim_University_of_Applied_Sciences> ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:alternativeName "FH Mannheim"@de ; 
+    org:alternativeName "Mannheim College"@en ; 
+    schema:url <http://hs-mannheim.de> ; 
+    schema:mainEntityOfPage <https://www.hs-mannheim.de> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Mannheim_University_of_Applied_Sciences> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.440963.c> ;
+    schema:sameAs <http://isni.org/isni/0000000123531865> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(8.46694 49.4891)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(8.46694 49.4891)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Mannheim" ;
             schema:addressCountry "DE" ;
-            owl:sameAs <http://sws.geonames.org/2873891/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000123531865> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q321369> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Germany" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2873891/> ;
+    ] ; 
     .

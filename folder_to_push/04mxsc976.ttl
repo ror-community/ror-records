@@ -1,0 +1,43 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/04mxsc976> a org:Organization ;
+    rdfs:label "Rhode Island School of Design" ;
+    schema:name "Rhode Island School of Design" ;
+    schema:foundingDate "1877"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:abbreviation "RISD"@None ; 
+    org:alternativeName "RIZ-dee"@en ; 
+    schema:url <http://risd.edu> ; 
+    schema:mainEntityOfPage <https://www.risd.edu> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Rhode_Island_School_of_Design> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.447266.5> ;
+    schema:sameAs <http://isni.org/isni/000000012285171X> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-71.41283 41.82399)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Providence" ;
+            schema:addressCountry "US" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/5224151/> ;
+    ] ; 
+    .

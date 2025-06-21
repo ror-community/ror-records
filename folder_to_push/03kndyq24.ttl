@@ -1,0 +1,43 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/03kndyq24> a org:Organization ;
+    rdfs:label "Moshi Co-operative University" ;
+    schema:name "Moshi Co-operative University" ;
+    schema:foundingDate "2014"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:alternativeName "Co-operative College Moshi"@en ; 
+    org:abbreviation "MoCU"@None ; 
+    schema:url <http://mocu.ac.tz> ; 
+    schema:mainEntityOfPage <https://www.mocu.ac.tz> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Moshi_Co-operative_University> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.442472.3> ;
+    schema:sameAs <http://isni.org/isni/0000000404635863> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(37.33333 -3.35)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Moshi" ;
+            schema:addressCountry "TZ" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Tanzania" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/153209/> ;
+    ] ; 
+    .

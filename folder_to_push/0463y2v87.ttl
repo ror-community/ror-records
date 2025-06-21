@@ -1,0 +1,44 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/0463y2v87> a org:Organization ;
+    rdfs:label "Universiti Malaysia Kelantan" ;
+    schema:name "Universiti Malaysia Kelantan" ;
+    schema:foundingDate "2007"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:abbreviation "UMK"@None ; 
+    schema:url <http://umk.edu.my> ; 
+    schema:mainEntityOfPage <https://www.umk.edu.my> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Universiti_Malaysia_Kelantan> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100004693> ;
+    schema:sameAs <https://grid.ac/institutions/grid.444465.3> ;
+    schema:sameAs <http://isni.org/isni/0000000417570587> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(102.24333 6.12361)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Kota Bharu" ;
+            schema:addressCountry "MY" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Malaysia" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1736376/> ;
+    ] ; 
+    .

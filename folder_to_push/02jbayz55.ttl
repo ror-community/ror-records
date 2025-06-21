@@ -4,26 +4,40 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02jbayz55> a org:Organization ;
     rdfs:label "University of Khartoum" ;
     schema:name "University of Khartoum" ;
     schema:foundingDate "1902"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    schema:url <http://www.uofk.edu/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Khartoum> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    schema:url <http://uofk.edu> ; 
+    schema:mainEntityOfPage <https://www.uofk.edu> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Khartoum> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100019918> ;
+    schema:sameAs <https://grid.ac/institutions/grid.9763.b> ;
+    schema:sameAs <http://isni.org/isni/0000000106746207> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(32.53241 15.55177)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(32.53241 15.55177)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Khartoum" ;
             schema:addressCountry "SD" ;
-            owl:sameAs <http://sws.geonames.org/379252/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000106746207> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q656871> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Sudan" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/379252/> ;
+    ] ; 
     .

@@ -4,27 +4,43 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02jnjb343> a org:Organization ;
     rdfs:label "Universitas Islam Negeri Antasari Banjarmasin" ;
     schema:name "Universitas Islam Negeri Antasari Banjarmasin" ;
     schema:foundingDate "1964"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:alternativeName "UIN Antasari" ;
-    schema:url <https://www.uin-antasari.ac.id> ; 
-    owl:sameAs <https://id.wikipedia.org/wiki/Universitas_Islam_Negeri_Antasari> ;
+    org:classification "education" ; 
+    dct:created "2024-02-13"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:alternativeName "Antasari State Islamic University"@en ; 
+    org:alternativeName "Antasari State Islamic University Banjarmasin"@en ; 
+    org:alternativeName "State Islamic University of Antasari Banjarmasin"@en ; 
+    org:alternativeName "UIN Antasari"@id ; 
+    org:alternativeName "UIN Antasari Banjarmasin"@id ; 
+    org:alternativeName "Universitas Islam Negeri Antasari"@id ; 
+    schema:url <http://uin-antasari.ac.id> ; 
+    schema:mainEntityOfPage <https://www.uin-antasari.ac.id> ;
+    owl:sameAs <https://id.wikipedia.org/wiki/Universitas_Islam_Negeri_Antasari> ; 
+    schema:sameAs <http://isni.org/isni/0000000495290097> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(114.59075 -3.31987)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(114.59075 -3.31987)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Banjarmasin" ;
             schema:addressCountry "ID" ;
-            owl:sameAs <http://sws.geonames.org/1650213/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000495290097> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q12486116> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q109911124> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Indonesia" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1650213/> ;
+    ] ; 
     .

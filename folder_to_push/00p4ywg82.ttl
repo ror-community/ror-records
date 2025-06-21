@@ -4,26 +4,44 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/00p4ywg82> a org:Organization ;
     rdfs:label "Marian University - Indiana" ;
     schema:name "Marian University - Indiana" ;
     schema:foundingDate "1851"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    schema:url <http://www.marian.edu/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Marian_University_(Indiana)> ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    schema:url <http://marian.edu> ; 
+    schema:mainEntityOfPage <https://www.marian.edu> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Marian_University_(Indiana)> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.421123.7> ;
+    schema:sameAs <http://isni.org/isni/0000000404133417> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05dch6316> ;
+        rdfs:label "Private Academic Library Network of Indiana, Inc. (PALNI)" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-86.15804 39.76838)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-86.15804 39.76838)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Indianapolis" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/4259418/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000404133417> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q6761994> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/4259418/> ;
+    ] ; 
     .

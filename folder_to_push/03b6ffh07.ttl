@@ -4,26 +4,40 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/03b6ffh07> a org:Organization ;
     rdfs:label "Sharda University" ;
     schema:name "Sharda University" ;
     schema:foundingDate "2009"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    schema:url <http://www.sharda.ac.in/Aboutus> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Sharda_University> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    schema:url <http://sharda.ac.in> ; 
+    schema:mainEntityOfPage <https://www.sharda.ac.in> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Sharda_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100016281> ;
+    schema:sameAs <https://grid.ac/institutions/grid.412552.5> ;
+    schema:sameAs <http://isni.org/isni/000000041764278X> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(77.53601 28.49615)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(77.53601 28.49615)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Greater Noida" ;
             schema:addressCountry "IN" ;
-            owl:sameAs <http://sws.geonames.org/6954929/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/000000041764278X> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q7489464> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "India" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/6954929/> ;
+    ] ; 
     .

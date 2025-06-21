@@ -4,28 +4,44 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/00cp8c465> a org:Organization ;
     rdfs:label "Belarusian State Technological University" ;
     schema:name "Belarusian State Technological University" ;
     schema:foundingDate "1930"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "BSTU" ;
-    org:alternativeName "Belorussische Staatliche Technologische Universität" ;
-    schema:url <https://www.belstu.by/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Belarusian_State_Technological_University> ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:abbreviation "BSTU"@None ; 
+    org:alternativeName "Belarus Devlet Teknoloji Üniversitesi"@tr ; 
+    org:alternativeName "Belorussische Staatliche Technologische Universität"@de ; 
+    org:alternativeName "Belorussiýanyň Döwlet Tehnologiki Uniwersiteti"@None ; 
+    org:alternativeName "Universidad Estatal Tecnológica Bielorrusa"@es ; 
+    org:alternativeName "Université Technologique Biélorusse"@fr ; 
+    schema:url <http://belstu.by> ; 
+    schema:mainEntityOfPage <https://www.belstu.by/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Belarusian_State_Technological_University> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.444995.1> ;
+    schema:sameAs <http://isni.org/isni/0000000404006258> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(27.56667 53.9)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(27.56667 53.9)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Minsk" ;
             schema:addressCountry "BY" ;
-            owl:sameAs <http://sws.geonames.org/625144/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000404006258> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q4082750> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Belarus" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/625144/> ;
+    ] ; 
     .

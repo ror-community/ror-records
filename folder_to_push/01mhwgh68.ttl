@@ -1,0 +1,46 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/01mhwgh68> a org:Organization ;
+    rdfs:label "MSD (Singapore)" ;
+    schema:name "MSD (Singapore)" ;
+    schema:foundingDate "1891"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "company" ; 
+    dct:created "2021-09-23"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    schema:mainEntityOfPage <https://www.msd-singapore.com/home/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Merck_%26_Co.> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.511364.4> ;
+    schema:sameAs <http://isni.org/isni/0000000406429844> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02891sr49> ;
+        rdfs:label "Merck & Co., Inc., Rahway, NJ, USA (United States)" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(103.85007 1.28967)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Singapore" ;
+            schema:addressCountry "SG" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Singapore" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1880252/> ;
+    ] ; 
+    .

@@ -4,27 +4,42 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/04xrarz80> a org:Organization ;
     rdfs:label "Deutsche Bahn (Germany)" ;
     schema:name "Deutsche Bahn (Germany)" ;
     schema:foundingDate "1994"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Company" ; 
-    org:abbreviation "DB" ;
-    schema:url <http://www.deutschebahn.com/en/start-en.html> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Deutsche_Bahn> ;
+    org:classification "company" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:abbreviation "DB"@None ; 
+    org:abbreviation "DBAG"@None ; 
+    schema:url <http://deutschebahn.com> ; 
+    schema:mainEntityOfPage <https://www.deutschebahn.com> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Deutsche_Bahn> ; 
+    schema:sameAs <https://api.crossref.org/funders/100015870> ;
+    schema:sameAs <https://grid.ac/institutions/grid.12337.34> ;
+    schema:sameAs <http://isni.org/isni/0000000121780841> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(13.41053 52.52437)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(13.41053 52.52437)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Berlin" ;
             schema:addressCountry "DE" ;
-            owl:sameAs <http://sws.geonames.org/2950159/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000121780841> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q9322> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Germany" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2950159/> ;
+    ] ; 
     .

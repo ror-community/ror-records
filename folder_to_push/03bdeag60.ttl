@@ -4,28 +4,41 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/03bdeag60> a org:Organization ;
     rdfs:label "University of Lucknow" ;
     schema:name "University of Lucknow" ;
     schema:foundingDate "1921"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:alternativeName "Lucknow University" ;
-    schema:url <http://www.lkouniv.ac.in/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Lucknow> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:alternativeName "Lucknow University"@en ; 
+    schema:url <http://lkouniv.ac.in> ; 
+    schema:mainEntityOfPage <https://www.lkouniv.ac.in> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Lucknow> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100021212> ;
+    schema:sameAs <https://grid.ac/institutions/grid.411488.0> ;
+    schema:sameAs <http://isni.org/isni/0000000123026594> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(80.92313 26.83928)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(80.92313 26.83928)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Lucknow" ;
             schema:addressCountry "IN" ;
-            owl:sameAs <http://sws.geonames.org/1264733/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000123026594> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q4253367> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q18110623> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "India" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1264733/> ;
+    ] ; 
     .

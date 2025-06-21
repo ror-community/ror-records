@@ -4,27 +4,41 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/001mf9v16> a org:Organization ;
     rdfs:label "University of Gezira" ;
     schema:name "University of Gezira" ;
     schema:foundingDate "1975"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:alternativeName "University of al-Jazirah" ;
-    schema:url <http://uofg.edu.sd/en/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/University_of_al-Jazirah> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:alternativeName "University of al-Jazirah"@en ; 
+    schema:url <http://uofg.edu.sd> ; 
+    schema:mainEntityOfPage <https://www.uofg.edu.sd> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_al-Jazirah> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100020655> ;
+    schema:sameAs <https://grid.ac/institutions/grid.411683.9> ;
+    schema:sameAs <http://isni.org/isni/0000000100838856> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(33.51989 14.40118)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(33.51989 14.40118)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Wad Madani" ;
             schema:addressCountry "SD" ;
-            owl:sameAs <http://sws.geonames.org/364103/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000100838856> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q7896681> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Sudan" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/364103/> ;
+    ] ; 
     .

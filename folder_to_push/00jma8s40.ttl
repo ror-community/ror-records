@@ -4,28 +4,48 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/00jma8s40> a org:Organization ;
     rdfs:label "China Aerodynamics Research and Development Center" ;
     schema:name "China Aerodynamics Research and Development Center" ;
     schema:foundingDate "1968"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "CARDC" ;
-    org:alternativeName "Zhōngguó Kōngqì Dònglì Yánjiū yǔ Fāzhǎn Zhōngxīn" ;
-    schema:url <http://www.cardc.cn:88/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/China_Aerodynamics_Research_and_Development_Center> ;
+    org:classification "facility" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:abbreviation "CARDC"@None ; 
+    org:alternativeName "Zhōngguó Kōngqì Dònglì Yánjiū yǔ Fāzhǎn Zhōngxīn"@None ; 
+    schema:url <http://cardc.cn> ; 
+    schema:mainEntityOfPage <https://www.cardc.cn> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/China_Aerodynamics_Research_and_Development_Center> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100015913> ;
+    schema:sameAs <https://grid.ac/institutions/grid.469557.c> ;
+    schema:sameAs <http://isni.org/isni/0000000474340868> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/055rh9p75> ;
+        rdfs:label "State Key Laboratory of Aerodynamics" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(104.68168 31.46784)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(104.68168 31.46784)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Mianyang" ;
             schema:addressCountry "CN" ;
-            owl:sameAs <http://sws.geonames.org/1800627/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000474340868> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q5099558> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "China" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1800627/> ;
+    ] ; 
     .

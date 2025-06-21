@@ -4,26 +4,38 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/0237jt454> a org:Organization ;
     rdfs:label "Indian Institute of Information Technology Dharwad" ;
     schema:name "Indian Institute of Information Technology Dharwad" ;
     schema:foundingDate "2015"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "IIITDWD" ;
-    org:alternativeName "IIIT Dharwad" ;
-    schema:url <https://www.iiitdwd.ac.in> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Indian_Institute_of_Information_Technology%2C_Dharwad> ;
+    org:classification "education" ; 
+    dct:created "2022-09-29"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:alternativeName "IIIT Dharwad"@None ; 
+    org:abbreviation "IIITDWD"@None ; 
+    schema:url <http://iiitdwd.ac.in> ; 
+    schema:mainEntityOfPage <https://www.iiitdwd.ac.in> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Indian_Institute_of_Information_Technology%2C_Dharwad> ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(75.00778 15.46005)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(75.00778 15.46005)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Dharwad" ;
             schema:addressCountry "IN" ;
-            owl:sameAs <http://sws.geonames.org/1272818/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://www.wikidata.org/entity/Q21190683> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "India" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1272818/> ;
+    ] ; 
     .

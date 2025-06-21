@@ -4,23 +4,36 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/031aa0x95> a org:Organization ;
     rdfs:label "Universidad Bolivariana del Ecuador" ;
     schema:name "Universidad Bolivariana del Ecuador" ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "UBE" ;
-    schema:url <https://ube.edu.ec> ; 
+    org:classification "education" ; 
+    dct:created "2023-07-27"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:abbreviation "UBE"@None ; 
+    schema:url <http://ube.edu.ec> ; 
+    schema:mainEntityOfPage <https://www.ube.edu.ec> ;
+    schema:sameAs <http://isni.org/isni/0000000509728572> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-79.85519 -2.17579)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-79.83987 -2.16919)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Durán" ;
             schema:addressCountry "EC" ;
-            owl:sameAs <http://sws.geonames.org/3658192/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000509728572> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Ecuador" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3658192/> ;
+    ] ; 
     .

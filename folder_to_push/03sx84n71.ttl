@@ -4,27 +4,47 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/03sx84n71> a org:Organization ;
     rdfs:label "Teagasc - The Irish Agriculture and Food Development Authority" ;
     schema:name "Teagasc - The Irish Agriculture and Food Development Authority" ;
     schema:foundingDate "1988"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:alternativeName "Teagasc" ;
-    schema:url <https://www.teagasc.ie> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Teagasc> ;
+    org:classification "facility" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:alternativeName "Teagasc"@ga ; 
+    schema:url <http://teagasc.ie> ; 
+    schema:mainEntityOfPage <https://www.teagasc.ie> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Teagasc> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100001604> ;
+    schema:sameAs <https://grid.ac/institutions/grid.6435.4> ;
+    schema:sameAs <http://isni.org/isni/0000000115129569> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05c347015> ;
+        rdfs:label "Irish Research eLibrary" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-6.92611 52.84083)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-6.92611 52.84083)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Carlow" ;
             schema:addressCountry "IE" ;
-            owl:sameAs <http://sws.geonames.org/2965768/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000115129569> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q3516684> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Ireland" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2965768/> ;
+    ] ; 
     .

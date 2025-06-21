@@ -1,0 +1,43 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/04af78111> a org:Organization ;
+    rdfs:label "University of Fine Arts in Poznań" ;
+    schema:name "University of Fine Arts in Poznań" ;
+    schema:foundingDate "1919"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:alternativeName "State School of Decorative Arts"@en ; 
+    org:abbreviation "UAP"@None ; 
+    schema:url <http://uap.edu.pl> ; 
+    schema:mainEntityOfPage <https://uap.edu.pl> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/University_of_Fine_Arts_in_Pozna%C5%84> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.445294.a> ;
+    schema:sameAs <http://isni.org/isni/0000000121640486> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(16.92993 52.40692)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Poznan" ;
+            schema:addressCountry "PL" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Poland" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3088171/> ;
+    ] ; 
+    .

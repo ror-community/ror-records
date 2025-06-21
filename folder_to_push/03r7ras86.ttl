@@ -1,0 +1,42 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/03r7ras86> a org:Organization ;
+    rdfs:label "Pakuan University" ;
+    schema:name "Pakuan University" ;
+    schema:foundingDate "1980"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:abbreviation "UNPAK"@None ; 
+    schema:url <http://unpak.ac.id> ; 
+    schema:mainEntityOfPage <https://www.unpak.ac.id> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Pakuan_University> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.443179.c> ;
+    schema:sameAs <http://isni.org/isni/000000010298809X> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(106.78917 -6.59444)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Bogor" ;
+            schema:addressCountry "ID" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Indonesia" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1648473/> ;
+    ] ; 
+    .

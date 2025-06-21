@@ -4,27 +4,57 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/05k323c76> a org:Organization ;
     rdfs:label "Swedish Museum of Natural History" ;
     schema:name "Swedish Museum of Natural History" ;
     schema:foundingDate "1819"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Archive" ; 
-    org:alternativeName "National Museum of Natural History" ;
-    schema:url <http://www.nrm.se/english.16_en.html> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Swedish_Museum_of_Natural_History> ;
+    org:classification "archive" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:alternativeName "National Museum of Natural History"@en ; 
+    schema:url <http://nrm.se> ; 
+    schema:mainEntityOfPage <https://www.nrm.se> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Swedish_Museum_of_Natural_History> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.425591.e> ;
+    schema:sameAs <http://isni.org/isni/0000000406052864> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04sx39q13> ;
+        rdfs:label "Centre for Palaeogenetics" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0221pcv84> ;
+        rdfs:label "Swedish Biodiversity Data Infrastructure" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00enajs79> ;
+        rdfs:label "National Bioinformatics Infrastructure Sweden" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(18.06871 59.32938)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(18.06871 59.32938)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Stockholm" ;
             schema:addressCountry "SE" ;
-            owl:sameAs <http://sws.geonames.org/2673730/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000406052864> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1420103> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Sweden" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2673730/> ;
+    ] ; 
     .

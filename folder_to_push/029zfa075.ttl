@@ -1,0 +1,42 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/029zfa075> a org:Organization ;
+    rdfs:label "Yenepoya University" ;
+    schema:name "Yenepoya University" ;
+    schema:foundingDate "2009"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:alternativeName "Yenepoya"@None ; 
+    schema:url <http://yenepoya.edu.in> ; 
+    schema:mainEntityOfPage <https://www.yenepoya.edu.in> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Yenepoya_University> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.413027.3> ;
+    schema:sameAs <http://isni.org/isni/0000000417677704> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(74.85603 12.91723)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Mangaluru" ;
+            schema:addressCountry "IN" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "India" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1263780/> ;
+    ] ; 
+    .

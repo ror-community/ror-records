@@ -1,0 +1,62 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/05wnp9598> a org:Organization ;
+    rdfs:label "Air Education and Training Command" ;
+    schema:name "Air Education and Training Command" ;
+    schema:foundingDate "1942"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "funder" ; 
+    org:classification "government" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:abbreviation "AETC"@None ; 
+    org:alternativeName "Air Training Command"@en ; 
+    org:alternativeName "The First Command"@en ; 
+    schema:mainEntityOfPage <http://www.aetc.af.mil> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Air_Education_and_Training_Command> ; 
+    schema:sameAs <https://api.crossref.org/funders/100010458> ;
+    schema:sameAs <https://grid.ac/institutions/grid.478225.e> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05jwcsm16> ;
+        rdfs:label "Air University" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01sq4yt06> ;
+        rdfs:label "59th Medical Wing" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/006gmme17> ;
+        rdfs:label "United States Air Force" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-98.49363 29.42412)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "San Antonio" ;
+            schema:addressCountry "US" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/4726206/> ;
+    ] ; 
+    .

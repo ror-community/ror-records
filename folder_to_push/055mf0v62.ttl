@@ -1,0 +1,44 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/055mf0v62> a org:Organization ;
+    rdfs:label "King Mongkut's Institute of Technology Ladkrabang" ;
+    schema:name "King Mongkut's Institute of Technology Ladkrabang" ;
+    schema:foundingDate "1960"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:abbreviation "KMITL"@None ; 
+    schema:url <http://kmitl.ac.th> ; 
+    schema:mainEntityOfPage <https://www.kmitl.ac.th> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/King_Mongkut%27s_Institute_of_Technology_Ladkrabang> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100007120> ;
+    schema:sameAs <https://grid.ac/institutions/grid.419784.7> ;
+    schema:sameAs <http://isni.org/isni/0000000108167508> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(100.50144 13.75398)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Bangkok" ;
+            schema:addressCountry "TH" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Thailand" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1609350/> ;
+    ] ; 
+    .

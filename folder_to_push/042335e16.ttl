@@ -4,26 +4,40 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/042335e16> a org:Organization ;
     rdfs:label "University of the Llanos" ;
     schema:name "University of the Llanos" ;
     schema:foundingDate "1974"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    schema:url <https://www.unillanos.edu.co/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/University_of_the_Llanos> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    schema:url <http://unillanos.edu.co> ; 
+    schema:mainEntityOfPage <https://www.unillanos.edu.co/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/University_of_the_Llanos> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100019275> ;
+    schema:sameAs <https://grid.ac/institutions/grid.442077.2> ;
+    schema:sameAs <http://isni.org/isni/0000000121713251> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-73.62664 4.142)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-73.62664 4.142)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Villavicencio" ;
             schema:addressCountry "CO" ;
-            owl:sameAs <http://sws.geonames.org/3665900/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000121713251> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q2495744> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Colombia" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3665900/> ;
+    ] ; 
     .

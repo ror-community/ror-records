@@ -1,0 +1,42 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/059076v18> a org:Organization ;
+    rdfs:label "Liceo de Cagayan University" ;
+    schema:name "Liceo de Cagayan University" ;
+    schema:foundingDate "1955"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:abbreviation "LDCU"@None ; 
+    schema:url <http://liceo.edu.ph> ; 
+    schema:mainEntityOfPage <https://www.liceo.edu.ph> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Liceo_de_Cagayan_University> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.442960.d> ;
+    schema:sameAs <http://isni.org/isni/0000000120620395> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(124.64722 8.48222)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Cagayan de Oro" ;
+            schema:addressCountry "PH" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Philippines" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1721080/> ;
+    ] ; 
+    .

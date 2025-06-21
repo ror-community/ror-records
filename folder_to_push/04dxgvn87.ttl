@@ -1,0 +1,42 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/04dxgvn87> a org:Organization ;
+    rdfs:label "Istituto Mediterraneo per i Trapianti e Terapie ad Alta Specializzazione" ;
+    schema:name "Istituto Mediterraneo per i Trapianti e Terapie ad Alta Specializzazione" ;
+    schema:foundingDate "1997"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "healthcare" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:abbreviation "ISMETT"@None ; 
+    schema:url <http://ismett.edu> ; 
+    schema:mainEntityOfPage <https://www.ismett.edu> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/ISMETT> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.419663.f> ;
+    schema:sameAs <http://isni.org/isni/0000000121101693> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(13.3636 38.1166)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Palermo" ;
+            schema:addressCountry "IT" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Italy" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2523920/> ;
+    ] ; 
+    .

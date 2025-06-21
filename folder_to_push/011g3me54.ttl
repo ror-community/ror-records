@@ -1,0 +1,41 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/011g3me54> a org:Organization ;
+    rdfs:label "Instituto de Altos Estudios Nacionales" ;
+    schema:name "Instituto de Altos Estudios Nacionales" ;
+    schema:foundingDate "1972"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:abbreviation "IAEN"@None ; 
+    schema:url <http://iaen.edu.ec> ; 
+    schema:mainEntityOfPage <https://www.iaen.edu.ec/> ;
+    schema:sameAs <https://grid.ac/institutions/grid.442263.5> ;
+    schema:sameAs <http://isni.org/isni/0000000121155026> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-78.52495 -0.22985)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Quito" ;
+            schema:addressCountry "EC" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Ecuador" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3652462/> ;
+    ] ; 
+    .

@@ -1,0 +1,41 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/00pv8s374> a org:Organization ;
+    rdfs:label "Avrasya University" ;
+    schema:name "Avrasya University" ;
+    schema:foundingDate "2010"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    schema:url <http://avrasya.edu.tr> ; 
+    schema:mainEntityOfPage <https://avrasya.edu.tr> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Avrasya_University> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.465875.d> ;
+    schema:sameAs <http://isni.org/isni/0000000405096128> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(39.72694 41.005)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Trabzon" ;
+            schema:addressCountry "TR" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Türkiye" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/738648/> ;
+    ] ; 
+    .

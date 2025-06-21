@@ -4,25 +4,45 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01bg3pz19> a org:Organization ;
     rdfs:label "AISSMS Institute of Information Technology" ;
     schema:name "AISSMS Institute of Information Technology" ;
     schema:foundingDate "1992"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "AISSMS IOIT" ;
-    org:alternativeName "AISSMS IOIT College in Pune" ;
-    schema:url <https://aissmsioit.org> ; 
+    org:classification "education" ; 
+    dct:created "2022-09-29"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:abbreviation "AISSMS IOIT"@None ; 
+    org:alternativeName "AISSMS IOIT College in Pune"@en ; 
+    org:alternativeName "All India Shri Shivaji Memorial Society Institute of Information Technology"@en ; 
+    schema:url <http://aissmsioit.org> ; 
+    schema:mainEntityOfPage <https://aissmsioit.org> ;
+    schema:sameAs <http://isni.org/isni/0000000417723037> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/044g6d731> ;
+        rdfs:label "Savitribai Phule Pune University" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(73.85535 18.51957)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(73.85535 18.51957)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Pune" ;
             schema:addressCountry "IN" ;
-            owl:sameAs <http://sws.geonames.org/1259229/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000417723037> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "India" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1259229/> ;
+    ] ; 
     .

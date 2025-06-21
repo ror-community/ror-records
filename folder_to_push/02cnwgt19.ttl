@@ -4,26 +4,40 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02cnwgt19> a org:Organization ;
     rdfs:label "Effat University" ;
     schema:name "Effat University" ;
     schema:foundingDate "1999"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    schema:url <https://www.effatuniversity.edu.sa> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Effat_University> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    schema:url <http://effatuniversity.edu.sa> ; 
+    schema:mainEntityOfPage <https://www.effatuniversity.edu.sa> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Effat_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100015832> ;
+    schema:sameAs <https://grid.ac/institutions/grid.443337.4> ;
+    schema:sameAs <http://isni.org/isni/0000000406081585> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(39.18624 21.49012)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(39.18624 21.49012)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Jeddah" ;
             schema:addressCountry "SA" ;
-            owl:sameAs <http://sws.geonames.org/105343/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000406081585> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q5347215> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Saudi Arabia" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/105343/> ;
+    ] ; 
     .

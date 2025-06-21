@@ -4,24 +4,125 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/00enajs79> a org:Organization ;
     rdfs:label "National Bioinformatics Infrastructure Sweden" ;
     schema:name "National Bioinformatics Infrastructure Sweden" ;
     schema:foundingDate "2008"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Other" ; 
-    org:abbreviation "NBIS" ;
-    schema:url <https://nbis.se> ; 
+    org:classification "other" ; 
+    dct:created "2022-06-16"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:abbreviation "NBIS"@None ; 
+    schema:mainEntityOfPage <https://nbis.se> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/044rwnt51> ;
+        rdfs:label "ELIXIR" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03zttf063> ;
+        rdfs:label "Swedish Research Council" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/04ev03g22> ;
+        rdfs:label "Science for Life Laboratory" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05ynxx418> ;
+        rdfs:label "Linköping University" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/040wg7k59> ;
+        rdfs:label "Chalmers University of Technology" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01tm6cn81> ;
+        rdfs:label "University of Gothenburg" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/056d84691> ;
+        rdfs:label "Karolinska Institutet" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/026vcq606> ;
+        rdfs:label "KTH Royal Institute of Technology" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/012a77v79> ;
+        rdfs:label "Lund University" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05k323c76> ;
+        rdfs:label "Swedish Museum of Natural History" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02yy8x990> ;
+        rdfs:label "Swedish University of Agricultural Sciences" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05f0yaq80> ;
+        rdfs:label "Stockholm University" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05kb8h459> ;
+        rdfs:label "Umeå University" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/004hzzk67> ;
+        rdfs:label "Knut and Alice Wallenberg Foundation" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/048a87296> ;
+        rdfs:label "Uppsala University" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(17.63889 59.85882)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(17.63889 59.85882)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Uppsala" ;
             schema:addressCountry "SE" ;
-            owl:sameAs <http://sws.geonames.org/2666199/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://www.wikidata.org/entity/Q109518478> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Sweden" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2666199/> ;
+    ] ; 
     .

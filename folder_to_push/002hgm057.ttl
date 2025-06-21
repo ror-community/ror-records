@@ -4,27 +4,45 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/002hgm057> a org:Organization ;
     rdfs:label "Pertamina (Indonesia)" ;
     schema:name "Pertamina (Indonesia)" ;
     schema:foundingDate "1957"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Company" ; 
-    org:alternativeName "PT Pertamina (Persero)" ;
-    schema:url <https://www.pertamina.com/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Pertamina> ;
+    org:classification "company" ; 
+    dct:created "2019-02-17"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:alternativeName "PT Pertamina (Persero)"@None ; 
+    schema:url <http://pertamina.com> ; 
+    schema:mainEntityOfPage <https://www.pertamina.com/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Pertamina> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.502781.9> ;
+    schema:sameAs <http://isni.org/isni/0000000111355083> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0266sez77> ;
+        rdfs:label "Universitas Pertamina" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(106.84513 -6.21462)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(106.84513 -6.21462)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Jakarta" ;
             schema:addressCountry "ID" ;
-            owl:sameAs <http://sws.geonames.org/1642911/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000111355083> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1641044> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Indonesia" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1642911/> ;
+    ] ; 
     .

@@ -4,26 +4,38 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02r1xtk47> a org:Organization ;
     rdfs:label "Corporación Universitaria del Meta" ;
     schema:name "Corporación Universitaria del Meta" ;
     schema:foundingDate "1985"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "Unimeta" ;
-    schema:url <http://www.unimeta.edu.co/> ; 
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:abbreviation "Unimeta"@None ; 
+    schema:url <http://unimeta.edu.co> ; 
+    schema:mainEntityOfPage <https://www.unimeta.edu.co> ;
+    schema:sameAs <https://grid.ac/institutions/grid.442075.0> ;
+    schema:sameAs <http://isni.org/isni/0000000458946982> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-73.62664 4.142)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-73.62664 4.142)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Villavicencio" ;
             schema:addressCountry "CO" ;
-            owl:sameAs <http://sws.geonames.org/3665900/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000458946982> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q5395262> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Colombia" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3665900/> ;
+    ] ; 
     .

@@ -4,27 +4,41 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/0378w3a30> a org:Organization ;
     rdfs:label "National Institute of Telecommunications" ;
     schema:name "National Institute of Telecommunications" ;
     schema:foundingDate "1965"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "Inatel" ;
-    schema:url <http://www.inatel.br/home/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Inatel> ;
+    org:classification "facility" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:abbreviation "Inatel"@None ; 
+    schema:url <http://inatel.br> ; 
+    schema:mainEntityOfPage <https://inatel.br> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Inatel> ; 
+    schema:sameAs <https://api.crossref.org/funders/100019928> ;
+    schema:sameAs <https://grid.ac/institutions/grid.454284.b> ;
+    schema:sameAs <http://isni.org/isni/000000010753533X> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-45.70333 -22.25222)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-45.70333 -22.25222)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Santa Rita do Sapucaí" ;
             schema:addressCountry "BR" ;
-            owl:sameAs <http://sws.geonames.org/3449847/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/000000010753533X> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q6013669> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Brazil" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3449847/> ;
+    ] ; 
     .

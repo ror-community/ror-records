@@ -1,0 +1,43 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/05gwtvp11> a org:Organization ;
+    rdfs:label "Nuclear Research Institute Rez (Czechia)" ;
+    schema:name "Nuclear Research Institute Rez (Czechia)" ;
+    schema:foundingDate "2012"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "company" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:abbreviation "NRI"@None ; 
+    org:alternativeName "UJV Řež"@None ; 
+    org:alternativeName "Ústav Jaderného Výzkumu Řež"@None ; 
+    schema:url <http://ujv.cz> ; 
+    schema:mainEntityOfPage <https://www.ujv.cz> ;
+    schema:sameAs <https://grid.ac/institutions/grid.4278.9> ;
+    schema:sameAs <http://isni.org/isni/0000000107282096> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(13.98697 49.05496)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Husinec" ;
+            schema:addressCountry "CZ" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Czechia" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3074686/> ;
+    ] ; 
+    .

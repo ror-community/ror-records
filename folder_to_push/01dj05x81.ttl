@@ -4,27 +4,39 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01dj05x81> a org:Organization ;
     rdfs:label "Federal University Dutsin-Ma" ;
     schema:name "Federal University Dutsin-Ma" ;
     schema:foundingDate "2011"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "FUDMA" ;
-    org:alternativeName "Federal University Dutsinma" ;
-    schema:url <https://fudutsinma.edu.ng> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Federal_University%2C_Dutsin-Ma> ;
+    org:classification "education" ; 
+    dct:created "2023-11-08"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:abbreviation "FUDMA"@None ; 
+    org:alternativeName "Federal University Dutsinma"@en ; 
+    schema:url <http://fudutsinma.edu.ng> ; 
+    schema:mainEntityOfPage <https://fudutsinma.edu.ng> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Federal_University%2C_Dutsin-Ma> ; 
+    schema:sameAs <http://isni.org/isni/0000000446910640> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(7.49723 12.45392)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(7.49723 12.45392)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Dutsin-Ma" ;
             schema:addressCountry "NG" ;
-            owl:sameAs <http://sws.geonames.org/2344217/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000446910640> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q25041230> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Nigeria" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2344217/> ;
+    ] ; 
     .

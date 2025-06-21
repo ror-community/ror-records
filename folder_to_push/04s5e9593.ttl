@@ -1,0 +1,40 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/04s5e9593> a org:Organization ;
+    rdfs:label "Universitas Muhammadiyah Purworejo" ;
+    schema:name "Universitas Muhammadiyah Purworejo" ;
+    schema:foundingDate "1999"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    schema:url <http://umpwr.ac.id> ; 
+    schema:mainEntityOfPage <https://www.umpwr.ac.id> ;
+    schema:sameAs <https://grid.ac/institutions/grid.444203.5> ;
+    schema:sameAs <http://isni.org/isni/0000000417593789> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(111.9224 -6.7872)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Purworejo" ;
+            schema:addressCountry "ID" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Indonesia" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1630327/> ;
+    ] ; 
+    .

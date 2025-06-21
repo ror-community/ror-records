@@ -1,0 +1,44 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/00rj4x019> a org:Organization ;
+    rdfs:label "Radiological Society of North America" ;
+    schema:name "Radiological Society of North America" ;
+    schema:foundingDate "1915"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "funder" ; 
+    org:classification "nonprofit" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:abbreviation "RSNA"@None ; 
+    schema:url <http://rsna.org> ; 
+    schema:mainEntityOfPage <https://www.rsna.org> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Radiological_Society_of_North_America> ; 
+    schema:sameAs <https://api.crossref.org/funders/100006098> ;
+    schema:sameAs <https://grid.ac/institutions/grid.431405.7> ;
+    schema:sameAs <http://isni.org/isni/0000000109443332> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-87.92895 41.83281)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Oak Brook" ;
+            schema:addressCountry "US" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/4904277/> ;
+    ] ; 
+    .

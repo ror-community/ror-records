@@ -4,27 +4,41 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/05rp6gx35> a org:Organization ;
     rdfs:label "Husson University" ;
     schema:name "Husson University" ;
     schema:foundingDate "1898"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:alternativeName "Husson College" ;
-    schema:url <http://www.husson.edu/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Husson_University> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:alternativeName "Husson College"@en ; 
+    schema:url <http://husson.edu> ; 
+    schema:mainEntityOfPage <https://www.husson.edu> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Husson_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/100012804> ;
+    schema:sameAs <https://grid.ac/institutions/grid.428839.c> ;
+    schema:sameAs <http://isni.org/isni/0000000104946272> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-68.77781 44.80118)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-68.77265 44.79884)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Bangor" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/4957280/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000104946272> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q5949943> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/4957280/> ;
+    ] ; 
     .

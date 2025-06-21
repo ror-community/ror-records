@@ -1,0 +1,42 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/00ftx0026> a org:Organization ;
+    rdfs:label "Hochschule Düsseldorf University of Applied Sciences" ;
+    schema:name "Hochschule Düsseldorf University of Applied Sciences" ;
+    schema:foundingDate "1971"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:abbreviation "HSD"@None ; 
+    schema:url <http://hs-duesseldorf.de> ; 
+    schema:mainEntityOfPage <https://www.hs-duesseldorf.de> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Hochschule_D%C3%BCsseldorf> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.440973.d> ;
+    schema:sameAs <http://isni.org/isni/0000000107290889> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(6.77616 51.22172)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Düsseldorf" ;
+            schema:addressCountry "DE" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Germany" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2934246/> ;
+    ] ; 
+    .

@@ -4,28 +4,47 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/00syn5v21> a org:Organization ;
     rdfs:label "National Technical University of Ukraine “Igor Sikorsky Kyiv Polytechnic Institute”" ;
     schema:name "National Technical University of Ukraine “Igor Sikorsky Kyiv Polytechnic Institute”" ;
     schema:foundingDate "1898"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "NTUU "KPI"" ;
-    org:alternativeName "КПІ ім. Ігоря Сікорського" ;
-    schema:url <http://kpi.ua/en> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Kyiv_Polytechnic_Institute> ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:alternativeName "Igor Sikorsky KPI"@None ; 
+    org:alternativeName "Igor Sikorsky Kyiv Polytechnic Institute"@en ; 
+    org:abbreviation "KPI"@None ; 
+    org:alternativeName "Kyiv Polytechnic Institute"@en ; 
+    org:abbreviation "NTUU "KPI""@None ; 
+    org:abbreviation "NTUU KPI"@None ; 
+    org:alternativeName "NTUU “Igor Sikorsky Kyiv Polytechnic Institute”"@en ; 
+    org:alternativeName "National Technical University of Ukraine"@en ; 
+    org:alternativeName "КПІ ім. Ігоря Сікорського"@uk ; 
+    schema:url <http://kpi.ua> ; 
+    schema:mainEntityOfPage <https://www.kpi.ua> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Kyiv_Polytechnic_Institute> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.440544.5> ;
+    schema:sameAs <http://isni.org/isni/000000040399838X> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(30.5238 50.45466)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(30.5238 50.45466)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Kyiv" ;
             schema:addressCountry "UA" ;
-            owl:sameAs <http://sws.geonames.org/703448/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/000000040399838X> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q85449> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Ukraine" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/703448/> ;
+    ] ; 
     .

@@ -4,28 +4,46 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/016604a03> a org:Organization ;
     rdfs:label "Technische Hochschule Augsburg" ;
     schema:name "Technische Hochschule Augsburg" ;
     schema:foundingDate "1971"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "THA" ;
-    org:alternativeName "Hochschule Augsburg" ;
-    schema:url <https://www.tha.de> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Augsburg_University_of_Applied_Sciences> ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:alternativeName "Augsburg University of Applied Sciences"@en ; 
+    org:alternativeName "Fachhochschule Augsburg"@de ; 
+    org:alternativeName "Hochschule Augsburg"@de ; 
+    org:alternativeName "Hochschule für angewandte Wissenschaften Augsburg"@de ; 
+    org:alternativeName "TH Augsburg"@de ; 
+    org:abbreviation "THA"@None ; 
+    org:abbreviation "TUA"@None ; 
+    org:alternativeName "Technical University of Applied Sciences Augsburg"@en ; 
+    schema:url <http://tha.de> ; 
+    schema:mainEntityOfPage <https://www.tha.de> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Augsburg_University_of_Applied_Sciences> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.440970.e> ;
+    schema:sameAs <http://isni.org/isni/0000000099226093> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(10.89851 48.37154)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(10.89851 48.37154)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Augsburg" ;
             schema:addressCountry "DE" ;
-            owl:sameAs <http://sws.geonames.org/2954172/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000099226093> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q896468> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Germany" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2954172/> ;
+    ] ; 
     .

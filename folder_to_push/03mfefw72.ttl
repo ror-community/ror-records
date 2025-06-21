@@ -4,27 +4,41 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/03mfefw72> a org:Organization ;
     rdfs:label "The University of Kitakyushu" ;
     schema:name "The University of Kitakyushu" ;
     schema:foundingDate "1946"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:alternativeName "Kitakyūshū shiritsu daigaku" ;
-    schema:url <http://www.kitakyu-u.ac.jp/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Kitakyushu> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:alternativeName "Kitakyūshū shiritsu daigaku"@None ; 
+    schema:url <http://kitakyu-u.ac.jp> ; 
+    schema:mainEntityOfPage <https://www.kitakyu-u.ac.jp> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Kitakyushu> ; 
+    schema:sameAs <https://api.crossref.org/funders/100019499> ;
+    schema:sameAs <https://grid.ac/institutions/grid.412586.c> ;
+    schema:sameAs <http://isni.org/isni/0000000096784401> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(130.85034 33.85181)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(130.85034 33.85181)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Kitakyushu" ;
             schema:addressCountry "JP" ;
-            owl:sameAs <http://sws.geonames.org/1859307/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000096784401> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q195546> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Japan" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1859307/> ;
+    ] ; 
     .

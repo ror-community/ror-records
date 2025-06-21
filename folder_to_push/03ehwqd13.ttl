@@ -1,0 +1,42 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/03ehwqd13> a org:Organization ;
+    rdfs:label "Scientific and Research Centre for Fire Protection" ;
+    schema:name "Scientific and Research Centre for Fire Protection" ;
+    schema:foundingDate "1972"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "facility" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:abbreviation "CNBOP"@None ; 
+    org:alternativeName "Centrum Naukowo-Badawcze Ochrony Przeciwpożarowej"@pl ; 
+    schema:url <http://cnbop.pl> ; 
+    schema:mainEntityOfPage <https://www.cnbop.pl> ;
+    schema:sameAs <https://grid.ac/institutions/grid.460602.6> ;
+    schema:sameAs <http://isni.org/isni/0000000405668915> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(21.23589 52.13707)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Józefów" ;
+            schema:addressCountry "PL" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Poland" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/769981/> ;
+    ] ; 
+    .

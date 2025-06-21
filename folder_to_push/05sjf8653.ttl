@@ -4,26 +4,44 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/05sjf8653> a org:Organization ;
     rdfs:label "MIT Academy of Engineering" ;
     schema:name "MIT Academy of Engineering" ;
     schema:foundingDate "1983"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "MIT AoE" ;
-    org:alternativeName "Maharashtra Institute of Technology Academy of Engineering" ;
-    schema:url <https://mitaoe.ac.in> ; 
+    org:classification "education" ; 
+    dct:created "2023-01-26"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:abbreviation "MIT AoE"@None ; 
+    org:alternativeName "Maharashtra Institute of Technology Academy of Engineering"@en ; 
+    schema:url <http://mitaoe.ac.in> ; 
+    schema:mainEntityOfPage <https://mitaoe.ac.in> ;
+    schema:sameAs <http://isni.org/isni/0000000090896592> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/044g6d731> ;
+        rdfs:label "Savitribai Phule Pune University" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(73.89868 18.67756)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(73.89868 18.67756)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Alandi" ;
             schema:addressCountry "IN" ;
-            owl:sameAs <http://sws.geonames.org/1279066/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000090896592> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q6733315> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "India" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1279066/> ;
+    ] ; 
     .

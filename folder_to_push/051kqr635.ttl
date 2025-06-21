@@ -4,24 +4,39 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/051kqr635> a org:Organization ;
     rdfs:label "Headland Archaeology (UK) Limited (United Kingdom)" ;
     schema:name "Headland Archaeology (UK) Limited (United Kingdom)" ;
     schema:foundingDate "1996"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Company" ; 
-    org:abbreviation "HA" ;
-    org:alternativeName "Headland Archaeology (UK) Limited" ;
-    schema:url <https://headlandarchaeology.com/> ; 
+    org:classification "company" ; 
+    dct:created "2024-03-28"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:abbreviation "HA"@None ; 
+    org:alternativeName "Headland Archaeology"@None ; 
+    org:alternativeName "Headland Archaeology (UK) Limited"@None ; 
+    org:alternativeName "Headland Archaeology (UK) Ltd"@None ; 
+    schema:url <http://headlandarchaeology.com> ; 
+    schema:mainEntityOfPage <https://headlandarchaeology.com/> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-3.19648 55.95206)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-3.19648 55.95206)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Edinburgh" ;
             schema:addressCountry "GB" ;
-            owl:sameAs <http://sws.geonames.org/2650225/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United Kingdom" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2650225/> ;
+    ] ; 
     .

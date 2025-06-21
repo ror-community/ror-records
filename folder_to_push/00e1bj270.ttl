@@ -4,26 +4,38 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/00e1bj270> a org:Organization ;
     rdfs:label "Instituto Superior de Ciências da Educação da Huíla" ;
     schema:name "Instituto Superior de Ciências da Educação da Huíla" ;
     schema:foundingDate "1980"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "ISCED-HLA" ;
-    org:alternativeName "ISCED-Huíla" ;
-    schema:url <https://isced-huila.ed.ao> ; 
-    owl:sameAs <https://pt.wikipedia.org/wiki/Instituto_Superior_de_Ci%C3%AAncias_da_Educa%C3%A7%C3%A3o_da_Hu%C3%ADla> ;
+    org:classification "education" ; 
+    dct:created "2023-12-20"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:abbreviation "ISCED-HLA"@None ; 
+    org:alternativeName "ISCED-Huíla"@pt ; 
+    schema:url <http://isced-huila.ed.ao> ; 
+    schema:mainEntityOfPage <https://isced-huila.ed.ao> ;
+    owl:sameAs <https://pt.wikipedia.org/wiki/Instituto_Superior_de_Ci%C3%AAncias_da_Educa%C3%A7%C3%A3o_da_Hu%C3%ADla> ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(13.4925 -14.91717)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(13.4925 -14.91717)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Lubango" ;
             schema:addressCountry "AO" ;
-            owl:sameAs <http://sws.geonames.org/3347762/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://www.wikidata.org/entity/Q61000134> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Angola" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3347762/> ;
+    ] ; 
     .

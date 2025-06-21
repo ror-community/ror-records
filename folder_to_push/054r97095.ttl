@@ -1,0 +1,43 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/054r97095> a org:Organization ;
+    rdfs:label "Mangosuthu University of Technology" ;
+    schema:name "Mangosuthu University of Technology" ;
+    schema:foundingDate "1979"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:abbreviation "MUT"@None ; 
+    org:alternativeName "Mangosuthu Technikon"@None ; 
+    schema:url <http://mut.ac.za> ; 
+    schema:mainEntityOfPage <https://www.mut.ac.za> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Mangosuthu_University_of_Technology> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.429399.c> ;
+    schema:sameAs <http://isni.org/isni/0000000406304697> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(31.0292 -29.8579)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Durban" ;
+            schema:addressCountry "ZA" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "South Africa" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1007311/> ;
+    ] ; 
+    .

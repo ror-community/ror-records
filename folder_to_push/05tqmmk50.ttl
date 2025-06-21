@@ -4,26 +4,40 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/05tqmmk50> a org:Organization ;
     rdfs:label "Universitas Sains dan Teknologi Komputer" ;
     schema:name "Universitas Sains dan Teknologi Komputer" ;
     schema:foundingDate "1986"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "STEKOM" ;
-    org:alternativeName "University of Computer Science and Technology" ;
-    schema:url <https://stekom.ac.id> ; 
-    owl:sameAs <https://id.wikipedia.org/wiki/Universitas_STEKOM> ;
+    org:classification "education" ; 
+    dct:created "2023-08-17"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:abbreviation "STEKOM"@None ; 
+    org:alternativeName "STEKOM University"@en ; 
+    org:alternativeName "Universitas STEKOM"@id ; 
+    org:alternativeName "University of Computer Science and Technology"@en ; 
+    schema:url <http://stekom.ac.id> ; 
+    schema:mainEntityOfPage <https://www.stekom.ac.id> ;
+    owl:sameAs <https://id.wikipedia.org/wiki/Universitas_STEKOM> ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(110.42083 -6.99306)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(110.42083 -6.99306)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Semarang" ;
             schema:addressCountry "ID" ;
-            owl:sameAs <http://sws.geonames.org/1627896/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://www.wikidata.org/entity/Q109912583> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Indonesia" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1627896/> ;
+    ] ; 
     .

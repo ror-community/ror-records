@@ -4,27 +4,39 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/00ep21g81> a org:Organization ;
     rdfs:label "Universidad Nacional Arturo Jauretche" ;
     schema:name "Universidad Nacional Arturo Jauretche" ;
     schema:foundingDate "2009"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "UNAJ" ;
-    org:alternativeName "National University Arturo Jauretche" ;
-    schema:url <https://www.unaj.edu.ar> ; 
-    schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-58.39556 -34.82722)"^^geo:wktLiteral ;
-            schema:addressLocality "Florencio Varela" ;
-            schema:addressCountry "AR" ;
-            owl:sameAs <http://sws.geonames.org/3433923/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
+    org:classification "education" ; 
+    dct:created "2019-02-17"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:alternativeName "National University Arturo Jauretche"@en ; 
+    org:abbreviation "UNAJ"@None ; 
+    schema:url <http://unaj.edu.ar> ; 
+    schema:mainEntityOfPage <https://www.unaj.edu.ar> ;
+    schema:sameAs <https://grid.ac/institutions/grid.502038.c> ;
     schema:sameAs <http://isni.org/isni/0000000449110518> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q6156550> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-58.27623 -34.80896)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "San Juan Bautista" ;
+            schema:addressCountry "AR" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Argentina" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3433923/> ;
+    ] ; 
     .

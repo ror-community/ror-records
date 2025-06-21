@@ -4,28 +4,40 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/05ag62t55> a org:Organization ;
     rdfs:label "Institut für Höhere Studien - Institute for Advanced Studies (IHS)" ;
     schema:name "Institut für Höhere Studien - Institute for Advanced Studies (IHS)" ;
     schema:foundingDate "1963"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Nonprofit" ; 
-    org:abbreviation "IHS" ;
-    org:alternativeName "Institut für Höhere Studien - Institute for Advanced Studies" ;
-    schema:url <http://www.ihs.ac.at/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Institute_for_Advanced_Studies_(Vienna)> ;
+    org:classification "nonprofit" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:abbreviation "IHS"@None ; 
+    org:alternativeName "Institut für Höhere Studien - Institute for Advanced Studies"@de ; 
+    schema:url <http://ihs.ac.at> ; 
+    schema:mainEntityOfPage <https://www.ihs.ac.at> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Institute_for_Advanced_Studies_(Vienna)> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.424791.d> ;
+    schema:sameAs <http://isni.org/isni/0000000121110979> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(16.37208 48.20849)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(16.37208 48.20849)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Vienna" ;
             schema:addressCountry "AT" ;
-            owl:sameAs <http://sws.geonames.org/2761369/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000121110979> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q911963> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Austria" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2761369/> ;
+    ] ; 
     .

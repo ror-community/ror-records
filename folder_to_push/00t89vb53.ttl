@@ -4,27 +4,39 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/00t89vb53> a org:Organization ;
     rdfs:label "University of Zadar" ;
     schema:name "University of Zadar" ;
     schema:foundingDate "1396"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:alternativeName "Universitas Studiorum Iadertina" ;
-    schema:url <http://www.unizd.hr/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Zadar> ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:alternativeName "Universitas Studiorum Iadertina"@None ; 
+    schema:url <http://unizd.hr> ; 
+    schema:mainEntityOfPage <https://www.unizd.hr> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Zadar> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.424739.f> ;
+    schema:sameAs <http://isni.org/isni/0000000121591688> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(15.22514 44.11578)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(15.22514 44.11578)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Zadar" ;
             schema:addressCountry "HR" ;
-            owl:sameAs <http://sws.geonames.org/3186952/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000121591688> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q2496233> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Croatia" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3186952/> ;
+    ] ; 
     .

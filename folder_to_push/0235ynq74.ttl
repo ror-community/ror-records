@@ -1,0 +1,41 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/0235ynq74> a org:Organization ;
+    rdfs:label "University of Teacher Education Lucerne" ;
+    schema:name "University of Teacher Education Lucerne" ;
+    schema:foundingDate "2003"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-11-19"^^xsd:date ;
+    org:alternativeName "PH Luzern"@de ; 
+    schema:url <http://phlu.ch> ; 
+    schema:mainEntityOfPage <https://www.phlu.ch> ;
+    schema:sameAs <https://grid.ac/institutions/grid.465965.d> ;
+    schema:sameAs <http://isni.org/isni/0000000103481637> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(8.30635 47.05048)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Lucerne" ;
+            schema:addressCountry "CH" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Switzerland" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2659811/> ;
+    ] ; 
+    .
