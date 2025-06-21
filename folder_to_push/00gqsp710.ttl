@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/00gqsp710> a org:Organization ;
+    rdfs:label "Osservatorio di Astrofisica e Scienza dello Spazio" ;
+    schema:name "Osservatorio di Astrofisica e Scienza dello Spazio" ;
+    schema:foundingDate "2018"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    org:abbreviation "INAF OAS" ;
+    org:alternativeName "INAF OAS Bologna" ;
+    schema:url <https://www.oas.inaf.it> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(11.33875 44.49381)"^^geo:wktLiteral ;
+            schema:addressLocality "Bologna" ;
+            schema:addressCountry "IT" ;
+            owl:sameAs <http://sws.geonames.org/3181928/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    .

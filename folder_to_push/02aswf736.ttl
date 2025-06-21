@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/02aswf736> a org:Organization ;
+    rdfs:label "Atmosphere Plant Soil Interactions" ;
+    schema:name "Atmosphere Plant Soil Interactions" ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    org:abbreviation "ISPA" ;
+    schema:url <https://www6.bordeaux-aquitaine.inra.fr/ispa_eng/> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-0.56707 44.77935)"^^geo:wktLiteral ;
+            schema:addressLocality "Villenave-d'Ornon" ;
+            schema:addressCountry "FR" ;
+            owl:sameAs <http://sws.geonames.org/2968620/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000404393921> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q30262479> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

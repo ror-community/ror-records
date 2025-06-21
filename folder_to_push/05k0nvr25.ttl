@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/05k0nvr25> a org:Organization ;
+    rdfs:label "Centre d'Études et d'Expertise sur les Risques, l'Environnement, la Mobilité et l'Aménagement" ;
+    schema:name "Centre d'Études et d'Expertise sur les Risques, l'Environnement, la Mobilité et l'Aménagement" ;
+    schema:foundingDate "2014"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Government" ; 
+    org:abbreviation "Cerema" ;
+    schema:url <http://www.cerema.fr/> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(4.91303 45.73865)"^^geo:wktLiteral ;
+            schema:addressLocality "Bron" ;
+            schema:addressCountry "FR" ;
+            owl:sameAs <http://sws.geonames.org/3029931/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000122049698> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

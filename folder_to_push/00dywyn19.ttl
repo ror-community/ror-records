@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/00dywyn19> a org:Organization ;
+    rdfs:label "Forest Resource Improvement Association of Alberta" ;
+    schema:name "Forest Resource Improvement Association of Alberta" ;
+    org:status "active" ;
+    org:classification "Nonprofit" ; 
+    org:abbreviation "FRIAA" ;
+    org:alternativeName "Forest Resources Improvement Association of Alberta" ;
+    schema:url <https://friaa.ab.ca> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-113.46871 53.55014)"^^geo:wktLiteral ;
+            schema:addressLocality "Edmonton" ;
+            schema:addressCountry "CA" ;
+            owl:sameAs <http://sws.geonames.org/5946768/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000503810065> ;
+    .

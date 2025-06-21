@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/02q3j1823> a org:Organization ;
+    rdfs:label "Korea National Arboretum" ;
+    schema:name "Korea National Arboretum" ;
+    org:status "active" ;
+    org:classification "Archive" ; 
+    org:abbreviation "KNA" ;
+    schema:url <https://www.kna.go.kr> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Korea_National_Arboretum> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(127.19917 37.89444)"^^geo:wktLiteral ;
+            schema:addressLocality "Pocheon-si" ;
+            schema:addressCountry "KR" ;
+            owl:sameAs <http://sws.geonames.org/1897155/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000088550277> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q6431670> ;
+    .

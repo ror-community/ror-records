@@ -1,0 +1,25 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/02npznr18> a org:Organization ;
+    rdfs:label "Grenada Bureau of Standards" ;
+    schema:name "Grenada Bureau of Standards" ;
+    org:status "active" ;
+    org:classification "Government" ; 
+    org:abbreviation "GDBS" ;
+    schema:url <http://www.gdbs.gd> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-61.75226 12.05288)"^^geo:wktLiteral ;
+            schema:addressLocality "Saint George's" ;
+            schema:addressCountry "GD" ;
+            owl:sameAs <http://sws.geonames.org/3579925/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    .

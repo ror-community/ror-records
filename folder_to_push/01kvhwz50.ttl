@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/01kvhwz50> a org:Organization ;
+    rdfs:label "Directorate of Air Navigation Services" ;
+    schema:name "Directorate of Air Navigation Services" ;
+    schema:foundingDate "2005"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Government" ; 
+    org:abbreviation "DSNA" ;
+    schema:url <https://www.ecologique-solidaire.gouv.fr/controle-aerien> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Direction_des_Services_de_la_navigation_a%C3%A9rienne> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(2.39147 48.70522)"^^geo:wktLiteral ;
+            schema:addressLocality "Athis-Mons" ;
+            schema:addressCountry "FR" ;
+            owl:sameAs <http://sws.geonames.org/3036460/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/000000009158905X> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q3029492> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

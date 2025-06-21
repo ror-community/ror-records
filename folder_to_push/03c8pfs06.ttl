@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/03c8pfs06> a org:Organization ;
+    rdfs:label "Refinadora Costarricense de Petróleo" ;
+    schema:name "Refinadora Costarricense de Petróleo" ;
+    org:status "active" ;
+    org:classification "Government" ; 
+    org:abbreviation "RECOPE" ;
+    org:alternativeName "Refinadora Costarricense de Petroleo" ;
+    schema:url <https://www.recope.go.cr> ; 
+    owl:sameAs <https://es.wikipedia.org/wiki/Refinadora_Costarricense_de_Petr%C3%B3leo> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-84.08333 9.93333)"^^geo:wktLiteral ;
+            schema:addressLocality "San José" ;
+            schema:addressCountry "CR" ;
+            owl:sameAs <http://sws.geonames.org/3621849/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000107220282> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q3931323> ;
+    .

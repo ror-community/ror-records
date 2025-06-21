@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/05fp08r12> a org:Organization ;
+    rdfs:label "Government of Thailand" ;
+    schema:name "Government of Thailand" ;
+    org:status "active" ;
+    org:classification "Government" ; 
+    org:alternativeName "Royal Thai Government" ;
+    schema:url <http://www.thaigov.go.th/en.html> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Government_of_Thailand> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(100.50144 13.75398)"^^geo:wktLiteral ;
+            schema:addressLocality "Bangkok" ;
+            schema:addressCountry "TH" ;
+            owl:sameAs <http://sws.geonames.org/1609350/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000105307202> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q873675> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

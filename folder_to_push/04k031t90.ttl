@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/04k031t90> a org:Organization ;
+    rdfs:label "École Nationale Vétérinaire d'Alfort" ;
+    schema:name "École Nationale Vétérinaire d'Alfort" ;
+    schema:foundingDate "1765"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "ENVA" ;
+    org:alternativeName "National Veterinary School of Alfort" ;
+    schema:url <https://www.vet-alfort.fr/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/%C3%89cole_nationale_v%C3%A9t%C3%A9rinaire_d%27Alfort> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(2.43945 48.81171)"^^geo:wktLiteral ;
+            schema:addressLocality "Maisons-Alfort" ;
+            schema:addressCountry "FR" ;
+            owl:sameAs <http://sws.geonames.org/2996568/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000121693027> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q273600> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

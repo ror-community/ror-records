@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/03r0cdk24> a org:Organization ;
+    rdfs:label "Institut de Recherche sur l'Architecture Antique" ;
+    schema:name "Institut de Recherche sur l'Architecture Antique" ;
+    schema:foundingDate "1957"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    org:abbreviation "IRAA" ;
+    org:alternativeName "Service d’Architecture Antique" ;
+    schema:url <https://iraa.mmsh.fr> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(5.44973 43.5283)"^^geo:wktLiteral ;
+            schema:addressLocality "Aix-en-Provence" ;
+            schema:addressCountry "FR" ;
+            owl:sameAs <http://sws.geonames.org/3038354/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000121927970> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

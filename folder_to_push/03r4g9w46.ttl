@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/03r4g9w46> a org:Organization ;
+    rdfs:label "Facility for Rare Isotope Beams" ;
+    schema:name "Facility for Rare Isotope Beams" ;
+    schema:foundingDate "2022"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    org:abbreviation "FRIB" ;
+    org:alternativeName "Facility for Rare Isotope Beams (FRIB)" ;
+    schema:url <https://frib.msu.edu> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Facility_for_Rare_Isotope_Beams> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-84.48387 42.73698)"^^geo:wktLiteral ;
+            schema:addressLocality "East Lansing" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/4991640/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q5428604> ;
+    .
