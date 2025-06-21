@@ -15,7 +15,7 @@
     org:classification "education" ; 
     org:classification "funder" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-10-31"^^xsd:date ;
+    dct:modified "2025-04-03"^^xsd:date ;
     org:abbreviation "UdeG"@es ; 
     schema:url <http://udg.mx> ; 
     schema:mainEntityOfPage <https://www.udg.mx> ;
@@ -23,19 +23,25 @@
     schema:sameAs <https://api.crossref.org/funders/100016991> ;
     schema:sameAs <https://grid.ac/institutions/grid.412890.6> ;
     schema:sameAs <http://isni.org/isni/0000000121580196> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/037xmw090> ;
+        rdfs:label "Red Gobernanza Metropolitana" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(-103.39182 20.66682)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Guadalajara" ;
             schema:addressCountry "MX" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Jalisco" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "Mexico" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "North America" ;
+                    schema:identifier "NA"
                 ]
             ]
         ] ;

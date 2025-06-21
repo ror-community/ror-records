@@ -1,0 +1,38 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/05ke6rn16> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "1979"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2025-04-02"^^xsd:date ;
+    dct:modified "2025-04-03"^^xsd:date ;
+    schema:url <http://eduvos.com> ; 
+    schema:mainEntityOfPage <https://www.eduvos.com> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(28.04363 -26.20227)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Johannesburg" ;
+            schema:addressCountry "ZA" ;
+            schema:addressRegion "Gauteng" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "South Africa" ;
+                schema:containedInPlace [
+                    schema:name "Africa" ;
+                    schema:identifier "AF"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/993800/> ;
+    ] ; 
+    .

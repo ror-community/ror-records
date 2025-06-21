@@ -15,7 +15,7 @@
     org:classification "education" ; 
     org:classification "funder" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-12-10"^^xsd:date ;
+    dct:modified "2025-04-03"^^xsd:date ;
     org:alternativeName "l'X"@fr ; 
     schema:mainEntityOfPage <https://www.polytechnique.edu/en> ;
     owl:sameAs <http://en.wikipedia.org/wiki/%C3%89cole_Polytechnique> ; 
@@ -139,12 +139,6 @@
     org:hasLink [
         a org:Membership ;
         org:role "child" ;
-        org:member <https://ror.org/01fv25t22> ;
-        rdfs:label "CEA Paris-Saclay - Etablissement de Saclay" ;
-    ] ; 
-    org:hasLink [
-        a org:Membership ;
-        org:role "child" ;
         org:member <https://ror.org/00xd1ek73> ;
         rdfs:label "Laboratoire Mécanique des Solides" ;
     ] ; 
@@ -159,6 +153,12 @@
         org:role "child" ;
         org:member <https://ror.org/05hvqzx20> ;
         rdfs:label "Microfluidique Physique et Bio-ingénierie" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02yv0b554> ;
+        rdfs:label "Centre d’Economie Industrielle - CERNA" ;
     ] ; 
     org:hasLink [
         a org:Membership ;
@@ -214,25 +214,19 @@
         org:member <https://ror.org/02rmk5x23> ;
         rdfs:label "Fédération de recherche PLAS@PAR" ;
     ] ; 
-    org:hasLink [
-        a org:Membership ;
-        org:role "child" ;
-        org:member <https://ror.org/02yv0b554> ;
-        rdfs:label "Centre d’Economie Industrielle - CERNA" ;
-    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(2.2498 48.71828)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Palaiseau" ;
             schema:addressCountry "FR" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Île-de-France" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "France" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

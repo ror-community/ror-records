@@ -4,26 +4,45 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/039cf4q47> a org:Organization ;
     rdfs:label "University of Mosul" ;
     schema:name "University of Mosul" ;
     schema:foundingDate "1967"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    schema:url <http://www.uomosul.edu.iq/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Mosul> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-04-03"^^xsd:date ;
+    schema:mainEntityOfPage <http://www.uomosul.edu.iq/> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Mosul> ; 
+    schema:sameAs <https://api.crossref.org/funders/100019429> ;
+    schema:sameAs <https://grid.ac/institutions/grid.411848.0> ;
+    schema:sameAs <http://isni.org/isni/0000000087948152> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01029k907> ;
+        rdfs:label "University of Telafer" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(43.11889 36.335)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(43.11889 36.335)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Mosul" ;
             schema:addressCountry "IQ" ;
-            owl:sameAs <http://sws.geonames.org/99072/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000087948152> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q2743336> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "Nineveh" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Iraq" ;
+                schema:containedInPlace [
+                    schema:name "Asia" ;
+                    schema:identifier "AS"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/99072/> ;
+    ] ; 
     .

@@ -1,0 +1,71 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/02db2t754> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "2021"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "nonprofit" ; 
+    dct:created "2025-04-02"^^xsd:date ;
+    dct:modified "2025-04-03"^^xsd:date ;
+    org:abbreviation "IBASE"@es ; 
+    org:alternativeName "Institute of Biodiversity of Antarctic and Subantarctic Ecosystems"@en ; 
+    schema:url <http://institutobase.cl> ; 
+    schema:mainEntityOfPage <https://institutobase.cl> ;
+    schema:sameAs <http://isni.org/isni/0000000514322323> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/047gc3g35> ;
+        rdfs:label "University of Chile" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/04teye511> ;
+        rdfs:label "Pontificia Universidad Católica de Chile" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/049784n50> ;
+        rdfs:label "Universidad de Magallanes" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/0460jpj73> ;
+        rdfs:label "University of Concepción" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/029ycp228> ;
+        rdfs:label "Austral University of Chile" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-70.64827 -33.45694)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Santiago" ;
+            schema:addressCountry "CL" ;
+            schema:addressRegion "Santiago Metropolitan" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Chile" ;
+                schema:containedInPlace [
+                    schema:name "South America" ;
+                    schema:identifier "SA"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3871336/> ;
+    ] ; 
+    .

@@ -15,7 +15,7 @@
     org:classification "education" ; 
     org:classification "funder" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-10-21"^^xsd:date ;
+    dct:modified "2025-04-03"^^xsd:date ;
     org:abbreviation "UTAR"@None ; 
     schema:url <http://utar.edu.my> ; 
     schema:mainEntityOfPage <https://utar.edu.my> ;
@@ -23,19 +23,25 @@
     schema:sameAs <https://api.crossref.org/funders/501100002671> ;
     schema:sameAs <https://grid.ac/institutions/grid.412261.2> ;
     schema:sameAs <http://isni.org/isni/000000041798283X> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/046b54093> ;
+        rdfs:label "Universiti Tunku Abdul Rahman Sungai Long Campus" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(101.15 4.3)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Kampar" ;
             schema:addressCountry "MY" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Perak" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "Malaysia" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Asia" ;
+                    schema:identifier "AS"
                 ]
             ]
         ] ;

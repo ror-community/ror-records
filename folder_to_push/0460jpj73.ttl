@@ -15,7 +15,7 @@
     org:classification "education" ; 
     org:classification "funder" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-11-19"^^xsd:date ;
+    dct:modified "2025-04-03"^^xsd:date ;
     org:abbreviation "UdeC"@None ; 
     schema:url <http://udec.cl> ; 
     schema:mainEntityOfPage <https://www.udec.cl/pexterno/> ;
@@ -23,19 +23,25 @@
     schema:sameAs <https://api.crossref.org/funders/501100006255> ;
     schema:sameAs <https://grid.ac/institutions/grid.5380.e> ;
     schema:sameAs <http://isni.org/isni/0000000122989663> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02db2t754> ;
+        rdfs:label "Instituto de Biodiversidad de Ecosistemas Antárticos y Subantárticos" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(-73.04977 -36.82699)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Concepción" ;
             schema:addressCountry "CL" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Biobío" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "Chile" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "South America" ;
+                    schema:identifier "SA"
                 ]
             ]
         ] ;

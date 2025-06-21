@@ -15,7 +15,7 @@
     org:classification "education" ; 
     org:classification "funder" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-10-21"^^xsd:date ;
+    dct:modified "2025-04-03"^^xsd:date ;
     org:abbreviation "UNM"@None ; 
     org:alternativeName "Universitatis Novus Mexico"@en ; 
     schema:url <http://unm.edu> ; 
@@ -66,19 +66,25 @@
         org:member <https://ror.org/019q0z051> ;
         rdfs:label "Rocky Mountain Advanced Computing Consortium" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02jvjmd55> ;
+        rdfs:label "University of New Mexico Health Sciences Center" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(-106.65114 35.08449)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Albuquerque" ;
             schema:addressCountry "US" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "New Mexico" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "United States" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "North America" ;
+                    schema:identifier "NA"
                 ]
             ]
         ] ;

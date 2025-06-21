@@ -15,7 +15,7 @@
     org:classification "education" ; 
     org:classification "funder" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-10-21"^^xsd:date ;
+    dct:modified "2025-04-03"^^xsd:date ;
     org:abbreviation "HSG"@None ; 
     schema:url <http://unisg.ch> ; 
     schema:mainEntityOfPage <https://www.unisg.ch/> ;
@@ -23,19 +23,25 @@
     schema:sameAs <https://api.crossref.org/funders/100009572> ;
     schema:sameAs <https://grid.ac/institutions/grid.15775.31> ;
     schema:sameAs <http://isni.org/isni/0000000121566618> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00b78v464> ;
+        rdfs:label "Akademische Raumfahrt Initiative Schweiz" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(9.37477 47.42391)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Saint Gallen" ;
             schema:addressCountry "CH" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Saint Gallen" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "Switzerland" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

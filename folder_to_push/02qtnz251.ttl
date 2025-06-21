@@ -1,0 +1,40 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/02qtnz251> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "2016"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "nonprofit" ; 
+    dct:created "2025-04-02"^^xsd:date ;
+    dct:modified "2025-04-03"^^xsd:date ;
+    org:abbreviation "GFBio"@de ; 
+    org:alternativeName "German Federation for Biological Data e.V."@en ; 
+    schema:url <http://gfbio.org> ; 
+    schema:mainEntityOfPage <https://www.gfbio-ev.de> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(8.80717 53.07582)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Bremen" ;
+            schema:addressCountry "DE" ;
+            schema:addressRegion "Bremen" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Germany" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2944388/> ;
+    ] ; 
+    .

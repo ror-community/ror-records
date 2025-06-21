@@ -13,7 +13,7 @@
     org:status "active" ;
     org:classification "government" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-09-16"^^xsd:date ;
+    dct:modified "2025-04-03"^^xsd:date ;
     schema:mainEntityOfPage <https://www.cea.fr/paris-saclay> ;
     schema:sameAs <https://grid.ac/institutions/grid.457334.2> ;
     org:hasLink [
@@ -36,15 +36,21 @@
     ] ; 
     org:hasLink [
         a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/010j2gw05> ;
+        rdfs:label "CEA Paris-Saclay - Etablissement de Fontenay-aux-roses" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
         org:role "parent" ;
         org:member <https://ror.org/00jjx8s55> ;
         rdfs:label "Commissariat à l'Énergie Atomique et aux Énergies Alternatives" ;
     ] ; 
     org:hasLink [
         a org:Membership ;
-        org:role "child" ;
-        org:member <https://ror.org/010j2gw05> ;
-        rdfs:label "CEA Paris-Saclay - Etablissement de Fontenay-aux-roses" ;
+        org:role "parent" ;
+        org:member <https://ror.org/03xjwb503> ;
+        rdfs:label "Université Paris-Saclay" ;
     ] ; 
     schema:location [
         a schema:Place ;
@@ -52,13 +58,13 @@
         schema:address [
             schema:addressLocality "Gif-sur-Yvette" ;
             schema:addressCountry "FR" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Île-de-France" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "France" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

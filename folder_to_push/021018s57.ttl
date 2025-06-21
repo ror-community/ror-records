@@ -15,7 +15,7 @@
     org:classification "education" ; 
     org:classification "funder" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-10-21"^^xsd:date ;
+    dct:modified "2025-04-03"^^xsd:date ;
     org:abbreviation "UB"@None ; 
     schema:url <http://ub.edu> ; 
     schema:mainEntityOfPage <https://web.ub.edu> ;
@@ -95,19 +95,25 @@
         org:member <https://ror.org/02w0r2764> ;
         rdfs:label "MAGIC Telescopes" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01p0vsd73> ;
+        rdfs:label "CETT Barcelona School of Tourism, Hospitality and Gastronomy" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(2.15899 41.38879)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Barcelona" ;
             schema:addressCountry "ES" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Catalonia" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "Spain" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

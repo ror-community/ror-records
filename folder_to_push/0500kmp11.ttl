@@ -1,0 +1,52 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/0500kmp11> a org:Organization ;
+    rdfs:label "Salzburger Landeskliniken" ;
+    schema:name "Salzburger Landeskliniken" ;
+    schema:foundingDate "2004"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "healthcare" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-04-03"^^xsd:date ;
+    org:abbreviation "SALK"@None ; 
+    schema:mainEntityOfPage <https://www.salk.at/> ;
+    schema:sameAs <https://grid.ac/institutions/grid.415376.2> ;
+    schema:sameAs <http://isni.org/isni/0000000098034313> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03z3mg085> ;
+        rdfs:label "Paracelsus Medical University" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/037w8vx49> ;
+        rdfs:label "Labor für Immunologische und Molekulare Krebsforschung" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(13.04399 47.79941)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Salzburg" ;
+            schema:addressCountry "AT" ;
+            schema:addressRegion "Salzburg" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Austria" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2766824/> ;
+    ] ; 
+    .

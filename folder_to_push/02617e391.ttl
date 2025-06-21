@@ -4,25 +4,50 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02617e391> a org:Organization ;
-    rdfs:label "Épidémiologie Clinique, Évaluation Économique Appliquées aux Populations Vulnérables" ;
-    schema:name "Épidémiologie Clinique, Évaluation Économique Appliquées aux Populations Vulnérables" ;
+    rdfs:label "" ;
+    schema:name "" ;
     schema:foundingDate "2014"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "ECEVE" ;
-    schema:url <http://www.idf.inserm.fr/rubriques/les-laboratoires/implantations/structures-de-recherche-paris-7/annexes2/epidemiologie-clinique-evaluation-economique-appliquees-aux-populations-vulnerables> ; 
+    org:classification "facility" ; 
+    dct:created "2019-02-17"^^xsd:date ;
+    dct:modified "2025-04-03"^^xsd:date ;
+    org:abbreviation "ECEVE"@None ; 
+    org:alternativeName "UMR 1123"@None ; 
+    org:alternativeName "UMR-S 1123"@None ; 
+    org:alternativeName "Épidémiologie Clinique, Évaluation Économique Appliquées aux Populations Vulnérables"@fr ; 
+    schema:sameAs <https://grid.ac/institutions/grid.503179.9> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/00bw5n526> ;
+        rdfs:label "Délégation Paris 7" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/05f82e368> ;
+        rdfs:label "Université Paris Cité" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(2.3488 48.85341)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(2.3488 48.85341)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Paris" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2988507/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://www.wikidata.org/entity/Q51781808> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "Île-de-France" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2988507/> ;
+    ] ; 
     .

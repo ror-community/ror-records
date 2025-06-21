@@ -1,0 +1,44 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/05nfch282> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "2016"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "company" ; 
+    dct:created "2025-04-02"^^xsd:date ;
+    dct:modified "2025-04-03"^^xsd:date ;
+    org:abbreviation "BTO"@en ; 
+    org:alternativeName "BillionToOne, Inc."@en ; 
+    org:alternativeName "Northstar Response"@en ; 
+    org:alternativeName "Northstar Select"@en ; 
+    org:alternativeName "Unity Screen"@en ; 
+    schema:url <http://billiontoone.com> ; 
+    schema:url <http://unityscreen.com> ; 
+    schema:mainEntityOfPage <https://billiontoone.com> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-122.18219 37.45383)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Menlo Park" ;
+            schema:addressCountry "US" ;
+            schema:addressRegion "California" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "North America" ;
+                    schema:identifier "NA"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/5372223/> ;
+    ] ; 
+    .

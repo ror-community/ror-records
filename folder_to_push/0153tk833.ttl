@@ -15,7 +15,7 @@
     org:classification "education" ; 
     org:classification "funder" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-10-21"^^xsd:date ;
+    dct:modified "2025-04-03"^^xsd:date ;
     org:abbreviation "UVA"@None ; 
     schema:url <http://virginia.edu> ; 
     schema:mainEntityOfPage <https://virginia.edu> ;
@@ -89,19 +89,25 @@
         org:member <https://ror.org/01txfgz53> ;
         rdfs:label "Center for Statistics and Applications in Forensic Evidence" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00dw75k93> ;
+        rdfs:label "Leifur Eiríksson Foundation" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(-78.47668 38.02931)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Charlottesville" ;
             schema:addressCountry "US" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Virginia" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "United States" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "North America" ;
+                    schema:identifier "NA"
                 ]
             ]
         ] ;

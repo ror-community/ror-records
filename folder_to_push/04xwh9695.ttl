@@ -1,0 +1,42 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/04xwh9695> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "1961"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "facility" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-04-03"^^xsd:date ;
+    org:alternativeName "Institute of Ionosphere"@en ; 
+    org:alternativeName "Ionosphere Research Institute"@en ; 
+    schema:url <http://ionos.kz> ; 
+    schema:mainEntityOfPage <https://ionos.kz> ;
+    schema:sameAs <https://grid.ac/institutions/grid.443933.a> ;
+    schema:sameAs <http://isni.org/isni/0000000406060231> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(76.91667 43.25)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Almaty" ;
+            schema:addressCountry "KZ" ;
+            schema:addressRegion "Almaty" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Kazakhstan" ;
+                schema:containedInPlace [
+                    schema:name "Asia" ;
+                    schema:identifier "AS"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1526384/> ;
+    ] ; 
+    .

@@ -4,27 +4,71 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/04teye511> a org:Organization ;
     rdfs:label "Pontificia Universidad Católica de Chile" ;
     schema:name "Pontificia Universidad Católica de Chile" ;
     schema:foundingDate "1888"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "PUC" ;
-    schema:url <http://www.uc.cl/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Pontifical_Catholic_University_of_Chile> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-04-03"^^xsd:date ;
+    org:abbreviation "PUC"@None ; 
+    org:abbreviation "UC"@None ; 
+    schema:mainEntityOfPage <http://www.uc.cl/> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Pontifical_Catholic_University_of_Chile> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100009610> ;
+    schema:sameAs <https://grid.ac/institutions/grid.7870.8> ;
+    schema:sameAs <http://isni.org/isni/0000000121570406> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00gpq1s11> ;
+        rdfs:label "Center of New Drugs for Hypertension" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/051k70002> ;
+        rdfs:label "Biologie évolutive et écologie des algues" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00rbe2516> ;
+        rdfs:label "Millennium Institute for Subatomic Physics at High-Energy Frontier, Saphir" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/016v1bv58> ;
+        rdfs:label "Hospital Clínico de la Universidad Católica" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02db2t754> ;
+        rdfs:label "Instituto de Biodiversidad de Ecosistemas Antárticos y Subantárticos" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-70.64827 -33.45694)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-70.64827 -33.45694)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Santiago" ;
             schema:addressCountry "CL" ;
-            owl:sameAs <http://sws.geonames.org/3871336/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000121570406> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1129925> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "Santiago Metropolitan" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Chile" ;
+                schema:containedInPlace [
+                    schema:name "South America" ;
+                    schema:identifier "SA"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3871336/> ;
+    ] ; 
     .

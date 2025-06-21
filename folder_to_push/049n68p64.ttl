@@ -15,7 +15,7 @@
     org:classification "education" ; 
     org:classification "funder" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-11-19"^^xsd:date ;
+    dct:modified "2025-04-03"^^xsd:date ;
     org:alternativeName "UdeC"@es ; 
     schema:url <http://ucaldas.edu.co> ; 
     schema:mainEntityOfPage <https://www.ucaldas.edu.co> ;
@@ -23,19 +23,25 @@
     schema:sameAs <https://api.crossref.org/funders/501100007626> ;
     schema:sameAs <https://grid.ac/institutions/grid.7779.e> ;
     schema:sameAs <http://isni.org/isni/0000000122906370> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03rx5xe39> ;
+        rdfs:label "Servicios Especiales de Salud Hospital Universitario de Caldas" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(-75.51738 5.06889)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Manizales" ;
             schema:addressCountry "CO" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Caldas Department" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "Colombia" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "South America" ;
+                    schema:identifier "SA"
                 ]
             ]
         ] ;

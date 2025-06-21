@@ -1,0 +1,42 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/05ht7qn52> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "1925"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "healthcare" ; 
+    dct:created "2025-04-02"^^xsd:date ;
+    dct:modified "2025-04-03"^^xsd:date ;
+    org:alternativeName "The Affiliated Xinghua People's Hospital"@en ; 
+    org:abbreviation "XHRY"@en ; 
+    schema:url <http://xhry.edu> ; 
+    schema:url <http://xhsrmyy.com> ; 
+    schema:mainEntityOfPage <https://www.xhsrmyy.com> ;
+    owl:sameAs <https://zh.wikipedia.org/wiki/%E5%85%B4%E5%8C%96%E5%B8%82%E4%BA%BA%E6%B0%91%E5%8C%BB%E9%99%A2> ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(119.90812 32.49069)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Taizhou" ;
+            schema:addressCountry "CN" ;
+            schema:addressRegion "Jiangsu" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "China" ;
+                schema:containedInPlace [
+                    schema:name "Asia" ;
+                    schema:identifier "AS"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1793505/> ;
+    ] ; 
+    .

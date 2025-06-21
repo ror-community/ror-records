@@ -4,28 +4,47 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/049784n50> a org:Organization ;
     rdfs:label "Universidad de Magallanes" ;
     schema:name "Universidad de Magallanes" ;
     schema:foundingDate "1981"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "UMAG" ;
-    org:alternativeName "Universidad Técnica del Estado" ;
-    schema:url <http://www.umag.cl/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/University_of_Magallanes> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-04-03"^^xsd:date ;
+    org:abbreviation "UMAG"@None ; 
+    org:alternativeName "Universidad Técnica del Estado"@es ; 
+    schema:mainEntityOfPage <http://www.umag.cl/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/University_of_Magallanes> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100008792> ;
+    schema:sameAs <https://grid.ac/institutions/grid.442242.6> ;
+    schema:sameAs <http://isni.org/isni/0000000122871761> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02db2t754> ;
+        rdfs:label "Instituto de Biodiversidad de Ecosistemas Antárticos y Subantárticos" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-70.91129 -53.15483)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-70.91129 -53.15483)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Punta Arenas" ;
             schema:addressCountry "CL" ;
-            owl:sameAs <http://sws.geonames.org/3874787/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000122871761> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q5947836> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "Region of Magallanes" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Chile" ;
+                schema:containedInPlace [
+                    schema:name "South America" ;
+                    schema:identifier "SA"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3874787/> ;
+    ] ; 
     .

@@ -15,7 +15,7 @@
     org:classification "education" ; 
     org:classification "funder" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-10-21"^^xsd:date ;
+    dct:modified "2025-04-03"^^xsd:date ;
     org:abbreviation "ZHAW"@None ; 
     schema:url <http://zhaw.ch> ; 
     schema:mainEntityOfPage <https://www.zhaw.ch> ;
@@ -35,19 +35,25 @@
         org:member <https://ror.org/05r0ap620> ;
         rdfs:label "Zurich University of the Arts" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00b78v464> ;
+        rdfs:label "Akademische Raumfahrt Initiative Schweiz" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(8.72413 47.50564)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Winterthur" ;
             schema:addressCountry "CH" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Zurich" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "Switzerland" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

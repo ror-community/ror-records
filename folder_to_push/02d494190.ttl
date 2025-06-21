@@ -1,0 +1,40 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/02d494190> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "2018"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2025-04-02"^^xsd:date ;
+    dct:modified "2025-04-03"^^xsd:date ;
+    org:alternativeName "معهد إفريقيا"@ar ; 
+    schema:url <http://gsu.ac.ae> ; 
+    schema:url <http://theafricainstitute.org> ; 
+    schema:mainEntityOfPage <https://www.theafricainstitute.org> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(55.41206 25.33737)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Sharjah" ;
+            schema:addressCountry "AE" ;
+            schema:addressRegion "Sharjah" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United Arab Emirates" ;
+                schema:containedInPlace [
+                    schema:name "Asia" ;
+                    schema:identifier "AS"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/292672/> ;
+    ] ; 
+    .

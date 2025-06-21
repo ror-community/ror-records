@@ -15,7 +15,7 @@
     org:classification "education" ; 
     org:classification "funder" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-10-21"^^xsd:date ;
+    dct:modified "2025-04-03"^^xsd:date ;
     schema:url <http://univie.ac.at> ; 
     schema:mainEntityOfPage <https://www.univie.ac.at> ;
     owl:sameAs <http://en.wikipedia.org/wiki/University_of_Vienna> ; 
@@ -46,19 +46,25 @@
         org:member <https://ror.org/05f0zr486> ;
         rdfs:label "Vienna General Hospital" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03marfy19> ;
+        rdfs:label "Wiener Kreis Gesellschaft - Verein z. Förderung wissenschaftl. Weltauffassung" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(16.37208 48.20849)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Vienna" ;
             schema:addressCountry "AT" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Vienna" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "Austria" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

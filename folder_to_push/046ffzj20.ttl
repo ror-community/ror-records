@@ -15,7 +15,7 @@
     org:classification "education" ; 
     org:classification "funder" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-10-21"^^xsd:date ;
+    dct:modified "2025-04-03"^^xsd:date ;
     org:abbreviation "UC"@None ; 
     schema:url <http://unican.es> ; 
     schema:mainEntityOfPage <https://web.unican.es> ;
@@ -47,19 +47,25 @@
         org:member <https://ror.org/02x2fbb57> ;
         rdfs:label "Red Española de Supercomputación" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/006ha6n07> ;
+        rdfs:label "Editorial de la Universidad de Cantabria" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(-3.80444 43.46472)"^^geo:wktLiteral ;
         schema:address [
             schema:addressLocality "Santander" ;
             schema:addressCountry "ES" ;
-            schema:addressRegion "" ;
+            schema:addressRegion "Cantabria" ;
             dct:spatial [
                 a dct:Location ;
                 schema:name "Spain" ;
                 schema:containedInPlace [
-                    schema:name "" ;
-                    schema:identifier ""
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
                 ]
             ]
         ] ;

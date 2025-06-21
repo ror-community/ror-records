@@ -13,7 +13,7 @@
     org:status "active" ;
     org:classification "healthcare" ; 
     dct:created "2025-01-21"^^xsd:date ;
-    dct:modified "2025-01-22"^^xsd:date ;
+    dct:modified "2025-04-03"^^xsd:date ;
     org:alternativeName "Lawson"@en ; 
     org:alternativeName "Lawson Research Institute (Lawson)"@en ; 
     org:alternativeName "Lawson Research Institute (Lawson) at St. Joseph's Health Care London"@en ; 
@@ -22,15 +22,21 @@
     owl:sameAs <https://en.wikipedia.org/wiki/Lawson_Health_Research_Institute> ; 
     org:hasLink [
         a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/05rj7xr73> ;
+        rdfs:label "St Joseph's Health Care" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
         org:role "predecessor" ;
         org:member <https://ror.org/051gsh239> ;
         rdfs:label "Lawson Health Research Institute" ;
     ] ; 
     org:hasLink [
         a org:Membership ;
-        org:role "parent" ;
-        org:member <https://ror.org/05rj7xr73> ;
-        rdfs:label "St Joseph's Health Care" ;
+        org:role "related" ;
+        org:member <https://ror.org/02grkyz14> ;
+        rdfs:label "Western University" ;
     ] ; 
     schema:location [
         a schema:Place ;

@@ -1,0 +1,39 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/04pvzxy78> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    org:status "active" ;
+    org:classification "nonprofit" ; 
+    dct:created "2025-04-02"^^xsd:date ;
+    dct:modified "2025-04-03"^^xsd:date ;
+    org:abbreviation "EAHEA"@en ; 
+    org:alternativeName "European Association for Higher Education Advancement"@en ; 
+    schema:url <http://eahea.org> ; 
+    schema:mainEntityOfPage <https://www.eahea.org> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(24.75353 59.43696)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Tallinn" ;
+            schema:addressCountry "EE" ;
+            schema:addressRegion "Harjumaa" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Estonia" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/588409/> ;
+    ] ; 
+    .

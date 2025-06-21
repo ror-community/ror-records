@@ -4,26 +4,139 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/05m37v666> a org:Organization ;
     rdfs:label "St.Gallen University of Teacher Education" ;
     schema:name "St.Gallen University of Teacher Education" ;
     schema:foundingDate "2007"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "PHSG" ;
-    schema:url <https://www.phsg.ch/en> ; 
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2025-04-03"^^xsd:date ;
+    org:abbreviation "PHSG"@None ; 
+    schema:mainEntityOfPage <https://www.phsg.ch/en> ;
+    schema:sameAs <https://grid.ac/institutions/grid.466208.e> ;
+    schema:sameAs <http://isni.org/isni/0000000102715139> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03jnpet14> ;
+        rdfs:label "Institut Berufsbildung" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0079fsj36> ;
+        rdfs:label "Institut Bewegung, Sport und Gesundheit" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/048s0na58> ;
+        rdfs:label "Institut Digitale und Informatische Bildung" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05p1dq710> ;
+        rdfs:label "Institut Frühe Bildung 0 bis 8" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01m8r1j18> ;
+        rdfs:label "Institut Gesellschaftswissenschaftliche Bildung" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00drw4m60> ;
+        rdfs:label "Institut Kulturelle und Ästhetische Bildung" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/026ghpf29> ;
+        rdfs:label "Institut Mathematische, Naturwissenschaftliche und Technische Bildung" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01nm77r92> ;
+        rdfs:label "Institut Pädagogische Psychologie" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05qmny332> ;
+        rdfs:label "Institut Schule und Profession" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04793bt26> ;
+        rdfs:label "Institut Sprachliche und Literarische Bildung" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03hgb4x70> ;
+        rdfs:label "Regionale Didaktische Zentren PHSG" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/032d3h410> ;
+        rdfs:label "Zentrum Berufspraktische Studien" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01tfw4958> ;
+        rdfs:label "Zentrum Digitalisierung und Bildung" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02yk4hg14> ;
+        rdfs:label "Zentrum Internationalisierung, Mobilität und Aussenbeziehungen" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/003fkdj63> ;
+        rdfs:label "Zentrum Nachhaltige Entwicklung" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/054kzvr89> ;
+        rdfs:label "Zentrum Weiterbildung" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02bxfy242> ;
+        rdfs:label "Zentrum Wissenschaftsberatung" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(9.37477 47.42391)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(9.37477 47.42391)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Saint Gallen" ;
             schema:addressCountry "CH" ;
-            owl:sameAs <http://sws.geonames.org/2658822/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000102715139> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1768652> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "Saint Gallen" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Switzerland" ;
+                schema:containedInPlace [
+                    schema:name "Europe" ;
+                    schema:identifier "EU"
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2658822/> ;
+    ] ; 
     .
