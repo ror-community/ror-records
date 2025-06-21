@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/04t4gxd81> a org:Organization ;
+    rdfs:label "Kanazawa Technical College" ;
+    schema:name "Kanazawa Technical College" ;
+    schema:foundingDate "1962"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "KTC" ;
+    schema:url <http://www.kanazawa-tc.ac.jp/en/> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(136.61667 36.6)"^^geo:wktLiteral ;
+            schema:addressLocality "Kanazawa" ;
+            schema:addressCountry "JP" ;
+            owl:sameAs <http://sws.geonames.org/1860243/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000461058759> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

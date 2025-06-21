@@ -1,0 +1,26 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/00f6kbf47> a org:Organization ;
+    rdfs:label "Hospital Universitari Sant Joan D'Alacant" ;
+    schema:name "Hospital Universitari Sant Joan D'Alacant" ;
+    org:status "active" ;
+    org:classification "Healthcare" ; 
+    schema:url <http://www.dep17.san.gva.es/index.php?option=com_content&view=article&id=72:hospital&catid=39:mapasanitario&Itemid=77> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-0.48149 38.34517)"^^geo:wktLiteral ;
+            schema:addressLocality "Alicante" ;
+            schema:addressCountry "ES" ;
+            owl:sameAs <http://sws.geonames.org/2521978/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000417709892> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

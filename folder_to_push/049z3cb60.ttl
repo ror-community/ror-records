@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/049z3cb60> a org:Organization ;
+    rdfs:label "First Affiliated Hospital of University of South China" ;
+    schema:name "First Affiliated Hospital of University of South China" ;
+    schema:foundingDate "1943"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Healthcare" ; 
+    org:alternativeName "First Affiliated Hospital of Nanhua University" ;
+    schema:url <http://www.nhfyyy.com/> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(112.61888 26.88946)"^^geo:wktLiteral ;
+            schema:addressLocality "Hengyang" ;
+            schema:addressCountry "CN" ;
+            owl:sameAs <http://sws.geonames.org/1808370/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000491280297> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

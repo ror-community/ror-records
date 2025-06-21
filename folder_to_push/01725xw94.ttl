@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/01725xw94> a org:Organization ;
+    rdfs:label "Saint-Petersburg State Agrarian University" ;
+    schema:name "Saint-Petersburg State Agrarian University" ;
+    schema:foundingDate "1904"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:alternativeName "Leningrad Agricultural Institute" ;
+    schema:url <http://spbgau.ru/> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(30.39642 59.71417)"^^geo:wktLiteral ;
+            schema:addressLocality "Pushkin" ;
+            schema:addressCountry "RU" ;
+            owl:sameAs <http://sws.geonames.org/504003/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000406450635> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q1628690> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

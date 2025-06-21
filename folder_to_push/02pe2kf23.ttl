@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/02pe2kf23> a org:Organization ;
+    rdfs:label "Max Planck Institute for Software Systems" ;
+    schema:name "Max Planck Institute for Software Systems" ;
+    schema:foundingDate "2000"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    org:abbreviation "MPI-SWS" ;
+    schema:url <https://www.mpi-sws.org/index.php> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Max_Planck_Institute_for_Software_Systems> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(7.00982 49.23262)"^^geo:wktLiteral ;
+            schema:addressLocality "Saarbrücken" ;
+            schema:addressCountry "DE" ;
+            owl:sameAs <http://sws.geonames.org/2842647/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/000000040492020X> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q881238> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

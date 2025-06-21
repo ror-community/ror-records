@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/00bywv891> a org:Organization ;
+    rdfs:label "Roquette Frères (France)" ;
+    schema:name "Roquette Frères (France)" ;
+    org:status "active" ;
+    org:classification "Company" ; 
+    schema:url <https://fr.roquette.com/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Roquette_Fr%C3%A8res> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(2.68646 50.61987)"^^geo:wktLiteral ;
+            schema:addressLocality "Lestrem" ;
+            schema:addressCountry "FR" ;
+            owl:sameAs <http://sws.geonames.org/2999446/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/000000010226442X> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q30291518> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

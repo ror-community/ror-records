@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/04y4ec840> a org:Organization ;
+    rdfs:label "Royal Dutch Society for the Promotion of Dentistry" ;
+    schema:name "Royal Dutch Society for the Promotion of Dentistry" ;
+    org:status "active" ;
+    org:classification "Other" ; 
+    org:abbreviation "KNMT" ;
+    org:alternativeName "Royal Dutch Dental Association" ;
+    schema:url <https://www.knmt.nl/home> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(5.12222 52.09083)"^^geo:wktLiteral ;
+            schema:addressLocality "Utrecht" ;
+            schema:addressCountry "NL" ;
+            owl:sameAs <http://sws.geonames.org/2745912/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000464893178> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

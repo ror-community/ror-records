@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/038dhnb42> a org:Organization ;
+    rdfs:label "Lero" ;
+    schema:name "Lero" ;
+    schema:foundingDate "2005"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Other" ; 
+    schema:url <http://www.lero.ie/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Lero_(software_engineering)> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-8.62306 52.66472)"^^geo:wktLiteral ;
+            schema:addressLocality "Limerick" ;
+            schema:addressCountry "IE" ;
+            owl:sameAs <http://sws.geonames.org/2962943/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000484968974> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q16960389> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

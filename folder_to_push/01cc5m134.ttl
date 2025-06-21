@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/01cc5m134> a org:Organization ;
+    rdfs:label "Soil and Water Conservation Society" ;
+    schema:name "Soil and Water Conservation Society" ;
+    schema:foundingDate "1945"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Nonprofit" ; 
+    org:abbreviation "SWCS" ;
+    org:alternativeName "Soil Conservation Society of America" ;
+    schema:url <https://www.swcs.org/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Soil_and_Water_Conservation_Society> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-93.60577 41.72971)"^^geo:wktLiteral ;
+            schema:addressLocality "Ankeny" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/4846960/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000121616419> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q7554893> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

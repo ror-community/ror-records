@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/05v258791> a org:Organization ;
+    rdfs:label "International Academy of Oral Medicine and Toxicology" ;
+    schema:name "International Academy of Oral Medicine and Toxicology" ;
+    schema:foundingDate "1984"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Nonprofit" ; 
+    org:abbreviation "IAOMT" ;
+    schema:url <https://iaomt.org/> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-81.60174 28.1614)"^^geo:wktLiteral ;
+            schema:addressLocality "Davenport" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/4152805/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000459056367> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

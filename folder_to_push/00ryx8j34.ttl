@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/00ryx8j34> a org:Organization ;
+    rdfs:label "Associação Brasileira de Avaliação de Impacto" ;
+    schema:name "Associação Brasileira de Avaliação de Impacto" ;
+    org:status "active" ;
+    org:classification "Nonprofit" ; 
+    org:abbreviation "ABAI" ;
+    schema:url <http://avaliacaodeimpacto.org.br/> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-47.81028 -21.1775)"^^geo:wktLiteral ;
+            schema:addressLocality "Ribeirão Preto" ;
+            schema:addressCountry "BR" ;
+            owl:sameAs <http://sws.geonames.org/3451328/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000449073139> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

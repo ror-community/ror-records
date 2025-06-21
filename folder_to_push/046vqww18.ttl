@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/046vqww18> a org:Organization ;
+    rdfs:label "Dr. Somervell Memorial CSI Medical College and Hospital" ;
+    schema:name "Dr. Somervell Memorial CSI Medical College and Hospital" ;
+    schema:foundingDate "2002"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "SMCSI" ;
+    schema:url <http://www.drsmcsimchk.org/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Dr._Somervell_Memorial_CSI_Medical_College> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(77.08586 8.39854)"^^geo:wktLiteral ;
+            schema:addressLocality "Neyyāttinkara" ;
+            schema:addressCountry "IN" ;
+            owl:sameAs <http://sws.geonames.org/1261470/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/000000041755427X> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q5304402> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

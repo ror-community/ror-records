@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/002skex07> a org:Organization ;
+    rdfs:label "Mohamed Bin Zayed Species Conservation Fund" ;
+    schema:name "Mohamed Bin Zayed Species Conservation Fund" ;
+    schema:foundingDate "2008"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Nonprofit" ; 
+    schema:url <http://www.speciesconservation.org/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Mohamed_bin_Zayed_Species_Conservation_Fund> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(54.39696 24.45118)"^^geo:wktLiteral ;
+            schema:addressLocality "Abu Dhabi" ;
+            schema:addressCountry "AE" ;
+            owl:sameAs <http://sws.geonames.org/292968/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000459066266> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

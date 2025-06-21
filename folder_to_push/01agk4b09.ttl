@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/01agk4b09> a org:Organization ;
+    rdfs:label "Konrad Lorenz Institute for Evolution and Cognition Research" ;
+    schema:name "Konrad Lorenz Institute for Evolution and Cognition Research" ;
+    schema:foundingDate "1990"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Other" ; 
+    org:abbreviation "KLI" ;
+    schema:url <https://www.kli.ac.at/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Konrad_Lorenz_Institute_for_Evolution_and_Cognition_Research> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(16.32522 48.30521)"^^geo:wktLiteral ;
+            schema:addressLocality "Klosterneuburg" ;
+            schema:addressCountry "AT" ;
+            owl:sameAs <http://sws.geonames.org/2773913/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000404775399> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q139789> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

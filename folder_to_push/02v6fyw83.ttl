@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/02v6fyw83> a org:Organization ;
+    rdfs:label "Daiichi Institute of Technology" ;
+    schema:name "Daiichi Institute of Technology" ;
+    schema:foundingDate "1955"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:alternativeName "Daiichi kōgyō daigaku" ;
+    schema:url <http://www.daiichi-koudai.ac.jp/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Daiichi_Institute_of_Technology> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(139.47556 35.70222)"^^geo:wktLiteral ;
+            schema:addressLocality "Kokubunji" ;
+            schema:addressCountry "JP" ;
+            owl:sameAs <http://sws.geonames.org/1858964/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000453767539> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q5209133> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

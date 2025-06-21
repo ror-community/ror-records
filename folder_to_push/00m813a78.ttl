@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/00m813a78> a org:Organization ;
+    rdfs:label "Sulaiman Al Rajhi Colleges" ;
+    schema:name "Sulaiman Al Rajhi Colleges" ;
+    schema:foundingDate "2009"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "SRC" ;
+    schema:url <http://sr.edu.sa/site/en/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Sulaiman_Al_Rajhi_Colleges> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(43.65782 26.13915)"^^geo:wktLiteral ;
+            schema:addressLocality "Al Bukayrīyah" ;
+            schema:addressCountry "SA" ;
+            owl:sameAs <http://sws.geonames.org/109878/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000417819805> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q7635955> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

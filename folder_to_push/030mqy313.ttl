@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/030mqy313> a org:Organization ;
+    rdfs:label "Bratislava International School of Liberal Arts" ;
+    schema:name "Bratislava International School of Liberal Arts" ;
+    schema:foundingDate "2006"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "BISLA" ;
+    org:alternativeName "Bratislavska Medzinarodna Skola Liberalnych Studii" ;
+    schema:url <http://www.bisla.sk/english/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Bratislava_International_School_of_Liberal_Arts> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(17.10674 48.14816)"^^geo:wktLiteral ;
+            schema:addressLocality "Bratislava" ;
+            schema:addressCountry "SK" ;
+            owl:sameAs <http://sws.geonames.org/3060972/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000480037830> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q17511819> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

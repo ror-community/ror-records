@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/03s3hf581> a org:Organization ;
+    rdfs:label "Mazandaran University of Science and Technology" ;
+    schema:name "Mazandaran University of Science and Technology" ;
+    schema:foundingDate "1992"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "MUST" ;
+    schema:url <https://www.ustmb.ac.ir> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Mazandaran_University_of_Science_and_Technology> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(52.6786 36.55102)"^^geo:wktLiteral ;
+            schema:addressLocality "Babol" ;
+            schema:addressCountry "IR" ;
+            owl:sameAs <http://sws.geonames.org/142363/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000480319950> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q5935959> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/00q2w1592> a org:Organization ;
+    rdfs:label "Mountain Equipment Co-op (Canada)" ;
+    schema:name "Mountain Equipment Co-op (Canada)" ;
+    schema:foundingDate "1971"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Company" ; 
+    org:abbreviation "MEC" ;
+    schema:url <http://www.mec.ca/Main/home.jsp> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Mountain_Equipment_Co-op> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-123.11934 49.24966)"^^geo:wktLiteral ;
+            schema:addressLocality "Vancouver" ;
+            schema:addressCountry "CA" ;
+            owl:sameAs <http://sws.geonames.org/6173331/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000459061633> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

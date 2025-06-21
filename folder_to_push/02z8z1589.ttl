@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/02z8z1589> a org:Organization ;
+    rdfs:label "Indian Institute of Information Technology Una" ;
+    schema:name "Indian Institute of Information Technology Una" ;
+    schema:foundingDate "2014"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "IIIT Una" ;
+    schema:url <http://www.iiitu.ac.in> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Indian_Institute_of_Information_Technology_Una> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(76.26914 31.46493)"^^geo:wktLiteral ;
+            schema:addressLocality "Una" ;
+            schema:addressCountry "IN" ;
+            owl:sameAs <http://sws.geonames.org/1253782/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000483387377> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q24590449> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

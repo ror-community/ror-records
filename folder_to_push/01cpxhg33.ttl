@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/01cpxhg33> a org:Organization ;
+    rdfs:label "Nagoya University of Arts and Sciences" ;
+    schema:name "Nagoya University of Arts and Sciences" ;
+    schema:foundingDate "1945"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "NUAS" ;
+    schema:url <http://www.nuas.ac.jp/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Nagoya_University_of_Arts_and_Sciences> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(137.05238 35.13676)"^^geo:wktLiteral ;
+            schema:addressLocality "Nisshin" ;
+            schema:addressCountry "JP" ;
+            owl:sameAs <http://sws.geonames.org/6822209/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000102517132> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q11414926> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

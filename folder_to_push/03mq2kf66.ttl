@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/03mq2kf66> a org:Organization ;
+    rdfs:label "Dr. Suat Seren Göğüs Hastalıkları Hastanesi" ;
+    schema:name "Dr. Suat Seren Göğüs Hastalıkları Hastanesi" ;
+    org:status "active" ;
+    org:classification "Healthcare" ; 
+    schema:url <https://izmirgoguseah.saglik.gov.tr> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(27.13838 38.41273)"^^geo:wktLiteral ;
+            schema:addressLocality "Izmir" ;
+            schema:addressCountry "TR" ;
+            owl:sameAs <http://sws.geonames.org/311046/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/000000040411737X> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q30287052> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

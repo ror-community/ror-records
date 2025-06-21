@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/01nwfnh39> a org:Organization ;
+    rdfs:label "Uganda Technology and Management University" ;
+    schema:name "Uganda Technology and Management University" ;
+    schema:foundingDate "2012"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "UTAMU" ;
+    schema:url <https://www.utamu.ac.ug/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Uganda_Technology_and_Management_University> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(32.58219 0.31628)"^^geo:wktLiteral ;
+            schema:addressLocality "Kampala" ;
+            schema:addressCountry "UG" ;
+            owl:sameAs <http://sws.geonames.org/232422/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000446489278> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q18394920> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/03h5rdc49> a org:Organization ;
+    rdfs:label "Francisk Skorina Gomel State University" ;
+    schema:name "Francisk Skorina Gomel State University" ;
+    schema:foundingDate "1930"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    schema:url <http://old.gsu.by/en/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Francisk_Skorina_Gomel_State_University> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(30.9754 52.4345)"^^geo:wktLiteral ;
+            schema:addressLocality "Homyel" ;
+            schema:addressCountry "BY" ;
+            owl:sameAs <http://sws.geonames.org/627907/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000115034316> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q2630637> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/00ej9bc14> a org:Organization ;
+    rdfs:label "Sociedade Brasileira de Endoscopia Digestiva" ;
+    schema:name "Sociedade Brasileira de Endoscopia Digestiva" ;
+    schema:foundingDate "1975"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Other" ; 
+    org:abbreviation "SOBED" ;
+    schema:url <http://www.sobed.org.br/> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-46.63611 -23.5475)"^^geo:wktLiteral ;
+            schema:addressLocality "São Paulo" ;
+            schema:addressCountry "BR" ;
+            owl:sameAs <http://sws.geonames.org/3448439/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000489310194> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

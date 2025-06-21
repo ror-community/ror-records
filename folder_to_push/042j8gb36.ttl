@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/042j8gb36> a org:Organization ;
+    rdfs:label "National Czech and Slovak Museum & Library" ;
+    schema:name "National Czech and Slovak Museum & Library" ;
+    schema:foundingDate "1974"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Archive" ; 
+    org:abbreviation "NCSML" ;
+    schema:url <https://www.ncsml.org/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/National_Czech_%26_Slovak_Museum_%26_Library> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-91.64407 42.00833)"^^geo:wktLiteral ;
+            schema:addressLocality "Cedar Rapids" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/4850751/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000105140035> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q14689261> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

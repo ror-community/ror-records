@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/03jx0fx25> a org:Organization ;
+    rdfs:label "Tri College University" ;
+    schema:name "Tri College University" ;
+    schema:foundingDate "1960"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "TCU" ;
+    schema:url <https://www.tri-college.org/> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-96.7898 46.87719)"^^geo:wktLiteral ;
+            schema:addressLocality "Fargo" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/5059163/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000104970512> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

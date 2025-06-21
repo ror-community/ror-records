@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/03b8ydc26> a org:Organization ;
+    rdfs:label "Ciro" ;
+    schema:name "Ciro" ;
+    schema:foundingDate "1985"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Healthcare" ; 
+    schema:url <https://www.ciro-horn.nl/nl> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(5.05972 52.6425)"^^geo:wktLiteral ;
+            schema:addressLocality "Hoorn" ;
+            schema:addressCountry "NL" ;
+            owl:sameAs <http://sws.geonames.org/2753638/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000484974987> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

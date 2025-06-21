@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/03tex3d35> a org:Organization ;
+    rdfs:label "Foster Foundation" ;
+    schema:name "Foster Foundation" ;
+    schema:foundingDate "1984"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Nonprofit" ; 
+    schema:url <http://www.thefosterfoundation.org/> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-122.20874 47.68149)"^^geo:wktLiteral ;
+            schema:addressLocality "Kirkland" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/5799841/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000459069440> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/028pbhy75> a org:Organization ;
+    rdfs:label "Graduate Institute for Entrepreneurial Studies" ;
+    schema:name "Graduate Institute for Entrepreneurial Studies" ;
+    schema:foundingDate "2006"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:alternativeName "Jigyō sōzō daigakuin daigaku" ;
+    schema:url <http://mba-en.jigyo.ac.jp/en/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Graduate_Institute_for_Entrepreneurial_Studies> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(139.00589 37.88637)"^^geo:wktLiteral ;
+            schema:addressLocality "Niigata" ;
+            schema:addressCountry "JP" ;
+            owl:sameAs <http://sws.geonames.org/1855431/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000404685828> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q5592017> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

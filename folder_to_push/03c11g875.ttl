@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/03c11g875> a org:Organization ;
+    rdfs:label "Papua New Guinea University of Natural Resources and Environment" ;
+    schema:name "Papua New Guinea University of Natural Resources and Environment" ;
+    schema:foundingDate "1965"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "VAC" ;
+    org:alternativeName "University of Vudal" ;
+    schema:url <http://www.unre.ac.pg/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Papua_New_Guinea_University_of_Natural_Resources_and_Environment> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(152.26867 -4.3432)"^^geo:wktLiteral ;
+            schema:addressLocality "Kokopo" ;
+            schema:addressCountry "PG" ;
+            owl:sameAs <http://sws.geonames.org/2093685/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000492303606> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q7133170> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

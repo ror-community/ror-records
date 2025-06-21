@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/01qc17q17> a org:Organization ;
+    rdfs:label "St. Luke's University Health Network" ;
+    schema:name "St. Luke's University Health Network" ;
+    schema:foundingDate "1872"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Healthcare" ; 
+    org:abbreviation "SLUHN" ;
+    schema:url <https://www.slhn.org/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/St._Luke%27s_University_Health_Network> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-75.37046 40.62593)"^^geo:wktLiteral ;
+            schema:addressLocality "Bethlehem" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/5180225/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000417943670> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q7589795> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

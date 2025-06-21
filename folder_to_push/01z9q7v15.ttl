@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/01z9q7v15> a org:Organization ;
+    rdfs:label "Universitas Sembilanbelas November Kolaka" ;
+    schema:name "Universitas Sembilanbelas November Kolaka" ;
+    schema:foundingDate "1984"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "USN" ;
+    org:alternativeName "Universitas 19 November Kolaka" ;
+    schema:url <http://www.usn.ac.id/> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(121.60556 -4.0597)"^^geo:wktLiteral ;
+            schema:addressLocality "Kolaka" ;
+            schema:addressCountry "ID" ;
+            owl:sameAs <http://sws.geonames.org/1622728/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000403857552> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q12523283> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

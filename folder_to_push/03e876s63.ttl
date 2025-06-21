@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/03e876s63> a org:Organization ;
+    rdfs:label "Southern Education Foundation" ;
+    schema:name "Southern Education Foundation" ;
+    schema:foundingDate "1937"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Nonprofit" ; 
+    org:abbreviation "SEF" ;
+    schema:url <http://www.southerneducation.org/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Southern_Education_Foundation> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-84.38798 33.749)"^^geo:wktLiteral ;
+            schema:addressLocality "Atlanta" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/4180439/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000416052470> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q7569891> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

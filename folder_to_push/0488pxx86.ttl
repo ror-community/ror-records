@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/0488pxx86> a org:Organization ;
+    rdfs:label "University of Granma" ;
+    schema:name "University of Granma" ;
+    schema:foundingDate "1976"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "UDG" ;
+    schema:url <http://www.udg.edu.cu/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/University_of_Granma> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-76.64361 20.37417)"^^geo:wktLiteral ;
+            schema:addressLocality "Bayamo" ;
+            schema:addressCountry "CU" ;
+            owl:sameAs <http://sws.geonames.org/3567597/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000404018689> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q7895471> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

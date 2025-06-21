@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/05w7raw17> a org:Organization ;
+    rdfs:label "Heineman Foundation" ;
+    schema:name "Heineman Foundation" ;
+    schema:foundingDate "1948"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Nonprofit" ; 
+    org:alternativeName "Heineman Foundation for Research, Education, Charitable and Scientific Purposes" ;
+    schema:url <http://www.heinemanfoundation.org/> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-74.00597 40.71427)"^^geo:wktLiteral ;
+            schema:addressLocality "New York" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/5128581/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000463558802> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

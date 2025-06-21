@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/028c4g079> a org:Organization ;
+    rdfs:label "New Zealand Association of Counsellors" ;
+    schema:name "New Zealand Association of Counsellors" ;
+    schema:foundingDate "1974"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Nonprofit" ; 
+    org:abbreviation "NZAC" ;
+    org:alternativeName "NZ Counselling and Guidance Association" ;
+    schema:url <http://www.nzac.org.nz/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/New_Zealand_Association_of_Counsellors> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(174.77557 -41.28664)"^^geo:wktLiteral ;
+            schema:addressLocality "Wellington" ;
+            schema:addressCountry "NZ" ;
+            owl:sameAs <http://sws.geonames.org/2179537/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000459055073> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

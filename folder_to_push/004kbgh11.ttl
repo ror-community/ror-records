@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/004kbgh11> a org:Organization ;
+    rdfs:label "Canadian Association for Co-operative Education" ;
+    schema:name "Canadian Association for Co-operative Education" ;
+    schema:foundingDate "1973"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "ACDEC" ;
+    schema:url <http://www.cafce.ca/> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-79.4163 43.70011)"^^geo:wktLiteral ;
+            schema:addressLocality "Toronto" ;
+            schema:addressCountry "CA" ;
+            owl:sameAs <http://sws.geonames.org/6167865/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000459012719> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

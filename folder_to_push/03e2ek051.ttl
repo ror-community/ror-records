@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/03e2ek051> a org:Organization ;
+    rdfs:label "Association for Science Education" ;
+    schema:name "Association for Science Education" ;
+    schema:foundingDate "1963"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Nonprofit" ; 
+    org:abbreviation "ASE" ;
+    schema:url <https://www.ase.org.uk/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/The_Association_for_Science_Education> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-0.22419 51.76338)"^^geo:wktLiteral ;
+            schema:addressLocality "Hatfield" ;
+            schema:addressCountry "GB" ;
+            owl:sameAs <http://sws.geonames.org/2647349/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000103862237> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q7714729> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

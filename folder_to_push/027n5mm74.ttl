@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/027n5mm74> a org:Organization ;
+    rdfs:label "Dr Emilio B Espinosa Sr Memorial State College of Agriculture and Technology" ;
+    schema:name "Dr Emilio B Espinosa Sr Memorial State College of Agriculture and Technology" ;
+    schema:foundingDate "1952"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "DEBESMSCAT" ;
+    org:alternativeName "Masbate State College" ;
+    schema:url <http://www.debesmscat.edu.ph/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Dr._Emilio_B._Espinosa_Sr._Memorial_State_College_of_Agriculture_and_Technology> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(123.34121 12.29434)"^^geo:wktLiteral ;
+            schema:addressLocality "Cabitan" ;
+            schema:addressCountry "PH" ;
+            owl:sameAs <http://sws.geonames.org/1721568/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000491565946> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q17068553> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

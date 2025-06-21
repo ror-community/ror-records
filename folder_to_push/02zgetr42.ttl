@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/02zgetr42> a org:Organization ;
+    rdfs:label "Egri Hittudományi Főiskola" ;
+    schema:name "Egri Hittudományi Főiskola" ;
+    schema:foundingDate "1700"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    schema:url <http://www.eghf.hu/> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(20.37329 47.90265)"^^geo:wktLiteral ;
+            schema:addressLocality "Eger" ;
+            schema:addressCountry "HU" ;
+            owl:sameAs <http://sws.geonames.org/721239/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000483960348> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q18599934> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

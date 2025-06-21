@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/01amp2a31> a org:Organization ;
+    rdfs:label "Senckenberg Biodiversity and Climate Research Centre" ;
+    schema:name "Senckenberg Biodiversity and Climate Research Centre" ;
+    schema:foundingDate "2008"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    org:abbreviation "SBiK-F" ;
+    schema:url <https://www.senckenberg.de/de/institute/sbik-f/> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(8.68417 50.11552)"^^geo:wktLiteral ;
+            schema:addressLocality "Frankfurt am Main" ;
+            schema:addressCountry "DE" ;
+            owl:sameAs <http://sws.geonames.org/2925533/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000122620292> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q864257> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

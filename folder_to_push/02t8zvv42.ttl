@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/02t8zvv42> a org:Organization ;
+    rdfs:label "South African History Archive" ;
+    schema:name "South African History Archive" ;
+    schema:foundingDate "1988"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Nonprofit" ; 
+    org:abbreviation "SAHA" ;
+    schema:url <http://www.saha.org.za/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/South_African_History_Archive> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(28.04363 -26.20227)"^^geo:wktLiteral ;
+            schema:addressLocality "Johannesburg" ;
+            schema:addressCountry "ZA" ;
+            owl:sameAs <http://sws.geonames.org/993800/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000492868236> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q48797024> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/01bqs3h57> a org:Organization ;
+    rdfs:label "State Academic University of Humanities" ;
+    schema:name "State Academic University of Humanities" ;
+    schema:foundingDate "1994"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "RTSGO" ;
+    org:alternativeName "Russian Center of Liberal Education" ;
+    schema:url <https://gaugn.ru> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/State_Academic_University_for_Humanities> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(37.61556 55.75222)"^^geo:wktLiteral ;
+            schema:addressLocality "Moscow" ;
+            schema:addressCountry "RU" ;
+            owl:sameAs <http://sws.geonames.org/524901/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000478803719> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q4146754> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

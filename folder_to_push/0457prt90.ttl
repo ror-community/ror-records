@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/0457prt90> a org:Organization ;
+    rdfs:label "Institute for Migration and Ethnic Studies" ;
+    schema:name "Institute for Migration and Ethnic Studies" ;
+    schema:foundingDate "1984"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    org:abbreviation "IMIN" ;
+    schema:url <http://www.imin.hr/> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(15.97798 45.81444)"^^geo:wktLiteral ;
+            schema:addressLocality "Zagreb" ;
+            schema:addressCountry "HR" ;
+            owl:sameAs <http://sws.geonames.org/3186886/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000406093578> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q52633799> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

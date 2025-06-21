@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/00xpnyt30> a org:Organization ;
+    rdfs:label "Institut National des Recherches Agricoles du Bénin" ;
+    schema:name "Institut National des Recherches Agricoles du Bénin" ;
+    schema:foundingDate "1992"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    org:abbreviation "INRAB" ;
+    schema:url <http://inrab.org/> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(2.41833 6.36536)"^^geo:wktLiteral ;
+            schema:addressLocality "Cotonou" ;
+            schema:addressCountry "BJ" ;
+            owl:sameAs <http://sws.geonames.org/2394819/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000502723955> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

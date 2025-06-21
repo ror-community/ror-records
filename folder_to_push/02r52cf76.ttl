@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/02r52cf76> a org:Organization ;
+    rdfs:label "Baltic International Academy" ;
+    schema:name "Baltic International Academy" ;
+    schema:foundingDate "1992"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:alternativeName "Baltic Russian Institute" ;
+    schema:url <https://www.bsa.edu.lv/lang/eng/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Baltic_International_Academy> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(24.10589 56.946)"^^geo:wktLiteral ;
+            schema:addressLocality "Riga" ;
+            schema:addressCountry "LV" ;
+            owl:sameAs <http://sws.geonames.org/456172/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000101109698> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q4076909> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

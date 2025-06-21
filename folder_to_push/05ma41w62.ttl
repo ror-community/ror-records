@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/05ma41w62> a org:Organization ;
+    rdfs:label "Grand Charleroi Hospital" ;
+    schema:name "Grand Charleroi Hospital" ;
+    org:status "active" ;
+    org:classification "Healthcare" ; 
+    org:abbreviation "GHdC" ;
+    schema:url <http://www.ghdc.be/ghdc/internet/ewcm.nsf/_/425D1D9D9E89BD20C12579A600471AD0?OpenDocument> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(4.44448 50.41136)"^^geo:wktLiteral ;
+            schema:addressLocality "Charleroi" ;
+            schema:addressCountry "BE" ;
+            owl:sameAs <http://sws.geonames.org/2800481/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000404066226> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

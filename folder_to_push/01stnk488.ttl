@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/01stnk488> a org:Organization ;
+    rdfs:label "National Science and Technology Center for Disaster Reduction" ;
+    schema:name "National Science and Technology Center for Disaster Reduction" ;
+    schema:foundingDate "2003"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Government" ; 
+    org:abbreviation "NCDR" ;
+    schema:url <https://www.ncdr.nat.gov.tw/Home.aspx?WebSiteID=873f5b27-b86d-4d5c-a356-c369768bffe9> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/National_Science_and_Technology_Center_for_Disaster_Reduction> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(121.53185 25.04776)"^^geo:wktLiteral ;
+            schema:addressLocality "Taipei" ;
+            schema:addressCountry "TW" ;
+            owl:sameAs <http://sws.geonames.org/1668341/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000460656714> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q10926818> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

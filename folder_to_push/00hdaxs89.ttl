@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/00hdaxs89> a org:Organization ;
+    rdfs:label "Donetsk National Medical University" ;
+    schema:name "Donetsk National Medical University" ;
+    schema:foundingDate "1930"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "DNMU" ;
+    schema:url <http://dnmu.edu.ua/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Donetsk_National_Medical_University> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(37.80224 48.023)"^^geo:wktLiteral ;
+            schema:addressLocality "Donetsk" ;
+            schema:addressCountry "UA" ;
+            owl:sameAs <http://sws.geonames.org/709717/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/000000040573605X> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q4166242> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

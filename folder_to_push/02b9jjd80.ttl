@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/02b9jjd80> a org:Organization ;
+    rdfs:label "Opportunity Alliance" ;
+    schema:name "Opportunity Alliance" ;
+    schema:foundingDate "2011"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Other" ; 
+    schema:url <http://www.opportunityalliance.org/> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-70.2589 43.65737)"^^geo:wktLiteral ;
+            schema:addressLocality "Portland" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/4975802/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000406045154> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

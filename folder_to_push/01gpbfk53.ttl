@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/01gpbfk53> a org:Organization ;
+    rdfs:label "Biofuels Center of North Carolina" ;
+    schema:name "Biofuels Center of North Carolina" ;
+    schema:foundingDate "2007"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Nonprofit" ; 
+    schema:url <http://www.biofuelscenter.org/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Biofuels_Center_of_North_Carolina> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-78.59083 36.3107)"^^geo:wktLiteral ;
+            schema:addressLocality "Oxford" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/4483745/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000459052905> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .
