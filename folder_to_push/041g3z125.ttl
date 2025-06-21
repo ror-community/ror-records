@@ -1,0 +1,39 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/041g3z125> a org:Organization ;
+    rdfs:label "Volga Region State University of Service" ;
+    schema:name "Volga Region State University of Service" ;
+    schema:foundingDate "1981"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-07-29"^^xsd:date ;
+    schema:mainEntityOfPage <http://www.tolgas.ru/vrsus/university/> ;
+    schema:sameAs <https://grid.ac/institutions/grid.483968.8> ;
+    schema:sameAs <http://isni.org/isni/0000000446570367> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(49.3461 53.5303)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Tolyatti" ;
+            schema:addressCountry "RU" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Russia" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/482283/> ;
+    ] ; 
+    .

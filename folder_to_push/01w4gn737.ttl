@@ -1,0 +1,41 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/01w4gn737> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "2018"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "government" ; 
+    dct:created "2024-07-24"^^xsd:date ;
+    dct:modified "2024-07-29"^^xsd:date ;
+    org:alternativeName "AIIMS Nagpur"@en ; 
+    schema:url <http://aiimsnagpur.edu.in> ; 
+    schema:mainEntityOfPage <https://aiimsnagpur.edu.in> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/All_India_Institute_of_Medical_Sciences%2C_Nagpur> ; 
+    schema:sameAs <http://isni.org/isni/0000000475377857> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(79.08491 21.14631)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Nagpur" ;
+            schema:addressCountry "IN" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "India" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1262180/> ;
+    ] ; 
+    .

@@ -4,27 +4,64 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/044zqqy65> a org:Organization ;
     rdfs:label "National Park Service" ;
     schema:name "National Park Service" ;
     schema:foundingDate "1916"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Government" ; 
-    org:abbreviation "NPS" ;
-    schema:url <http://www.nps.gov/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/National_Park_Service> ;
+    org:classification "funder" ; 
+    org:classification "government" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-07-29"^^xsd:date ;
+    org:abbreviation "NPS"@None ; 
+    schema:mainEntityOfPage <http://www.nps.gov/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/National_Park_Service> ; 
+    schema:sameAs <https://api.crossref.org/funders/100007516> ;
+    schema:sameAs <https://grid.ac/institutions/grid.454846.f> ;
+    schema:sameAs <http://isni.org/isni/0000000123313972> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04rw5yk74> ;
+        rdfs:label "Yellowstone National Park" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00vpxf870> ;
+        rdfs:label "Grand Teton National Park" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/03v0pmy70> ;
+        rdfs:label "United States Department of the Interior" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02pbyft41> ;
+        rdfs:label "Southwest Alaska Inventory and Monitoring Network" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-77.03637 38.89511)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-77.03637 38.89511)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Washington" ;
             schema:addressCountry "US" ;
-            owl:sameAs <http://sws.geonames.org/4140963/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000123313972> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q308439> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/4140963/> ;
+    ] ; 
     .

@@ -10,12 +10,18 @@
 <https://ror.org/00hxwjw54> a org:Organization ;
     rdfs:label "" ;
     schema:name "" ;
-    org:status "active" ;
+    org:status "withdrawn" ;
     org:classification "education" ; 
     dct:created "2024-07-08"^^xsd:date ;
-    dct:modified "2024-07-11"^^xsd:date ;
+    dct:modified "2024-07-29"^^xsd:date ;
     schema:mainEntityOfPage <https://www.uninter.com/centro-universitario-internacional/> ;
     owl:sameAs <https://pt.wikipedia.org/wiki/Centro_Universit%C3%A1rio_Internacional> ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "successor" ;
+        org:member <https://ror.org/00p9ghj81> ;
+        rdfs:label "Uninter" ;
+    ] ; 
     schema:location [
         a schema:Place ;
         geo:asWKT "POINT(-49.27306 -25.42778)"^^geo:wktLiteral ;

@@ -4,27 +4,44 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02bhgkk43> a org:Organization ;
     rdfs:label "Universidad Centroamericana José Simeón Cañas" ;
     schema:name "Universidad Centroamericana José Simeón Cañas" ;
     schema:foundingDate "1965"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "UCA" ;
-    schema:url <http://www.uca.edu.sv/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Central_American_University> ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-07-29"^^xsd:date ;
+    org:abbreviation "UCA"@None ; 
+    schema:mainEntityOfPage <http://www.uca.edu.sv/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Central_American_University> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.460701.4> ;
+    schema:sameAs <http://isni.org/isni/0000000121848981> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/033z59547> ;
+        rdfs:label "Centro de Recursos para el Aprendizaje y la Investigación P. Florentino Idoate S.J." ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-89.18718 13.68935)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-89.18718 13.68935)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "San Salvador" ;
             schema:addressCountry "SV" ;
-            owl:sameAs <http://sws.geonames.org/3583361/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000121848981> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1814702> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "El Salvador" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3583361/> ;
+    ] ; 
     .

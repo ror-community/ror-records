@@ -4,24 +4,74 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/03cvzf910> a org:Organization ;
     rdfs:label "MARE - Centro de Ciências do Mar e do Ambiente" ;
     schema:name "MARE - Centro de Ciências do Mar e do Ambiente" ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "MARE" ;
-    org:alternativeName "Centro de Ciências do Mar e do Ambiente" ;
-    schema:url <https://www.mare-centre.pt> ; 
+    org:classification "facility" ; 
+    org:classification "funder" ; 
+    dct:created "2023-03-16"^^xsd:date ;
+    dct:modified "2024-07-29"^^xsd:date ;
+    org:alternativeName "Centro de Ciências do Mar e do Ambiente"@pt ; 
+    org:abbreviation "MARE"@None ; 
+    schema:mainEntityOfPage <https://www.mare-centre.pt> ;
+    schema:sameAs <https://api.crossref.org/funders/501100019243> ;
+    schema:sameAs <http://isni.org/isni/0000000458976567> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/01c27hj86> ;
+        rdfs:label "University of Lisbon" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/04z8k9a98> ;
+        rdfs:label "University of Coimbra" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/010dvvh94> ;
+        rdfs:label "Instituto Politécnico de Leiria" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02xankh89> ;
+        rdfs:label "Universidade Nova de Lisboa" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/019yg0716> ;
+        rdfs:label "ISPA - Instituto Universitário" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02gyps716> ;
+        rdfs:label "University of Évora" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-8.41955 40.20564)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-8.41955 40.20564)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Coimbra" ;
             schema:addressCountry "PT" ;
-            owl:sameAs <http://sws.geonames.org/2740637/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000458976567> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Portugal" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2740637/> ;
+    ] ; 
     .

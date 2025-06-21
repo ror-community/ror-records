@@ -4,25 +4,49 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02tz8r820> a org:Organization ;
     rdfs:label "Institute of Soil Biology" ;
     schema:name "Institute of Soil Biology" ;
     schema:foundingDate "1986"^^xsd:gYear ;
     org:status "inactive" ;
-    org:classification "Facility" ; 
-    org:abbreviation "ISB" ;
-    org:alternativeName "Ústav Půdní Biologie" ;
-    schema:url <http://www.upb.cas.cz/en> ; 
+    org:classification "facility" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-07-29"^^xsd:date ;
+    org:abbreviation "ISB"@None ; 
+    org:alternativeName "Ústav Půdní Biologie"@cs ; 
+    schema:mainEntityOfPage <http://www.upb.cas.cz/en> ;
+    schema:sameAs <https://grid.ac/institutions/grid.448363.e> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/053avzc18> ;
+        rdfs:label "Czech Academy of Sciences" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "successor" ;
+        org:member <https://ror.org/05pq4yn02> ;
+        rdfs:label "Czech Academy of Sciences, Biology Centre" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(14.47434 48.97447)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(14.47434 48.97447)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "České Budějovice" ;
             schema:addressCountry "CZ" ;
-            owl:sameAs <http://sws.geonames.org/3077916/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Czechia" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3077916/> ;
+    ] ; 
     .

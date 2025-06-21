@@ -1,0 +1,39 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/032j9w495> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    org:status "active" ;
+    org:classification "funder" ; 
+    org:classification "government" ; 
+    dct:created "2024-07-24"^^xsd:date ;
+    dct:modified "2024-07-29"^^xsd:date ;
+    org:abbreviation "MTHE"@en ; 
+    schema:url <http://mthe.gov.sl> ; 
+    schema:mainEntityOfPage <https://www.mthe.gov.sl> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-13.2356 8.48714)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Freetown" ;
+            schema:addressCountry "SL" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Sierra Leone" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2409306/> ;
+    ] ; 
+    .

@@ -4,26 +4,44 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/04jc43x05> a org:Organization ;
-    rdfs:label "Rechts der Isar Hospital" ;
-    schema:name "Rechts der Isar Hospital" ;
+    rdfs:label "" ;
+    schema:name "" ;
     schema:foundingDate "1834"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Healthcare" ; 
-    schema:url <https://www.mri.tum.de/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Rechts_der_Isar_Hospital> ;
+    org:classification "healthcare" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-07-29"^^xsd:date ;
+    org:alternativeName "Rechts der Isar Hospital"@en ; 
+    schema:mainEntityOfPage <https://www.mri.tum.de/> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Rechts_der_Isar_Hospital> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.15474.33> ;
+    schema:sameAs <http://isni.org/isni/0000000404772438> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02kkvpp62> ;
+        rdfs:label "Technical University of Munich" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(11.57549 48.13743)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(11.57549 48.13743)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Munich" ;
             schema:addressCountry "DE" ;
-            owl:sameAs <http://sws.geonames.org/2867714/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000404772438> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q883813> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Germany" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2867714/> ;
+    ] ; 
     .

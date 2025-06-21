@@ -4,25 +4,187 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02dn7x778> a org:Organization ;
     rdfs:label "Université Bourgogne Franche-Comté" ;
     schema:name "Université Bourgogne Franche-Comté" ;
     schema:foundingDate "2015"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "UBFC" ;
-    schema:url <http://www.ubfc.fr/> ; 
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-07-29"^^xsd:date ;
+    org:abbreviation "UBFC"@None ; 
+    schema:mainEntityOfPage <http://www.ubfc.fr/> ;
+    schema:sameAs <https://grid.ac/institutions/grid.493090.7> ;
+    schema:sameAs <http://isni.org/isni/0000000449106615> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04nrhwg12> ;
+        rdfs:label "Laboratoire de Mathématiques de Besançon" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/020cm6143> ;
+        rdfs:label "Laboratoire de recherches Intégratives en Neurosciences et psychologie Cognitive" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0511qfq70> ;
+        rdfs:label "Centre de Recherches Interdisciplinaires et Transculturelles" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/016cx2z26> ;
+        rdfs:label "Centre de recherches juridiques de l'Université de Franche-Comté" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05yj2y557> ;
+        rdfs:label "Département de Recherche en Ingénierie des Véhicules pour l'Environnement" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0432d2f64> ;
+        rdfs:label "Centre Lucien Febvre" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02rgyc156> ;
+        rdfs:label "Logiques de l'agir" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00gy9rx06> ;
+        rdfs:label "Institut des Sciences et Techniques de l'Antiquité" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04nk3ny21> ;
+        rdfs:label "Centre d'Investigation Clinique de Besançon" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01ssxvy26> ;
+        rdfs:label "CIMEOS - Communications, Médiations, Organisations, Savoirs" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02n7ax847> ;
+        rdfs:label "Centre Pluridisciplinaire Textes et Cultures" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/017k05f91> ;
+        rdfs:label "Centre de Recherche et d'Etude en Droit et Science Politique" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00j5eb891> ;
+        rdfs:label "Centre Interlangues" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0538k6829> ;
+        rdfs:label "Laboratoire Culture, Sport, Santé, Société" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03x895t47> ;
+        rdfs:label "Edition, Littératures, Langages, Informatique, Arts, Didactiques, Discours" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/019qdtz78> ;
+        rdfs:label "Institut de recherche sur l'éducation" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01ds1xe75> ;
+        rdfs:label "Laboratoire d'Immunologie et d'Immunothérapie des Cancers" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03w0a9c02> ;
+        rdfs:label "Laboratoire Bio-peroxIL" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0292fgv83> ;
+        rdfs:label "Centre de REcherche En Gestion des Organisations" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02c01r047> ;
+        rdfs:label "Laboratoire d'économie de Dijon" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/053wack18> ;
+        rdfs:label "Laboratoire de psychologie: dynamiques relationnelles et processus identitaires" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0250h3a52> ;
+        rdfs:label "Physiopathologie et Epidémiologie Cérébro-Cardiovasculaires" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02v6phz91> ;
+        rdfs:label "Vision pour la Robotique" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01x6z5t49> ;
+        rdfs:label "Fédération de Recherche Spectroscopies de Photoémission" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00hgbrg14> ;
+        rdfs:label "Fédération française Matériaux sous hautes vitesses de déformation. Application aux matériaux en conditions extrêmes, Procédés et structures" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(6.01815 47.24878)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(6.01815 47.24878)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Besançon" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/3033123/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000449106615> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3033123/> ;
+    ] ; 
     .

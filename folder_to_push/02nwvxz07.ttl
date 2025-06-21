@@ -4,28 +4,144 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/02nwvxz07> a org:Organization ;
     rdfs:label "École des Ponts ParisTech" ;
     schema:name "École des Ponts ParisTech" ;
     schema:foundingDate "1747"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "ENPC" ;
-    org:alternativeName "École Nationale des Ponts et Chaussées" ;
-    schema:url <https://ecoledesponts.fr> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/%C3%89cole_des_ponts_ParisTech> ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-07-29"^^xsd:date ;
+    org:abbreviation "ENPC"@None ; 
+    org:alternativeName "Ecole Nationale des Ponts et Chaussees"@fr ; 
+    org:alternativeName "Ecole des Ponts ParisTech"@fr ; 
+    org:alternativeName "Les Ponts"@fr ; 
+    org:alternativeName "École Nationale des Ponts et Chaussées"@fr ; 
+    schema:mainEntityOfPage <https://ecoledesponts.fr> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/%C3%89cole_des_ponts_ParisTech> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.424447.5> ;
+    schema:sameAs <http://isni.org/isni/0000000406414845> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03wct8w46> ;
+        rdfs:label "CERMICS" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03a84yw54> ;
+        rdfs:label "Centre d'Enseignement et de Recherche en Environnement Atmosphérique" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04fbd1w03> ;
+        rdfs:label "Hydrologie Météorologie et Complexité" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01b436806> ;
+        rdfs:label "CIRED" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/029hkd614> ;
+        rdfs:label "Laboratoire Navier" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05fc1hn07> ;
+        rdfs:label "Laboratoire Techniques, Territoires et Sociétés" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/056vbnz12> ;
+        rdfs:label "Laboratoire Ville Mobilité Transport" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04t50yk91> ;
+        rdfs:label "Laboratoire d'Informatique Gaspard-Monge" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/000ehr937> ;
+        rdfs:label "Laboratoire de Météorologie Dynamique" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/049yaph28> ;
+        rdfs:label "Laboratoire d'Hydraulique Saint-Venant" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02nqy7n35> ;
+        rdfs:label "Laboratoire Eau, Environnement et Systèmes Urbains" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03vtagt31> ;
+        rdfs:label "Paris Jourdan Sciences Economiques" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01bbf9m56> ;
+        rdfs:label "Fédération Francilienne de Mécanique - Matériaux, Structures, Procédés" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01qtp1053> ;
+        rdfs:label "Paris School of Economics" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/05c2qg481> ;
+        rdfs:label "ParisTech" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/0459fdx51> ;
+        rdfs:label "Fédération de Recherche sur l'Energie Solaire" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01nrtdp55> ;
+        rdfs:label "GDR NBODY : Problème quantique à N corps en chimie et physique" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(2.3488 48.85341)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(2.3488 48.85341)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Paris" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2988507/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000406414845> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q273523> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2988507/> ;
+    ] ; 
     .

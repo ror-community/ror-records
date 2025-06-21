@@ -4,27 +4,80 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/05pq4yn02> a org:Organization ;
-    rdfs:label "Biology Centre of the Czech Academy of Sciences" ;
-    schema:name "Biology Centre of the Czech Academy of Sciences" ;
+    rdfs:label "" ;
+    schema:name "" ;
     schema:foundingDate "2005"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "BC AV ČR" ;
-    org:alternativeName "Czech Academy of Sciences, Biology Centre" ;
-    schema:url <https://www.bc.cas.cz/en/homepage> ; 
+    org:classification "facility" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-07-29"^^xsd:date ;
+    org:abbreviation "BC AV ČR"@None ; 
+    org:abbreviation "BC CAS"@en ; 
+    org:alternativeName "Biology Centre CAS"@en ; 
+    org:alternativeName "Biology Centre of the Czech Academy of Sciences"@en ; 
+    org:alternativeName "Czech Acad Sci, Biol Ctr"@en ; 
+    org:alternativeName "Czech Academy of Sciences, Biology Centre"@en ; 
+    schema:mainEntityOfPage <https://www.bc.cas.cz> ;
+    schema:sameAs <https://api.crossref.org/funders/501100017273> ;
+    schema:sameAs <https://grid.ac/institutions/grid.418338.5> ;
+    schema:sameAs <http://isni.org/isni/0000000122558513> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/053avzc18> ;
+        rdfs:label "Czech Academy of Sciences" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "predecessor" ;
+        org:member <https://ror.org/039nazg33> ;
+        rdfs:label "Institute of Entomology" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "predecessor" ;
+        org:member <https://ror.org/0436nxt45> ;
+        rdfs:label "Institute of Hydrobiology, Biology Centre, Academy of Sciences of the Czech Republic" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "predecessor" ;
+        org:member <https://ror.org/05rhyza23> ;
+        rdfs:label "Institute of Parasitology" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "predecessor" ;
+        org:member <https://ror.org/00jr65m43> ;
+        rdfs:label "Institute of Plant Molecular Biology" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "predecessor" ;
+        org:member <https://ror.org/02tz8r820> ;
+        rdfs:label "Institute of Soil Biology" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(14.47434 48.97447)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(14.47434 48.97447)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "České Budějovice" ;
             schema:addressCountry "CZ" ;
-            owl:sameAs <http://sws.geonames.org/3077916/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000122558513> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q8310408> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Czechia" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3077916/> ;
+    ] ; 
     .

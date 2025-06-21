@@ -1,0 +1,47 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/051kejp81> a org:Organization ;
+    rdfs:label "Brooklyn Public Library" ;
+    schema:name "Brooklyn Public Library" ;
+    schema:foundingDate "1896"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "archive" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-07-29"^^xsd:date ;
+    org:abbreviation "BPL"@None ; 
+    schema:mainEntityOfPage <https://www.bklynlibrary.org/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Brooklyn_Public_Library> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.475039.c> ;
+    schema:sameAs <http://isni.org/isni/0000000121901332> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03xvvtc63> ;
+        rdfs:label "Brooklyn Historical Society" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-73.94958 40.6501)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Brooklyn" ;
+            schema:addressCountry "US" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/5110302/> ;
+    ] ; 
+    .

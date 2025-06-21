@@ -4,27 +4,50 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/05gknh003> a org:Organization ;
     rdfs:label "Ocean Networks Canada Society" ;
     schema:name "Ocean Networks Canada Society" ;
     schema:foundingDate "2007"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "ONC" ;
-    schema:url <http://www.oceannetworks.ca/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Ocean_Networks_Canada> ;
+    org:classification "facility" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-07-29"^^xsd:date ;
+    org:abbreviation "ONC"@None ; 
+    schema:mainEntityOfPage <http://www.oceannetworks.ca/> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Ocean_Networks_Canada> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.440053.6> ;
+    schema:sameAs <http://isni.org/isni/0000000459292386> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/04s5mat29> ;
+        rdfs:label "University of Victoria" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01fkg1209> ;
+        rdfs:label "NorthEast Pacific Deep-sea Exploration Project" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-123.35155 48.4359)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-123.35155 48.4359)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Victoria" ;
             schema:addressCountry "CA" ;
-            owl:sameAs <http://sws.geonames.org/6174041/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000459292386> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q16959841> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Canada" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/6174041/> ;
+    ] ; 
     .

@@ -13,9 +13,10 @@
     org:status "active" ;
     org:classification "facility" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-07-11"^^xsd:date ;
+    dct:modified "2024-07-29"^^xsd:date ;
     org:abbreviation "LGI"@None ; 
-    schema:mainEntityOfPage <http://www.lgi.ecp.fr/> ;
+    org:alternativeName "Laboratoire LGI"@fr ; 
+    schema:mainEntityOfPage <https://www.lgi.centralesupelec.fr> ;
     schema:sameAs <https://grid.ac/institutions/grid.463993.2> ;
     org:hasLink [
         a org:Membership ;
@@ -23,11 +24,17 @@
         org:member <https://ror.org/03xjwb503> ;
         rdfs:label "Université Paris-Saclay" ;
     ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/019tcpt25> ;
+        rdfs:label "CentraleSupélec" ;
+    ] ; 
     schema:location [
         a schema:Place ;
-        geo:asWKT "POINT(2.26655 48.76507)"^^geo:wktLiteral ;
+        geo:asWKT "POINT(2.13333 48.68333)"^^geo:wktLiteral ;
         schema:address [
-            schema:addressLocality "Châtenay-Malabry" ;
+            schema:addressLocality "Gif-sur-Yvette" ;
             schema:addressCountry "FR" ;
             schema:addressRegion "" ;
             dct:spatial [
@@ -39,6 +46,6 @@
                 ]
             ]
         ] ;
-        owl:sameAs <http://sws.geonames.org/3026108/> ;
+        owl:sameAs <http://sws.geonames.org/3016078/> ;
     ] ; 
     .

@@ -1,0 +1,46 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/033z59547> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "1966"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "archive" ; 
+    dct:created "2024-07-24"^^xsd:date ;
+    dct:modified "2024-07-29"^^xsd:date ;
+    org:alternativeName "Biblioteca "P. Florentino Idoate S.J." .""@es ; 
+    org:alternativeName "Biblioteca P. Florentino Idoate S.J."@es ; 
+    org:abbreviation "CRAI"@es ; 
+    schema:mainEntityOfPage <https://crai.uca.edu.sv> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02bhgkk43> ;
+        rdfs:label "Universidad Centroamericana José Simeón Cañas" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-89.24623 13.6676)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Antiguo Cuscatlán" ;
+            schema:addressCountry "SV" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "El Salvador" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/12031394/> ;
+    ] ; 
+    .

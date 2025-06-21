@@ -1,0 +1,40 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/03yv2tx67> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "1992"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "government" ; 
+    dct:created "2024-07-24"^^xsd:date ;
+    dct:modified "2024-07-29"^^xsd:date ;
+    org:abbreviation "AGR"@es ; 
+    schema:url <http://auditoria.gov.co> ; 
+    schema:mainEntityOfPage <https://www.auditoria.gov.co> ;
+    owl:sameAs <https://es.wikipedia.org/wiki/Auditor%C3%ADa_General_de_la_Rep%C3%BAblica> ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-74.08175 4.60971)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Bogotá" ;
+            schema:addressCountry "CO" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Colombia" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3688689/> ;
+    ] ; 
+    .

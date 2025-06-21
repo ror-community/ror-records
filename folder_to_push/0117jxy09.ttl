@@ -4,26 +4,81 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/0117jxy09> a org:Organization ;
     rdfs:label "Springer Nature (Germany)" ;
     schema:name "Springer Nature (Germany)" ;
     schema:foundingDate "2015"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Company" ; 
-    schema:url <https://www.springernature.com> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Springer_Nature> ;
+    org:classification "company" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-07-29"^^xsd:date ;
+    schema:mainEntityOfPage <https://www.springernature.com> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Springer_Nature> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100020487> ;
+    schema:sameAs <https://grid.ac/institutions/grid.459983.a> ;
+    schema:sameAs <http://isni.org/isni/0000000417947751> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01ebjwm20> ;
+        rdfs:label "Springer Nature (Netherlands)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/029zamy29> ;
+        rdfs:label "Springer Nature (New Zealand)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03v60jr94> ;
+        rdfs:label "Springer Nature (Switzerland)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03dsk4d59> ;
+        rdfs:label "Springer Nature (United Kingdom)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01xsmwp79> ;
+        rdfs:label "Springer Nature (United States)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01pn4sd83> ;
+        rdfs:label "Springer Nature (China)" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04kvn3r95> ;
+        rdfs:label "Springer Nature (India)" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(13.41053 52.52437)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(13.41053 52.52437)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Berlin" ;
             schema:addressCountry "DE" ;
-            owl:sameAs <http://sws.geonames.org/2950159/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000417947751> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q21096327> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Germany" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2950159/> ;
+    ] ; 
     .

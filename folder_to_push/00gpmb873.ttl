@@ -1,0 +1,50 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/00gpmb873> a org:Organization ;
+    rdfs:label "Kantonsspital St. Gallen" ;
+    schema:name "Kantonsspital St. Gallen" ;
+    schema:foundingDate "1873"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "healthcare" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-07-29"^^xsd:date ;
+    org:alternativeName "Cantonal Hospital St. Gallen"@en ; 
+    org:alternativeName "Cantonal Hospital of St. Gallen"@en ; 
+    org:alternativeName "St. Gallen Cantonal Hospital"@en ; 
+    schema:url <http://kssg.ch> ; 
+    schema:mainEntityOfPage <https://www.kssg.ch> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Kantonsspital_St._Gallen> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.413349.8> ;
+    schema:sameAs <http://isni.org/isni/0000000122944705> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05h29rm85> ;
+        rdfs:label "Muskelzentrum/ALS Clinic" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(9.37477 47.42391)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Saint Gallen" ;
+            schema:addressCountry "CH" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Switzerland" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2658822/> ;
+    ] ; 
+    .

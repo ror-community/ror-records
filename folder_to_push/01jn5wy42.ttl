@@ -1,0 +1,41 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/01jn5wy42> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "1945"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-07-29"^^xsd:date ;
+    org:alternativeName "A.S. Pushkin Brest State University"@en ; 
+    schema:url <http://brsu.by> ; 
+    schema:mainEntityOfPage <https://www.brsu.by> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/A.S._Pushkin_Brest_State_University> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.444993.7> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(23.68775 52.09755)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Brest" ;
+            schema:addressCountry "BY" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Belarus" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/629634/> ;
+    ] ; 
+    .

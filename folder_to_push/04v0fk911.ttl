@@ -4,26 +4,41 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/04v0fk911> a org:Organization ;
     rdfs:label "Technology Agency of the Czech Republic" ;
     schema:name "Technology Agency of the Czech Republic" ;
     schema:foundingDate "2009"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Other" ; 
-    org:abbreviation "TACR" ;
-    org:alternativeName "Technologická Agentura Ceské Republiky" ;
-    schema:url <http://www.tacr.cz/en> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Technology_Agency_of_the_Czech_Republic> ;
+    org:classification "funder" ; 
+    org:classification "other" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-07-29"^^xsd:date ;
+    org:abbreviation "TA CR"@en ; 
+    org:abbreviation "TA ČR"@cs ; 
+    schema:mainEntityOfPage <https://www.tacr.cz> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Technology_Agency_of_the_Czech_Republic> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100002969> ;
+    schema:sameAs <https://grid.ac/institutions/grid.452996.5> ;
+    schema:sameAs <http://isni.org/isni/0000000510884863> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(14.42076 50.08804)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(14.42076 50.08804)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Prague" ;
             schema:addressCountry "CZ" ;
-            owl:sameAs <http://sws.geonames.org/3067696/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Czechia" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3067696/> ;
+    ] ; 
     .

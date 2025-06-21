@@ -1,0 +1,46 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/042f28677> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "1992"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "healthcare" ; 
+    dct:created "2024-07-24"^^xsd:date ;
+    dct:modified "2024-07-29"^^xsd:date ;
+    org:abbreviation "THC"@en ; 
+    org:alternativeName "Tehran Heart Center Hospital"@en ; 
+    schema:mainEntityOfPage <https://thc.tums.ac.ir> ;
+    owl:sameAs <https://fa.wikipedia.org/wiki/%D9%85%D8%B1%DA%A9%D8%B2_%D9%82%D9%84%D8%A8_%D8%AA%D9%87%D8%B1%D8%A7%D9%86#:~:text=%D9%85%D8%B1%DA%A9%D8%B2%20%D9%82%D9%84%D8%A8%20%D8%AA%D9%87%D8%B1%D8%A7%D9%86%20%DB%8C%DA%A9%20%D8%A8%DB%8C%D9%85%D8%A7%D8%B1%D8%B3%D8%AA%D8%A7%D9%86,%D8%AA%D9%87%D8%B1%D8%A7%D9%86%20%D9%88%20%D8%A7%DB%8C%D8%B1%D8%A7%D9%86%20%D8%A8%D9%87%E2%80%8C%D8%B4%D9%85%D8%A7%D8%B1%20%D9%85%DB%8C%E2%80%8C%D8%B1%D9%88%D8%AF> ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/01c4pz451> ;
+        rdfs:label "Tehran University of Medical Sciences" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(51.42151 35.69439)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Tehran" ;
+            schema:addressCountry "IR" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Iran" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/112931/> ;
+    ] ; 
+    .

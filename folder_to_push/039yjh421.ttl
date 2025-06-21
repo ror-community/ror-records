@@ -4,25 +4,36 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/039yjh421> a org:Organization ;
-    rdfs:label "Deutsch-Französische Institut" ;
-    schema:name "Deutsch-Französische Institut" ;
+    rdfs:label "" ;
+    schema:name "" ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "DFI" ;
-    org:alternativeName "German-French Institute" ;
-    schema:url <https://www.dfi.de> ; 
-    owl:sameAs <https://de.wikipedia.org/wiki/Deutsch-Franz%C3%B6sisches_Institut> ;
+    org:classification "facility" ; 
+    dct:created "2023-07-27"^^xsd:date ;
+    dct:modified "2024-07-29"^^xsd:date ;
+    org:abbreviation "DFI"@None ; 
+    org:alternativeName "German-French Institute"@en ; 
+    schema:mainEntityOfPage <https://www.dfi.de> ;
+    owl:sameAs <https://de.wikipedia.org/wiki/Deutsch-Franz%C3%B6sisches_Institut> ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(9.19161 48.89731)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(9.19161 48.89731)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Ludwigsburg" ;
             schema:addressCountry "DE" ;
-            owl:sameAs <http://sws.geonames.org/2875392/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://www.wikidata.org/entity/Q469824> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Germany" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2875392/> ;
+    ] ; 
     .

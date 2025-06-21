@@ -1,0 +1,42 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/01vhsdf43> a org:Organization ;
+    rdfs:label "Brooklyn Navy Yard" ;
+    schema:name "Brooklyn Navy Yard" ;
+    schema:foundingDate "1801"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "nonprofit" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-07-29"^^xsd:date ;
+    org:abbreviation "BNY"@None ; 
+    org:abbreviation "BNYDC"@None ; 
+    org:alternativeName "Brooklyn Navy Yard Development Corporation"@en ; 
+    schema:mainEntityOfPage <http://brooklynnavyyard.org/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Brooklyn_Navy_Yard> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.446390.c> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-73.94958 40.6501)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Brooklyn" ;
+            schema:addressCountry "US" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/5110302/> ;
+    ] ; 
+    .

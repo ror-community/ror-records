@@ -4,28 +4,127 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/05591te55> a org:Organization ;
     rdfs:label "Ludwig-Maximilians-Universität München" ;
     schema:name "Ludwig-Maximilians-Universität München" ;
     schema:foundingDate "1472"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "LMU" ;
-    org:alternativeName "University of Munich" ;
-    schema:url <https://www.lmu.de> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Ludwig_Maximilian_University_of_Munich> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-07-29"^^xsd:date ;
+    org:abbreviation "LMU"@None ; 
+    org:alternativeName "Ludwig Maximilian University of Munich"@en ; 
+    org:alternativeName "University of Munich"@en ; 
+    org:alternativeName "Universität München"@de ; 
+    schema:mainEntityOfPage <https://www.lmu.de> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Ludwig_Maximilian_University_of_Munich> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100005722> ;
+    schema:sameAs <https://grid.ac/institutions/grid.5252.0> ;
+    schema:sameAs <http://isni.org/isni/000000041936973X> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/045495t75> ;
+        rdfs:label "Ifo Institute for Economic Research" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02jet3w32> ;
+        rdfs:label "LMU Klinikum" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02jet3w32> ;
+        rdfs:label "LMU Klinikum" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02qqvpd39> ;
+        rdfs:label "Zentrum für Klinische Tiermedizin" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/025z3z560> ;
+        rdfs:label "Munich Cluster for Systems Neurology" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/010wkny21> ;
+        rdfs:label "Excellence Cluster Origins" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04xrcta15> ;
+        rdfs:label "Munich Center for Quantum Science and Technology" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01mvrj242> ;
+        rdfs:label "Nanosystems Initiative Munich" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/032hzb643> ;
+        rdfs:label "Center for Integrated Protein Science Munich" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/002epp671> ;
+        rdfs:label "Center for NanoScience" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04j4kfb22> ;
+        rdfs:label "Centre for Advanced Laser Applications" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01h2vtb84> ;
+        rdfs:label "Rachel Carson Center for Environment and Society" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02jjvb954> ;
+        rdfs:label "Collegium Carolinum" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/045495t75> ;
+        rdfs:label "Ifo Institute for Economic Research" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(11.57549 48.13743)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(11.57549 48.13743)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Munich" ;
             schema:addressCountry "DE" ;
-            owl:sameAs <http://sws.geonames.org/2867714/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/000000041936973X> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q55044> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Germany" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2867714/> ;
+    ] ; 
     .

@@ -4,26 +4,249 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/03c4mmv16> a org:Organization ;
     rdfs:label "University of Ottawa" ;
     schema:name "University of Ottawa" ;
     schema:foundingDate "1848"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    schema:url <http://www.uottawa.ca/en> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Ottawa> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-07-29"^^xsd:date ;
+    schema:mainEntityOfPage <http://www.uottawa.ca/en> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Ottawa> ; 
+    schema:sameAs <https://api.crossref.org/funders/100008572> ;
+    schema:sameAs <https://grid.ac/institutions/grid.28046.38> ;
+    schema:sameAs <http://isni.org/isni/0000000121822255> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04z45pv75> ;
+        rdfs:label "Institut du Savoir Montfort" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05y2jpg52> ;
+        rdfs:label "Joint Attosecond Science Laboratory" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00wazyk32> ;
+        rdfs:label "Max Planck - University of Ottawa Centre for Extreme and Quantum Photonics" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/058rwr454> ;
+        rdfs:label "University of Ottawa Skills and Simulation Centre" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05jtef216> ;
+        rdfs:label "Ottawa Hospital Research Institute" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05nsbhw27> ;
+        rdfs:label "Children's Hospital of Eastern Ontario" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02crzj551> ;
+        rdfs:label "Montfort Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03c62dg59> ;
+        rdfs:label "Ottawa Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/056vnsb08> ;
+        rdfs:label "Royal Ottawa Mental Health Centre" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00rzr5v92> ;
+        rdfs:label "Centre for Catalysis Research and Innovation" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04c794867> ;
+        rdfs:label "Centre for Environmental Law and Global Sustainability" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01m7n4g71> ;
+        rdfs:label "Centre for Health Law, Policy and Ethics" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/051pmyn62> ;
+        rdfs:label "Centre for Infection, Immunity and Inflammation" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/022knwr79> ;
+        rdfs:label "Centre for Interdisciplinary Research on Citizenship and Minorities" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/035wq2m82> ;
+        rdfs:label "Centre for Law, Technology and Society" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03ypxpx75> ;
+        rdfs:label "Centre for Research on Educational and Community Services" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/048tf4023> ;
+        rdfs:label "Centre for Research on French Canadian Culture" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05vdb2m56> ;
+        rdfs:label "Centre for Research on Health and Nursing" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0236dma10> ;
+        rdfs:label "Centre on Governance" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/037s0tq36> ;
+        rdfs:label "Centre on International Policy Studies" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01ss0kv69> ;
+        rdfs:label "Data Literacy Research Institute" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05q526p85> ;
+        rdfs:label "Human Rights Research and Education Centre" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02xk45068> ;
+        rdfs:label "Institute for Science, Society and Policy" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02vb93k64> ;
+        rdfs:label "Institute of the Environment" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/033xefj97> ;
+        rdfs:label "Interdisciplinary Centre for Black Health" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00qf78c11> ;
+        rdfs:label "Joint Research Center on Systems and Personalized Pharmacology" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05g0swy93> ;
+        rdfs:label "LIFE Research Institute" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00r5mc782> ;
+        rdfs:label "Music and Health Research Institute" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02gsv2389> ;
+        rdfs:label "Nexus for Quantum Technologies Institute" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00h533452> ;
+        rdfs:label "Ottawa Heart Institute" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/047xz1e88> ;
+        rdfs:label "Ottawa Institute of Systems Biology" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/044tjxx32> ;
+        rdfs:label "Public Law Centre" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02gzkyr25> ;
+        rdfs:label "Research Centre on the Future of Cities" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00kmnzb51> ;
+        rdfs:label "Research Institute for Indigenous studies" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/036s2ns10> ;
+        rdfs:label "uOttawa Brain and Mind Research Institute" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-75.69812 45.41117)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-75.69812 45.41117)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Ottawa" ;
             schema:addressCountry "CA" ;
-            owl:sameAs <http://sws.geonames.org/6094817/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000121822255> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q627969> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Canada" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/6094817/> ;
+    ] ; 
     .

@@ -1,0 +1,48 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/01db19a87> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    org:status "active" ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2024-07-27"^^xsd:date ;
+    dct:modified "2024-07-29"^^xsd:date ;
+    org:alternativeName "ESIC Business and Marketing School"@en ; 
+    org:alternativeName "Escuela de Estudios Superiores ESIC Sacerdotes del Sagrado Corazón de Jesús"@es ; 
+    org:alternativeName "Escuela de Estudios Superiores ESIC Sacerdotes del Sagrado Corazón de Jesús - Padres Reparadores"@es ; 
+    schema:mainEntityOfPage <https://www.esic.edu> ;
+    schema:sameAs <https://api.crossref.org/funders/100022741> ;
+    schema:sameAs <http://isni.org/isni/0000000406392594> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/0230c9q89> ;
+        rdfs:label "ESIC University" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-3.81338 40.43293)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Pozuelo de Alarcón" ;
+            schema:addressCountry "ES" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Spain" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3112989/> ;
+    ] ; 
+    .

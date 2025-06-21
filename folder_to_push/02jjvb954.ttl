@@ -1,0 +1,48 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/02jjvb954> a org:Organization ;
+    rdfs:label "Collegium Carolinum" ;
+    schema:name "Collegium Carolinum" ;
+    schema:foundingDate "1956"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "other" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-07-29"^^xsd:date ;
+    org:abbreviation "CC"@None ; 
+    org:alternativeName "Collegium Carolinum – Výskumný ústav dejín Čiech a Slovenska"@sk ; 
+    org:alternativeName "Collegium Carolinum – Výzkumný ústav pro dějiny Česka a Slovenska"@cs ; 
+    schema:mainEntityOfPage <http://www.collegium-carolinum.de/en/home.html> ;
+    schema:sameAs <https://grid.ac/institutions/grid.461602.7> ;
+    schema:sameAs <http://isni.org/isni/0000000122544541> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05591te55> ;
+        rdfs:label "Ludwig-Maximilians-Universität München" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(11.57549 48.13743)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Munich" ;
+            schema:addressCountry "DE" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Germany" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2867714/> ;
+    ] ; 
+    .

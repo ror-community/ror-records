@@ -4,27 +4,88 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/052bz7812> a org:Organization ;
     rdfs:label "Université Paris Dauphine-PSL" ;
     schema:name "Université Paris Dauphine-PSL" ;
     schema:foundingDate "1968"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:alternativeName "University Paris Dauphine-PSL" ;
-    schema:url <https://dauphine.psl.eu> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/Paris_Dauphine_University> ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-07-29"^^xsd:date ;
+    org:alternativeName "Paris Dauphine University"@en ; 
+    org:alternativeName "University Paris Dauphine-PSL"@en ; 
+    org:alternativeName "Université Paris 9 Dauphine"@fr ; 
+    schema:mainEntityOfPage <https://dauphine.psl.eu> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Paris_Dauphine_University> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.11024.36> ;
+    schema:sameAs <http://isni.org/isni/0000000120977052> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03s0gj002> ;
+        rdfs:label "Centre de Recherche en Mathématiques de la Décision" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01mzxgm71> ;
+        rdfs:label "Dauphine Recherches en Management" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05mmjvv12> ;
+        rdfs:label "Institut de Recherche Interdisciplinaire en Sciences Sociales" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03pnp1a74> ;
+        rdfs:label "Lamsade" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/026exgg05> ;
+        rdfs:label "Laboratoire d’Economie de Dauphine" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02zgjrf98> ;
+        rdfs:label "Fondation Sciences mathématiques de Paris" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01ag91m47> ;
+        rdfs:label "Centre de recherche droit Dauphine" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01nrtdp55> ;
+        rdfs:label "GDR NBODY : Problème quantique à N corps en chimie et physique" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(2.3488 48.85341)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(2.3488 48.85341)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Paris" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2988507/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000120977052> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1546437> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2988507/> ;
+    ] ; 
     .

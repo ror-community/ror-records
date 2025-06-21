@@ -1,0 +1,41 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/01vgyse67> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "2000"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2024-07-24"^^xsd:date ;
+    dct:modified "2024-07-29"^^xsd:date ;
+    org:alternativeName "University of Economics Academy Novi Sad"@en ; 
+    schema:url <http://privrednaakademija.edu.rs> ; 
+    schema:mainEntityOfPage <https://www.privrednaakademija.edu.rs> ;
+    owl:sameAs <https://sr.wikipedia.org/wiki/%D0%A3%D0%BD%D0%B8%D0%B2%D0%B5%D1%80%D0%B7%D0%B8%D1%82%D0%B5%D1%82_%D0%9F%D1%80%D0%B8%D0%B2%D1%80%D0%B5%D0%B4%D0%BD%D0%B0_%D0%B0%D0%BA%D0%B0%D0%B4%D0%B5%D0%BC%D0%B8%D1%98%D0%B0> ; 
+    schema:sameAs <http://isni.org/isni/0000000446607609> ;
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(19.83694 45.25167)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Novi Sad" ;
+            schema:addressCountry "RS" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Serbia" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3194360/> ;
+    ] ; 
+    .

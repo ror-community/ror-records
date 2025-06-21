@@ -1,0 +1,45 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/01trny179> a org:Organization ;
+    rdfs:label "Klinik und Poliklinik für Strahlentherapie und Radioonkologie" ;
+    schema:name "Klinik und Poliklinik für Strahlentherapie und Radioonkologie" ;
+    schema:foundingDate "1994"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "healthcare" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-07-29"^^xsd:date ;
+    schema:mainEntityOfPage <http://www.klinikum.uni-muenchen.de/de/das_klinikum/medizinische-einrichtungen/strahlentherapie/strahlen-und-radioonkoologie/index.html> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Klinikum_Gro%C3%9Fhadern> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.491993.f> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/02jet3w32> ;
+        rdfs:label "LMU Klinikum" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(11.57549 48.13743)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Munich" ;
+            schema:addressCountry "DE" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Germany" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2867714/> ;
+    ] ; 
+    .

@@ -1,0 +1,47 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/04ehtgm24> a org:Organization ;
+    rdfs:label "Lusíada University of Porto" ;
+    schema:name "Lusíada University of Porto" ;
+    schema:foundingDate "1991"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-07-29"^^xsd:date ;
+    org:alternativeName "Universidade Lusíada do Porto"@pt ; 
+    schema:mainEntityOfPage <http://www.por.ulusiada.pt/> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/Lus%C3%ADada_University_of_Porto> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.10210.32> ;
+    schema:sameAs <http://isni.org/isni/0000000092150321> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/056g0b798> ;
+        rdfs:label "Fundação Minerva - Cultura - Ensino e Investigação Científica" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-8.61099 41.14961)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Porto" ;
+            schema:addressCountry "PT" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Portugal" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2735943/> ;
+    ] ; 
+    .

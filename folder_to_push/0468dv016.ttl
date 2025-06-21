@@ -4,25 +4,39 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/0468dv016> a org:Organization ;
-    rdfs:label "Sekolah Tinggi Agama Buddha Nalanda" ;
-    schema:name "Sekolah Tinggi Agama Buddha Nalanda" ;
+    rdfs:label "" ;
+    schema:name "" ;
     schema:foundingDate "1988"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:alternativeName "Nalanda Buddhist College" ;
-    schema:url <https://stabnalanda.ac.id> ; 
-    owl:sameAs <https://id.wikipedia.org/wiki/Sekolah_Tinggi_Agama_Buddha_Nalanda> ;
+    org:classification "education" ; 
+    dct:created "2023-03-16"^^xsd:date ;
+    dct:modified "2024-07-29"^^xsd:date ;
+    org:alternativeName "Nalanda Buddhist College"@en ; 
+    org:alternativeName "STAB Nalanda"@id ; 
+    org:alternativeName "Sekolah Tinggi Agama Buddha Nalanda"@id ; 
+    schema:url <http://nalanda.ac.id> ; 
+    schema:mainEntityOfPage <https://nalanda.ac.id> ;
+    owl:sameAs <https://id.wikipedia.org/wiki/Sekolah_Tinggi_Agama_Buddha_Nalanda> ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(106.84513 -6.21462)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(106.84513 -6.21462)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Jakarta" ;
             schema:addressCountry "ID" ;
-            owl:sameAs <http://sws.geonames.org/1642911/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://www.wikidata.org/entity/Q97206657> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Indonesia" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1642911/> ;
+    ] ; 
     .

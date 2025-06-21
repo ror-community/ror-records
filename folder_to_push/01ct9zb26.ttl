@@ -4,25 +4,37 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01ct9zb26> a org:Organization ;
     rdfs:label "Wulin Academy of Arts" ;
     schema:name "Wulin Academy of Arts" ;
     schema:foundingDate "1995"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "WA" ;
-    schema:url <https://www.wulin.ac.cn> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Wulin_Academy_of_Arts> ;
+    org:classification "education" ; 
+    dct:created "2023-08-30"^^xsd:date ;
+    dct:modified "2024-07-29"^^xsd:date ;
+    org:abbreviation "WA"@None ; 
+    schema:mainEntityOfPage <https://www.wulin.ac.cn> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Wulin_Academy_of_Arts> ; 
+    schema:sameAs <http://isni.org/isni/0000000512607069> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(120.16142 30.29365)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(120.16142 30.29365)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Hangzhou" ;
             schema:addressCountry "CN" ;
-            owl:sameAs <http://sws.geonames.org/1808926/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://www.wikidata.org/entity/Q96415603> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "China" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1808926/> ;
+    ] ; 
     .

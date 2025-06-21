@@ -4,27 +4,70 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/005y2ap84> a org:Organization ;
     rdfs:label "Office National d'Études et de Recherches Aérospatiales" ;
     schema:name "Office National d'Études et de Recherches Aérospatiales" ;
     schema:foundingDate "1946"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "ONERA" ;
-    schema:url <http://www.onera.fr/en/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/ONERA> ;
+    org:classification "facility" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-07-29"^^xsd:date ;
+    org:abbreviation "ONERA"@None ; 
+    schema:mainEntityOfPage <http://www.onera.fr/en/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/ONERA> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100013388> ;
+    schema:sameAs <https://grid.ac/institutions/grid.4365.4> ;
+    schema:sameAs <http://isni.org/isni/0000000406409448> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03nqvpf75> ;
+        rdfs:label "Laboratoire d'Étude des Microstructures" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02w8awt17> ;
+        rdfs:label "Laboratoire de Mécanique des Fluides de Lille - Kampé de Fériet" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01bbf9m56> ;
+        rdfs:label "Fédération Francilienne de Mécanique - Matériaux, Structures, Procédés" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02rmk5x23> ;
+        rdfs:label "Fédération de recherche PLAS@PAR" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/00hgbrg14> ;
+        rdfs:label "Fédération française Matériaux sous hautes vitesses de déformation. Application aux matériaux en conditions extrêmes, Procédés et structures" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(2.2498 48.71828)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(2.2498 48.71828)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Palaiseau" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2988758/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000406409448> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q2007769> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2988758/> ;
+    ] ; 
     .

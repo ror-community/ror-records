@@ -4,27 +4,118 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/00rqy9422> a org:Organization ;
     rdfs:label "University of Queensland" ;
     schema:name "University of Queensland" ;
     schema:foundingDate "1909"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "UQ" ;
-    schema:url <http://www.uq.edu.au/> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Queensland> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-07-29"^^xsd:date ;
+    org:abbreviation "UQ"@None ; 
+    schema:mainEntityOfPage <http://www.uq.edu.au/> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Queensland> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100001794> ;
+    schema:sameAs <https://grid.ac/institutions/grid.1003.2> ;
+    schema:sameAs <http://isni.org/isni/0000000093207537> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/053mfxd72> ;
+        rdfs:label "ARC Centre of Excellence for Children and Families over the Life Course" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03rtykw43> ;
+        rdfs:label "ARC Centre of Excellence for Engineered Quantum Systems" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01k8nkc73> ;
+        rdfs:label "ARC Centre of Excellence for Environmental Decisions" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04dxv8v14> ;
+        rdfs:label "ARC Centre of Excellence for Innovations in Peptide and Protein Science" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/058xdtn86> ;
+        rdfs:label "ARC Centre of Excellence for Plant Success in Nature and Agriculture" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00rnbty21> ;
+        rdfs:label "Centre for Quantum Computation and Communication Technology" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/010g47133> ;
+        rdfs:label "Ipswich Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/0290qyp66> ;
+        rdfs:label "Ochsner Medical Center" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/04mqb0968> ;
+        rdfs:label "Princess Alexandra Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05p52kj31> ;
+        rdfs:label "Royal Brisbane and Women's Hospital" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03wxseg04> ;
+        rdfs:label "Terrestrial Ecosystem Research Network" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01s62z461> ;
+        rdfs:label "Australian Coral Reef Society" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00eaqry86> ;
+        rdfs:label "Centre for Microscopy and Microanalysis" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(153.02809 -27.46794)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(153.02809 -27.46794)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Brisbane" ;
             schema:addressCountry "AU" ;
-            owl:sameAs <http://sws.geonames.org/2174003/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000093207537> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q866012> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Australia" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2174003/> ;
+    ] ; 
     .

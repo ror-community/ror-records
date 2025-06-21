@@ -1,0 +1,48 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/00yxpmx15> a org:Organization ;
+    rdfs:label "Royal British Columbia Museum" ;
+    schema:name "Royal British Columbia Museum" ;
+    schema:foundingDate "1886"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "archive" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-07-29"^^xsd:date ;
+    org:abbreviation "RBCM"@None ; 
+    org:alternativeName "Royal BC Museum"@en ; 
+    schema:mainEntityOfPage <http://royalbcmuseum.bc.ca/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Royal_British_Columbia_Museum> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.452733.4> ;
+    schema:sameAs <http://isni.org/isni/0000000121608611> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01fkg1209> ;
+        rdfs:label "NorthEast Pacific Deep-sea Exploration Project" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-123.35155 48.4359)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Victoria" ;
+            schema:addressCountry "CA" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Canada" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/6174041/> ;
+    ] ; 
+    .

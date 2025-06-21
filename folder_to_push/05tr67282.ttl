@@ -4,27 +4,62 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/05tr67282> a org:Organization ;
     rdfs:label "Hôpital Necker-Enfants Malades" ;
     schema:name "Hôpital Necker-Enfants Malades" ;
     schema:foundingDate "1778"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Healthcare" ; 
-    org:alternativeName "Necker Hospital – Hospital for Sick Children" ;
-    schema:url <http://hopital-necker.aphp.fr/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Necker-Enfants_Malades_Hospital> ;
+    org:classification "healthcare" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-07-29"^^xsd:date ;
+    org:alternativeName "Necker Hospital – Hospital for Sick Children"@en ; 
+    schema:mainEntityOfPage <http://hopital-necker.aphp.fr/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Necker-Enfants_Malades_Hospital> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.412134.1> ;
+    schema:sameAs <http://isni.org/isni/0000000405939113> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/009p5nb11> ;
+        rdfs:label "Centre de Référence Déficits Immunitaires Héréditaires" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/01v676463> ;
+        rdfs:label "Hôpitaux Universitaires Paris-Ouest" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/0446wcg70> ;
+        rdfs:label "ERN Skin" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05f82e368> ;
+        rdfs:label "Université Paris Cité" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(2.3488 48.85341)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(2.3488 48.85341)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Paris" ;
             schema:addressCountry "FR" ;
-            owl:sameAs <http://sws.geonames.org/2988507/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000405939113> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q3145188> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "France" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2988507/> ;
+    ] ; 
     .

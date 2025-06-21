@@ -1,0 +1,46 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/04anrxg79> a org:Organization ;
+    rdfs:label "Northern Vermont University" ;
+    schema:name "Northern Vermont University" ;
+    schema:foundingDate "2018"^^xsd:gYear ;
+    org:status "inactive" ;
+    org:classification "education" ; 
+    dct:created "2019-02-17"^^xsd:date ;
+    dct:modified "2024-07-29"^^xsd:date ;
+    org:abbreviation "NVU"@None ; 
+    schema:mainEntityOfPage <https://www.northernvermont.edu/> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Northern_Vermont_University> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.501835.a> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "successor" ;
+        org:member <https://ror.org/03m6ee736> ;
+        rdfs:label "Vermont State University" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(-72.6804 44.63561)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Johnson" ;
+            schema:addressCountry "US" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "United States" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/5237538/> ;
+    ] ; 
+    .

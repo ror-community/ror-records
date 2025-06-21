@@ -14,7 +14,7 @@
     org:status "active" ;
     org:classification "education" ; 
     dct:created "2018-11-14"^^xsd:date ;
-    dct:modified "2024-07-11"^^xsd:date ;
+    dct:modified "2024-07-29"^^xsd:date ;
     org:abbreviation "UEVE"@None ; 
     schema:mainEntityOfPage <http://www.univ-evry.fr/en/index.html> ;
     owl:sameAs <http://en.wikipedia.org/wiki/University_of_%C3%89vry_Val_d'Essonne> ; 
@@ -82,21 +82,21 @@
     ] ; 
     org:hasLink [
         a org:Membership ;
-        org:role "child" ;
+        org:role "parent" ;
+        org:member <https://ror.org/03xjwb503> ;
+        rdfs:label "Université Paris-Saclay" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
         org:member <https://ror.org/01nrtdp55> ;
         rdfs:label "GDR NBODY : Problème quantique à N corps en chimie et physique" ;
     ] ; 
     org:hasLink [
         a org:Membership ;
-        org:role "child" ;
+        org:role "related" ;
         org:member <https://ror.org/01sgwka45> ;
         rdfs:label "Microscopie Fonctionnelle du Vivant" ;
-    ] ; 
-    org:hasLink [
-        a org:Membership ;
-        org:role "parent" ;
-        org:member <https://ror.org/03xjwb503> ;
-        rdfs:label "Université Paris-Saclay" ;
     ] ; 
     schema:location [
         a schema:Place ;

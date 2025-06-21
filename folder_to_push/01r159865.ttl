@@ -1,0 +1,42 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/01r159865> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    schema:foundingDate "2018"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "education" ; 
+    dct:created "2024-07-24"^^xsd:date ;
+    dct:modified "2024-07-29"^^xsd:date ;
+    org:abbreviation "SIUTCH"@en ; 
+    org:alternativeName "Silk Road International University of Tourism and Cultural Heritage"@en ; 
+    org:alternativeName "Международнқй университет туриза и культурного наследия "Ўелковқй путь""@ru ; 
+    schema:url <http://univ-silkroad.uz> ; 
+    schema:mainEntityOfPage <https://www.univ-silkroad.uz> ;
+    owl:sameAs <https://uz.wikipedia.org/wiki/Ipak_yo%CA%BBli_turizm_va_madaniy_meros_xalqaro_universiteti> ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(66.95972 39.65417)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Samarkand" ;
+            schema:addressCountry "UZ" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Uzbekistan" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1216265/> ;
+    ] ; 
+    .

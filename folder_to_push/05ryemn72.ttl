@@ -4,26 +4,45 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/05ryemn72> a org:Organization ;
     rdfs:label "Ankara Yıldırım Beyazıt University" ;
     schema:name "Ankara Yıldırım Beyazıt University" ;
     schema:foundingDate "2010"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    schema:url <http://www.ybu.edu.tr/> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Ankara_Y%C4%B1ld%C4%B1r%C4%B1m_Beyaz%C4%B1t_University> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-07-29"^^xsd:date ;
+    org:alternativeName "Ankara Yildirim Beyazit University"@en ; 
+    org:alternativeName "Yildirim Beyazit Universitesi"@tr ; 
+    org:alternativeName "Yildirim Beyazit University"@en ; 
+    org:alternativeName "Yıldırım Beyazıt University"@en ; 
+    org:alternativeName "Yıldırım Beyazıt Üniversitesi"@tr ; 
+    schema:url <http://aybu.edu.tr> ; 
+    schema:mainEntityOfPage <https://aybu.edu.tr> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Ankara_Y%C4%B1ld%C4%B1r%C4%B1m_Beyaz%C4%B1t_University> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100014801> ;
+    schema:sameAs <https://grid.ac/institutions/grid.449874.2> ;
+    schema:sameAs <http://isni.org/isni/0000000404549762> ;
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(32.85427 39.91987)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(32.85427 39.91987)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Ankara" ;
             schema:addressCountry "TR" ;
-            owl:sameAs <http://sws.geonames.org/323786/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000404549762> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q6084324> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Türkiye" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/323786/> ;
+    ] ; 
     .

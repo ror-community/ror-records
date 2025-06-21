@@ -4,27 +4,108 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01xkakk17> a org:Organization ;
-    rdfs:label "University of Applied Sciences and Arts Western Switzerland" ;
-    schema:name "University of Applied Sciences and Arts Western Switzerland" ;
+    rdfs:label "" ;
+    schema:name "" ;
     schema:foundingDate "1998"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "HES-SO" ;
-    schema:url <http://www.hes-so.ch/en/homepage-hes-so-1679.html> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Applied_Sciences_Western_Switzerland> ;
+    org:classification "education" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-07-29"^^xsd:date ;
+    org:alternativeName "Fachhochschule Westschweiz"@de ; 
+    org:abbreviation "HES-SO"@None ; 
+    org:alternativeName "Haute École Spécialisée de Suisse Occidentale"@fr ; 
+    org:alternativeName "University of Applied Sciences and Arts Western Switzerland"@en ; 
+    schema:url <http://hes-so.ch> ; 
+    schema:mainEntityOfPage <https://www.hes-so.ch> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Applied_Sciences_Western_Switzerland> ; 
+    schema:sameAs <https://grid.ac/institutions/grid.5681.a> ;
+    schema:sameAs <http://isni.org/isni/0000000109431999> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02zzkv309> ;
+        rdfs:label "HES-SO Arc" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02kkwkt79> ;
+        rdfs:label "HES-SO Fribourg" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/007gfwn20> ;
+        rdfs:label "HES-SO Genève" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03r5zec51> ;
+        rdfs:label "HES-SO Valais-Wallis" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0278ff426> ;
+        rdfs:label "HETSL - Haute école de travail social et de la santé Lausanne" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/028xjkf45> ;
+        rdfs:label "HEMU - Haute École de Musique" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02kqs4h17> ;
+        rdfs:label "EHL Hospitality Business School" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/0067qp350> ;
+        rdfs:label "La Manufacture - Haute école des arts de la scène" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/02rzr3z90> ;
+        rdfs:label "HEIG-VD" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03nf8d138> ;
+        rdfs:label "CHANGINS - Haute école de viticulture et œnologie" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04j47fz63> ;
+        rdfs:label "Haute École de Santé Vaud" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(7.34453 47.36493)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(7.34453 47.36493)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Delémont" ;
             schema:addressCountry "CH" ;
-            owl:sameAs <http://sws.geonames.org/2661035/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000109431999> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q168003> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Switzerland" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2661035/> ;
+    ] ; 
     .

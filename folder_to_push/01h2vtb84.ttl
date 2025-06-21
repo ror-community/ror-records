@@ -4,27 +4,46 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/01h2vtb84> a org:Organization ;
     rdfs:label "Rachel Carson Center for Environment and Society" ;
     schema:name "Rachel Carson Center for Environment and Society" ;
     schema:foundingDate "2009"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "RCC" ;
-    schema:url <https://www.carsoncenter.uni-muenchen.de/index.html> ; 
-    owl:sameAs <https://en.wikipedia.org/wiki/Rachel_Carson_Center_for_Environment_and_Society> ;
+    org:classification "facility" ; 
+    org:classification "funder" ; 
+    dct:created "2019-02-17"^^xsd:date ;
+    dct:modified "2024-07-29"^^xsd:date ;
+    org:abbreviation "RCC"@None ; 
+    schema:mainEntityOfPage <https://www.carsoncenter.uni-muenchen.de/index.html> ;
+    owl:sameAs <https://en.wikipedia.org/wiki/Rachel_Carson_Center_for_Environment_and_Society> ; 
+    schema:sameAs <https://api.crossref.org/funders/501100014395> ;
+    schema:sameAs <https://grid.ac/institutions/grid.501076.5> ;
+    schema:sameAs <http://isni.org/isni/0000000097924410> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/05591te55> ;
+        rdfs:label "Ludwig-Maximilians-Universität München" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(11.57549 48.13743)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(11.57549 48.13743)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Munich" ;
             schema:addressCountry "DE" ;
-            owl:sameAs <http://sws.geonames.org/2867714/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000097924410> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q7279184> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Germany" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/2867714/> ;
+    ] ; 
     .

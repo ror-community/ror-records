@@ -4,26 +4,86 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/03abrgd14> a org:Organization ;
     rdfs:label "Centre for Research on Ecology and Forestry Applications" ;
     schema:name "Centre for Research on Ecology and Forestry Applications" ;
     schema:foundingDate "1987"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Facility" ; 
-    org:abbreviation "CREAF" ;
-    schema:url <https://www.creaf.cat> ; 
+    org:classification "facility" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-07-29"^^xsd:date ;
+    org:abbreviation "CREAF"@None ; 
+    org:abbreviation "CREAF-CERCA"@None ; 
+    schema:mainEntityOfPage <https://www.creaf.cat> ;
+    schema:sameAs <https://grid.ac/institutions/grid.452388.0> ;
+    schema:sameAs <http://isni.org/isni/000000010722403X> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "parent" ;
+        org:member <https://ror.org/01bkbaq61> ;
+        rdfs:label "CERCA Institution" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/052g8jq94> ;
+        rdfs:label "Universitat Autònoma de Barcelona" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/021018s57> ;
+        rdfs:label "Universitat de Barcelona" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/04b27tr16> ;
+        rdfs:label "Institut d'Estudis Catalans" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/02gfc7t72> ;
+        rdfs:label "Consejo Superior de Investigaciones Científicas" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01bg62x04> ;
+        rdfs:label "Government of Catalonia" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/01wfb3668> ;
+        rdfs:label "Institut de Recerca de la Biodiversitat de la Universitat de Barcelona" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/023c4vk26> ;
+        rdfs:label "Global Ecology Unit CREAF-CSIC-UAB" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(2.14079 41.49109)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(2.14079 41.49109)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Cerdanyola del Vallès" ;
             schema:addressCountry "ES" ;
-            owl:sameAs <http://sws.geonames.org/3109402/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/000000010722403X> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q11913495> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Spain" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3109402/> ;
+    ] ; 
     .

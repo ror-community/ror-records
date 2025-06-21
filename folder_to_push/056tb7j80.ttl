@@ -4,27 +4,106 @@
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 
 <https://ror.org/056tb7j80> a org:Organization ;
     rdfs:label "Universidad Nacional de Córdoba" ;
     schema:name "Universidad Nacional de Córdoba" ;
     schema:foundingDate "1613"^^xsd:gYear ;
     org:status "active" ;
-    org:classification "Education" ; 
-    org:abbreviation "UNC" ;
-    schema:url <https://www.unc.edu.ar> ; 
-    owl:sameAs <http://en.wikipedia.org/wiki/National_University_of_C%C3%B3rdoba> ;
+    org:classification "education" ; 
+    org:classification "funder" ; 
+    dct:created "2018-11-14"^^xsd:date ;
+    dct:modified "2024-07-29"^^xsd:date ;
+    org:abbreviation "UNC"@None ; 
+    schema:mainEntityOfPage <https://www.unc.edu.ar> ;
+    owl:sameAs <http://en.wikipedia.org/wiki/National_University_of_C%C3%B3rdoba> ; 
+    schema:sameAs <https://api.crossref.org/funders/100010442> ;
+    schema:sameAs <https://grid.ac/institutions/grid.10692.3c> ;
+    schema:sameAs <http://isni.org/isni/0000000101152557> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04vhn6x78> ;
+        rdfs:label "Instituto Multidisciplinario de Biología Vegetal" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00vsnbn30> ;
+        rdfs:label "Instituto de Investigaciones en Ciencias de la Salud" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04nh79216> ;
+        rdfs:label "Instituto de Investigación Médica Mercedes y Martín Ferreyra" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01h6ezd77> ;
+        rdfs:label "Research Center on Earth Sciences" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/023dgw813> ;
+        rdfs:label "Research Centre in Biological Chemistry of Córdoba" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04gen2f55> ;
+        rdfs:label "Colegio Nacional de Monserrat" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/05yfjjn56> ;
+        rdfs:label "Escuela Superior de Comercio Manuel Belgrano" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/013gkdy87> ;
+        rdfs:label "Instituto de Investigaciones Psicológicas" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/03vxkne37> ;
+        rdfs:label "Centro Científico Tecnológico - Córdoba" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/05ej0vv18> ;
+        rdfs:label "Hospital Domingo Funes" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "related" ;
+        org:member <https://ror.org/04qtr9c10> ;
+        rdfs:label "Hospital Privado" ;
+    ] ; 
     schema:location [
-            a schema:Place ;
-            geo:asWKT "POINT(-64.18105 -31.4135)"^^geo:wktLiteral ;
+        a schema:Place ;
+        geo:asWKT "POINT(-64.18105 -31.4135)"^^geo:wktLiteral ;
+        schema:address [
             schema:addressLocality "Córdoba" ;
             schema:addressCountry "AR" ;
-            owl:sameAs <http://sws.geonames.org/3860259/> ;
-                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
-            ] ; 
-    schema:sameAs <http://isni.org/isni/0000000101152557> ;
-    schema:sameAs <http://www.wikidata.org/entity/Q1570489> ;
-    schema:sameAs <https://grid.ac/institutions/g> ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Argentina" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/3860259/> ;
+    ] ; 
     .

@@ -1,0 +1,74 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<https://ror.org/05tyne317> a org:Organization ;
+    rdfs:label "" ;
+    schema:name "" ;
+    org:status "active" ;
+    org:classification "government" ; 
+    dct:created "2024-07-24"^^xsd:date ;
+    dct:modified "2024-07-29"^^xsd:date ;
+    org:alternativeName "Kazakhstan Ministry of Science and Higher Education"@en ; 
+    org:alternativeName "Ministry of Science and Higher Education of Kazakhstan"@en ; 
+    schema:mainEntityOfPage <https://www.gov.kz/memleket/entities/sci> ;
+    org:hasLink [
+        a org:Membership ;
+        org:role "predecessor" ;
+        org:member <https://ror.org/03pj6ge82> ;
+        rdfs:label "Ministry of Education and Science of the Republic of Kazakhstan" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/04b82qh04> ;
+        rdfs:label "Institute for Philosophy, Political Science and Religion Studies" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01h85cx24> ;
+        rdfs:label "Institute of Geography" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/03vaxkw63> ;
+        rdfs:label "Institute of Physics and Technology" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/00s0yct57> ;
+        rdfs:label "Institute of Plant Biology and Biotechnology" ;
+    ] ; 
+    org:hasLink [
+        a org:Membership ;
+        org:role "child" ;
+        org:member <https://ror.org/01wtxm109> ;
+        rdfs:label "Institute of Zoology" ;
+    ] ; 
+    schema:location [
+        a schema:Place ;
+        geo:asWKT "POINT(71.44598 51.1801)"^^geo:wktLiteral ;
+        schema:address [
+            schema:addressLocality "Astana" ;
+            schema:addressCountry "KZ" ;
+            schema:addressRegion "" ;
+            dct:spatial [
+                a dct:Location ;
+                schema:name "Kazakhstan" ;
+                schema:containedInPlace [
+                    schema:name "" ;
+                    schema:identifier ""
+                ]
+            ]
+        ] ;
+        owl:sameAs <http://sws.geonames.org/1526273/> ;
+    ] ; 
+    .
