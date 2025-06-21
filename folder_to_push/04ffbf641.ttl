@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/04ffbf641> a org:Organization ;
+    rdfs:label "Divine Word Missionaries" ;
+    schema:name "Divine Word Missionaries" ;
+    schema:foundingDate "1875"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Other" ; 
+    org:abbreviation "SVD" ;
+    org:alternativeName "Steyler Missionaries" ;
+    schema:url <http://www.svdvocations.org/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Divine_Word_Missionaries> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-87.82895 42.12753)"^^geo:wktLiteral ;
+            schema:addressLocality "Northbrook" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/4904056/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000109463042> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q696656> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

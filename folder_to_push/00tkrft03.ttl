@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/00tkrft03> a org:Organization ;
+    rdfs:label "Kristianstad University" ;
+    schema:name "Kristianstad University" ;
+    schema:foundingDate "1977"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "HKR" ;
+    schema:url <http://www.hkr.se/> ; 
+    owl:sameAs <http://en.wikipedia.org/wiki/Kristianstad_University_College> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(14.15242 56.03129)"^^geo:wktLiteral ;
+            schema:addressLocality "Kristianstad" ;
+            schema:addressCountry "SE" ;
+            owl:sameAs <http://sws.geonames.org/2699310/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000106971236> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q502824> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

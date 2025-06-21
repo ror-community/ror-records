@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/02rmd1t30> a org:Organization ;
+    rdfs:label "Babeș-Bolyai University" ;
+    schema:name "Babeș-Bolyai University" ;
+    schema:foundingDate "1959"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "UBB" ;
+    org:alternativeName "Babeș-Bolyai Tudományegyetem" ;
+    schema:url <http://www.ubbcluj.ro/en/> ; 
+    owl:sameAs <http://en.wikipedia.org/wiki/Babe%C8%99-Bolyai_University> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(23.6 46.76667)"^^geo:wktLiteral ;
+            schema:addressLocality "Cluj-Napoca" ;
+            schema:addressCountry "RO" ;
+            owl:sameAs <http://sws.geonames.org/681290/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000419371397> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q538452> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

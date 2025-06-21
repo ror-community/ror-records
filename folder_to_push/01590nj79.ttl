@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/01590nj79> a org:Organization ;
+    rdfs:label "University Kebangsaan Malaysia Medical Centre" ;
+    schema:name "University Kebangsaan Malaysia Medical Centre" ;
+    schema:foundingDate "1976"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Healthcare" ; 
+    org:abbreviation "HUKM" ;
+    org:alternativeName "UKM Medical Centre" ;
+    schema:url <http://www.ppukm.ukm.my/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Pusat_Perubatan_Universiti_Kebangsaan_Malaysia> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(101.68653 3.1412)"^^geo:wktLiteral ;
+            schema:addressLocality "Kuala Lumpur" ;
+            schema:addressCountry "MY" ;
+            owl:sameAs <http://sws.geonames.org/1735161/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/000000040627933X> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q7261705> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/049v75w11> a org:Organization ;
+    rdfs:label "National Institute on Aging" ;
+    schema:name "National Institute on Aging" ;
+    schema:foundingDate "1974"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    org:abbreviation "NIA" ;
+    schema:url <https://www.nia.nih.gov/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/National_Institute_on_Aging> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-76.61219 39.29038)"^^geo:wktLiteral ;
+            schema:addressLocality "Baltimore" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/4347778/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000093724913> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q5969362> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

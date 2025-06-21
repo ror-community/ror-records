@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/0257dtg16> a org:Organization ;
+    rdfs:label "Dicle University" ;
+    schema:name "Dicle University" ;
+    schema:foundingDate "1966"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:alternativeName "Zanîngeha Dîcleyê" ;
+    schema:url <http://www.dicle.edu.tr/> ; 
+    owl:sameAs <http://en.wikipedia.org/wiki/Dicle_University> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(40.21721 37.91363)"^^geo:wktLiteral ;
+            schema:addressLocality "Diyarbakır" ;
+            schema:addressCountry "TR" ;
+            owl:sameAs <http://sws.geonames.org/316541/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000114565625> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q130499> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

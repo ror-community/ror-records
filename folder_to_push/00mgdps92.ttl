@@ -1,0 +1,26 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/00mgdps92> a org:Organization ;
+    rdfs:label "Hospital del Gran Chaco Fray Quebracho" ;
+    schema:name "Hospital del Gran Chaco Fray Quebracho" ;
+    schema:foundingDate "2018"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Healthcare" ; 
+    org:abbreviation "HFQ" ;
+    org:alternativeName "Gran Chaco Fray Quebracho Hospital" ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-64.72956 -21.53549)"^^geo:wktLiteral ;
+            schema:addressLocality "Tarija" ;
+            schema:addressCountry "BO" ;
+            owl:sameAs <http://sws.geonames.org/3903320/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    .

@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/04dy97z61> a org:Organization ;
+    rdfs:label "Lasers, Intercations and Dynamics Laboratory" ;
+    schema:name "Lasers, Intercations and Dynamics Laboratory" ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    org:abbreviation "LIDYL" ;
+    schema:url <https://iramis.cea.fr/LIDYL/> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(2.13333 48.68333)"^^geo:wktLiteral ;
+            schema:addressLocality "Gif-sur-Yvette" ;
+            schema:addressCountry "FR" ;
+            owl:sameAs <http://sws.geonames.org/3016078/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/000000040373398X> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q30262349> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

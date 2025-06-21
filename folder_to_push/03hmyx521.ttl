@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/03hmyx521> a org:Organization ;
+    rdfs:label "All-Russian Scientific Research Institute for the Use of Machinery and Petroleum Products in Agriculture" ;
+    schema:name "All-Russian Scientific Research Institute for the Use of Machinery and Petroleum Products in Agriculture" ;
+    schema:foundingDate "1980"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    org:abbreviation "FGBNU VNIITiN" ;
+    schema:url <http://vniitin.ru/> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(41.44326 52.73169)"^^geo:wktLiteral ;
+            schema:addressLocality "Tambov" ;
+            schema:addressCountry "RU" ;
+            owl:sameAs <http://sws.geonames.org/484646/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q52845055> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/01kdbb633> a org:Organization ;
+    rdfs:label "Stockholm School of Theology" ;
+    schema:name "Stockholm School of Theology" ;
+    schema:foundingDate "1997"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "THS" ;
+    schema:url <http://www.ths.se/english> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Stockholm_School_of_Theology> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(17.94 59.34)"^^geo:wktLiteral ;
+            schema:addressLocality "Bromma" ;
+            schema:addressCountry "SE" ;
+            owl:sameAs <http://sws.geonames.org/2719111/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000406182159> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q3652398> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

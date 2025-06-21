@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/044xf8y74> a org:Organization ;
+    rdfs:label "A Shelter for Cancer Families" ;
+    schema:name "A Shelter for Cancer Families" ;
+    schema:foundingDate "2001"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Nonprofit" ; 
+    org:abbreviation "ASCF" ;
+    org:alternativeName "Amschwand Sarcoma Cancer Foundation" ;
+    schema:url <https://www.cancerfamilies.org> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-95.36327 29.76328)"^^geo:wktLiteral ;
+            schema:addressLocality "Houston" ;
+            schema:addressCountry "US" ;
+            owl:sameAs <http://sws.geonames.org/4699066/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000459062695> ;
+    schema:sameAs <http://isni.org/isni/0000000474787889> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q30296910> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/01v376g59> a org:Organization ;
+    rdfs:label "Fresenius (Germany)" ;
+    schema:name "Fresenius (Germany)" ;
+    schema:foundingDate "1912"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Company" ; 
+    schema:url <https://www.fresenius.com/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Fresenius_(company)> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(8.61816 50.22683)"^^geo:wktLiteral ;
+            schema:addressLocality "Bad Homburg" ;
+            schema:addressCountry "DE" ;
+            owl:sameAs <http://sws.geonames.org/2953436/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000404513831> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q705361> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

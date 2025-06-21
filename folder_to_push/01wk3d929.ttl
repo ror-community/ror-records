@@ -1,0 +1,30 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/01wk3d929> a org:Organization ;
+    rdfs:label "University of Brawijaya" ;
+    schema:name "University of Brawijaya" ;
+    schema:foundingDate "1963"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "UB" ;
+    schema:url <http://www.ub.ac.id/> ; 
+    owl:sameAs <http://en.wikipedia.org/wiki/University_of_Brawijaya> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(112.6304 -7.9797)"^^geo:wktLiteral ;
+            schema:addressLocality "Malang" ;
+            schema:addressCountry "ID" ;
+            owl:sameAs <http://sws.geonames.org/1636722/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000417592014> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q1336952> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

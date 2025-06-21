@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/02bzfsy61> a org:Organization ;
+    rdfs:label "Bialystok University of Technology" ;
+    schema:name "Bialystok University of Technology" ;
+    schema:foundingDate "1949"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    schema:url <http://pb.edu.pl/en> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Bialystok_University_of_Technology> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(23.16433 53.13333)"^^geo:wktLiteral ;
+            schema:addressLocality "Bialystok" ;
+            schema:addressCountry "PL" ;
+            owl:sameAs <http://sws.geonames.org/776069/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000097872307> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q4902926> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

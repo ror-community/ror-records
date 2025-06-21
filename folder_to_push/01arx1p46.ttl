@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/01arx1p46> a org:Organization ;
+    rdfs:label "WSB Merito University in Gdańsk" ;
+    schema:name "WSB Merito University in Gdańsk" ;
+    schema:foundingDate "1998"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:alternativeName "WSB Merito University Gdańsk" ;
+    schema:url <https://www.merito.pl/gdansk/> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(18.64912 54.35227)"^^geo:wktLiteral ;
+            schema:addressLocality "Gdansk" ;
+            schema:addressCountry "PL" ;
+            owl:sameAs <http://sws.geonames.org/3099434/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000404496322> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q9380712> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

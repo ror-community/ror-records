@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/05rcjak97> a org:Organization ;
+    rdfs:label "National Library of Poland" ;
+    schema:name "National Library of Poland" ;
+    schema:foundingDate "1928"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Archive" ; 
+    schema:url <http://www.bn.org.pl/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/National_Library_of_Poland> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(21.01178 52.22977)"^^geo:wktLiteral ;
+            schema:addressLocality "Warsaw" ;
+            schema:addressCountry "PL" ;
+            owl:sameAs <http://sws.geonames.org/756135/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q856423> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

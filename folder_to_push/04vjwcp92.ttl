@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/04vjwcp92> a org:Organization ;
+    rdfs:label "Jan Evangelista Purkyně University in Ústí nad Labem" ;
+    schema:name "Jan Evangelista Purkyně University in Ústí nad Labem" ;
+    schema:foundingDate "1991"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    schema:url <https://www.ujep.cz/en/> ; 
+    owl:sameAs <http://en.wikipedia.org/wiki/Jan_Evangelista_Purkyn%C4%9B_University_in_%C3%9Ast%C3%AD_nad_Labem> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(14.03227 50.6607)"^^geo:wktLiteral ;
+            schema:addressLocality "Ústí nad Labem" ;
+            schema:addressCountry "CZ" ;
+            owl:sameAs <http://sws.geonames.org/3063548/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000113790994> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q637099> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

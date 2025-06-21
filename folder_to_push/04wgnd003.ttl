@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/04wgnd003> a org:Organization ;
+    rdfs:label "Institute of Slovenian Literature and Literary Studies" ;
+    schema:name "Institute of Slovenian Literature and Literary Studies" ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    schema:url <https://isllv.zrc-sazu.si> ; 
+    owl:sameAs <https://sl.wikipedia.org/wiki/In%C5%A1titut_za_slovensko_literaturo_in_literarne_vede> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(14.50513 46.05108)"^^geo:wktLiteral ;
+            schema:addressLocality "Ljubljana" ;
+            schema:addressCountry "SI" ;
+            owl:sameAs <http://sws.geonames.org/3196359/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000107543997> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q20523146> ;
+    .

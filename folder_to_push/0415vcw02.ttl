@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/0415vcw02> a org:Organization ;
+    rdfs:label "Czech University of Life Sciences Prague" ;
+    schema:name "Czech University of Life Sciences Prague" ;
+    schema:foundingDate "1906"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "CULS" ;
+    org:alternativeName "Czech University of Agriculture in Prague" ;
+    schema:url <http://www.czu.cz/en/> ; 
+    owl:sameAs <http://en.wikipedia.org/wiki/Czech_University_of_Life_Sciences_Prague> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(14.42076 50.08804)"^^geo:wktLiteral ;
+            schema:addressLocality "Prague" ;
+            schema:addressCountry "CZ" ;
+            owl:sameAs <http://sws.geonames.org/3067696/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/000000012238631X> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q1460141> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

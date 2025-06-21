@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/00g7vw110> a org:Organization ;
+    rdfs:label "Ayuntamiento de San Sebastián" ;
+    schema:name "Ayuntamiento de San Sebastián" ;
+    schema:foundingDate "1887"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Government" ; 
+    schema:url <https://www.donostia.eus/taxo.nsf/fwHome?ReadForm&idioma=cas> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/City_council_of_San_Sebasti%C3%A1n> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-1.97499 43.31283)"^^geo:wktLiteral ;
+            schema:addressLocality "Donostia / San Sebastian" ;
+            schema:addressCountry "ES" ;
+            owl:sameAs <http://sws.geonames.org/3110044/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000121654511> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

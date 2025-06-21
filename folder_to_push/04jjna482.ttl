@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/04jjna482> a org:Organization ;
+    rdfs:label "Universidad Católica Nuestra Señora de la Asunción" ;
+    schema:name "Universidad Católica Nuestra Señora de la Asunción" ;
+    schema:foundingDate "1950"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Education" ; 
+    org:abbreviation "UCA" ;
+    org:alternativeName "Universidad Católica de Asunción" ;
+    schema:url <http://www.universidadcatolica.edu.py/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Universidad_Cat%C3%B3lica_%22Nuestra_Se%C3%B1ora_de_la_Asunci%C3%B3n%22> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-57.647 -25.28646)"^^geo:wktLiteral ;
+            schema:addressLocality "Asunción" ;
+            schema:addressCountry "PY" ;
+            owl:sameAs <http://sws.geonames.org/3439389/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000109437469> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q662015> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

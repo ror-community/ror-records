@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/02wtj7z45> a org:Organization ;
+    rdfs:label "Gemini South Observatory" ;
+    schema:name "Gemini South Observatory" ;
+    schema:foundingDate "2000"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Facility" ; 
+    schema:url <http://www.gemini.edu/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Gemini_Observatory> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(-71.24894 -29.90453)"^^geo:wktLiteral ;
+            schema:addressLocality "La Serena" ;
+            schema:addressCountry "CL" ;
+            owl:sameAs <http://sws.geonames.org/3884373/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://www.wikidata.org/entity/Q30293559> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

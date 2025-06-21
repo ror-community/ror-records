@@ -1,0 +1,29 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/05h1aye87> a org:Organization ;
+    rdfs:label "Linköping University Hospital" ;
+    schema:name "Linköping University Hospital" ;
+    schema:foundingDate "1782"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Healthcare" ; 
+    schema:url <http://www.regionostergotland.se/> ; 
+    owl:sameAs <https://en.wikipedia.org/wiki/Link%C3%B6ping_University_Hospital> ;
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(15.62157 58.41086)"^^geo:wktLiteral ;
+            schema:addressLocality "Linköping" ;
+            schema:addressCountry "SE" ;
+            owl:sameAs <http://sws.geonames.org/2694762/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/0000000093096304> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q6554447> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .

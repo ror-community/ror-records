@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://ror.org/01be19w37> a org:Organization ;
+    rdfs:label "Helios Klinikum Krefeld" ;
+    schema:name "Helios Klinikum Krefeld" ;
+    schema:foundingDate "1848"^^xsd:gYear ;
+    org:status "active" ;
+    org:classification "Healthcare" ; 
+    schema:url <https://www.helios-gesundheit.de/kliniken/krefeld/> ; 
+    schema:location [
+            a schema:Place ;
+            geo:asWKT "POINT(6.55381 51.33645)"^^geo:wktLiteral ;
+            schema:addressLocality "Krefeld" ;
+            schema:addressCountry "DE" ;
+            owl:sameAs <http://sws.geonames.org/2884509/> ;
+                dct:license <http://creativecommons.org/licenses/by/3.0/> ;
+            ] ; 
+    schema:sameAs <http://isni.org/isni/000000008977765X> ;
+    schema:sameAs <http://www.wikidata.org/entity/Q44444890> ;
+    schema:sameAs <https://grid.ac/institutions/g> ;
+    .
