@@ -1,86 +1,86 @@
-# But de ce repository
+# Purpose of this repository
 
-De base, ce repository est un **clone** de ce repertoire git:
+Basically, this repository is a **clone** of this git directory:
 
 ```
 https://github.com/ror-community/ror-records
 ```
 
-Dans ce github, vous pouvez retrouver l'ensemble des **releases** de ror.org, avec pour chaque release, le contenu **json** des oragnisations **ajoutées** et **modifiées**. 
+In this github, you can find all the ror.org **releases**, with the **json** content of the **added** and **modified** oragnisations for each release.
 
-L'objectif est de créer pour chaque release, la transformation des json au format rdf. Ensuite, à partir de là, de créer un commit et un push automatique qui permettrait de merge l'ensemble des organisations vers le github. Le fait de faire un push séparé par release nous permettra donc de mettre des tags correspondant au nom de la release, et de faire un git diff pour voir l'historique des organisations modifiées ou ajoutées.
+The aim is to create the json transformation to rdf format for each release. Then, from there, to create a commit and an automatic push that would merge all the organisations into the github. Making a separate push for each release will allow us to put tags corresponding to the name of the release, and to make a git diff to see the history of organisations that have been modified or added.
 
-En résumé:
+In a nutshell:
 
-1. Passage de json à ttl
-2. Commit and push par release
-3. Git diff pour voir les modifications
+1. Switching from json to ttl
+2. Commit and push by release
+3. Git diff to see changes
 
-## Problèmes
+## Problems
 
-Parmi les choses auquelles il fallait s'attendre, il y avait la structure du json en fonction des différentes releases. En effet, au cours de son développement, ror a changé plusieurs fois l'architecture de son json, rendant le travail directement plus compliqué, car le template et le code n'est pas adapté à chaque structure. Il va sans doute falloir récupérer chaque version de structure, pour ensuite adapter le code en fonction de cela. En ce qui concerne les tests pour vérifier cela, voici ce que j'ai fais : 
+One of the things to be expected was the structure of the json depending on the different releases. Over the course of its development, ror has changed the architecture of its json several times, making the work directly more complicated, because the template and the code are not adapted to each structure. It will no doubt be necessary to recover each version of the structure and then adapt the code accordingly. As far as the tests to check this are concerned, here's what I've done:
 
 ```
-1. Test sur v1.0/01912nj27.json
-    --> erreur d'argument, car structure différente
+1. Test on v1.0/01912nj27.json
+    --> argument error due to different structure
 
-2. Test sur structure similaire à celle du dernier dump disponible (v1.66-2025-05-20-ror-data.json)
-    --> test sur fichier v1.66/00b3mhg89.json
-        -> erreur d'argument, car structure différente
-    --> test sur fichier v1.66/v1/00b3mhg89.json
-        -> bonne sortie dans folder_to_push
+2. Test on structure similar to that of the last dump available (v1.66-2025-05-20-ror-data.json)
+    --> test on file v1.66/00b3mhg89.json
+        -> argument error, because different structure
+    --> test on file v1.66/v1/00b3mhg89.json
+        -> correct output in folder_to_push
 ```
 
-Ce que nous allons essayer de faire, c'est de faire une détection de la version utilisée. En effet, à cette adresse, ror explique les différentes structures json utilisées au cours de leur développement.
+What we are going to try to do is to detect the version used. At this address, ror explains the different json structures used during development.
 
 ```
 https://github.com/ror-community/ror-schema?tab=readme-ov-file
 https://ror.readme.io/docs/schema-versions
 ```
 
-Il reste maintenant à savoir à quelle version notre fichier json appartient. Il est aussi possible de faire une vérication de notre json à l'aide de ces commandes:
+We now need to find out which version our json file belongs to. It is also possible to check our json using these commands:
 
 ```
-jsonschema -i test.json ror_schema_v2_0.json // obsolète avec jsonschema
-check-jsonschema --schemafile test.json ror_schema_v2_0.json // dernière version
+jsonschema -i test.json ror_schema_v2_0.json //  obsolete with jsonschema
+check-jsonschema --schemafile test.json ror_schema_v2_0.json // last version
 ```
 
-## Ce qui a été fait et problèmes survenus
+## What has been done and problems encountered
 
-La procédure pour arriver à notre fin est la suivante:
+The procedure for achieving our goal is as follows:
 
-- récupération des structures json sur https://github.com/ror-community/ror-schema?tab=readme-ov-file
-- création de **detect_version_json.py** pour trouver version de chaque json (**1.0**, **2.0**, **2.1**)
-- création de 3 templates (**template_1_0**, **template_2_0**, **template_2_1**)
-- **template_to_try.py** pour associer mes json à leur bon template
-    - si aucune version correspond, **test** des json avec template
-- **create_rdf_file.py** pour transformer json en rdf
-    - si aucune version correspond, **rien** ne peut se faire donc erreur critique
+- retrieve json structures from https://github.com/ror-community/ror-schema?tab=readme-ov-file
+- creation of **detect_version_json.py** to find the version of each json (**1.0**, **2.0**, **2.1**)
+- creation of 3 templates (**template_1_0**, **template_2_0**, **template_2_1**)
+- **template_to_try.py** to associate my json with the correct template
+    - if no version matches, **test** json with template
+- **create_rdf_file.py** to transform json into rdf
+    - if no version matches, **nothing** can be done, so critical error
 
-Ceci vient régler la première partie du problèmes pour faire la transformation des json en rdf. Il manque maintenant la partie de commit et push automatique vers github.
+This solves the first part of the problem of transforming json into rdf. What's missing now is the commit part and automatic push to github.
 
-‼️ Warning ‼️ Subyt écrase pour le moment les fichiers en double, ce qui veut dire qu'il y a normalement **64'000** files qui sont ajoutées et modifiées parmi toutes les releases. Cependant, dans le dossier de sortie, il n'y en a que **34'000**. Cela s'explique car il y a environ **30'000** files qui sont modifiées, donc comme subyt réécrit le json par dessus, cela ne tient pas en considération les anciens json.
+‼️ Warning ‼️ Subyt currently overwrites duplicate files, which means that there are normally **64,000** files that are added and modified among all the releases. However, in the output folder, there are only **34,000**. This is because there are around **30,000** files that are modified, so as subyt rewrites the json on top, it doesn't take into account the old json.
 
-Le problème sera résolu au moment de la partie commit & push sur github, car une fois push, les files seront supprimées du dossier en question, et il n'y aura **pas de doublon, ni de fichier effacé**.
+The problem will be solved at the time of the commit & push part on github, because once pushed, the files will be deleted from the folder in question, and there will be **no duplicates, no deleted files**.
 
-## Résolution
+## Resolution
 
-Le programme est fonctionnel et permet de faire une transformation json to rdf puis un push release by release vers github. Cela permet, par le biais de tag pour chaque release, de voir les nouveaux fichiers ajoutés pour chaque release. Voici un somaire des fichiers utilisés et de leur utilité:
+The programme is functional and can be used to transform json to rdf and then push release by release to github. Using tags for each release, you can see the new files added for each release. Here is a summary of the files used and their usefulness:
 
 ```
-release_rdf_push    // centralise les fonctions et parcours les répertoires
-detect_version_json // detect la version du json en fonction des struct de ror et associe le template
-template_to_try     // en fonction de la version du json, associe le template et test
-git_commit_push     // fait les commit et les push vers github puis supprime les fichiers push du folder_to_push
-create_rdf_file     // creer les fichiers rdf a l'aide de subyt
+release_rdf_push    // centralises functions and browses directories
+detect_version_json // detect the json version according to the ror struct and associate the template
+template_to_try     // depending on the version of the json, associate the template and test
+git_commit_push     // commits and pushes files to github, then deletes the push files from folder_to_push
+create_rdf_file     // creating rdf files using subyt
 ```
 
-Voici un schéma:
+Here's a diagram:
 
 ```
 release_rdf_push --> template_to_try --> detect_version_json --> create_rdf_file --> git_commit_push
 ```
 
-## Précision
+## Precision
 
-Au final, nous nous retrouvons avec environ 64'000 ttl d'organisations à l'aide des releases. Cela s'explique car parmis les 116'000 organisations du dump, nous retrouvons les entreprises inactives ainsi que certaines sous organisations.
+In the end, we end up with around 64,000 ttl organisations using the releases. This is because the 116,000 organisations in the dump include inactive companies and certain sub-organisations.
