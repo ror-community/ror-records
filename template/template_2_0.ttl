@@ -16,8 +16,6 @@
     {% for name in item.names if "acronym" in name.types %}org:abbreviation "{{ name.value }}" ; {% endfor %}
     {% for domain in item.domains %}schema:url <http://{{ domain }}> ; {% endfor %}
     {% for link in item.links %}{% if link.type == "wikipedia" %}owl:sameAs <{{ link.value }}> ; {% endif %}{% endfor %}
-
-    {# Gestion des identifiants externes #}
     {% for ext_id in item.external_ids %}
         {% if ext_id.type == "isni" and ext_id.all %}
             schema:sameAs <http://isni.org/isni/{{ ext_id.all[0] | replace(" ", "") }}> ;
@@ -27,8 +25,6 @@
             schema:sameAs <https://api.crossref.org/funders/{{ ext_id.all[0] }}> ;
         {% endif %}
     {% endfor %}
-
-    {# Relations hiérarchiques #}
     {% for rel in item.relationships %}
     org:hasLink [
         a org:Membership ;
@@ -36,8 +32,6 @@
         org:member <{{ rel.id }}> ;
         rdfs:label "{{ rel.label }}" ;
     ] ; {% endfor %}
-
-    {# Localisations géographiques #}
     {% for loc in item.locations if loc.geonames_details %}
     schema:location [
         a schema:Place ;

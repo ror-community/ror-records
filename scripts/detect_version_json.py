@@ -3,13 +3,11 @@ from pathlib import Path
 from jsonschema import validate, ValidationError
 
 def load_schema(version):
-    """Charge le schéma JSON correspondant à la version"""
     schema_path = Path(__file__).parent.parent / "json_struct" / f"ror_schema{version}.json"
     with open(schema_path, 'r', encoding='utf-8') as f:
         return json.load(f)
 
 def detect_ror_version(json_file_path):
-    """Détecte la version ROR d'un fichier JSON"""
     try:
         schema_v1 = load_schema("")
         schema_v2_0 = load_schema("_v2_0")
@@ -30,16 +28,16 @@ def detect_ror_version(json_file_path):
                 return "1_0"
                 
     except FileNotFoundError as e:
-        print(f"Erreur: Fichier non trouvé - {e.filename}")
+        print(f"Error: File not found - {e.filename}")
         return None
     except json.JSONDecodeError:
-        print("Erreur: Fichier JSON invalide")
+        print("Error: Invalid JSON file")
         return None
     except ValidationError:
-        print("Erreur: Le fichier ne correspond à aucune version connue")
+        print("Error: The file does not correspond to any known version")
         return None
     except Exception as e:
-        print(f"Erreur inattendue: {str(e)}")
+        print(f"Unexpected error: {str(e)}")
         return None
 
 # if __name__ == "__main__":
@@ -58,11 +56,11 @@ def detect_ror_version(json_file_path):
 #     elif choice_version == 2.1:
 #         test_file = test_file_2_1
 #     else:
-#         print("error de version")
+#         print("error of version")
 
 #     if not test_file.exists():
-#         print(f"Erreur: Le fichier {test_file} n'existe pas")
+#         print(f"Error: the file {test_file} doesn't exists")
 #     else:
 #         version = detect_ror_version(test_file)
 #         if version:
-#             print(f"Version détectée : {version}")
+#             print(f"Detected version : {version}")

@@ -4,7 +4,8 @@ import tempfile
 from sema.subyt import Subyt
 import logging
 
-logging.getLogger("sema.subyt").setLevel(logging.ERROR) #montre uniquement les erreurs
+# Only shows errors
+logging.getLogger("sema.subyt").setLevel(logging.ERROR) 
 
 def json_to_individual_rdf(json_path, template_path, output_dir):
     output_dir.mkdir(parents=True, exist_ok=True)
@@ -32,14 +33,14 @@ def json_to_individual_rdf(json_path, template_path, output_dir):
             finally:
                 Path(tmp_path).unlink()
 
-# Exemple d'utilisation pour 2.1
+# Example of use for 2.1
 # json_to_individual_rdf( 
 #     json_path= Path(__file__).parent.parent / "releases/v1.6/023rffy11.json",
 #     template_path= Path(__file__).parent.parent / "template/template_2_1.ttl",
 #     output_dir= Path(__file__).parent.parent / "to_push"
 # )
 
-# Exemple d'utilisation pour 1.0
+# Example of use for 1.0
 # json_to_individual_rdf( 
 #     json_path= Path(__file__).parent.parent / "releases/v1.6/023rffy11.json",
 #     template_path= Path(__file__).parent.parent / "template/template_1_0.ttl",

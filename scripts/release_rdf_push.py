@@ -1,8 +1,5 @@
 import os
-import time
-import re
 from pathlib import Path
-from detect_version_json import detect_ror_version
 from git_commit_push import git_push_existing_ttl
 from template_to_try import process_ror_file
 
@@ -20,21 +17,21 @@ def list_json_files_in_releases(releases_root, output_dir):
     for release in release_folders:
         release_path = os.path.join(releases_root, release)
 
-        print(f"\n=== Traitement de la release {release} ===")
+        print(f"\n=== Release processing {release} ===")
         json_files = [f for f in os.listdir(release_path) if f.endswith('.json')]
 
         if not json_files:
-            print(f"Aucun fichier JSON trouvé dans {release}")
+            print(f"No JSON files found in {release}")
         else:
-            print("Fichiers JSON trouvés:")
+            print("JSON files found:")
             for json_file in json_files:
                 json_path = os.path.join(release_path, json_file)
-                print(f"Traitement du fichier: {json_path}")
+                print(f"File processing: {json_path}")
 
                 process_ror_file(json_path, output_dir)
 
         if release != release_folders[-1]:
-            print("\nAttendre que les fichiers commit et push...")
+            print("\nWait for the commit and push files...")
             success = git_push_existing_ttl(
                 repo_dir= Path(__file__).parent.parent,
                 target_dir= "folder_to_push",
@@ -43,10 +40,10 @@ def list_json_files_in_releases(releases_root, output_dir):
             )
 
             if not success:
-                print("\n✗ Échec de l'opération. Voir les messages ci-dessus.")
+                print("\n✗ Operation failed. See messages above.")
                 exit(1)
             
-            print(f"\n✓ Release {release} poussée avec succès. Attente de 15 secondes...")
+            print(f"\n✓ Release {release} pushed successfully!")
 
 if __name__ == "__main__":
     root_dir = Path(__file__).parent.parent
@@ -54,6 +51,6 @@ if __name__ == "__main__":
     output_dir = root_dir / "folder_to_push"
     
     if not releases_dir.exists():
-        print(f"Erreur: Le dossier {releases_dir} n'existe pas")
+        print(f"Error: The {releases_dir} folder does not exist")
     else:
         list_json_files_in_releases(releases_dir, output_dir)
