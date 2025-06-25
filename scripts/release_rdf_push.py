@@ -47,7 +47,7 @@ def list_json_files_in_releases(releases_root, output_dir):
 
 if __name__ == "__main__":
     root_dir = Path(__file__).parent.parent
-    releases_dir = root_dir / "releases"
+    releases_dir = root_dir / "ror_releases"
     output_dir = root_dir / "folder_to_push"
     
     if not releases_dir.exists():

@@ -3,7 +3,7 @@ from pathlib import Path
 from jsonschema import validate, ValidationError
 
 def load_schema(version):
-    schema_path = Path(__file__).parent.parent / "json_struct" / f"ror_schema{version}.json"
+    schema_path = Path(__file__).parent.parent / "json_schema" / f"ror_schema{version}.json"
     with open(schema_path, 'r', encoding='utf-8') as f:
         return json.load(f)
 
@@ -41,11 +41,11 @@ def detect_ror_version(json_file_path):
         return None
 
 # if __name__ == "__main__":
-#     test_file_2_1 = Path("../releases/v1.66/00b3mhg89.json") 
-#     test_file_2_0 = Path("../releases/v1.66/00b3mhg89.json") 
-#     test_file_1_0 = Path("../releases/v1.0/000ccd270.json") 
+#     test_file_2_1 = Path("../ror_releases/v1.66/00b3mhg89.json") 
+#     test_file_2_0 = Path("../ror_releases/v1.66/00b3mhg89.json") 
+#     test_file_1_0 = Path("../ror_releases/v1.0/000ccd270.json") 
     
-#     test_file = Path("../releases/v1.66/00b3mhg89.json")
+#     test_file = Path("../ror_releases/v1.66/00b3mhg89.json")
 
 #     choice_version = 1.0
 

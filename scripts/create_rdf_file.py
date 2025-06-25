@@ -35,14 +35,14 @@ def json_to_individual_rdf(json_path, template_path, output_dir):
 
 # Example of use for 2.1
 # json_to_individual_rdf( 
-#     json_path= Path(__file__).parent.parent / "releases/v1.6/023rffy11.json",
+#     json_path= Path(__file__).parent.parent / "ror_releases/v1.6/023rffy11.json",
 #     template_path= Path(__file__).parent.parent / "template/template_2_1.ttl",
 #     output_dir= Path(__file__).parent.parent / "to_push"
 # )
 
 # Example of use for 1.0
 # json_to_individual_rdf( 
-#     json_path= Path(__file__).parent.parent / "releases/v1.6/023rffy11.json",
+#     json_path= Path(__file__).parent.parent / "ror_releases/v1.6/023rffy11.json",
 #     template_path= Path(__file__).parent.parent / "template/template_1_0.ttl",
 #     output_dir= Path(__file__).parent.parent / "to_push"
 # )

@@ -34,4 +34,4 @@ def process_ror_file(json_path, output_dir):
     raise ValueError(f"No valid template found for the file: {json_path}")
 
 # Example with a json that does not correspond to any version
-# process_ror_file(Path(__file__).parent.parent / "releases/v1.6/023rffy11.json", Path(__file__).parent.parent / "test")
+# process_ror_file(Path(__file__).parent.parent / "ror_releases/v1.6/023rffy11.json", Path(__file__).parent.parent / "test")
