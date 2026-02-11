@@ -4,14 +4,13 @@ on:
     inputs:
       release-dump:
         type: string
-        description: Name of existing release dump file to index, without .zip extension (ex v1.41-2024-02-13-ror-data)
+        description: Name of existing release dump file to index, without .zip extension (ex v2.0-2025-12-16-ror-data)
       schema-version:
         required: true
         description: Schema version to index
         default: 'test'
         type: choice
         options:
-        - v1
         - v2
       data-env:
         required: true
@@ -61,11 +60,7 @@ jobs:
           cd .github/workflows
           python -m pip install --upgrade pip
           pip install requests
-          if [[ ${{ github.event.inputs.schema-version }} == "v1" ]]; then
-            python index_dump.py -u ${{ secrets.INDEX_DUMP_PROD_API_URL }} -f ${{ github.event.inputs.release-dump }} -e  ${{ github.event.inputs.data-env }} -he ${{ secrets.INDEX_PROD_API_HEADERS }}
-          else
-            python index_dump.py -u ${{ secrets.INDEX_DUMP_PROD_API_URL_V2 }} -f ${{ github.event.inputs.release-dump }} -e  ${{ github.event.inputs.data-env }} -he ${{ secrets.INDEX_PROD_API_HEADERS }}
-          fi
+          python index_dump.py -u ${{ secrets.INDEX_DUMP_PROD_API_URL_V2 }} -f ${{ github.event.inputs.release-dump }} -e  ${{ github.event.inputs.data-env }} -he ${{ secrets.INDEX_PROD_API_HEADERS }}
       - name: Notify Slack
         if: always()
         uses: edge/simple-slack-notify@master
