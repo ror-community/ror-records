@@ -7,7 +7,6 @@ on:
             description: Schema version
             type: choice
             options:
-            - v1
             - v2
       directory-name:
         type: string
@@ -66,22 +65,12 @@ jobs:
           cd validation-suite
           python -m pip install --upgrade pip
           pip install -r requirements.txt
-          if [[ ${{ github.event.inputs.schema-version }} == 'v1' ]]; then
-            curl https://raw.githubusercontent.com/ror-community/ror-schema/master/ror_schema.json -o ror_schema.json
-            if [[ -f "../${{github.event.pull_request.head.ref}}/relationships.csv" ]]; then
-                python run_validations.py -i ../files -v 1 -s ror_schema.json -f ../${{github.event.pull_request.head.ref}}/relationships.csv -p ../files/ --no-geonames
-              else
-                python run_validations.py -i ../files -v 1 -s ror_schema.json --no-geonames
-              fi
-          fi
-          if [[ ${{ github.event.inputs.schema-version }} == 'v2' ]]; then
-            curl https://raw.githubusercontent.com/ror-community/ror-schema/refs/heads/schema-v2-1/ror_schema_v2_1.json -o ror_schema_v2_1.json
-            if [[ -f "../${{github.event.pull_request.head.ref}}/relationships.csv" ]]; then
-                python run_validations.py -i ../files -v 2 -s ror_schema_v2_1.json -f ../${{github.event.pull_request.head.ref}}/relationships.csv -p ../files/ --no-geonames
-              else
-                python run_validations.py -i ../files -v 2 -s ror_schema_v2_1.json --no-geonames
-              fi
-          fi
+          curl https://raw.githubusercontent.com/ror-community/ror-schema/refs/heads/schema-v2-1/ror_schema_v2_1.json -o ror_schema_v2_1.json
+          if [[ -f "../${{github.event.pull_request.head.ref}}/relationships.csv" ]]; then
+              python run_validations.py -i ../files -v 2 -s ror_schema_v2_1.json -f ../${{github.event.pull_request.head.ref}}/relationships.csv -p ../files/ --no-geonames
+            else
+              python run_validations.py -i ../files -v 2 -s ror_schema_v2_1.json --no-geonames
+            fi
       - name: Notify Slack
         if: always()
         uses: edge/simple-slack-notify@master
@@ -125,12 +114,7 @@ jobs:
           cd .github/workflows
           python -m pip install --upgrade pip
           pip install requests
-          if [[ ${{ github.event.inputs.schema-version }} == 'v1' ]]; then
-            python index_files.py -u ${{ secrets.INDEX_STAGING_API_URLL_V1 }} -d ${{ github.event.inputs.directory-name }}-v1 -he ${{ secrets.INDEX_STAGING_API_HEADERS }}
-          fi
-          if [[ ${{ github.event.inputs.schema-version }} == 'v2' ]]; then
-            python index_files.py -u ${{ secrets.INDEX_STAGING_API_URL_V2 }} -d ${{ github.event.inputs.directory-name }}-v2 -he ${{ secrets.INDEX_STAGING_API_HEADERS }}
-          fi
+          python index_files.py -u ${{ secrets.INDEX_STAGING_API_URL_V2 }} -d ${{ github.event.inputs.directory-name }}-v2 -he ${{ secrets.INDEX_STAGING_API_HEADERS }}
       - name: Notify Slack
         if: always()
         uses: edge/simple-slack-notify@master

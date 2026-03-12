@@ -7,7 +7,6 @@ on:
         description: Schema version
         type: choice
         options:
-        - v1
         - v2
       release-tag:
         type: string
@@ -73,12 +72,7 @@ jobs:
           cd .github/workflows
           python -m pip install --upgrade pip
           pip install requests
-          if [[ ${{ github.event.inputs.schema-version }} == 'v1' ]]; then
-            python index_files.py -u ${{ secrets.INDEX_PROD_API_URL_V1 }} -d ${{ github.event.inputs.directory-name }}-v1 -he ${{ secrets.INDEX_DEV_API_HEADERS }}
-          fi
-          if [[ ${{ github.event.inputs.schema-version }} == 'v2' ]]; then
-            python index_files.py -u ${{ secrets.INDEX_PROD_API_URL_V2 }} -d ${{ github.event.inputs.directory-name }}-v2 -he ${{ secrets.INDEX_DEV_API_HEADERS }}
-          fi
+          python index_files.py -u ${{ secrets.INDEX_PROD_API_URL_V2 }} -d ${{ github.event.inputs.release-tag }}-v2 -he ${{ secrets.INDEX_DEV_API_HEADERS }}
       - name: Notify Slack
         if: always()
         uses: edge/simple-slack-notify@master
