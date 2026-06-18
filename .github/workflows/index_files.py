@@ -15,7 +15,7 @@ def set_args():
 
 def send_request(url, headers):
     try:
-        response = requests.get(url,headers=headers)
+        response = requests.post(url,headers=headers)
     except requests.exceptions.RequestException as e:
         raise e
     return response
