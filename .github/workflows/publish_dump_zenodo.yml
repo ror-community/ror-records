@@ -39,9 +39,9 @@ jobs:
           token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
           path: ./ror-data
       - name: Set up Python environment
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v6
         with:
-          python-version: "3.9"
+          python-version: "3.13"
       - name: execute script
         id: publishdumpscript
         run: |
